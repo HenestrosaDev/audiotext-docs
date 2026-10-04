@@ -14,3 +14,13 @@
 .hero img {
 	max-width: 12rem;
 }
+
+/* The screenshot of the home page, with as much space below as the hero leaves above */
+[data-has-hero] .sl-markdown-content > p:has(> img[src^='/screenshots/']) {
+	margin-bottom: clamp(7.5rem, calc(1rem + 6vmin), 5rem);
+}
+
+/* The icon and the name of the site in the top bar */
+.site-title {
+	gap: 0.5rem;
+}
