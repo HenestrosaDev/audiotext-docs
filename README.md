@@ -4,18 +4,18 @@
 <div align="center">
   <picture>
     <source
-      srcset="src/assets/icon-light.png"
+      srcset="readme/light/icon.png"
       width="128"
       height="128"
       media="(prefers-color-scheme: light)"
     />
     <source
-      srcset="src/assets/icon-dark.png"
+      srcset="readme/dark/icon.png"
       width="128"
       height="128"
       media="(prefers-color-scheme: dark)"
     />
-    <img src="src/assets/icon-light.png" alt="Logo" width="128" height="128">
+    <img src="readme/light/icon.png" alt="Logo" width="128" height="128">
   </picture>
   <h1 align="center">Audiotext Docs</h1>
   <p align="center">The source of <a href="https://getaudiotext.com">getaudiotext.com</a>, the documentation website of <a href="https://github.com/HenestrosaDev/audiotext">Audiotext</a>, in the 22 languages of its interface.</p>
@@ -71,10 +71,20 @@
   </p>
 </div>
 
-<img
-  src="public/screenshots/main.png"
-  alt="The Audiotext window with a transcription open"
->
+<picture>
+  <source
+    srcset="readme/light/web.png"
+    media="(prefers-color-scheme: light)"
+  />
+  <source
+    srcset="readme/dark/web.png"
+    media="(prefers-color-scheme: dark)"
+  />
+  <img
+    src="readme/dark/web.png"
+    alt="Screenshot of the website"
+  >
+</picture>
 
 <!-- TABLE OF CONTENTS -->
 
