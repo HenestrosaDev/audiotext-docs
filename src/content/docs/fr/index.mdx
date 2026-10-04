@@ -1,0 +1,52 @@
+---
+title: Audiotext
+description: Transcrivez des fichiers audio et vidéo, des vidéos YouTube et des enregistrements du microphone sur votre ordinateur, puis traduisez-les, résumez-les et sous-titrez-les.
+template: splash
+hero:
+  tagline: Transcrivez de l’audio et de la vidéo dans 100 langues, sur votre ordinateur et gratuitement. Puis lisez, corrigez, traduisez, résumez et sous-titrez le résultat.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Logo d’Audiotext
+  actions:
+    - text: Commencer
+      link: /fr/getting-started/installation/
+      icon: right-arrow
+    - text: Télécharger
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![La fenêtre d'Audiotext avec une transcription ouverte](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Privé et hors ligne" icon="laptop">
+		WhisperX s’exécute sur votre ordinateur : gratuit, illimité et sans envoyer
+		votre audio nulle part. L’API Whisper et l’API Google sont aussi
+		disponibles.
+	</Card>
+	<Card title="Toutes les sources" icon="document">
+		Fichiers audio et vidéo, vidéos YouTube, liens vers des fichiers
+		multimédias, le microphone (avec texte en direct), des dossiers entiers ou
+		un dossier surveillé pour transcrire les nouveaux fichiers.
+	</Card>
+	<Card title="Écoutez et corrigez" icon="pencil">
+		Cliquez sur une phrase pour l’écouter, recherchez dans le texte, renommez
+		les locuteurs et corrigez des mots sans perdre les horodatages.
+	</Card>
+	<Card title="Traduisez et résumez" icon="translate">
+		Obtenez un résumé, ses points clés et ses chapitres, ou une traduction, avec
+		OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL ou Google Translate.
+	</Card>
+	<Card title="Sous-titres et exports" icon="download">
+		Exportez en TXT, Markdown, Word, SRT, VTT, TSV ou JSON, et regardez les
+		vidéos avec leurs sous-titres.
+	</Card>
+	<Card title="Dans votre langue" icon="star">
+		L’interface est disponible en 22 langues, et elle peut aussi s’utiliser en
+		ligne de commande.
+	</Card>
+</CardGrid>

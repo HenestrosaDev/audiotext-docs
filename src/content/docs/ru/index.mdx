@@ -1,0 +1,52 @@
+---
+title: Audiotext
+description: Транскрибируйте аудио- и видеофайлы, видео с YouTube и записи с микрофона на своём компьютере, а затем переводите, кратко излагайте и снабжайте их субтитрами.
+template: splash
+hero:
+  tagline: Транскрибируйте аудио и видео на 100 языках — на своём компьютере и бесплатно. Затем воспроизводите, исправляйте, переводите, составляйте сводку и создавайте субтитры.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Логотип Audiotext
+  actions:
+    - text: Начать
+      link: /ru/getting-started/installation/
+      icon: right-arrow
+    - text: Скачать
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Окно Audiotext с открытой транскрипцией](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Приватно и офлайн" icon="laptop">
+		WhisperX работает на вашем компьютере: бесплатно, без ограничений и без
+		отправки аудио куда-либо. Также доступны Whisper API и Google API.
+	</Card>
+	<Card title="Любой источник" icon="document">
+		Аудио- и видеофайлы, видео с YouTube, ссылки на медиафайлы, микрофон (с
+		живым текстом), целые папки или отслеживаемая папка, новые файлы которой
+		транскрибируются.
+	</Card>
+	<Card title="Воспроизводите и исправляйте" icon="pencil">
+		Нажмите на фразу, чтобы воспроизвести её, ищите по тексту,
+		переименовывайте говорящих и исправляйте слова, не теряя временных меток.
+	</Card>
+	<Card title="Переводите и составляйте сводки" icon="translate">
+		Получите сводку с ключевыми моментами и главами или перевод с помощью
+		OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL или Google
+		Translate.
+	</Card>
+	<Card title="Субтитры и экспорт" icon="download">
+		Экспортируйте в TXT, Markdown, Word, SRT, VTT, TSV или JSON и смотрите
+		видео с субтитрами.
+	</Card>
+	<Card title="На вашем языке" icon="star">
+		Интерфейс доступен на 22 языках, а программой можно пользоваться и из
+		командной строки.
+	</Card>
+</CardGrid>

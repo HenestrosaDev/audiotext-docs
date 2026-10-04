@@ -1,0 +1,53 @@
+---
+title: Audiotext
+description: Transcribeer audio- en videobestanden, YouTube-video's en microfoonopnamen op je computer, en vertaal, vat samen en ondertitel ze.
+template: splash
+hero:
+  tagline: Transcribeer audio en video in 100 talen, op je eigen computer en gratis. Speel het resultaat daarna af, corrigeer, vertaal, vat samen en ondertitel het.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Logo van Audiotext
+  actions:
+    - text: Aan de slag
+      link: /nl/getting-started/installation/
+      icon: right-arrow
+    - text: Downloaden
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Het venster van Audiotext met een geopende transcriptie](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Privé en offline" icon="laptop">
+		WhisperX draait op je computer: gratis, onbeperkt en zonder je audio
+		ergens naartoe te sturen. De Whisper-API en de Google-API zijn ook
+		beschikbaar.
+	</Card>
+	<Card title="Elke bron" icon="document">
+		Audio- en videobestanden, YouTube-video's, links naar mediabestanden, de
+		microfoon (met livetekst), hele mappen of een bewaakte map waarvan de
+		nieuwe bestanden worden getranscribeerd.
+	</Card>
+	<Card title="Afspelen en corrigeren" icon="pencil">
+		Klik op een zin om hem af te spelen, doorzoek de tekst, hernoem sprekers
+		en corrigeer woorden zonder de tijdstempels te verliezen.
+	</Card>
+	<Card title="Vertalen en samenvatten" icon="translate">
+		Krijg een samenvatting met de belangrijkste punten en hoofdstukken, of een
+		vertaling, met OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL of
+		Google Translate.
+	</Card>
+	<Card title="Ondertitels en export" icon="download">
+		Exporteer naar TXT, Markdown, Word, SRT, VTT, TSV of JSON, en bekijk
+		video's met hun ondertitels.
+	</Card>
+	<Card title="In jouw taal" icon="star">
+		De interface is beschikbaar in 22 talen en is ook via de opdrachtregel te
+		gebruiken.
+	</Card>
+</CardGrid>

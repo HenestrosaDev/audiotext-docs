@@ -1,0 +1,47 @@
+---
+title: Audiotext
+description: 在你的电脑上转写音频和视频文件、YouTube 视频和麦克风录音，然后翻译、生成摘要并制作字幕。
+template: splash
+hero:
+  tagline: 在你的电脑上免费转写 100 种语言的音频和视频。之后可以播放、校对、翻译、生成摘要并制作字幕。
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Audiotext 标志
+  actions:
+    - text: 开始使用
+      link: /zh-cn/getting-started/installation/
+      icon: right-arrow
+    - text: 下载
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![打开了一份转录的 Audiotext 窗口](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="私密且可离线" icon="laptop">
+		WhisperX 在你的电脑上运行：免费、不限量，音频不会发送到任何地方。也可以使用
+		Whisper API 和 Google API。
+	</Card>
+	<Card title="任意来源" icon="document">
+		音频和视频文件、YouTube 视频、媒体文件链接、麦克风（带实时文本）、整个文件夹，
+		或自动转写新文件的被监视文件夹。
+	</Card>
+	<Card title="播放与校对" icon="pencil">
+		点击句子即可播放，在文本中搜索，重命名说话人，并在保留时间戳的同时修改字词。
+	</Card>
+	<Card title="翻译与摘要" icon="translate">
+		使用 OpenAI、Claude、Gemini、DeepSeek、Mistral、Grok、Ollama、DeepL 或 Google
+		Translate 生成包含要点和章节的摘要，或进行翻译。
+	</Card>
+	<Card title="字幕与导出" icon="download">
+		导出为 TXT、Markdown、Word、SRT、VTT、TSV 或 JSON，并带字幕观看视频。
+	</Card>
+	<Card title="使用你的语言" icon="star">
+		界面提供 22 种语言，也可以通过命令行使用。
+	</Card>
+</CardGrid>

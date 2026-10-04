@@ -1,0 +1,51 @@
+---
+title: Audiotext
+description: अपने कंप्यूटर पर ऑडियो और वीडियो फ़ाइलों, YouTube वीडियो और माइक्रोफ़ोन रिकॉर्डिंग को ट्रांसक्राइब करें, फिर उनका अनुवाद करें, सारांश बनाएँ और सबटाइटल जोड़ें।
+template: splash
+hero:
+  tagline: ऑडियो और वीडियो को 100 भाषाओं में, अपने कंप्यूटर पर और मुफ़्त में ट्रांसक्राइब करें। फिर नतीजे को चलाएँ, सुधारें, अनुवाद करें, सारांश बनाएँ और सबटाइटल बनाएँ।
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Audiotext का लोगो
+  actions:
+    - text: शुरू करें
+      link: /hi/getting-started/installation/
+      icon: right-arrow
+    - text: डाउनलोड करें
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![एक खुले ट्रांसक्रिप्शन के साथ Audiotext की विंडो](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="निजी और ऑफ़लाइन" icon="laptop">
+		WhisperX आपके कंप्यूटर पर चलता है: मुफ़्त, असीमित और आपका ऑडियो कहीं भेजे
+		बिना। Whisper API और Google API भी उपलब्ध हैं।
+	</Card>
+	<Card title="कोई भी स्रोत" icon="document">
+		ऑडियो और वीडियो फ़ाइलें, YouTube वीडियो, मीडिया फ़ाइलों के लिंक, माइक्रोफ़ोन
+		(लाइव टेक्स्ट के साथ), पूरे फ़ोल्डर, या ऐसा फ़ोल्डर जिसकी नई फ़ाइलें अपने-आप
+		ट्रांसक्राइब होती हैं।
+	</Card>
+	<Card title="चलाएँ और सुधारें" icon="pencil">
+		किसी वाक्य पर क्लिक करके उसे चलाएँ, टेक्स्ट में खोजें, वक्ताओं के नाम बदलें
+		और टाइमस्टैम्प खोए बिना शब्द सुधारें।
+	</Card>
+	<Card title="अनुवाद और सारांश" icon="translate">
+		OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL या Google
+		Translate से सारांश, उसके मुख्य बिंदु और अध्याय, या अनुवाद पाएँ।
+	</Card>
+	<Card title="सबटाइटल और निर्यात" icon="download">
+		TXT, Markdown, Word, SRT, VTT, TSV या JSON में निर्यात करें, और वीडियो को
+		उनके सबटाइटल के साथ देखें।
+	</Card>
+	<Card title="आपकी भाषा में" icon="star">
+		इंटरफ़ेस 22 भाषाओं में उपलब्ध है, और इसे कमांड लाइन से भी इस्तेमाल किया जा
+		सकता है।
+	</Card>
+</CardGrid>

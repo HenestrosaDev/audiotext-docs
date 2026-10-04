@@ -1,0 +1,52 @@
+---
+title: Audiotext
+description: Transcribe archivos de audio y vídeo, vídeos de YouTube y grabaciones del micrófono en tu ordenador, y tradúcelos, resúmelos y subtítulalos.
+template: splash
+hero:
+  tagline: Transcribe audio y vídeo en 100 idiomas, en tu ordenador y gratis. Después, reproduce, corrige, traduce, resume y subtitula el resultado.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Logotipo de Audiotext
+  actions:
+    - text: Empezar
+      link: /es/getting-started/installation/
+      icon: right-arrow
+    - text: Descargar
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![La ventana de Audiotext con una transcripción abierta](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Privado y sin conexión" icon="laptop">
+		WhisperX se ejecuta en tu ordenador: gratis, sin límites y sin enviar tu
+		audio a ninguna parte. También están disponibles la API de Whisper y la API
+		de Google.
+	</Card>
+	<Card title="Cualquier origen" icon="document">
+		Archivos de audio y vídeo, vídeos de YouTube, enlaces a archivos
+		multimedia, el micrófono (con texto en directo), carpetas enteras o una
+		carpeta vigilada para transcribir los archivos nuevos.
+	</Card>
+	<Card title="Reproduce y corrige" icon="pencil">
+		Haz clic en una frase para reproducirla, busca en el texto, renombra a los
+		hablantes y corrige palabras sin perder las marcas de tiempo.
+	</Card>
+	<Card title="Traduce y resume" icon="translate">
+		Obtén un resumen, sus puntos clave y capítulos, o una traducción, con
+		OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL o Google Translate.
+	</Card>
+	<Card title="Subtítulos y exportación" icon="download">
+		Exporta a TXT, Markdown, Word, SRT, VTT, TSV o JSON, y mira los vídeos con
+		sus subtítulos.
+	</Card>
+	<Card title="En tu idioma" icon="star">
+		La interfaz está disponible en 22 idiomas, y también se puede usar desde la
+		línea de comandos.
+	</Card>
+</CardGrid>

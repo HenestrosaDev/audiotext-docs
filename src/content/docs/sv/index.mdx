@@ -1,0 +1,52 @@
+---
+title: Audiotext
+description: Transkribera ljud- och videofiler, YouTube-videor och mikrofoninspelningar på din dator, och översätt, sammanfatta och texta dem.
+template: splash
+hero:
+  tagline: Transkribera ljud och video på 100 språk, på din egen dator och gratis. Spela sedan upp, korrigera, översätt, sammanfatta och texta resultatet.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Audiotexts logotyp
+  actions:
+    - text: Kom igång
+      link: /sv/getting-started/installation/
+      icon: right-arrow
+    - text: Ladda ner
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Audiotext-fönstret med en transkription öppen](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Privat och offline" icon="laptop">
+		WhisperX körs på din dator: gratis, obegränsat och utan att skicka ditt
+		ljud någonstans. Whisper-API:t och Google-API:t finns också.
+	</Card>
+	<Card title="Alla källor" icon="document">
+		Ljud- och videofiler, YouTube-videor, länkar till mediefiler, mikrofonen
+		(med livetext), hela mappar eller en bevakad mapp vars nya filer
+		transkriberas.
+	</Card>
+	<Card title="Spela upp och korrigera" icon="pencil">
+		Klicka på en mening för att spela upp den, sök i texten, byt namn på
+		talare och rätta ord utan att förlora tidsstämplarna.
+	</Card>
+	<Card title="Översätt och sammanfatta" icon="translate">
+		Få en sammanfattning med huvudpunkter och kapitel, eller en översättning,
+		med OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL eller Google
+		Translate.
+	</Card>
+	<Card title="Undertexter och export" icon="download">
+		Exportera till TXT, Markdown, Word, SRT, VTT, TSV eller JSON, och se videor
+		med deras undertexter.
+	</Card>
+	<Card title="På ditt språk" icon="star">
+		Gränssnittet finns på 22 språk och kan även användas från
+		kommandoraden.
+	</Card>
+</CardGrid>

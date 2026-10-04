@@ -1,0 +1,51 @@
+---
+title: Audiotext
+description: Transcribe audio and video files, YouTube videos and microphone recordings on your computer, then translate, summarize and subtitle them.
+template: splash
+hero:
+  tagline: Transcribe audio and video in 100 languages, on your computer and for free. Then play, correct, translate, summarize and subtitle the result.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Audiotext logo
+  actions:
+    - text: Get started
+      link: /en/getting-started/installation/
+      icon: right-arrow
+    - text: Download
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![The Audiotext window with a transcription open](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Private and offline" icon="laptop">
+		WhisperX runs on your computer: free, unlimited and without sending your
+		audio anywhere. The Whisper API and the Google API are available too.
+	</Card>
+	<Card title="Any source" icon="document">
+		Audio and video files, YouTube videos, links to media files, the
+		microphone (with live text), whole folders, or a folder that is watched
+		for new files.
+	</Card>
+	<Card title="Play and correct" icon="pencil">
+		Click a sentence to play it, search the text, rename the speakers and fix
+		words while keeping the timestamps.
+	</Card>
+	<Card title="Translate and summarize" icon="translate">
+		Get a summary, its key points and chapters, or a translation, with OpenAI,
+		Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL or Google Translate.
+	</Card>
+	<Card title="Subtitles and exports" icon="download">
+		Export to TXT, Markdown, Word, SRT, VTT, TSV or JSON, and watch videos with
+		their subtitles.
+	</Card>
+	<Card title="In your language" icon="star">
+		The interface is available in 22 languages, and it can be used from the
+		command line too.
+	</Card>
+</CardGrid>

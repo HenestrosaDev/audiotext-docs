@@ -1,0 +1,51 @@
+---
+title: Audiotext
+description: Přepisujte zvukové a video soubory, videa z YouTube a nahrávky z mikrofonu na svém počítači a pak je překládejte, shrnujte a opatřujte titulky.
+template: splash
+hero:
+  tagline: Přepisujte zvuk a video ve 100 jazycích, na svém počítači a zdarma. Výsledek pak přehrajte, opravte, přeložte, shrňte a opatřete titulky.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Logo Audiotextu
+  actions:
+    - text: Začít
+      link: /cs/getting-started/installation/
+      icon: right-arrow
+    - text: Stáhnout
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Okno aplikace Audiotext s otevřeným přepisem](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Soukromě a offline" icon="laptop">
+		WhisperX běží na vašem počítači: zdarma, bez omezení a bez odesílání zvuku
+		kamkoli. K dispozici je také Whisper API a Google API.
+	</Card>
+	<Card title="Jakýkoli zdroj" icon="document">
+		Zvukové a video soubory, videa z YouTube, odkazy na mediální soubory,
+		mikrofon (s živým textem), celé složky nebo sledovaná složka, jejíž nové
+		soubory se přepisují.
+	</Card>
+	<Card title="Přehrávejte a opravujte" icon="pencil">
+		Klikněte na větu a přehrajte ji, prohledávejte text, přejmenujte mluvčí a
+		opravujte slova bez ztráty časových značek.
+	</Card>
+	<Card title="Překládejte a shrnujte" icon="translate">
+		Získejte shrnutí s klíčovými body a kapitolami nebo překlad pomocí OpenAI,
+		Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL nebo Google Translate.
+	</Card>
+	<Card title="Titulky a export" icon="download">
+		Exportujte do TXT, Markdownu, Wordu, SRT, VTT, TSV nebo JSON a sledujte
+		videa s titulky.
+	</Card>
+	<Card title="Ve vašem jazyce" icon="star">
+		Rozhraní je k dispozici ve 22 jazycích a lze ho používat i z příkazové
+		řádky.
+	</Card>
+</CardGrid>

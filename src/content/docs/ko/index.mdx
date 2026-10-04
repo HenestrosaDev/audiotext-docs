@@ -1,0 +1,49 @@
+---
+title: Audiotext
+description: 오디오·동영상 파일, YouTube 동영상, 마이크 녹음을 내 컴퓨터에서 받아쓰고 번역, 요약, 자막까지 만드세요.
+template: splash
+hero:
+  tagline: 100개 언어의 오디오와 동영상을 내 컴퓨터에서 무료로 받아쓰세요. 결과는 재생, 수정, 번역, 요약하고 자막으로 만들 수 있습니다.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Audiotext 로고
+  actions:
+    - text: 시작하기
+      link: /ko/getting-started/installation/
+      icon: right-arrow
+    - text: 다운로드
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![전사본을 연 Audiotext 창](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="비공개, 오프라인" icon="laptop">
+		WhisperX는 내 컴퓨터에서 실행됩니다. 무료이고 제한이 없으며 오디오를 어디에도
+		보내지 않습니다. Whisper API와 Google API도 사용할 수 있습니다.
+	</Card>
+	<Card title="모든 소스" icon="document">
+		오디오·동영상 파일, YouTube 동영상, 미디어 파일 링크, 마이크(실시간 텍스트
+		포함), 폴더 전체, 새 파일을 받아쓰는 감시 폴더.
+	</Card>
+	<Card title="재생하고 수정" icon="pencil">
+		문장을 클릭해 재생하고, 텍스트를 검색하고, 화자 이름을 바꾸고, 타임스탬프를
+		유지한 채 단어를 고칠 수 있습니다.
+	</Card>
+	<Card title="번역과 요약" icon="translate">
+		OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL, Google Translate로
+		핵심 내용과 챕터가 포함된 요약이나 번역을 만듭니다.
+	</Card>
+	<Card title="자막과 내보내기" icon="download">
+		TXT, Markdown, Word, SRT, VTT, TSV, JSON으로 내보내고 동영상을 자막과 함께
+		볼 수 있습니다.
+	</Card>
+	<Card title="내 언어로" icon="star">
+		인터페이스는 22개 언어로 제공되며 명령줄에서도 사용할 수 있습니다.
+	</Card>
+</CardGrid>

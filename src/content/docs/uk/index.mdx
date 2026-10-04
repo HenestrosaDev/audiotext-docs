@@ -1,0 +1,52 @@
+---
+title: Audiotext
+description: Транскрибуйте аудіо- та відеофайли, відео з YouTube і записи з мікрофона на своєму комп'ютері, а потім перекладайте їх, створюйте підсумки й субтитри.
+template: splash
+hero:
+  tagline: Транскрибуйте аудіо й відео 100 мовами — на своєму комп'ютері та безкоштовно. Потім відтворюйте, виправляйте, перекладайте, підсумовуйте й створюйте субтитри.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Логотип Audiotext
+  actions:
+    - text: Почати
+      link: /uk/getting-started/installation/
+      icon: right-arrow
+    - text: Завантажити
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Вікно Audiotext з відкритою транскрипцією](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Приватно й офлайн" icon="laptop">
+		WhisperX працює на вашому комп'ютері: безкоштовно, без обмежень і без
+		надсилання аудіо будь-куди. Також доступні Whisper API та Google API.
+	</Card>
+	<Card title="Будь-яке джерело" icon="document">
+		Аудіо- й відеофайли, відео з YouTube, посилання на медіафайли, мікрофон (з
+		живим текстом), цілі папки або папка під стеженням, нові файли якої
+		транскрибуються.
+	</Card>
+	<Card title="Відтворюйте й виправляйте" icon="pencil">
+		Натисніть фразу, щоб відтворити її, шукайте в тексті, перейменовуйте
+		мовців і виправляйте слова, не втрачаючи часових міток.
+	</Card>
+	<Card title="Перекладайте й підсумовуйте" icon="translate">
+		Отримайте підсумок із ключовими моментами й розділами або переклад за
+		допомогою OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL чи
+		Google Translate.
+	</Card>
+	<Card title="Субтитри й експорт" icon="download">
+		Експортуйте в TXT, Markdown, Word, SRT, VTT, TSV або JSON і дивіться відео
+		із субтитрами.
+	</Card>
+	<Card title="Вашою мовою" icon="star">
+		Інтерфейс доступний 22 мовами, а програмою можна користуватися й із
+		командного рядка.
+	</Card>
+</CardGrid>

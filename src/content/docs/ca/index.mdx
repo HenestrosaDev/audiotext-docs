@@ -1,0 +1,52 @@
+---
+title: Audiotext
+description: Transcriu fitxers d'àudio i vídeo, vídeos de YouTube i enregistraments del micròfon al teu ordinador, i tradueix-los, resumeix-los i subtitula'ls.
+template: splash
+hero:
+  tagline: Transcriu àudio i vídeo en 100 idiomes, al teu ordinador i de franc. Després, reprodueix, corregeix, tradueix, resumeix i subtitula el resultat.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Logotip d'Audiotext
+  actions:
+    - text: Comença
+      link: /ca/getting-started/installation/
+      icon: right-arrow
+    - text: Descarrega
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![La finestra d'Audiotext amb una transcripció oberta](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Privat i sense connexió" icon="laptop">
+		WhisperX s'executa al teu ordinador: de franc, sense límits i sense enviar
+		el teu àudio enlloc. També hi ha disponibles l'API de Whisper i l'API de
+		Google.
+	</Card>
+	<Card title="Qualsevol origen" icon="document">
+		Fitxers d'àudio i vídeo, vídeos de YouTube, enllaços a fitxers multimèdia,
+		el micròfon (amb text en directe), carpetes senceres o una carpeta vigilada
+		per transcriure els fitxers nous.
+	</Card>
+	<Card title="Reprodueix i corregeix" icon="pencil">
+		Fes clic en una frase per reproduir-la, cerca al text, canvia el nom dels
+		parlants i corregeix paraules sense perdre les marques de temps.
+	</Card>
+	<Card title="Tradueix i resumeix" icon="translate">
+		Obtén un resum, els punts clau i els capítols, o una traducció, amb OpenAI,
+		Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL o Google Translate.
+	</Card>
+	<Card title="Subtítols i exportació" icon="download">
+		Exporta a TXT, Markdown, Word, SRT, VTT, TSV o JSON, i mira els vídeos amb
+		els seus subtítols.
+	</Card>
+	<Card title="En el teu idioma" icon="star">
+		La interfície està disponible en 22 idiomes, i també es pot fer servir des
+		de la línia d'ordres.
+	</Card>
+</CardGrid>

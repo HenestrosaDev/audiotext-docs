@@ -1,0 +1,52 @@
+---
+title: Audiotext
+description: Trascrivi file audio e video, video di YouTube e registrazioni del microfono sul tuo computer, poi traducili, riassumili e sottotitolali.
+template: splash
+hero:
+  tagline: Trascrivi audio e video in 100 lingue, sul tuo computer e gratis. Poi riproduci, correggi, traduci, riassumi e sottotitola il risultato.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Logo di Audiotext
+  actions:
+    - text: Inizia
+      link: /it/getting-started/installation/
+      icon: right-arrow
+    - text: Scarica
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![La finestra di Audiotext con una trascrizione aperta](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Privato e offline" icon="laptop">
+		WhisperX funziona sul tuo computer: gratis, senza limiti e senza inviare il
+		tuo audio da nessuna parte. Sono disponibili anche la API di Whisper e la
+		API di Google.
+	</Card>
+	<Card title="Qualsiasi origine" icon="document">
+		File audio e video, video di YouTube, link a file multimediali, il
+		microfono (con testo dal vivo), cartelle intere o una cartella monitorata
+		per trascrivere i nuovi file.
+	</Card>
+	<Card title="Riproduci e correggi" icon="pencil">
+		Fai clic su una frase per riprodurla, cerca nel testo, rinomina i parlanti
+		e correggi parole senza perdere i marcatori temporali.
+	</Card>
+	<Card title="Traduci e riassumi" icon="translate">
+		Ottieni un riassunto, i punti chiave e i capitoli, o una traduzione, con
+		OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL o Google Translate.
+	</Card>
+	<Card title="Sottotitoli ed esportazione" icon="download">
+		Esporta in TXT, Markdown, Word, SRT, VTT, TSV o JSON, e guarda i video con
+		i loro sottotitoli.
+	</Card>
+	<Card title="Nella tua lingua" icon="star">
+		L'interfaccia è disponibile in 22 lingue, e si può usare anche dalla riga
+		di comando.
+	</Card>
+</CardGrid>

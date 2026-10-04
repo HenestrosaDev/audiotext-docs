@@ -1,0 +1,67 @@
+---
+title: Instalacja
+description: Pobierz Audiotext na Windows, macOS lub Linuksa i uruchom go po raz pierwszy.
+sidebar:
+  order: 1
+---
+
+Audiotext to aplikacja na komputery z systemem **Windows**, **macOS** i **Linux**. Zamienia na tekst dźwięk z plików, filmów z YouTube i nagrań z mikrofonu, a także potrafi go przetłumaczyć, podsumować i zamienić w napisy.
+
+## Pobierz aplikację
+
+Pobierz plik dla swojego systemu z [najnowszej wersji](https://github.com/HenestrosaDev/audiotext/releases/latest) na GitHubie:
+
+| System | Plik |
+| --- | --- |
+| Windows (64-bitowy) | `Audiotext-<version>-windows-x64-setup.exe` |
+| macOS 15 lub nowszy (Apple Silicon) | `Audiotext-<version>-macos-arm64.dmg` |
+| Linux (x86_64) | `Audiotext-<version>-linux-x86_64.tar.gz` |
+
+Aplikacja zawiera wszystko, czego potrzebuje, łącznie z FFmpeg.
+
+### Windows
+
+Uruchom instalator i postępuj zgodnie z krokami. Nie wymaga uprawnień administratora. Jeśli masz kartę graficzną NVIDIA, zaznacz opcję użycia karty NVIDIA (CUDA): instalator pobierze wtedy dodatek GPU, który znacznie przyspiesza WhisperX. Instalator nie jest podpisany, więc Windows SmartScreen może wyświetlić ostrzeżenie: rozwiń dodatkowe informacje i wybierz uruchomienie mimo to.
+
+### macOS
+
+Otwórz plik `.dmg` i przeciągnij **Audiotext** do folderu **Aplikacje**. Aplikacja nie jest poświadczona przez Apple, więc macOS blokuje ją przy pierwszym otwarciu: przejdź do **Ustawienia systemowe** → **Prywatność i ochrona** i kliknij **Otwórz mimo to** obok komunikatu o Audiotext. W macOS WhisperX działa na procesorze, ponieważ CUDA nie jest dostępne. Komputery Mac z procesorem Intel nie są obsługiwane, ponieważ PyTorch już ich nie obsługuje.
+
+### Linux
+
+Rozpakuj archiwum i uruchom instalator w terminalu:
+
+```bash
+tar -xzf Audiotext-<version>-linux-x86_64.tar.gz
+cd Audiotext-<version>-linux-x86_64
+./install.sh
+```
+
+Instaluje Audiotext dla twojego użytkownika i dodaje go do menu aplikacji (można go też otworzyć poleceniem `audiotext`). Jeśli wykryje kartę NVIDIA, zaproponuje pobranie dodatku GPU. Uruchom `./install.sh --gpu` lub `./install.sh --cpu`, aby wybrać bez pytania, a `./install.sh --uninstall`, aby go odinstalować (ustawienia zostaną zachowane).
+
+:::tip
+Dodatek GPU to pobieranie rzędu kilku GB, więc opłaca się tylko z kartą NVIDIA. Bez niego WhisperX działa na procesorze, a API Whisper i API Google działają tak samo.
+:::
+
+:::note
+Przy pierwszej transkrypcji za pomocą **WhisperX** (domyślnego silnika) pobierany jest jego model. Zajmuje od ~75 MB (`tiny`) do ~3 GB (`large-v2`), więc może to chwilę potrwać. Kolejne transkrypcje zaczynają się od razu.
+:::
+
+## Wymagania
+
+- **WhisperX** działa na twoim komputerze. Działa na każdym procesorze, ale jest znacznie szybszy na karcie graficznej NVIDIA z CUDA. Zobacz [Silniki](/pl/reference/engines/), aby wybrać model dopasowany do sprzętu.
+- **API Whisper** i **API Google** działają na zdalnych serwerach, więc wymagają połączenia z internetem, ale nie mocnego sprzętu.
+- Aby transkrybować z mikrofonu, system musi wykrywać urządzenie wejściowe.
+- Na Linuksie nagrywanie i odtwarzanie wymaga [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` w Ubuntu lub Debianie).
+
+## Zmień język interfejsu
+
+Audiotext używa języka systemu, jeśli jest dostępny. Aby go zmienić, otwórz **Preferencje** (koło zębate w prawym górnym rogu) i wybierz język w **Ogólne** → **Język interfejsu**. Można go zmienić, gdy żadna transkrypcja nie jest w toku.
+
+## Uruchom z kodu źródłowego
+
+Jeśli chcesz uruchomić najnowszy kod lub pomóc w rozwoju, zobacz [Współtworzenie](/pl/help/contributing/), aby przygotować projekt w Pythonie.
+
+## Następne kroki
+
+- [Twoja pierwsza transkrypcja](/pl/getting-started/first-transcription/) wyjaśnia okno i kroki transkrypcji.

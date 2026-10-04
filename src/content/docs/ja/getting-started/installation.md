@@ -1,0 +1,67 @@
+---
+title: インストール
+description: Windows、macOS、Linux 用の Audiotext をダウンロードして、初めて起動します。
+sidebar:
+  order: 1
+---
+
+Audiotext は **Windows**、**macOS**、**Linux** 向けのデスクトップアプリです。ファイル、YouTube 動画、マイクの録音の音声をテキストに書き起こし、翻訳、要約、字幕化もできます。
+
+## アプリをダウンロードする
+
+GitHub の[最新リリース](https://github.com/HenestrosaDev/audiotext/releases/latest)から、お使いのシステム用のファイルをダウンロードします。
+
+| システム | ファイル |
+| --- | --- |
+| Windows（64 ビット） | `Audiotext-<version>-windows-x64-setup.exe` |
+| macOS 15 以降（Apple シリコン） | `Audiotext-<version>-macos-arm64.dmg` |
+| Linux（x86_64） | `Audiotext-<version>-linux-x86_64.tar.gz` |
+
+アプリには FFmpeg を含め、必要なものがすべて入っています。
+
+### Windows
+
+インストーラーを実行し、手順に従います。管理者権限は不要です。NVIDIA GPU がある場合は、NVIDIA GPU（CUDA）を使うオプションをオンにしてください。インストーラーが GPU アドオンをダウンロードし、WhisperX が大幅に速くなります。 インストーラーは署名されていないため、Windows SmartScreen が警告を表示することがあります。詳細情報を開き、そのまま実行することを選んでください。
+
+### macOS
+
+`.dmg` ファイルを開き、**Audiotext** を **アプリケーション** フォルダーにドラッグします。このアプリは Apple の公証を受けていないため、初回起動時に macOS がブロックします。**システム設定** → **プライバシーとセキュリティ** を開き、Audiotext に関するメッセージの横にある **このまま開く** をクリックしてください。macOS では CUDA が使えないため、WhisperX は CPU で動作します。 PyTorch のサポートが終了したため、Intel 搭載の Mac には対応していません。
+
+### Linux
+
+アーカイブを展開し、ターミナルからインストーラーを実行します。
+
+```bash
+tar -xzf Audiotext-<version>-linux-x86_64.tar.gz
+cd Audiotext-<version>-linux-x86_64
+./install.sh
+```
+
+Audiotext をユーザー用にインストールし、アプリケーションメニューに追加します（`audiotext` コマンドでも起動できます）。NVIDIA GPU を検出すると、GPU アドオンのダウンロードを提案します。確認なしで選ぶには `./install.sh --gpu` または `./install.sh --cpu` を、アンインストールするには `./install.sh --uninstall` を実行します（設定は残ります）。
+
+:::tip
+GPU アドオンは数 GB のダウンロードなので、NVIDIA GPU がある場合にのみ役立ちます。なくても WhisperX は CPU で動作し、Whisper API と Google API は同じように使えます。
+:::
+
+:::note
+**WhisperX**（既定のエンジン）で初めて文字起こしするとき、そのモデルがダウンロードされます。サイズは `tiny` の約 75 MB から `large-v2` の約 3 GB まであるため、少し時間がかかることがあります。次回以降の文字起こしはすぐに始まります。
+:::
+
+## 動作要件
+
+- **WhisperX** はお使いのコンピューターで動作します。どの CPU でも動きますが、CUDA 対応の NVIDIA GPU ではずっと高速です。ハードウェアに合ったモデルの選び方は[エンジン](/ja/reference/engines/)をご覧ください。
+- **Whisper API** と **Google API** はリモートサーバーで動作するため、インターネット接続が必要ですが、高性能なハードウェアは不要です。
+- マイクから文字起こしするには、システムが入力デバイスを認識している必要があります。
+- Linux では、録音と再生に [PortAudio](https://www.portaudio.com/) が必要です（Ubuntu または Debian では `sudo apt install libportaudio2`）。
+
+## インターフェースの言語を変更する
+
+Audiotext は、利用可能であればシステムの言語を使います。変更するには、**環境設定**（右上の歯車）を開き、**一般** → **インターフェースの言語** で言語を選びます。文字起こしの実行中でなければ変更できます。
+
+## ソースコードから実行する
+
+最新のコードを実行したい場合や開発に参加したい場合は、[コントリビュート](/ja/help/contributing/)を参照して Python でプロジェクトを準備してください。
+
+## 次のステップ
+
+- [最初の文字起こし](/ja/getting-started/first-transcription/)では、ウィンドウと文字起こしの手順を説明しています。

@@ -1,0 +1,52 @@
+---
+title: Audiotext
+description: Transkrybuj pliki audio i wideo, filmy z YouTube i nagrania z mikrofonu na swoim komputerze, a potem je tłumacz, podsumowuj i dodawaj do nich napisy.
+template: splash
+hero:
+  tagline: Transkrybuj audio i wideo w 100 językach, na swoim komputerze i za darmo. Potem odtwarzaj, poprawiaj, tłumacz, podsumowuj i dodawaj napisy.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Logo Audiotext
+  actions:
+    - text: Zacznij
+      link: /pl/getting-started/installation/
+      icon: right-arrow
+    - text: Pobierz
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Okno Audiotext z otwartą transkrypcją](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Prywatnie i offline" icon="laptop">
+		WhisperX działa na twoim komputerze: za darmo, bez limitów i bez wysyłania
+		nagrań gdziekolwiek. Dostępne są też API Whisper i API Google.
+	</Card>
+	<Card title="Dowolne źródło" icon="document">
+		Pliki audio i wideo, filmy z YouTube, linki do plików multimedialnych,
+		mikrofon (z tekstem na żywo), całe foldery lub obserwowany folder, którego
+		nowe pliki są transkrybowane.
+	</Card>
+	<Card title="Odtwarzaj i poprawiaj" icon="pencil">
+		Kliknij zdanie, aby je odtworzyć, przeszukuj tekst, zmieniaj nazwy mówców
+		i poprawiaj słowa bez utraty znaczników czasu.
+	</Card>
+	<Card title="Tłumacz i podsumowuj" icon="translate">
+		Uzyskaj podsumowanie z najważniejszymi punktami i rozdziałami lub
+		tłumaczenie za pomocą OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama,
+		DeepL lub Google Translate.
+	</Card>
+	<Card title="Napisy i eksport" icon="download">
+		Eksportuj do TXT, Markdown, Word, SRT, VTT, TSV lub JSON i oglądaj filmy z
+		napisami.
+	</Card>
+	<Card title="W twoim języku" icon="star">
+		Interfejs jest dostępny w 22 językach i można z niego korzystać także z
+		wiersza poleceń.
+	</Card>
+</CardGrid>

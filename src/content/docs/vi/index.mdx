@@ -1,0 +1,50 @@
+---
+title: Audiotext
+description: Chép lời tệp âm thanh và video, video YouTube và bản ghi âm từ micrô ngay trên máy tính của bạn, rồi dịch, tóm tắt và tạo phụ đề.
+template: splash
+hero:
+  tagline: Chép lời âm thanh và video bằng 100 ngôn ngữ, ngay trên máy tính của bạn và miễn phí. Sau đó phát lại, sửa, dịch, tóm tắt và tạo phụ đề cho kết quả.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Logo Audiotext
+  actions:
+    - text: Bắt đầu
+      link: /vi/getting-started/installation/
+      icon: right-arrow
+    - text: Tải xuống
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Cửa sổ Audiotext với một bản chép lời đang mở](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Riêng tư và ngoại tuyến" icon="laptop">
+		WhisperX chạy trên máy tính của bạn: miễn phí, không giới hạn và không gửi
+		âm thanh của bạn đi đâu cả. Whisper API và Google API cũng có sẵn.
+	</Card>
+	<Card title="Mọi nguồn" icon="document">
+		Tệp âm thanh và video, video YouTube, liên kết đến tệp đa phương tiện,
+		micrô (có văn bản trực tiếp), cả thư mục hoặc một thư mục được theo dõi để
+		chép lời các tệp mới.
+	</Card>
+	<Card title="Phát lại và sửa" icon="pencil">
+		Nhấp vào một câu để phát câu đó, tìm kiếm trong văn bản, đổi tên người nói
+		và sửa từ mà không mất dấu thời gian.
+	</Card>
+	<Card title="Dịch và tóm tắt" icon="translate">
+		Nhận bản tóm tắt cùng các ý chính và chương, hoặc bản dịch, với OpenAI,
+		Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL hoặc Google Translate.
+	</Card>
+	<Card title="Phụ đề và xuất tệp" icon="download">
+		Xuất sang TXT, Markdown, Word, SRT, VTT, TSV hoặc JSON và xem video cùng
+		phụ đề.
+	</Card>
+	<Card title="Bằng ngôn ngữ của bạn" icon="star">
+		Giao diện có sẵn bằng 22 ngôn ngữ và cũng có thể dùng từ dòng lệnh.
+	</Card>
+</CardGrid>

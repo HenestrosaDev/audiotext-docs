@@ -1,0 +1,49 @@
+---
+title: Audiotext
+description: 音声・動画ファイル、YouTube 動画、マイクの録音をお使いのコンピューターで文字起こしし、翻訳・要約・字幕作成まで行えます。
+template: splash
+hero:
+  tagline: 100 言語の音声と動画を、お使いのコンピューターで無料で文字起こし。結果は再生、修正、翻訳、要約、字幕化できます。
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Audiotext のロゴ
+  actions:
+    - text: はじめる
+      link: /ja/getting-started/installation/
+      icon: right-arrow
+    - text: ダウンロード
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![文字起こしを開いた Audiotext のウィンドウ](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="プライベートでオフライン" icon="laptop">
+		WhisperX はお使いのコンピューターで動作します。無料・無制限で、音声をどこにも
+		送信しません。Whisper API と Google API も利用できます。
+	</Card>
+	<Card title="あらゆるソース" icon="document">
+		音声・動画ファイル、YouTube 動画、メディアファイルへのリンク、マイク（ライブ
+		テキスト付き）、フォルダー全体、新しいファイルを文字起こしする監視フォルダー。
+	</Card>
+	<Card title="再生して修正" icon="pencil">
+		文をクリックして再生し、テキストを検索し、話者の名前を変更し、タイムスタンプを
+		保ったまま単語を修正できます。
+	</Card>
+	<Card title="翻訳と要約" icon="translate">
+		OpenAI、Claude、Gemini、DeepSeek、Mistral、Grok、Ollama、DeepL、Google Translate
+		で、要点とチャプター付きの要約や翻訳を作成できます。
+	</Card>
+	<Card title="字幕とエクスポート" icon="download">
+		TXT、Markdown、Word、SRT、VTT、TSV、JSON にエクスポートし、動画を字幕付きで
+		視聴できます。
+	</Card>
+	<Card title="あなたの言語で" icon="star">
+		インターフェースは 22 言語に対応し、コマンドラインからも使えます。
+	</Card>
+</CardGrid>

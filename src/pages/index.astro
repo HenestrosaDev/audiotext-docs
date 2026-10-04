@@ -1,0 +1,51 @@
+---
+// The root of the website redirects to the documentation in the language of the
+// browser, or in English if it's not available. Without JavaScript, the meta
+// refresh and the links below take the visitor to the English one.
+import { locales } from '../locales.mjs';
+
+const fallback = '/en/';
+// The code of each locale (e.g. "zh-cn") by its language (e.g. "zh-CN")
+const localesByLanguage = Object.fromEntries(
+	Object.entries(locales).map(([code, { lang }]) => [lang.toLowerCase(), code])
+);
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Audiotext</title>
+		<link rel="icon" href="/favicon.png" />
+		<link rel="canonical" href={new URL(fallback, Astro.site)} />
+		<meta http-equiv="refresh" content={`2; url=${fallback}`} />
+		<script is:inline define:vars={{ localesByLanguage, fallback }}>
+			// "pt-BR" matches "pt", but only Simplified Chinese is available
+			const find = (language) => {
+				const tag = language.toLowerCase();
+				if (tag.startsWith('zh')) {
+					const isTraditional = /-(hant|tw|hk|mo)\b/.test(tag);
+					return isTraditional ? undefined : localesByLanguage['zh-cn'];
+				}
+				return localesByLanguage[tag] ?? localesByLanguage[tag.split('-')[0]];
+			};
+			const languages = navigator.languages ?? [navigator.language];
+			const locale = languages.map(find).find(Boolean);
+			location.replace(locale ? `/${locale}/` : fallback);
+		</script>
+	</head>
+	<body>
+		<ul>
+			{
+				Object.entries(locales).map(([code, { label, lang }]) => (
+					<li>
+						<a href={`/${code}/`} lang={lang}>
+							{label}
+						</a>
+					</li>
+				))
+			}
+		</ul>
+	</body>
+</html>

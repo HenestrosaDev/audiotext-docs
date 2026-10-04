@@ -1,0 +1,51 @@
+---
+title: Audiotext
+description: Transcrieți fișiere audio și video, videoclipuri YouTube și înregistrări de la microfon pe computer, apoi traduceți-le, rezumați-le și adăugați-le subtitrări.
+template: splash
+hero:
+  tagline: Transcrieți audio și video în 100 de limbi, pe computerul dumneavoastră și gratuit. Apoi redați, corectați, traduceți, rezumați și subtitrați rezultatul.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Sigla Audiotext
+  actions:
+    - text: Începeți
+      link: /ro/getting-started/installation/
+      icon: right-arrow
+    - text: Descărcați
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Fereastra Audiotext cu o transcriere deschisă](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Privat și offline" icon="laptop">
+		WhisperX rulează pe computerul dumneavoastră: gratuit, nelimitat și fără a
+		trimite audio nicăieri. Sunt disponibile și API-ul Whisper și API-ul Google.
+	</Card>
+	<Card title="Orice sursă" icon="document">
+		Fișiere audio și video, videoclipuri YouTube, linkuri către fișiere media,
+		microfonul (cu text live), dosare întregi sau un dosar monitorizat ale cărui
+		fișiere noi sunt transcrise.
+	</Card>
+	<Card title="Redați și corectați" icon="pencil">
+		Faceți clic pe o propoziție pentru a o reda, căutați în text, redenumiți
+		vorbitorii și corectați cuvinte fără a pierde marcajele de timp.
+	</Card>
+	<Card title="Traduceți și rezumați" icon="translate">
+		Obțineți un rezumat cu puncte cheie și capitole sau o traducere, cu OpenAI,
+		Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL sau Google Translate.
+	</Card>
+	<Card title="Subtitrări și export" icon="download">
+		Exportați în TXT, Markdown, Word, SRT, VTT, TSV sau JSON și urmăriți
+		videoclipurile cu subtitrări.
+	</Card>
+	<Card title="În limba dumneavoastră" icon="star">
+		Interfața este disponibilă în 22 de limbi și poate fi folosită și din linia
+		de comandă.
+	</Card>
+</CardGrid>

@@ -1,0 +1,16 @@
+/* Accent colors close to the blue theme of the app */
+:root {
+	--sl-color-accent-low: #10263a;
+	--sl-color-accent: #1f6aa5;
+	--sl-color-accent-high: #b9d9f2;
+}
+
+:root[data-theme='light'] {
+	--sl-color-accent-low: #d5e8f7;
+	--sl-color-accent: #1f6aa5;
+	--sl-color-accent-high: #0f3a5c;
+}
+
+.hero img {
+	max-width: 12rem;
+}

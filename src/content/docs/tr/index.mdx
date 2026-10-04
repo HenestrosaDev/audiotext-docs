@@ -1,0 +1,50 @@
+---
+title: Audiotext
+description: Ses ve video dosyalarını, YouTube videolarını ve mikrofon kayıtlarını bilgisayarınızda yazıya dökün; ardından çevirin, özetleyin ve altyazı ekleyin.
+template: splash
+hero:
+  tagline: Sesi ve videoyu 100 dilde, kendi bilgisayarınızda ve ücretsiz olarak yazıya dökün. Ardından sonucu oynatın, düzeltin, çevirin, özetleyin ve altyazıya dönüştürün.
+  image:
+    light: ../../../assets/icon-light.png
+    dark: ../../../assets/icon-dark.png
+    alt: Audiotext logosu
+  actions:
+    - text: Başlayın
+      link: /tr/getting-started/installation/
+      icon: right-arrow
+    - text: İndirin
+      link: https://github.com/HenestrosaDev/audiotext/releases/latest
+      icon: external
+      variant: minimal
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+![Bir transkripsiyonun açık olduğu Audiotext penceresi](/screenshots/main.png)
+
+<CardGrid stagger>
+	<Card title="Gizli ve çevrimdışı" icon="laptop">
+		WhisperX bilgisayarınızda çalışır: ücretsiz, sınırsız ve sesinizi hiçbir
+		yere göndermeden. Whisper API ve Google API de kullanılabilir.
+	</Card>
+	<Card title="Her kaynak" icon="document">
+		Ses ve video dosyaları, YouTube videoları, medya dosyası bağlantıları,
+		mikrofon (canlı metinle), klasörlerin tamamı veya yeni dosyaları yazıya
+		dökülen izlenen bir klasör.
+	</Card>
+	<Card title="Oynatın ve düzeltin" icon="pencil">
+		Bir cümleyi oynatmak için tıklayın, metinde arayın, konuşmacıları yeniden
+		adlandırın ve zaman damgalarını kaybetmeden kelimeleri düzeltin.
+	</Card>
+	<Card title="Çevirin ve özetleyin" icon="translate">
+		OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL veya Google
+		Translate ile önemli noktaları ve bölümleriyle bir özet ya da çeviri alın.
+	</Card>
+	<Card title="Altyazılar ve dışa aktarma" icon="download">
+		TXT, Markdown, Word, SRT, VTT, TSV veya JSON olarak dışa aktarın ve
+		videoları altyazılarıyla izleyin.
+	</Card>
+	<Card title="Kendi dilinizde" icon="star">
+		Arayüz 22 dilde kullanılabilir ve komut satırından da kullanılabilir.
+	</Card>
+</CardGrid>
