@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Vylepšete tuto dokumentaci
 
-Tento web je postavený na [Starlightu](https://starlight.astro.build) a nachází se ve složce `web` repozitáře. Každý jazyk má vlastní složku ve `web/src/content/docs` (angličtina je v `en`).
+Tento web je postavený na [Starlightu](https://starlight.astro.build) a nachází se v repozitáři [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs). Každý jazyk má vlastní složku v `src/content/docs` (angličtina je v `en`).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # spustí web na http://localhost:4321
-npm run build   # sestaví web do web/dist
+npm run build   # sestaví web do dist
 ```
 
 Každá stránka má dole odkaz **Upravit stránku**, který ji otevře na GitHubu.

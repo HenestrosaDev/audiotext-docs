@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Förbättra denna dokumentation
 
-Den här webbplatsen är byggd med [Starlight](https://starlight.astro.build) och finns i mappen `web` i repositoryt. Varje språk har en egen mapp i `web/src/content/docs` (engelska ligger i `en`).
+Den här webbplatsen är byggd med [Starlight](https://starlight.astro.build) och finns i repositoryt [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs). Varje språk har en egen mapp i `src/content/docs` (engelska ligger i `en`).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # visar webbplatsen på http://localhost:4321
-npm run build   # bygger webbplatsen i web/dist
+npm run build   # bygger webbplatsen i dist
 ```
 
 Varje sida har en länk **Redigera sida** längst ner som öppnar den på GitHub.

@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Migliora questa documentazione
 
-Questo sito è realizzato con [Starlight](https://starlight.astro.build) e si trova nella cartella `web` del repository. Ogni lingua ha la sua cartella in `web/src/content/docs` (l'inglese è in `en`).
+Questo sito è realizzato con [Starlight](https://starlight.astro.build) e si trova nel repository [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs). Ogni lingua ha la sua cartella in `src/content/docs` (l'inglese è in `en`).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # serve il sito su http://localhost:4321
-npm run build   # genera il sito in web/dist
+npm run build   # genera il sito in dist
 ```
 
 Ogni pagina ha in fondo un link **Modifica pagina** che la apre su GitHub.

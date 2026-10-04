@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Bu belgeleri iyileştirin
 
-Bu site [Starlight](https://starlight.astro.build) ile oluşturulmuştur ve deponun `web` klasöründedir. Her dilin `web/src/content/docs` içinde kendi klasörü vardır (İngilizce `en` içindedir).
+Bu site [Starlight](https://starlight.astro.build) ile oluşturulmuştur ve [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs) deposundadır. Her dilin `src/content/docs` içinde kendi klasörü vardır (İngilizce `en` içindedir).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # siteyi http://localhost:4321 adresinde sunar
-npm run build   # siteyi web/dist içinde derler
+npm run build   # siteyi dist içinde derler
 ```
 
 Her sayfanın altında, sayfayı GitHub'da açan bir **Sayfayı düzenle** bağlantısı bulunur.

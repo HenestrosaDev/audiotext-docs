@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Perbaiki dokumentasi ini
 
-Situs ini dibuat dengan [Starlight](https://starlight.astro.build) dan berada di folder `web` pada repositori. Setiap bahasa memiliki foldernya sendiri di `web/src/content/docs` (bahasa Inggris ada di `en`).
+Situs ini dibuat dengan [Starlight](https://starlight.astro.build) dan berada di repositori [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs). Setiap bahasa memiliki foldernya sendiri di `src/content/docs` (bahasa Inggris ada di `en`).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # menyajikan situs di http://localhost:4321
-npm run build   # membangun situs ke web/dist
+npm run build   # membangun situs ke dist
 ```
 
 Setiap halaman memiliki tautan **Edit halaman** di bagian bawah yang membukanya di GitHub.

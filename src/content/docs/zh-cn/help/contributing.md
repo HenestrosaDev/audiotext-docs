@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## 改进本文档
 
-本网站使用 [Starlight](https://starlight.astro.build) 构建，位于仓库的 `web` 文件夹中。每种语言在 `web/src/content/docs` 中都有自己的文件夹（英语位于 `en`）。
+本网站使用 [Starlight](https://starlight.astro.build) 构建，位于 [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs) 仓库中。每种语言在 `src/content/docs` 中都有自己的文件夹（英语位于 `en`）。
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # 在 http://localhost:4321 上运行网站
-npm run build   # 将网站构建到 web/dist
+npm run build   # 将网站构建到 dist
 ```
 
 每个页面底部都有一个**编辑此页**链接，可在 GitHub 上打开该页面。

@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Улучшите эту документацию
 
-Этот сайт создан на [Starlight](https://starlight.astro.build) и находится в папке `web` репозитория. У каждого языка своя папка в `web/src/content/docs` (английский — в `en`).
+Этот сайт создан на [Starlight](https://starlight.astro.build) и находится в репозитории [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs). У каждого языка своя папка в `src/content/docs` (английский — в `en`).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # запускает сайт по адресу http://localhost:4321
-npm run build   # собирает сайт в web/dist
+npm run build   # собирает сайт в dist
 ```
 
 Внизу каждой страницы есть ссылка **Редактировать страницу**, которая открывает её на GitHub.

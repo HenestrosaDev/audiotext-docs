@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## 이 문서 개선하기
 
-이 사이트는 [Starlight](https://starlight.astro.build)로 만들어졌으며 저장소의 `web` 폴더에 있습니다. 언어마다 `web/src/content/docs`에 자체 폴더가 있습니다(영어는 `en`에 있습니다).
+이 사이트는 [Starlight](https://starlight.astro.build)로 만들어졌으며 [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs) 저장소에 있습니다. 언어마다 `src/content/docs`에 자체 폴더가 있습니다(영어는 `en`에 있습니다).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # http://localhost:4321에서 사이트를 띄웁니다
-npm run build   # web/dist에 사이트를 빌드합니다
+npm run build   # dist에 사이트를 빌드합니다
 ```
 
 각 페이지 하단에는 GitHub에서 해당 페이지를 여는 **페이지 편집** 링크가 있습니다.

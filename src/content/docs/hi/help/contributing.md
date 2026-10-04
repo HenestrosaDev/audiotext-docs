@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## इस दस्तावेज़ को बेहतर बनाएँ
 
-यह वेबसाइट [Starlight](https://starlight.astro.build) से बनी है और रिपॉज़िटरी के `web` फ़ोल्डर में है। हर भाषा का `web/src/content/docs` में अपना फ़ोल्डर है (अंग्रेज़ी `en` में है)।
+यह वेबसाइट [Starlight](https://starlight.astro.build) से बनी है और [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs) रिपॉज़िटरी में है। हर भाषा का `src/content/docs` में अपना फ़ोल्डर है (अंग्रेज़ी `en` में है)।
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # वेबसाइट को http://localhost:4321 पर चलाता है
-npm run build   # वेबसाइट को web/dist में बनाता है
+npm run build   # वेबसाइट को dist में बनाता है
 ```
 
 हर पेज के नीचे **पेज संपादित करें** लिंक है जो उसे GitHub पर खोलता है।

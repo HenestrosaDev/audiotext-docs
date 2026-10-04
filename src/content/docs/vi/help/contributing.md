@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Cải thiện tài liệu này
 
-Trang web này được xây dựng bằng [Starlight](https://starlight.astro.build) và nằm trong thư mục `web` của kho mã. Mỗi ngôn ngữ có thư mục riêng trong `web/src/content/docs` (tiếng Anh nằm trong `en`).
+Trang web này được xây dựng bằng [Starlight](https://starlight.astro.build) và nằm trong kho mã [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs). Mỗi ngôn ngữ có thư mục riêng trong `src/content/docs` (tiếng Anh nằm trong `en`).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # chạy trang web tại http://localhost:4321
-npm run build   # xây dựng trang web vào web/dist
+npm run build   # xây dựng trang web vào dist
 ```
 
 Mỗi trang có liên kết **Chỉnh sửa trang** ở cuối để mở trang đó trên GitHub.

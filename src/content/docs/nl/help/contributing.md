@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Deze documentatie verbeteren
 
-Deze website is gebouwd met [Starlight](https://starlight.astro.build) en staat in de map `web` van de repository. Elke taal heeft een eigen map in `web/src/content/docs` (Engels staat in `en`).
+Deze website is gebouwd met [Starlight](https://starlight.astro.build) en staat in de repository [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs). Elke taal heeft een eigen map in `src/content/docs` (Engels staat in `en`).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # serveert de website op http://localhost:4321
-npm run build   # bouwt de website in web/dist
+npm run build   # bouwt de website in dist
 ```
 
 Elke pagina heeft onderaan een link **Pagina bewerken** die hem op GitHub opent.

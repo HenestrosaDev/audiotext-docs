@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## Îmbunătățiți această documentație
 
-Acest site este construit cu [Starlight](https://starlight.astro.build) și se află în dosarul `web` al depozitului. Fiecare limbă are propriul dosar în `web/src/content/docs` (engleza este în `en`).
+Acest site este construit cu [Starlight](https://starlight.astro.build) și se află în depozitul [audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs). Fiecare limbă are propriul dosar în `src/content/docs` (engleza este în `en`).
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # servește site-ul la http://localhost:4321
-npm run build   # construiește site-ul în web/dist
+npm run build   # construiește site-ul în dist
 ```
 
 Fiecare pagină are în partea de jos un link **Editează pagina** care o deschide pe GitHub.

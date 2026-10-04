@@ -86,13 +86,14 @@ python .github/scripts/update_translations.py
 
 ## このドキュメントを改善する
 
-このサイトは [Starlight](https://starlight.astro.build) で作られており、リポジトリの `web` フォルダーにあります。言語ごとに `web/src/content/docs` 内にフォルダーがあります（英語は `en` にあります）。
+このサイトは [Starlight](https://starlight.astro.build) で作られており、[audiotext-docs](https://github.com/HenestrosaDev/audiotext-docs) リポジトリにあります。言語ごとに `src/content/docs` 内にフォルダーがあります（英語は `en` にあります）。
 
 ```bash
-cd web
+git clone https://github.com/HenestrosaDev/audiotext-docs.git
+cd audiotext-docs
 npm install
 npm run dev     # http://localhost:4321 でサイトを表示する
-npm run build   # web/dist にサイトをビルドする
+npm run build   # dist にサイトをビルドする
 ```
 
 各ページの下部には、GitHub でそのページを開く **ページを編集** リンクがあります。
