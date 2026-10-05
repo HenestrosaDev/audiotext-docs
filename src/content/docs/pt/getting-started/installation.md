@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Ele instala o Audiotext para o seu usuário e o adiciona ao menu de aplicativos (também pode ser aberto com o comando `audiotext`). Se detectar uma GPU NVIDIA, oferece baixar o complemento de GPU. Execute `./install.sh --gpu` ou `./install.sh --cpu` para escolher sem ser perguntado, e `./install.sh --uninstall` para desinstalá-lo (suas configurações são mantidas).
 
 :::tip
-O complemento de GPU é um download de vários GB, então só vale a pena com uma GPU NVIDIA. Sem ele, o WhisperX roda na CPU, e a API do Whisper e a API do Google funcionam do mesmo jeito.
+O complemento de GPU é um download de cerca de 2 GB no Windows e 4 GB no Linux, então só vale a pena com uma GPU NVIDIA. Sem ele, o WhisperX roda na CPU, e a API do Whisper e a API do Google funcionam do mesmo jeito. Para trocar depois entre a versão para CPU e a versão para GPU, instale o app de novo e escolha a outra opção.
 :::
 
 :::note

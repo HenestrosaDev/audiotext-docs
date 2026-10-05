@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Audiotext를 현재 사용자용으로 설치하고 응용 프로그램 메뉴에 추가합니다(`audiotext` 명령으로도 열 수 있습니다). NVIDIA GPU를 감지하면 GPU 애드온 다운로드를 제안합니다. 묻지 않고 선택하려면 `./install.sh --gpu` 또는 `./install.sh --cpu`를, 제거하려면 `./install.sh --uninstall`을 실행하세요(설정은 유지됩니다).
 
 :::tip
-GPU 애드온은 수 GB 크기이므로 NVIDIA GPU가 있을 때만 의미가 있습니다. 애드온 없이도 WhisperX는 CPU에서 실행되며, Whisper API와 Google API는 똑같이 작동합니다.
+GPU 애드온은 Windows에서 약 2 GB, Linux에서 약 4 GB를 내려받으므로 NVIDIA GPU가 있을 때만 의미가 있습니다. 애드온 없이도 WhisperX는 CPU에서 실행되며, Whisper API와 Google API는 똑같이 작동합니다. 나중에 CPU 버전과 GPU 버전을 바꾸려면 앱을 다시 설치하고 다른 옵션을 선택하세요.
 :::
 
 :::note

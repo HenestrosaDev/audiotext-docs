@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Det installerar Audiotext för din användare och lägger till det i programmenyn (det kan också öppnas med kommandot `audiotext`). Om det hittar ett NVIDIA-grafikkort erbjuder det att ladda ner GPU-tillägget. Kör `./install.sh --gpu` eller `./install.sh --cpu` för att välja utan fråga, och `./install.sh --uninstall` för att avinstallera (dina inställningar sparas).
 
 :::tip
-GPU-tillägget är en nedladdning på flera GB, så det lönar sig bara med ett NVIDIA-grafikkort. Utan det körs WhisperX på processorn, och Whisper-API:t och Google-API:t fungerar likadant.
+GPU-tillägget är en nedladdning på ungefär 2 GB i Windows och 4 GB i Linux, så det lönar sig bara med ett NVIDIA-grafikkort. Utan det körs WhisperX på processorn, och Whisper-API:t och Google-API:t fungerar likadant. För att senare byta mellan CPU- och GPU-versionen installerar du appen igen och väljer det andra alternativet.
 :::
 
 :::note

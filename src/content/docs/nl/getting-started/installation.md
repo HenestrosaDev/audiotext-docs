@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Het installeert Audiotext voor je gebruiker en voegt het toe aan het applicatiemenu (je kunt het ook openen met de opdracht `audiotext`). Als het een NVIDIA-GPU detecteert, biedt het aan de GPU-uitbreiding te downloaden. Gebruik `./install.sh --gpu` of `./install.sh --cpu` om te kiezen zonder vraag, en `./install.sh --uninstall` om het te verwijderen (je instellingen blijven bewaard).
 
 :::tip
-De GPU-uitbreiding is een download van enkele GB, dus die is alleen de moeite waard met een NVIDIA-GPU. Zonder draait WhisperX op de CPU, en werken de Whisper-API en de Google-API hetzelfde.
+De GPU-uitbreiding is een download van ongeveer 2 GB op Windows en 4 GB op Linux, dus die is alleen de moeite waard met een NVIDIA-GPU. Zonder draait WhisperX op de CPU, en werken de Whisper-API en de Google-API hetzelfde. Om later te wisselen tussen de CPU- en de GPU-versie, installeer je de app opnieuw en kies je de andere optie.
 :::
 
 :::note

@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 它会为当前用户安装 Audiotext 并添加到应用程序菜单（也可以用 `audiotext` 命令打开）。如果检测到 NVIDIA GPU，它会提示下载 GPU 附加组件。运行 `./install.sh --gpu` 或 `./install.sh --cpu` 可直接选择而不询问，运行 `./install.sh --uninstall` 可卸载（设置会保留）。
 
 :::tip
-GPU 附加组件有数 GB，因此只有在拥有 NVIDIA GPU 时才值得下载。没有它时，WhisperX 在 CPU 上运行，Whisper API 和 Google API 照常工作。
+GPU 附加组件在 Windows 上约 2 GB，在 Linux 上约 4 GB，因此只有在拥有 NVIDIA GPU 时才值得下载。没有它时，WhisperX 在 CPU 上运行，Whisper API 和 Google API 照常工作。之后如需在 CPU 版本和 GPU 版本之间切换，请重新安装应用并选择另一个选项。
 :::
 
 :::note
