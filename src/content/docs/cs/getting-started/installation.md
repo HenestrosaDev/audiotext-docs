@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Nainstaluje Audiotext pro vašeho uživatele a přidá ho do nabídky aplikací (lze ho otevřít i příkazem `audiotext`). Pokud zjistí kartu NVIDIA, nabídne stažení doplňku pro GPU. Spuštěním `./install.sh --gpu` nebo `./install.sh --cpu` zvolíte bez dotazu, `./install.sh --uninstall` aplikaci odinstaluje (nastavení zůstanou zachována).
 
 :::tip
-Doplněk pro GPU má několik GB, takže se vyplatí jen s kartou NVIDIA. Bez něj běží WhisperX na procesoru a Whisper API i Google API fungují stejně.
+Doplněk pro GPU má ke stažení asi 2 GB ve Windows a 4 GB v Linuxu, takže se vyplatí jen s kartou NVIDIA. Bez něj běží WhisperX na procesoru a Whisper API i Google API fungují stejně. Chcete-li později přejít mezi verzí pro procesor a verzí pro GPU, nainstalujte aplikaci znovu a zvolte druhou možnost.
 :::
 
 :::note

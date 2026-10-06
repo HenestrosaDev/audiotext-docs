@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Audiotext'i kullanıcınız için kurar ve uygulamalar menüsüne ekler (`audiotext` komutuyla da açılabilir). Bir NVIDIA ekran kartı algılarsa GPU eklentisini indirmeyi önerir. Sormadan seçmek için `./install.sh --gpu` veya `./install.sh --cpu`, kaldırmak için `./install.sh --uninstall` komutunu çalıştırın (ayarlarınız korunur).
 
 :::tip
-GPU eklentisi birkaç GB'lık bir indirmedir, bu yüzden yalnızca NVIDIA ekran kartıyla değer. Eklenti olmadan WhisperX işlemcide çalışır; Whisper API ve Google API aynı şekilde çalışır.
+GPU eklentisi Windows'ta yaklaşık 2 GB, Linux'ta 4 GB'lık bir indirmedir, bu yüzden yalnızca NVIDIA ekran kartıyla değer. Eklenti olmadan WhisperX işlemcide çalışır; Whisper API ve Google API aynı şekilde çalışır. Daha sonra CPU ve GPU sürümleri arasında geçiş yapmak için uygulamayı yeniden kurun ve diğer seçeneği seçin.
 :::
 
 :::note

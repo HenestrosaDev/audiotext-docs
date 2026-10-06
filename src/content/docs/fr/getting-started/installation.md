@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Il installe Audiotext pour votre utilisateur et l’ajoute au menu des applications (il peut aussi être lancé avec la commande `audiotext`). S’il détecte un GPU NVIDIA, il propose de télécharger le module GPU. Lancez `./install.sh --gpu` ou `./install.sh --cpu` pour choisir sans question, et `./install.sh --uninstall` pour le désinstaller (vos réglages sont conservés).
 
 :::tip
-Le module GPU pèse plusieurs Go : il n’est utile qu’avec un GPU NVIDIA. Sans lui, WhisperX s’exécute sur le CPU, et l’API Whisper et l’API Google fonctionnent de la même façon.
+Le module GPU pèse environ 2 Go sous Windows et 4 Go sous Linux : il n’est utile qu’avec un GPU NVIDIA. Sans lui, WhisperX s’exécute sur le CPU, et l’API Whisper et l’API Google fonctionnent de la même façon. Pour passer plus tard de la version CPU à la version GPU, ou inversement, réinstallez l’application et choisissez l’autre option.
 :::
 
 :::note

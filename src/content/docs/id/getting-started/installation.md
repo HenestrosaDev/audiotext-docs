@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Penginstal memasang Audiotext untuk pengguna Anda dan menambahkannya ke menu aplikasi (juga dapat dibuka dengan perintah `audiotext`). Jika mendeteksi GPU NVIDIA, penginstal menawarkan untuk mengunduh add-on GPU. Jalankan `./install.sh --gpu` atau `./install.sh --cpu` untuk memilih tanpa ditanya, dan `./install.sh --uninstall` untuk menghapusnya (pengaturan Anda tetap disimpan).
 
 :::tip
-Add-on GPU berukuran beberapa GB, jadi hanya sepadan jika Anda memiliki GPU NVIDIA. Tanpanya, WhisperX berjalan di CPU, dan Whisper API serta Google API tetap bekerja seperti biasa.
+Add-on GPU berukuran sekitar 2 GB di Windows dan 4 GB di Linux, jadi hanya sepadan jika Anda memiliki GPU NVIDIA. Tanpanya, WhisperX berjalan di CPU, dan Whisper API serta Google API tetap bekerja seperti biasa. Untuk beralih antara versi CPU dan versi GPU nanti, instal ulang aplikasi dan pilih opsi lainnya.
 :::
 
 :::note

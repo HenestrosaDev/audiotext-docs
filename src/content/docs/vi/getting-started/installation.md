@@ -40,7 +40,7 @@ cd Audiotext-<version>-linux-x86_64
 Trình cài đặt cài Audiotext cho người dùng của bạn và thêm vào menu ứng dụng (cũng có thể mở bằng lệnh `audiotext`). Nếu phát hiện GPU NVIDIA, nó sẽ đề nghị tải gói GPU. Chạy `./install.sh --gpu` hoặc `./install.sh --cpu` để chọn mà không bị hỏi, và `./install.sh --uninstall` để gỡ cài đặt (cài đặt của bạn vẫn được giữ).
 
 :::tip
-Gói GPU có dung lượng vài GB, nên chỉ đáng tải khi bạn có GPU NVIDIA. Không có gói này, WhisperX chạy trên CPU, còn Whisper API và Google API vẫn hoạt động như bình thường.
+Gói GPU có dung lượng khoảng 2 GB trên Windows và 4 GB trên Linux, nên chỉ đáng tải khi bạn có GPU NVIDIA. Không có gói này, WhisperX chạy trên CPU, còn Whisper API và Google API vẫn hoạt động như bình thường. Để chuyển đổi giữa phiên bản CPU và phiên bản GPU sau này, hãy cài đặt lại ứng dụng và chọn tùy chọn còn lại.
 :::
 
 :::note
