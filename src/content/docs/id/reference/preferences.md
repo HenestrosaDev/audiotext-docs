@@ -11,6 +11,8 @@ sidebar:
 
 - **Tampilan**: **Sistem** (mengikuti sistem Anda), **Terang**, atau **Gelap**.
 - **Bahasa antarmuka**: bahasa Audiotext, atau **Bahasa sistem**. Dapat diubah saat tidak ada transkripsi yang sedang berjalan. Lihat [bahasa yang tersedia](/id/reference/formats-and-languages/#bahasa-antarmuka).
+- **Format tanggal**: cara tanggal transkripsi ditampilkan, dalam bahasa antarmuka: pendek (`04/10/26`), sedang (`4 Okt 2026`, bawaan), panjang (`4 Oktober 2026`), atau ISO (`2026-10-04`). Menu menampilkan setiap format dengan contohnya.
+- **Format waktu**: **Otomatis** (jam bahasa antarmuka), 12 jam (`1.30 PM`), atau 24 jam (`13.30`).
 - **Notifikasi**: menampilkan notifikasi sistem saat transkripsi siap (untuk folder, saat semua filenya siap, dan untuk folder yang dipantau, setiap kali file baru siap). Aktif secara default. Di macOS, notifikasi berasal dari **Script Editor**, dan di Windows dari **Windows PowerShell**, sehingga diizinkan atau dibisukan untuk aplikasi tersebut di pengaturan sistem. Di Linux, notifikasi memerlukan `notify-send` (paket `libnotify-bin` atau `libnotify`).
 
 ## AI

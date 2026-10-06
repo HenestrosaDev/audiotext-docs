@@ -11,6 +11,8 @@ De **Voorkeuren** bevatten de instellingen die niet per transcriptie veranderen.
 
 - **Weergave**: **Systeem** (volgt je systeem), **Licht** of **Donker**.
 - **Taal van de interface**: de taal van Audiotext, of **Systeemtaal**. Kan worden gewijzigd als er geen transcriptie bezig is. Zie de [beschikbare talen](/nl/reference/formats-and-languages/#talen-van-de-interface).
+- **Datumnotatie**: hoe de datums van de transcripties worden getoond, in de taal van de interface: kort (`04-10-2026`), middel (`4 okt 2026`, standaard), lang (`4 oktober 2026`) of ISO (`2026-10-04`). Het menu toont elke notatie met een voorbeeld.
+- **Tijdnotatie**: **Automatisch** (de klok van de taal van de interface), 12-uurs (`1:30 p.m.`) of 24-uurs (`13:30`).
 - **Meldingen**: toont een systeemmelding wanneer een transcriptie klaar is (bij een map, wanneer al zijn bestanden klaar zijn, en bij een bewaakte map, telkens wanneer een nieuw bestand klaar is). Standaard aan. Op macOS komen ze van **Scripteditor** en op Windows van **Windows PowerShell**, dus ze worden voor die apps toegestaan of gedempt in de instellingen van het systeem. Op Linux is `notify-send` nodig (het pakket `libnotify-bin` of `libnotify`).
 
 ## AI

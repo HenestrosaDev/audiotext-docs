@@ -11,6 +11,8 @@ sidebar:
 
 - **Görünüm**: **Sistem** (sisteminizi izler), **Açık** veya **Koyu**.
 - **Arayüz dili**: Audiotext'in dili veya **Sistem dili**. Devam eden bir transkripsiyon yokken değiştirilebilir. [Kullanılabilir dillere](/tr/reference/formats-and-languages/#arayüz-dilleri) bakın.
+- **Tarih biçimi**: transkripsiyonların tarihlerinin arayüz dilinde nasıl gösterileceği: kısa (`4.10.2026`), orta (`4 Eki 2026`, varsayılan), uzun (`4 Ekim 2026`) veya ISO (`2026-10-04`). Menü her biçimi bir örnekle gösterir.
+- **Saat biçimi**: **Otomatik** (arayüz dilinin saati), 12 saat (`ÖS 1:30`) veya 24 saat (`13:30`).
 - **Bildirimler**: bir transkripsiyon hazır olduğunda sistem bildirimi gösterir (bir klasörde, tüm dosyaları hazır olduğunda; izlenen bir klasörde ise her yeni dosya hazır olduğunda). Varsayılan olarak açıktır. macOS'ta **Komut Dosyası Düzenleyici**'den, Windows'ta **Windows PowerShell**'den gelir; bu nedenle sistem ayarlarında bu uygulamalar için izin verilir veya sessize alınır. Linux'ta `notify-send` (`libnotify-bin` veya `libnotify` paketi) gerekir.
 
 ## YZ

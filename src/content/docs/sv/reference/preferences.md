@@ -11,6 +11,8 @@ sidebar:
 
 - **Utseende**: **System** (följer systemet), **Ljust** eller **Mörkt**.
 - **Gränssnittets språk**: Audiotexts språk, eller **Systemspråk**. Det kan ändras när ingen transkribering pågår. Se de [tillgängliga språken](/sv/reference/formats-and-languages/#gränssnittets-språk).
+- **Datumformat**: hur transkriberingarnas datum visas, på gränssnittets språk: kort (`2026-10-04`), medel (`4 okt. 2026`, standard), långt (`4 oktober 2026`) eller ISO (`2026-10-04`). Menyn visar varje format med ett exempel (format som ser likadana ut visas en gång).
+- **Tidsformat**: **Automatiskt** (gränssnittsspråkets klocka), 12-timmars (`1:30 em`) eller 24-timmars (`13:30`).
 - **Aviseringar**: visar en systemavisering när en transkribering är klar (för en mapp, när alla dess filer är klara, och för en bevakad mapp, varje gång en ny fil är klar). På som standard. På macOS kommer de från **Skriptredigerare** och på Windows från **Windows PowerShell**, så de tillåts eller tystas för de apparna i systemets inställningar. På Linux kräver de `notify-send` (paketet `libnotify-bin` eller `libnotify`).
 
 ## AI

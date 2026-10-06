@@ -11,6 +11,8 @@ As **Preferências** guardam as configurações que não mudam a cada transcriç
 
 - **Aparência**: **Sistema** (segue o seu sistema), **Claro** ou **Escuro**.
 - **Idioma da interface**: o idioma do Audiotext, ou **Idioma do sistema**. Pode ser mudado quando não há nenhuma transcrição em andamento. Consulte os [idiomas disponíveis](/pt/reference/formats-and-languages/#idiomas-da-interface).
+- **Formato da data**: como as datas das transcrições são exibidas, no idioma da interface: curto (`04/10/2026`), médio (`4 de out. de 2026`, padrão), longo (`4 de outubro de 2026`) ou ISO (`2026-10-04`). O menu mostra cada formato com um exemplo.
+- **Formato da hora**: **Automático** (o relógio do idioma da interface), de 12 horas (`1:30 PM`) ou de 24 horas (`13:30`).
 - **Notificações**: mostra uma notificação do sistema quando uma transcrição está pronta (numa pasta, quando todos os seus arquivos estão, e numa pasta monitorada, cada vez que um arquivo novo está). Ativado por padrão. No macOS, vêm do **Editor de Scripts** e no Windows do **Windows PowerShell**, por isso são permitidas ou silenciadas para esses apps nos ajustes do sistema. No Linux, requerem `notify-send` (o pacote `libnotify-bin` ou `libnotify`).
 
 ## IA

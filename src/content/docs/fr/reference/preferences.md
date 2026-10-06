@@ -11,6 +11,8 @@ Les **Préférences** regroupent les réglages qui ne changent pas à chaque tra
 
 - **Apparence** : **Système** (suit votre système), **Clair** ou **Sombre**.
 - **Langue de l’interface** : la langue d’Audiotext, ou **Langue du système**. Elle peut être changée lorsqu’aucune transcription n’est en cours. Consultez les [langues disponibles](/fr/reference/formats-and-languages/#langues-de-linterface).
+- **Format de la date** : comment les dates des transcriptions sont affichées, dans la langue de l’interface : court (`04/10/2026`), moyen (`4 oct. 2026`, par défaut), long (`4 octobre 2026`) ou ISO (`2026-10-04`). Le menu montre chaque format avec un exemple.
+- **Format de l’heure** : **Automatique** (l’horloge de la langue de l’interface), sur 12 heures (`1:30 PM`) ou sur 24 heures (`13:30`).
 - **Notifications** : affiche une notification du système lorsqu’une transcription est prête (pour un dossier, lorsque tous ses fichiers le sont, et pour un dossier surveillé, chaque fois qu’un nouveau fichier l’est). Activé par défaut. Sur macOS, elles proviennent de **Éditeur de script** et sur Windows de **Windows PowerShell** : elles s’autorisent ou se désactivent pour ces applications dans les réglages du système. Sur Linux, elles nécessitent `notify-send` (le paquet `libnotify-bin` ou `libnotify`).
 
 ## IA

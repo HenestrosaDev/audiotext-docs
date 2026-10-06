@@ -11,6 +11,8 @@ As **Preferencias** conteñen a configuración que non cambia con cada transcric
 
 - **Aparencia**: **Sistema** (segue o teu sistema), **Claro** ou **Escuro**.
 - **Idioma da interface**: o idioma de Audiotext, ou **Idioma do sistema**. Pódese cambiar cando non hai ningunha transcrición en curso. Consulta os [idiomas dispoñibles](/gl/reference/formats-and-languages/#idiomas-da-interface).
+- **Formato da data**: como se mostran as datas das transcricións, no idioma da interface: curto (`04/10/26`), medio (`4 de out. de 2026`, predeterminado), longo (`4 de outubro de 2026`) ou ISO (`2026-10-04`). O menú mostra cada formato cun exemplo.
+- **Formato da hora**: **Automático** (o reloxo do idioma da interface), de 12 horas (`1:30 p.m.`) ou de 24 horas (`13:30`).
 - **Notificacións**: mostra unha notificación do sistema cando unha transcrición está lista (nun cartafol, cando o están todos os seus ficheiros, e nun cartafol vixiado, cada vez que o está un ficheiro novo). Activado por defecto. En macOS proveñen de **Script Editor** e en Windows de **Windows PowerShell**, así que se permiten ou silencian para esas aplicacións na configuración do sistema. En Linux requiren `notify-send` (o paquete `libnotify-bin` ou `libnotify`).
 
 ## IA
