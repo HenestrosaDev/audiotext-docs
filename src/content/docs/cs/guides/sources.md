@@ -42,6 +42,14 @@ S **WhisperX** zapněte na kartě **Živý text** volbu **Zobrazovat text během
 Systém musí rozpoznat vstupní zařízení a povolit ho aplikaci. Jinak se zobrazí **Nebyl nalezen žádný mikrofon**. V macOS povolte Audiotextu přístup v **Nastavení systému** → **Soukromí a zabezpečení** → **Mikrofon**.
 :::
 
+### Nahrávání zvuku počítače
+
+Chcete-li přepsat to, co počítač přehrává (videohovor, webinář, video, které nelze stáhnout), nahrajte to ze zařízení, které posílá zvuk reproduktorů na vstup. Nastavte ho jednou, klikněte na tlačítko obnovení a vyberte ho v seznamu mikrofonů. Nahraje se vše, co počítač přehrává, včetně oznámení, ale ne váš hlas.
+
+- **Windows**: spusťte `mmsys.cpl`, na kartě **Záznam** klikněte pravým tlačítkem do seznamu, aby se zobrazila zakázaná zařízení, a povolte **Stereo Mix**. Pokud ho vaše zvuková karta nemá, nainstalujte [VB-CABLE](https://vb-audio.com/Cable/), nastavte **CABLE Input** jako výstupní zařízení a v Audiotextu vyberte **CABLE Output**. Abyste zvuk dál slyšeli, zaškrtněte ve vlastnostech **CABLE Output** možnost **Poslouchat toto zařízení**.
+- **macOS**: nainstalujte [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) a v Audiotextu vyberte **BlackHole 2ch**. Abyste zvuk dál slyšeli, vytvořte [zařízení s více výstupy](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) s reproduktory a BlackHole a nastavte ho jako výstupní zařízení.
+- **Linux** (PulseAudio nebo PipeWire): v Audiotextu vyberte **pulse** a začněte nahrávat. Potom na kartě **Nahrávání** v `pavucontrol` změňte zdroj Audiotextu na monitor reproduktorů.
+
 ## Složka
 
 Přepíše všechny zvukové a video soubory ve složce **a jejích podsložkách**. Klikněte na **Vybrat složku…** nebo složku přetáhněte do okna. Audiotext ukáže, kolik souborů našel.

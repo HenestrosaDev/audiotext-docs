@@ -42,6 +42,14 @@ Con **WhisperX**, activa **Mostrar el texto mientras se graba** en la tarjeta **
 Tu sistema debe detectar un dispositivo de entrada y permitir que la aplicación lo use. Si no, se muestra **No se ha encontrado ningún micrófono**. En macOS, permite el acceso a Audiotext en **Ajustes del Sistema** → **Privacidad y seguridad** → **Micrófono**.
 :::
 
+### Grabar el audio de tu ordenador
+
+Para transcribir lo que reproduce tu ordenador (una videollamada, un webinar, un vídeo que no se puede descargar), grábalo desde un dispositivo que envíe el sonido de los altavoces a una entrada. Configúralo una vez, haz clic en el botón de actualizar y elígelo en la lista de micrófonos. Se graba todo lo que reproduce el ordenador, también las notificaciones, pero no tu voz.
+
+- **Windows**: ejecuta `mmsys.cpl` y, en la pestaña **Grabar**, haz clic derecho en la lista para mostrar los dispositivos deshabilitados y habilita **Mezcla estéreo**. Si tu tarjeta de sonido no la tiene, instala [VB-CABLE](https://vb-audio.com/Cable/), pon **CABLE Input** como dispositivo de salida y elige **CABLE Output** en Audiotext. Para seguir oyendo el sonido, marca **Escuchar este dispositivo** en las propiedades de **CABLE Output**.
+- **macOS**: instala [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) y elige **BlackHole 2ch** en Audiotext. Para seguir oyendo el sonido, crea un [dispositivo de salida múltiple](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) con tus altavoces y BlackHole, y ponlo como dispositivo de salida.
+- **Linux** (PulseAudio o PipeWire): elige **pulse** en Audiotext y empieza a grabar. Después, en la pestaña **Grabación** de `pavucontrol`, cambia la fuente de Audiotext al monitor de tus altavoces.
+
 ## Carpeta
 
 Transcribe todos los archivos de audio y vídeo de una carpeta **y de sus subcarpetas**. Haz clic en **Elegir una carpeta…** o suelta la carpeta en la ventana. Audiotext te indica cuántos archivos ha encontrado.

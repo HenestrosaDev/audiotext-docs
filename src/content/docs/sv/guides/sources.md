@@ -42,6 +42,14 @@ Med **WhisperX** aktiverar du **Visa texten under inspelning** på kortet **Live
 Systemet måste hitta en inmatningsenhet och låta appen använda den. Annars visas **Ingen mikrofon hittades**. På macOS ger du Audiotext åtkomst under **Systeminställningar** → **Integritet och säkerhet** → **Mikrofon**.
 :::
 
+### Spela in datorns ljud
+
+För att transkribera det som datorn spelar upp (ett videosamtal, ett webbinarium, en video som inte går att ladda ner) spelar du in det från en enhet som skickar högtalarnas ljud till en ingång. Ställ in den en gång, klicka på uppdateringsknappen och välj den i listan över mikrofoner. Allt som datorn spelar upp spelas in, även aviseringar, men inte din röst.
+
+- **Windows**: kör `mmsys.cpl`, högerklicka i listan på fliken **Inspelning** för att visa de inaktiverade enheterna och aktivera **Stereomix**. Om ditt ljudkort saknar den installerar du [VB-CABLE](https://vb-audio.com/Cable/), ställer in **CABLE Input** som utenhet och väljer **CABLE Output** i Audiotext. För att fortsätta höra ljudet markerar du **Lyssna på den här enheten** i egenskaperna för **CABLE Output**.
+- **macOS**: installera [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) och välj **BlackHole 2ch** i Audiotext. För att fortsätta höra ljudet skapar du en [enhet med flera utgångar](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) med dina högtalare och BlackHole och ställer in den som utenhet.
+- **Linux** (PulseAudio eller PipeWire): välj **pulse** i Audiotext och starta inspelningen. Byt sedan källan för Audiotext till monitorn för dina högtalare på fliken **Inspelning** i `pavucontrol`.
+
 ## Mapp
 
 Transkriberar alla ljud- och videofiler i en mapp **och dess undermappar**. Klicka på **Välj en mapp…** eller släpp mappen i fönstret. Audiotext visar hur många filer den hittade.

@@ -42,6 +42,14 @@ https://example.com/podcast/episode-12.mp3
 系统必须能识别输入设备，并允许应用使用它。否则会显示**未找到麦克风**。在 macOS 上，请在**系统设置** → **隐私与安全性** → **麦克风**中允许 Audiotext。
 :::
 
+### 录制电脑播放的音频
+
+要转写电脑正在播放的内容（视频通话、网络研讨会、无法下载的视频），请从一个把扬声器声音送到输入端的设备录音。只需设置一次，然后点击刷新按钮，并在麦克风列表中选择它。电脑播放的所有声音（包括通知音）都会被录下，但不会录下你的声音。
+
+- **Windows**：运行 `mmsys.cpl`，在**录制**选项卡中右键单击列表以显示已禁用的设备，然后启用**立体声混音**。如果你的声卡没有这一项，请安装 [VB-CABLE](https://vb-audio.com/Cable/)，将 **CABLE Input** 设为输出设备，并在 Audiotext 中选择 **CABLE Output**。若要继续听到声音，请在 **CABLE Output** 的属性中勾选**侦听此设备**。
+- **macOS**：安装 [BlackHole](https://existential.audio/blackhole/)（`brew install blackhole-2ch`），并在 Audiotext 中选择 **BlackHole 2ch**。若要继续听到声音，请用扬声器和 BlackHole 创建一个[多输出设备](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device)，并将其设为输出设备。
+- **Linux**（PulseAudio 或 PipeWire）：在 Audiotext 中选择 **pulse** 并开始录音。然后在 `pavucontrol` 的**录音**选项卡中，将 Audiotext 的来源改为扬声器的监视器。
+
 ## 文件夹
 
 转写文件夹**及其子文件夹**中的所有音频和视频文件。点击**选择文件夹…**，或把文件夹拖放到窗口中。Audiotext 会显示找到的文件数量。

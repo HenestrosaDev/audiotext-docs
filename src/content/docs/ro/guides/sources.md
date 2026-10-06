@@ -42,6 +42,14 @@ Cu **WhisperX**, activați **Afișează textul în timpul înregistrării** pe c
 Sistemul trebuie să detecteze un dispozitiv de intrare și să permită aplicației să îl folosească. Altfel se afișează **Nu s-a găsit niciun microfon**. Pe macOS, permiteți accesul pentru Audiotext în **Configurări sistem** → **Confidențialitate și securitate** → **Microfon**.
 :::
 
+### Înregistrarea sunetului computerului
+
+Pentru a transcrie ce redă computerul (un apel video, un webinar, un videoclip care nu poate fi descărcat), înregistrați-l de pe un dispozitiv care trimite sunetul difuzoarelor către o intrare. Configurați-l o dată, faceți clic pe butonul de reîmprospătare și alegeți-l din lista de microfoane. Se înregistrează tot ce redă computerul, inclusiv notificările, dar nu și vocea dvs.
+
+- **Windows**: rulați `mmsys.cpl` și, în fila **Înregistrare**, faceți clic dreapta pe listă pentru a afișa dispozitivele dezactivate și activați **Stereo Mix**. Dacă placa de sunet nu îl are, instalați [VB-CABLE](https://vb-audio.com/Cable/), setați **CABLE Input** ca dispozitiv de ieșire și alegeți **CABLE Output** în Audiotext. Pentru a auzi în continuare sunetul, bifați **Ascultați acest dispozitiv** în proprietățile **CABLE Output**.
+- **macOS**: instalați [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) și alegeți **BlackHole 2ch** în Audiotext. Pentru a auzi în continuare sunetul, creați un [dispozitiv cu ieșiri multiple](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) cu difuzoarele și BlackHole și setați-l ca dispozitiv de ieșire.
+- **Linux** (PulseAudio sau PipeWire): alegeți **pulse** în Audiotext și începeți înregistrarea. Apoi, în fila **Recording** din `pavucontrol`, schimbați sursa Audiotext cu monitorul difuzoarelor.
+
 ## Dosar
 
 Transcrie toate fișierele audio și video dintr-un dosar **și din subdosarele lui**. Faceți clic pe **Alege un dosar…** sau trageți dosarul în fereastră. Audiotext arată câte fișiere a găsit.

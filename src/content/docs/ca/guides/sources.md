@@ -42,6 +42,14 @@ Amb **WhisperX**, activa **Mostra el text mentre s'enregistra** a la targeta **T
 El sistema ha de detectar un dispositiu d'entrada i permetre que l'aplicació el faci servir. Si no, es mostra **No s'ha trobat cap micròfon**. A macOS, permet l'accés a Audiotext a **Configuració del Sistema** → **Privacitat i seguretat** → **Micròfon**.
 :::
 
+### Gravar l'àudio de l'ordinador
+
+Per transcriure el que reprodueix l'ordinador (una videotrucada, un webinar, un vídeo que no es pot baixar), grava'l des d'un dispositiu que enviï el so dels altaveus a una entrada. Configura'l una vegada, fes clic al botó d'actualitzar i tria'l a la llista de micròfons. Es grava tot el que reprodueix l'ordinador, també les notificacions, però no la teva veu.
+
+- **Windows**: executa `mmsys.cpl` i, a la pestanya **Enregistrament**, fes clic dret a la llista per mostrar els dispositius desactivats i activa **Mescla estèreo**. Si la targeta de so no en té, instal·la [VB-CABLE](https://vb-audio.com/Cable/), posa **CABLE Input** com a dispositiu de sortida i tria **CABLE Output** a Audiotext. Per continuar sentint el so, marca **Escolta aquest dispositiu** a les propietats de **CABLE Output**.
+- **macOS**: instal·la [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) i tria **BlackHole 2ch** a Audiotext. Per continuar sentint el so, crea un [dispositiu de sortida múltiple](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) amb els altaveus i BlackHole, i posa'l com a dispositiu de sortida.
+- **Linux** (PulseAudio o PipeWire): tria **pulse** a Audiotext i comença a gravar. Després, a la pestanya **Enregistrament** de `pavucontrol`, canvia la font d'Audiotext pel monitor dels altaveus.
+
 ## Carpeta
 
 Transcriu tots els fitxers d'àudio i vídeo d'una carpeta **i de les seves subcarpetes**. Fes clic a **Tria una carpeta…** o deixa anar la carpeta a la finestra. Audiotext t'indica quants fitxers ha trobat.

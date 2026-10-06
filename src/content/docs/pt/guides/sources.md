@@ -42,6 +42,14 @@ Com o **WhisperX**, ative **Mostrar o texto durante a gravação** no cartão **
 O seu sistema precisa detectar um dispositivo de entrada e permitir que o aplicativo o use. Caso contrário, é exibido **Nenhum microfone encontrado**. No macOS, permita o acesso ao Audiotext em **Ajustes do Sistema** → **Privacidade e Segurança** → **Microfone**.
 :::
 
+### Gravar o áudio do computador
+
+Para transcrever o que o seu computador reproduz (uma videochamada, um webinar, um vídeo que não pode ser baixado), grave-o a partir de um dispositivo que envie o som dos alto-falantes para uma entrada. Configure-o uma vez, clique no botão de atualizar e escolha-o na lista de microfones. Tudo o que o computador reproduz é gravado, inclusive as notificações, mas não a sua voz.
+
+- **Windows**: execute `mmsys.cpl` e, na guia **Gravação**, clique com o botão direito na lista para mostrar os dispositivos desativados e ative **Mixagem estéreo**. Se a sua placa de som não a tiver, instale o [VB-CABLE](https://vb-audio.com/Cable/), defina **CABLE Input** como dispositivo de saída e escolha **CABLE Output** no Audiotext. Para continuar ouvindo o som, marque **Ouvir este dispositivo** nas propriedades de **CABLE Output**.
+- **macOS**: instale o [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) e escolha **BlackHole 2ch** no Audiotext. Para continuar ouvindo o som, crie um [dispositivo de saída múltipla](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) com os seus alto-falantes e o BlackHole, e defina-o como dispositivo de saída.
+- **Linux** (PulseAudio ou PipeWire): escolha **pulse** no Audiotext e comece a gravar. Depois, na guia **Gravação** do `pavucontrol`, mude a fonte do Audiotext para o monitor dos seus alto-falantes.
+
 ## Pasta
 
 Transcreve todos os arquivos de áudio e vídeo de uma pasta **e das suas subpastas**. Clique em **Escolher uma pasta…** ou solte a pasta na janela. O Audiotext informa quantos arquivos encontrou.

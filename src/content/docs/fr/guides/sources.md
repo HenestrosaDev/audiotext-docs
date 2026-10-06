@@ -42,6 +42,14 @@ Avec **WhisperX**, activez **Afficher le texte pendant l’enregistrement** dans
 Votre système doit détecter un périphérique d’entrée et autoriser l’application à l’utiliser. Sinon, **Aucun microphone trouvé** s’affiche. Sous macOS, autorisez Audiotext dans **Réglages Système** → **Confidentialité et sécurité** → **Microphone**.
 :::
 
+### Enregistrer l'audio de votre ordinateur
+
+Pour transcrire ce que votre ordinateur lit (un appel vidéo, un webinaire, une vidéo qui ne peut pas être téléchargée), enregistrez-le depuis un périphérique qui envoie le son des haut-parleurs vers une entrée. Configurez-le une fois, cliquez sur le bouton d'actualisation et choisissez-le dans la liste des microphones. Tout ce que l'ordinateur lit est enregistré, notifications comprises, mais pas votre voix.
+
+- **Windows** : exécutez `mmsys.cpl` et, dans l'onglet **Enregistrement**, faites un clic droit sur la liste pour afficher les périphériques désactivés et activez **Mixage stéréo**. Si votre carte son ne l'a pas, installez [VB-CABLE](https://vb-audio.com/Cable/), définissez **CABLE Input** comme périphérique de sortie et choisissez **CABLE Output** dans Audiotext. Pour continuer à entendre le son, cochez **Écouter ce périphérique** dans les propriétés de **CABLE Output**.
+- **macOS** : installez [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) et choisissez **BlackHole 2ch** dans Audiotext. Pour continuer à entendre le son, créez un [périphérique à sortie multiple](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) avec vos haut-parleurs et BlackHole, et définissez-le comme périphérique de sortie.
+- **Linux** (PulseAudio ou PipeWire) : choisissez **pulse** dans Audiotext et lancez l'enregistrement. Puis, dans l'onglet **Enregistrement** de `pavucontrol`, remplacez la source d'Audiotext par le moniteur de vos haut-parleurs.
+
 ## Dossier
 
 Transcrit tous les fichiers audio et vidéo d’un dossier **et de ses sous-dossiers**. Cliquez sur **Choisir un dossier…** ou déposez le dossier dans la fenêtre. Audiotext vous indique combien de fichiers il a trouvés.

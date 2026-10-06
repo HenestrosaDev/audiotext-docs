@@ -42,6 +42,14 @@ Với **WhisperX**, bật **Hiển thị văn bản khi ghi âm** trong thẻ **
 Hệ thống phải nhận diện được thiết bị đầu vào và cho phép ứng dụng sử dụng. Nếu không, thông báo **Không tìm thấy micrô** sẽ hiện ra. Trên macOS, hãy cấp quyền cho Audiotext trong **Cài đặt hệ thống** → **Quyền riêng tư & Bảo mật** → **Micrô**.
 :::
 
+### Ghi âm âm thanh của máy tính
+
+Để phiên âm những gì máy tính đang phát (cuộc gọi video, hội thảo trực tuyến, video không tải xuống được), hãy ghi âm từ một thiết bị chuyển âm thanh của loa sang đầu vào. Thiết lập một lần, nhấn nút làm mới và chọn thiết bị đó trong danh sách micrô. Mọi âm thanh máy tính phát đều được ghi lại, kể cả thông báo, nhưng không ghi giọng của bạn.
+
+- **Windows**: chạy `mmsys.cpl`, trong thẻ **Recording**, nhấp chuột phải vào danh sách để hiện các thiết bị bị tắt và bật **Stereo Mix**. Nếu card âm thanh không có, hãy cài [VB-CABLE](https://vb-audio.com/Cable/), đặt **CABLE Input** làm thiết bị đầu ra và chọn **CABLE Output** trong Audiotext. Để vẫn nghe được âm thanh, đánh dấu **Listen to this device** trong thuộc tính của **CABLE Output**.
+- **macOS**: cài [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) và chọn **BlackHole 2ch** trong Audiotext. Để vẫn nghe được âm thanh, hãy tạo một [thiết bị nhiều đầu ra](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) gồm loa của bạn và BlackHole, rồi đặt nó làm thiết bị đầu ra.
+- **Linux** (PulseAudio hoặc PipeWire): chọn **pulse** trong Audiotext và bắt đầu ghi âm. Sau đó, trong thẻ **Recording** của `pavucontrol`, đổi nguồn của Audiotext thành monitor của loa.
+
 ## Thư mục
 
 Chép lời tất cả tệp âm thanh và video trong một thư mục **và các thư mục con**. Nhấp **Chọn thư mục…** hoặc thả thư mục vào cửa sổ. Audiotext cho biết đã tìm thấy bao nhiêu tệp.

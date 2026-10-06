@@ -42,6 +42,14 @@ Z **WhisperX** włącz **Pokazuj tekst podczas nagrywania** na karcie **Tekst na
 System musi wykrywać urządzenie wejściowe i pozwalać aplikacji z niego korzystać. W przeciwnym razie pojawi się komunikat **Nie znaleziono mikrofonu**. W macOS zezwól Audiotext na dostęp w **Ustawienia systemowe** → **Prywatność i ochrona** → **Mikrofon**.
 :::
 
+### Nagrywanie dźwięku komputera
+
+Aby przetranskrybować to, co odtwarza komputer (rozmowę wideo, webinar, film, którego nie da się pobrać), nagraj to z urządzenia, które przesyła dźwięk głośników na wejście. Skonfiguruj je raz, kliknij przycisk odświeżania i wybierz je z listy mikrofonów. Nagrywane jest wszystko, co odtwarza komputer, także powiadomienia, ale nie Twój głos.
+
+- **Windows**: uruchom `mmsys.cpl` i na karcie **Nagrywanie** kliknij listę prawym przyciskiem myszy, aby pokazać wyłączone urządzenia, a następnie włącz **Miks stereo**. Jeśli Twoja karta dźwiękowa go nie ma, zainstaluj [VB-CABLE](https://vb-audio.com/Cable/), ustaw **CABLE Input** jako urządzenie wyjściowe i wybierz **CABLE Output** w Audiotext. Aby nadal słyszeć dźwięk, zaznacz **Słuchaj tego urządzenia** we właściwościach **CABLE Output**.
+- **macOS**: zainstaluj [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) i wybierz **BlackHole 2ch** w Audiotext. Aby nadal słyszeć dźwięk, utwórz [urządzenie z wieloma wyjściami](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) z głośnikami i BlackHole i ustaw je jako urządzenie wyjściowe.
+- **Linux** (PulseAudio lub PipeWire): wybierz **pulse** w Audiotext i zacznij nagrywać. Następnie na karcie **Nagrywanie** w `pavucontrol` zmień źródło Audiotext na monitor głośników.
+
 ## Folder
 
 Transkrybuje wszystkie pliki audio i wideo z folderu **i jego podfolderów**. Kliknij **Wybierz folder…** lub upuść folder w oknie. Audiotext pokaże, ile plików znalazł.

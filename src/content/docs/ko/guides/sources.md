@@ -42,6 +42,14 @@ https://example.com/podcast/episode-12.mp3
 시스템이 입력 장치를 인식하고 앱의 사용을 허용해야 합니다. 그렇지 않으면 **마이크를 찾을 수 없습니다**라는 메시지가 표시됩니다. macOS에서는 **시스템 설정** → **개인정보 보호 및 보안** → **마이크**에서 Audiotext를 허용하세요.
 :::
 
+### 컴퓨터 오디오 녹음하기
+
+컴퓨터에서 재생되는 소리(화상 통화, 웨비나, 다운로드할 수 없는 동영상 등)를 텍스트로 변환하려면 스피커의 소리를 입력으로 보내는 장치에서 녹음하세요. 한 번 설정한 후 새로 고침 버튼을 클릭하고 마이크 목록에서 선택하면 됩니다. 컴퓨터에서 재생되는 모든 소리가 알림음까지 녹음되지만, 내 목소리는 녹음되지 않습니다.
+
+- **Windows**: `mmsys.cpl`을 실행하고 **녹음** 탭에서 목록을 마우스 오른쪽 버튼으로 클릭해 사용 안 함 장치를 표시한 다음 **스테레오 믹스**를 사용으로 설정하세요. 사운드 카드에 없다면 [VB-CABLE](https://vb-audio.com/Cable/)을 설치하고 **CABLE Input**을 출력 장치로 설정한 뒤 Audiotext에서 **CABLE Output**을 선택하세요. 소리를 계속 들으려면 **CABLE Output**의 속성에서 **이 장치로 듣기**를 선택하세요.
+- **macOS**: [BlackHole](https://existential.audio/blackhole/)을 설치하고(`brew install blackhole-2ch`) Audiotext에서 **BlackHole 2ch**를 선택하세요. 소리를 계속 들으려면 스피커와 BlackHole로 [다중 출력 기기](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device)를 만들어 출력 장치로 설정하세요.
+- **Linux**(PulseAudio 또는 PipeWire): Audiotext에서 **pulse**를 선택하고 녹음을 시작하세요. 그런 다음 `pavucontrol`의 **녹음** 탭에서 Audiotext의 소스를 스피커의 모니터로 바꾸세요.
+
 ## 폴더
 
 폴더**와 그 하위 폴더**의 모든 오디오·동영상 파일을 받아씁니다. **폴더 선택…**을 클릭하거나 폴더를 창에 끌어다 놓으세요. Audiotext가 찾은 파일 수를 알려 줍니다.

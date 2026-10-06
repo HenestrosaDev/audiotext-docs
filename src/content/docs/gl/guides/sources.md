@@ -42,6 +42,14 @@ Con **WhisperX**, activa **Mostrar o texto mentres se grava** na tarxeta **Texto
 O teu sistema debe detectar un dispositivo de entrada e permitir que a aplicación o use. Se non, móstrase **Non se atopou ningún micrófono**. En macOS, permite o acceso a Audiotext en **Configuración do Sistema** → **Privacidade e seguranza** → **Micrófono**.
 :::
 
+### Gravar o audio do teu ordenador
+
+Para transcribir o que reproduce o teu ordenador (unha videochamada, un webinar, un vídeo que non se pode descargar), grávao desde un dispositivo que envíe o son dos altofalantes a unha entrada. Configúrao unha vez, fai clic no botón de actualizar e escólleo na lista de micrófonos. Grávase todo o que reproduce o ordenador, tamén as notificacións, pero non a túa voz.
+
+- **Windows**: executa `mmsys.cpl` e, na lapela **Gravación**, fai clic dereito na lista para mostrar os dispositivos desactivados e activa **Mestura estéreo**. Se a túa tarxeta de son non a ten, instala [VB-CABLE](https://vb-audio.com/Cable/), pon **CABLE Input** como dispositivo de saída e escolle **CABLE Output** en Audiotext. Para seguir oíndo o son, marca **Escoitar este dispositivo** nas propiedades de **CABLE Output**.
+- **macOS**: instala [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) e escolle **BlackHole 2ch** en Audiotext. Para seguir oíndo o son, crea un [dispositivo de saída múltiple](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) cos teus altofalantes e BlackHole, e ponno como dispositivo de saída.
+- **Linux** (PulseAudio ou PipeWire): escolle **pulse** en Audiotext e comeza a gravar. Despois, na lapela **Gravación** de `pavucontrol`, cambia a fonte de Audiotext polo monitor dos teus altofalantes.
+
 ## Cartafol
 
 Transcribe todos os ficheiros de audio e vídeo dun cartafol **e dos seus subcartafoles**. Fai clic en **Escoller un cartafol…** ou solta o cartafol na xanela. Audiotext indícache cantos ficheiros atopou.

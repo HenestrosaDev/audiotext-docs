@@ -42,6 +42,14 @@ Sesinizi veya bir toplantıyı kaydeder ve yazıya döker. Kayıt geçmişinizde
 Sisteminizin bir giriş aygıtı algılaması ve uygulamanın onu kullanmasına izin vermesi gerekir. Aksi takdirde **Mikrofon bulunamadı** gösterilir. macOS'ta Audiotext'e **Sistem Ayarları** → **Gizlilik ve Güvenlik** → **Mikrofon** bölümünden izin verin.
 :::
 
+### Bilgisayarın sesini kaydetme
+
+Bilgisayarınızın çaldığı şeyi (bir görüntülü görüşme, bir web semineri, indirilemeyen bir video) metne dökmek için onu hoparlörlerin sesini bir girişe gönderen bir aygıttan kaydedin. Aygıtı bir kez ayarlayın, yenile düğmesine tıklayın ve mikrofon listesinden seçin. Bilgisayarın çaldığı her şey, bildirimler dahil, kaydedilir; ancak sizin sesiniz kaydedilmez.
+
+- **Windows**: `mmsys.cpl` komutunu çalıştırın, **Kayıt** sekmesinde listeye sağ tıklayarak devre dışı aygıtları gösterin ve **Stereo Karışımı**'nı etkinleştirin. Ses kartınızda yoksa [VB-CABLE](https://vb-audio.com/Cable/) kurun, **CABLE Input**'u çıkış aygıtı yapın ve Audiotext'te **CABLE Output**'u seçin. Sesi duymaya devam etmek için **CABLE Output** özelliklerinde **Bu aygıtı dinle** seçeneğini işaretleyin.
+- **macOS**: [BlackHole](https://existential.audio/blackhole/) kurun (`brew install blackhole-2ch`) ve Audiotext'te **BlackHole 2ch**'yi seçin. Sesi duymaya devam etmek için hoparlörleriniz ve BlackHole ile bir [Çoklu Çıkış Aygıtı](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) oluşturun ve onu çıkış aygıtı yapın.
+- **Linux** (PulseAudio veya PipeWire): Audiotext'te **pulse**'u seçin ve kaydı başlatın. Ardından `pavucontrol`'ün **Kayıt** sekmesinde Audiotext'in kaynağını hoparlörlerinizin monitörü olarak değiştirin.
+
 ## Klasör
 
 Bir klasördeki **ve alt klasörlerindeki** tüm ses ve video dosyalarını yazıya döker. **Klasör seç…**'e tıklayın veya klasörü pencereye bırakın. Audiotext kaç dosya bulduğunu söyler.

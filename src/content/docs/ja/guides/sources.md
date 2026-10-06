@@ -42,6 +42,14 @@ https://example.com/podcast/episode-12.mp3
 システムが入力デバイスを認識し、アプリにその使用を許可している必要があります。そうでない場合は **マイクが見つかりません** と表示されます。macOS では **システム設定** → **プライバシーとセキュリティ** → **マイク** で Audiotext を許可してください。
 :::
 
+### パソコンの音声を録音する
+
+パソコンで再生している音声（ビデオ通話、ウェビナー、ダウンロードできない動画など）を文字起こしするには、スピーカーの音を入力に送るデバイスから録音します。一度設定したら、更新ボタンをクリックし、マイクの一覧から選びます。パソコンで再生されるものはすべて（通知音も含めて）録音されますが、あなたの声は録音されません。
+
+- **Windows**: `mmsys.cpl` を実行し、**録音** タブで一覧を右クリックして無効なデバイスを表示し、**ステレオ ミキサー** を有効にします。サウンドカードにない場合は [VB-CABLE](https://vb-audio.com/Cable/) をインストールし、**CABLE Input** を出力デバイスにして、Audiotext で **CABLE Output** を選びます。音を聞き続けるには、**CABLE Output** のプロパティで **このデバイスを聴く** をオンにします。
+- **macOS**: [BlackHole](https://existential.audio/blackhole/) をインストールし（`brew install blackhole-2ch`）、Audiotext で **BlackHole 2ch** を選びます。音を聞き続けるには、スピーカーと BlackHole で [複数出力装置](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) を作成し、それを出力デバイスにします。
+- **Linux**（PulseAudio または PipeWire）: Audiotext で **pulse** を選び、録音を開始します。次に `pavucontrol` の **録音** タブで、Audiotext のソースをスピーカーのモニターに変更します。
+
 ## フォルダー
 
 フォルダー**とそのサブフォルダー**にあるすべての音声・動画ファイルを文字起こしします。**フォルダーを選択…** をクリックするか、フォルダーをウィンドウにドロップします。見つかったファイルの数が表示されます。

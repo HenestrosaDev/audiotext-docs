@@ -42,6 +42,14 @@ Con **WhisperX**, attiva **Mostra il testo durante la registrazione** nella sche
 Il sistema deve rilevare un dispositivo di ingresso e consentire all'app di usarlo. Altrimenti viene mostrato **Nessun microfono trovato**. Su macOS, consenti l'accesso ad Audiotext in **Impostazioni di Sistema** → **Privacy e sicurezza** → **Microfono**.
 :::
 
+### Registrare l'audio del computer
+
+Per trascrivere ciò che il computer riproduce (una videochiamata, un webinar, un video che non si può scaricare), registralo da un dispositivo che invia il suono degli altoparlanti a un ingresso. Configuralo una volta, fai clic sul pulsante di aggiornamento e sceglilo nell'elenco dei microfoni. Viene registrato tutto ciò che il computer riproduce, notifiche comprese, ma non la tua voce.
+
+- **Windows**: esegui `mmsys.cpl` e, nella scheda **Registrazione**, fai clic destro sull'elenco per mostrare i dispositivi disattivati e attiva **Missaggio stereo**. Se la tua scheda audio non lo ha, installa [VB-CABLE](https://vb-audio.com/Cable/), imposta **CABLE Input** come dispositivo di uscita e scegli **CABLE Output** in Audiotext. Per continuare a sentire il suono, seleziona **Ascolta questo dispositivo** nelle proprietà di **CABLE Output**.
+- **macOS**: installa [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) e scegli **BlackHole 2ch** in Audiotext. Per continuare a sentire il suono, crea un [dispositivo a uscita multipla](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) con i tuoi altoparlanti e BlackHole, e impostalo come dispositivo di uscita.
+- **Linux** (PulseAudio o PipeWire): scegli **pulse** in Audiotext e avvia la registrazione. Poi, nella scheda **Registrazione** di `pavucontrol`, cambia la sorgente di Audiotext con il monitor dei tuoi altoparlanti.
+
 ## Cartella
 
 Trascrive tutti i file audio e video di una cartella **e delle sue sottocartelle**. Fai clic su **Scegli una cartella…** o trascina la cartella nella finestra. Audiotext ti dice quanti file ha trovato.

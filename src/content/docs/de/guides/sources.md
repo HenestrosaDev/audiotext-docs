@@ -42,6 +42,14 @@ Aktivieren Sie mit **WhisperX** auf der Karte **Live-Text** die Option **Text w�
 Ihr System muss ein Eingabegerät erkennen und der App erlauben, es zu verwenden. Andernfalls wird **Kein Mikrofon gefunden** angezeigt. Erlauben Sie Audiotext unter macOS den Zugriff in **Systemeinstellungen** → **Datenschutz & Sicherheit** → **Mikrofon**.
 :::
 
+### Den Ton des Computers aufnehmen
+
+Um zu transkribieren, was Ihr Computer abspielt (einen Videoanruf, ein Webinar, ein Video, das sich nicht herunterladen lässt), nehmen Sie es von einem Gerät auf, das den Ton der Lautsprecher an einen Eingang weiterleitet. Richten Sie es einmal ein, klicken Sie auf die Aktualisieren-Schaltfläche und wählen Sie es in der Liste der Mikrofone aus. Alles, was der Computer abspielt, wird aufgenommen, auch Benachrichtigungen, aber nicht Ihre Stimme.
+
+- **Windows**: Führen Sie `mmsys.cpl` aus, klicken Sie auf der Registerkarte **Aufnahme** mit der rechten Maustaste in die Liste, um die deaktivierten Geräte anzuzeigen, und aktivieren Sie **Stereomix**. Wenn Ihre Soundkarte es nicht hat, installieren Sie [VB-CABLE](https://vb-audio.com/Cable/), legen Sie **CABLE Input** als Ausgabegerät fest und wählen Sie **CABLE Output** in Audiotext aus. Um den Ton weiterhin zu hören, aktivieren Sie in den Eigenschaften von **CABLE Output** die Option **Dieses Gerät als Wiedergabequelle verwenden**.
+- **macOS**: Installieren Sie [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) und wählen Sie **BlackHole 2ch** in Audiotext aus. Um den Ton weiterhin zu hören, erstellen Sie ein [Multi-Ausgabegerät](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) mit Ihren Lautsprechern und BlackHole und legen Sie es als Ausgabegerät fest.
+- **Linux** (PulseAudio oder PipeWire): Wählen Sie **pulse** in Audiotext aus und starten Sie die Aufnahme. Ändern Sie dann auf der Registerkarte **Aufnahme** von `pavucontrol` die Quelle von Audiotext auf den Monitor Ihrer Lautsprecher.
+
 ## Ordner
 
 Transkribiert alle Audio- und Videodateien eines Ordners **und seiner Unterordner**. Klicken Sie auf **Ordner auswählen…** oder ziehen Sie den Ordner ins Fenster. Audiotext zeigt an, wie viele Dateien es gefunden hat.

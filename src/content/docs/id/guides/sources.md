@@ -42,6 +42,14 @@ Dengan **WhisperX**, aktifkan **Tampilkan teks saat merekam** di kartu **Teks la
 Sistem Anda harus mendeteksi perangkat input dan mengizinkan aplikasi menggunakannya. Jika tidak, akan muncul **Mikrofon tidak ditemukan**. Di macOS, izinkan Audiotext di **Pengaturan Sistem** → **Privasi & Keamanan** → **Mikrofon**.
 :::
 
+### Merekam audio komputer
+
+Untuk mentranskripsikan apa yang diputar komputer Anda (panggilan video, webinar, video yang tidak dapat diunduh), rekam dari perangkat yang mengirim suara speaker ke input. Atur sekali, klik tombol segarkan, dan pilih perangkat itu di daftar mikrofon. Semua yang diputar komputer akan terekam, termasuk notifikasi, tetapi suara Anda tidak.
+
+- **Windows**: jalankan `mmsys.cpl`, lalu di tab **Recording**, klik kanan daftar untuk menampilkan perangkat yang dinonaktifkan dan aktifkan **Stereo Mix**. Jika kartu suara Anda tidak memilikinya, instal [VB-CABLE](https://vb-audio.com/Cable/), jadikan **CABLE Input** sebagai perangkat output, dan pilih **CABLE Output** di Audiotext. Agar tetap mendengar suaranya, centang **Listen to this device** di properti **CABLE Output**.
+- **macOS**: instal [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) dan pilih **BlackHole 2ch** di Audiotext. Agar tetap mendengar suaranya, buat [Multi-Output Device](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) dengan speaker Anda dan BlackHole, lalu jadikan sebagai perangkat output.
+- **Linux** (PulseAudio atau PipeWire): pilih **pulse** di Audiotext dan mulai merekam. Lalu, di tab **Recording** pada `pavucontrol`, ubah sumber Audiotext ke monitor speaker Anda.
+
 ## Folder
 
 Mentranskripsi semua file audio dan video dalam folder **beserta subfoldernya**. Klik **Pilih folder…** atau lepaskan folder ke jendela. Audiotext memberi tahu berapa banyak file yang ditemukan.

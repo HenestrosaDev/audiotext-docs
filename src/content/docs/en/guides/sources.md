@@ -42,6 +42,14 @@ With **WhisperX**, turn on **Show the text while recording** in the **Live text*
 Your system must detect an input device and allow the app to use it. If not, **No microphone found** is shown. On macOS, allow Audiotext in **System Settings** → **Privacy & Security** → **Microphone**.
 :::
 
+### Record the audio of your computer
+
+To transcribe what your computer plays (a video call, a webinar, a video that can't be downloaded), record it from a device that sends the sound of the speakers to an input. Set it up once, click the refresh button and choose it in the list of microphones. Everything the computer plays is recorded, notifications included, but not your voice.
+
+- **Windows**: run `mmsys.cpl` and, in the **Recording** tab, right-click the list to show the disabled devices and enable **Stereo Mix**. If your sound card doesn't have it, install [VB-CABLE](https://vb-audio.com/Cable/), make **CABLE Input** the output device and choose **CABLE Output** in Audiotext. To keep hearing the sound, check **Listen to this device** in the properties of **CABLE Output**.
+- **macOS**: install [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) and choose **BlackHole 2ch** in Audiotext. To keep hearing the sound, create a [Multi-Output Device](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) with your speakers and BlackHole, and make it the output device.
+- **Linux** (PulseAudio or PipeWire): choose **pulse** in Audiotext and start recording. Then, in the **Recording** tab of `pavucontrol`, change the source of Audiotext to the monitor of your speakers.
+
 ## Folder
 
 Transcribes all the audio and video files of a folder **and its subfolders**. Click **Choose a folder…** or drop the folder on the window. Audiotext tells you how many files it found.

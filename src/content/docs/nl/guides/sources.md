@@ -42,6 +42,14 @@ Zet met **WhisperX** **Tekst weergeven tijdens opname** aan op de kaart **Livete
 Je systeem moet een invoerapparaat herkennen en de app toestaan het te gebruiken. Anders wordt **Geen microfoon gevonden** getoond. Sta Audiotext op macOS toe bij **Systeeminstellingen** → **Privacy en beveiliging** → **Microfoon**.
 :::
 
+### Het geluid van je computer opnemen
+
+Om te transcriberen wat je computer afspeelt (een videogesprek, een webinar, een video die niet te downloaden is), neem je het op vanaf een apparaat dat het geluid van de luidsprekers naar een ingang stuurt. Stel het één keer in, klik op de vernieuwknop en kies het in de lijst met microfoons. Alles wat de computer afspeelt wordt opgenomen, ook meldingen, maar niet je stem.
+
+- **Windows**: voer `mmsys.cpl` uit, klik op het tabblad **Opnemen** met de rechtermuisknop in de lijst om de uitgeschakelde apparaten te tonen en schakel **Stereomix** in. Heeft je geluidskaart dat niet, installeer dan [VB-CABLE](https://vb-audio.com/Cable/), stel **CABLE Input** in als uitvoerapparaat en kies **CABLE Output** in Audiotext. Om het geluid te blijven horen, vink je **Naar dit apparaat luisteren** aan in de eigenschappen van **CABLE Output**.
+- **macOS**: installeer [BlackHole](https://existential.audio/blackhole/) (`brew install blackhole-2ch`) en kies **BlackHole 2ch** in Audiotext. Om het geluid te blijven horen, maak je een [apparaat met meerdere uitgangen](https://github.com/ExistentialAudio/BlackHole/wiki/Multi-Output-Device) met je luidsprekers en BlackHole, en stel je het in als uitvoerapparaat.
+- **Linux** (PulseAudio of PipeWire): kies **pulse** in Audiotext en start de opname. Wijzig daarna op het tabblad **Opnemen** van `pavucontrol` de bron van Audiotext in de monitor van je luidsprekers.
+
 ## Map
 
 Transcribeert alle audio- en videobestanden van een map **en de submappen ervan**. Klik op **Map kiezen…** of sleep de map naar het venster. Audiotext laat zien hoeveel bestanden het heeft gevonden.
