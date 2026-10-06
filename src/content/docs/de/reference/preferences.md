@@ -10,7 +10,7 @@ Die **Einstellungen** enthalten alles, was sich nicht mit jeder Transkription ä
 ## Allgemein
 
 - **Erscheinungsbild**: **System** (folgt Ihrem System), **Hell** oder **Dunkel**.
-- **Sprache der Oberfläche**: die Sprache von Audiotext oder **Systemsprache**. Sie lässt sich ändern, wenn keine Transkription läuft. Siehe die [verfügbaren Sprachen](/de/reference/formats-and-languages/#sprachen-der-oberfläche).
+- **Sprache der Oberfläche**: die Sprache von Audiotext oder **Systemsprache**. Siehe die [verfügbaren Sprachen](/de/reference/formats-and-languages/#sprachen-der-oberfläche).
 - **Datumsformat**: wie die Daten der Transkriptionen angezeigt werden, in der Sprache der Oberfläche: kurz (`04.10.26`), mittel (`04.10.2026`, Standard), lang (`4. Oktober 2026`) oder ISO (`2026-10-04`). Das Menü zeigt jedes Format mit einem Beispiel.
 - **Uhrzeitformat**: **Automatisch** (die Uhr der Sprache der Oberfläche), 12 Stunden (`1:30 PM`) oder 24 Stunden (`13:30`).
 - **Benachrichtigungen**: zeigt eine Systembenachrichtigung an, wenn eine Transkription fertig ist (bei einem Ordner, wenn alle seine Dateien fertig sind, und bei einem überwachten Ordner jedes Mal, wenn eine neue Datei fertig ist). Standardmäßig aktiviert. Unter macOS kommen sie vom **Skripteditor** und unter Windows von **Windows PowerShell**, daher werden sie für diese Apps in den Systemeinstellungen erlaubt oder stummgeschaltet. Unter Linux benötigen sie `notify-send` (das Paket `libnotify-bin` oder `libnotify`).

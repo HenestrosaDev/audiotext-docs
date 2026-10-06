@@ -56,7 +56,7 @@ La primera vez que transcribes con **WhisperX** (el motor por defecto), se desca
 
 ## Cambia el idioma de la interfaz
 
-Audiotext usa el idioma de tu sistema si está disponible. Para cambiarlo, abre las **Preferencias** (el engranaje de arriba a la derecha) y elige un idioma en **General** → **Idioma de la interfaz**. Se puede cambiar cuando no hay ninguna transcripción en curso.
+Audiotext usa el idioma de tu sistema si está disponible. Para cambiarlo, abre las **Preferencias** (el engranaje de arriba a la derecha) y elige un idioma en **General** → **Idioma de la interfaz**.
 
 ## Ejecútalo desde el código fuente
 

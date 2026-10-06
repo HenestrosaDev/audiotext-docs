@@ -10,7 +10,7 @@ Les **Preferències** contenen la configuració que no canvia amb cada transcrip
 ## General
 
 - **Aparença**: **Sistema** (segueix el sistema), **Clar** o **Fosc**.
-- **Idioma de la interfície**: l'idioma d'Audiotext, o **Idioma del sistema**. Es pot canviar quan no hi ha cap transcripció en curs. Consulta els [idiomes disponibles](/ca/reference/formats-and-languages/#idiomes-de-la-interfície).
+- **Idioma de la interfície**: l'idioma d'Audiotext, o **Idioma del sistema**. Consulta els [idiomes disponibles](/ca/reference/formats-and-languages/#idiomes-de-la-interfície).
 - **Format de la data**: com es mostren les dates de les transcripcions, en l'idioma de la interfície: curt (`4/10/26`), mitjà (`4 d’oct. 2026`, per defecte), llarg (`4 d’octubre de 2026`) o ISO (`2026-10-04`). El menú mostra cada format amb un exemple.
 - **Format de l'hora**: **Automàtic** (el rellotge de l'idioma de la interfície), de 12 hores (`1:30 p. m.`) o de 24 hores (`13:30`).
 - **Notificacions**: mostra una notificació del sistema quan una transcripció està a punt (en una carpeta, quan ho estan tots els fitxers, i en una carpeta vigilada, cada vegada que ho està un fitxer nou). Activat per defecte. A macOS provenen de **Script Editor** i a Windows de **Windows PowerShell**, de manera que es permeten o se silencien per a aquestes aplicacions a la configuració del sistema. A Linux requereixen `notify-send` (el paquet `libnotify-bin` o `libnotify`).

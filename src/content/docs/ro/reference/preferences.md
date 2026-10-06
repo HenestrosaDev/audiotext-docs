@@ -10,7 +10,7 @@ sidebar:
 ## General
 
 - **Aspect**: **Sistem** (urmează sistemul), **Luminos** sau **Întunecat**.
-- **Limba interfeței**: limba Audiotext sau **Limba sistemului**. Poate fi schimbată când nu este nicio transcriere în curs. Consultați [limbile disponibile](/ro/reference/formats-and-languages/#limbile-interfeței).
+- **Limba interfeței**: limba Audiotext sau **Limba sistemului**. Consultați [limbile disponibile](/ro/reference/formats-and-languages/#limbile-interfeței).
 - **Formatul datei**: cum sunt afișate datele transcrierilor, în limba interfeței: scurt (`04.10.2026`), mediu (`4 oct. 2026`, implicit), lung (`4 octombrie 2026`) sau ISO (`2026-10-04`). Meniul arată fiecare format cu un exemplu.
 - **Formatul orei**: **Automat** (ceasul limbii interfeței), de 12 ore (`1:30 p.m.`) sau de 24 de ore (`13:30`).
 - **Notificări**: afișează o notificare de sistem când o transcriere este gata (pentru un dosar, când sunt gata toate fișierele lui, iar pentru un dosar monitorizat, de fiecare dată când este gata un fișier nou). Activat implicit. Pe macOS provin de la **Script Editor**, iar pe Windows de la **Windows PowerShell**, așa că se permit sau se dezactivează pentru aceste aplicații în setările sistemului. Pe Linux necesită `notify-send` (pachetul `libnotify-bin` sau `libnotify`).

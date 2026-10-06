@@ -56,7 +56,7 @@ Wenn Sie zum ersten Mal mit **WhisperX** (der Standard-Engine) transkribieren, w
 
 ## Sprache der Oberfläche ändern
 
-Audiotext verwendet die Sprache Ihres Systems, sofern sie verfügbar ist. Um sie zu ändern, öffnen Sie die **Einstellungen** (das Zahnrad oben rechts) und wählen Sie unter **Allgemein** → **Sprache der Oberfläche** eine Sprache. Sie lässt sich ändern, wenn keine Transkription läuft.
+Audiotext verwendet die Sprache Ihres Systems, sofern sie verfügbar ist. Um sie zu ändern, öffnen Sie die **Einstellungen** (das Zahnrad oben rechts) und wählen Sie unter **Allgemein** → **Sprache der Oberfläche** eine Sprache.
 
 ## Aus dem Quellcode ausführen
 

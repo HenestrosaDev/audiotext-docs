@@ -10,7 +10,7 @@ sidebar:
 ## Obecné
 
 - **Vzhled**: **Systém** (podle systému), **Světlý** nebo **Tmavý**.
-- **Jazyk rozhraní**: jazyk Audiotextu nebo **Jazyk systému**. Lze ho změnit, když neprobíhá žádný přepis. Viz [dostupné jazyky](/cs/reference/formats-and-languages/#jazyky-rozhraní).
+- **Jazyk rozhraní**: jazyk Audiotextu nebo **Jazyk systému**. Viz [dostupné jazyky](/cs/reference/formats-and-languages/#jazyky-rozhraní).
 - **Formát data**: jak se zobrazují data přepisů v jazyce rozhraní: krátký (`04.10.26`), střední (`4. 10. 2026`, výchozí), dlouhý (`4. října 2026`) nebo ISO (`2026-10-04`). Nabídka ukazuje každý formát na příkladu.
 - **Formát času**: **Automaticky** (hodiny jazyka rozhraní), 12hodinový (`1:30 odp.`) nebo 24hodinový (`13:30`).
 - **Oznámení**: zobrazí systémové oznámení, když je přepis hotový (u složky, když jsou hotové všechny její soubory, a u sledované složky pokaždé, když je hotový nový soubor). Ve výchozím stavu zapnuto. V macOS přicházejí od aplikace **Script Editor** a ve Windows od **Windows PowerShell**, takže se pro tyto aplikace povolují nebo ztišují v nastavení systému. V Linuxu vyžadují `notify-send` (balíček `libnotify-bin` nebo `libnotify`).

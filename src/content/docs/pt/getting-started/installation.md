@@ -56,7 +56,7 @@ Na primeira vez que você transcreve com o **WhisperX** (o mecanismo padrão), o
 
 ## Mude o idioma da interface
 
-O Audiotext usa o idioma do seu sistema, se estiver disponível. Para mudá-lo, abra as **Preferências** (a engrenagem no canto superior direito) e escolha um idioma em **Geral** → **Idioma da interface**. Ele pode ser mudado quando não há nenhuma transcrição em andamento.
+O Audiotext usa o idioma do seu sistema, se estiver disponível. Para mudá-lo, abra as **Preferências** (a engrenagem no canto superior direito) e escolha um idioma em **Geral** → **Idioma da interface**.
 
 ## Execute a partir do código-fonte
 

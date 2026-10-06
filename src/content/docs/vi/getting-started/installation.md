@@ -56,7 +56,7 @@ Lần đầu chép lời bằng **WhisperX** (công cụ mặc định), mô hì
 
 ## Đổi ngôn ngữ giao diện
 
-Audiotext dùng ngôn ngữ của hệ thống nếu có. Để đổi, mở **Tùy chọn ưu tiên** (biểu tượng bánh răng ở góc trên bên phải) và chọn ngôn ngữ trong **Chung** → **Ngôn ngữ giao diện**. Có thể đổi khi không có bản chép lời nào đang chạy.
+Audiotext dùng ngôn ngữ của hệ thống nếu có. Để đổi, mở **Tùy chọn ưu tiên** (biểu tượng bánh răng ở góc trên bên phải) và chọn ngôn ngữ trong **Chung** → **Ngôn ngữ giao diện**.
 
 ## Chạy từ mã nguồn
 

@@ -56,7 +56,7 @@ Saat pertama kali mentranskripsi dengan **WhisperX** (mesin bawaan), modelnya ak
 
 ## Ubah bahasa antarmuka
 
-Audiotext menggunakan bahasa sistem Anda jika tersedia. Untuk mengubahnya, buka **Preferensi** (ikon roda gigi di kanan atas) dan pilih bahasa di **Umum** → **Bahasa antarmuka**. Bahasa dapat diubah saat tidak ada transkripsi yang sedang berjalan.
+Audiotext menggunakan bahasa sistem Anda jika tersedia. Untuk mengubahnya, buka **Preferensi** (ikon roda gigi di kanan atas) dan pilih bahasa di **Umum** → **Bahasa antarmuka**.
 
 ## Jalankan dari kode sumber
 

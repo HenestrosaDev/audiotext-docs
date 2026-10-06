@@ -10,7 +10,7 @@ The **Preferences** hold the settings that don't change with each transcription.
 ## General
 
 - **Appearance**: **System** (follows your system), **Light** or **Dark**.
-- **Interface language**: the language of Audiotext, or **System language**. It can be changed when no transcription is in progress. See the [available languages](/en/reference/formats-and-languages/#interface-languages).
+- **Interface language**: the language of Audiotext, or **System language**. See the [available languages](/en/reference/formats-and-languages/#interface-languages).
 - **Date format**: how the dates of the transcriptions are shown, in the interface language: short (`10/4/26`), medium (`Oct 4, 2026`, the default), long (`October 4, 2026`) or ISO (`2026-10-04`). The menu shows each one with an example.
 - **Time format**: **Automatic** (the clock of the interface language), 12-hour (`1:30 PM`) or 24-hour (`13:30`).
 - **Notifications**: shows a notification of the system when a transcription is ready (for a folder, when all its files are, and for a watched folder, each time a new file is). On by default. On macOS, they come from **Script Editor**, and on Windows from **Windows PowerShell**, so they're allowed or silenced for those apps in the settings of the system. On Linux, they require `notify-send` (the `libnotify-bin` or `libnotify` package).

@@ -56,7 +56,7 @@ The first time you transcribe with **WhisperX** (the default engine), its model 
 
 ## Change the language of the interface
 
-Audiotext uses the language of your system if it's available. To change it, open the **Preferences** (the gear at the top right) and choose a language in **General** → **Interface language**. It can be changed when no transcription is in progress.
+Audiotext uses the language of your system if it's available. To change it, open the **Preferences** (the gear at the top right) and choose a language in **General** → **Interface language**.
 
 ## Run it from the source code
 

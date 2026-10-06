@@ -56,7 +56,7 @@ Första gången du transkriberar med **WhisperX** (standardmotorn) laddas dess m
 
 ## Ändra gränssnittets språk
 
-Audiotext använder systemets språk om det finns. För att ändra det öppnar du **Inställningar** (kugghjulet uppe till höger) och väljer ett språk under **Allmänt** → **Gränssnittets språk**. Det kan ändras när ingen transkribering pågår.
+Audiotext använder systemets språk om det finns. För att ändra det öppnar du **Inställningar** (kugghjulet uppe till höger) och väljer ett språk under **Allmänt** → **Gränssnittets språk**.
 
 ## Kör från källkoden
 

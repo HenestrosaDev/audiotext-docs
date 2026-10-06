@@ -56,7 +56,7 @@ De eerste keer dat je transcribeert met **WhisperX** (de standaard-engine), word
 
 ## De taal van de interface wijzigen
 
-Audiotext gebruikt de taal van je systeem als die beschikbaar is. Open om die te wijzigen de **Voorkeuren** (het tandwiel rechtsboven) en kies een taal bij **Algemeen** → **Taal van de interface**. Dit kan als er geen transcriptie bezig is.
+Audiotext gebruikt de taal van je systeem als die beschikbaar is. Open om die te wijzigen de **Voorkeuren** (het tandwiel rechtsboven) en kies een taal bij **Algemeen** → **Taal van de interface**.
 
 ## Uitvoeren vanuit de broncode
 

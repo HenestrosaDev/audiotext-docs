@@ -10,7 +10,7 @@ sidebar:
 ## Chung
 
 - **Chế độ hiển thị**: **Hệ thống** (theo hệ thống), **Sáng** hoặc **Tối**.
-- **Ngôn ngữ giao diện**: ngôn ngữ của Audiotext, hoặc **Ngôn ngữ hệ thống**. Có thể đổi khi không có bản chép lời nào đang chạy. Xem các [ngôn ngữ có sẵn](/vi/reference/formats-and-languages/#ngôn-ngữ-giao-diện).
+- **Ngôn ngữ giao diện**: ngôn ngữ của Audiotext, hoặc **Ngôn ngữ hệ thống**. Xem các [ngôn ngữ có sẵn](/vi/reference/formats-and-languages/#ngôn-ngữ-giao-diện).
 - **Định dạng ngày**: cách hiển thị ngày của các bản chép lời, theo ngôn ngữ giao diện: ngắn (`4/10/26`), vừa (`4 thg 10, 2026`, mặc định), dài (`4 tháng 10, 2026`) hoặc ISO (`2026-10-04`). Menu hiển thị từng định dạng kèm ví dụ.
 - **Định dạng giờ**: **Tự động** (đồng hồ của ngôn ngữ giao diện), 12 giờ (`1:30 CH`) hoặc 24 giờ (`13:30`).
 - **Thông báo**: hiển thị thông báo của hệ thống khi bản chép lời đã sẵn sàng (với một thư mục, khi tất cả các tệp của nó đã xong, và với thư mục được theo dõi, mỗi khi một tệp mới xong). Bật theo mặc định. Trên macOS, thông báo đến từ **Script Editor**, còn trên Windows từ **Windows PowerShell**, nên chúng được cho phép hoặc tắt cho các ứng dụng đó trong cài đặt của hệ thống. Trên Linux, cần có `notify-send` (gói `libnotify-bin` hoặc `libnotify`).

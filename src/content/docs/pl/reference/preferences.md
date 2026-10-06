@@ -10,7 +10,7 @@ sidebar:
 ## Ogólne
 
 - **Wygląd**: **Systemowy** (zgodny z systemem), **Jasny** lub **Ciemny**.
-- **Język interfejsu**: język Audiotext lub **Język systemu**. Można go zmienić, gdy żadna transkrypcja nie jest w toku. Zobacz [dostępne języki](/pl/reference/formats-and-languages/#języki-interfejsu).
+- **Język interfejsu**: język Audiotext lub **Język systemu**. Zobacz [dostępne języki](/pl/reference/formats-and-languages/#języki-interfejsu).
 - **Format daty**: jak wyświetlane są daty transkrypcji, w języku interfejsu: krótki (`4.10.2026`), średni (`4 paź 2026`, domyślny), długi (`4 października 2026`) lub ISO (`2026-10-04`). Menu pokazuje każdy format na przykładzie.
 - **Format godziny**: **Automatycznie** (zegar języka interfejsu), 12-godzinny (`1:30 PM`) lub 24-godzinny (`13:30`).
 - **Powiadomienia**: wyświetla powiadomienie systemowe, gdy transkrypcja jest gotowa (w przypadku folderu — gdy gotowe są wszystkie jego pliki, a w przypadku obserwowanego folderu — za każdym razem, gdy gotowy jest nowy plik). Domyślnie włączone. W macOS pochodzą z aplikacji **Edytor skryptów**, a w Windows z **Windows PowerShell**, więc zezwala się na nie lub wycisza je dla tych aplikacji w ustawieniach systemu. W Linuksie wymagają `notify-send` (pakiet `libnotify-bin` lub `libnotify`).

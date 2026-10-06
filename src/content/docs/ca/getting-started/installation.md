@@ -56,7 +56,7 @@ La primera vegada que transcrius amb **WhisperX** (el motor per defecte), es des
 
 ## Canvia l'idioma de la interfície
 
-Audiotext fa servir l'idioma del sistema si està disponible. Per canviar-lo, obre les **Preferències** (l'engranatge de dalt a la dreta) i tria un idioma a **General** → **Idioma de la interfície**. Es pot canviar quan no hi ha cap transcripció en curs.
+Audiotext fa servir l'idioma del sistema si està disponible. Per canviar-lo, obre les **Preferències** (l'engranatge de dalt a la dreta) i tria un idioma a **General** → **Idioma de la interfície**.
 
 ## Executa'l des del codi font
 

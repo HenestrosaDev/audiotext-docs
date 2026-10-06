@@ -56,7 +56,7 @@ Prima dată când transcrieți cu **WhisperX** (motorul implicit), modelul acest
 
 ## Schimbați limba interfeței
 
-Audiotext folosește limba sistemului, dacă este disponibilă. Pentru a o schimba, deschideți **Preferințe** (rotița din dreapta sus) și alegeți o limbă în **General** → **Limba interfeței**. Poate fi schimbată când nu este nicio transcriere în curs.
+Audiotext folosește limba sistemului, dacă este disponibilă. Pentru a o schimba, deschideți **Preferințe** (rotița din dreapta sus) și alegeți o limbă în **General** → **Limba interfeței**.
 
 ## Rulați din codul sursă
 

@@ -56,7 +56,7 @@ Przy pierwszej transkrypcji za pomocą **WhisperX** (domyślnego silnika) pobier
 
 ## Zmień język interfejsu
 
-Audiotext używa języka systemu, jeśli jest dostępny. Aby go zmienić, otwórz **Preferencje** (koło zębate w prawym górnym rogu) i wybierz język w **Ogólne** → **Język interfejsu**. Można go zmienić, gdy żadna transkrypcja nie jest w toku.
+Audiotext używa języka systemu, jeśli jest dostępny. Aby go zmienić, otwórz **Preferencje** (koło zębate w prawym górnym rogu) i wybierz język w **Ogólne** → **Język interfejsu**.
 
 ## Uruchom z kodu źródłowego
 

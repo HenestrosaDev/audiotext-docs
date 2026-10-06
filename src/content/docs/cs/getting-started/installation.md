@@ -56,7 +56,7 @@ Při prvním přepisu pomocí **WhisperX** (výchozího nástroje) se stáhne je
 
 ## Změňte jazyk rozhraní
 
-Audiotext používá jazyk systému, pokud je k dispozici. Chcete-li ho změnit, otevřete **Předvolby** (ozubené kolo vpravo nahoře) a vyberte jazyk v **Obecné** → **Jazyk rozhraní**. Lze ho změnit, když neprobíhá žádný přepis.
+Audiotext používá jazyk systému, pokud je k dispozici. Chcete-li ho změnit, otevřete **Předvolby** (ozubené kolo vpravo nahoře) a vyberte jazyk v **Obecné** → **Jazyk rozhraní**.
 
 ## Spuštění ze zdrojového kódu
 

@@ -56,7 +56,7 @@ GPU eklentisi Windows'ta yaklaşık 2 GB, Linux'ta 4 GB'lık bir indirmedir, bu 
 
 ## Arayüz dilini değiştirin
 
-Audiotext, varsa sisteminizin dilini kullanır. Değiştirmek için **Tercihler**'i (sağ üstteki dişli) açın ve **Genel** → **Arayüz dili** bölümünden bir dil seçin. Devam eden bir transkripsiyon yokken değiştirilebilir.
+Audiotext, varsa sisteminizin dilini kullanır. Değiştirmek için **Tercihler**'i (sağ üstteki dişli) açın ve **Genel** → **Arayüz dili** bölümünden bir dil seçin.
 
 ## Kaynak koddan çalıştırın
 
