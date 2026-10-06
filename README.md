@@ -104,7 +104,7 @@
   - [Sidebar](#sidebar)
   - [Translations](#translations)
   - [Adding a Language](#adding-a-language)
-  - [Screenshots](#screenshots)
+  - [Screenshots and Videos](#screenshots-and-videos)
   - [Styles](#styles)
 - [Authors](#authors)
 - [Contributing](#contributing)
@@ -172,7 +172,9 @@ This repository contains the documentation website of **Audiotext**, a desktop a
 ├───public                  # Files served as they are
 │   │   favicon.png
 │   │
-│   └───screenshots         # Screenshots of the app used in the pages
+│   ├───screenshots         # Screenshots of the app used in the pages
+│   │
+│   └───videos              # Video of the home page and its poster image
 │
 └───src
     │   content.config.ts   # Content collection of the pages
@@ -290,9 +292,11 @@ The website has the same languages as the interface of the app. To add one:
 2. Translate the names of the sidebar groups in `astro.config.mjs`.
 3. Create its folder in `src/content/docs/` and translate the pages of the `en` folder.
 
-### Screenshots
+### Screenshots and Videos
 
-The screenshots of the app are in `public/screenshots/` and are referenced from the pages with absolute paths (e.g. `![The Audiotext window](/screenshots/main.png)`). They're shared by all the languages, so take them with the interface in English.
+The screenshots of the app are in `public/screenshots/` and are referenced from the pages with absolute paths (e.g. `![The Audiotext window](/screenshots/window.png)`). They're shared by all the languages, so take them with the interface in English.
+
+The home page shows a video of the app instead of a screenshot, `public/videos/main.mp4`, with `public/videos/main-poster.jpg` as the image shown until it plays. It's embedded with a `<video>` element in each `index.mdx`, with the description in `aria-label` translated into the language of the page. Its size is set in `src/styles/custom.css`, so if you record it again with other dimensions, update the `aspect-ratio` there too.
 
 ### Styles
 

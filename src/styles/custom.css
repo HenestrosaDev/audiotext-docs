@@ -15,8 +15,12 @@
 	max-width: 12rem;
 }
 
-/* The screenshot of the home page, with as much space below as the hero leaves above */
-[data-has-hero] .sl-markdown-content > p:has(> img[src^='/screenshots/']) {
+/* The video of the home page, with as much space below as the hero leaves above */
+[data-has-hero] .sl-markdown-content > video[src^='/videos/'] {
+	display: block;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 3022 / 1848;
 	margin-bottom: clamp(7.5rem, calc(1rem + 6vmin), 5rem);
 }
 
