@@ -35,7 +35,7 @@ export default defineConfig({
 				{
 					icon: 'github',
 					label: 'GitHub',
-					href: 'https://github.com/HenestrosaDev/audiotext-docs',
+					href: 'https://github.com/HenestrosaDev/audiotext',
 				},
 			],
 			editLink: {
