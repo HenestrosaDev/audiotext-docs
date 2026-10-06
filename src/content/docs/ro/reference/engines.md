@@ -61,7 +61,7 @@ Folosește [API-ul OpenAI de transformare a vorbirii în text](https://platform.
 
 | Model | Marcaje de timp | Vorbitori | Observații |
 | --- | :---: | :---: | --- |
-| `whisper-1` (implicit) | ✓ | ✗ | Poate fi redat propoziție cu propoziție și subtitrat. Traduce în engleză. |
+| `whisper-1` (implicit) | ✓ | ✗ | Poate fi redat segment cu segment și subtitrat. Traduce în engleză. |
 | `gpt-transcribe` | ✗ | ✗ | Mai precis, dar fără marcaje de timp. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifică vorbitorii. Nu folosește cuvintele cheie și nici descrierea. |
 

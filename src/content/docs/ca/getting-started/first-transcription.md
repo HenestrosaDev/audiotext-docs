@@ -40,7 +40,7 @@ Si hi ha una altra transcripció en curs, el botó passa a ser **Afegeix a la cu
 
 Quan acaba, s'obre la transcripció:
 
-- Fes clic en una frase per reproduir l'àudio des d'aquell punt.
+- Fes clic en un segment per reproduir l'àudio des d'aquell punt.
 - Canvia entre **Transcripció**, **Text pla** i **Resum**.
 - Fes servir **Tradueix**, **Copia** i **Exporta** per traduir-la, copiar-la o desar-la com a fitxer.
 

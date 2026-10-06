@@ -40,7 +40,7 @@ Si hay otra transcripción en curso, el botón pasa a ser **Añadir a la cola**,
 
 Cuando termina, se abre la transcripción:
 
-- Haz clic en una frase para reproducir el audio desde ahí.
+- Haz clic en un segmento para reproducir el audio desde ahí.
 - Cambia entre **Transcripción**, **Texto plano** y **Resumen**.
 - Usa **Traducir**, **Copiar** y **Exportar** para traducirla, copiarla o guardarla como archivo.
 

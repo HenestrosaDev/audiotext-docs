@@ -40,7 +40,7 @@ If another transcription is in progress, the button becomes **Add to queue**, an
 
 When it finishes, the transcription opens:
 
-- Click a sentence to play the audio from there.
+- Click a segment to play the audio from there.
 - Switch between **Transcript**, **Plain text** and **Summary**.
 - Use **Translate**, **Copy** and **Export** to translate it, copy it or save it as a file.
 

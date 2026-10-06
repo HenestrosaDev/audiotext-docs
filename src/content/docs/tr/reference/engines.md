@@ -61,7 +61,7 @@ Audiotext'i hızlıca denemek için `tiny` veya `small` seçin. En iyi kalite i�
 
 | Model | Zaman damgaları | Konuşmacılar | Notlar |
 | --- | :---: | :---: | --- |
-| `whisper-1` (varsayılan) | ✓ | ✗ | Cümle cümle oynatılabilir ve altyazıya dönüştürülebilir. İngilizceye çevirir. |
+| `whisper-1` (varsayılan) | ✓ | ✗ | Segment segment oynatılabilir ve altyazıya dönüştürülebilir. İngilizceye çevirir. |
 | `gpt-transcribe` | ✗ | ✗ | Daha doğru, ancak zaman damgası yok. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Konuşmacıları belirler. Anahtar kelimeleri ve açıklamayı kullanmaz. |
 

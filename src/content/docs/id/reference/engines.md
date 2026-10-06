@@ -61,7 +61,7 @@ Menggunakan [API ucapan-ke-teks OpenAI](https://platform.openai.com/docs/guides/
 
 | Model | Stempel waktu | Pembicara | Catatan |
 | --- | :---: | :---: | --- |
-| `whisper-1` (bawaan) | ✓ | ✗ | Dapat diputar per kalimat dan dibuatkan subtitle. Menerjemahkan ke bahasa Inggris. |
+| `whisper-1` (bawaan) | ✓ | ✗ | Dapat diputar per segmen dan dibuatkan subtitle. Menerjemahkan ke bahasa Inggris. |
 | `gpt-transcribe` | ✗ | ✗ | Lebih akurat, tetapi tanpa stempel waktu. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Mengidentifikasi pembicara. Tidak menggunakan kata kunci maupun deskripsi. |
 

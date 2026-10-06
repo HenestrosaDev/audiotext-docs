@@ -40,7 +40,7 @@ Dacă o altă transcriere este în curs, butonul devine **Adaugă în coadă**, 
 
 Când se termină, transcrierea se deschide:
 
-- Faceți clic pe o propoziție pentru a reda sunetul de acolo.
+- Faceți clic pe un segment pentru a reda sunetul de acolo.
 - Comutați între **Transcriere cu marcaje**, **Text simplu** și **Rezumat**.
 - Folosiți **Tradu**, **Copiază** și **Exportă** pentru a o traduce, copia sau salva ca fișier.
 

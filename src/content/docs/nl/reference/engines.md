@@ -61,7 +61,7 @@ Gebruikt de [spraak-naar-tekst-API van OpenAI](https://platform.openai.com/docs/
 
 | Model | Tijdstempels | Sprekers | Opmerkingen |
 | --- | :---: | :---: | --- |
-| `whisper-1` (standaard) | ✓ | ✗ | Kan zin voor zin worden afgespeeld en ondertiteld. Vertaalt naar het Engels. |
+| `whisper-1` (standaard) | ✓ | ✗ | Kan segment voor segment worden afgespeeld en ondertiteld. Vertaalt naar het Engels. |
 | `gpt-transcribe` | ✗ | ✗ | Nauwkeuriger, maar zonder tijdstempels. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Herkent de sprekers. Gebruikt de trefwoorden en de beschrijving niet. |
 

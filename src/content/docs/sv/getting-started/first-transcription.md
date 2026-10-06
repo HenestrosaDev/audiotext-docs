@@ -40,7 +40,7 @@ Om en annan transkribering pågår blir knappen **Lägg till i kön**, och den n
 
 När den är klar öppnas transkriberingen:
 
-- Klicka på en mening för att spela upp ljudet därifrån.
+- Klicka på ett segment för att spela upp ljudet därifrån.
 - Växla mellan **Transkript**, **Oformaterad text** och **Sammanfattning**.
 - Använd **Översätt**, **Kopiera** och **Exportera** för att översätta, kopiera eller spara den som en fil.
 

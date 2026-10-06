@@ -61,7 +61,7 @@ Usa a [API de fala para texto da OpenAI](https://platform.openai.com/docs/guides
 
 | Modelo | Carimbos de tempo | Falantes | Observações |
 | --- | :---: | :---: | --- |
-| `whisper-1` (padrão) | ✓ | ✗ | Pode ser reproduzido frase por frase e legendado. Traduz para o inglês. |
+| `whisper-1` (padrão) | ✓ | ✗ | Pode ser reproduzido segmento por segmento e legendado. Traduz para o inglês. |
 | `gpt-transcribe` | ✗ | ✗ | Mais preciso, mas sem carimbos de tempo. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifica os falantes. Não usa as palavras-chave nem a descrição. |
 

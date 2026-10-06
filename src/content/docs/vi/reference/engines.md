@@ -61,7 +61,7 @@ Dùng [API chuyển giọng nói thành văn bản của OpenAI](https://platfor
 
 | Mô hình | Dấu thời gian | Người nói | Ghi chú |
 | --- | :---: | :---: | --- |
-| `whisper-1` (mặc định) | ✓ | ✗ | Có thể phát theo từng câu và tạo phụ đề. Dịch sang tiếng Anh. |
+| `whisper-1` (mặc định) | ✓ | ✗ | Có thể phát theo từng đoạn và tạo phụ đề. Dịch sang tiếng Anh. |
 | `gpt-transcribe` | ✗ | ✗ | Chính xác hơn, nhưng không có dấu thời gian. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Nhận diện người nói. Không dùng từ khóa và mô tả. |
 

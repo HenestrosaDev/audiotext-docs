@@ -40,7 +40,7 @@ Devam eden başka bir transkripsiyon varsa düğme **Kuyruğa ekle** olur ve yen
 
 Bittiğinde transkripsiyon açılır:
 
-- Sesi oradan oynatmak için bir cümleye tıklayın.
+- Sesi oradan oynatmak için bir segmente tıklayın.
 - **Döküm**, **Düz metin** ve **Özet** arasında geçiş yapın.
 - Çevirmek, kopyalamak veya dosya olarak kaydetmek için **Çevir**, **Kopyala** ve **Dışa aktar**'ı kullanın.
 

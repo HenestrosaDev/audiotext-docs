@@ -61,7 +61,7 @@ Verwendet die [Speech-to-Text-API von OpenAI](https://platform.openai.com/docs/g
 
 | Modell | Zeitstempel | Sprecher | Hinweise |
 | --- | :---: | :---: | --- |
-| `whisper-1` (Standard) | ✓ | ✗ | Lässt sich Satz für Satz abspielen und untertiteln. Übersetzt ins Englische. |
+| `whisper-1` (Standard) | ✓ | ✗ | Lässt sich Segment für Segment abspielen und untertiteln. Übersetzt ins Englische. |
 | `gpt-transcribe` | ✗ | ✗ | Genauer, aber ohne Zeitstempel. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Erkennt die Sprecher. Verwendet weder Schlüsselwörter noch Beschreibung. |
 

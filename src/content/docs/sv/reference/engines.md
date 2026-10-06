@@ -61,7 +61,7 @@ Använder [OpenAI:s API för tal till text](https://platform.openai.com/docs/gui
 
 | Modell | Tidsstämplar | Talare | Kommentarer |
 | --- | :---: | :---: | --- |
-| `whisper-1` (standard) | ✓ | ✗ | Kan spelas upp mening för mening och textas. Översätter till engelska. |
+| `whisper-1` (standard) | ✓ | ✗ | Kan spelas upp segment för segment och textas. Översätter till engelska. |
 | `gpt-transcribe` | ✗ | ✗ | Mer exakt, men utan tidsstämplar. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifierar talarna. Använder inte nyckelorden eller beskrivningen. |
 

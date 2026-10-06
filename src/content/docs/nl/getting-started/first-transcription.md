@@ -40,7 +40,7 @@ Als er al een andere transcriptie bezig is, wordt de knop **Toevoegen aan wachtr
 
 Als hij klaar is, wordt de transcriptie geopend:
 
-- Klik op een zin om de audio vanaf daar af te spelen.
+- Klik op een segment om de audio vanaf daar af te spelen.
 - Wissel tussen **Transcript**, **Platte tekst** en **Samenvatting**.
 - Gebruik **Vertalen**, **Kopiëren** en **Exporteren** om hem te vertalen, te kopiëren of als bestand op te slaan.
 

@@ -40,7 +40,7 @@ Läuft bereits eine andere Transkription, wird die Schaltfläche zu **Zur Wartes
 
 Wenn sie fertig ist, öffnet sich die Transkription:
 
-- Klicken Sie auf einen Satz, um das Audio ab dort abzuspielen.
+- Klicken Sie auf ein Segment, um das Audio ab dort abzuspielen.
 - Wechseln Sie zwischen **Transkript**, **Nur-Text** und **Zusammenfassung**.
 - Mit **Übersetzen**, **Kopieren** und **Exportieren** übersetzen, kopieren oder speichern Sie sie als Datei.
 

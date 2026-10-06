@@ -40,7 +40,7 @@ Pokud probíhá jiný přepis, tlačítko se změní na **Přidat do fronty** a 
 
 Po dokončení se přepis otevře:
 
-- Kliknutím na větu přehrajete zvuk od tohoto místa.
+- Kliknutím na segment přehrajete zvuk od tohoto místa.
 - Přepínejte mezi **Přepis s časy**, **Prostý text** a **Shrnutí**.
 - Pomocí **Přeložit**, **Kopírovat** a **Exportovat** ho přeložíte, zkopírujete nebo uložíte jako soubor.
 

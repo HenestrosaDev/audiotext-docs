@@ -40,7 +40,7 @@ Si une autre transcription est en cours, le bouton devient **Ajouter à la file 
 
 Une fois terminée, la transcription s’ouvre :
 
-- Cliquez sur une phrase pour lire l’audio à partir de là.
+- Cliquez sur un segment pour lire l’audio à partir de là.
 - Passez de **Transcription** à **Texte brut** ou **Résumé**.
 - Utilisez **Traduire**, **Copier** et **Exporter** pour la traduire, la copier ou l’enregistrer dans un fichier.
 

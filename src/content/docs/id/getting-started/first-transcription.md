@@ -40,7 +40,7 @@ Jika ada transkripsi lain yang sedang berjalan, tombolnya berubah menjadi **Tamb
 
 Setelah selesai, transkripsi akan terbuka:
 
-- Klik kalimat untuk memutar audio dari titik tersebut.
+- Klik segmen untuk memutar audio dari titik tersebut.
 - Beralih antara **Transkrip**, **Teks biasa**, dan **Ringkasan**.
 - Gunakan **Terjemahkan**, **Salin**, dan **Ekspor** untuk menerjemahkan, menyalin, atau menyimpannya sebagai file.
 

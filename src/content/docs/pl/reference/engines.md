@@ -61,7 +61,7 @@ Korzysta z [API OpenAI do zamiany mowy na tekst](https://platform.openai.com/doc
 
 | Model | Znaczniki czasu | Mówcy | Uwagi |
 | --- | :---: | :---: | --- |
-| `whisper-1` (domyślny) | ✓ | ✗ | Można go odtwarzać zdanie po zdaniu i tworzyć napisy. Tłumaczy na angielski. |
+| `whisper-1` (domyślny) | ✓ | ✗ | Można go odtwarzać segment po segmencie i tworzyć napisy. Tłumaczy na angielski. |
 | `gpt-transcribe` | ✗ | ✗ | Dokładniejszy, ale bez znaczników czasu. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Rozpoznaje mówców. Nie używa słów kluczowych ani opisu. |
 

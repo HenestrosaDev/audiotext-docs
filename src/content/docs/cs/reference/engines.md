@@ -61,7 +61,7 @@ Používá [API OpenAI pro převod řeči na text](https://platform.openai.com/d
 
 | Model | Časové značky | Mluvčí | Poznámky |
 | --- | :---: | :---: | --- |
-| `whisper-1` (výchozí) | ✓ | ✗ | Lze přehrávat větu po větě a převést na titulky. Překládá do angličtiny. |
+| `whisper-1` (výchozí) | ✓ | ✗ | Lze přehrávat segment po segmentu a převést na titulky. Překládá do angličtiny. |
 | `gpt-transcribe` | ✗ | ✗ | Přesnější, ale bez časových značek. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Rozpozná mluvčí. Nepoužívá klíčová slova ani popis. |
 

@@ -61,7 +61,7 @@ Fa servir l'[API de veu a text d'OpenAI](https://platform.openai.com/docs/guides
 
 | Model | Marques de temps | Parlants | Notes |
 | --- | :---: | :---: | --- |
-| `whisper-1` (per defecte) | ✓ | ✗ | Es pot reproduir frase a frase i subtitular. Tradueix a l'anglès. |
+| `whisper-1` (per defecte) | ✓ | ✗ | Es pot reproduir segment a segment i subtitular. Tradueix a l'anglès. |
 | `gpt-transcribe` | ✗ | ✗ | Més precís, però sense marques de temps. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifica els parlants. No fa servir les paraules clau ni la descripció. |
 

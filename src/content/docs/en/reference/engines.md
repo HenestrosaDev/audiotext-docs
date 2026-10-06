@@ -61,7 +61,7 @@ Uses the [speech-to-text API of OpenAI](https://platform.openai.com/docs/guides/
 
 | Model | Timestamps | Speakers | Notes |
 | --- | :---: | :---: | --- |
-| `whisper-1` (default) | ✓ | ✗ | Can be played sentence by sentence and subtitled. Translates into English. |
+| `whisper-1` (default) | ✓ | ✗ | Can be played segment by segment and subtitled. Translates into English. |
 | `gpt-transcribe` | ✗ | ✗ | More accurate, but without timestamps. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifies the speakers. Doesn't use the keywords nor the description. |
 

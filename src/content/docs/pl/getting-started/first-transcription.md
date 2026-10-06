@@ -40,7 +40,7 @@ Jeśli trwa inna transkrypcja, przycisk zmienia się na **Dodaj do kolejki**, a 
 
 Po zakończeniu otwiera się transkrypcja:
 
-- Kliknij zdanie, aby odtworzyć nagranie od tego miejsca.
+- Kliknij segment, aby odtworzyć nagranie od tego miejsca.
 - Przełączaj między widokami **Transkrypcja**, **Zwykły tekst** i **Podsumowanie**.
 - Użyj przycisków **Przetłumacz**, **Kopiuj** i **Eksportuj**, aby ją przetłumaczyć, skopiować lub zapisać jako plik.
 

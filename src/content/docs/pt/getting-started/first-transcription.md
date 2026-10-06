@@ -40,7 +40,7 @@ Se houver outra transcrição em andamento, o botão vira **Adicionar à fila**,
 
 Quando termina, a transcrição é aberta:
 
-- Clique em uma frase para reproduzir o áudio a partir dali.
+- Clique em um segmento para reproduzir o áudio a partir dali.
 - Alterne entre **Transcrição**, **Texto simples** e **Resumo**.
 - Use **Traduzir**, **Copiar** e **Exportar** para traduzi-la, copiá-la ou salvá-la como arquivo.
 

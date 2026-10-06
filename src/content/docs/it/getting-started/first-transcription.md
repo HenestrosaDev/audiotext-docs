@@ -40,7 +40,7 @@ Se c'è un'altra trascrizione in corso, il pulsante diventa **Aggiungi alla coda
 
 Quando finisce, la trascrizione si apre:
 
-- Fai clic su una frase per riprodurre l'audio da quel punto.
+- Fai clic su un segmento per riprodurre l'audio da quel punto.
 - Passa tra **Trascrizione**, **Testo semplice** e **Riassunto**.
 - Usa **Traduci**, **Copia** ed **Esporta** per tradurla, copiarla o salvarla come file.
 

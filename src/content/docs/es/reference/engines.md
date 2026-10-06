@@ -61,7 +61,7 @@ Usa la [API de voz a texto de OpenAI](https://platform.openai.com/docs/guides/sp
 
 | Modelo | Marcas de tiempo | Hablantes | Notas |
 | --- | :---: | :---: | --- |
-| `whisper-1` (por defecto) | ✓ | ✗ | Se puede reproducir frase a frase y subtitular. Traduce al inglés. |
+| `whisper-1` (por defecto) | ✓ | ✗ | Se puede reproducir segmento a segmento y subtitular. Traduce al inglés. |
 | `gpt-transcribe` | ✗ | ✗ | Más preciso, pero sin marcas de tiempo. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifica a los hablantes. No usa las palabras clave ni la descripción. |
 

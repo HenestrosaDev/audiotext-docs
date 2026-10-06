@@ -61,7 +61,7 @@ Usa la [API di trascrizione vocale di OpenAI](https://platform.openai.com/docs/g
 
 | Modello | Marcatori temporali | Parlanti | Note |
 | --- | :---: | :---: | --- |
-| `whisper-1` (predefinito) | ✓ | ✗ | Si può riprodurre frase per frase e sottotitolare. Traduce in inglese. |
+| `whisper-1` (predefinito) | ✓ | ✗ | Si può riprodurre segmento per segmento e sottotitolare. Traduce in inglese. |
 | `gpt-transcribe` | ✗ | ✗ | Più preciso, ma senza marcatori temporali. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifica i parlanti. Non usa le parole chiave né la descrizione. |
 

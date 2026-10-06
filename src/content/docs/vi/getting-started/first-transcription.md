@@ -40,7 +40,7 @@ Nếu có bản chép lời khác đang chạy, nút sẽ đổi thành **Thêm 
 
 Khi hoàn tất, bản chép lời sẽ mở ra:
 
-- Nhấp vào một câu để phát âm thanh từ chỗ đó.
+- Nhấp vào một đoạn để phát âm thanh từ chỗ đó.
 - Chuyển giữa **Bản ghi lời**, **Văn bản thuần** và **Bản tóm tắt**.
 - Dùng **Dịch**, **Sao chép** và **Xuất** để dịch, sao chép hoặc lưu thành tệp.
 

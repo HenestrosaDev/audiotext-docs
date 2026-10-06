@@ -61,7 +61,7 @@ Utilise l’[API de reconnaissance vocale d’OpenAI](https://platform.openai.co
 
 | Modèle | Horodatages | Locuteurs | Remarques |
 | --- | :---: | :---: | --- |
-| `whisper-1` (par défaut) | ✓ | ✗ | Peut être lu phrase par phrase et sous-titré. Traduit vers l’anglais. |
+| `whisper-1` (par défaut) | ✓ | ✗ | Peut être lu segment par segment et sous-titré. Traduit vers l’anglais. |
 | `gpt-transcribe` | ✗ | ✗ | Plus précis, mais sans horodatage. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifie les locuteurs. N’utilise ni les mots-clés ni la description. |
 

@@ -40,7 +40,7 @@ Se hai outra transcrición en curso, o botón pasa a ser **Engadir á cola**, e 
 
 Cando remata, ábrese a transcrición:
 
-- Fai clic nunha frase para reproducir o audio desde aí.
+- Fai clic nun segmento para reproducir o audio desde aí.
 - Cambia entre **Transcrición**, **Texto plano** e **Resumo**.
 - Usa **Traducir**, **Copiar** e **Exportar** para traducila, copiala ou gardala como ficheiro.
 
