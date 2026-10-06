@@ -19,6 +19,7 @@ Faites un clic droit sur une transcription pour :
 
 - La **Renommer**.
 - **Ajouter une note…** ou **Modifier la note…** : une note à son sujet, affichée dans son en-tête.
+- **Supprimer la note…** : supprime sa note, après confirmation.
 - **Modifier l’étiquette…** : un court libellé affiché à la place du type de source.
 - L’**Épingler en haut** ou la **Désépingler**.
 - La **Déplacer vers le groupe** : la placer dans un groupe, ou créer un **Nouveau groupe…**.

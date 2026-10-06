@@ -19,6 +19,7 @@ Fai clic dereito nunha transcrición para:
 
 - **Renomeala**.
 - **Engadir nota…** ou **Editar nota…**: unha nota sobre ela, que se mostra na súa cabeceira.
+- **Eliminar a nota…**: elimina a súa nota, despois de preguntarche.
 - **Editar etiqueta…**: unha etiqueta curta que se mostra en lugar do tipo de orixe.
 - **Fixala arriba** ou **Desfixala**.
 - **Movela ao grupo**: poñela nun grupo, ou crear un **Novo grupo…**.

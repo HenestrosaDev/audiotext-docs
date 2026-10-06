@@ -19,6 +19,7 @@ Clique com o botão direito em uma transcrição para:
 
 - **Renomeá-la**.
 - **Adicionar nota…** ou **Editar nota…**: uma nota sobre ela, exibida no cabeçalho.
+- **Eliminar nota…**: exclui a nota dela, depois de perguntar.
 - **Editar etiqueta…**: um rótulo curto exibido no lugar do tipo de origem.
 - **Fixar no topo** ou **Desafixar**.
 - **Mover para o grupo**: colocá-la em um grupo, ou criar um **Novo grupo…**.

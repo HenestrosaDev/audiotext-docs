@@ -19,6 +19,7 @@ Kliknij transkrypcję prawym przyciskiem myszy, aby:
 
 - **Zmienić nazwę**.
 - **Dodaj notatkę…** lub **Edytuj notatkę…**: notatka o niej, wyświetlana w nagłówku.
+- **Usuń notatkę…**: usuwa jej notatkę po potwierdzeniu.
 - **Edytuj etykietę…**: krótka etykieta wyświetlana zamiast rodzaju źródła.
 - **Przypnij na górze** lub **Odepnij**.
 - **Przenieś do grupy**: umieścić ją w grupie lub utworzyć **Nową grupę…**.

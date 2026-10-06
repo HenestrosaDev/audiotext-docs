@@ -19,6 +19,7 @@ Kliknutím pravým tlačítkem na přepis můžete:
 
 - **Přejmenovat** ho.
 - **Přidat poznámku…** nebo **Upravit poznámku…**: poznámka k přepisu, zobrazená v jeho záhlaví.
+- **Smazat poznámku…**: po potvrzení smaže jeho poznámku.
 - **Upravit štítek…**: krátký štítek zobrazený místo druhu zdroje.
 - **Připnout nahoru** nebo **Odepnout**.
 - **Přesunout do skupiny**: zařadit ho do skupiny nebo vytvořit **Novou skupinu…**.

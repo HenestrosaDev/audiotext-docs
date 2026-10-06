@@ -19,6 +19,7 @@ Fai clic con il tasto destro su una trascrizione per:
 
 - **Rinominarla**.
 - **Aggiungi nota…** o **Modifica nota…**: una nota su di essa, mostrata nella sua intestazione.
+- **Elimina nota…**: elimina la sua nota, dopo avertelo chiesto.
 - **Modifica etichetta…**: un'etichetta breve mostrata al posto del tipo di origine.
 - **Fissa in alto** o **Rimuovi dai fissati**.
 - **Sposta nel gruppo**: metterla in un gruppo, o creare un **Nuovo gruppo…**.

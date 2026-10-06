@@ -19,6 +19,7 @@ Haz clic derecho en una transcripción para:
 
 - **Renombrar**la.
 - **Añadir nota…** o **Editar nota…**: una nota sobre ella, que se muestra en su cabecera.
+- **Eliminar nota…**: elimina su nota, después de preguntarte.
 - **Editar etiqueta…**: una etiqueta corta que se muestra en lugar del tipo de origen.
 - **Fijar arriba** o **Desfijar**.
 - **Mover al grupo**: ponerla en un grupo, o crear un **Nuevo grupo…**.

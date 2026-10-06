@@ -19,6 +19,7 @@ Nhấp chuột phải vào một bản chép lời để:
 
 - **Đổi tên**.
 - **Thêm ghi chú…** hoặc **Chỉnh sửa ghi chú…**: ghi chú về bản chép lời, hiển thị ở phần đầu.
+- **Xóa ghi chú…**: xóa ghi chú của bản chép lời, sau khi hỏi bạn.
 - **Chỉnh sửa nhãn…**: nhãn ngắn hiển thị thay cho loại nguồn.
 - **Ghim lên đầu** hoặc **Bỏ ghim**.
 - **Chuyển vào nhóm**: đưa vào một nhóm, hoặc tạo **Nhóm mới…**.

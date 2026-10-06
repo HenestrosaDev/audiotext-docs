@@ -19,6 +19,7 @@ Right-click a transcription to:
 
 - **Rename** it.
 - **Add note…** or **Edit note…**: a note about it, shown in its header.
+- **Delete note…**: deletes its note, after asking you.
 - **Edit tag…**: a short label shown instead of the kind of source.
 - **Pin to the top** or **Unpin** it.
 - **Move to group**: put it in a group, or create a **New group…**.

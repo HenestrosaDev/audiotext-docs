@@ -19,6 +19,7 @@ Bir transkripsiyona sağ tıklayarak:
 
 - **Yeniden adlandır**ın.
 - **Not ekle…** veya **Notu düzenle…**: başlığında gösterilen bir not.
+- **Notu sil…**: size sorduktan sonra notunu siler.
 - **Etiketi düzenle…**: kaynak türü yerine gösterilen kısa bir etiket.
 - **En üste sabitle**yin veya **Sabitlemeyi kaldır**ın.
 - **Gruba taşı**yın ya da **Yeni grup…** oluşturun.

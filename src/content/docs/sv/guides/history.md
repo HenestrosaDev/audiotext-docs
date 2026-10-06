@@ -19,6 +19,7 @@ Högerklicka på en transkribering för att:
 
 - **Byt namn** på den.
 - **Lägg till anteckning…** eller **Redigera anteckning…**: en anteckning om den, som visas i rubriken.
+- **Radera anteckning…**: raderar dess anteckning, efter att ha frågat dig.
 - **Redigera etikett…**: en kort etikett som visas i stället för typen av källa.
 - **Fäst överst** eller **Lossa** den.
 - **Flytta till grupp**: lägga den i en grupp, eller skapa en **Ny grupp…**.

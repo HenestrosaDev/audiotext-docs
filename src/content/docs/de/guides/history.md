@@ -19,6 +19,7 @@ Klicken Sie mit der rechten Maustaste auf eine Transkription, um:
 
 - Sie **umzubenennen**.
 - **Notiz hinzufügen…** oder **Notiz bearbeiten…**: eine Notiz dazu, die in der Kopfzeile angezeigt wird.
+- **Notiz löschen…**: löscht ihre Notiz nach einer Rückfrage.
 - **Etikett bearbeiten…**: eine kurze Bezeichnung, die statt der Art der Quelle angezeigt wird.
 - Sie **Oben anheften** oder **Lösen**.
 - **In Gruppe verschieben**: sie einer Gruppe zuordnen oder eine **Neue Gruppe…** erstellen.

@@ -19,6 +19,7 @@ Klik kanan transkripsi untuk:
 
 - **Ganti nama**.
 - **Tambahkan catatan…** atau **Edit catatan…**: catatan tentang transkripsi tersebut, yang ditampilkan di header-nya.
+- **Hapus catatan…**: menghapus catatannya, setelah meminta konfirmasi.
 - **Edit label…**: label singkat yang ditampilkan sebagai pengganti jenis sumber.
 - **Sematkan di atas** atau **Lepas sematan**.
 - **Pindahkan ke grup**: memasukkannya ke grup, atau membuat **Grup baru…**.

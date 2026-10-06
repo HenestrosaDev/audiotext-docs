@@ -19,6 +19,7 @@ Klik met de rechtermuisknop op een transcriptie om:
 
 - Hem te **Hernoemen**.
 - **Notitie toevoegen…** of **Notitie bewerken…**: een notitie erbij, getoond in de kop.
+- **Notitie verwijderen…**: verwijdert de notitie, na bevestiging.
 - **Label bewerken…**: een kort label dat in plaats van het soort bron wordt getoond.
 - Hem **Bovenaan vastzetten** of **Losmaken**.
 - **Naar groep verplaatsen**: hem in een groep plaatsen, of een **Nieuwe groep…** maken.

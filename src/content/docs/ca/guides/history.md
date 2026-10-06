@@ -19,6 +19,7 @@ Fes clic amb el botó dret en una transcripció per:
 
 - **Canviar-ne el nom**.
 - **Afegir una nota…** o **Editar la nota…**: una nota sobre ella, que es mostra a la capçalera.
+- **Elimina la nota…**: n'elimina la nota, després de demanar-t'ho.
 - **Editar l'etiqueta…**: una etiqueta curta que es mostra en lloc del tipus d'origen.
 - **Fixar-la a dalt** o **Deixar de fixar-la**.
 - **Moure-la al grup**: posar-la en un grup, o crear un **Grup nou…**.

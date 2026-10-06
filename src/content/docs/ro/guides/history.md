@@ -19,6 +19,7 @@ Faceți clic dreapta pe o transcriere pentru a:
 
 - O **Redenumi**.
 - **Adaugă notă…** sau **Editează nota…**: o notă despre ea, afișată în antet.
+- **Șterge nota…**: îi șterge nota, după confirmare.
 - **Editează eticheta…**: o etichetă scurtă afișată în locul tipului sursei.
 - **Fixează sus** sau **Anulează fixarea**.
 - **Mută în grup**: o puneți într-un grup sau creați un **Grup nou…**.
