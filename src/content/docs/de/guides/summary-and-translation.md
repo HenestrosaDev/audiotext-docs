@@ -25,10 +25,28 @@ Ist der API-Schlüssel des Anbieters nicht festgelegt, bietet der Modus **Zusamm
 
 Klicken Sie auf **Übersetzen**, wählen Sie unter **Übersetzen in** die Sprache und den **Anbieter** und bestätigen Sie. Die Übersetzung erscheint in einem Bereich rechts neben dem Originaltext.
 
-- Hat die Transkription Zeitstempel, wird jeder Satz einzeln übersetzt, sodass die Übersetzung sie behält: Sie hebt den abgespielten Satz hervor, und ein Klick auf einen Satz spielt ihn ab.
+- Hat die Transkription Zeitstempel, wird jedes Segment einzeln übersetzt, sodass die Übersetzung mit denselben Zeitstempeln beginnt: Sie hebt das abgespielte Segment hervor, und ein Klick auf ein Segment spielt es ab.
 - Haben Sie den Nur-Text bearbeitet, wird stattdessen der bearbeitete Text übersetzt, ohne Zeitstempel.
 - Ziehen Sie den Griff zwischen beiden Texten, um ihre Größe zu ändern, oder doppelklicken Sie darauf, um sie zurückzusetzen.
 - Über die Schaltfläche **Übersetzen** können Sie auch die **Übersetzung ausblenden**, **In eine andere Sprache übersetzen…** oder die **Übersetzung löschen**.
+
+### Die Übersetzung korrigieren und neu timen
+
+Eine Übersetzung braucht oft ein anderes Timing als das Original, z. B. Untertitel, deren Lesen länger dauert. Klicken Sie mit der rechten Maustaste auf ein Segment der Übersetzung, um:
+
+- **Text bearbeiten…**: seinen Text zu ändern.
+- **Zeiten bearbeiten…**: millisekundengenau zu ändern, wann es beginnt und endet. Geben Sie die Zeiten als `00:01:05,900`, `01:05,9` oder `65.9` ein.
+- **Segment danach hinzufügen…**: ein Segment hinzuzufügen, das standardmäßig die Lücke bis zum nächsten füllt.
+- **Segment löschen**.
+
+### Selbst übersetzen
+
+Um die Übersetzung selbst zu schreiben, wählen Sie **Selbst, von Grund auf** als **Anbieter**. Dafür ist kein API-Schlüssel nötig. Die Übersetzung beginnt mit den Zeitstempeln der Transkription und leeren Segmenten, die als **Noch nicht übersetzt** angezeigt werden, und der Bereich zeigt, wie viele noch übrig sind. Klicken Sie mit der rechten Maustaste auf eines und wählen Sie **Text übersetzen…**: Der Dialog zeigt den Originaltext, der in dieser Zeit gesagt wird.
+
+### Untertitel und Export
+
+- Aktivieren Sie bei Transkriptionen von Videos **Als Untertitel des Videos anzeigen** im Menü **Übersetzen**, um die Übersetzung als Untertitel zu zeigen. Auch das Menü des Videos schaltet sie um. Siehe [Videos mit Untertiteln ansehen](/de/guides/transcript/#videos-mit-untertiteln-ansehen).
+- Um die Übersetzung als Datei zu speichern, wählen Sie **Übersetzung nach…** im Menü **Exportieren** oder klicken Sie auf die Export-Schaltfläche der Übersetzung. Sie wird in denselben [Formaten](/de/guides/transcript/#kopieren-und-exportieren) wie die Transkription exportiert, mit ihrer Sprache im Dateinamen (z. B. `video.es.srt`), sodass Videoplayer sie zusammen mit dem Video laden. Noch nicht übersetzte Segmente werden in den Untertiteln ausgelassen.
 
 :::tip
 Um die Transkription ohne Anbieter direkt in einer anderen Sprache zu erhalten, können Sie auch beim Transkribieren übersetzen. Siehe [Sprache](/de/guides/transcription-settings/#sprache).

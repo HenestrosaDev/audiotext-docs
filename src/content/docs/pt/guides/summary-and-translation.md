@@ -25,10 +25,28 @@ Se a chave de API do provedor não estiver definida, o modo **Resumo** oferece d
 
 Clique em **Traduzir**, escolha o idioma em **Traduzir para** e o **Provedor**, e confirme. A tradução aparece em um painel à direita do texto original.
 
-- Se a transcrição tiver carimbos de tempo, cada frase é traduzida separadamente, então a tradução os mantém: ela destaca a frase em reprodução, e clicar em uma frase a reproduz.
+- Se a transcrição tiver carimbos de tempo, cada segmento é traduzido separadamente, então a tradução começa com os mesmos carimbos de tempo: ela destaca o segmento em reprodução, e clicar em um segmento o reproduz.
 - Se você editou o texto simples, o texto editado é traduzido, sem carimbos de tempo.
 - Arraste o divisor entre os dois textos para redimensioná-los, ou clique duas vezes nele para restaurar os tamanhos.
 - O botão **Traduzir** também permite **Ocultar a tradução**, **Traduzir para outro idioma…** ou **Excluir a tradução**.
+
+### Corrija e ajuste os tempos da tradução
+
+Uma tradução costuma precisar de outros tempos que o original, por exemplo legendas que levam mais tempo para ler. Clique com o botão direito em um segmento da tradução para:
+
+- **Editar o texto…**: mudar o texto dele.
+- **Editar os tempos…**: mudar quando ele começa e termina, com precisão de milissegundos. Digite os tempos como `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Adicionar um segmento depois…**: adicionar um segmento, que por padrão preenche o intervalo até o seguinte.
+- **Eliminar o segmento**.
+
+### Traduza você mesmo
+
+Para escrever a tradução você mesmo, escolha **Eu mesmo, do zero** como **Provedor**. Não precisa de chave de API. A tradução começa com os carimbos de tempo da transcrição e segmentos vazios, exibidos como **Ainda não traduzido**, e o painel mostra quantos faltam. Clique com o botão direito em um deles e escolha **Traduzir o texto…**: a caixa de diálogo mostra o texto original dito nesse intervalo.
+
+### Legendas e exportação
+
+- Nas transcrições de vídeos, marque **Mostrá-la como legendas do vídeo** no menu **Traduzir** para mostrar a tradução como legendas. O menu do vídeo também as troca. Veja [Assista a vídeos com legendas](/pt/guides/transcript/#assista-a-vídeos-com-legendas).
+- Para salvar a tradução em um arquivo, escolha **Tradução para…** no menu **Exportar** ou clique no botão de exportar da tradução. Ela é exportada nos mesmos [formatos](/pt/guides/transcript/#copie-e-exporte) da transcrição, com o idioma no nome do arquivo (ex.: `video.es.srt`), então os players de vídeo a carregam junto com o vídeo. Os segmentos ainda não traduzidos ficam de fora das legendas.
 
 :::tip
 Para obter a transcrição diretamente em outro idioma, sem provedor, você também pode traduzir durante a transcrição. Consulte [Idioma](/pt/guides/transcription-settings/#idioma).

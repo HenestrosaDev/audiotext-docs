@@ -25,10 +25,28 @@ Sağlayıcının API anahtarı ayarlanmamışsa **Özet** modu onu ayarlamayı �
 
 **Çevir**'e tıklayın, **Hedef dil** alanından dili ve **Sağlayıcı**'yı seçin ve onaylayın. Çeviri, orijinal metnin sağındaki bir panelde gösterilir.
 
-- Transkripsiyonun zaman damgaları varsa her cümle ayrı çevrilir, böylece çeviri onları korur: oynatılan cümleyi vurgular ve bir cümleye tıklamak onu oynatır.
+- Transkripsiyonun zaman damgaları varsa her segment ayrı çevrilir, böylece çeviri aynı zaman damgalarıyla başlar: oynatılan segmenti vurgular ve bir segmente tıklamak onu oynatır.
 - Düz metni düzenlediyseniz bunun yerine düzenlenmiş metin zaman damgası olmadan çevrilir.
 - İki metin arasındaki tutamağı sürükleyerek boyutlarını değiştirin veya boyutları sıfırlamak için çift tıklayın.
 - **Çevir** düğmesi ayrıca **Çeviriyi gizle**, **Başka bir dile çevir…** veya **Çeviriyi sil** seçeneklerini sunar.
+
+### Çeviriyi düzeltin ve zamanlamasını değiştirin
+
+Bir çeviri çoğu zaman orijinalden farklı bir zamanlamaya ihtiyaç duyar, ör. okunması daha uzun süren altyazılar. Çevirinin bir segmentine sağ tıklayarak:
+
+- **Metni düzenle…**: metnini değiştirin.
+- **Zamanlamayı düzenle…**: ne zaman başlayıp bittiğini milisaniye hassasiyetinde değiştirin. Zamanları `00:01:05,900`, `01:05,9` veya `65.9` biçiminde yazın.
+- **Sonrasına segment ekle…**: varsayılan olarak bir sonrakine kadarki boşluğu dolduran bir segment ekleyin.
+- **Segmenti sil**.
+
+### Kendiniz çevirin
+
+Çeviriyi kendiniz yazmak için **Sağlayıcı** olarak **Kendim, sıfırdan** seçeneğini seçin. API anahtarı gerekmez. Çeviri, transkripsiyonun zaman damgaları ve **Henüz çevrilmedi** olarak gösterilen boş segmentlerle başlar; panel kaç tane kaldığını gösterir. Birine sağ tıklayıp **Metni çevir…** seçeneğini seçin: iletişim kutusu o sırada söylenen orijinal metni gösterir.
+
+### Altyazılar ve dışa aktarma
+
+- Video transkripsiyonlarında, çeviriyi altyazı olarak göstermek için **Çevir** menüsünde **Videonun altyazısı olarak göster** seçeneğini işaretleyin. Videonun menüsü de bunları değiştirir. Bkz. [Videoları altyazılarıyla izleyin](/tr/guides/transcript/#videoları-altyazılarıyla-izleyin).
+- Çeviriyi dosya olarak kaydetmek için **Dışa aktar** menüsünde **Çeviri**yi seçin veya çevirinin dışa aktarma düğmesine tıklayın. Transkripsiyonla aynı [biçimlerde](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın), dosya adında diliyle (ör. `video.es.srt`) dışa aktarılır, böylece video oynatıcılar onu videoyla birlikte yükler. Henüz çevrilmemiş segmentler altyazılara dahil edilmez.
 
 :::tip
 Transkripsiyonu bir sağlayıcı olmadan doğrudan başka bir dilde almak için yazıya dökme sırasında da çeviri yapabilirsiniz. [Dil](/tr/guides/transcription-settings/#dil) bölümüne bakın.

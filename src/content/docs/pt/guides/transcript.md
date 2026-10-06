@@ -9,23 +9,25 @@ Selecione uma transcrição no [histórico](/pt/guides/history/) para abri-la. A
 
 ## Transcrição
 
-Mostra cada frase com o seu carimbo de tempo e, se os falantes foram identificados, o seu falante.
+Mostra cada segmento da transcrição (uma frase ou uma parte de uma frase longa) com quando começa e termina e, se os falantes foram identificados, o seu falante.
 
-Os carimbos de tempo só estão disponíveis com o **WhisperX** e com os modelos `whisper-1` e `gpt-4o-transcribe-diarize` da **API do Whisper**. Sem eles, a transcrição não pode ser reproduzida frase por frase; use o modo **Texto simples**.
+Por padrão, os tempos são simplificados (`01:05 – 01:09`). Para vê-los com precisão de milissegundos, como nas legendas (`00:01:05,900 – 00:01:09,350`), marque **Marcas de tempo precisas (00:00:01,000)** no menu `⋯`.
+
+Os carimbos de tempo só estão disponíveis com o **WhisperX** e com os modelos `whisper-1` e `gpt-4o-transcribe-diarize` da **API do Whisper**. Sem eles, a transcrição não pode ser reproduzida segmento por segmento; use o modo **Texto simples**.
 
 ### Reproduza o áudio
 
-- **Clique em uma frase** para reproduzir o áudio a partir dali. A frase em reprodução é destacada, e o texto acompanha a reprodução. Com os tempos por palavra, cada palavra também é destacada.
+- **Clique em um segmento** para reproduzir o áudio a partir dali. O segmento em reprodução é destacado, e o texto acompanha a reprodução. Com os tempos por palavra, cada palavra também é destacada.
 - Use a barra do player para reproduzir, pausar, ir para qualquer ponto e mudar a **velocidade**, de `0.5×` a `2×`, mantendo o tom das vozes.
 - Atalhos de teclado: `Espaço` reproduz ou pausa, e `←`/`→` voltam ou avançam 5 segundos.
 
 Se o arquivo de origem foi movido ou excluído, o áudio não está disponível, mas o texto está. As gravações do microfone são mantidas pelo Audiotext, então sempre podem ser reproduzidas.
 
-![Uma transcrição a ser reproduzida, com a frase atual realçada](/screenshots/transcript.png)
+![Uma transcrição a ser reproduzida, com o segmento atual realçado](/screenshots/transcript.png)
 
 ### Assista a vídeos com legendas
 
-As transcrições de vídeos mostram o vídeo acima do texto. O menu dele permite **Mostrar legendas no vídeo** e escolher o **Tamanho** (pequeno, médio ou grande), a **Posição** (embaixo ou em cima) e o **Estilo** (fundo escuro ou contorno).
+As transcrições de vídeos mostram o vídeo acima do texto. O menu dele permite **Mostrar legendas no vídeo** e escolher o **Tamanho** (pequeno, médio ou grande), a **Posição** (embaixo ou em cima) e o **Estilo** (fundo escuro ou contorno). Se a transcrição tiver uma [tradução](/pt/guides/summary-and-translation/#tradução), o menu também escolhe se as legendas mostram a **Transcrição** ou a **Tradução para…** o seu idioma.
 
 ### Pesquise
 
@@ -33,12 +35,12 @@ Pressione `Ctrl+F` (`⌘F` no macOS) e digite. `Enter` e `Shift+Enter` vão para
 
 ## Corrija a transcrição
 
-Para corrigir a transcrição sem perder os carimbos de tempo (usados pelas legendas e pela reprodução), use as opções do menu `⋯` ou clique com o botão direito em uma frase:
+Para corrigir a transcrição sem perder os carimbos de tempo (usados pelas legendas e pela reprodução), use as opções do menu `⋯` ou clique com o botão direito em um segmento:
 
 - **Localizar e substituir…**: substitui uma palavra ou expressão em toda a transcrição, ex.: um nome escrito errado. Mostra quantas vezes o texto aparece antes de substituí-lo, e pode **Diferenciar maiúsculas**.
 - **Renomear falantes…**: dá um nome a cada falante (`SPEAKER_00` → `Ana`). Dar o mesmo nome a dois falantes os mescla.
-- **Editar o texto…**: clique com o botão direito em uma frase para mudar o texto dela.
-- **Reproduzir daqui**: clique com o botão direito em uma frase para reproduzi-la.
+- **Editar o texto…**: clique com o botão direito em um segmento para mudar o texto dele.
+- **Reproduzir daqui**: clique com o botão direito em um segmento para reproduzi-lo.
 
 As palavras que não mudam mantêm os seus tempos, então continuam sendo destacadas durante a reprodução.
 
@@ -59,11 +61,13 @@ O modo **Texto simples** permite editar o texto livremente, como em um editor de
 | Documento do Word (`.docx`) | O mesmo que o Markdown, pronto para editar ou imprimir |
 | Legendas (`.srt`) | Legendas para players de vídeo |
 | Legendas web (`.vtt`) | Legendas para a web |
-| Tabela (`.tsv`) | Uma linha por frase, com o início e o fim (em milissegundos) e o texto |
+| Tabela (`.tsv`) | Uma linha por segmento, com o início e o fim (em milissegundos) e o texto |
 | JSON (`.json`) | O texto, os segmentos com os carimbos de tempo, as palavras e os falantes, e o resumo, se houver |
 
 As legendas e a tabela exigem carimbos de tempo.
 
+Se a transcrição tiver uma tradução, escolha **Tradução para…** no mesmo menu (ou clique no botão de exportar da tradução) para exportar a tradução nos mesmos formatos. O nome do arquivo inclui o idioma (ex.: `video.es.srt`), então os players de vídeo a carregam junto com o vídeo.
+
 ## Renomeie, marque e adicione notas
 
-O cabeçalho da transcrição mostra o nome, a origem, a data e a etiqueta. Clique duas vezes no nome para renomeá-la, clique na etiqueta para mudá-la ou clique em **Adicionar nota** para escrever uma nota sobre ela. Há mais opções no [histórico](/pt/guides/history/).
+O cabeçalho da transcrição mostra o nome, a origem, a data e a etiqueta. Clique duas vezes no nome para renomeá-la, clique na etiqueta para mudá-la ou clique em **Adicionar nota** para escrever uma nota sobre ela. Clique na nota, ou no lápis dela, para editá-la, e na lixeira para excluí-la. Há mais opções no [histórico](/pt/guides/history/).

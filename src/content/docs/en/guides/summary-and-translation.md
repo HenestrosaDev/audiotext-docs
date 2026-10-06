@@ -25,10 +25,28 @@ If the API key of the provider isn't set, the **Summary** mode offers to set it.
 
 Click **Translate**, choose the language in **Translate into** and the **Provider**, and confirm. The translation is shown in a panel on the right of the original text.
 
-- If the transcription has timestamps, each sentence is translated on its own, so the translation keeps them: it highlights the sentence being played, and clicking a sentence plays it.
+- If the transcription has timestamps, each segment is translated on its own, so the translation starts with the same timestamps: it highlights the segment being played, and clicking a segment plays it.
 - If you edited the plain text, the edited text is translated instead, without timestamps.
 - Drag the handle between both texts to resize them, or double-click it to reset their sizes.
 - The **Translate** button also lets you **Hide the translation**, **Translate into another language…** or **Delete the translation**.
+
+### Correct and retime the translation
+
+A translation often needs another timing than the original, e.g. subtitles that take longer to read. Right-click a segment of the translation to:
+
+- **Edit the text…**: change its text.
+- **Edit the timing…**: change when it starts and ends, to the millisecond. Type the times as `00:01:05,900`, `01:05,9` or `65.9`.
+- **Add a segment after…**: add a segment, which by default fills the gap until the next one.
+- **Delete the segment**.
+
+### Translate it yourself
+
+To write the translation yourself, choose **Myself, from scratch** as the **Provider**. It needs no API key. The translation starts with the timestamps of the transcription and empty segments, shown as **Not translated yet**, and the panel shows how many are left. Right-click one and choose **Translate the text…**: the dialog shows the original text said meanwhile.
+
+### Subtitles and export
+
+- In the transcriptions of videos, check **Show it as the subtitles of the video** in the **Translate** menu to show the translation as the subtitles. The menu of the video switches them too. See [Watch videos with subtitles](/en/guides/transcript/#watch-videos-with-subtitles).
+- To save the translation as a file, choose **Translation into…** in the **Export** menu, or click the export button of the translation. It's exported in the same [formats](/en/guides/transcript/#copy-and-export) as the transcription, with its language in the name of the file (e.g. `video.es.srt`), so the video players load it with the video. The segments not translated yet are left out of the subtitles.
 
 :::tip
 To get the transcription directly in another language, without a provider, you can also translate while transcribing. See [Language](/en/guides/transcription-settings/#language).

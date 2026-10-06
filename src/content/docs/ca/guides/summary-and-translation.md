@@ -25,10 +25,28 @@ Si la clau d'API del proveïdor no està configurada, el mode **Resum** ofereix 
 
 Fes clic a **Tradueix**, tria l'idioma a **Tradueix a** i el **Proveïdor**, i confirma. La traducció es mostra en un plafó a la dreta del text original.
 
-- Si la transcripció té marques de temps, cada frase es tradueix per separat, així que la traducció les conserva: ressalta la frase que es reprodueix, i en fer clic en una frase es reprodueix.
+- Si la transcripció té marques de temps, cada segment es tradueix per separat, així que la traducció comença amb les mateixes marques de temps: ressalta el segment que es reprodueix, i en fer clic en un segment es reprodueix.
 - Si has editat el text pla, es tradueix el text editat, sense marques de temps.
 - Arrossega el separador entre els dos textos per canviar-ne la mida, o fes-hi doble clic per restablir-la.
 - El botó **Tradueix** també et permet **Amagar la traducció**, **Traduir a un altre idioma…** o **Eliminar la traducció**.
+
+### Corregeix i ajusta els temps de la traducció
+
+Sovint una traducció necessita uns temps diferents dels de l'original, p. ex. subtítols que costen més de llegir. Fes clic amb el botó dret en un segment de la traducció per:
+
+- **Edita el text…**: canviar-ne el text.
+- **Edita els temps…**: canviar quan comença i acaba, amb precisió de mil·lisegons. Escriu els temps com a `00:01:05,900`, `01:05,9` o `65.9`.
+- **Afegeix un segment després…**: afegir un segment, que per defecte omple l'espai fins al següent.
+- **Elimina el segment**.
+
+### Tradueix-la tu mateix
+
+Per escriure la traducció tu mateix, tria **Jo mateix, des de zero** com a **Proveïdor**. No necessita cap clau d'API. La traducció comença amb les marques de temps de la transcripció i els segments buits, que es mostren com a **Encara no traduït**, i el panell mostra quants en queden. Fes clic amb el botó dret en un i tria **Tradueix el text…**: el diàleg mostra el text original que es diu en aquell moment.
+
+### Subtítols i exportació
+
+- A les transcripcions de vídeos, marca **Mostra-la com a subtítols del vídeo** al menú **Tradueix** per mostrar la traducció com a subtítols. El menú del vídeo també els canvia. Consulta [Mira vídeos amb subtítols](/ca/guides/transcript/#mira-vídeos-amb-subtítols).
+- Per desar la traducció com a fitxer, tria **Traducció a l'idioma…** al menú **Exporta** o fes clic al botó d'exportar de la traducció. S'exporta en els mateixos [formats](/ca/guides/transcript/#copia-i-exporta) que la transcripció, amb l'idioma al nom del fitxer (p. ex. `video.es.srt`), així els reproductors de vídeo la carreguen amb el vídeo. Els segments que encara no s'han traduït no s'inclouen als subtítols.
 
 :::tip
 Per obtenir la transcripció directament en un altre idioma, sense proveïdor, també pots traduir mentre transcrius. Consulta [Idioma](/ca/guides/transcription-settings/#idioma).

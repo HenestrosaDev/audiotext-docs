@@ -9,23 +9,25 @@ Välj en transkribering i [historiken](/sv/guides/history/) för att öppna den.
 
 ## Transkript
 
-Visar varje mening med dess tidsstämpel och, om talarna identifierades, dess talare.
+Visar varje segment av transkriberingen (en mening, eller en del av en lång mening) med när det börjar och slutar och, om talarna identifierades, dess talare.
 
-Tidsstämplar finns bara med **WhisperX** och med modellerna `whisper-1` och `gpt-4o-transcribe-diarize` i **Whisper-API:t**. Utan dem kan transkriptet inte spelas upp mening för mening; använd läget **Oformaterad text** i stället.
+Som standard visas tiderna förenklat (`01:05 – 01:09`). För att se dem på millisekunden, som i undertexterna (`00:01:05,900 – 00:01:09,350`), markerar du **Exakta tidsstämplar (00:00:01,000)** i menyn `⋯`.
+
+Tidsstämplar finns bara med **WhisperX** och med modellerna `whisper-1` och `gpt-4o-transcribe-diarize` i **Whisper-API:t**. Utan dem kan transkriptet inte spelas upp segment för segment; använd läget **Oformaterad text** i stället.
 
 ### Spela upp ljudet
 
-- **Klicka på en mening** för att spela upp ljudet därifrån. Meningen som spelas markeras, och texten följer uppspelningen. Med tider per ord markeras även varje ord.
+- **Klicka på ett segment** för att spela upp ljudet därifrån. Segmentet som spelas markeras, och texten följer uppspelningen. Med tider per ord markeras även varje ord.
 - Använd uppspelningsfältet för att spela upp, pausa, gå till valfri punkt och ändra **hastigheten**, från `0.5×` till `2×`, med bibehållen tonhöjd.
 - Kortkommandon: `Blanksteg` spelar upp eller pausar, och `←`/`→` går 5 sekunder bakåt eller framåt.
 
 Om källfilen har flyttats eller tagits bort är ljudet inte tillgängligt, men texten är det. Mikrofoninspelningar sparas av Audiotext, så de kan alltid spelas upp.
 
-![En transkription som spelas upp, med den aktuella meningen markerad](/screenshots/transcript.png)
+![En transkription som spelas upp, med det aktuella segmentet markerat](/screenshots/transcript.png)
 
 ### Se videor med undertexter
 
-Transkriberingar av videor visar videon ovanför texten. Dess meny låter dig **Visa undertexter på videon** och välja deras **Storlek** (liten, medel eller stor), **Position** (nederst eller överst) och **Stil** (mörk bakgrund eller kontur).
+Transkriberingar av videor visar videon ovanför texten. Dess meny låter dig **Visa undertexter på videon** och välja deras **Storlek** (liten, medel eller stor), **Position** (nederst eller överst) och **Stil** (mörk bakgrund eller kontur). Om transkriberingen har en [översättning](/sv/guides/summary-and-translation/#översättning) väljer menyn även om undertexterna visar **Transkribering** eller **Översättning till…** dess språk.
 
 ### Sök
 
@@ -33,12 +35,12 @@ Tryck `Ctrl+F` (`⌘F` på macOS) och skriv. `Enter` och `Skift+Enter` går till
 
 ## Korrigera transkriberingen
 
-För att korrigera transkriberingen och behålla tidsstämplarna (som undertexterna och uppspelningen använder) använder du alternativen i menyn `⋯`, eller högerklickar på en mening:
+För att korrigera transkriberingen och behålla tidsstämplarna (som undertexterna och uppspelningen använder) använder du alternativen i menyn `⋯`, eller högerklickar på ett segment:
 
 - **Sök och ersätt…**: ersätter ett ord eller en fras i hela transkriberingen, t.ex. ett felstavat namn. Visar hur många gånger texten förekommer innan den ersätts, och kan **Matcha skiftläge**.
 - **Byt namn på talare…**: ger varje talare ett namn (`SPEAKER_00` → `Anna`). Om två talare får samma namn slås de ihop.
-- **Redigera texten…**: högerklicka på en mening för att ändra dess text.
-- **Spela upp härifrån**: högerklicka på en mening för att spela upp den.
+- **Redigera texten…**: högerklicka på ett segment för att ändra dess text.
+- **Spela upp härifrån**: högerklicka på ett segment för att spela upp det.
 
 Ord som inte ändras behåller sina tider, så de markeras fortfarande under uppspelning.
 
@@ -59,11 +61,13 @@ Läget **Oformaterad text** låter dig redigera texten fritt, som i en textredig
 | Word-dokument (`.docx`) | Samma som Markdown, redo att redigera eller skriva ut |
 | Undertexter (`.srt`) | Undertexter för videospelare |
 | Webbundertexter (`.vtt`) | Undertexter för webben |
-| Tabell (`.tsv`) | En rad per mening, med start och slut (i millisekunder) och texten |
+| Tabell (`.tsv`) | En rad per segment, med start och slut (i millisekunder) och texten |
 | JSON (`.json`) | Texten, segmenten med tidsstämplar, ord och talare, och sammanfattningen, om den finns |
 
 Undertexterna och tabellen kräver tidsstämplar.
 
+Om transkriberingen har en översättning väljer du **Översättning till…** i samma meny (eller klickar på översättningens exportknapp) för att exportera översättningen i samma format. Filnamnet innehåller dess språk (t.ex. `video.es.srt`), så att videospelare läser in den med videon.
+
 ## Byt namn, etiketter och anteckningar
 
-Transkriberingens rubrik visar namn, källa, datum och etikett. Dubbelklicka på namnet för att byta namn, klicka på etiketten för att ändra den eller klicka på **Lägg till anteckning** för att skriva en anteckning. Fler alternativ finns i [historiken](/sv/guides/history/).
+Transkriberingens rubrik visar namn, källa, datum och etikett. Dubbelklicka på namnet för att byta namn, klicka på etiketten för att ändra den eller klicka på **Lägg till anteckning** för att skriva en anteckning. Klicka på anteckningen, eller dess penna, för att redigera den, och på dess papperskorg för att radera den. Fler alternativ finns i [historiken](/sv/guides/history/).

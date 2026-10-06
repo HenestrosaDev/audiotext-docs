@@ -25,10 +25,28 @@ Se la chiave API del fornitore non è impostata, la modalità **Riassunto** prop
 
 Fai clic su **Traduci**, scegli la lingua in **Traduci in** e il **Fornitore**, e conferma. La traduzione viene mostrata in un pannello a destra del testo originale.
 
-- Se la trascrizione ha marcatori temporali, ogni frase viene tradotta separatamente, quindi la traduzione li conserva: evidenzia la frase in riproduzione, e fare clic su una frase la riproduce.
+- Se la trascrizione ha marcatori temporali, ogni segmento viene tradotto separatamente, quindi la traduzione inizia con gli stessi marcatori temporali: evidenzia il segmento in riproduzione, e fare clic su un segmento lo riproduce.
 - Se hai modificato il testo semplice, viene tradotto il testo modificato, senza marcatori temporali.
 - Trascina il separatore tra i due testi per ridimensionarli, o fai doppio clic su di esso per ripristinarne le dimensioni.
 - Il pulsante **Traduci** permette anche di **Nascondere la traduzione**, **Tradurre in un'altra lingua…** o **Eliminare la traduzione**.
+
+### Correggi e cambia i tempi della traduzione
+
+Una traduzione richiede spesso tempi diversi dall'originale, ad es. sottotitoli che richiedono più tempo per essere letti. Fai clic con il tasto destro su un segmento della traduzione per:
+
+- **Modifica il testo…**: cambiarne il testo.
+- **Modifica i tempi…**: cambiare quando inizia e finisce, al millisecondo. Scrivi i tempi come `00:01:05,900`, `01:05,9` o `65.9`.
+- **Aggiungi un segmento dopo…**: aggiungere un segmento che, per impostazione predefinita, riempie lo spazio fino al successivo.
+- **Elimina il segmento**.
+
+### Traducila tu stesso
+
+Per scrivere la traduzione tu stesso, scegli **Io stesso, da zero** come **Fornitore**. Non serve una chiave API. La traduzione inizia con i marcatori temporali della trascrizione e segmenti vuoti, mostrati come **Non ancora tradotto**, e il pannello mostra quanti ne mancano. Fai clic con il tasto destro su uno e scegli **Traduci il testo…**: la finestra mostra il testo originale detto in quel momento.
+
+### Sottotitoli ed esportazione
+
+- Nelle trascrizioni dei video, seleziona **Mostrala come sottotitoli del video** nel menu **Traduci** per mostrare la traduzione come sottotitoli. Anche il menu del video li cambia. Vedi [Guarda i video con i sottotitoli](/it/guides/transcript/#guarda-i-video-con-i-sottotitoli).
+- Per salvare la traduzione in un file, scegli **Traduzione in…** nel menu **Esporta** o fai clic sul pulsante di esportazione della traduzione. Viene esportata negli stessi [formati](/it/guides/transcript/#copia-ed-esporta) della trascrizione, con la sua lingua nel nome del file (ad es. `video.es.srt`), così i lettori video la caricano insieme al video. I segmenti non ancora tradotti vengono esclusi dai sottotitoli.
 
 :::tip
 Per ottenere la trascrizione direttamente in un'altra lingua, senza fornitore, puoi anche tradurre durante la trascrizione. Consulta [Lingua](/it/guides/transcription-settings/#lingua).

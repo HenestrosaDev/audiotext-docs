@@ -25,10 +25,28 @@ Si la clé API du fournisseur n’est pas configurée, le mode **Résumé** prop
 
 Cliquez sur **Traduire**, choisissez la langue dans **Traduire en** et le **Fournisseur**, puis confirmez. La traduction s’affiche dans un panneau à droite du texte original.
 
-- Si la transcription comporte des horodatages, chaque phrase est traduite séparément : la traduction les conserve, surligne la phrase en cours de lecture, et cliquer sur une phrase la lit.
+- Si la transcription comporte des horodatages, chaque segment est traduit séparément : la traduction commence avec les mêmes horodatages, surligne le segment en cours de lecture, et cliquer sur un segment le lit.
 - Si vous avez modifié le texte brut, c’est le texte modifié qui est traduit, sans horodatage.
 - Faites glisser la poignée entre les deux textes pour les redimensionner, ou double-cliquez dessus pour rétablir leurs tailles.
 - Le bouton **Traduire** permet aussi de **Masquer la traduction**, de **Traduire dans une autre langue…** ou de **Supprimer la traduction**.
+
+### Corrigez et recalez la traduction
+
+Une traduction a souvent besoin d’un autre minutage que l’original, par ex. des sous-titres plus longs à lire. Faites un clic droit sur un segment de la traduction pour :
+
+- **Modifier le texte…** : changer son texte.
+- **Modifier le minutage…** : changer quand il commence et finit, à la milliseconde. Saisissez les temps sous la forme `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Ajouter un segment après…** : ajouter un segment qui, par défaut, remplit l’espace jusqu’au suivant.
+- **Supprimer le segment**.
+
+### Traduisez-la vous-même
+
+Pour écrire la traduction vous-même, choisissez **Moi-même, à partir de zéro** comme **Fournisseur**. Aucune clé API n’est nécessaire. La traduction commence avec les horodatages de la transcription et des segments vides, affichés comme **Pas encore traduit**, et le panneau indique combien il en reste. Faites un clic droit sur l’un d’eux et choisissez **Traduire le texte…** : la boîte de dialogue montre le texte original dit pendant ce temps.
+
+### Sous-titres et export
+
+- Pour les transcriptions de vidéos, cochez **L’afficher comme sous-titres de la vidéo** dans le menu **Traduire** pour afficher la traduction en sous-titres. Le menu de la vidéo permet aussi de les changer. Voir [Regardez les vidéos avec sous-titres](/fr/guides/transcript/#regardez-les-vidéos-avec-sous-titres).
+- Pour enregistrer la traduction dans un fichier, choisissez **Traduction** dans le menu **Exporter** ou cliquez sur le bouton d’export de la traduction. Elle est exportée dans les mêmes [formats](/fr/guides/transcript/#copiez-et-exportez) que la transcription, avec sa langue dans le nom du fichier (par ex. `video.es.srt`), si bien que les lecteurs vidéo la chargent avec la vidéo. Les segments pas encore traduits sont omis des sous-titres.
 
 :::tip
 Pour obtenir directement la transcription dans une autre langue, sans fournisseur, vous pouvez aussi traduire pendant la transcription. Consultez [Langue](/fr/guides/transcription-settings/#langue).

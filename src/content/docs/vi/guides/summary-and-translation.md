@@ -25,10 +25,28 @@ Nếu chưa đặt khóa API của nhà cung cấp, chế độ **Bản tóm t�
 
 Nhấp **Dịch**, chọn ngôn ngữ ở **Dịch sang** và **Nhà cung cấp**, rồi xác nhận. Bản dịch hiển thị trong một bảng bên phải văn bản gốc.
 
-- Nếu bản chép lời có dấu thời gian, mỗi câu được dịch riêng, nên bản dịch giữ được dấu thời gian: câu đang phát được đánh dấu, và nhấp vào một câu sẽ phát câu đó.
+- Nếu bản chép lời có dấu thời gian, mỗi đoạn được dịch riêng, nên bản dịch bắt đầu với cùng dấu thời gian: đoạn đang phát được đánh dấu, và nhấp vào một đoạn sẽ phát đoạn đó.
 - Nếu bạn đã chỉnh sửa văn bản thuần, văn bản đã chỉnh sửa sẽ được dịch, không có dấu thời gian.
 - Kéo tay nắm giữa hai văn bản để đổi kích thước, hoặc nhấp đúp vào đó để đặt lại.
 - Nút **Dịch** cũng cho phép **Ẩn bản dịch**, **Dịch sang ngôn ngữ khác…** hoặc **Xóa bản dịch**.
+
+### Sửa và căn lại thời gian bản dịch
+
+Bản dịch thường cần thời gian khác với bản gốc, ví dụ phụ đề cần đọc lâu hơn. Nhấp chuột phải vào một đoạn của bản dịch để:
+
+- **Chỉnh sửa văn bản…**: đổi nội dung.
+- **Chỉnh sửa thời gian…**: đổi thời điểm bắt đầu và kết thúc, chính xác đến mili giây. Nhập thời gian dạng `00:01:05,900`, `01:05,9` hoặc `65.9`.
+- **Thêm một đoạn phía sau…**: thêm một đoạn, theo mặc định lấp khoảng trống đến đoạn tiếp theo.
+- **Xóa đoạn**.
+
+### Tự dịch
+
+Để tự viết bản dịch, hãy chọn **Tự dịch từ đầu** làm **Nhà cung cấp**. Không cần khóa API. Bản dịch bắt đầu với dấu thời gian của bản chép lời và các đoạn trống, hiển thị là **Chưa được dịch**, và bảng cho biết còn bao nhiêu đoạn. Nhấp chuột phải vào một đoạn và chọn **Dịch văn bản…**: hộp thoại hiển thị văn bản gốc được nói trong khoảng đó.
+
+### Phụ đề và xuất tệp
+
+- Với bản chép lời của video, chọn **Hiển thị làm phụ đề của video** trong menu **Dịch** để hiển thị bản dịch làm phụ đề. Menu của video cũng chuyển được. Xem [Xem video có phụ đề](/vi/guides/transcript/#xem-video-có-phụ-đề).
+- Để lưu bản dịch thành tệp, chọn **Bản dịch sang…** trong menu **Xuất**, hoặc nhấp nút xuất của bản dịch. Bản dịch được xuất theo cùng các [định dạng](/vi/guides/transcript/#sao-chép-và-xuất) như bản chép lời, có ngôn ngữ trong tên tệp (ví dụ `video.es.srt`), nên trình phát video sẽ tải nó cùng video. Các đoạn chưa được dịch sẽ bị bỏ khỏi phụ đề.
 
 :::tip
 Để có bản chép lời trực tiếp bằng ngôn ngữ khác mà không cần nhà cung cấp, bạn cũng có thể dịch trong khi chép lời. Xem [Ngôn ngữ](/vi/guides/transcription-settings/#ngôn-ngữ).

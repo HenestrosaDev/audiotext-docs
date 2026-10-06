@@ -25,10 +25,28 @@ Se a clave de API do provedor non está configurada, o modo **Resumo** ofrece co
 
 Fai clic en **Traducir**, escolle o idioma en **Traducir ao** e o **Provedor**, e confirma. A tradución móstrase nun panel á dereita do texto orixinal.
 
-- Se a transcrición ten marcas de tempo, cada frase tradúcese por separado, así que a tradución consérvaas: resalta a frase que se reproduce, e ao facer clic nunha frase reprodúcese.
+- Se a transcrición ten marcas de tempo, cada segmento tradúcese por separado, así que a tradución comeza coas mesmas marcas de tempo: resalta o segmento que se reproduce, e ao facer clic nun segmento reprodúcese.
 - Se editaches o texto plano, tradúcese o texto editado, sen marcas de tempo.
 - Arrastra o separador entre os dous textos para cambiar o seu tamaño, ou fai dobre clic nel para restablecelo.
 - O botón **Traducir** tamén che permite **Ocultar a tradución**, **Traducir a outro idioma…** ou **Eliminar a tradución**.
+
+### Corrixe e axusta os tempos da tradución
+
+Unha tradución adoita precisar outros tempos ca o orixinal, p. ex. subtítulos que levan máis tempo ler. Fai clic dereito nun segmento da tradución para:
+
+- **Editar o texto…**: cambiar o seu texto.
+- **Editar os tempos…**: cambiar cando comeza e remata, ao milisegundo. Escribe os tempos como `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Engadir un segmento despois…**: engadir un segmento, que por defecto ocupa o oco ata o seguinte.
+- **Eliminar o segmento**.
+
+### Tradúcea ti mesmo
+
+Para escribir a tradución ti mesmo, escolle **Eu mesmo, desde cero** como **Provedor**. Non precisa clave de API. A tradución comeza coas marcas de tempo da transcrición e os segmentos baleiros, que se mostran como **Aínda sen traducir**, e o panel mostra cantos quedan. Fai clic dereito nun e escolle **Traducir o texto…**: o diálogo mostra o texto orixinal que se di mentres tanto.
+
+### Subtítulos e exportación
+
+- Nas transcricións de vídeos, marca **Mostrala como subtítulos do vídeo** no menú **Traducir** para mostrar a tradución como subtítulos. O menú do vídeo tamén os cambia. Consulta [Mira vídeos con subtítulos](/gl/guides/transcript/#mira-vídeos-con-subtítulos).
+- Para gardar a tradución como ficheiro, escolle **Tradución ao idioma…** no menú **Exportar** ou fai clic no botón de exportar da tradución. Expórtase nos mesmos [formatos](/gl/guides/transcript/#copia-e-exporta) ca a transcrición, co seu idioma no nome do ficheiro (p. ex. `video.es.srt`), así que os reprodutores de vídeo cárgana co vídeo. Os segmentos aínda sen traducir non se inclúen nos subtítulos.
 
 :::tip
 Para obter a transcrición directamente noutro idioma, sen provedor, tamén podes traducir mentres transcribes. Consulta [Idioma](/gl/guides/transcription-settings/#idioma).

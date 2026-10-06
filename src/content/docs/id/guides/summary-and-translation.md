@@ -25,10 +25,28 @@ Jika kunci API penyedia belum diatur, mode **Ringkasan** menawarkan untuk mengat
 
 Klik **Terjemahkan**, pilih bahasa di **Terjemahkan ke** dan **Penyedia**, lalu konfirmasi. Terjemahan ditampilkan di panel di sebelah kanan teks asli.
 
-- Jika transkripsi memiliki stempel waktu, setiap kalimat diterjemahkan tersendiri, sehingga terjemahan mempertahankannya: kalimat yang diputar disorot, dan mengklik kalimat akan memutarnya.
+- Jika transkripsi memiliki stempel waktu, setiap segmen diterjemahkan tersendiri, sehingga terjemahan dimulai dengan stempel waktu yang sama: segmen yang diputar disorot, dan mengklik segmen akan memutarnya.
 - Jika Anda telah mengedit teks biasa, yang diterjemahkan adalah teks yang sudah diedit, tanpa stempel waktu.
 - Seret pegangan di antara kedua teks untuk mengubah ukurannya, atau klik dua kali untuk mengembalikan ukurannya.
 - Tombol **Terjemahkan** juga memungkinkan Anda **Sembunyikan terjemahan**, **Terjemahkan ke bahasa lain…**, atau **Hapus terjemahan**.
+
+### Koreksi dan atur ulang waktu terjemahan
+
+Terjemahan sering kali memerlukan waktu yang berbeda dari aslinya, mis. subtitle yang lebih lama dibaca. Klik kanan segmen terjemahan untuk:
+
+- **Edit teks…**: mengubah teksnya.
+- **Edit waktu…**: mengubah kapan segmen dimulai dan berakhir, hingga milidetik. Ketik waktunya sebagai `00:01:05,900`, `01:05,9`, atau `65.9`.
+- **Tambahkan segmen sesudahnya…**: menambahkan segmen, yang secara bawaan mengisi jeda hingga segmen berikutnya.
+- **Hapus segmen**.
+
+### Terjemahkan sendiri
+
+Untuk menulis terjemahan sendiri, pilih **Sendiri, dari awal** sebagai **Penyedia**. Tidak memerlukan kunci API. Terjemahan dimulai dengan stempel waktu transkripsi dan segmen kosong, yang ditampilkan sebagai **Belum diterjemahkan**, dan panel menampilkan berapa yang tersisa. Klik kanan salah satunya dan pilih **Terjemahkan teks…**: dialog menampilkan teks asli yang diucapkan pada saat itu.
+
+### Subtitle dan ekspor
+
+- Pada transkripsi video, centang **Tampilkan sebagai subtitle video** di menu **Terjemahkan** untuk menampilkan terjemahan sebagai subtitle. Menu video juga dapat menggantinya. Lihat [Tonton video dengan subtitle](/id/guides/transcript/#tonton-video-dengan-subtitle).
+- Untuk menyimpan terjemahan sebagai file, pilih **Terjemahan** di menu **Ekspor**, atau klik tombol ekspor terjemahan. Terjemahan diekspor dalam [format](/id/guides/transcript/#salin-dan-ekspor) yang sama dengan transkripsi, dengan bahasanya di nama file (mis. `video.es.srt`), sehingga pemutar video memuatnya bersama video. Segmen yang belum diterjemahkan tidak disertakan dalam subtitle.
 
 :::tip
 Untuk mendapatkan transkripsi langsung dalam bahasa lain tanpa penyedia, Anda juga dapat menerjemahkan saat mentranskripsi. Lihat [Bahasa](/id/guides/transcription-settings/#bahasa).

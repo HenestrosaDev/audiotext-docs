@@ -25,10 +25,28 @@ Pokud není nastaven klíč API poskytovatele, režim **Shrnutí** nabídne jeho
 
 Klikněte na **Přeložit**, vyberte jazyk v poli **Přeložit do** a **Poskytovatele** a potvrďte. Překlad se zobrazí v panelu vpravo od původního textu.
 
-- Pokud má přepis časové značky, každá věta se přeloží zvlášť, takže je překlad zachová: zvýrazňuje přehrávanou větu a kliknutím na větu ji přehrajete.
+- Pokud má přepis časové značky, každý segment se přeloží zvlášť, takže překlad začíná se stejnými časovými značkami: zvýrazňuje přehrávaný segment a kliknutím na segment ho přehrajete.
 - Pokud jste upravili prostý text, přeloží se upravený text, bez časových značek.
 - Přetažením úchytu mezi texty změníte jejich velikost, dvojitým kliknutím na něj velikosti obnovíte.
 - Tlačítko **Přeložit** také umožňuje **Skrýt překlad**, **Přeložit do jiného jazyka…** nebo **Smazat překlad**.
+
+### Oprava a časování překladu
+
+Překlad často potřebuje jiné časování než originál, např. titulky, jejichž čtení trvá déle. Klikněte pravým tlačítkem na segment překladu a zvolte:
+
+- **Upravit text…**: změní jeho text.
+- **Upravit časování…**: změní jeho začátek a konec s přesností na milisekundy. Zadejte časy jako `00:01:05,900`, `01:05,9` nebo `65.9`.
+- **Přidat segment za…**: přidá segment, který ve výchozím nastavení vyplní mezeru do dalšího.
+- **Smazat segment**.
+
+### Vlastní překlad
+
+Chcete-li překlad napsat sami, zvolte jako **Poskytovatele** možnost **Sám, od začátku**. Nepotřebuje žádný klíč API. Překlad začíná s časovými značkami přepisu a prázdnými segmenty označenými **Zatím nepřeloženo** a panel ukazuje, kolik jich zbývá. Klikněte na některý pravým tlačítkem a zvolte **Přeložit text…**: dialog zobrazí původní text řečený v tu dobu.
+
+### Titulky a export
+
+- U přepisů videí zaškrtněte v nabídce **Přeložit** možnost **Zobrazit ho jako titulky videa** a překlad se zobrazí jako titulky. Přepnout je lze i v nabídce videa. Viz [Sledování videí s titulky](/cs/guides/transcript/#sledování-videí-s-titulky).
+- Chcete-li překlad uložit jako soubor, zvolte v nabídce **Exportovat** možnost **Překlad** nebo klikněte na tlačítko exportu překladu. Exportuje se ve stejných [formátech](/cs/guides/transcript/#kopírování-a-export) jako přepis, s jazykem v názvu souboru (např. `video.es.srt`), takže ho přehrávače videa načtou spolu s videem. Segmenty, které ještě nejsou přeložené, se do titulků nezahrnou.
 
 :::tip
 Chcete-li přepis rovnou v jiném jazyce bez poskytovatele, můžete překládat i během přepisu. Viz [Jazyk](/cs/guides/transcription-settings/#jazyk).

@@ -25,10 +25,28 @@ Dacă cheia API a furnizorului nu este setată, modul **Rezumat** oferă să o s
 
 Faceți clic pe **Tradu**, alegeți limba în **Tradu în** și **Furnizorul**, apoi confirmați. Traducerea apare într-un panou în dreapta textului original.
 
-- Dacă transcrierea are marcaje de timp, fiecare propoziție este tradusă separat, deci traducerea le păstrează: evidențiază propoziția redată, iar un clic pe o propoziție o redă.
+- Dacă transcrierea are marcaje de timp, fiecare segment este tradus separat, deci traducerea începe cu aceleași marcaje de timp: evidențiază segmentul redat, iar un clic pe un segment îl redă.
 - Dacă ați editat textul simplu, se traduce textul editat, fără marcaje de timp.
 - Trageți mânerul dintre texte pentru a le redimensiona sau faceți dublu clic pe el pentru a reveni la dimensiunile inițiale.
 - Butonul **Tradu** permite și **Ascunde traducerea**, **Tradu în altă limbă…** sau **Șterge traducerea**.
+
+### Corectați și retemporizați traducerea
+
+O traducere are adesea nevoie de altă temporizare decât originalul, de ex. subtitrări care se citesc mai greu. Faceți clic dreapta pe un segment al traducerii pentru:
+
+- **Editează textul…**: a-i schimba textul.
+- **Editează temporizarea…**: a schimba când începe și se termină, la milisecundă. Scrieți timpii ca `00:01:05,900`, `01:05,9` sau `65.9`.
+- **Adaugă un segment după…**: a adăuga un segment, care implicit umple pauza până la următorul.
+- **Șterge segmentul**.
+
+### Traduceți-o singur
+
+Pentru a scrie singur traducerea, alegeți **Eu însumi, de la zero** ca **Furnizor**. Nu are nevoie de o cheie API. Traducerea începe cu marcajele de timp ale transcrierii și segmente goale, afișate ca **Netradus încă**, iar panoul arată câte au mai rămas. Faceți clic dreapta pe unul și alegeți **Tradu textul…**: dialogul arată textul original spus în acel interval.
+
+### Subtitrări și export
+
+- În transcrierile videoclipurilor, bifați **Afișeaz-o ca subtitrări ale videoclipului** în meniul **Tradu** pentru a afișa traducerea ca subtitrări. Meniul videoclipului le schimbă și el. Consultați [Urmăriți videoclipuri cu subtitrări](/ro/guides/transcript/#urmăriți-videoclipuri-cu-subtitrări).
+- Pentru a salva traducerea într-un fișier, alegeți **Traducere în limba…** în meniul **Exportă** sau faceți clic pe butonul de export al traducerii. Se exportă în aceleași [formate](/ro/guides/transcript/#copiați-și-exportați) ca transcrierea, cu limba ei în numele fișierului (de ex. `video.es.srt`), astfel încât playerele video o încarcă împreună cu videoclipul. Segmentele netraduse încă sunt omise din subtitrări.
 
 :::tip
 Pentru a obține transcrierea direct în altă limbă, fără furnizor, puteți traduce și în timpul transcrierii. Consultați [Limbă](/ro/guides/transcription-settings/#limbă).

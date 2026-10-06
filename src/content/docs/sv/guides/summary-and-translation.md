@@ -25,10 +25,28 @@ Om leverantörens API-nyckel inte är angiven erbjuder läget **Sammanfattning**
 
 Klicka på **Översätt**, välj språk under **Översätt till** och **Leverantör**, och bekräfta. Översättningen visas i en panel till höger om originaltexten.
 
-- Om transkriberingen har tidsstämplar översätts varje mening för sig, så översättningen behåller dem: den markerar meningen som spelas upp, och ett klick på en mening spelar upp den.
+- Om transkriberingen har tidsstämplar översätts varje segment för sig, så översättningen börjar med samma tidsstämplar: den markerar segmentet som spelas upp, och ett klick på ett segment spelar upp det.
 - Om du har redigerat den oformaterade texten översätts den redigerade texten i stället, utan tidsstämplar.
 - Dra i handtaget mellan texterna för att ändra deras storlek, eller dubbelklicka på det för att återställa storlekarna.
 - Med knappen **Översätt** kan du också **Dölj översättningen**, **Översätt till ett annat språk…** eller **Ta bort översättningen**.
+
+### Korrigera och tajma om översättningen
+
+En översättning behöver ofta andra tider än originalet, t.ex. undertexter som tar längre tid att läsa. Högerklicka på ett segment i översättningen för att:
+
+- **Redigera texten…**: ändra dess text.
+- **Redigera tiderna…**: ändra när det börjar och slutar, på millisekunden. Skriv tiderna som `00:01:05,900`, `01:05,9` eller `65.9`.
+- **Lägg till ett segment efter…**: lägga till ett segment, som som standard fyller luckan fram till nästa.
+- **Radera segmentet**.
+
+### Översätt själv
+
+För att skriva översättningen själv väljer du **Själv, från grunden** som **Leverantör**. Ingen API-nyckel behövs. Översättningen börjar med transkriberingens tidsstämplar och tomma segment, som visas som **Inte översatt ännu**, och panelen visar hur många som är kvar. Högerklicka på ett och välj **Översätt texten…**: dialogrutan visar originaltexten som sägs under tiden.
+
+### Undertexter och export
+
+- I transkriberingar av videor markerar du **Visa den som videons undertexter** i menyn **Översätt** för att visa översättningen som undertexter. Videons meny växlar dem också. Se [Se videor med undertexter](/sv/guides/transcript/#se-videor-med-undertexter).
+- För att spara översättningen som en fil väljer du **Översättning till…** i menyn **Exportera**, eller klickar på översättningens exportknapp. Den exporteras i samma [format](/sv/guides/transcript/#kopiera-och-exportera) som transkriberingen, med språket i filnamnet (t.ex. `video.es.srt`), så att videospelare läser in den med videon. Segment som inte är översatta ännu utelämnas ur undertexterna.
 
 :::tip
 För att få transkriberingen direkt på ett annat språk, utan leverantör, kan du också översätta under transkriberingen. Se [Språk](/sv/guides/transcription-settings/#språk).

@@ -9,23 +9,25 @@ Chọn một bản chép lời trong [lịch sử](/vi/guides/history/) để m�
 
 ## Chế độ bản ghi lời
 
-Hiển thị từng câu kèm dấu thời gian và, nếu đã nhận diện người nói, người nói của câu đó.
+Hiển thị từng đoạn của bản chép lời (một câu, hoặc một phần của câu dài) kèm thời điểm bắt đầu và kết thúc và, nếu đã nhận diện người nói, người nói của đoạn đó.
 
-Dấu thời gian chỉ có với **WhisperX** và các mô hình `whisper-1` và `gpt-4o-transcribe-diarize` của **Whisper API**. Không có dấu thời gian, bản ghi lời không thể phát theo từng câu; hãy dùng chế độ **Văn bản thuần**.
+Theo mặc định, thời gian được hiển thị rút gọn (`01:05 – 01:09`). Để xem chính xác đến mili giây như trong phụ đề (`00:01:05,900 – 00:01:09,350`), hãy chọn **Dấu thời gian chính xác (00:00:01,000)** trong menu `⋯`.
+
+Dấu thời gian chỉ có với **WhisperX** và các mô hình `whisper-1` và `gpt-4o-transcribe-diarize` của **Whisper API**. Không có dấu thời gian, bản ghi lời không thể phát theo từng đoạn; hãy dùng chế độ **Văn bản thuần**.
 
 ### Phát âm thanh
 
-- **Nhấp vào một câu** để phát âm thanh từ đó. Câu đang phát được đánh dấu, và văn bản cuộn theo khi phát. Với thời gian theo từng từ, mỗi từ cũng được đánh dấu.
+- **Nhấp vào một đoạn** để phát âm thanh từ đó. Đoạn đang phát được đánh dấu, và văn bản cuộn theo khi phát. Với thời gian theo từng từ, mỗi từ cũng được đánh dấu.
 - Dùng thanh trình phát để phát, tạm dừng, chuyển đến bất kỳ vị trí nào và đổi **tốc độ**, từ `0.5×` đến `2×`, mà vẫn giữ cao độ giọng nói.
 - Phím tắt: `Phím cách` phát hoặc tạm dừng, `←`/`→` lùi hoặc tiến 5 giây.
 
 Nếu tệp nguồn đã bị di chuyển hoặc xóa, âm thanh sẽ không khả dụng nhưng văn bản vẫn còn. Audiotext tự lưu các bản ghi âm từ micrô, nên luôn có thể phát lại.
 
-![Một bản chép lời đang phát, với câu hiện tại được tô sáng](/screenshots/transcript.png)
+![Một bản chép lời đang phát, với đoạn hiện tại được tô sáng](/screenshots/transcript.png)
 
 ### Xem video có phụ đề
 
-Bản chép lời của video hiển thị video phía trên văn bản. Menu của video cho phép **Hiển thị phụ đề trên video** và chọn **Kích thước** (nhỏ, vừa hoặc lớn), **Vị trí** (dưới hoặc trên) và **Kiểu** (nền tối hoặc viền chữ).
+Bản chép lời của video hiển thị video phía trên văn bản. Menu của video cho phép **Hiển thị phụ đề trên video** và chọn **Kích thước** (nhỏ, vừa hoặc lớn), **Vị trí** (dưới hoặc trên) và **Kiểu** (nền tối hoặc viền chữ). Nếu bản chép lời có [bản dịch](/vi/guides/summary-and-translation/#bản-dịch), menu cũng cho chọn phụ đề hiển thị **Chép lời** hay **Bản dịch**.
 
 ### Tìm kiếm
 
@@ -33,12 +35,12 @@ Nhấn `Ctrl+F` (`⌘F` trên macOS) và gõ. `Enter` và `Shift+Enter` chuyển
 
 ## Sửa bản chép lời
 
-Để sửa bản chép lời mà vẫn giữ dấu thời gian (được phụ đề và trình phát sử dụng), hãy dùng các tùy chọn trong menu `⋯`, hoặc nhấp chuột phải vào một câu:
+Để sửa bản chép lời mà vẫn giữ dấu thời gian (được phụ đề và trình phát sử dụng), hãy dùng các tùy chọn trong menu `⋯`, hoặc nhấp chuột phải vào một đoạn:
 
 - **Tìm và thay thế…**: thay một từ hoặc cụm từ trong toàn bộ bản chép lời, ví dụ một cái tên bị viết sai. Cho biết văn bản xuất hiện bao nhiêu lần trước khi thay, và có thể **Phân biệt hoa thường**.
 - **Đổi tên người nói…**: đặt tên cho từng người nói (`SPEAKER_00` → `Lan`). Đặt cùng một tên cho hai người nói sẽ gộp họ lại.
-- **Chỉnh sửa văn bản…**: nhấp chuột phải vào một câu để đổi nội dung.
-- **Phát từ đây**: nhấp chuột phải vào một câu để phát câu đó.
+- **Chỉnh sửa văn bản…**: nhấp chuột phải vào một đoạn để đổi nội dung.
+- **Phát từ đây**: nhấp chuột phải vào một đoạn để phát đoạn đó.
 
 Các từ không thay đổi giữ nguyên thời gian, nên vẫn được đánh dấu khi phát.
 
@@ -59,11 +61,13 @@ Chế độ **Văn bản thuần** cho phép chỉnh sửa văn bản tự do, n
 | Tài liệu Word (`.docx`) | Giống Markdown, sẵn sàng để chỉnh sửa hoặc in |
 | Phụ đề (`.srt`) | Phụ đề cho trình phát video |
 | Phụ đề web (`.vtt`) | Phụ đề cho web |
-| Bảng (`.tsv`) | Mỗi câu một dòng, với thời điểm bắt đầu và kết thúc (tính bằng mili giây) và văn bản |
+| Bảng (`.tsv`) | Mỗi đoạn một dòng, với thời điểm bắt đầu và kết thúc (tính bằng mili giây) và văn bản |
 | JSON (`.json`) | Văn bản, các đoạn kèm dấu thời gian, từ và người nói, và bản tóm tắt (nếu có) |
 
 Phụ đề và bảng cần có dấu thời gian.
 
+Nếu bản chép lời có bản dịch, hãy chọn **Bản dịch sang…** trong cùng menu (hoặc nhấp nút xuất của bản dịch) để xuất bản dịch theo cùng các định dạng. Tên tệp có chứa ngôn ngữ (ví dụ `video.es.srt`), nên trình phát video sẽ tải nó cùng video.
+
 ## Đổi tên, gắn nhãn và ghi chú
 
-Phần đầu của bản chép lời hiển thị tên, nguồn, ngày và nhãn. Nhấp đúp vào tên để đổi tên, nhấp vào nhãn để thay đổi, hoặc nhấp **Thêm ghi chú** để viết ghi chú. Các tùy chọn khác nằm trong [lịch sử](/vi/guides/history/).
+Phần đầu của bản chép lời hiển thị tên, nguồn, ngày và nhãn. Nhấp đúp vào tên để đổi tên, nhấp vào nhãn để thay đổi, hoặc nhấp **Thêm ghi chú** để viết ghi chú. Nhấp vào ghi chú, hoặc biểu tượng bút chì, để sửa, và biểu tượng thùng rác để xóa. Các tùy chọn khác nằm trong [lịch sử](/vi/guides/history/).
