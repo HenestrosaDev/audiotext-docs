@@ -60,4 +60,4 @@ Variabel lingkungan dengan nama kunci tersebut lebih diutamakan daripada yang di
 
 ## Model
 
-Model WhisperX dan model identifikasi pembicara diunduh saat pertama kali digunakan dan disimpan dalam cache oleh Hugging Face di `~/.cache/huggingface` (atau `%USERPROFILE%\.cache\huggingface` di Windows). Hapus folder tersebut untuk mengosongkan ruang yang digunakannya.
+Model WhisperX dan identifikasi pembicara diunduh saat pertama kali digunakan dan di-cache oleh Hugging Face di `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` di Windows). Model yang menyelaraskan kata-kata bahasa Inggris, Prancis, Jerman, Spanyol, dan Italia di-cache oleh PyTorch di `~/.cache/torch` (`%USERPROFILE%\.cache\torch` di Windows). Hapus folder-folder tersebut untuk mengosongkan ruang yang dipakainya. Aplikasi lain juga dapat menyimpan modelnya di sana, dan mengunduhnya lagi saat dibutuhkan, seperti Audiotext.

@@ -60,4 +60,4 @@ Environment variables with the names of the keys take precedence over the ones s
 
 ## Models
 
-The models of WhisperX and of the speaker identification are downloaded the first time they're used and cached by Hugging Face in `~/.cache/huggingface` (or `%USERPROFILE%\.cache\huggingface` on Windows). Delete that folder to free the space they take.
+The models of WhisperX and of the speaker identification are downloaded the first time they're used and cached by Hugging Face in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` on Windows). The models that align the words of English, French, German, Spanish and Italian are cached by PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` on Windows). Delete those folders to free the space they take. Other apps may keep their models there too, and download them again when they need them, like Audiotext.

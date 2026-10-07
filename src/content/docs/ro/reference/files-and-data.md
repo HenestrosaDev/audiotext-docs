@@ -60,4 +60,4 @@ Variabilele de mediu cu numele cheilor au prioritate față de cele setate în a
 
 ## Modele
 
-Modelele WhisperX și ale identificării vorbitorilor sunt descărcate la prima utilizare și păstrate în cache de Hugging Face în `~/.cache/huggingface` (sau `%USERPROFILE%\.cache\huggingface` pe Windows). Ștergeți acel dosar pentru a elibera spațiul ocupat.
+Modelele WhisperX și de identificare a vorbitorilor se descarcă la prima utilizare și sunt păstrate în cache de Hugging Face în `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` pe Windows). Modelele care aliniază cuvintele din engleză, franceză, germană, spaniolă și italiană sunt păstrate de PyTorch în `~/.cache/torch` (`%USERPROFILE%\.cache\torch` pe Windows). Ștergeți aceste dosare pentru a elibera spațiul pe care îl ocupă. Și alte aplicații își pot păstra modelele acolo și le descarcă din nou când au nevoie de ele, ca Audiotext.

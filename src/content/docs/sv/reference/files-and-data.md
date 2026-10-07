@@ -60,4 +60,4 @@ Miljövariabler med nycklarnas namn har företräde framför de som angetts i ap
 
 ## Modeller
 
-Modellerna för WhisperX och talaridentifieringen laddas ner första gången de används och cachas av Hugging Face i `~/.cache/huggingface` (eller `%USERPROFILE%\.cache\huggingface` på Windows). Ta bort mappen för att frigöra utrymmet de tar.
+Modellerna för WhisperX och talaridentifieringen laddas ned första gången de används och cachelagras av Hugging Face i `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` i Windows). Modellerna som justerar orden på engelska, franska, tyska, spanska och italienska cachelagras av PyTorch i `~/.cache/torch` (`%USERPROFILE%\.cache\torch` i Windows). Ta bort de mapparna för att frigöra utrymmet de tar. Andra appar kan också ha sina modeller där, och laddar ned dem igen när de behövs, precis som Audiotext.

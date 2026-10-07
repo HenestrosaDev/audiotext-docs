@@ -60,4 +60,4 @@ Anahtarların adlarını taşıyan ortam değişkenleri, uygulamada ayarlananlar
 
 ## Modeller
 
-WhisperX ve konuşmacı belirleme modelleri ilk kullanımda indirilir ve Hugging Face tarafından `~/.cache/huggingface` (Windows'ta `%USERPROFILE%\.cache\huggingface`) içinde önbelleğe alınır. Kapladıkları alanı boşaltmak için bu klasörü silin.
+WhisperX ve konuşmacı belirleme modelleri ilk kullanıldıklarında indirilir ve Hugging Face tarafından `~/.cache/huggingface` içinde önbelleğe alınır (Windows'ta `%USERPROFILE%\.cache\huggingface`). İngilizce, Fransızca, Almanca, İspanyolca ve İtalyanca kelimeleri hizalayan modeller ise PyTorch tarafından `~/.cache/torch` içinde önbelleğe alınır (Windows'ta `%USERPROFILE%\.cache\torch`). Kapladıkları alanı boşaltmak için bu klasörleri silin. Başka uygulamalar da modellerini orada tutabilir ve Audiotext gibi gerektiğinde yeniden indirir.

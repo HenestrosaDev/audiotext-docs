@@ -60,4 +60,4 @@ Biến môi trường mang tên các khóa được ưu tiên hơn khóa đặt 
 
 ## Mô hình
 
-Mô hình của WhisperX và của tính năng nhận diện người nói được tải xuống lần đầu khi sử dụng và được Hugging Face lưu đệm trong `~/.cache/huggingface` (hoặc `%USERPROFILE%\.cache\huggingface` trên Windows). Xóa thư mục này để giải phóng dung lượng.
+Các mô hình của WhisperX và của tính năng nhận diện người nói được tải xuống lần đầu khi dùng và được Hugging Face lưu đệm trong `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` trên Windows). Các mô hình căn chỉnh từ của tiếng Anh, tiếng Pháp, tiếng Đức, tiếng Tây Ban Nha và tiếng Ý được PyTorch lưu đệm trong `~/.cache/torch` (`%USERPROFILE%\.cache\torch` trên Windows). Xóa các thư mục đó để giải phóng dung lượng chúng chiếm. Các ứng dụng khác cũng có thể giữ mô hình của mình ở đó, và tải lại khi cần, giống như Audiotext.

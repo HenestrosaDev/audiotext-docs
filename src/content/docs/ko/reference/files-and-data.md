@@ -60,4 +60,4 @@ API 키와 Hugging Face 토큰은 시스템의 자격 증명 저장소에 보관
 
 ## 모델
 
-WhisperX와 화자 식별 모델은 처음 사용할 때 다운로드되며 Hugging Face가 `~/.cache/huggingface`(Windows에서는 `%USERPROFILE%\.cache\huggingface`)에 캐시합니다. 차지하는 공간을 비우려면 이 폴더를 삭제하세요.
+WhisperX와 화자 식별 모델은 처음 사용할 때 다운로드되며, Hugging Face가 `~/.cache/huggingface`(Windows에서는 `%USERPROFILE%\.cache\huggingface`)에 캐시합니다. 영어, 프랑스어, 독일어, 스페인어, 이탈리아어의 단어를 정렬하는 모델은 PyTorch가 `~/.cache/torch`(Windows에서는 `%USERPROFILE%\.cache\torch`)에 캐시합니다. 차지하는 공간을 비우려면 이 폴더들을 삭제하세요. 다른 앱도 이곳에 모델을 보관할 수 있으며, Audiotext처럼 필요할 때 다시 다운로드합니다.

@@ -60,4 +60,4 @@ Le variabili d'ambiente con i nomi delle chiavi hanno la precedenza su quelle im
 
 ## Modelli
 
-I modelli di WhisperX e dell'identificazione dei parlanti vengono scaricati al primo utilizzo e memorizzati nella cache da Hugging Face in `~/.cache/huggingface` (o `%USERPROFILE%\.cache\huggingface` su Windows). Elimina quella cartella per liberare lo spazio che occupano.
+I modelli di WhisperX e dell'identificazione dei parlanti vengono scaricati al primo utilizzo e memorizzati nella cache da Hugging Face in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` su Windows). I modelli che allineano le parole di inglese, francese, tedesco, spagnolo e italiano sono memorizzati da PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` su Windows). Elimina queste cartelle per liberare lo spazio che occupano. Anche altre app possono tenervi i propri modelli e li riscaricano quando servono, come Audiotext.

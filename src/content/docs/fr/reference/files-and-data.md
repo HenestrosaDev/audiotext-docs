@@ -60,4 +60,4 @@ Les variables d’environnement portant le nom des clés sont prioritaires sur c
 
 ## Modèles
 
-Les modèles de WhisperX et de l’identification des locuteurs sont téléchargés lors de leur première utilisation et mis en cache par Hugging Face dans `~/.cache/huggingface` (ou `%USERPROFILE%\.cache\huggingface` sous Windows). Supprimez ce dossier pour libérer l’espace qu’ils occupent.
+Les modèles de WhisperX et de l’identification des locuteurs sont téléchargés lors de leur première utilisation et mis en cache par Hugging Face dans `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` sous Windows). Les modèles qui alignent les mots de l’anglais, du français, de l’allemand, de l’espagnol et de l’italien sont mis en cache par PyTorch dans `~/.cache/torch` (`%USERPROFILE%\.cache\torch` sous Windows). Supprimez ces dossiers pour libérer l’espace qu’ils occupent. D’autres applications peuvent aussi y garder leurs modèles et les retéléchargent au besoin, comme Audiotext.

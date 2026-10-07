@@ -60,4 +60,4 @@ Zmienne środowiskowe o nazwach kluczy mają pierwszeństwo przed kluczami ustaw
 
 ## Modele
 
-Modele WhisperX i rozpoznawania mówców są pobierane przy pierwszym użyciu i przechowywane w pamięci podręcznej Hugging Face w `~/.cache/huggingface` (lub `%USERPROFILE%\.cache\huggingface` w Windows). Usuń ten folder, aby zwolnić zajmowane przez nie miejsce.
+Modele WhisperX i rozpoznawania mówców są pobierane przy pierwszym użyciu i przechowywane przez Hugging Face w pamięci podręcznej `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` w systemie Windows). Modele, które wyrównują słowa w języku angielskim, francuskim, niemieckim, hiszpańskim i włoskim, PyTorch przechowuje w `~/.cache/torch` (`%USERPROFILE%\.cache\torch` w systemie Windows). Usuń te foldery, aby zwolnić zajmowane przez nie miejsce. Inne aplikacje też mogą trzymać tam swoje modele i, tak jak Audiotext, pobierają je ponownie, gdy są potrzebne.

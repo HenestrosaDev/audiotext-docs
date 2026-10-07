@@ -60,4 +60,4 @@ Les variables d'entorn amb els noms de les claus tenen prioritat sobre les confi
 
 ## Models
 
-Els models de WhisperX i de la identificació de parlants es descarreguen la primera vegada que es fan servir, i Hugging Face els desa a la memòria cau a `~/.cache/huggingface` (o `%USERPROFILE%\.cache\huggingface` a Windows). Elimina aquesta carpeta per alliberar l'espai que ocupen.
+Els models de WhisperX i de la identificació de parlants es baixen la primera vegada que es fan servir i Hugging Face els desa a la memòria cau de `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` a Windows). Els models que alineen les paraules de l'anglès, el francès, l'alemany, el castellà i l'italià els desa PyTorch a `~/.cache/torch` (`%USERPROFILE%\.cache\torch` a Windows). Elimina aquestes carpetes per alliberar l'espai que ocupen. Altres aplicacions també hi poden desar els seus models, i els tornen a baixar quan els necessiten, com Audiotext.

@@ -60,4 +60,4 @@ Las variables de entorno con los nombres de las claves tienen prioridad sobre la
 
 ## Modelos
 
-Los modelos de WhisperX y de la identificación de hablantes se descargan la primera vez que se usan, y Hugging Face los guarda en caché en `~/.cache/huggingface` (o `%USERPROFILE%\.cache\huggingface` en Windows). Elimina esa carpeta para liberar el espacio que ocupan.
+Los modelos de WhisperX y de la identificación de hablantes se descargan la primera vez que se usan y Hugging Face los guarda en la caché de `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` en Windows). Los modelos que alinean las palabras del inglés, el francés, el alemán, el español y el italiano los guarda PyTorch en `~/.cache/torch` (`%USERPROFILE%\.cache\torch` en Windows). Elimina esas carpetas para liberar el espacio que ocupan. Otras aplicaciones también pueden guardar ahí sus modelos, y los vuelven a descargar cuando los necesitan, como Audiotext.

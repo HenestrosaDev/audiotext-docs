@@ -60,4 +60,4 @@ API キーと Hugging Face のトークンは、システムの資格情報ス�
 
 ## モデル
 
-WhisperX と話者識別のモデルは初回使用時にダウンロードされ、Hugging Face によって `~/.cache/huggingface`（Windows では `%USERPROFILE%\.cache\huggingface`）にキャッシュされます。使用している容量を空けるには、このフォルダーを削除します。
+WhisperX と話者識別のモデルは初回使用時にダウンロードされ、Hugging Face によって `~/.cache/huggingface`（Windows では `%USERPROFILE%\.cache\huggingface`）にキャッシュされます。英語、フランス語、ドイツ語、スペイン語、イタリア語の単語を揃えるモデルは、PyTorch によって `~/.cache/torch`（Windows では `%USERPROFILE%\.cache\torch`）にキャッシュされます。使用している容量を空けるには、これらのフォルダーを削除してください。ほかのアプリもそこにモデルを保存していることがありますが、Audiotext と同じく、必要になれば再びダウンロードされます。

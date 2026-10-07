@@ -60,4 +60,4 @@ Proměnné prostředí s názvy klíčů mají přednost před klíči nastaven�
 
 ## Modely
 
-Modely WhisperX a rozpoznání mluvčích se stahují při prvním použití a Hugging Face je ukládá do mezipaměti v `~/.cache/huggingface` (ve Windows `%USERPROFILE%\.cache\huggingface`). Smazáním této složky uvolníte místo, které zabírají.
+Modely WhisperX a rozpoznávání mluvčích se stáhnou při prvním použití a Hugging Face je ukládá do mezipaměti v `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` ve Windows). Modely, které zarovnávají slova angličtiny, francouzštiny, němčiny, španělštiny a italštiny, ukládá PyTorch do `~/.cache/torch` (`%USERPROFILE%\.cache\torch` ve Windows). Smazáním těchto složek uvolníte místo, které zabírají. I jiné aplikace v nich mohou mít své modely a stejně jako Audiotext si je v případě potřeby stáhnou znovu.

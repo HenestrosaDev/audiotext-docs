@@ -60,4 +60,4 @@ API 密钥和 Hugging Face 令牌保存在系统的凭据存储中：
 
 ## 模型
 
-WhisperX 和说话人识别的模型会在首次使用时下载，并由 Hugging Face 缓存在 `~/.cache/huggingface`（Windows 上为 `%USERPROFILE%\.cache\huggingface`）中。删除该文件夹即可释放其占用的空间。
+WhisperX 和说话人识别的模型会在首次使用时下载，并由 Hugging Face 缓存在 `~/.cache/huggingface`（Windows 上为 `%USERPROFILE%\.cache\huggingface`）。用于对齐英语、法语、德语、西班牙语和意大利语单词的模型由 PyTorch 缓存在 `~/.cache/torch`（Windows 上为 `%USERPROFILE%\.cache\torch`）。删除这些文件夹即可释放它们占用的空间。其他应用也可能把模型存放在那里，并像 Audiotext 一样在需要时重新下载。

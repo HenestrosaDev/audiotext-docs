@@ -60,4 +60,4 @@ Omgevingsvariabelen met de namen van de sleutels hebben voorrang op de sleutels 
 
 ## Modellen
 
-De modellen van WhisperX en van de sprekerherkenning worden bij het eerste gebruik gedownload en door Hugging Face in de cache opgeslagen in `~/.cache/huggingface` (of `%USERPROFILE%\.cache\huggingface` op Windows). Verwijder die map om de ruimte vrij te maken die ze innemen.
+De modellen van WhisperX en van de sprekerherkenning worden gedownload wanneer ze voor het eerst worden gebruikt en door Hugging Face opgeslagen in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` op Windows). De modellen die de woorden van het Engels, Frans, Duits, Spaans en Italiaans uitlijnen, worden door PyTorch opgeslagen in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` op Windows). Verwijder die mappen om de ruimte die ze innemen vrij te maken. Ook andere apps kunnen daar hun modellen bewaren, en downloaden ze opnieuw wanneer ze nodig zijn, net als Audiotext.

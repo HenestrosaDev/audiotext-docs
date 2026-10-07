@@ -60,4 +60,4 @@ Umgebungsvariablen mit den Namen der Schlüssel haben Vorrang vor den in der App
 
 ## Modelle
 
-Die Modelle von WhisperX und der Sprechererkennung werden bei der ersten Verwendung heruntergeladen und von Hugging Face in `~/.cache/huggingface` (bzw. `%USERPROFILE%\.cache\huggingface` unter Windows) zwischengespeichert. Löschen Sie diesen Ordner, um den belegten Speicher freizugeben.
+Die Modelle von WhisperX und der Sprechererkennung werden bei der ersten Verwendung heruntergeladen und von Hugging Face in `~/.cache/huggingface` zwischengespeichert (`%USERPROFILE%\.cache\huggingface` unter Windows). Die Modelle, die die Wörter auf Englisch, Französisch, Deutsch, Spanisch und Italienisch ausrichten, speichert PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` unter Windows). Löschen Sie diese Ordner, um den belegten Platz freizugeben. Auch andere Apps können dort ihre Modelle ablegen und laden sie, wie Audiotext, bei Bedarf erneut herunter.
