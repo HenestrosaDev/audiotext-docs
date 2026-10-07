@@ -60,6 +60,18 @@ Als er een nieuwe versie uitkomt, toont Audiotext een knop **Versie … is besch
 
 Om zelf te controleren of er een nieuwe versie is, open je **Voorkeuren** → **Over** → **Controleren op updates**. Om niet meer te controleren bij het openen van de app, zet je **Algemeen** → **Updates** uit.
 
+## De app verwijderen
+
+- **Windows**: verwijder hem via **Instellingen** → **Apps**, zoals elke andere app.
+- **macOS**: sleep **Audiotext** uit de map **Apps** naar de prullenmand.
+- **Linux**: voer `./install.sh --uninstall` uit in de map van het archief. Heb je die niet meer, verwijder dan `~/.local/share/audiotext`, `~/.local/bin/audiotext` en `~/.local/share/applications/audiotext.desktop`.
+
+Je instellingen, geschiedenis en opnames blijven bewaard, dus ze zijn er nog als je de app opnieuw installeert. Om alles te verwijderen:
+
+1. Verwijder vóór het verwijderen van de app je API-sleutels via **Voorkeuren** → **API-sleutels** (klik op **Wijzigen…** en laat het veld leeg), want ze staan in de opslag voor inloggegevens van je systeem.
+2. Verwijder je [configuratiemap van de gebruiker](/nl/reference/files-and-data/#configuratiemap-van-de-gebruiker).
+3. Verwijder de gedownloade [modellen](/nl/reference/files-and-data/#modellen).
+
 ## De taal van de interface wijzigen
 
 Audiotext gebruikt de taal van je systeem als die beschikbaar is. Open om die te wijzigen de **Voorkeuren** (het tandwiel rechtsboven) en kies een taal bij **Algemeen** → **Taal van de interface**.

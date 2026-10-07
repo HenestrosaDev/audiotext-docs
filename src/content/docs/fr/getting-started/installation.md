@@ -60,6 +60,18 @@ Lorsqu’une nouvelle version sort, Audiotext affiche un bouton **La version …
 
 Pour vérifier vous-même s’il existe une nouvelle version, ouvrez **Préférences** → **À propos** → **Rechercher des mises à jour**. Pour ne plus vérifier à l’ouverture de l’application, désactivez **Général** → **Mises à jour**.
 
+## Désinstallez l’application
+
+- **Windows** : désinstallez-la depuis **Paramètres** → **Applications**, comme toute autre application.
+- **macOS** : faites glisser **Audiotext** du dossier **Applications** vers la Corbeille.
+- **Linux** : lancez `./install.sh --uninstall` depuis le dossier de l’archive. Si vous ne l’avez plus, supprimez `~/.local/share/audiotext`, `~/.local/bin/audiotext` et `~/.local/share/applications/audiotext.desktop`.
+
+Vos réglages, votre historique et vos enregistrements sont conservés, ils seront donc toujours là si vous la réinstallez. Pour tout supprimer :
+
+1. Avant de la désinstaller, supprimez vos clés API dans **Préférences** → **Clés API** (cliquez sur **Modifier…** et laissez le champ vide), car elles sont conservées dans le gestionnaire d’identifiants de votre système.
+2. Supprimez votre [dossier de configuration utilisateur](/fr/reference/files-and-data/#dossier-de-configuration-utilisateur).
+3. Supprimez les [modèles](/fr/reference/files-and-data/#modèles) téléchargés.
+
 ## Changez la langue de l’interface
 
 Audiotext utilise la langue de votre système si elle est disponible. Pour la changer, ouvrez les **Préférences** (l’engrenage en haut à droite) et choisissez une langue dans **Général** → **Langue de l’interface**.

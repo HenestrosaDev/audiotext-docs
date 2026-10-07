@@ -60,6 +60,18 @@ GPU 附加组件在 Windows 上约 2 GB，在 Linux 上约 4 GB，因此只有�
 
 要自行检查新版本，请打开**偏好设置** → **关于** → **检查更新**。要在打开应用时不再检查，请关闭**常规** → **更新**。
 
+## 卸载应用
+
+- **Windows**：和其他应用一样，在**设置** → **应用**中卸载。
+- **macOS**：将 **Audiotext** 从**应用程序**文件夹拖到废纸篓。
+- **Linux**：在压缩包的文件夹中运行 `./install.sh --uninstall`。如果该文件夹已不在，请删除 `~/.local/share/audiotext`、`~/.local/bin/audiotext` 和 `~/.local/share/applications/audiotext.desktop`。
+
+你的设置、历史记录和录音会保留，因此重新安装后它们仍然存在。要删除所有内容：
+
+1. 卸载前，在**偏好设置** → **API 密钥**中删除你的 API 密钥（点击**更改…**并留空），因为它们保存在系统的凭据存储中。
+2. 删除你的[用户配置文件夹](/zh-cn/reference/files-and-data/#用户配置文件夹)。
+3. 删除已下载的[模型](/zh-cn/reference/files-and-data/#模型)。
+
 ## 更改界面语言
 
 如果可用，Audiotext 会使用系统语言。要更改，请打开**偏好设置**（右上角的齿轮），在**常规** → **界面语言**中选择语言。

@@ -60,6 +60,18 @@ Yeni bir sürüm yayımlandığında Audiotext üst çubukta **Sürüm … kulla
 
 Yeni bir sürümü kendiniz denetlemek için **Tercihler** → **Hakkında** → **Güncellemeleri denetle**'yi açın. Uygulama açılırken denetlemeyi durdurmak için **Genel** → **Güncellemeler**'i kapatın.
 
+## Uygulamayı kaldırın
+
+- **Windows**: diğer uygulamalar gibi **Ayarlar** → **Uygulamalar** bölümünden kaldırın.
+- **macOS**: **Audiotext**'i **Uygulamalar** klasöründen Çöp Sepeti'ne sürükleyin.
+- **Linux**: arşivin klasöründen `./install.sh --uninstall` komutunu çalıştırın. Klasör artık yoksa `~/.local/share/audiotext`, `~/.local/bin/audiotext` ve `~/.local/share/applications/audiotext.desktop` dosyalarını silin.
+
+Ayarlarınız, geçmişiniz ve kayıtlarınız korunur, bu yüzden yeniden kurduğunuzda yerinde olurlar. Her şeyi kaldırmak için:
+
+1. Kaldırmadan önce API anahtarlarınızı **Tercihler** → **API anahtarları** bölümünden silin (**Değiştir…** düğmesine tıklayıp alanı boş bırakın), çünkü bunlar sisteminizin kimlik bilgisi deposunda tutulur.
+2. [Kullanıcı yapılandırma klasörünüzü](/tr/reference/files-and-data/#kullanıcı-yapılandırma-klasörü) silin.
+3. İndirilen [modelleri](/tr/reference/files-and-data/#modeller) silin.
+
 ## Arayüz dilini değiştirin
 
 Audiotext, varsa sisteminizin dilini kullanır. Değiştirmek için **Tercihler**'i (sağ üstteki dişli) açın ve **Genel** → **Arayüz dili** bölümünden bir dil seçin.

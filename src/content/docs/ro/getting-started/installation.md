@@ -60,6 +60,18 @@ Când apare o versiune nouă, Audiotext afișează butonul **Versiunea … este 
 
 Pentru a verifica singur dacă există o versiune nouă, deschideți **Preferințe** → **Despre** → **Caută actualizări**. Pentru a nu mai verifica la deschiderea aplicației, dezactivați **General** → **Actualizări**.
 
+## Dezinstalați aplicația
+
+- **Windows**: dezinstalați-o din **Setări** → **Aplicații**, ca pe orice altă aplicație.
+- **macOS**: trageți **Audiotext** din dosarul **Aplicații** în Coș.
+- **Linux**: rulați `./install.sh --uninstall` din dosarul arhivei. Dacă nu îl mai aveți, ștergeți `~/.local/share/audiotext`, `~/.local/bin/audiotext` și `~/.local/share/applications/audiotext.desktop`.
+
+Setările, istoricul și înregistrările se păstrează, așa că le regăsiți dacă o reinstalați. Pentru a șterge tot:
+
+1. Înainte de dezinstalare, eliminați cheile API din **Preferințe** → **Chei API** (faceți clic pe **Schimbă…** și lăsați câmpul gol), deoarece sunt păstrate în depozitul de date de autentificare al sistemului.
+2. Ștergeți [dosarul de configurare al utilizatorului](/ro/reference/files-and-data/#dosarul-de-configurare-al-utilizatorului).
+3. Ștergeți [modelele](/ro/reference/files-and-data/#modele) descărcate.
+
 ## Schimbați limba interfeței
 
 Audiotext folosește limba sistemului, dacă este disponibilă. Pentru a o schimba, deschideți **Preferințe** (rotița din dreapta sus) și alegeți o limbă în **General** → **Limba interfeței**.

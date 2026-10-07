@@ -60,6 +60,18 @@ Saat versi baru dirilis, Audiotext menampilkan tombol **Versi … tersedia** di 
 
 Untuk memeriksa versi baru sendiri, buka **Preferensi** → **Tentang** → **Periksa pembaruan**. Agar tidak memeriksa saat aplikasi dibuka, nonaktifkan **Umum** → **Pembaruan**.
 
+## Copot aplikasi
+
+- **Windows**: copot dari **Pengaturan** → **Aplikasi**, seperti aplikasi lainnya.
+- **macOS**: seret **Audiotext** dari folder **Aplikasi** ke Tempat Sampah.
+- **Linux**: jalankan `./install.sh --uninstall` dari folder arsip. Jika folder itu sudah tidak ada, hapus `~/.local/share/audiotext`, `~/.local/bin/audiotext`, dan `~/.local/share/applications/audiotext.desktop`.
+
+Pengaturan, riwayat, dan rekaman Anda tetap disimpan, sehingga masih ada jika Anda menginstalnya lagi. Untuk menghapus semuanya:
+
+1. Sebelum mencopot, hapus kunci API Anda di **Preferensi** → **Kunci API** (klik **Ubah…** dan biarkan kosong), karena kunci itu disimpan di penyimpanan kredensial sistem Anda.
+2. Hapus [folder konfigurasi pengguna](/id/reference/files-and-data/#folder-konfigurasi-pengguna) Anda.
+3. Hapus [model](/id/reference/files-and-data/#model) yang telah diunduh.
+
 ## Ubah bahasa antarmuka
 
 Audiotext menggunakan bahasa sistem Anda jika tersedia. Untuk mengubahnya, buka **Preferensi** (ikon roda gigi di kanan atas) dan pilih bahasa di **Umum** → **Bahasa antarmuka**.

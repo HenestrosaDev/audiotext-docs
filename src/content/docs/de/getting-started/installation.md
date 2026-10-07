@@ -60,6 +60,18 @@ Wenn eine neue Version erscheint, zeigt Audiotext in der oberen Leiste die Schal
 
 Um selbst nach einer neuen Version zu suchen, öffnen Sie **Einstellungen** → **Über** → **Nach Updates suchen**. Damit beim Öffnen der App nicht mehr gesucht wird, deaktivieren Sie **Allgemein** → **Updates**.
 
+## Die App deinstallieren
+
+- **Windows**: Deinstallieren Sie sie wie jede andere App unter **Einstellungen** → **Apps**.
+- **macOS**: Ziehen Sie **Audiotext** aus dem Ordner **Programme** in den Papierkorb.
+- **Linux**: Führen Sie `./install.sh --uninstall` im Ordner des Archivs aus. Wenn Sie ihn nicht mehr haben, löschen Sie `~/.local/share/audiotext`, `~/.local/bin/audiotext` und `~/.local/share/applications/audiotext.desktop`.
+
+Ihre Einstellungen, Ihr Verlauf und Ihre Aufnahmen bleiben erhalten, sodass sie bei einer erneuten Installation wieder da sind. Um alles zu entfernen:
+
+1. Entfernen Sie vor der Deinstallation Ihre API-Schlüssel unter **Einstellungen** → **API-Schlüssel** (klicken Sie auf **Ändern…** und lassen Sie das Feld leer), da sie im Anmeldeinformationsspeicher Ihres Systems liegen.
+2. Löschen Sie Ihren [Benutzerkonfigurationsordner](/de/reference/files-and-data/#benutzerkonfigurationsordner).
+3. Löschen Sie die heruntergeladenen [Modelle](/de/reference/files-and-data/#modelle).
+
 ## Sprache der Oberfläche ändern
 
 Audiotext verwendet die Sprache Ihres Systems, sofern sie verfügbar ist. Um sie zu ändern, öffnen Sie die **Einstellungen** (das Zahnrad oben rechts) und wählen Sie unter **Allgemein** → **Sprache der Oberfläche** eine Sprache.

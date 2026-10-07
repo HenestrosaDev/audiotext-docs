@@ -60,6 +60,18 @@ När en ny version släpps visar Audiotext knappen **Version … är tillgängli
 
 Om du vill söka efter en ny version själv öppnar du **Inställningar** → **Om** → **Sök efter uppdateringar**. Om du inte vill att appen söker när den öppnas stänger du av **Allmänt** → **Uppdateringar**.
 
+## Avinstallera appen
+
+- **Windows**: avinstallera den under **Inställningar** → **Appar**, som vilken annan app som helst.
+- **macOS**: dra **Audiotext** från mappen **Program** till papperskorgen.
+- **Linux**: kör `./install.sh --uninstall` från arkivets mapp. Om du inte har den kvar tar du bort `~/.local/share/audiotext`, `~/.local/bin/audiotext` och `~/.local/share/applications/audiotext.desktop`.
+
+Dina inställningar, din historik och dina inspelningar behålls, så de finns kvar om du installerar appen igen. För att ta bort allt:
+
+1. Ta bort dina API-nycklar under **Inställningar** → **API-nycklar** innan du avinstallerar (klicka på **Ändra…** och lämna fältet tomt), eftersom de sparas i systemets lagring för inloggningsuppgifter.
+2. Ta bort din [användarens konfigurationsmapp](/sv/reference/files-and-data/#användarens-konfigurationsmapp).
+3. Ta bort de nedladdade [modellerna](/sv/reference/files-and-data/#modeller).
+
 ## Ändra gränssnittets språk
 
 Audiotext använder systemets språk om det finns. För att ändra det öppnar du **Inställningar** (kugghjulet uppe till höger) och väljer ett språk under **Allmänt** → **Gränssnittets språk**.

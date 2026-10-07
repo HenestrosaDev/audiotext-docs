@@ -60,6 +60,18 @@ Quan es publica una versió nova, Audiotext mostra un botó **Versió … dispon
 
 Per comprovar tu mateix si hi ha una versió nova, obre **Preferències** → **Quant a** → **Cerca actualitzacions**. Perquè no es comprovi en obrir l'aplicació, desactiva **General** → **Actualitzacions**.
 
+## Desinstal·la l'aplicació
+
+- **Windows**: desinstal·la-la des de **Configuració** → **Aplicacions**, com qualsevol altra aplicació.
+- **macOS**: arrossega **Audiotext** de la carpeta **Aplicacions** a la Paperera.
+- **Linux**: executa `./install.sh --uninstall` des de la carpeta de l'arxiu. Si ja no la tens, elimina `~/.local/share/audiotext`, `~/.local/bin/audiotext` i `~/.local/share/applications/audiotext.desktop`.
+
+La configuració, l'historial i les gravacions es mantenen, de manera que hi continuen si la tornes a instal·lar. Per eliminar-ho tot:
+
+1. Abans de desinstal·lar-la, elimina les claus d'API a **Preferències** → **Claus d'API** (fes clic a **Canvia…** i deixa-la buida), ja que es desen al magatzem de credencials del sistema.
+2. Elimina la teva [carpeta de configuració d'usuari](/ca/reference/files-and-data/#carpeta-de-configuració-dusuari).
+3. Elimina els [models](/ca/reference/files-and-data/#models) que s'han baixat.
+
 ## Canvia l'idioma de la interfície
 
 Audiotext fa servir l'idioma del sistema si està disponible. Per canviar-lo, obre les **Preferències** (l'engranatge de dalt a la dreta) i tria un idioma a **General** → **Idioma de la interfície**.

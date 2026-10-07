@@ -60,6 +60,18 @@ Khi có phiên bản mới, Audiotext hiển thị nút **Đã có phiên bản 
 
 Để tự kiểm tra phiên bản mới, mở **Tùy chọn ưu tiên** → **Giới thiệu** → **Kiểm tra cập nhật**. Để ngừng kiểm tra khi mở ứng dụng, tắt **Chung** → **Cập nhật**.
 
+## Gỡ cài đặt ứng dụng
+
+- **Windows**: gỡ cài đặt trong **Cài đặt** → **Ứng dụng**, như mọi ứng dụng khác.
+- **macOS**: kéo **Audiotext** từ thư mục **Ứng dụng** vào Thùng rác.
+- **Linux**: chạy `./install.sh --uninstall` từ thư mục của bản lưu trữ. Nếu không còn thư mục đó, hãy xóa `~/.local/share/audiotext`, `~/.local/bin/audiotext` và `~/.local/share/applications/audiotext.desktop`.
+
+Cài đặt, lịch sử và bản ghi âm của bạn vẫn được giữ, nên chúng vẫn còn nếu bạn cài lại ứng dụng. Để xóa mọi thứ:
+
+1. Trước khi gỡ cài đặt, hãy xóa khóa API trong **Tùy chọn ưu tiên** → **Khóa API** (nhấp **Thay đổi…** và để trống), vì chúng được lưu trong kho thông tin đăng nhập của hệ thống.
+2. Xóa [thư mục cấu hình người dùng](/vi/reference/files-and-data/#thư-mục-cấu-hình-người-dùng) của bạn.
+3. Xóa các [mô hình](/vi/reference/files-and-data/#mô-hình) đã tải xuống.
+
 ## Đổi ngôn ngữ giao diện
 
 Audiotext dùng ngôn ngữ của hệ thống nếu có. Để đổi, mở **Tùy chọn ưu tiên** (biểu tượng bánh răng ở góc trên bên phải) và chọn ngôn ngữ trong **Chung** → **Ngôn ngữ giao diện**.

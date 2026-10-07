@@ -60,6 +60,18 @@ Když vyjde nová verze, Audiotext zobrazí na horní liště tlačítko **Je k 
 
 Chcete-li novou verzi zkontrolovat sami, otevřete **Předvolby** → **O aplikaci** → **Zkontrolovat aktualizace**. Chcete-li kontrolu při otevření aplikace vypnout, vypněte **Obecné** → **Aktualizace**.
 
+## Odinstalujte aplikaci
+
+- **Windows**: odinstalujte ji v **Nastavení** → **Aplikace** jako kteroukoli jinou aplikaci.
+- **macOS**: přetáhněte **Audiotext** ze složky **Aplikace** do koše.
+- **Linux**: spusťte `./install.sh --uninstall` ze složky archivu. Pokud ji už nemáte, smažte `~/.local/share/audiotext`, `~/.local/bin/audiotext` a `~/.local/share/applications/audiotext.desktop`.
+
+Vaše nastavení, historie a nahrávky zůstanou zachovány, takže je po nové instalaci najdete. Chcete-li odstranit vše:
+
+1. Před odinstalací odstraňte klíče API v **Předvolby** → **Klíče API** (klikněte na **Změnit…** a nechte pole prázdné), protože jsou uloženy v úložišti přihlašovacích údajů systému.
+2. Smažte svou [uživatelskou konfigurační složku](/cs/reference/files-and-data/#uživatelská-konfigurační-složka).
+3. Smažte stažené [modely](/cs/reference/files-and-data/#modely).
+
 ## Změňte jazyk rozhraní
 
 Audiotext používá jazyk systému, pokud je k dispozici. Chcete-li ho změnit, otevřete **Předvolby** (ozubené kolo vpravo nahoře) a vyberte jazyk v **Obecné** → **Jazyk rozhraní**.
