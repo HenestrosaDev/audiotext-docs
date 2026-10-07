@@ -35,6 +35,8 @@ Jeśli klucz API utworzono przed pierwszym doładowaniem, a błąd nie znika po 
 
 ## Mówcy nie są rozpoznawani
 
+Jeśli transkrypcja kończy się błędem **Rozpoznawanie mówców wymaga tokenu Hugging Face.** lub **Nie udało się pobrać modelu rozpoznawania mówców.**, brakuje tokenu, jest on nieprawidłowy albo nie ma dostępu do modelu.
+
 Rozpoznawanie mówców wymaga tokenu Hugging Face i zaakceptowania warunków modelu. Sprawdź, czy:
 
 - Zaakceptowano warunki [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) na tym samym koncie.
@@ -47,6 +49,11 @@ Zobacz [Rozpoznawanie mówców](/pl/guides/transcription-settings/#rozpoznawanie
 - Sprawdź, czy mikrofon jest podłączony, i kliknij przycisk odświeżania obok listy mikrofonów.
 - W macOS zezwól Audiotext na dostęp w **Ustawienia systemowe** → **Prywatność i ochrona** → **Mikrofon**. W Windows w **Ustawienia** → **Prywatność** → **Mikrofon**.
 - Jeśli miernik poziomu pokazuje **Brak dźwięku**, wybierz inny mikrofon z listy lub sprawdź, czy nie jest wyciszony.
+- Jeśli pojawia się **Nie nagrano żadnego dźwięku.**, nagrywanie zakończyło się, zanim mikrofon przesłał jakikolwiek dźwięk. Nagraj ponownie lub wybierz inny mikrofon.
+
+## Tekst na żywo się nie wyświetla
+
+Jeśli podczas nagrywania pojawia się **Tekstu nie można pokazywać podczas nagrywania.**, nie udało się wczytać **Model na żywo**: na przykład jest on pobierany przy pierwszym użyciu, co wymaga połączenia z internetem, albo brakuje pamięci. Nie wpływa to na nagranie, które po zatrzymaniu zostaje przetranskrybowane jak zwykle. Wybierz mniejszy **Model na żywo** (np. `tiny` lub `base`) na karcie **Tekst na żywo**.
 
 ## Nie można odtworzyć nagrania transkrypcji
 
@@ -56,6 +63,13 @@ Plik źródłowy został przeniesiony lub usunięty. Tekst pozostaje, ale nagran
 
 Sprawdź, czy adres URL jest poprawny, a film publiczny. YouTube często się zmienia, więc jeśli problem nie znika, sprawdź, czy jest nowsza wersja Audiotext.
 
+Jeśli zamiast tego pojawia się **Film na YouTube nie ma ścieżki dźwiękowej.**, film nie ma dźwięku do transkrypcji.
+
+## Nie można przetranskrybować linku
+
+- **Adres URL nie wskazuje pliku audio ani wideo.**: link otwiera stronę internetową, a nie plik. Działają tylko linki do filmów z YouTube i bezpośrednie linki do plików audio lub wideo. Znajdź na stronie link, który pobiera plik (np. odcinek podcastu), i użyj go albo pobierz plik i przetranskrybuj go ze źródła **Plik**.
+- **Nie udało się pobrać pliku: …**: nie udało się dotrzeć do pliku. Sprawdź, czy link otwiera się w przeglądarce i czy masz połączenie z internetem. Linków wymagających zalogowania nie da się pobrać: pobierz plik samodzielnie i użyj źródła **Plik**.
+
 ## Folder nie transkrybuje żadnego pliku
 
 Pliki, które mają już transkrypcję, są pomijane. Włącz **Zastępuj istniejące pliki**, aby transkrybować je ponownie. Folder musi też zawierać [obsługiwane pliki](/pl/reference/formats-and-languages/).
@@ -63,6 +77,16 @@ Pliki, które mają już transkrypcję, są pomijane. Włącz **Zastępuj istnie
 ## API Google prosi o język
 
 API Google nie potrafi wykryć języka. Wybierz **Język nagrania** w ustawieniach.
+
+## Podsumowanie lub tłumaczenie kończy się błędem
+
+- **DeepL nie może tłumaczyć na język: ….**: DeepL nie obsługuje tego języka. Wybierz innego dostawcę, na przykład model językowy.
+- **Odpowiedź modelu była za długa.**, **Model nie zwrócił prawidłowego podsumowania.** lub **Model nie zwrócił prawidłowego tłumaczenia.**: model nie napisał podsumowania lub tłumaczenia w oczekiwanym formacie. Spróbuj ponownie lub wybierz większy model w **Preferencje** → **AI**. Małe modele Ollamy zawodzą częściej.
+- Przy każdym innym błędzie sprawdź, czy klucz API dostawcy jest ustawiony w **Preferencje** → **Klucze API** i czy na koncie są środki.
+
+## Nie można sprawdzić aktualizacji
+
+**Nie udało się sprawdzić aktualizacji.** oznacza, że Audiotext nie mógł połączyć się z GitHubem. Sprawdź połączenie z internetem albo czy nie blokuje go zapora lub serwer proxy. Najnowszą wersję zawsze możesz pobrać ze [strony wydań](https://github.com/HenestrosaDev/audiotext/releases/latest).
 
 ## Coś innego
 

@@ -35,6 +35,8 @@ Si vas crear la clau d'API abans d'afegir-hi fons per primera vegada i l'error p
 
 ## No es poden identificar els parlants
 
+Si la transcripció falla amb **Per identificar els parlants cal un testimoni de Hugging Face.** o **No s'ha pogut baixar el model d'identificació de parlants.**, el testimoni falta, no és vàlid o no pot accedir al model.
+
 Identificar els parlants requereix un token de Hugging Face i acceptar les condicions del model. Comprova que:
 
 - Has acceptat les condicions de [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) amb el mateix compte.
@@ -47,6 +49,11 @@ Consulta [Identifica els parlants](/ca/guides/transcription-settings/#identifica
 - Comprova que el micròfon està connectat i fes clic al botó d'actualitzar al costat de la llista de micròfons.
 - A macOS, permet l'accés a Audiotext a **Configuració del Sistema** → **Privacitat i seguretat** → **Micròfon**. A Windows, a **Configuració** → **Privadesa** → **Micròfon**.
 - Si el mesurador de nivell mostra **No hi ha so**, tria un altre micròfon de la llista o comprova que no està silenciat.
+- Si es mostra **No s'ha enregistrat cap àudio.**, la gravació ha acabat abans que el micròfon enviés cap so. Torna a gravar o tria un altre micròfon.
+
+## No es mostra el text en directe
+
+Si es mostra **El text no es pot mostrar mentre es grava.** mentre graves, no s'ha pogut carregar el **Model en directe**: per exemple, es baixa la primera vegada que es fa servir, cosa que requereix connexió a Internet, o no hi ha prou memòria. La gravació no se'n veu afectada i es transcriu com sempre quan l'atures. Tria un **Model en directe** més petit (p. ex. `tiny` o `base`) a la targeta **Text en directe**.
 
 ## No es pot reproduir l'àudio d'una transcripció
 
@@ -56,6 +63,13 @@ El fitxer d'origen s'ha mogut o eliminat. El text es conserva, però l'àudio no
 
 Assegura't que l'URL és correcta i que el vídeo és públic. YouTube canvia sovint, així que, si continua fallant, comprova si hi ha una versió més recent d'Audiotext.
 
+Si en canvi es mostra **El vídeo de YouTube no té pista d'àudio.**, el vídeo no té so per transcriure.
+
+## No es pot transcriure un enllaç
+
+- **L'URL no apunta a un fitxer d'àudio o vídeo.**: l'enllaç obre una pàgina web, no un fitxer. Només funcionen els enllaços de vídeos de YouTube i els enllaços directes a fitxers d'àudio o vídeo. Busca a la pàgina l'enllaç que baixa el fitxer (p. ex. l'episodi d'un pòdcast) i fes-lo servir, o baixa el fitxer i transcriu-lo amb la font **Fitxer**.
+- **No s'ha pogut baixar el fitxer: …**: no s'ha pogut accedir al fitxer. Comprova que l'enllaç s'obre al navegador i que tens connexió a Internet. Els enllaços que requereixen iniciar sessió no es poden baixar: baixa el fitxer tu mateix i fes servir la font **Fitxer**.
+
 ## Una carpeta no transcriu cap fitxer
 
 Els fitxers que ja tenen una transcripció s'ometen. Activa **Sobreescriu els fitxers existents** per tornar-los a transcriure. La carpeta també ha de contenir [fitxers compatibles](/ca/reference/formats-and-languages/).
@@ -63,6 +77,16 @@ Els fitxers que ja tenen una transcripció s'ometen. Activa **Sobreescriu els fi
 ## L'API de Google demana l'idioma
 
 L'API de Google no pot detectar l'idioma. Tria l'**Idioma de l'àudio** a la configuració.
+
+## Falla un resum o una traducció
+
+- **DeepL no pot traduir a l'idioma ….**: DeepL no admet aquest idioma. Tria un altre proveïdor, com ara un model de llenguatge.
+- **La resposta del model era massa llarga.**, **El model no ha retornat un resum vàlid.** o **El model no ha retornat una traducció vàlida.**: el model no ha escrit el resum o la traducció en el format esperat. Torna-ho a provar o tria un model més gran a **Preferències** → **IA**. Els models petits d'Ollama fallen més sovint.
+- Per a qualsevol altre error, comprova que la clau d'API del proveïdor està definida a **Preferències** → **Claus d'API** i que el teu compte té crèdit.
+
+## No es poden cercar actualitzacions
+
+**No s'han pogut cercar actualitzacions.** vol dir que Audiotext no ha pogut connectar amb GitHub. Comprova la connexió a Internet o si un tallafoc o un servidor intermediari ho bloqueja. Sempre pots baixar la darrera versió de la [pàgina de versions](https://github.com/HenestrosaDev/audiotext/releases/latest).
 
 ## Un altre problema
 

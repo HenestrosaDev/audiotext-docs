@@ -35,6 +35,8 @@ Se você criou a chave de API antes de adicionar fundos pela primeira vez e o er
 
 ## Os falantes não são identificados
 
+Se a transcrição falhar com **Identificar falantes requer um token do Hugging Face.** ou **Não foi possível baixar o modelo de identificação de falantes.**, o token está ausente, não é válido ou não consegue acessar o modelo.
+
 Identificar os falantes exige um token do Hugging Face e aceitar as condições do modelo. Verifique se:
 
 - Você aceitou as condições do [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) com a mesma conta.
@@ -47,6 +49,11 @@ Consulte [Identifique os falantes](/pt/guides/transcription-settings/#identifiqu
 - Verifique se o microfone está conectado e clique no botão de atualizar ao lado da lista de microfones.
 - No macOS, permita o acesso ao Audiotext em **Ajustes do Sistema** → **Privacidade e Segurança** → **Microfone**. No Windows, em **Configurações** → **Privacidade** → **Microfone**.
 - Se o medidor de nível mostrar **Sem som**, escolha outro microfone na lista ou verifique se ele não está mudo.
+- Se aparecer **Nenhum áudio foi gravado.**, a gravação terminou antes de o microfone enviar qualquer som. Grave de novo ou escolha outro microfone.
+
+## O texto ao vivo não aparece
+
+Se aparecer **O texto não pode ser mostrado durante a gravação.** durante a gravação, não foi possível carregar o **Modelo ao vivo**: por exemplo, ele é baixado na primeira vez que é usado, o que requer conexão com a Internet, ou não há memória suficiente. A gravação não é afetada e é transcrita normalmente quando você para. Escolha um **Modelo ao vivo** menor (ex.: `tiny` ou `base`) no cartão **Texto ao vivo**.
 
 ## O áudio de uma transcrição não pode ser reproduzido
 
@@ -56,6 +63,13 @@ O arquivo de origem foi movido ou excluído. O texto é mantido, mas o áudio s�
 
 Verifique se a URL está correta e se o vídeo é público. O YouTube muda com frequência, então, se continuar falhando, veja se há uma versão mais recente do Audiotext.
 
+Se aparecer **O vídeo do YouTube não tem faixa de áudio.**, o vídeo não tem som para transcrever.
+
+## Um link não pode ser transcrito
+
+- **A URL não aponta para um arquivo de áudio ou vídeo.**: o link abre uma página da web, não um arquivo. Só funcionam os links de vídeos do YouTube e os links diretos para arquivos de áudio ou vídeo. Procure na página o link que baixa o arquivo (ex.: o episódio de um podcast) e use-o, ou baixe o arquivo e transcreva-o com a fonte **Arquivo**.
+- **Não foi possível baixar o arquivo: …**: não foi possível acessar o arquivo. Verifique se o link abre no seu navegador e se você está conectado à Internet. Links que exigem login não podem ser baixados: baixe o arquivo você mesmo e use a fonte **Arquivo**.
+
 ## Uma pasta não transcreve nenhum arquivo
 
 Os arquivos que já têm uma transcrição são ignorados. Ative **Substituir arquivos existentes** para transcrevê-los de novo. A pasta também precisa conter [arquivos compatíveis](/pt/reference/formats-and-languages/).
@@ -63,6 +77,16 @@ Os arquivos que já têm uma transcrição são ignorados. Ative **Substituir ar
 ## A API do Google pede o idioma
 
 A API do Google não consegue detectar o idioma. Escolha o **Idioma do áudio** nas configurações.
+
+## Um resumo ou uma tradução falha
+
+- **O DeepL não consegue traduzir para ….**: o DeepL não oferece suporte a esse idioma. Escolha outro provedor, como um modelo de linguagem.
+- **A resposta do modelo foi longa demais.**, **O modelo não retornou um resumo válido.** ou **O modelo não retornou uma tradução válida.**: o modelo não escreveu o resumo ou a tradução no formato esperado. Tente de novo ou escolha um modelo maior em **Preferências** → **IA**. Os modelos pequenos do Ollama falham com mais frequência.
+- Para qualquer outro erro, verifique se a chave de API do provedor está definida em **Preferências** → **Chaves de API** e se a sua conta tem créditos.
+
+## Não é possível verificar atualizações
+
+**Não foi possível verificar atualizações.** significa que o Audiotext não conseguiu acessar o GitHub. Verifique a sua conexão com a Internet, ou se um firewall ou proxy a bloqueia. Você sempre pode baixar a versão mais recente na [página de versões](https://github.com/HenestrosaDev/audiotext/releases/latest).
 
 ## Outro problema
 

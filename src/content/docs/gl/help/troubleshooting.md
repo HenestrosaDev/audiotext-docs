@@ -35,6 +35,8 @@ Se creaches a clave de API antes de engadir fondos por primeira vez e o erro per
 
 ## Non se poden identificar os falantes
 
+Se a transcrición falla con **Para identificar falantes precísase un token de Hugging Face.** ou **Non se puido descargar o modelo de identificación de falantes.**, o token falta, non é válido ou non pode acceder ao modelo.
+
 Identificar os falantes require un token de Hugging Face e aceptar as condicións do modelo. Comproba que:
 
 - Aceptaches as condicións de [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) coa mesma conta.
@@ -47,6 +49,11 @@ Consulta [Identifica os falantes](/gl/guides/transcription-settings/#identifica-
 - Comproba que o micrófono está conectado e fai clic no botón de actualizar xunto á lista de micrófonos.
 - En macOS, permite o acceso a Audiotext en **Configuración do Sistema** → **Privacidade e seguranza** → **Micrófono**. En Windows, en **Configuración** → **Privacidade** → **Micrófono**.
 - Se o medidor de nivel mostra **Non hai son**, escolle outro micrófono da lista ou comproba que non está silenciado.
+- Se se mostra **Non se gravou ningún audio.**, a gravación rematou antes de que o micrófono enviase ningún son. Volve gravar ou escolle outro micrófono.
+
+## Non se mostra o texto en directo
+
+Se se mostra **O texto non se pode mostrar mentres se grava.** mentres gravas, non se puido cargar o **Modelo en directo**: por exemplo, descárgase a primeira vez que se usa, o que require conexión a Internet, ou non hai memoria abonda. A gravación non se ve afectada e transcríbese como sempre ao detela. Escolle un **Modelo en directo** máis pequeno (p. ex. `tiny` ou `base`) na tarxeta **Texto en directo**.
 
 ## Non se pode reproducir o audio dunha transcrición
 
@@ -56,6 +63,13 @@ O ficheiro de orixe moveuse ou eliminouse. O texto consérvase, pero o audio só
 
 Asegúrate de que o URL é correcto e de que o vídeo é público. YouTube cambia a miúdo, así que, se segue fallando, comproba se hai unha versión máis recente de Audiotext.
 
+Se no seu lugar se mostra **O vídeo de YouTube non ten pista de audio.**, o vídeo non ten son que transcribir.
+
+## Non se pode transcribir unha ligazón
+
+- **O URL non apunta a un ficheiro de audio ou vídeo.**: a ligazón abre unha páxina web, non un ficheiro. Só funcionan as ligazóns de vídeos de YouTube e as ligazóns directas a ficheiros de audio ou vídeo. Busca na páxina a ligazón que descarga o ficheiro (p. ex. o episodio dun podcast) e úsaa, ou descarga o ficheiro e transcríbeo coa fonte **Ficheiro**.
+- **Non se puido descargar o ficheiro: …**: non se puido acceder ao ficheiro. Comproba que a ligazón se abre no teu navegador e que tes conexión a Internet. As ligazóns que requiren iniciar sesión non se poden descargar: descarga o ficheiro ti mesmo e usa a fonte **Ficheiro**.
+
 ## Un cartafol non transcribe ningún ficheiro
 
 Os ficheiros que xa teñen unha transcrición omítense. Activa **Sobrescribir os ficheiros existentes** para volver transcribilos. O cartafol tamén debe conter [ficheiros compatibles](/gl/reference/formats-and-languages/).
@@ -63,6 +77,16 @@ Os ficheiros que xa teñen unha transcrición omítense. Activa **Sobrescribir o
 ## A API de Google pide o idioma
 
 A API de Google non pode detectar o idioma. Escolle o **Idioma do audio** na configuración.
+
+## Falla un resumo ou unha tradución
+
+- **DeepL non pode traducir ao idioma ….**: DeepL non admite ese idioma. Escolle outro provedor, como un modelo de linguaxe.
+- **A resposta do modelo era demasiado longa.**, **O modelo non devolveu un resumo válido.** ou **O modelo non devolveu unha tradución válida.**: o modelo non escribiu o resumo ou a tradución co formato esperado. Téntao de novo ou escolle un modelo máis grande en **Preferencias** → **IA**. Os modelos pequenos de Ollama fallan máis a miúdo.
+- Para calquera outro erro, comproba que a clave de API do provedor está configurada en **Preferencias** → **Claves de API** e que a túa conta ten saldo.
+
+## Non se poden buscar actualizacións
+
+**Non se puido comprobar se hai actualizacións.** significa que Audiotext non puido conectar con GitHub. Comproba a túa conexión a Internet ou se un devasa ou un proxy a bloquea. Sempre podes descargar a última versión desde a [páxina de versións](https://github.com/HenestrosaDev/audiotext/releases/latest).
 
 ## Outro problema
 

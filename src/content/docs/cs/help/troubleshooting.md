@@ -35,6 +35,8 @@ Pokud jste klíč API vytvořili před prvním dobitím a chyba přetrvává i p
 
 ## Mluvčí nejsou rozpoznáni
 
+Pokud přepis selže se zprávou **Rozpoznávání mluvčích vyžaduje token Hugging Face.** nebo **Model pro rozpoznávání mluvčích se nepodařilo stáhnout.**, token chybí, není platný nebo nemá k modelu přístup.
+
 Rozpoznání mluvčích vyžaduje token Hugging Face a přijetí podmínek modelu. Zkontrolujte, že:
 
 - Jste přijali podmínky [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) se stejným účtem.
@@ -47,6 +49,11 @@ Viz [Rozpoznání mluvčích](/cs/guides/transcription-settings/#rozpoznání-ml
 - Zkontrolujte, že je mikrofon připojený, a klikněte na tlačítko obnovení vedle seznamu mikrofonů.
 - V macOS povolte Audiotextu přístup v **Nastavení systému** → **Soukromí a zabezpečení** → **Mikrofon**, ve Windows v **Nastavení** → **Ochrana osobních údajů** → **Mikrofon**.
 - Pokud měřič úrovně ukazuje **Žádný zvuk**, vyberte v seznamu jiný mikrofon nebo zkontrolujte, že není ztlumený.
+- Pokud se zobrazí **Nebyl nahrán žádný zvuk.**, nahrávání skončilo dřív, než mikrofon poslal jakýkoli zvuk. Nahrávejte znovu nebo zvolte jiný mikrofon.
+
+## Živý text se nezobrazuje
+
+Pokud se během nahrávání zobrazí **Text nelze během nahrávání zobrazit.**, nepodařilo se načíst **Živý model**: například se při prvním použití stahuje, k čemuž je potřeba připojení k internetu, nebo není dost paměti. Nahrávání to neovlivní a po zastavení se přepíše jako obvykle. Zvolte na kartě **Živý text** menší **Živý model** (např. `tiny` nebo `base`).
 
 ## Zvuk přepisu nelze přehrát
 
@@ -56,6 +63,13 @@ Zdrojový soubor byl přesunut nebo smazán. Text zůstává, ale zvuk lze přeh
 
 Zkontrolujte, že je URL správná a video veřejné. YouTube se často mění, takže pokud problém přetrvává, zkontrolujte, zda není k dispozici novější verze Audiotextu.
 
+Pokud se místo toho zobrazí **Video na YouTube nemá zvukovou stopu.**, video nemá žádný zvuk k přepisu.
+
+## Odkaz nelze přepsat
+
+- **URL neodkazuje na zvukový ani video soubor.**: odkaz otevírá webovou stránku, ne soubor. Fungují jen odkazy na videa z YouTube a přímé odkazy na zvukové nebo video soubory. Najděte na stránce odkaz, který soubor stahuje (např. epizodu podcastu), a použijte ho, nebo soubor stáhněte a přepište ho pomocí zdroje **Soubor**.
+- **Soubor se nepodařilo stáhnout: …**: soubor nebyl dostupný. Zkontrolujte, že se odkaz otevře v prohlížeči a že jste připojeni k internetu. Odkazy, které vyžadují přihlášení, stáhnout nelze: stáhněte soubor sami a použijte zdroj **Soubor**.
+
 ## Složka nepřepíše žádný soubor
 
 Soubory, které už přepis mají, se přeskakují. Zapněte **Přepsat existující soubory**, chcete-li je přepsat znovu. Složka také musí obsahovat [podporované soubory](/cs/reference/formats-and-languages/).
@@ -63,6 +77,16 @@ Soubory, které už přepis mají, se přeskakují. Zapněte **Přepsat existuj�
 ## Google API žádá o jazyk
 
 Google API neumí jazyk rozpoznat. V nastavení vyberte **Jazyk zvuku**.
+
+## Shrnutí nebo překlad selže
+
+- **DeepL nedokáže překládat do jazyka: ….**: DeepL tento jazyk nepodporuje. Zvolte jiného poskytovatele, například jazykový model.
+- **Odpověď modelu byla příliš dlouhá.**, **Model nevrátil platné shrnutí.** nebo **Model nevrátil platný překlad.**: model nenapsal shrnutí nebo překlad v očekávaném formátu. Zkuste to znovu nebo zvolte větší model v **Předvolby** → **AI**. Malé modely Ollamy selhávají častěji.
+- U jakékoli jiné chyby zkontrolujte, že je klíč API poskytovatele nastaven v **Předvolby** → **Klíče API** a že má váš účet kredit.
+
+## Aktualizace nelze zkontrolovat
+
+**Nepodařilo se zkontrolovat aktualizace.** znamená, že se Audiotext nemohl spojit s GitHubem. Zkontrolujte připojení k internetu a zda ho neblokuje firewall nebo proxy. Nejnovější verzi si vždy můžete stáhnout ze [stránky vydání](https://github.com/HenestrosaDev/audiotext/releases/latest).
 
 ## Něco jiného
 

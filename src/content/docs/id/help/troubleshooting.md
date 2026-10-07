@@ -35,6 +35,8 @@ Jika Anda membuat kunci API sebelum menambahkan dana untuk pertama kali dan kesa
 
 ## Pembicara tidak dapat diidentifikasi
 
+Jika transkripsi gagal dengan **Mengidentifikasi pembicara memerlukan token Hugging Face.** atau **Tidak dapat mengunduh model identifikasi pembicara.**, token tidak ada, tidak valid, atau tidak dapat mengakses model.
+
 Mengidentifikasi pembicara memerlukan token Hugging Face dan persetujuan atas ketentuan model. Periksa bahwa:
 
 - Anda telah menyetujui ketentuan [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) dengan akun yang sama.
@@ -47,6 +49,11 @@ Lihat [Identifikasi para pembicara](/id/guides/transcription-settings/#identifik
 - Periksa apakah mikrofon tersambung dan klik tombol segarkan di samping daftar mikrofon.
 - Di macOS, izinkan Audiotext di **Pengaturan Sistem** → **Privasi & Keamanan** → **Mikrofon**. Di Windows, di **Pengaturan** → **Privasi** → **Mikrofon**.
 - Jika pengukur level menampilkan **Tidak ada suara**, pilih mikrofon lain dalam daftar atau periksa apakah mikrofon tidak dibisukan.
+- Jika **Tidak ada audio yang direkam.** ditampilkan, perekaman berakhir sebelum mikrofon mengirim suara apa pun. Rekam lagi, atau pilih mikrofon lain.
+
+## Teks langsung tidak ditampilkan
+
+Jika **Teks tidak dapat ditampilkan saat merekam.** ditampilkan saat merekam, **Model langsung** tidak dapat dimuat: misalnya, model itu diunduh saat pertama kali digunakan, yang memerlukan koneksi Internet, atau memori tidak cukup. Rekaman tidak terpengaruh, dan ditranskripsi seperti biasa saat Anda berhenti. Pilih **Model langsung** yang lebih kecil (mis. `tiny` atau `base`) di kartu **Teks langsung**.
 
 ## Audio transkripsi tidak dapat diputar
 
@@ -56,6 +63,13 @@ File sumber telah dipindahkan atau dihapus. Teks tetap tersimpan, tetapi audio h
 
 Pastikan URL benar dan video bersifat publik. YouTube sering berubah, jadi jika masih gagal, periksa apakah ada versi Audiotext yang lebih baru.
 
+Jika yang ditampilkan adalah **Video YouTube tidak memiliki trek audio.**, video tersebut tidak memiliki suara untuk ditranskripsi.
+
+## Tautan tidak dapat ditranskripsi
+
+- **URL tidak mengarah ke file audio atau video.**: tautan membuka halaman web, bukan file. Hanya tautan video YouTube dan tautan langsung ke file audio atau video yang berfungsi. Cari di halaman itu tautan yang mengunduh file (mis. episode podcast) dan gunakan, atau unduh file tersebut dan transkripsikan dengan sumber **File**.
+- **File tidak dapat diunduh: …**: file tidak dapat dijangkau. Pastikan tautan terbuka di browser Anda dan Anda terhubung ke Internet. Tautan yang memerlukan login tidak dapat diunduh: unduh file sendiri dan gunakan sumber **File**.
+
 ## Folder tidak mentranskripsi file apa pun
 
 File yang sudah memiliki transkripsi akan dilewati. Aktifkan **Timpa file yang ada** untuk mentranskripsinya lagi. Folder juga harus berisi [file yang didukung](/id/reference/formats-and-languages/).
@@ -63,6 +77,16 @@ File yang sudah memiliki transkripsi akan dilewati. Aktifkan **Timpa file yang a
 ## Google API meminta bahasa
 
 Google API tidak dapat mendeteksi bahasa. Pilih **Bahasa audio** di pengaturan.
+
+## Ringkasan atau terjemahan gagal
+
+- **DeepL tidak dapat menerjemahkan ke bahasa ….**: DeepL tidak mendukung bahasa tersebut. Pilih penyedia lain, seperti model bahasa.
+- **Balasan model terlalu panjang.**, **Model tidak mengembalikan ringkasan yang valid.**, atau **Model tidak mengembalikan terjemahan yang valid.**: model tidak menulis ringkasan atau terjemahan dalam format yang diharapkan. Coba lagi, atau pilih model yang lebih besar di **Preferensi** → **AI**. Model kecil Ollama lebih sering gagal.
+- Untuk kesalahan lainnya, pastikan kunci API penyedia sudah diatur di **Preferensi** → **Kunci API** dan akun Anda memiliki kredit.
+
+## Pembaruan tidak dapat diperiksa
+
+**Tidak dapat memeriksa pembaruan.** berarti Audiotext tidak dapat menjangkau GitHub. Periksa koneksi Internet Anda, atau apakah firewall atau proxy memblokirnya. Anda selalu dapat mengunduh versi terbaru dari [halaman rilis](https://github.com/HenestrosaDev/audiotext/releases/latest).
 
 ## Masalah lain
 

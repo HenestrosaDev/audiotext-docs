@@ -35,6 +35,8 @@ Nếu bạn tạo khóa API trước lần nạp tiền đầu tiên và lỗi v
 
 ## Không nhận diện được người nói
 
+Nếu bản chép lời thất bại với **Nhận diện người nói cần token Hugging Face.** hoặc **Không thể tải xuống mô hình nhận diện người nói.**, token bị thiếu, không hợp lệ hoặc không truy cập được mô hình.
+
 Nhận diện người nói cần token Hugging Face và việc chấp nhận điều khoản của mô hình. Hãy kiểm tra rằng:
 
 - Bạn đã chấp nhận điều khoản của [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) bằng cùng một tài khoản.
@@ -47,6 +49,11 @@ Xem [Nhận diện những người nói](/vi/guides/transcription-settings/#nh�
 - Kiểm tra micrô đã được kết nối và nhấp nút làm mới cạnh danh sách micrô.
 - Trên macOS, cấp quyền cho Audiotext trong **Cài đặt hệ thống** → **Quyền riêng tư & Bảo mật** → **Micrô**. Trên Windows, trong **Cài đặt** → **Quyền riêng tư** → **Micrô**.
 - Nếu đồng hồ mức âm hiển thị **Không có âm thanh**, hãy chọn micrô khác trong danh sách hoặc kiểm tra micrô có bị tắt tiếng không.
+- Nếu hiển thị **Không ghi được âm thanh nào.**, việc ghi âm đã kết thúc trước khi micrô gửi bất kỳ âm thanh nào. Hãy ghi lại, hoặc chọn micrô khác.
+
+## Văn bản trực tiếp không hiển thị
+
+Nếu **Không thể hiển thị văn bản khi đang ghi âm.** hiển thị khi đang ghi âm, **Mô hình trực tiếp** không tải được: ví dụ, mô hình được tải xuống lần đầu khi dùng, việc này cần kết nối Internet, hoặc không đủ bộ nhớ. Bản ghi âm không bị ảnh hưởng và vẫn được chép lời như thường khi bạn dừng. Chọn **Mô hình trực tiếp** nhỏ hơn (ví dụ `tiny` hoặc `base`) trong thẻ **Văn bản trực tiếp**.
 
 ## Không phát được âm thanh của bản chép lời
 
@@ -56,6 +63,13 @@ Tệp nguồn đã bị di chuyển hoặc xóa. Văn bản vẫn được giữ
 
 Hãy kiểm tra URL đúng và video ở chế độ công khai. YouTube thay đổi thường xuyên, nên nếu vẫn lỗi, hãy kiểm tra xem có phiên bản Audiotext mới hơn không.
 
+Nếu thay vào đó hiển thị **Video YouTube không có rãnh âm thanh.**, video không có âm thanh để chép lời.
+
+## Không thể chép lời một liên kết
+
+- **URL không trỏ đến tệp âm thanh hoặc video.**: liên kết mở một trang web, không phải một tệp. Chỉ liên kết của video YouTube và liên kết trực tiếp đến tệp âm thanh hoặc video mới dùng được. Hãy tìm trên trang liên kết tải tệp xuống (ví dụ tập của một podcast) và dùng nó, hoặc tải tệp xuống rồi chép lời bằng nguồn **Tệp**.
+- **Không thể tải xuống tệp: …**: không truy cập được tệp. Kiểm tra liên kết có mở được trong trình duyệt không và bạn có đang kết nối Internet không. Không thể tải xuống liên kết yêu cầu đăng nhập: hãy tự tải tệp xuống và dùng nguồn **Tệp**.
+
 ## Thư mục không chép lời được tệp nào
 
 Các tệp đã có bản chép lời sẽ bị bỏ qua. Bật **Ghi đè tệp hiện có** để chép lời lại. Thư mục cũng phải chứa [tệp được hỗ trợ](/vi/reference/formats-and-languages/).
@@ -63,6 +77,16 @@ Các tệp đã có bản chép lời sẽ bị bỏ qua. Bật **Ghi đè tệp
 ## Google API yêu cầu chọn ngôn ngữ
 
 Google API không thể phát hiện ngôn ngữ. Hãy chọn **Ngôn ngữ của âm thanh** trong cài đặt.
+
+## Tóm tắt hoặc bản dịch thất bại
+
+- **DeepL không thể dịch sang ….**: DeepL không hỗ trợ ngôn ngữ đó. Hãy chọn nhà cung cấp khác, như một mô hình ngôn ngữ.
+- **Phản hồi của mô hình quá dài.**, **Mô hình không trả về bản tóm tắt hợp lệ.** hoặc **Mô hình không trả về bản dịch hợp lệ.**: mô hình không viết tóm tắt hoặc bản dịch theo định dạng mong đợi. Hãy thử lại, hoặc chọn mô hình lớn hơn trong **Tùy chọn ưu tiên** → **AI**. Các mô hình nhỏ của Ollama thất bại thường xuyên hơn.
+- Với mọi lỗi khác, hãy kiểm tra khóa API của nhà cung cấp đã được đặt trong **Tùy chọn ưu tiên** → **Khóa API** và tài khoản của bạn còn tín dụng.
+
+## Không thể kiểm tra cập nhật
+
+**Không thể kiểm tra cập nhật.** nghĩa là Audiotext không kết nối được với GitHub. Hãy kiểm tra kết nối Internet, hoặc xem tường lửa hay proxy có chặn kết nối không. Bạn luôn có thể tải phiên bản mới nhất từ [trang phát hành](https://github.com/HenestrosaDev/audiotext/releases/latest).
 
 ## Sự cố khác
 

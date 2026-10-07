@@ -35,6 +35,8 @@ If you created the API key before adding funds for the first time and the error 
 
 ## The speakers can't be identified
 
+If the transcription fails with **Identifying speakers requires a Hugging Face token.** or **Could not download the speaker identification model.**, the token is missing, isn't valid or can't access the model.
+
 Identifying the speakers requires a Hugging Face token, and accepting the conditions of the model. Check that:
 
 - You've accepted the conditions of [pyannote/speaker-diarization-community-1](https://huggingface.co/pyannote/speaker-diarization-community-1) with the same account.
@@ -47,6 +49,11 @@ See [Identify the speakers](/en/guides/transcription-settings/#identify-the-spea
 - Check that the microphone is connected and click the refresh button next to the list of microphones.
 - On macOS, allow Audiotext in **System Settings** → **Privacy & Security** → **Microphone**. On Windows, in **Settings** → **Privacy** → **Microphone**.
 - If the level meter shows **No sound**, choose another microphone in the list or check that it isn't muted.
+- If **No audio was recorded.** is shown, the recording ended before the microphone sent any sound. Record again, or choose another microphone.
+
+## The live text isn't shown
+
+If **The text can't be shown while recording.** is shown while recording, the **Live model** couldn't be loaded: for example, it's downloaded the first time it's used, which needs an Internet connection, or there isn't enough memory. The recording isn't affected, and it's transcribed as usual when you stop. Choose a smaller **Live model** (e.g. `tiny` or `base`) in the **Live text** card.
 
 ## The audio of a transcription can't be played
 
@@ -56,6 +63,13 @@ The source file was moved or deleted. The text is kept, but the audio can only b
 
 Make sure the URL is correct and the video is public. YouTube changes often, so if it still fails, check for a newer version of Audiotext.
 
+If **The YouTube video doesn't have an audio track.** is shown instead, the video has no sound to transcribe.
+
+## A link can't be transcribed
+
+- **The URL doesn't point to an audio or video file.**: the link opens a web page, not a file. Only the links of YouTube videos and the direct links to audio or video files work. Look on the page for the link that downloads the file (e.g. the episode of a podcast) and use it, or download the file and transcribe it with the **File** source.
+- **The file could not be downloaded: …**: the file couldn't be reached. Check that the link opens in your browser and that you're connected to the Internet. Links that require logging in can't be downloaded: download the file yourself and use the **File** source.
+
 ## A folder doesn't transcribe any file
 
 The files that already have a transcription are skipped. Turn on **Overwrite existing files** to transcribe them again. The folder must also contain [supported files](/en/reference/formats-and-languages/).
@@ -63,6 +77,16 @@ The files that already have a transcription are skipped. Turn on **Overwrite exi
 ## The Google API asks for the language
 
 The Google API can't detect the language. Choose the **Language of the audio** in the settings.
+
+## A summary or a translation fails
+
+- **DeepL can't translate into ….**: DeepL doesn't support that language. Choose another provider, such as a language model.
+- **The reply of the model was too long.**, **The model didn't return a valid summary.** or **The model didn't return a valid translation.**: the model didn't write the summary or the translation in the expected format. Try again, or choose a larger model in **Preferences** → **AI**. The small models of Ollama fail more often.
+- For any other error, check that the API key of the provider is set in **Preferences** → **API keys** and that your account has credits.
+
+## Updates can't be checked
+
+**Could not check for updates.** means that Audiotext couldn't reach GitHub. Check your Internet connection, or whether a firewall or a proxy blocks it. You can always download the latest version from the [releases page](https://github.com/HenestrosaDev/audiotext/releases/latest).
 
 ## Something else
 
