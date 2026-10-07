@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext lưu dữ liệu của bạn trên máy tính của bạn. Không có gì được gửi đi trừ khi bạn dùng công cụ từ xa (Whisper API hoặc Google API) hoặc nhà cung cấp AI khác ngoài Ollama.
+Audiotext lưu dữ liệu của bạn trên máy tính của bạn. Không có gì được gửi đi trừ khi bạn dùng công cụ từ xa (Whisper API hoặc Google API) hoặc nhà cung cấp AI khác ngoài Ollama. Khi mở, ứng dụng cũng hỏi GitHub xem có phiên bản mới không; bạn có thể tắt việc này trong **Tùy chọn ưu tiên** → **Chung** → **Cập nhật**.
 
 ## Thư mục cấu hình người dùng
 

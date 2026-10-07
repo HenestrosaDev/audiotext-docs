@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext keeps your data on your computer. Nothing is sent anywhere unless you use a remote engine (the Whisper API or the Google API) or an AI provider other than Ollama.
+Audiotext keeps your data on your computer. Nothing is sent anywhere unless you use a remote engine (the Whisper API or the Google API) or an AI provider other than Ollama. When it opens, it also asks GitHub whether there's a new version, which you can turn off in **Preferences** → **General** → **Updates**.
 
 ## User configuration folder
 

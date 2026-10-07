@@ -14,6 +14,7 @@ sidebar:
 - **Tarih biçimi**: transkripsiyonların tarihlerinin arayüz dilinde nasıl gösterileceği: kısa (`4.10.2026`), orta (`4 Eki 2026`, varsayılan), uzun (`4 Ekim 2026`) veya ISO (`2026-10-04`). Menü her biçimi bir örnekle gösterir.
 - **Saat biçimi**: **Otomatik** (arayüz dilinin saati), 12 saat (`ÖS 1:30`) veya 24 saat (`13:30`).
 - **Bildirimler**: bir transkripsiyon hazır olduğunda sistem bildirimi gösterir (bir klasörde, tüm dosyaları hazır olduğunda; izlenen bir klasörde ise her yeni dosya hazır olduğunda). Varsayılan olarak açıktır. macOS'ta **Komut Dosyası Düzenleyici**'den, Windows'ta **Windows PowerShell**'den gelir; bu nedenle sistem ayarlarında bu uygulamalar için izin verilir veya sessize alınır. Linux'ta `notify-send` (`libnotify-bin` veya `libnotify` paketi) gerekir.
+- **Güncellemeler**: uygulama açıldığında yeni bir sürüm olup olmadığını denetler ve varsa üst çubukta indirme sayfasını açan **Sürüm … kullanılabilir** düğmesini gösterir. Ön sürümler önerilmez. Varsayılan olarak açıktır.
 
 ## YZ
 
@@ -63,4 +64,4 @@ Bir klasör WhisperX ile yazıya döküldüğünde kaydedilen `.srt` ve `.vtt` d
 
 ## Hakkında
 
-Audiotext sürümü ve bu belgelere, GitHub'daki kaynak koda ve bağış sayfasına bağlantılar.
+Audiotext sürümü ve bu belgelere, GitHub'daki kaynak koda ve bağış sayfasına bağlantılar. **Güncellemeleri denetle**, yeni bir sürüm olup olmadığını hemen denetler: varsa düğme **İndir**'e dönüşür ve sayfasını açar.

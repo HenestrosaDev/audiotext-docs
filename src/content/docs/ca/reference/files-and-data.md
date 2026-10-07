@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext desa les teves dades al teu ordinador. No s'envia res enlloc tret que facis servir un motor remot (l'API de Whisper o l'API de Google) o un proveïdor d'IA diferent d'Ollama.
+Audiotext desa les teves dades al teu ordinador. No s'envia res enlloc tret que facis servir un motor remot (l'API de Whisper o l'API de Google) o un proveïdor d'IA diferent d'Ollama. En obrir-se, també pregunta a GitHub si hi ha una versió nova, cosa que pots desactivar a **Preferències** → **General** → **Actualitzacions**.
 
 ## Carpeta de configuració d'usuari
 

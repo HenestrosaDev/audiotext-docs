@@ -14,6 +14,7 @@ sidebar:
 - **Datumformat**: hur transkriberingarnas datum visas, på gränssnittets språk: kort (`2026-10-04`), medel (`4 okt. 2026`, standard), långt (`4 oktober 2026`) eller ISO (`2026-10-04`). Menyn visar varje format med ett exempel (format som ser likadana ut visas en gång).
 - **Tidsformat**: **Automatiskt** (gränssnittsspråkets klocka), 12-timmars (`1:30 em`) eller 24-timmars (`13:30`).
 - **Aviseringar**: visar en systemavisering när en transkribering är klar (för en mapp, när alla dess filer är klara, och för en bevakad mapp, varje gång en ny fil är klar). På som standard. På macOS kommer de från **Skriptredigerare** och på Windows från **Windows PowerShell**, så de tillåts eller tystas för de apparna i systemets inställningar. På Linux kräver de `notify-send` (paketet `libnotify-bin` eller `libnotify`).
+- **Uppdateringar**: söker efter en ny version när appen öppnas och visar, om det finns en, knappen **Version … är tillgänglig** i det övre fältet, som öppnar dess nedladdningssida. Förhandsversioner erbjuds inte. På som standard.
 
 ## AI
 
@@ -63,4 +64,4 @@ Alternativen för `.srt`- och `.vtt`-filerna som sparas när en mapp transkriber
 
 ## Om
 
-Audiotexts version och länkar till denna dokumentation, till källkoden på GitHub och till donationssidan.
+Audiotexts version och länkar till denna dokumentation, till källkoden på GitHub och till donationssidan. **Sök efter uppdateringar** söker direkt efter en ny version: om det finns en blir knappen **Ladda ned** och öppnar dess sida.

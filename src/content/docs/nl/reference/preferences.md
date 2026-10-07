@@ -14,6 +14,7 @@ De **Voorkeuren** bevatten de instellingen die niet per transcriptie veranderen.
 - **Datumnotatie**: hoe de datums van de transcripties worden getoond, in de taal van de interface: kort (`04-10-2026`), middel (`4 okt 2026`, standaard), lang (`4 oktober 2026`) of ISO (`2026-10-04`). Het menu toont elke notatie met een voorbeeld.
 - **Tijdnotatie**: **Automatisch** (de klok van de taal van de interface), 12-uurs (`1:30 p.m.`) of 24-uurs (`13:30`).
 - **Meldingen**: toont een systeemmelding wanneer een transcriptie klaar is (bij een map, wanneer al zijn bestanden klaar zijn, en bij een bewaakte map, telkens wanneer een nieuw bestand klaar is). Standaard aan. Op macOS komen ze van **Scripteditor** en op Windows van **Windows PowerShell**, dus ze worden voor die apps toegestaan of gedempt in de instellingen van het systeem. Op Linux is `notify-send` nodig (het pakket `libnotify-bin` of `libnotify`).
+- **Updates**: controleert bij het openen van de app of er een nieuwe versie is en toont, als die er is, in de bovenste balk een knop **Versie … is beschikbaar** die de downloadpagina opent. Voorlopige versies worden niet aangeboden. Standaard aan.
 
 ## AI
 
@@ -63,4 +64,4 @@ De opties van de `.srt`- en `.vtt`-bestanden die worden opgeslagen bij het trans
 
 ## Over
 
-De versie van Audiotext en links naar deze documentatie, de broncode op GitHub en de donatiepagina.
+De versie van Audiotext en links naar deze documentatie, de broncode op GitHub en de donatiepagina. **Controleren op updates** controleert meteen of er een nieuwe versie is: als die er is, wordt de knop **Downloaden** en opent hij de pagina ervan.

@@ -54,6 +54,12 @@ Lần đầu chép lời bằng **WhisperX** (công cụ mặc định), mô hì
 - Để chép lời từ micrô, hệ thống phải nhận diện được thiết bị đầu vào.
 - Trên Linux, ghi âm và phát âm thanh cần [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` trên Ubuntu hoặc Debian).
 
+## Cập nhật ứng dụng
+
+Khi có phiên bản mới, Audiotext hiển thị nút **Đã có phiên bản …** trên thanh trên cùng. Nhấp vào nút để mở trang phát hành, tải tệp cho hệ thống của bạn và cài đặt như lần đầu: chạy trình cài đặt mới trên Windows, kéo ứng dụng mới vào thư mục **Ứng dụng** trên macOS, hoặc chạy `install.sh` của bản lưu trữ mới trên Linux. Phiên bản trước sẽ được thay thế, còn cài đặt và lịch sử của bạn vẫn được giữ, vì chúng được lưu trong [thư mục cấu hình người dùng](/vi/reference/files-and-data/#thư-mục-cấu-hình-người-dùng). Nếu bạn dùng tiện ích bổ sung GPU, hãy chọn lại khi cài đặt.
+
+Để tự kiểm tra phiên bản mới, mở **Tùy chọn ưu tiên** → **Giới thiệu** → **Kiểm tra cập nhật**. Để ngừng kiểm tra khi mở ứng dụng, tắt **Chung** → **Cập nhật**.
+
 ## Đổi ngôn ngữ giao diện
 
 Audiotext dùng ngôn ngữ của hệ thống nếu có. Để đổi, mở **Tùy chọn ưu tiên** (biểu tượng bánh răng ở góc trên bên phải) và chọn ngôn ngữ trong **Chung** → **Ngôn ngữ giao diện**.

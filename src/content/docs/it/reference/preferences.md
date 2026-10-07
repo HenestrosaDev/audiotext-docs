@@ -14,6 +14,7 @@ Le **Preferenze** contengono le impostazioni che non cambiano a ogni trascrizion
 - **Formato della data**: come vengono mostrate le date delle trascrizioni, nella lingua dell'interfaccia: breve (`04/10/26`), medio (`4 ott 2026`, predefinito), lungo (`4 ottobre 2026`) o ISO (`2026-10-04`). Il menu mostra ogni formato con un esempio.
 - **Formato dell'ora**: **Automatico** (l'orologio della lingua dell'interfaccia), a 12 ore (`1:30 PM`) o a 24 ore (`13:30`).
 - **Notifiche**: mostra una notifica di sistema quando una trascrizione è pronta (per una cartella, quando lo sono tutti i suoi file, e per una cartella monitorata, ogni volta che lo è un nuovo file). Attivo per impostazione predefinita. Su macOS provengono da **Script Editor** e su Windows da **Windows PowerShell**, quindi si consentono o si silenziano per queste app nelle impostazioni del sistema. Su Linux richiedono `notify-send` (il pacchetto `libnotify-bin` o `libnotify`).
+- **Aggiornamenti**: controlla se è disponibile una nuova versione all'apertura dell'app e, se c'è, mostra nella barra superiore un pulsante **La versione … è disponibile** che apre la sua pagina di download. Le versioni preliminari non vengono proposte. Attivo per impostazione predefinita.
 
 ## IA
 
@@ -63,4 +64,4 @@ Le opzioni dei file `.srt` e `.vtt` salvati quando si trascrive una cartella con
 
 ## Informazioni
 
-La versione di Audiotext e i link a questa documentazione, al codice sorgente su GitHub e alla pagina delle donazioni.
+La versione di Audiotext e i link a questa documentazione, al codice sorgente su GitHub e alla pagina delle donazioni. **Controlla aggiornamenti** controlla subito se c'è una nuova versione: se c'è, il pulsante diventa **Scarica** e apre la sua pagina.

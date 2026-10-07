@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext bewaart je gegevens op je computer. Er wordt niets verstuurd, tenzij je een externe engine gebruikt (de Whisper-API of de Google-API) of een andere AI-aanbieder dan Ollama.
+Audiotext bewaart je gegevens op je computer. Er wordt niets verstuurd, tenzij je een externe engine gebruikt (de Whisper-API of de Google-API) of een andere AI-aanbieder dan Ollama. Bij het openen vraagt het ook aan GitHub of er een nieuwe versie is, wat je kunt uitzetten via **Voorkeuren** → **Algemeen** → **Updates**.
 
 ## Configuratiemap van de gebruiker
 

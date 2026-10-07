@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext guarda tus datos en tu ordenador. No se envía nada a ninguna parte salvo que uses un motor remoto (la API de Whisper o la API de Google) o un proveedor de IA distinto de Ollama.
+Audiotext guarda tus datos en tu ordenador. No se envía nada a ninguna parte salvo que uses un motor remoto (la API de Whisper o la API de Google) o un proveedor de IA distinto de Ollama. Al abrirse, también pregunta a GitHub si hay una versión nueva, lo que puedes desactivar en **Preferencias** → **General** → **Actualizaciones**.
 
 ## Carpeta de configuración de usuario
 

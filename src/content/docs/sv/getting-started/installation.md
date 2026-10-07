@@ -54,6 +54,12 @@ Första gången du transkriberar med **WhisperX** (standardmotorn) laddas dess m
 - För att transkribera från mikrofonen måste systemet hitta en inmatningsenhet.
 - På Linux kräver inspelning och uppspelning [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` på Ubuntu eller Debian).
 
+## Uppdatera appen
+
+När en ny version släpps visar Audiotext knappen **Version … är tillgänglig** i det övre fältet. Klicka på den för att öppna versionens sida, ladda ned filen för ditt system och installera den som första gången: kör det nya installationsprogrammet i Windows, dra den nya appen till mappen **Program** i macOS eller kör `install.sh` i det nya arkivet i Linux. Den tidigare versionen ersätts, och dina inställningar och din historik behålls, eftersom de lagras i din [användarens konfigurationsmapp](/sv/reference/files-and-data/#användarens-konfigurationsmapp). Om du använder GPU-tillägget väljer du det igen vid installationen.
+
+Om du vill söka efter en ny version själv öppnar du **Inställningar** → **Om** → **Sök efter uppdateringar**. Om du inte vill att appen söker när den öppnas stänger du av **Allmänt** → **Uppdateringar**.
+
 ## Ändra gränssnittets språk
 
 Audiotext använder systemets språk om det finns. För att ändra det öppnar du **Inställningar** (kugghjulet uppe till höger) och väljer ett språk under **Allmänt** → **Gränssnittets språk**.

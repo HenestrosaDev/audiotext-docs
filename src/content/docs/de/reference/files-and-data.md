@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext bewahrt Ihre Daten auf Ihrem Computer auf. Es wird nichts gesendet, außer Sie verwenden eine entfernte Engine (die Whisper-API oder die Google-API) oder einen anderen KI-Anbieter als Ollama.
+Audiotext bewahrt Ihre Daten auf Ihrem Computer auf. Es wird nichts gesendet, außer Sie verwenden eine entfernte Engine (die Whisper-API oder die Google-API) oder einen anderen KI-Anbieter als Ollama. Beim Öffnen fragt es außerdem bei GitHub nach, ob es eine neue Version gibt, was Sie unter **Einstellungen** → **Allgemein** → **Updates** deaktivieren können.
 
 ## Benutzerkonfigurationsordner
 

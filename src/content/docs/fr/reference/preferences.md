@@ -14,6 +14,7 @@ Les **Préférences** regroupent les réglages qui ne changent pas à chaque tra
 - **Format de la date** : comment les dates des transcriptions sont affichées, dans la langue de l’interface : court (`04/10/2026`), moyen (`4 oct. 2026`, par défaut), long (`4 octobre 2026`) ou ISO (`2026-10-04`). Le menu montre chaque format avec un exemple.
 - **Format de l’heure** : **Automatique** (l’horloge de la langue de l’interface), sur 12 heures (`1:30 PM`) ou sur 24 heures (`13:30`).
 - **Notifications** : affiche une notification du système lorsqu’une transcription est prête (pour un dossier, lorsque tous ses fichiers le sont, et pour un dossier surveillé, chaque fois qu’un nouveau fichier l’est). Activé par défaut. Sur macOS, elles proviennent de **Éditeur de script** et sur Windows de **Windows PowerShell** : elles s’autorisent ou se désactivent pour ces applications dans les réglages du système. Sur Linux, elles nécessitent `notify-send` (le paquet `libnotify-bin` ou `libnotify`).
+- **Mises à jour** : vérifie si une nouvelle version est disponible à l’ouverture de l’application et, s’il y en a une, affiche dans la barre supérieure un bouton **La version … est disponible** qui ouvre sa page de téléchargement. Les préversions ne sont pas proposées. Activé par défaut.
 
 ## IA
 
@@ -63,4 +64,4 @@ Les options des fichiers `.srt` et `.vtt` enregistrés lors de la transcription 
 
 ## À propos
 
-La version d’Audiotext et des liens vers cette documentation, le code source sur GitHub et la page de dons.
+La version d’Audiotext et des liens vers cette documentation, le code source sur GitHub et la page de dons. **Rechercher des mises à jour** vérifie immédiatement si une nouvelle version est disponible : s’il y en a une, le bouton devient **Télécharger** et ouvre sa page.

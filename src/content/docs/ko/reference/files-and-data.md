@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext는 데이터를 내 컴퓨터에 보관합니다. 원격 엔진(Whisper API 또는 Google API)이나 Ollama 이외의 AI 제공자를 사용하지 않는 한 아무것도 전송되지 않습니다.
+Audiotext는 데이터를 내 컴퓨터에 보관합니다. 원격 엔진(Whisper API 또는 Google API)이나 Ollama 이외의 AI 제공자를 사용하지 않는 한 아무것도 전송되지 않습니다. 또한 앱을 열 때 새 버전이 있는지 GitHub에 확인하며, 이는 **환경설정** → **일반** → **업데이트**에서 끌 수 있습니다.
 
 ## 사용자 설정 폴더
 

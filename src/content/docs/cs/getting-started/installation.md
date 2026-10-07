@@ -54,6 +54,12 @@ Při prvním přepisu pomocí **WhisperX** (výchozího nástroje) se stáhne je
 - Pro přepis z mikrofonu musí systém rozpoznat vstupní zařízení.
 - V Linuxu nahrávání a přehrávání vyžaduje [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` v Ubuntu nebo Debianu).
 
+## Aktualizujte aplikaci
+
+Když vyjde nová verze, Audiotext zobrazí na horní liště tlačítko **Je k dispozici verze …**. Kliknutím otevřete stránku vydání, stáhněte soubor pro svůj systém a nainstalujte ho stejně jako poprvé: ve Windows spusťte nový instalátor, v macOS přetáhněte novou aplikaci do složky **Aplikace** a v Linuxu spusťte `install.sh` z nového archivu. Předchozí verze se nahradí a vaše nastavení i historie zůstanou zachovány, protože jsou uloženy v [uživatelské konfigurační složce](/cs/reference/files-and-data/#uživatelská-konfigurační-složka). Pokud používáte doplněk pro GPU, při instalaci ho zvolte znovu.
+
+Chcete-li novou verzi zkontrolovat sami, otevřete **Předvolby** → **O aplikaci** → **Zkontrolovat aktualizace**. Chcete-li kontrolu při otevření aplikace vypnout, vypněte **Obecné** → **Aktualizace**.
+
 ## Změňte jazyk rozhraní
 
 Audiotext používá jazyk systému, pokud je k dispozici. Chcete-li ho změnit, otevřete **Předvolby** (ozubené kolo vpravo nahoře) a vyberte jazyk v **Obecné** → **Jazyk rozhraní**.

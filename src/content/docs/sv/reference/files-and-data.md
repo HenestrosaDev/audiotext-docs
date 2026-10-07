@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext behåller dina data på din dator. Inget skickas någonstans om du inte använder en fjärrmotor (Whisper-API:t eller Google-API:t) eller en annan AI-leverantör än Ollama.
+Audiotext behåller dina data på din dator. Inget skickas någonstans om du inte använder en fjärrmotor (Whisper-API:t eller Google-API:t) eller en annan AI-leverantör än Ollama. När den öppnas frågar den också GitHub om det finns en ny version, vilket du kan stänga av under **Inställningar** → **Allmänt** → **Uppdateringar**.
 
 ## Användarens konfigurationsmapp
 

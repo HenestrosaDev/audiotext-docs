@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext 将你的数据保存在你的电脑上。除非你使用远程引擎（Whisper API 或 Google API）或 Ollama 以外的 AI 提供商，否则不会发送任何内容。
+Audiotext 将你的数据保存在你的电脑上。除非你使用远程引擎（Whisper API 或 Google API）或 Ollama 以外的 AI 提供商，否则不会发送任何内容。打开时，它还会向 GitHub 查询是否有新版本，你可以在**偏好设置** → **常规** → **更新**中关闭此功能。
 
 ## 用户配置文件夹
 

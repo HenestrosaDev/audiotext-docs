@@ -14,6 +14,7 @@ Les **Preferències** contenen la configuració que no canvia amb cada transcrip
 - **Format de la data**: com es mostren les dates de les transcripcions, en l'idioma de la interfície: curt (`4/10/26`), mitjà (`4 d’oct. 2026`, per defecte), llarg (`4 d’octubre de 2026`) o ISO (`2026-10-04`). El menú mostra cada format amb un exemple.
 - **Format de l'hora**: **Automàtic** (el rellotge de l'idioma de la interfície), de 12 hores (`1:30 p. m.`) o de 24 hores (`13:30`).
 - **Notificacions**: mostra una notificació del sistema quan una transcripció està a punt (en una carpeta, quan ho estan tots els fitxers, i en una carpeta vigilada, cada vegada que ho està un fitxer nou). Activat per defecte. A macOS provenen de **Script Editor** i a Windows de **Windows PowerShell**, de manera que es permeten o se silencien per a aquestes aplicacions a la configuració del sistema. A Linux requereixen `notify-send` (el paquet `libnotify-bin` o `libnotify`).
+- **Actualitzacions**: comprova si hi ha una versió nova quan s'obre l'aplicació i, si n'hi ha, mostra un botó **Versió … disponible** a la barra superior que obre la seva pàgina de baixada. No s'ofereixen les versions preliminars. Activat per defecte.
 
 ## IA
 
@@ -63,4 +64,4 @@ Les opcions dels fitxers `.srt` i `.vtt` que es desen en transcriure una carpeta
 
 ## Quant a
 
-La versió d'Audiotext i enllaços a aquesta documentació, al codi font a GitHub i a la pàgina de donacions.
+La versió d'Audiotext i enllaços a aquesta documentació, al codi font a GitHub i a la pàgina de donacions. **Cerca actualitzacions** comprova al moment si hi ha una versió nova: si n'hi ha, el botó es converteix en **Baixa** i obre la seva pàgina.

@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext przechowuje twoje dane na twoim komputerze. Nic nie jest nigdzie wysyłane, chyba że używasz zdalnego silnika (API Whisper lub API Google) albo dostawcy AI innego niż Ollama.
+Audiotext przechowuje twoje dane na twoim komputerze. Nic nie jest nigdzie wysyłane, chyba że używasz zdalnego silnika (API Whisper lub API Google) albo dostawcy AI innego niż Ollama. Przy otwieraniu pyta też GitHub, czy jest nowa wersja, co możesz wyłączyć w **Preferencje** → **Ogólne** → **Aktualizacje**.
 
 ## Folder konfiguracji użytkownika
 

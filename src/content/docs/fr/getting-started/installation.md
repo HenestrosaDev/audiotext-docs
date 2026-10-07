@@ -54,6 +54,12 @@ La première fois que vous transcrivez avec **WhisperX** (le moteur par défaut)
 - Pour transcrire depuis le microphone, votre système doit détecter un périphérique d’entrée.
 - Sous Linux, l’enregistrement et la lecture audio nécessitent [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` sous Ubuntu ou Debian).
 
+## Mettez à jour l’application
+
+Lorsqu’une nouvelle version sort, Audiotext affiche un bouton **La version … est disponible** dans la barre supérieure. Cliquez dessus pour ouvrir la page de la version, téléchargez le fichier de votre système et installez-le comme la première fois : lancez le nouvel installateur sous Windows, faites glisser la nouvelle application dans le dossier **Applications** sous macOS, ou lancez le `install.sh` de la nouvelle archive sous Linux. La version précédente est remplacée, et vos réglages et votre historique sont conservés, car ils sont enregistrés dans votre [dossier de configuration utilisateur](/fr/reference/files-and-data/#dossier-de-configuration-utilisateur). Si vous utilisez le module GPU, choisissez-le de nouveau lors de l’installation.
+
+Pour vérifier vous-même s’il existe une nouvelle version, ouvrez **Préférences** → **À propos** → **Rechercher des mises à jour**. Pour ne plus vérifier à l’ouverture de l’application, désactivez **Général** → **Mises à jour**.
+
 ## Changez la langue de l’interface
 
 Audiotext utilise la langue de votre système si elle est disponible. Pour la changer, ouvrez les **Préférences** (l’engrenage en haut à droite) et choisissez une langue dans **Général** → **Langue de l’interface**.

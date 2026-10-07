@@ -14,6 +14,7 @@ sidebar:
 - **Formát data**: jak se zobrazují data přepisů v jazyce rozhraní: krátký (`04.10.26`), střední (`4. 10. 2026`, výchozí), dlouhý (`4. října 2026`) nebo ISO (`2026-10-04`). Nabídka ukazuje každý formát na příkladu.
 - **Formát času**: **Automaticky** (hodiny jazyka rozhraní), 12hodinový (`1:30 odp.`) nebo 24hodinový (`13:30`).
 - **Oznámení**: zobrazí systémové oznámení, když je přepis hotový (u složky, když jsou hotové všechny její soubory, a u sledované složky pokaždé, když je hotový nový soubor). Ve výchozím stavu zapnuto. V macOS přicházejí od aplikace **Script Editor** a ve Windows od **Windows PowerShell**, takže se pro tyto aplikace povolují nebo ztišují v nastavení systému. V Linuxu vyžadují `notify-send` (balíček `libnotify-bin` nebo `libnotify`).
+- **Aktualizace**: při otevření aplikace zkontroluje, zda je k dispozici nová verze, a pokud ano, zobrazí na horní liště tlačítko **Je k dispozici verze …**, které otevře stránku ke stažení. Předběžné verze se nenabízejí. Ve výchozím nastavení zapnuto.
 
 ## AI
 
@@ -63,4 +64,4 @@ Možnosti souborů `.srt` a `.vtt`, které se ukládají při přepisu složky p
 
 ## O aplikaci
 
-Verze Audiotextu a odkazy na tuto dokumentaci, na zdrojový kód na GitHubu a na stránku s příspěvky.
+Verze Audiotextu a odkazy na tuto dokumentaci, na zdrojový kód na GitHubu a na stránku s příspěvky. **Zkontrolovat aktualizace** ihned zkontroluje, zda je k dispozici nová verze: pokud ano, tlačítko se změní na **Stáhnout** a otevře její stránku.

@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext păstrează datele pe computerul dumneavoastră. Nu se trimite nimic nicăieri, cu excepția cazului în care folosiți un motor la distanță (API-ul Whisper sau API-ul Google) sau un alt furnizor IA decât Ollama.
+Audiotext păstrează datele pe computerul dumneavoastră. Nu se trimite nimic nicăieri, cu excepția cazului în care folosiți un motor la distanță (API-ul Whisper sau API-ul Google) sau un alt furnizor IA decât Ollama. La deschidere, întreabă și GitHub dacă există o versiune nouă, lucru pe care îl puteți dezactiva în **Preferințe** → **General** → **Actualizări**.
 
 ## Dosarul de configurare al utilizatorului
 

@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext uchovává vaše data na vašem počítači. Nic se nikam neodesílá, pokud nepoužijete vzdálený nástroj (Whisper API nebo Google API) nebo jiného poskytovatele AI než Ollamu.
+Audiotext uchovává vaše data na vašem počítači. Nic se nikam neodesílá, pokud nepoužijete vzdálený nástroj (Whisper API nebo Google API) nebo jiného poskytovatele AI než Ollamu. Při otevření se také zeptá GitHubu, zda je k dispozici nová verze, což můžete vypnout v **Předvolby** → **Obecné** → **Aktualizace**.
 
 ## Uživatelská konfigurační složka
 

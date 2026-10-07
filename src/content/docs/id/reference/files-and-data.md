@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext menyimpan data Anda di komputer Anda. Tidak ada yang dikirim ke mana pun kecuali Anda menggunakan mesin jarak jauh (Whisper API atau Google API) atau penyedia AI selain Ollama.
+Audiotext menyimpan data Anda di komputer Anda. Tidak ada yang dikirim ke mana pun kecuali Anda menggunakan mesin jarak jauh (Whisper API atau Google API) atau penyedia AI selain Ollama. Saat dibuka, aplikasi ini juga menanyakan ke GitHub apakah ada versi baru, yang dapat Anda nonaktifkan di **Preferensi** → **Umum** → **Pembaruan**.
 
 ## Folder konfigurasi pengguna
 

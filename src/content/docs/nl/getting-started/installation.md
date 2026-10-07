@@ -54,6 +54,12 @@ De eerste keer dat je transcribeert met **WhisperX** (de standaard-engine), word
 - Om vanaf de microfoon te transcriberen, moet je systeem een invoerapparaat herkennen.
 - Op Linux is voor opnemen en afspelen [PortAudio](https://www.portaudio.com/) nodig (`sudo apt install libportaudio2` op Ubuntu of Debian).
 
+## De app bijwerken
+
+Als er een nieuwe versie uitkomt, toont Audiotext een knop **Versie … is beschikbaar** in de bovenste balk. Klik erop om de pagina van de release te openen, download het bestand voor je systeem en installeer het zoals de eerste keer: voer op Windows het nieuwe installatieprogramma uit, sleep op macOS de nieuwe app naar de map **Apps**, of voer op Linux de `install.sh` van het nieuwe archief uit. De vorige versie wordt vervangen, en je instellingen en geschiedenis blijven behouden, omdat ze in je [configuratiemap van de gebruiker](/nl/reference/files-and-data/#configuratiemap-van-de-gebruiker) staan. Als je de GPU-add-on gebruikt, kies die dan opnieuw bij het installeren.
+
+Om zelf te controleren of er een nieuwe versie is, open je **Voorkeuren** → **Over** → **Controleren op updates**. Om niet meer te controleren bij het openen van de app, zet je **Algemeen** → **Updates** uit.
+
 ## De taal van de interface wijzigen
 
 Audiotext gebruikt de taal van je systeem als die beschikbaar is. Open om die te wijzigen de **Voorkeuren** (het tandwiel rechtsboven) en kies een taal bij **Algemeen** → **Taal van de interface**.

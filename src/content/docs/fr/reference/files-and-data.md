@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext conserve vos données sur votre ordinateur. Rien n’est envoyé nulle part, sauf si vous utilisez un moteur distant (l’API Whisper ou l’API Google) ou un fournisseur d’IA autre qu’Ollama.
+Audiotext conserve vos données sur votre ordinateur. Rien n’est envoyé nulle part, sauf si vous utilisez un moteur distant (l’API Whisper ou l’API Google) ou un fournisseur d’IA autre qu’Ollama. À son ouverture, il demande aussi à GitHub s’il existe une nouvelle version, ce que vous pouvez désactiver dans **Préférences** → **Général** → **Mises à jour**.
 
 ## Dossier de configuration utilisateur
 

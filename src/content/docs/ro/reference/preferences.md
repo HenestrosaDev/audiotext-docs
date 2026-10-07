@@ -14,6 +14,7 @@ sidebar:
 - **Formatul datei**: cum sunt afișate datele transcrierilor, în limba interfeței: scurt (`04.10.2026`), mediu (`4 oct. 2026`, implicit), lung (`4 octombrie 2026`) sau ISO (`2026-10-04`). Meniul arată fiecare format cu un exemplu.
 - **Formatul orei**: **Automat** (ceasul limbii interfeței), de 12 ore (`1:30 p.m.`) sau de 24 de ore (`13:30`).
 - **Notificări**: afișează o notificare de sistem când o transcriere este gata (pentru un dosar, când sunt gata toate fișierele lui, iar pentru un dosar monitorizat, de fiecare dată când este gata un fișier nou). Activat implicit. Pe macOS provin de la **Script Editor**, iar pe Windows de la **Windows PowerShell**, așa că se permit sau se dezactivează pentru aceste aplicații în setările sistemului. Pe Linux necesită `notify-send` (pachetul `libnotify-bin` sau `libnotify`).
+- **Actualizări**: verifică dacă există o versiune nouă la deschiderea aplicației și, dacă există, afișează în bara de sus butonul **Versiunea … este disponibilă**, care deschide pagina de descărcare. Versiunile preliminare nu sunt oferite. Activat implicit.
 
 ## IA
 
@@ -63,4 +64,4 @@ Opțiunile fișierelor `.srt` și `.vtt` salvate la transcrierea unui dosar cu W
 
 ## Despre
 
-Versiunea Audiotext și linkuri către această documentație, codul sursă de pe GitHub și pagina de donații.
+Versiunea Audiotext și linkuri către această documentație, codul sursă de pe GitHub și pagina de donații. **Caută actualizări** verifică imediat dacă există o versiune nouă: dacă există, butonul devine **Descarcă** și deschide pagina acesteia.

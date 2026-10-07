@@ -14,6 +14,7 @@ Las **Preferencias** contienen los ajustes que no cambian con cada transcripció
 - **Formato de la fecha**: cómo se muestran las fechas de las transcripciones, en el idioma de la interfaz: corto (`4/10/26`), medio (`4 oct 2026`, por defecto), largo (`4 de octubre de 2026`) o ISO (`2026-10-04`). El menú muestra cada formato con un ejemplo.
 - **Formato de la hora**: **Automático** (el reloj del idioma de la interfaz), de 12 horas (`1:30 p. m.`) o de 24 horas (`13:30`).
 - **Notificaciones**: muestra una notificación del sistema cuando una transcripción está lista (en una carpeta, cuando lo están todos sus archivos, y en una carpeta vigilada, cada vez que lo está un archivo nuevo). Activado por defecto. En macOS provienen de **Editor de Scripts** y en Windows de **Windows PowerShell**, así que se permiten o silencian para esas aplicaciones en los ajustes del sistema. En Linux requieren `notify-send` (el paquete `libnotify-bin` o `libnotify`).
+- **Actualizaciones**: comprueba si hay una versión nueva al abrir la aplicación y, si la hay, muestra un botón **La versión … está disponible** en la barra superior que abre su página de descarga. No se ofrecen las versiones preliminares. Activado por defecto.
 
 ## IA
 
@@ -63,4 +64,4 @@ Las opciones de los archivos `.srt` y `.vtt` que se guardan al transcribir una c
 
 ## Acerca de
 
-La versión de Audiotext y enlaces a esta documentación, al código fuente en GitHub y a la página de donaciones.
+La versión de Audiotext y enlaces a esta documentación, al código fuente en GitHub y a la página de donaciones. **Buscar actualizaciones** comprueba en el momento si hay una versión nueva: si la hay, el botón se convierte en **Descargar** y abre su página.

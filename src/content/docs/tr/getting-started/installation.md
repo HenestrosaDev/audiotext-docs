@@ -54,6 +54,12 @@ GPU eklentisi Windows'ta yaklaşık 2 GB, Linux'ta 4 GB'lık bir indirmedir, bu 
 - Mikrofondan yazıya dökmek için sisteminizin bir giriş aygıtı algılaması gerekir.
 - Linux'ta kayıt ve oynatma için [PortAudio](https://www.portaudio.com/) gerekir (Ubuntu veya Debian'da `sudo apt install libportaudio2`).
 
+## Uygulamayı güncelleyin
+
+Yeni bir sürüm yayımlandığında Audiotext üst çubukta **Sürüm … kullanılabilir** düğmesini gösterir. Sürümün sayfasını açmak için düğmeye tıklayın, sisteminize uygun dosyayı indirin ve ilk seferdeki gibi kurun: Windows'ta yeni yükleyiciyi çalıştırın, macOS'ta yeni uygulamayı **Uygulamalar** klasörüne sürükleyin veya Linux'ta yeni arşivin `install.sh` dosyasını çalıştırın. Önceki sürüm değiştirilir; ayarlarınız ve geçmişiniz ise [kullanıcı yapılandırma klasörünüzde](/tr/reference/files-and-data/#kullanıcı-yapılandırma-klasörü) saklandığı için korunur. GPU eklentisini kullanıyorsanız kurulum sırasında onu yeniden seçin.
+
+Yeni bir sürümü kendiniz denetlemek için **Tercihler** → **Hakkında** → **Güncellemeleri denetle**'yi açın. Uygulama açılırken denetlemeyi durdurmak için **Genel** → **Güncellemeler**'i kapatın.
+
 ## Arayüz dilini değiştirin
 
 Audiotext, varsa sisteminizin dilini kullanır. Değiştirmek için **Tercihler**'i (sağ üstteki dişli) açın ve **Genel** → **Arayüz dili** bölümünden bir dil seçin.

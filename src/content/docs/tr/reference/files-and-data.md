@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext verilerinizi bilgisayarınızda tutar. Uzak bir motor (Whisper API veya Google API) ya da Ollama dışında bir YZ sağlayıcısı kullanmadığınız sürece hiçbir şey hiçbir yere gönderilmez.
+Audiotext verilerinizi bilgisayarınızda tutar. Uzak bir motor (Whisper API veya Google API) ya da Ollama dışında bir YZ sağlayıcısı kullanmadığınız sürece hiçbir şey hiçbir yere gönderilmez. Açıldığında GitHub'a yeni bir sürüm olup olmadığını da sorar; bunu **Tercihler** → **Genel** → **Güncellemeler** bölümünden kapatabilirsiniz.
 
 ## Kullanıcı yapılandırma klasörü
 

@@ -54,6 +54,12 @@ Saat pertama kali mentranskripsi dengan **WhisperX** (mesin bawaan), modelnya ak
 - Untuk mentranskripsi dari mikrofon, sistem Anda harus mendeteksi perangkat input.
 - Di Linux, merekam dan memutar audio memerlukan [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` di Ubuntu atau Debian).
 
+## Perbarui aplikasi
+
+Saat versi baru dirilis, Audiotext menampilkan tombol **Versi … tersedia** di bilah atas. Klik tombol itu untuk membuka halaman rilis, unduh file untuk sistem Anda, dan instal seperti pertama kali: jalankan penginstal baru di Windows, seret aplikasi baru ke folder **Aplikasi** di macOS, atau jalankan `install.sh` dari arsip baru di Linux. Versi sebelumnya akan diganti, dan pengaturan serta riwayat Anda tetap tersimpan, karena disimpan di [folder konfigurasi pengguna](/id/reference/files-and-data/#folder-konfigurasi-pengguna). Jika Anda menggunakan add-on GPU, pilih lagi saat menginstal.
+
+Untuk memeriksa versi baru sendiri, buka **Preferensi** → **Tentang** → **Periksa pembaruan**. Agar tidak memeriksa saat aplikasi dibuka, nonaktifkan **Umum** → **Pembaruan**.
+
 ## Ubah bahasa antarmuka
 
 Audiotext menggunakan bahasa sistem Anda jika tersedia. Untuk mengubahnya, buka **Preferensi** (ikon roda gigi di kanan atas) dan pilih bahasa di **Umum** → **Bahasa antarmuka**.
