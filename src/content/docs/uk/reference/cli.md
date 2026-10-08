@@ -17,21 +17,21 @@ Audiotext можна використовувати й із командного
 
 ```bash
 # Транскрибувати файл. Текст також виводиться, тож його можна перенаправити
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Транскрибувати файли папки з визначенням мовців
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Транскрибувати відео з YouTube за допомогою Whisper API
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Транскрибувати зустріч за допомогою Whisper API з ключовими словами й контекстом
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "Зустріч про наступну версію"
 
 # Транскрибувати файли, що додаються до папки, до зупинки через Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Параметри
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Модель транскрипції: `whisper-1`, `gpt-transcribe` або `gpt-4o-transcribe-diarize` |
 
-Виконайте `python src/cli.py transcribe --help`, щоб побачити всі параметри та їхні значення.
+Виконайте `uv run src/cli.py transcribe --help`, щоб побачити всі параметри та їхні значення.
 
 ## Вивід і код завершення
 

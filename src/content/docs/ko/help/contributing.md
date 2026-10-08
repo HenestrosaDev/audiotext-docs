@@ -9,7 +9,7 @@ sidebar:
 
 ## 프로젝트 준비
 
-**Python 3.10~3.13**이 필요합니다.
+**Python 3.10~3.13**이 필요합니다. 설치되어 있지 않으면 uv가 내려받습니다.
 
 1. [FFmpeg](https://ffmpeg.org)를 설치하고, Linux에서는 [PortAudio](https://www.portaudio.com/)도 설치합니다.
 
@@ -29,42 +29,31 @@ sidebar:
    cd audiotext
    ```
 
-3. 가상 환경을 만들고 활성화합니다.
-
-   ```bash
-   python -m venv venv
-   # macOS와 Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. 의존성과 가상 환경을 관리하는 [uv](https://docs.astral.sh/uv/getting-started/installation/)를 설치합니다.
 
 4. 의존성을 설치합니다.
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt`는 CUDA를 지원하는 PyTorch를 설치하므로 Linux와 Windows에서는 다운로드 용량이 큽니다. NVIDIA GPU가 없다면 먼저 CPU 버전을 설치하세요.
+   `uv sync`는 CUDA를 지원하는 PyTorch를 설치하므로 Linux와 Windows에서는 다운로드 용량이 큽니다. NVIDIA GPU가 없다면 대신 CPU 버전을 설치하세요.
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   [uv](https://docs.astral.sh/uv/)를 사용한다면 `uv pip install --index-strategy unsafe-best-match -r requirements.txt`를 실행하세요.
 
 5. 앱을 실행합니다.
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## 개발 도구
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # 커밋할 때마다 코드를 검사하고 정리합니다
-pytest               # 테스트를 실행합니다
+uv run pre-commit install   # 커밋할 때마다 코드를 검사하고 정리합니다
+uv run pytest               # 테스트를 실행합니다
 ```
 
 ## 인터페이스 번역
@@ -74,14 +63,14 @@ pytest               # 테스트를 실행합니다
 코드의 텍스트가 바뀌었거나 `.po` 파일을 편집한 뒤에는(예: [Poedit](https://poedit.net/)) 이 스크립트를 실행하세요. 텍스트를 추출하고 카탈로그를 업데이트해 컴파일한 다음, 아직 번역하거나 검토해야 할 텍스트(`fuzzy` 표시)를 보여 줍니다. 그때까지 앱은 해당 텍스트를 영어로 표시합니다. 오래된 카탈로그가 있으면 테스트가 실패합니다.
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 언어를 추가하려면 카탈로그를 만들어 번역하고 컴파일한 다음 `src/utils/i18n.py`의 `UI_LANGUAGES`에 추가하세요.
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <코드>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <코드>
+uv run .github/scripts/update_translations.py
 ```
 
 ## 이 문서 개선하기

@@ -9,7 +9,7 @@ sidebar:
 
 ## Підготовка проєкту
 
-Потрібен **Python від 3.10 до 3.13**.
+Потрібен **Python від 3.10 до 3.13**. Якщо його немає, uv завантажить його сам.
 
 1. Встановіть [FFmpeg](https://ffmpeg.org), а в Linux також [PortAudio](https://www.portaudio.com/):
 
@@ -29,42 +29,31 @@ sidebar:
    cd audiotext
    ```
 
-3. Створіть і активуйте віртуальне середовище:
-
-   ```bash
-   python -m venv venv
-   # macOS і Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. Встановіть [uv](https://docs.astral.sh/uv/getting-started/installation/) — він керує залежностями та віртуальним середовищем.
 
 4. Встановіть залежності:
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt` встановлює PyTorch із підтримкою CUDA — у Linux і Windows це велике завантаження. Без відеокарти NVIDIA спершу встановіть версію для процесора:
+   `uv sync` встановлює PyTorch із підтримкою CUDA — у Linux і Windows це велике завантаження. Без відеокарти NVIDIA натомість встановіть версію для процесора:
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   З [uv](https://docs.astral.sh/uv/) виконайте `uv pip install --index-strategy unsafe-best-match -r requirements.txt`.
 
 5. Запустіть застосунок:
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## Інструменти розробки
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # перевіряє й форматує код перед кожним комітом
-pytest               # запускає тести
+uv run pre-commit install   # перевіряє й форматує код перед кожним комітом
+uv run pytest               # запускає тести
 ```
 
 ## Переклад інтерфейсу
@@ -74,14 +63,14 @@ pytest               # запускає тести
 Коли тексти в коді змінюються або після редагування файлу `.po` (наприклад, у [Poedit](https://poedit.net/)), запустіть цей скрипт. Він витягує тексти, оновлює каталоги, компілює їх і виводить список текстів, які ще треба перекласти або перевірити (позначені як `fuzzy`); доти застосунок показує їх англійською. Тести не проходять, доки якийсь каталог застарілий.
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 Щоб додати мову, створіть її каталог, перекладіть, скомпілюйте й додайте мову до `UI_LANGUAGES` у `src/utils/i18n.py`:
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <код>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <код>
+uv run .github/scripts/update_translations.py
 ```
 
 ## Покращте цю документацію

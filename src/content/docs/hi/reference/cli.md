@@ -17,21 +17,21 @@ sidebar:
 
 ```bash
 # एक फ़ाइल ट्रांसक्राइब करें। टेक्स्ट प्रिंट भी होता है, इसलिए उसे रीडायरेक्ट किया जा सकता है
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # वक्ताओं की पहचान के साथ किसी फ़ोल्डर की फ़ाइलें ट्रांसक्राइब करें
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Whisper API से एक YouTube वीडियो ट्रांसक्राइब करें
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # कीवर्ड और संदर्भ के साथ Whisper API से एक मीटिंग ट्रांसक्राइब करें
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "अगली रिलीज़ के बारे में एक मीटिंग"
 
 # Ctrl+C से रोकने तक किसी फ़ोल्डर में जोड़ी गई फ़ाइलें ट्रांसक्राइब करें
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## विकल्प
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | ट्रांसक्रिप्शन मॉडल: `whisper-1`, `gpt-transcribe` या `gpt-4o-transcribe-diarize` |
 
-सभी विकल्प और उनके मान देखने के लिए `python src/cli.py transcribe --help` चलाएँ।
+सभी विकल्प और उनके मान देखने के लिए `uv run src/cli.py transcribe --help` चलाएँ।
 
 ## आउटपुट और एग्ज़िट कोड
 

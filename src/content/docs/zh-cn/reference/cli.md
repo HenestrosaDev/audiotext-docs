@@ -17,21 +17,21 @@ sidebar:
 
 ```bash
 # 转写一个文件。文本也会被打印出来，因此可以重定向
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # 转写文件夹中的文件并识别说话人
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # 使用 Whisper API 转写 YouTube 视频
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # 使用 Whisper API 转写会议，附带关键词和背景信息
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "一次关于下个版本的会议"
 
 # 转写添加到文件夹中的文件，直到按 Ctrl+C 停止
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## 选项
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | 转写模型：`whisper-1`、`gpt-transcribe` 或 `gpt-4o-transcribe-diarize` |
 
-运行 `python src/cli.py transcribe --help` 可查看所有选项及其取值。
+运行 `uv run src/cli.py transcribe --help` 可查看所有选项及其取值。
 
 ## 输出与退出码
 

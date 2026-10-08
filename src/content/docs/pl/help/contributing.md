@@ -9,7 +9,7 @@ Wkład jest mile widziany! Przeczytaj [przewodnik dla współtwórców](https://
 
 ## Przygotuj projekt
 
-Wymagany jest **Python od 3.10 do 3.13**.
+Wymagany jest **Python od 3.10 do 3.13**. Jeśli go brakuje, uv go pobierze.
 
 1. Zainstaluj [FFmpeg](https://ffmpeg.org), a na Linuksie także [PortAudio](https://www.portaudio.com/):
 
@@ -29,42 +29,31 @@ Wymagany jest **Python od 3.10 do 3.13**.
    cd audiotext
    ```
 
-3. Utwórz i aktywuj środowisko wirtualne:
-
-   ```bash
-   python -m venv venv
-   # macOS i Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. Zainstaluj [uv](https://docs.astral.sh/uv/getting-started/installation/), które zarządza zależnościami i środowiskiem wirtualnym.
 
 4. Zainstaluj zależności:
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt` instaluje PyTorch z obsługą CUDA, co na Linuksie i Windows oznacza duże pobieranie. Bez karty NVIDIA najpierw zainstaluj wersję dla procesora:
+   `uv sync` instaluje PyTorch z obsługą CUDA, co na Linuksie i Windows oznacza duże pobieranie. Bez karty NVIDIA zainstaluj zamiast tego wersję dla procesora:
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   Z [uv](https://docs.astral.sh/uv/) uruchom `uv pip install --index-strategy unsafe-best-match -r requirements.txt`.
 
 5. Uruchom aplikację:
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## Narzędzia deweloperskie
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # sprawdza i formatuje kod przed każdym commitem
-pytest               # uruchamia testy
+uv run pre-commit install   # sprawdza i formatuje kod przed każdym commitem
+uv run pytest               # uruchamia testy
 ```
 
 ## Przetłumacz interfejs
@@ -74,14 +63,14 @@ Interfejs jest tłumaczony za pomocą [gettext](https://www.gnu.org/software/get
 Gdy teksty w kodzie się zmienią lub po edycji pliku `.po` (np. w [Poedit](https://poedit.net/)), uruchom ten skrypt. Wyodrębnia teksty, aktualizuje katalogi, kompiluje je i wypisuje teksty, które trzeba jeszcze przetłumaczyć lub sprawdzić (oznaczone jako `fuzzy`) – do tego czasu aplikacja pokazuje je po angielsku. Testy kończą się niepowodzeniem, dopóki któryś katalog jest nieaktualny.
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 Aby dodać język, utwórz jego katalog, przetłumacz go, skompiluj i dodaj język do `UI_LANGUAGES` w `src/utils/i18n.py`:
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <kod>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <kod>
+uv run .github/scripts/update_translations.py
 ```
 
 ## Ulepsz tę dokumentację

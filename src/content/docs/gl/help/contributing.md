@@ -9,7 +9,7 @@ As contribucións son benvidas! Le a [guía de contribución](https://github.com
 
 ## Prepara o proxecto
 
-Precísase **Python 3.10 a 3.13**.
+Precísase **Python 3.10 a 3.13**. uv descárgao se non o tes.
 
 1. Instala [FFmpeg](https://ffmpeg.org) e, en Linux, [PortAudio](https://www.portaudio.com/):
 
@@ -29,42 +29,31 @@ Precísase **Python 3.10 a 3.13**.
    cd audiotext
    ```
 
-3. Crea e activa un contorno virtual:
-
-   ```bash
-   python -m venv venv
-   # macOS e Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. Instala [uv](https://docs.astral.sh/uv/getting-started/installation/), que xestiona as dependencias e o contorno virtual.
 
 4. Instala as dependencias:
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt` instala PyTorch con soporte para CUDA, que é unha descarga grande en Linux e Windows. Sen unha GPU NVIDIA, instala primeiro a versión para CPU:
+   `uv sync` instala PyTorch con soporte para CUDA, que é unha descarga grande en Linux e Windows. Sen unha GPU NVIDIA, instala no seu lugar a versión para CPU:
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   Con [uv](https://docs.astral.sh/uv/), executa `uv pip install --index-strategy unsafe-best-match -r requirements.txt`.
 
 5. Executa a aplicación:
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## Ferramentas de desenvolvemento
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # revisa e formata o código antes de cada commit
-pytest               # executa as probas
+uv run pre-commit install   # revisa e formata o código antes de cada commit
+uv run pytest               # executa as probas
 ```
 
 ## Traduce a interface
@@ -74,14 +63,14 @@ A interface tradúcese con [gettext](https://www.gnu.org/software/gettext/). Os 
 Cando cambien os textos do código, ou despois de editar un ficheiro `.po` (p. ex. con [Poedit](https://poedit.net/)), executa este script. Extrae os textos, actualiza os catálogos, compílaos e lista os textos que faltan por traducir ou revisar (marcados como `fuzzy`), que a aplicación mostra en inglés ata entón. As probas fallan mentres haxa un catálogo desactualizado.
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 Para engadir un idioma, crea o seu catálogo, tradúceo, compílao e engádeo a `UI_LANGUAGES` en `src/utils/i18n.py`:
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <código>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <código>
+uv run .github/scripts/update_translations.py
 ```
 
 ## Mellora esta documentación
