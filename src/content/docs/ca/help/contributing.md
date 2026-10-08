@@ -9,7 +9,7 @@ Les contribucions són benvingudes! Llegeix la [guia de contribució](https://gi
 
 ## Prepara el projecte
 
-Cal **Python 3.10 a 3.13**.
+Cal **Python 3.10 a 3.13**. uv el descarrega si no el tens.
 
 1. Instal·la [FFmpeg](https://ffmpeg.org) i, a Linux, [PortAudio](https://www.portaudio.com/):
 
@@ -29,42 +29,31 @@ Cal **Python 3.10 a 3.13**.
    cd audiotext
    ```
 
-3. Crea i activa un entorn virtual:
-
-   ```bash
-   python -m venv venv
-   # macOS i Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. Instal·la [uv](https://docs.astral.sh/uv/getting-started/installation/), que gestiona les dependències i l'entorn virtual.
 
 4. Instal·la les dependències:
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt` instal·la PyTorch amb suport per a CUDA, que és una descàrrega gran a Linux i Windows. Sense una GPU NVIDIA, instal·la primer la versió per a CPU:
+   `uv sync` instal·la PyTorch amb suport per a CUDA, que és una descàrrega gran a Linux i Windows. Sense una GPU NVIDIA, instal·la en lloc seu la versió per a CPU:
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   Amb [uv](https://docs.astral.sh/uv/), executa `uv pip install --index-strategy unsafe-best-match -r requirements.txt`.
 
 5. Executa l'aplicació:
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## Eines de desenvolupament
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # revisa i formata el codi abans de cada commit
-pytest               # executa les proves
+uv run pre-commit install   # revisa i formata el codi abans de cada commit
+uv run pytest               # executa les proves
 ```
 
 ## Tradueix la interfície
@@ -74,14 +63,14 @@ La interfície es tradueix amb [gettext](https://www.gnu.org/software/gettext/).
 Quan canviïn els textos del codi, o després d'editar un fitxer `.po` (p. ex. amb [Poedit](https://poedit.net/)), executa aquest script. Extreu els textos, actualitza els catàlegs, els compila i llista els textos que falten per traduir o revisar (marcats com a `fuzzy`), que l'aplicació mostra en anglès fins aleshores. Les proves fallen mentre hi hagi un catàleg desactualitzat.
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 Per afegir un idioma, crea'n el catàleg, tradueix-lo, compila'l i afegeix-lo a `UI_LANGUAGES` a `src/utils/i18n.py`:
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <codi>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <codi>
+uv run .github/scripts/update_translations.py
 ```
 
 ## Millora aquesta documentació

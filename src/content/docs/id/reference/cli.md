@@ -17,21 +17,21 @@ Opsi yang tidak diberikan menggunakan nilai yang diatur di aplikasi. Transkripsi
 
 ```bash
 # Transkripsi file. Teks juga dicetak, sehingga dapat dialihkan
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Transkripsi file-file dalam folder sambil mengidentifikasi pembicara
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Transkripsi video YouTube dengan Whisper API
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Transkripsi rapat dengan Whisper API, beserta kata kunci dan konteksnya
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "Rapat tentang rilis berikutnya"
 
 # Transkripsi file yang ditambahkan ke folder sampai dihentikan dengan Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Opsi
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Model transkripsi: `whisper-1`, `gpt-transcribe`, atau `gpt-4o-transcribe-diarize` |
 
-Jalankan `python src/cli.py transcribe --help` untuk melihat semua opsi dan nilainya.
+Jalankan `uv run src/cli.py transcribe --help` untuk melihat semua opsi dan nilainya.
 
 ## Keluaran dan kode keluar
 
