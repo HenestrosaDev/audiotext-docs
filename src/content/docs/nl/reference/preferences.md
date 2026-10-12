@@ -10,6 +10,7 @@ De **Voorkeuren** bevatten de instellingen die niet per transcriptie veranderen.
 ## Algemeen
 
 - **Weergave**: **Systeem** (volgt je systeem), **Licht** of **Donker**.
+- **Grootte van de interface**: de grootte van de tekst en de bedieningselementen, van 80% tot 200%. Standaard `100%`. De wijziging wordt direct toegepast.
 - **Taal van de interface**: de taal van Audiotext, of **Systeemtaal**. Zie de [beschikbare talen](/nl/reference/formats-and-languages/#talen-van-de-interface).
 - **Datumnotatie**: hoe de datums van de transcripties worden getoond, in de taal van de interface: kort (`04-10-2026`), middel (`4 okt 2026`, standaard), lang (`4 oktober 2026`) of ISO (`2026-10-04`). Het menu toont elke notatie met een voorbeeld.
 - **Tijdnotatie**: **Automatisch** (de klok van de taal van de interface), 12-uurs (`1:30 p.m.`) of 24-uurs (`13:30`).

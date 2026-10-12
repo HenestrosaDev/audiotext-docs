@@ -10,6 +10,7 @@ sidebar:
 ## Obecné
 
 - **Vzhled**: **Systém** (podle systému), **Světlý** nebo **Tmavý**.
+- **Velikost rozhraní**: velikost textu a ovládacích prvků, od 80 % do 200 %. Výchozí je `100%`. Změna se projeví okamžitě.
 - **Jazyk rozhraní**: jazyk Audiotextu nebo **Jazyk systému**. Viz [dostupné jazyky](/cs/reference/formats-and-languages/#jazyky-rozhraní).
 - **Formát data**: jak se zobrazují data přepisů v jazyce rozhraní: krátký (`04.10.26`), střední (`4. 10. 2026`, výchozí), dlouhý (`4. října 2026`) nebo ISO (`2026-10-04`). Nabídka ukazuje každý formát na příkladu.
 - **Formát času**: **Automaticky** (hodiny jazyka rozhraní), 12hodinový (`1:30 odp.`) nebo 24hodinový (`13:30`).

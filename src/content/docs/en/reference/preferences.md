@@ -10,6 +10,7 @@ The **Preferences** hold the settings that don't change with each transcription.
 ## General
 
 - **Appearance**: **System** (follows your system), **Light** or **Dark**.
+- **Interface size**: the size of the text and the controls, from 80% to 200%. `100%` by default. The change is applied right away.
 - **Interface language**: the language of Audiotext, or **System language**. See the [available languages](/en/reference/formats-and-languages/#interface-languages).
 - **Date format**: how the dates of the transcriptions are shown, in the interface language: short (`10/4/26`), medium (`Oct 4, 2026`, the default), long (`October 4, 2026`) or ISO (`2026-10-04`). The menu shows each one with an example.
 - **Time format**: **Automatic** (the clock of the interface language), 12-hour (`1:30 PM`) or 24-hour (`13:30`).

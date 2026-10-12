@@ -10,6 +10,7 @@ sidebar:
 ## Ogólne
 
 - **Wygląd**: **Systemowy** (zgodny z systemem), **Jasny** lub **Ciemny**.
+- **Rozmiar interfejsu**: rozmiar tekstu i elementów sterujących, od 80% do 200%. Domyślnie `100%`. Zmiana jest stosowana od razu.
 - **Język interfejsu**: język Audiotext lub **Język systemu**. Zobacz [dostępne języki](/pl/reference/formats-and-languages/#języki-interfejsu).
 - **Format daty**: jak wyświetlane są daty transkrypcji, w języku interfejsu: krótki (`4.10.2026`), średni (`4 paź 2026`, domyślny), długi (`4 października 2026`) lub ISO (`2026-10-04`). Menu pokazuje każdy format na przykładzie.
 - **Format godziny**: **Automatycznie** (zegar języka interfejsu), 12-godzinny (`1:30 PM`) lub 24-godzinny (`13:30`).

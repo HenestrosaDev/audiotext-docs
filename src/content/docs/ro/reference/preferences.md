@@ -10,6 +10,7 @@ sidebar:
 ## General
 
 - **Aspect**: **Sistem** (urmează sistemul), **Luminos** sau **Întunecat**.
+- **Dimensiunea interfeței**: dimensiunea textului și a comenzilor, de la 80% la 200%. Implicit `100%`. Modificarea se aplică imediat.
 - **Limba interfeței**: limba Audiotext sau **Limba sistemului**. Consultați [limbile disponibile](/ro/reference/formats-and-languages/#limbile-interfeței).
 - **Formatul datei**: cum sunt afișate datele transcrierilor, în limba interfeței: scurt (`04.10.2026`), mediu (`4 oct. 2026`, implicit), lung (`4 octombrie 2026`) sau ISO (`2026-10-04`). Meniul arată fiecare format cu un exemplu.
 - **Formatul orei**: **Automat** (ceasul limbii interfeței), de 12 ore (`1:30 p.m.`) sau de 24 de ore (`13:30`).

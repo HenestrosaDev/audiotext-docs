@@ -10,6 +10,7 @@ Les **Preferències** contenen la configuració que no canvia amb cada transcrip
 ## General
 
 - **Aparença**: **Sistema** (segueix el sistema), **Clar** o **Fosc**.
+- **Mida de la interfície**: la mida del text i dels controls, del 80% al 200%. `100%` per defecte. El canvi s'aplica a l'instant.
 - **Idioma de la interfície**: l'idioma d'Audiotext, o **Idioma del sistema**. Consulta els [idiomes disponibles](/ca/reference/formats-and-languages/#idiomes-de-la-interfície).
 - **Format de la data**: com es mostren les dates de les transcripcions, en l'idioma de la interfície: curt (`4/10/26`), mitjà (`4 d’oct. 2026`, per defecte), llarg (`4 d’octubre de 2026`) o ISO (`2026-10-04`). El menú mostra cada format amb un exemple.
 - **Format de l'hora**: **Automàtic** (el rellotge de l'idioma de la interfície), de 12 hores (`1:30 p. m.`) o de 24 hores (`13:30`).

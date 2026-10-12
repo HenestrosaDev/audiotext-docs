@@ -10,6 +10,7 @@ Les **Préférences** regroupent les réglages qui ne changent pas à chaque tra
 ## Général
 
 - **Apparence** : **Système** (suit votre système), **Clair** ou **Sombre**.
+- **Taille de l’interface** : la taille du texte et des commandes, de 80 % à 200 %. `100%` par défaut. Le changement s’applique immédiatement.
 - **Langue de l’interface** : la langue d’Audiotext, ou **Langue du système**. Consultez les [langues disponibles](/fr/reference/formats-and-languages/#langues-de-linterface).
 - **Format de la date** : comment les dates des transcriptions sont affichées, dans la langue de l’interface : court (`04/10/2026`), moyen (`4 oct. 2026`, par défaut), long (`4 octobre 2026`) ou ISO (`2026-10-04`). Le menu montre chaque format avec un exemple.
 - **Format de l’heure** : **Automatique** (l’horloge de la langue de l’interface), sur 12 heures (`1:30 PM`) ou sur 24 heures (`13:30`).

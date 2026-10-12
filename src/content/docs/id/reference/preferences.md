@@ -10,6 +10,7 @@ sidebar:
 ## Umum
 
 - **Tampilan**: **Sistem** (mengikuti sistem Anda), **Terang**, atau **Gelap**.
+- **Ukuran antarmuka**: ukuran teks dan kontrol, dari 80% hingga 200%. Bawaannya `100%`. Perubahan langsung diterapkan.
 - **Bahasa antarmuka**: bahasa Audiotext, atau **Bahasa sistem**. Lihat [bahasa yang tersedia](/id/reference/formats-and-languages/#bahasa-antarmuka).
 - **Format tanggal**: cara tanggal transkripsi ditampilkan, dalam bahasa antarmuka: pendek (`04/10/26`), sedang (`4 Okt 2026`, bawaan), panjang (`4 Oktober 2026`), atau ISO (`2026-10-04`). Menu menampilkan setiap format dengan contohnya.
 - **Format waktu**: **Otomatis** (jam bahasa antarmuka), 12 jam (`1.30 PM`), atau 24 jam (`13.30`).

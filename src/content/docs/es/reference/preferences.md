@@ -10,6 +10,7 @@ Las **Preferencias** contienen los ajustes que no cambian con cada transcripció
 ## General
 
 - **Apariencia**: **Sistema** (sigue a tu sistema), **Claro** u **Oscuro**.
+- **Tamaño de la interfaz**: el tamaño del texto y de los controles, del 80% al 200%. `100%` por defecto. El cambio se aplica al momento.
 - **Idioma de la interfaz**: el idioma de Audiotext, o **Idioma del sistema**. Consulta los [idiomas disponibles](/es/reference/formats-and-languages/#idiomas-de-la-interfaz).
 - **Formato de la fecha**: cómo se muestran las fechas de las transcripciones, en el idioma de la interfaz: corto (`4/10/26`), medio (`4 oct 2026`, por defecto), largo (`4 de octubre de 2026`) o ISO (`2026-10-04`). El menú muestra cada formato con un ejemplo.
 - **Formato de la hora**: **Automático** (el reloj del idioma de la interfaz), de 12 horas (`1:30 p. m.`) o de 24 horas (`13:30`).
