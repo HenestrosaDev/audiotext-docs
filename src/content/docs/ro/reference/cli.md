@@ -17,21 +17,21 @@ Opțiunile neindicate iau valorile setate în aplicație. Transcrierile sunt sal
 
 ```bash
 # Transcrie un fișier. Textul este și afișat, deci poate fi redirecționat
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Transcrie fișierele unui dosar identificând vorbitorii
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Transcrie un videoclip YouTube cu API-ul Whisper
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Transcrie o ședință cu API-ul Whisper, cu cuvinte cheie și context
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "O ședință despre următoarea versiune"
 
 # Transcrie fișierele adăugate într-un dosar până la oprirea cu Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Opțiuni
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Modelul de transcriere: `whisper-1`, `gpt-transcribe` sau `gpt-4o-transcribe-diarize` |
 
-Rulați `python src/cli.py transcribe --help` pentru a vedea toate opțiunile și valorile lor.
+Rulați `uv run src/cli.py transcribe --help` pentru a vedea toate opțiunile și valorile lor.
 
 ## Ieșire și cod de ieșire
 

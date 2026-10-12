@@ -17,21 +17,21 @@ Les opcions que no s'indiquen prenen els valors configurats a l'aplicació. Les 
 
 ```bash
 # Transcriu un fitxer. El text també s'imprimeix, així que es pot redirigir
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Transcriu els fitxers d'una carpeta identificant els parlants
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Transcriu un vídeo de YouTube amb l'API de Whisper
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Transcriu una reunió amb l'API de Whisper, amb les paraules clau i el context
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "Una reunió sobre la propera versió"
 
 # Transcriu els fitxers que s'afegeixen a una carpeta fins que s'atura amb Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Opcions
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Model de transcripció: `whisper-1`, `gpt-transcribe` o `gpt-4o-transcribe-diarize` |
 
-Executa `python src/cli.py transcribe --help` per veure totes les opcions i els seus valors.
+Executa `uv run src/cli.py transcribe --help` per veure totes les opcions i els seus valors.
 
 ## Sortida i codi de sortida
 

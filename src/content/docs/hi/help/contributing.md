@@ -9,7 +9,7 @@ sidebar:
 
 ## प्रोजेक्ट सेट करें
 
-**Python 3.10 से 3.13** ज़रूरी है।
+**Python 3.10 से 3.13** ज़रूरी है। यह न हो तो uv इसे डाउनलोड कर लेता है।
 
 1. [FFmpeg](https://ffmpeg.org) और, Linux पर, [PortAudio](https://www.portaudio.com/) इंस्टॉल करें:
 
@@ -29,42 +29,31 @@ sidebar:
    cd audiotext
    ```
 
-3. वर्चुअल एनवायरनमेंट बनाएँ और सक्रिय करें:
-
-   ```bash
-   python -m venv venv
-   # macOS और Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. [uv](https://docs.astral.sh/uv/getting-started/installation/) इंस्टॉल करें, जो डिपेंडेंसी और वर्चुअल एनवायरनमेंट को संभालता है।
 
 4. डिपेंडेंसी इंस्टॉल करें:
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt` CUDA सपोर्ट वाला PyTorch इंस्टॉल करता है, जो Linux और Windows पर बड़ा डाउनलोड है। NVIDIA GPU न हो तो पहले CPU संस्करण इंस्टॉल करें:
+   `uv sync` CUDA सपोर्ट वाला PyTorch इंस्टॉल करता है, जो Linux और Windows पर बड़ा डाउनलोड है। NVIDIA GPU न हो तो इसके बजाय CPU संस्करण इंस्टॉल करें:
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   [uv](https://docs.astral.sh/uv/) के साथ `uv pip install --index-strategy unsafe-best-match -r requirements.txt` चलाएँ।
 
 5. ऐप चलाएँ:
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## डेवलपमेंट टूल
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # हर commit से पहले कोड जाँचता और फ़ॉर्मेट करता है
-pytest               # टेस्ट चलाता है
+uv run pre-commit install   # हर commit से पहले कोड जाँचता और फ़ॉर्मेट करता है
+uv run pytest               # टेस्ट चलाता है
 ```
 
 ## इंटरफ़ेस का अनुवाद करें
@@ -74,14 +63,14 @@ pytest               # टेस्ट चलाता है
 जब कोड के टेक्स्ट बदलें, या किसी `.po` फ़ाइल को संपादित करने के बाद (जैसे [Poedit](https://poedit.net/) से), यह स्क्रिप्ट चलाएँ। यह टेक्स्ट निकालती है, कैटलॉग अपडेट करती है, उन्हें कंपाइल करती है और उन टेक्स्ट की सूची दिखाती है जिनका अनुवाद या समीक्षा अभी बाकी है (`fuzzy` चिह्नित); तब तक ऐप उन्हें अंग्रेज़ी में दिखाता है। जब तक कोई कैटलॉग पुराना है, टेस्ट विफल होते हैं।
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 कोई भाषा जोड़ने के लिए उसका कैटलॉग बनाएँ, अनुवाद करें, कंपाइल करें और भाषा को `src/utils/i18n.py` के `UI_LANGUAGES` में जोड़ें:
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <कोड>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <कोड>
+uv run .github/scripts/update_translations.py
 ```
 
 ## इस दस्तावेज़ को बेहतर बनाएँ

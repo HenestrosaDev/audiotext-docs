@@ -17,21 +17,21 @@ Các tùy chọn không được chỉ định sẽ lấy giá trị đã cấu 
 
 ```bash
 # Chép lời một tệp. Văn bản cũng được in ra, nên có thể chuyển hướng
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Chép lời các tệp trong thư mục và nhận diện người nói
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Chép lời video YouTube bằng Whisper API
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Chép lời một cuộc họp bằng Whisper API, kèm từ khóa và ngữ cảnh
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "Cuộc họp về phiên bản tiếp theo"
 
 # Chép lời các tệp được thêm vào thư mục cho đến khi dừng bằng Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Tùy chọn
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Mô hình chép lời: `whisper-1`, `gpt-transcribe` hoặc `gpt-4o-transcribe-diarize` |
 
-Chạy `python src/cli.py transcribe --help` để xem tất cả tùy chọn và giá trị của chúng.
+Chạy `uv run src/cli.py transcribe --help` để xem tất cả tùy chọn và giá trị của chúng.
 
 ## Đầu ra và mã thoát
 

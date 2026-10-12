@@ -9,7 +9,7 @@ Kontribusi sangat diterima! Baca [panduan kontribusi](https://github.com/Henestr
 
 ## Siapkan proyek
 
-Diperlukan **Python 3.10 hingga 3.13**.
+Diperlukan **Python 3.10 hingga 3.13**. uv mengunduhnya jika belum ada.
 
 1. Instal [FFmpeg](https://ffmpeg.org) dan, di Linux, [PortAudio](https://www.portaudio.com/):
 
@@ -29,42 +29,31 @@ Diperlukan **Python 3.10 hingga 3.13**.
    cd audiotext
    ```
 
-3. Buat dan aktifkan lingkungan virtual:
-
-   ```bash
-   python -m venv venv
-   # macOS dan Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. Instal [uv](https://docs.astral.sh/uv/getting-started/installation/), yang mengelola dependensi dan lingkungan virtual.
 
 4. Instal dependensi:
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt` menginstal PyTorch dengan dukungan CUDA, yang merupakan unduhan besar di Linux dan Windows. Tanpa GPU NVIDIA, instal versi CPU terlebih dahulu:
+   `uv sync` menginstal PyTorch dengan dukungan CUDA, yang merupakan unduhan besar di Linux dan Windows. Tanpa GPU NVIDIA, instal versi CPU sebagai gantinya:
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   Dengan [uv](https://docs.astral.sh/uv/), jalankan `uv pip install --index-strategy unsafe-best-match -r requirements.txt`.
 
 5. Jalankan aplikasi:
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## Alat pengembangan
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # memeriksa dan memformat kode sebelum setiap commit
-pytest               # menjalankan pengujian
+uv run pre-commit install   # memeriksa dan memformat kode sebelum setiap commit
+uv run pytest               # menjalankan pengujian
 ```
 
 ## Terjemahkan antarmuka
@@ -74,14 +63,14 @@ Antarmuka diterjemahkan dengan [gettext](https://www.gnu.org/software/gettext/).
 Saat teks dalam kode berubah, atau setelah mengedit file `.po` (mis. dengan [Poedit](https://poedit.net/)), jalankan skrip ini. Skrip ini mengekstrak teks, memperbarui katalog, mengompilasinya, dan menampilkan daftar teks yang masih perlu diterjemahkan atau ditinjau (ditandai `fuzzy`), yang ditampilkan aplikasi dalam bahasa Inggris hingga saat itu. Pengujian gagal selama masih ada katalog yang belum diperbarui.
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 Untuk menambahkan bahasa, buat katalognya, terjemahkan, kompilasi, lalu tambahkan bahasa tersebut ke `UI_LANGUAGES` di `src/utils/i18n.py`:
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <kode>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <kode>
+uv run .github/scripts/update_translations.py
 ```
 
 ## Perbaiki dokumentasi ini

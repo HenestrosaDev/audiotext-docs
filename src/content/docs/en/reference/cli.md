@@ -17,21 +17,21 @@ The options that are not given take the values configured in the app. The transc
 
 ```bash
 # Transcribe a file. The text is also printed, so it can be redirected
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Transcribe the files of a folder identifying the speakers
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Transcribe a YouTube video with the Whisper API
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Transcribe a meeting with the Whisper API, with its keywords and its context
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "A meeting about the next release"
 
 # Transcribe the files added to a folder until stopped with Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Options
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Transcription model: `whisper-1`, `gpt-transcribe` or `gpt-4o-transcribe-diarize` |
 
-Run `python src/cli.py transcribe --help` to see all the options and their values.
+Run `uv run src/cli.py transcribe --help` to see all the options and their values.
 
 ## Output and exit code
 

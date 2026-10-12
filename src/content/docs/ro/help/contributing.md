@@ -9,7 +9,7 @@ Contribuțiile sunt binevenite! Citiți [ghidul de contribuție](https://github.
 
 ## Pregătiți proiectul
 
-Este necesar **Python 3.10 până la 3.13**.
+Este necesar **Python 3.10 până la 3.13**. Dacă lipsește, uv îl descarcă.
 
 1. Instalați [FFmpeg](https://ffmpeg.org) și, pe Linux, [PortAudio](https://www.portaudio.com/):
 
@@ -29,42 +29,31 @@ Este necesar **Python 3.10 până la 3.13**.
    cd audiotext
    ```
 
-3. Creați și activați un mediu virtual:
-
-   ```bash
-   python -m venv venv
-   # macOS și Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. Instalați [uv](https://docs.astral.sh/uv/getting-started/installation/), care gestionează dependențele și mediul virtual.
 
 4. Instalați dependențele:
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt` instalează PyTorch cu suport CUDA, o descărcare mare pe Linux și Windows. Fără placă NVIDIA, instalați mai întâi versiunea pentru procesor:
+   `uv sync` instalează PyTorch cu suport CUDA, o descărcare mare pe Linux și Windows. Fără placă NVIDIA, instalați în schimb versiunea pentru procesor:
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   Cu [uv](https://docs.astral.sh/uv/), rulați `uv pip install --index-strategy unsafe-best-match -r requirements.txt`.
 
 5. Porniți aplicația:
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## Instrumente de dezvoltare
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # verifică și formatează codul înainte de fiecare commit
-pytest               # rulează testele
+uv run pre-commit install   # verifică și formatează codul înainte de fiecare commit
+uv run pytest               # rulează testele
 ```
 
 ## Traduceți interfața
@@ -74,14 +63,14 @@ Interfața este tradusă cu [gettext](https://www.gnu.org/software/gettext/). Te
 Când textele din cod se schimbă sau după ce editați un fișier `.po` (de ex. cu [Poedit](https://poedit.net/)), rulați acest script. Extrage textele, actualizează cataloagele, le compilează și listează textele care mai trebuie traduse sau revizuite (marcate ca `fuzzy`), pe care aplicația le afișează în engleză până atunci. Testele eșuează cât timp un catalog nu este actualizat.
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 Pentru a adăuga o limbă, creați-i catalogul, traduceți-l, compilați-l și adăugați limba în `UI_LANGUAGES` din `src/utils/i18n.py`:
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <cod>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <cod>
+uv run .github/scripts/update_translations.py
 ```
 
 ## Îmbunătățiți această documentație

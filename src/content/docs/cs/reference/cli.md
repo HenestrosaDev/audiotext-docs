@@ -17,21 +17,21 @@ Nezadané možnosti přebírají hodnoty nastavené v aplikaci. Přepisy se vžd
 
 ```bash
 # Přepis souboru. Text se také vypíše, takže ho lze přesměrovat
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Přepis souborů složky s rozpoznáním mluvčích
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Přepis videa z YouTube pomocí Whisper API
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Přepis schůzky pomocí Whisper API s klíčovými slovy a kontextem
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "Schůzka o příští verzi"
 
 # Přepis souborů přidávaných do složky, dokud se nezastaví klávesami Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Možnosti
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Model přepisu: `whisper-1`, `gpt-transcribe` nebo `gpt-4o-transcribe-diarize` |
 
-Spuštěním `python src/cli.py transcribe --help` zobrazíte všechny možnosti a jejich hodnoty.
+Spuštěním `uv run src/cli.py transcribe --help` zobrazíte všechny možnosti a jejich hodnoty.
 
 ## Výstup a návratový kód
 

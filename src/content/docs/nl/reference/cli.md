@@ -17,21 +17,21 @@ Opties die je niet opgeeft, krijgen de waarden die in de app zijn ingesteld. De 
 
 ```bash
 # Een bestand transcriberen. De tekst wordt ook afgedrukt, dus je kunt hem omleiden
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # De bestanden van een map transcriberen en de sprekers herkennen
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Een YouTube-video transcriberen met de Whisper-API
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Een vergadering transcriberen met de Whisper-API, met trefwoorden en context
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "Een vergadering over de volgende versie"
 
 # De bestanden transcriberen die aan een map worden toegevoegd, tot Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Opties
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Transcriptiemodel: `whisper-1`, `gpt-transcribe` of `gpt-4o-transcribe-diarize` |
 
-Voer `python src/cli.py transcribe --help` uit om alle opties en hun waarden te zien.
+Voer `uv run src/cli.py transcribe --help` uit om alle opties en hun waarden te zien.
 
 ## Uitvoer en exitcode
 
