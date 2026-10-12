@@ -10,6 +10,7 @@ Die **Einstellungen** enthalten alles, was sich nicht mit jeder Transkription ä
 ## Allgemein
 
 - **Erscheinungsbild**: **System** (folgt Ihrem System), **Hell** oder **Dunkel**.
+- **Größe der Oberfläche**: die Größe der Texte und der Bedienelemente, von 80 % bis 200 %. Standardmäßig `100%`. Die Änderung wird sofort übernommen.
 - **Sprache der Oberfläche**: die Sprache von Audiotext oder **Systemsprache**. Siehe die [verfügbaren Sprachen](/de/reference/formats-and-languages/#sprachen-der-oberfläche).
 - **Datumsformat**: wie die Daten der Transkriptionen angezeigt werden, in der Sprache der Oberfläche: kurz (`04.10.26`), mittel (`04.10.2026`, Standard), lang (`4. Oktober 2026`) oder ISO (`2026-10-04`). Das Menü zeigt jedes Format mit einem Beispiel.
 - **Uhrzeitformat**: **Automatisch** (die Uhr der Sprache der Oberfläche), 12 Stunden (`1:30 PM`) oder 24 Stunden (`13:30`).

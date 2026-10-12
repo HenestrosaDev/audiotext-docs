@@ -10,6 +10,7 @@ sidebar:
 ## Allmänt
 
 - **Utseende**: **System** (följer systemet), **Ljust** eller **Mörkt**.
+- **Gränssnittets storlek**: storleken på texten och kontrollerna, från 80 % till 200 %. `100%` som standard. Ändringen tillämpas direkt.
 - **Gränssnittets språk**: Audiotexts språk, eller **Systemspråk**. Se de [tillgängliga språken](/sv/reference/formats-and-languages/#gränssnittets-språk).
 - **Datumformat**: hur transkriberingarnas datum visas, på gränssnittets språk: kort (`2026-10-04`), medel (`4 okt. 2026`, standard), långt (`4 oktober 2026`) eller ISO (`2026-10-04`). Menyn visar varje format med ett exempel (format som ser likadana ut visas en gång).
 - **Tidsformat**: **Automatiskt** (gränssnittsspråkets klocka), 12-timmars (`1:30 em`) eller 24-timmars (`13:30`).
