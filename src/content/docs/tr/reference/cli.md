@@ -17,21 +17,21 @@ Verilmeyen seçenekler uygulamada ayarlanan değerleri alır. Transkripsiyonlar 
 
 ```bash
 # Bir dosyayı yazıya dök. Metin ayrıca yazdırılır, böylece yönlendirilebilir
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Bir klasörün dosyalarını konuşmacıları belirleyerek yazıya dök
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Bir YouTube videosunu Whisper API ile yazıya dök
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Bir toplantıyı anahtar kelimeleri ve bağlamıyla Whisper API ile yazıya dök
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "Bir sonraki sürüm hakkında bir toplantı"
 
 # Bir klasöre eklenen dosyaları Ctrl+C ile durdurulana kadar yazıya dök
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Seçenekler
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Transkripsiyon modeli: `whisper-1`, `gpt-transcribe` veya `gpt-4o-transcribe-diarize` |
 
-Tüm seçenekleri ve değerlerini görmek için `python src/cli.py transcribe --help` komutunu çalıştırın.
+Tüm seçenekleri ve değerlerini görmek için `uv run src/cli.py transcribe --help` komutunu çalıştırın.
 
 ## Çıktı ve çıkış kodu
 

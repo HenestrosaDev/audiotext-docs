@@ -17,21 +17,21 @@ sidebar:
 
 ```bash
 # 파일을 받아씁니다. 텍스트도 출력되므로 리디렉션할 수 있습니다
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # 화자를 식별하며 폴더의 파일들을 받아씁니다
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Whisper API로 YouTube 동영상을 받아씁니다
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # 키워드와 맥락을 넣어 Whisper API로 회의를 받아씁니다
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "다음 릴리스에 관한 회의"
 
 # Ctrl+C로 멈출 때까지 폴더에 추가되는 파일을 받아씁니다
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## 옵션
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | 받아쓰기 모델: `whisper-1`, `gpt-transcribe`, `gpt-4o-transcribe-diarize` |
 
-모든 옵션과 값은 `python src/cli.py transcribe --help`로 확인하세요.
+모든 옵션과 값은 `uv run src/cli.py transcribe --help`로 확인하세요.
 
 ## 출력과 종료 코드
 

@@ -9,7 +9,7 @@ Bidrag är välkomna! Läs [riktlinjerna för bidrag](https://github.com/Henestr
 
 ## Konfigurera projektet
 
-**Python 3.10 till 3.13** krävs.
+**Python 3.10 till 3.13** krävs. uv laddar ner det om det saknas.
 
 1. Installera [FFmpeg](https://ffmpeg.org) och, på Linux, [PortAudio](https://www.portaudio.com/):
 
@@ -29,42 +29,31 @@ Bidrag är välkomna! Läs [riktlinjerna för bidrag](https://github.com/Henestr
    cd audiotext
    ```
 
-3. Skapa och aktivera en virtuell miljö:
-
-   ```bash
-   python -m venv venv
-   # macOS och Linux
-   source venv/bin/activate
-   # Windows
-   . venv/Scripts/activate
-   ```
+3. Installera [uv](https://docs.astral.sh/uv/getting-started/installation/), som hanterar beroendena och den virtuella miljön.
 
 4. Installera beroendena:
 
    ```bash
-   pip install -r requirements.txt
+   uv sync
    ```
 
-   `requirements.txt` installerar PyTorch med CUDA-stöd, en stor nedladdning på Linux och Windows. Utan NVIDIA-grafikkort installerar du först CPU-versionen:
+   `uv sync` installerar PyTorch med CUDA-stöd, en stor nedladdning på Linux och Windows. Utan NVIDIA-grafikkort installerar du CPU-versionen i stället:
 
    ```bash
-   pip install torch==2.8.0 torchaudio==2.8.0 torchvision==0.23.0 --index-url https://download.pytorch.org/whl/cpu
+   uv sync --no-group cuda --group cpu
    ```
-
-   Med [uv](https://docs.astral.sh/uv/) kör du `uv pip install --index-strategy unsafe-best-match -r requirements.txt`.
 
 5. Starta appen:
 
    ```bash
-   python src/app.py
+   uv run src/app.py
    ```
 
 ## Utvecklingsverktyg
 
 ```bash
-pip install -r requirements-dev.txt
-pre-commit install   # kontrollerar och formaterar koden före varje commit
-pytest               # kör testerna
+uv run pre-commit install   # kontrollerar och formaterar koden före varje commit
+uv run pytest               # kör testerna
 ```
 
 ## Översätt gränssnittet
@@ -74,14 +63,14 @@ Gränssnittet översätts med [gettext](https://www.gnu.org/software/gettext/). 
 När texterna i koden ändras, eller efter att du har redigerat en `.po`-fil (t.ex. med [Poedit](https://poedit.net/)), kör du det här skriptet. Det extraherar texterna, uppdaterar katalogerna, kompilerar dem och listar texterna som återstår att översätta eller granska (markerade som `fuzzy`), som appen visar på engelska tills dess. Testerna misslyckas så länge en katalog är inaktuell.
 
 ```bash
-python .github/scripts/update_translations.py
+uv run .github/scripts/update_translations.py
 ```
 
 För att lägga till ett språk skapar du dess katalog, översätter och kompilerar den och lägger till språket i `UI_LANGUAGES` i `src/utils/i18n.py`:
 
 ```bash
-pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <kod>
-python .github/scripts/update_translations.py
+uv run pybabel init -i res/locales/audiotext.pot -d res/locales -D audiotext -l <kod>
+uv run .github/scripts/update_translations.py
 ```
 
 ## Förbättra denna dokumentation

@@ -17,21 +17,21 @@ sidebar:
 
 ```bash
 # ファイルを文字起こしする。テキストも出力されるのでリダイレクトできる
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # 話者を識別しながらフォルダー内のファイルを文字起こしする
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Whisper API で YouTube 動画を文字起こしする
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # キーワードとコンテキストを付けて Whisper API で会議を文字起こしする
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "次のリリースについての会議"
 
 # Ctrl+C で止めるまで、フォルダーに追加されたファイルを文字起こしする
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## オプション
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | 文字起こしモデル: `whisper-1`、`gpt-transcribe`、`gpt-4o-transcribe-diarize` |
 
-すべてのオプションと値は `python src/cli.py transcribe --help` で確認できます。
+すべてのオプションと値は `uv run src/cli.py transcribe --help` で確認できます。
 
 ## 出力と終了コード
 

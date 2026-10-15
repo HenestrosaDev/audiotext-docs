@@ -17,21 +17,21 @@ Alternativ som inte anges får värdena som är inställda i appen. Transkriberi
 
 ```bash
 # Transkribera en fil. Texten skrivs också ut, så den kan omdirigeras
-python src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
 
 # Transkribera filerna i en mapp och identifiera talarna
-python src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Transkribera en YouTube-video med Whisper-API:t
-python src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # Transkribera ett möte med Whisper-API:t, med nyckelord och sammanhang
-python src/cli.py transcribe meeting.m4a --method whisper-api \
+uv run src/cli.py transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "Ett möte om nästa version"
 
 # Transkribera filer som läggs till i en mapp tills det stoppas med Ctrl+C
-python src/cli.py watch inbox/ --output-types srt
+uv run src/cli.py watch inbox/ --output-types srt
 ```
 
 ## Alternativ
@@ -66,7 +66,7 @@ python src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | Transkriberingsmodell: `whisper-1`, `gpt-transcribe` eller `gpt-4o-transcribe-diarize` |
 
-Kör `python src/cli.py transcribe --help` för att se alla alternativ och deras värden.
+Kör `uv run src/cli.py transcribe --help` för att se alla alternativ och deras värden.
 
 ## Utdata och slutkod
 
