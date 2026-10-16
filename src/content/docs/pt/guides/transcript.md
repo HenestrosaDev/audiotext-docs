@@ -15,6 +15,8 @@ Mostra a transcrição dividida nas legendas do vídeo, com quando cada uma come
 
 Por padrão, os tempos são mostrados com precisão de milissegundos, como nas legendas (`00:01:05,900 – 00:01:09,350`). Para simplificá-los (`01:05 – 01:09`), desmarque **Marcas de tempo precisas (HH:MM:SS,mmm)** no menu `⋯`.
 
+Acima das legendas, uma linha as conta e, se os oradores foram identificados, também eles (ex.: `Legendas: 120 · Oradores: 3`). Um segmento longo dividido em várias legendas conta como várias.
+
 Os carimbos de tempo só estão disponíveis com o **WhisperX** e com os modelos `whisper-1` e `gpt-4o-transcribe-diarize` da **API do Whisper**. Sem eles, a transcrição não pode ser reproduzida legenda por legenda; use o modo **Texto simples**.
 
 ### Reproduza o áudio
@@ -29,7 +31,7 @@ Se o arquivo de origem foi movido ou excluído, o áudio não está disponível,
 
 ### Assista a vídeos com legendas
 
-As transcrições de vídeos mostram o vídeo acima do texto. O menu dele permite **Mostrar legendas no vídeo** e escolher o **Tamanho** (pequeno, médio ou grande), a **Posição** (embaixo ou em cima) e o **Estilo** (fundo escuro ou contorno). Se a transcrição tiver [traduções](/pt/guides/summary-and-translation/#tradução), o menu também escolhe se as legendas mostram a **Transcrição** ou a **Tradução para…** um idioma.
+As transcrições de vídeos mostram o vídeo acima do texto. O menu dele permite **Mostrar legendas no vídeo** e escolher o **Tamanho** (pequeno, médio ou grande), a **Posição** (embaixo ou em cima) e o **Estilo** (fundo escuro ou contorno). Se a transcrição tiver [traduções](/pt/guides/summary-and-translation/#tradução), o menu também escolhe se as legendas mostram a **Transcrição** ou a **Tradução para…** um idioma. O botão **Legendas** da barra do reprodutor também as mostra ou oculta, e a seta ao lado dele abre o mesmo menu.
 
 ## Localize e substitua
 
@@ -39,6 +41,8 @@ Pressione `Ctrl+F` (`⌘F` no macOS), ou clique na lupa do cabeçalho, para abri
 - **Substituir** substitui a ocorrência atual, e **Substituir tudo** todas elas, ex.: um nome escrito errado. Marque **Diferenciar maiúsculas** para encontrar só o texto com as mesmas maiúsculas.
 - A janela não é modal, então você pode ler e reproduzir o texto enquanto ela está aberta. **Manter no topo** a mantém acima da janela principal.
 - `Esc` a fecha.
+
+No modo **Texto simples**, a janela só localiza (**Localizar na transcrição**), já que uma correspondência ali não pode ser relacionada a uma legenda. Volte para **Legendas** para substituir.
 
 ## Corrija a transcrição
 
@@ -71,7 +75,13 @@ Se uma transcrição não tiver pontuações, o menu `⋯` diz por quê: **Ative
 
 ## Texto simples
 
-O modo **Texto simples** permite editar o texto livremente, como em um editor de texto. As alterações são salvas automaticamente. A transcrição mantém o texto original com os carimbos de tempo, então as legendas não usam as edições do texto simples.
+O modo **Texto simples** mostra o texto da transcrição sem carimbos de tempo. Ele é construído a partir das legendas, então é só de leitura, como diz a nota ao lado dos modos: para alterá-lo, [corrija as legendas](#corrija-a-transcrição), e o texto simples as acompanha. Assim, todas as exportações e traduções usam o mesmo texto.
+
+As transcrições sem carimbos de tempo (ex.: da API do Google) não têm legendas, então o texto simples delas pode ser editado livremente, como em um editor de texto. As alterações são salvas automaticamente.
+
+:::note
+As versões anteriores permitiam editar o texto simples das transcrições com legendas. Ao abrir uma dessas transcrições (ou traduções), o texto simples dela é reconstruído a partir das legendas, então essas edições são substituídas.
+:::
 
 ## Copie e exporte
 

@@ -44,8 +44,8 @@ Sie werden von WhisperX und der Whisper-API verwendet, außer vom Modell `gpt-4o
 
 ## Optionen
 
-- **Zeiten pro Wort** (WhisperX): richtet jedes Wort am Audio aus, um es beim Abspielen hervorzuheben und um die Wörter zu [prüfen](/de/guides/transcript/#wörter-mit-geringer-konfidenz-prüfen), bei denen es am wenigsten sicher ist. Dauert etwas länger. Standardmäßig aktiv.
-- **Sprache extrahieren**: reduziert Musik und Hintergrundgeräusche vor dem Transkribieren.
+- **Zeiten pro Wort** (WhisperX): richtet jedes Wort am Audio aus, um es beim Abspielen hervorzuheben und um die Wörter zu [prüfen](/de/guides/transcript/#wörter-mit-geringer-konfidenz-prüfen), bei denen es am wenigsten sicher ist. Dauert etwas länger. Standardmäßig aktiv. Die Untertitel brauchen die Zeiten der Wörter, daher wird die Option eingeschaltet und gesperrt, solange `.srt` oder `.vtt` in den **Dateitypen** eines Ordners gewählt ist; Ihre eigene Wahl kehrt zurück, sobald sie nicht mehr gewählt sind.
+- **Hintergrundgeräusche reduzieren**: reduziert Brummen und gleichmäßige Hintergrundgeräusche und gleicht leise Sprache an, bevor transkribiert wird. Dauert länger.
 - **Sprecher erkennen** (WhisperX): kennzeichnet, wer in welchem Teil spricht, z. B. `SPEAKER_00`. Wenn Sie wissen, wie viele Personen sprechen, geben Sie es unter **Anzahl der Sprecher** an (`0` erkennt sie automatisch). Erfordert ein kostenloses Hugging-Face-Token; siehe [Sprecher erkennen](#sprecher-erkennen). Bei der Whisper-API erkennt das Modell `gpt-4o-transcribe-diarize` die Sprecher.
 
 ### Sprecher erkennen

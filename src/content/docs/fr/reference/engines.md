@@ -55,11 +55,12 @@ Sur les Mac avec Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-
 - La version MLX du modèle est téléchargée lors de sa première utilisation.
 - `distil-small.en`, `distil-large-v2` et `distil-large-v3.5` n’ont pas de version MLX : ils tournent donc sur le CPU.
 - Le [texte en direct](/fr/guides/sources/#texte-en-direct) tourne toujours sur le CPU.
-- Pour transcrire sur le CPU, activez **Utiliser le CPU** dans **Préférences** → **WhisperX**.
+- **Type de calcul** et **Taille de lot** ne s’appliquent pas sur le GPU, car MLX calcule toujours en demi-précision et sans lots.
+- Pour transcrire sur le CPU, activez **Utiliser le CPU** dans **Préférences** → **Transcription**.
 
 ### Options avancées
 
-Elles se trouvent dans **Préférences** → **WhisperX**. Ne les modifiez qu’en cas de problème ou si vous savez ce que vous faites : un GPU à court de mémoire peut figer votre système.
+Elles se trouvent dans **Préférences** → **Transcription** → **WhisperX**. Ne les modifiez qu’en cas de problème ou si vous savez ce que vous faites : un GPU à court de mémoire peut figer votre système.
 
 - **Type de calcul** : la précision des nombres du modèle. `float16` est plus rapide sur les GPU NVIDIA (la valeur par défaut avec CUDA). `int8` utilise moins de mémoire et est la valeur par défaut sur CPU, car de nombreux CPU ne gèrent pas `float16` efficacement. `float32` est le plus précis, pour les GPU de plus de 8 Go de VRAM.
 - **Taille de lot** : le nombre de parties de l’audio traitées à la fois (`8` par défaut). Elle ne change pas la qualité, seulement la vitesse. Réduisez-la si la mémoire manque ; jusqu’à `16` est recommandé.
@@ -82,8 +83,8 @@ Les audios longs sont découpés en morceaux de 10 minutes maximum, coupés sur 
 ### Options
 
 - **Format de réponse** (carte Sortie, pour les dossiers) : `text` (par défaut), `json`, `verbose_json`, `srt` ou `vtt`. Les sous-titres et `verbose_json` nécessitent un modèle avec horodatage.
-- **Température** (Préférences → API Whisper) : entre 0 et 1. Les valeurs élevées comme 0,8 rendent le résultat plus aléatoire, et les valeurs basses comme 0,2 plus ciblé. Avec 0 (par défaut), le modèle l’augmente automatiquement si nécessaire.
-- **Horodatage des mots** (Préférences → API Whisper) : si `whisper-1` renvoie aussi l’horodatage de chaque mot, pour le surligner pendant la lecture. Plus long. Activé par défaut.
+- **Température** (Préférences → Transcription) : entre 0 et 1. Les valeurs élevées comme 0,8 rendent le résultat plus aléatoire, et les valeurs basses comme 0,2 plus ciblé. Avec 0 (par défaut), le modèle l’augmente automatiquement si nécessaire.
+- **Horodatage des mots** (Préférences → Transcription) : si `whisper-1` renvoie aussi l’horodatage de chaque mot, pour le surligner pendant la lecture. Plus long. Activé par défaut.
 
 ## API Google
 

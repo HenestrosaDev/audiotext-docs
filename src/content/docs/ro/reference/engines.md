@@ -55,11 +55,12 @@ Pe Mac-urile cu Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-e
 - Versiunea MLX a modelului se descarcă la prima utilizare.
 - `distil-small.en`, `distil-large-v2` și `distil-large-v3.5` nu au versiune MLX, deci rulează pe procesor.
 - [Textul live](/ro/guides/sources/#text-live) rulează mereu pe procesor.
-- Pentru a transcrie pe procesor, activați **Folosește CPU** în **Preferințe** → **WhisperX**.
+- **Tip de calcul** și **Dimensiunea lotului** nu se aplică pe placa grafică, deoarece MLX calculează mereu în semiprecizie și fără loturi.
+- Pentru a transcrie pe procesor, activați **Folosește CPU** în **Preferințe** → **Transcriere**.
 
 ### Opțiuni avansate
 
-Se află în **Preferințe** → **WhisperX**. Schimbați-le doar dacă aveți probleme sau știți ce faceți: o placă video fără memorie liberă poate bloca sistemul.
+Se află în **Preferințe** → **Transcriere** → **WhisperX**. Schimbați-le doar dacă aveți probleme sau știți ce faceți: o placă video fără memorie liberă poate bloca sistemul.
 
 - **Tip de calcul**: precizia numerelor modelului. `float16` este mai rapid pe plăcile video NVIDIA (implicit cu CUDA). `int8` folosește mai puțină memorie și este implicit pe procesor, deoarece multe procesoare nu acceptă eficient `float16`. `float32` este cel mai precis, pentru plăci cu peste 8 GB VRAM.
 - **Dimensiunea lotului**: câte părți ale sunetului sunt procesate simultan (implicit `8`). Nu schimbă calitatea, doar viteza. Reduceți-o dacă rămâneți fără memorie; se recomandă cel mult `16`.
@@ -82,8 +83,8 @@ Traducerile în engleză sunt făcute mereu de `whisper-1`, singurul model care 
 ### Opțiuni
 
 - **Formatul răspunsului** (cardul Ieșire, pentru dosare): `text` (implicit), `json`, `verbose_json`, `srt` sau `vtt`. Subtitrările și `verbose_json` necesită un model cu marcaje de timp.
-- **Temperatură** (Preferințe → Whisper API): între 0 și 1. Valorile mari, precum 0,8, fac rezultatul mai aleatoriu, iar cele mici, precum 0,2, mai concentrat. Cu 0 (implicit), modelul o crește automat când e nevoie.
-- **Marcaje de timp ale cuvintelor** (Preferințe → Whisper API): dacă `whisper-1` returnează și marcajele de timp ale fiecărui cuvânt, pentru a-l evidenția la redare. Durează mai mult. Activat implicit.
+- **Temperatură** (Preferințe → Transcriere): între 0 și 1. Valorile mari, precum 0,8, fac rezultatul mai aleatoriu, iar cele mici, precum 0,2, mai concentrat. Cu 0 (implicit), modelul o crește automat când e nevoie.
+- **Marcaje de timp ale cuvintelor** (Preferințe → Transcriere): dacă `whisper-1` returnează și marcajele de timp ale fiecărui cuvânt, pentru a-l evidenția la redare. Durează mai mult. Activat implicit.
 
 ## API Google
 

@@ -58,7 +58,7 @@ The first time you transcribe with **WhisperX** (the default engine), its model 
 
 When a new version is released, Audiotext shows a **Version … is available** button in the top bar. Click it to open the page of the release, download the file for your system and install it like the first time: run the new installer on Windows, drag the new app to the **Applications** folder on macOS, or run the `install.sh` of the new archive on Linux. The previous version is replaced, and your settings and history are kept, since they're stored in your [user configuration folder](/en/reference/files-and-data/#user-configuration-folder). If you use the GPU add-on, choose it again when installing.
 
-To check for a new version yourself, open **Preferences** → **About** → **Check for updates**. To stop checking when the app opens, turn off **General** → **Updates**.
+To check for a new version yourself, open **Preferences** → **About** → **Check for updates**. To stop checking when the app opens, turn off **General** → **Check for updates automatically**.
 
 ## Uninstall the app
 

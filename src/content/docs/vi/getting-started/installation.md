@@ -58,7 +58,7 @@ Lần đầu chép lời bằng **WhisperX** (công cụ mặc định), mô hì
 
 Khi có phiên bản mới, Audiotext hiển thị nút **Đã có phiên bản …** trên thanh trên cùng. Nhấp vào nút để mở trang phát hành, tải tệp cho hệ thống của bạn và cài đặt như lần đầu: chạy trình cài đặt mới trên Windows, kéo ứng dụng mới vào thư mục **Ứng dụng** trên macOS, hoặc chạy `install.sh` của bản lưu trữ mới trên Linux. Phiên bản trước sẽ được thay thế, còn cài đặt và lịch sử của bạn vẫn được giữ, vì chúng được lưu trong [thư mục cấu hình người dùng](/vi/reference/files-and-data/#thư-mục-cấu-hình-người-dùng). Nếu bạn dùng tiện ích bổ sung GPU, hãy chọn lại khi cài đặt.
 
-Để tự kiểm tra phiên bản mới, mở **Tùy chọn ưu tiên** → **Giới thiệu** → **Kiểm tra cập nhật**. Để ngừng kiểm tra khi mở ứng dụng, tắt **Chung** → **Cập nhật**.
+Để tự kiểm tra phiên bản mới, mở **Tùy chọn ưu tiên** → **Giới thiệu** → **Kiểm tra cập nhật**. Để ngừng kiểm tra khi mở ứng dụng, tắt **Chung** → **Tự động kiểm tra cập nhật**.
 
 ## Gỡ cài đặt ứng dụng
 

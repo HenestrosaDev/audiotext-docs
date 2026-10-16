@@ -15,9 +15,9 @@ sidebar:
 - **날짜 형식**: 받아쓰기의 날짜를 인터페이스 언어로 표시하는 방식: 짧게(`26. 10. 4.`), 중간(`2026. 10. 4.`, 기본값), 길게(`2026년 10월 4일`), ISO(`2026-10-04`). 메뉴에는 각 형식이 예시와 함께 표시됩니다.
 - **시간 형식**: **자동**(인터페이스 언어의 시계), 12시간제(`오후 1:30`), 24시간제(`13:30`).
 - **알림**: 받아쓰기가 완료되면 시스템 알림을 표시합니다(폴더는 모든 파일이 완료되었을 때, 감시 중인 폴더는 새 파일이 완료될 때마다). 기본적으로 켜져 있습니다. macOS에서는 **스크립트 편집기**, Windows에서는 **Windows PowerShell**의 알림으로 표시되므로 시스템 설정에서 해당 앱의 알림을 허용하거나 끕니다. Linux에서는 `notify-send`(`libnotify-bin` 또는 `libnotify` 패키지)가 필요합니다.
-- **업데이트**: 앱을 열 때 새 버전이 있는지 확인하고, 있으면 위쪽 막대에 다운로드 페이지를 여는 **버전 … 사용 가능** 버튼을 표시합니다. 시험판은 제공하지 않습니다. 기본적으로 켜져 있습니다.
+- **자동으로 업데이트 확인**: 앱을 열 때 새 버전이 있는지 확인하고, 있으면 위쪽 막대에 다운로드 페이지를 여는 **버전 … 사용 가능** 버튼을 표시합니다. 시험판은 제공하지 않습니다. 기본적으로 켜져 있습니다.
 
-## AI
+## 제공자
 
 [요약, 질문, 번역](/ko/guides/summary-and-translation/)의 제공자입니다.
 
@@ -30,27 +30,35 @@ sidebar:
 
 ## API 키
 
-각 서비스의 키입니다. **API 키 설정…**을 클릭해 입력하거나 **API 키 변경…**을 클릭해 바꿉니다(비워 두면 삭제됩니다). 키는 시스템의 자격 증명 저장소에 보관됩니다.
+각 서비스의 키입니다. **API 키 설정…**을 클릭해 입력하거나 **API 키 변경…**을 클릭해 바꿉니다(비워 두면 삭제됩니다). 키는 시스템의 자격 증명 저장소에 보관됩니다. 키는 용도별로 묶여 있으며, 설정된 키에는 체크 표시가 나타납니다.
 
-| 키 | 용도 |
-| --- | --- |
-| OpenAI API 키 | Whisper API, OpenAI로 요약·질문·번역 |
-| Anthropic API 키 | Claude로 요약·질문·번역 |
-| DeepSeek API 키 | DeepSeek로 요약·질문·번역 |
-| Gemini API 키 | Gemini(Google AI Studio)로 요약·질문·번역 |
-| Mistral API 키 | Mistral로 요약·질문·번역 |
-| xAI API 키 | Grok으로 요약·질문·번역 |
-| DeepL API 키 | DeepL로 번역(무료 요금제 키도 작동) |
-| Google API 키 | 무료 등급을 넘는 Google Speech-to-Text, Google Translate(Cloud Translation API) |
-| Hugging Face 토큰 | WhisperX로 화자 식별 |
+| 그룹 | 키 | 용도 |
+| --- | --- | --- |
+| **LLM 제공자** | OpenAI API 키 | Whisper API, OpenAI로 요약·질문·번역 |
+| | Anthropic API 키 | Claude로 요약·질문·번역 |
+| | DeepSeek API 키 | DeepSeek로 요약·질문·번역 |
+| | Gemini API 키 | Gemini(Google AI Studio)로 요약·질문·번역 |
+| | Mistral API 키 | Mistral로 요약·질문·번역 |
+| | xAI API 키 | Grok으로 요약·질문·번역 |
+| **번역** | DeepL API 키 | DeepL로 번역(무료 요금제 키도 작동) |
+| | Google API 키 | 무료 등급을 넘는 Google Speech-to-Text, Google Translate(Cloud Translation API) |
+| **받아쓰기** | Hugging Face 토큰 | WhisperX로 화자 식별 |
 
 :::caution
 각 제공자는 API 사용 요금을 청구하며, Audiotext는 이에 대해 책임지지 않습니다. 새 키로 OpenAI가 `429` 오류를 반환한다면 [문제 해결](/ko/help/troubleshooting/#whisper-api가-429-오류를-반환함)을 참고하세요.
 :::
 
-## WhisperX
+## 받아쓰기
 
-**연산 유형**, **배치 크기**, **CPU 사용**. [WhisperX 고급 옵션](/ko/reference/engines/#고급-옵션)을 참고하세요. Apple 실리콘 Mac에서는 **CPU 사용**이 켜져 있지 않으면 WhisperX가 GPU에서 받아씁니다. [Mac에서](/ko/reference/engines/#mac에서)를 참고하세요.
+엔진별 옵션이 각각의 섹션에 있습니다.
+
+### WhisperX
+
+**연산 유형**, **배치 크기**, **CPU 사용**. [WhisperX 고급 옵션](/ko/reference/engines/#고급-옵션)을 참고하세요. Apple 실리콘 Mac에서는 **CPU 사용**이 켜져 있지 않으면 WhisperX가 GPU에서 받아씁니다. [Mac에서](/ko/reference/engines/#mac에서)를 참고하세요. Mac의 GPU에서는 **연산 유형**과 **배치 크기**의 도움말에 적용되지 않는다고 표시되며, **CPU 사용**에는 **지원되는 모델** 링크가 있습니다.
+
+### Whisper API
+
+**온도**와 **단어 타임스탬프**. [Whisper API 옵션](/ko/reference/engines/#옵션)을 참고하세요.
 
 ## 자막
 
@@ -65,10 +73,6 @@ sidebar:
 자막의 줄 길이는 고르게 맞춰지고, 띄어쓰기 없이 쓰는 언어는 글자 사이에서 줄을 바꿉니다.
 
 **단어 강조**는 `.srt`와 `.vtt` 파일에서 각 단어를 말하는 순간 밑줄로 표시합니다. 기본적으로 꺼져 있습니다.
-
-## Whisper API
-
-**온도**와 **단어 타임스탬프**. [Whisper API 옵션](/ko/reference/engines/#옵션)을 참고하세요.
 
 ## 정보
 

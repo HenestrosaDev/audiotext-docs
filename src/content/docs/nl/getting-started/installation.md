@@ -58,7 +58,7 @@ De eerste keer dat je transcribeert met **WhisperX** (de standaard-engine), word
 
 Als er een nieuwe versie uitkomt, toont Audiotext een knop **Versie … is beschikbaar** in de bovenste balk. Klik erop om de pagina van de release te openen, download het bestand voor je systeem en installeer het zoals de eerste keer: voer op Windows het nieuwe installatieprogramma uit, sleep op macOS de nieuwe app naar de map **Apps**, of voer op Linux de `install.sh` van het nieuwe archief uit. De vorige versie wordt vervangen, en je instellingen en geschiedenis blijven behouden, omdat ze in je [configuratiemap van de gebruiker](/nl/reference/files-and-data/#configuratiemap-van-de-gebruiker) staan. Als je de GPU-add-on gebruikt, kies die dan opnieuw bij het installeren.
 
-Om zelf te controleren of er een nieuwe versie is, open je **Voorkeuren** → **Over** → **Controleren op updates**. Om niet meer te controleren bij het openen van de app, zet je **Algemeen** → **Updates** uit.
+Om zelf te controleren of er een nieuwe versie is, open je **Voorkeuren** → **Over** → **Controleren op updates**. Om niet meer te controleren bij het openen van de app, zet je **Algemeen** → **Automatisch controleren op updates** uit.
 
 ## De app verwijderen
 

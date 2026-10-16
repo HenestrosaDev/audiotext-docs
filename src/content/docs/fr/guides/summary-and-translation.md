@@ -34,21 +34,27 @@ Ouvrez le mode **Demander**, tapez une question dans **Posez une question sur la
 - Si la transcription comporte des horodatages, chaque réponse renvoie aux passages de la transcription où cela est dit. Cliquez sur l’un d’eux pour lire l’audio à partir de là.
 - Les questions et leurs réponses sont conservées dans l’historique avec la transcription. La corbeille de l’en-tête efface la conversation, après confirmation.
 
-Les questions sont traitées par le fournisseur choisi pour elles dans **Préférences** → **IA** → **Demander**, qui est celui des résumés tant que vous ne le changez pas. Comme pour les résumés, seul le début des transcriptions très longues est lu.
+Les questions sont traitées par le fournisseur choisi pour elles dans **Préférences** → **Fournisseurs** → **Demander**, qui est celui des résumés tant que vous ne le changez pas. Comme pour les résumés, seul le début des transcriptions très longues est lu.
 
 ## Traduction
 
 Cliquez sur **Traduire**, choisissez la langue dans **Traduire en :** et le fournisseur dans **Traduire avec :**, puis confirmez. La boîte de dialogue explique ce que fait le fournisseur choisi, et propose de configurer sa clé API si elle manque. La traduction s’affiche dans un panneau à droite du texte original.
 
 - Si la transcription comporte des horodatages, elle est traduite phrase par phrase, avec le texte dit avant et après chaque partie comme contexte : la traduction commence avec les horodatages de chaque phrase, surligne la phrase en cours de lecture, et cliquer sur une phrase la lit.
-- Si vous avez modifié le texte brut, c’est le texte modifié qui est traduit, sans horodatage.
+- Si la transcription n’a pas d’horodatages, tout son texte est traduit en une fois.
 - Les deux textes défilent ensemble, pour montrer le même passage de l’audio. Le bouton rond de la poignée entre eux active ou désactive ce défilement. Faites glisser la poignée pour les redimensionner, ou double-cliquez dessus pour rétablir leurs tailles.
 
 Les boutons de l’en-tête de la traduction permettent d’y rechercher et remplacer, de la copier, de l’exporter, de la **Traduire à nouveau** (avec le même fournisseur et le même modèle) et de la masquer (**Masquer la traduction**). Le bouton **Traduire** permet aussi de l’afficher à nouveau, de **Traduire dans une autre langue…** ou de **Supprimer la traduction**.
 
 ### Plusieurs langues
 
-Une transcription peut être traduite dans plusieurs langues, même en même temps, et chaque traduction est conservée. Le titre du panneau choisit celle qui est affichée, indique la part traduite de chacune et se termine par l’option de traduire dans une autre langue. Traduire dans une langue qui a déjà une traduction la remplace, après confirmation, car ses corrections sont perdues.
+Une transcription peut être traduite dans plusieurs langues, même en même temps, et chaque traduction est conservée. Le titre du panneau choisit celle qui est affichée, indique la part traduite de chacune et se termine par l’option de traduire dans une autre langue. Traduire dans une langue qui a déjà une traduction la remplace, après confirmation, car ses corrections sont perdues. Le menu du titre indique combien de sous-titres de chaque traduction inachevée sont traduits (p. ex. `Anglais · 148/150`).
+
+### Progression de la traduction
+
+La progression se compte en sous-titres : un sous-titre est traduit quand il a un texte. Au-dessus de la traduction, une ligne indique combien sont traduits (p. ex. `Traduit : 148/150 · 98 %`). Le pourcentage est arrondi à l’inférieur : `100 %` ne s’affiche donc que lorsque tous sont traduits.
+
+Tant qu’il en reste, les flèches à côté vont aux sous-titres précédent et suivant **Pas encore traduit**, en surlignant chacun d’eux, et indiquent celui sur lequel vous êtes (p. ex. `1 sur 2`). Survolez-en un pour afficher le bouton **Traduire le texte…** à sa droite, qui ouvre la boîte de dialogue pour le traduire.
 
 ### Corrigez et recalez la traduction
 
@@ -61,7 +67,7 @@ Une traduction a souvent besoin d’un autre minutage que l’original, par ex. 
 
 ### Traduisez-la vous-même
 
-Pour écrire la traduction vous-même, choisissez **Manuelle** dans **Traduire avec :**. Aucune clé API n’est nécessaire. La traduction commence avec un segment vide pour chaque sous-titre de la transcription, affiché comme **Pas encore traduit**, et le panneau indique combien il en reste. Faites un clic droit sur l’un d’eux et choisissez **Traduire le texte…** : la boîte de dialogue montre le texte original dit pendant ce temps.
+Pour écrire la traduction vous-même, choisissez **Manuelle** dans **Traduire avec :**. Aucune clé API n’est nécessaire. La traduction commence avec un segment vide pour chaque sous-titre de la transcription, affiché comme **Pas encore traduit**, et le panneau indique combien il en reste. Faites un clic droit sur l’un d’eux et choisissez **Traduire le texte…** : la boîte de dialogue montre le texte original dit pendant ce temps. Survoler un segment affiche un bouton **Traduire le texte…** à sa droite, qui ouvre la même boîte de dialogue.
 
 ### Sous-titres et export
 
@@ -74,7 +80,7 @@ Pour obtenir directement la transcription dans une autre langue, sans fournisseu
 
 ## Fournisseurs
 
-Les fournisseurs se choisissent dans **Préférences** → **IA**, séparément pour les résumés, les questions et les traductions.
+Les fournisseurs se choisissent dans **Préférences** → **Fournisseurs**, séparément pour les résumés, les questions et les traductions.
 
 | Fournisseur | Modèle par défaut | Clé API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Les traductions peuvent aussi être faites par :
 
 ### Ollama
 
-[Ollama](https://ollama.com) exécute les modèles sur votre ordinateur, sans clé API et sans envoyer le texte nulle part. Installez-le, téléchargez un modèle (p. ex. `ollama pull llama3.2`) et choisissez **Ollama** comme fournisseur. S’il ne tourne pas à l’adresse par défaut, modifiez l’**URL du serveur** dans **Préférences** → **IA** (`http://localhost:11434` par défaut).
+[Ollama](https://ollama.com) exécute les modèles sur votre ordinateur, sans clé API et sans envoyer le texte nulle part. Installez-le, téléchargez un modèle (p. ex. `ollama pull llama3.2`) et choisissez **Ollama** comme fournisseur. S’il ne tourne pas à l’adresse par défaut, modifiez l’**URL du serveur** dans **Préférences** → **Fournisseurs** (`http://localhost:11434` par défaut).
 
 :::note
 Chaque fournisseur facture l’utilisation de son API, dont Audiotext n’est pas responsable. Les clés API sont conservées dans le gestionnaire d’identifiants de votre système. Consultez [Fichiers et données](/fr/reference/files-and-data/).

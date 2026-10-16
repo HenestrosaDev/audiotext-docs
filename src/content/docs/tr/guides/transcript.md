@@ -15,6 +15,8 @@ Transkripsiyonu videonun altyazılarına bölünmüş olarak, her birinin başla
 
 Varsayılan olarak zamanlar altyazılardaki gibi milisaniye hassasiyetinde gösterilir (`00:01:05,900 – 00:01:09,350`). Sadeleştirmek için (`01:05 – 01:09`) `⋯` menüsünde **Hassas zaman damgaları (HH:MM:SS,mmm)** işaretini kaldırın.
 
+Altyazıların üstündeki bir satır onları ve konuşmacılar belirlendiyse konuşmacıları sayar (ör. `Altyazılar: 120 · Konuşmacı: 3`). Birkaç altyazıya bölünmüş uzun bir segment, birkaç altyazı sayılır.
+
 Zaman damgaları yalnızca **WhisperX** ile ve **Whisper API**'nin `whisper-1` ve `gpt-4o-transcribe-diarize` modelleriyle kullanılabilir. Bunlar olmadan döküm altyazı altyazı oynatılamaz; bunun yerine **Düz metin** modunu kullanın.
 
 ### Sesi oynatın
@@ -29,7 +31,7 @@ Kaynak dosya taşındıysa veya silindiyse ses kullanılamaz, ancak metin kalır
 
 ### Videoları altyazılarıyla izleyin
 
-Videoların transkripsiyonları videoyu metnin üstünde gösterir. Videonun menüsünden **Altyazıları videoda göster** seçeneğini açabilir ve altyazıların **Boyut**unu (küçük, orta veya büyük), **Konum**unu (alt veya üst) ve **Stil**ini (koyu arka plan veya kontur) seçebilirsiniz. Transkripsiyonun [çevirileri](/tr/guides/summary-and-translation/#çeviri) varsa, menü altyazıların **Transkripsiyon**u mu yoksa bir dildeki **Çeviri**yi mi göstereceğini de seçer.
+Videoların transkripsiyonları videoyu metnin üstünde gösterir. Videonun menüsünden **Altyazıları videoda göster** seçeneğini açabilir ve altyazıların **Boyut**unu (küçük, orta veya büyük), **Konum**unu (alt veya üst) ve **Stil**ini (koyu arka plan veya kontur) seçebilirsiniz. Transkripsiyonun [çevirileri](/tr/guides/summary-and-translation/#çeviri) varsa, menü altyazıların **Transkripsiyon**u mu yoksa bir dildeki **Çeviri**yi mi göstereceğini de seçer. Oynatıcı çubuğundaki **Altyazılar** düğmesi de onları gösterir veya gizler; yanındaki ok aynı menüyü açar.
 
 ## Bul ve değiştir
 
@@ -39,6 +41,8 @@ Videoların transkripsiyonları videoyu metnin üstünde gösterir. Videonun men
 - **Değiştir** geçerli eşleşmeyi, **Tümünü değiştir** hepsini değiştirir, ör. yanlış yazılmış bir adı. Yalnızca aynı büyük harflere sahip metni bulmak için **Büyük/küçük harf eşleştir**'i işaretleyin.
 - Pencere kalıcı (modal) değildir, bu yüzden açıkken metni okuyup oynatabilirsiniz. **Üstte tut** onu ana pencerenin üstünde tutar.
 - `Esc` pencereyi kapatır.
+
+**Düz metin** modunda pencere yalnızca bulur (**Transkripsiyonda bul**), çünkü oradaki bir eşleşme bir altyazıya bağlanamaz. Değiştirmek için **Altyazılar** moduna geri dönün.
 
 ## Transkripsiyonu düzeltin
 
@@ -71,7 +75,13 @@ Bir transkripsiyonun puanı yoksa `⋯` menüsü nedenini söyler: **“Kelime d
 
 ## Düz metin
 
-**Düz metin** modu, metni bir metin düzenleyicideki gibi serbestçe düzenlemenizi sağlar. Değişiklikler otomatik olarak kaydedilir. Döküm, orijinal metni zaman damgalarıyla korur, bu yüzden altyazılar düz metindeki düzenlemeleri kullanmaz.
+**Düz metin** modu, transkripsiyonun metnini zaman damgaları olmadan gösterir. Altyazılardan oluşturulduğu için, modların yanındaki notun dediği gibi salt okunurdur: değiştirmek için [altyazıları düzeltin](#transkripsiyonu-düzeltin), düz metin de onları izler. Böylece tüm dışa aktarmalar ve çeviriler aynı metni kullanır.
+
+Zaman damgası olmayan transkripsiyonların (ör. Google API'den) altyazısı yoktur, bu yüzden düz metinleri bir metin düzenleyicideki gibi serbestçe düzenlenebilir. Değişiklikler otomatik olarak kaydedilir.
+
+:::note
+Önceki sürümler, altyazılı transkripsiyonların düz metnini düzenlemeye izin veriyordu. Bu transkripsiyonlardan (veya çevirilerden) biri açıldığında düz metni altyazılarından yeniden oluşturulur, bu yüzden o düzenlemeler değiştirilir.
+:::
 
 ## Kopyalayın ve dışa aktarın
 

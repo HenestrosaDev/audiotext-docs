@@ -55,11 +55,12 @@ Na Macach z Apple Silicon [MLX Whisper](https://github.com/ml-explore/mlx-exampl
 - Wersja MLX modelu jest pobierana przy pierwszym użyciu.
 - `distil-small.en`, `distil-large-v2` i `distil-large-v3.5` nie mają wersji MLX, więc działają na procesorze.
 - [Tekst na żywo](/pl/guides/sources/#tekst-na-żywo) zawsze działa na procesorze.
-- Aby transkrybować na procesorze, włącz **Używaj CPU** w **Preferencje** → **WhisperX**.
+- **Typ obliczeń** i **Rozmiar partii** nie mają zastosowania na karcie graficznej, bo MLX zawsze liczy z połową precyzji i bez partii.
+- Aby transkrybować na procesorze, włącz **Używaj CPU** w **Preferencje** → **Transkrypcja**.
 
 ### Opcje zaawansowane
 
-Znajdują się w **Preferencje** → **WhisperX**. Zmieniaj je tylko w razie problemów lub jeśli wiesz, co robisz: karta graficzna bez wolnej pamięci może zawiesić system.
+Znajdują się w **Preferencje** → **Transkrypcja** → **WhisperX**. Zmieniaj je tylko w razie problemów lub jeśli wiesz, co robisz: karta graficzna bez wolnej pamięci może zawiesić system.
 
 - **Typ obliczeń**: precyzja liczb modelu. `float16` jest szybszy na kartach graficznych NVIDIA (domyślny z CUDA). `int8` zużywa mniej pamięci i jest domyślny na procesorze, ponieważ wiele procesorów nie obsługuje wydajnie `float16`. `float32` jest najdokładniejszy, dla kart z ponad 8 GB VRAM.
 - **Rozmiar partii**: ile części nagrania jest przetwarzanych jednocześnie (domyślnie `8`). Nie wpływa na jakość, tylko na szybkość. Zmniejsz go, jeśli brakuje pamięci; zalecane jest maksymalnie `16`.
@@ -82,8 +83,8 @@ Długie nagrania są dzielone na fragmenty do 10 minut, cięte w miejscu ciszy, 
 ### Opcje
 
 - **Format odpowiedzi** (karta Wynik, dla folderów): `text` (domyślny), `json`, `verbose_json`, `srt` lub `vtt`. Napisy i `verbose_json` wymagają modelu ze znacznikami czasu.
-- **Temperatura** (Preferencje → Whisper API): od 0 do 1. Wysokie wartości, np. 0,8, czynią wynik bardziej losowym, a niskie, np. 0,2, bardziej skupionym. Przy 0 (domyślnie) model w razie potrzeby sam ją zwiększa.
-- **Znaczniki czasu słów** (Preferencje → Whisper API): czy `whisper-1` zwraca też znaczniki czasu każdego słowa, aby wyróżniać je podczas odtwarzania. Trwa dłużej. Domyślnie włączone.
+- **Temperatura** (Preferencje → Transkrypcja): od 0 do 1. Wysokie wartości, np. 0,8, czynią wynik bardziej losowym, a niskie, np. 0,2, bardziej skupionym. Przy 0 (domyślnie) model w razie potrzeby sam ją zwiększa.
+- **Znaczniki czasu słów** (Preferencje → Transkrypcja): czy `whisper-1` zwraca też znaczniki czasu każdego słowa, aby wyróżniać je podczas odtwarzania. Trwa dłużej. Domyślnie włączone.
 
 ## API Google
 

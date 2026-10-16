@@ -13,7 +13,7 @@ Första gången en modell används laddas den ner, vilket kan ta flera minuter b
 
 Grafikkortet har inte tillräckligt med minne för inställningarna. Prova i den här ordningen:
 
-1. Sänk **Batchstorlek** (t.ex. `4`) under **Inställningar** → **WhisperX**.
+1. Sänk **Batchstorlek** (t.ex. `4`) under **Inställningar** → **Transkribering**.
 2. Använd en mindre modell (t.ex. `small` eller `base`).
 3. Använd en lättare **Beräkningstyp** (t.ex. `int8`).
 
@@ -21,7 +21,7 @@ De två sista kan sänka kvaliteten. Se [Motorer](/sv/reference/engines/#modell)
 
 ## Transkriberingen tar för lång tid
 
-WhisperX hastighet beror på hårdvaran, så förvänta dig inte omedelbara resultat på enkla processorer. Prova en mindre modell som `small`, `large-v3-turbo` på ett grafikkort eller beräkningstypen `int8`. På en Mac med Apple Silicon kontrollerar du att **Använd CPU** är av under **Inställningar** → **WhisperX**, så att den transkriberar på grafikprocessorn. Du kan också använda **Whisper-API:t** eller **Google-API:t**, som körs på fjärrservrar.
+WhisperX hastighet beror på hårdvaran, så förvänta dig inte omedelbara resultat på enkla processorer. Prova en mindre modell som `small`, `large-v3-turbo` på ett grafikkort eller beräkningstypen `int8`. På en Mac med Apple Silicon kontrollerar du att **Använd CPU** är av under **Inställningar** → **Transkribering**, så att den transkriberar på grafikprocessorn. Du kan också använda **Whisper-API:t** eller **Google-API:t**, som körs på fjärrservrar.
 
 ## Whisper-API:t returnerar felet `429`
 
@@ -81,7 +81,7 @@ Google-API:t kan inte identifiera språket. Välj **Ljudets språk** i inställn
 ## En sammanfattning, ett svar eller en översättning misslyckas
 
 - **DeepL kan inte översätta till ….**: DeepL stöder inte det språket. Välj en annan leverantör, till exempel en språkmodell.
-- **Modellens svar var för långt.**, **Modellen returnerade ingen giltig sammanfattning.**, **Modellen returnerade inget giltigt svar.** eller **Modellen returnerade ingen giltig översättning.**: modellen skrev inte sammanfattningen, svaret eller översättningen i det förväntade formatet. Försök igen, eller välj en större modell under **Inställningar** → **AI**. Ollamas små modeller misslyckas oftare.
+- **Modellens svar var för långt.**, **Modellen returnerade ingen giltig sammanfattning.**, **Modellen returnerade inget giltigt svar.** eller **Modellen returnerade ingen giltig översättning.**: modellen skrev inte sammanfattningen, svaret eller översättningen i det förväntade formatet. Försök igen, eller välj en större modell under **Inställningar** → **Leverantörer**. Ollamas små modeller misslyckas oftare.
 - Vid alla andra fel kontrollerar du att leverantörens API-nyckel är angiven under **Inställningar** → **API-nycklar** och att ditt konto har krediter.
 
 ## Ord med låg säkerhet stryks inte under

@@ -58,7 +58,7 @@ Při prvním přepisu pomocí **WhisperX** (výchozího nástroje) se stáhne je
 
 Když vyjde nová verze, Audiotext zobrazí na horní liště tlačítko **Je k dispozici verze …**. Kliknutím otevřete stránku vydání, stáhněte soubor pro svůj systém a nainstalujte ho stejně jako poprvé: ve Windows spusťte nový instalátor, v macOS přetáhněte novou aplikaci do složky **Aplikace** a v Linuxu spusťte `install.sh` z nového archivu. Předchozí verze se nahradí a vaše nastavení i historie zůstanou zachovány, protože jsou uloženy v [uživatelské konfigurační složce](/cs/reference/files-and-data/#uživatelská-konfigurační-složka). Pokud používáte doplněk pro GPU, při instalaci ho zvolte znovu.
 
-Chcete-li novou verzi zkontrolovat sami, otevřete **Předvolby** → **O aplikaci** → **Zkontrolovat aktualizace**. Chcete-li kontrolu při otevření aplikace vypnout, vypněte **Obecné** → **Aktualizace**.
+Chcete-li novou verzi zkontrolovat sami, otevřete **Předvolby** → **O aplikaci** → **Zkontrolovat aktualizace**. Chcete-li kontrolu při otevření aplikace vypnout, vypněte **Obecné** → **Automaticky kontrolovat aktualizace**.
 
 ## Odinstalujte aplikaci
 

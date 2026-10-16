@@ -55,11 +55,12 @@ Di Mac dengan Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-exa
 - Versi MLX dari model diunduh saat pertama kali digunakan.
 - `distil-small.en`, `distil-large-v2`, dan `distil-large-v3.5` tidak memiliki versi MLX, sehingga berjalan di CPU.
 - [Teks langsung](/id/guides/sources/#teks-langsung) selalu berjalan di CPU.
-- Untuk mentranskripsi di CPU, aktifkan **Gunakan CPU** di **Preferensi** → **WhisperX**.
+- **Jenis komputasi** dan **Ukuran batch** tidak berlaku di GPU, karena MLX selalu menghitung dengan presisi setengah dan tanpa batch.
+- Untuk mentranskripsi di CPU, aktifkan **Gunakan CPU** di **Preferensi** → **Transkripsi**.
 
 ### Opsi lanjutan
 
-Opsi ini ada di **Preferensi** → **WhisperX**. Ubah hanya jika Anda mengalami masalah atau tahu apa yang Anda lakukan: GPU yang kehabisan memori dapat membuat sistem Anda macet.
+Opsi ini ada di **Preferensi** → **Transkripsi** → **WhisperX**. Ubah hanya jika Anda mengalami masalah atau tahu apa yang Anda lakukan: GPU yang kehabisan memori dapat membuat sistem Anda macet.
 
 - **Jenis komputasi**: presisi angka model. `float16` lebih cepat di GPU NVIDIA (bawaan dengan CUDA). `int8` menggunakan lebih sedikit memori dan menjadi bawaan di CPU, karena banyak CPU tidak mendukung `float16` secara efisien. `float32` paling presisi, untuk GPU dengan VRAM lebih dari 8 GB.
 - **Ukuran batch**: berapa banyak bagian audio yang diproses sekaligus (`8` secara bawaan). Tidak memengaruhi kualitas, hanya kecepatan. Turunkan jika memori habis; disarankan maksimal `16`.
@@ -82,8 +83,8 @@ Audio yang panjang dibagi menjadi potongan hingga 10 menit, dipotong pada jeda h
 ### Opsi
 
 - **Format respons** (kartu Keluaran, untuk folder): `text` (bawaan), `json`, `verbose_json`, `srt`, atau `vtt`. Subtitle dan `verbose_json` memerlukan model dengan stempel waktu.
-- **Temperatur** (Preferensi → Whisper API): antara 0 dan 1. Nilai tinggi seperti 0,8 membuat hasil lebih acak, dan nilai rendah seperti 0,2 lebih terfokus. Dengan 0 (bawaan), model menaikkannya secara otomatis bila diperlukan.
-- **Stempel waktu kata** (Preferensi → Whisper API): apakah `whisper-1` juga mengembalikan stempel waktu setiap kata, untuk menyorotnya saat diputar. Memerlukan waktu lebih lama. Aktif secara bawaan.
+- **Temperatur** (Preferensi → Transkripsi): antara 0 dan 1. Nilai tinggi seperti 0,8 membuat hasil lebih acak, dan nilai rendah seperti 0,2 lebih terfokus. Dengan 0 (bawaan), model menaikkannya secara otomatis bila diperlukan.
+- **Stempel waktu kata** (Preferensi → Transkripsi): apakah `whisper-1` juga mengembalikan stempel waktu setiap kata, untuk menyorotnya saat diputar. Memerlukan waktu lebih lama. Aktif secara bawaan.
 
 ## Google API
 

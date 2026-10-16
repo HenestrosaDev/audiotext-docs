@@ -44,8 +44,8 @@ Li usano WhisperX e la API di Whisper, tranne il modello `gpt-4o-transcribe-diar
 
 ## Opzioni
 
-- **Tempi per parola** (WhisperX): allinea ogni parola all'audio, per evidenziarla durante la riproduzione e per [rivedere le parole](/it/guides/transcript/#rivedi-le-parole-a-bassa-affidabilità) di cui è meno sicuro. Richiede un po' più di tempo. Attivo per impostazione predefinita.
-- **Estrai la voce**: riduce la musica e il rumore di fondo prima di trascrivere.
+- **Tempi per parola** (WhisperX): allinea ogni parola all'audio, per evidenziarla durante la riproduzione e per [rivedere le parole](/it/guides/transcript/#rivedi-le-parole-a-bassa-affidabilità) di cui è meno sicuro. Richiede un po' più di tempo. Attivo per impostazione predefinita. I sottotitoli hanno bisogno dei tempi delle parole, quindi viene attivata e bloccata mentre `.srt` o `.vtt` sono scelti nei **Tipi di file** di una cartella; la tua scelta torna quando non lo sono più.
+- **Riduci il rumore di fondo**: riduce il ronzio e il rumore di fondo costante, e uniforma il parlato a basso volume, prima di trascrivere. Richiede più tempo.
 - **Identifica i parlanti** (WhisperX): indica chi parla in ogni parte, es. `SPEAKER_00`. Se sai quante persone parlano, indicalo in **Numero di parlanti** (`0` lo rileva). Richiede un token gratuito di Hugging Face; consulta [Identifica i parlanti](#identifica-i-parlanti). Con la API di Whisper, il modello `gpt-4o-transcribe-diarize` identifica i parlanti.
 
 ### Identifica i parlanti

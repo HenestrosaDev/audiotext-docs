@@ -55,11 +55,12 @@ Apple Silicon'lu Mac'lerde [MLX Whisper](https://github.com/ml-explore/mlx-examp
 - Modelin MLX sürümü ilk kullanıldığında indirilir.
 - `distil-small.en`, `distil-large-v2` ve `distil-large-v3.5` modellerinin MLX sürümü yoktur, bu yüzden işlemcide çalışırlar.
 - [Canlı metin](/tr/guides/sources/#canlı-metin) her zaman işlemcide çalışır.
-- İşlemcide yazıya dökmek için **Tercihler** → **WhisperX** bölümünde **CPU kullan**'ı açın.
+- MLX her zaman yarım hassasiyetle ve toplu işler olmadan hesapladığı için **Hesaplama türü** ve **Toplu iş boyutu** GPU'da geçerli değildir.
+- İşlemcide yazıya dökmek için **Tercihler** → **Transkripsiyon** bölümünde **CPU kullan**'ı açın.
 
 ### Gelişmiş seçenekler
 
-**Tercihler** → **WhisperX** bölümündedir. Yalnızca sorun yaşıyorsanız veya ne yaptığınızı biliyorsanız değiştirin: belleği tükenen bir ekran kartı sisteminizi dondurabilir.
+**Tercihler** → **Transkripsiyon** → **WhisperX** bölümündedir. Yalnızca sorun yaşıyorsanız veya ne yaptığınızı biliyorsanız değiştirin: belleği tükenen bir ekran kartı sisteminizi dondurabilir.
 
 - **Hesaplama türü**: modelin sayılarının hassasiyeti. `float16` NVIDIA ekran kartlarında daha hızlıdır (CUDA ile varsayılan). `int8` daha az bellek kullanır ve işlemcide varsayılandır, çünkü birçok işlemci `float16`'yı verimli desteklemez. `float32` en hassas olanıdır; 8 GB'tan fazla VRAM'e sahip ekran kartları içindir.
 - **Toplu iş boyutu**: sesin kaç parçasının aynı anda işlendiği (varsayılan `8`). Kaliteyi değil, yalnızca hızı etkiler. Bellek yetmiyorsa düşürün; en fazla `16` önerilir.
@@ -82,8 +83,8 @@ API 25 MB'tan büyük dosyaları reddettiği için uzun kayıtlar, hiçbir kelim
 ### Seçenekler
 
 - **Yanıt biçimi** (Çıktı kartı, klasörler için): `text` (varsayılan), `json`, `verbose_json`, `srt` veya `vtt`. Altyazılar ve `verbose_json` zaman damgalı bir model gerektirir.
-- **Sıcaklık** (Tercihler → Whisper API): 0 ile 1 arasında. 0,8 gibi yüksek değerler sonucu daha rastgele, 0,2 gibi düşük değerler daha odaklı yapar. 0 (varsayılan) ile model gerektiğinde onu otomatik olarak artırır.
-- **Kelimelerin zaman damgaları** (Tercihler → Whisper API): `whisper-1`'in oynatma sırasında vurgulamak için her kelimenin zaman damgasını da döndürüp döndürmeyeceği. Daha uzun sürer. Varsayılan olarak açıktır.
+- **Sıcaklık** (Tercihler → Transkripsiyon): 0 ile 1 arasında. 0,8 gibi yüksek değerler sonucu daha rastgele, 0,2 gibi düşük değerler daha odaklı yapar. 0 (varsayılan) ile model gerektiğinde onu otomatik olarak artırır.
+- **Kelimelerin zaman damgaları** (Tercihler → Transkripsiyon): `whisper-1`'in oynatma sırasında vurgulamak için her kelimenin zaman damgasını da döndürüp döndürmeyeceği. Daha uzun sürer. Varsayılan olarak açıktır.
 
 ## Google API
 

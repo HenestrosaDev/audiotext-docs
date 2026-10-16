@@ -34,21 +34,27 @@ Om leverantörens API-nyckel inte är angiven erbjuder läget **Sammanfattning**
 - Om transkriberingen har tidsstämplar länkar varje svar till de delar av transkriberingen där det sägs. Klicka på en för att spela upp ljudet därifrån.
 - Frågorna och svaren sparas i historiken med transkriberingen. Papperskorgen i rubriken rensar konversationen, efter en bekräftelse.
 
-Frågorna besvaras av leverantören som valts för dem under **Inställningar** → **AI** → **Fråga**, vilket är sammanfattningarnas leverantör tills du ändrar den. Precis som för sammanfattningarna läses bara början av mycket långa transkriberingar.
+Frågorna besvaras av leverantören som valts för dem under **Inställningar** → **Leverantörer** → **Fråga**, vilket är sammanfattningarnas leverantör tills du ändrar den. Precis som för sammanfattningarna läses bara början av mycket långa transkriberingar.
 
 ## Översättning
 
 Klicka på **Översätt**, välj språk under **Översätt till:** och leverantör under **Översätt med:**, och bekräfta. Dialogrutan förklarar vad den valda leverantören gör, och erbjuder att ange dess API-nyckel om den saknas. Översättningen visas i en panel till höger om originaltexten.
 
 - Om transkriberingen har tidsstämplar översätts den mening för mening, med texten som sägs före och efter varje del som sammanhang, så översättningen börjar med varje menings tidsstämplar: den markerar meningen som spelas upp, och ett klick på en mening spelar upp den.
-- Om du har redigerat den oformaterade texten översätts den redigerade texten i stället, utan tidsstämplar.
+- Om transkriberingen saknar tidsstämplar översätts hela texten på en gång.
 - Båda texterna rullar tillsammans, så att de visar samma del av ljudet. Den runda knappen på handtaget mellan dem slår på och av det. Dra i handtaget för att ändra deras storlek, eller dubbelklicka på det för att återställa storlekarna.
 
 Med knapparna i översättningens rubrik söker och ersätter du i den, kopierar och exporterar den, väljer **Översätt igen** (med samma leverantör och modell) och **Dölj översättningen**. Med knappen **Översätt** kan du också visa den igen, **Översätt till ett annat språk…** eller **Ta bort översättningen**.
 
 ### Flera språk
 
-En transkribering kan översättas till flera språk, även samtidigt, och varje översättning sparas. Panelens rubrik väljer vilken som visas, visar hur mycket av varje som är översatt och slutar med alternativet att översätta till ett annat språk. Att översätta till ett språk som redan har en översättning ersätter den, efter en bekräftelse, eftersom dess korrigeringar går förlorade.
+En transkribering kan översättas till flera språk, även samtidigt, och varje översättning sparas. Panelens rubrik väljer vilken som visas, visar hur mycket av varje som är översatt och slutar med alternativet att översätta till ett annat språk. Att översätta till ett språk som redan har en översättning ersätter den, efter en bekräftelse, eftersom dess korrigeringar går förlorade. Titelns meny visar hur många undertexter i varje ofärdig översättning som är översatta (t.ex. `Engelska · 148/150`).
+
+### Översättningens förlopp
+
+Förloppet räknas i undertexter: en är översatt när den har en text. Ovanför översättningen visar en rad hur många som är översatta (t.ex. `Översatt: 148/150 · 98 %`). Procentsatsen avrundas nedåt, så `100 %` visas bara när alla är översatta.
+
+Så länge några är kvar går pilarna bredvid till föregående och nästa undertext **Inte översatt ännu**, markerar var och en och visar vilken du är på (t.ex. `1 av 2`). Håll muspekaren över en av dem för att visa knappen **Översätt text…** till höger, som öppnar dialogrutan för att översätta den.
 
 ### Korrigera och tajma om översättningen
 
@@ -61,7 +67,7 @@ En översättning behöver ofta andra tider än originalet, t.ex. undertexter so
 
 ### Översätt själv
 
-För att skriva översättningen själv väljer du **Manuellt** under **Översätt med:**. Ingen API-nyckel behövs. Översättningen börjar med ett tomt segment för varje undertext i transkriberingen, som visas som **Inte översatt ännu**, och panelen visar hur många som är kvar. Högerklicka på ett och välj **Översätt text…**: dialogrutan visar originaltexten som sägs under tiden.
+För att skriva översättningen själv väljer du **Manuellt** under **Översätt med:**. Ingen API-nyckel behövs. Översättningen börjar med ett tomt segment för varje undertext i transkriberingen, som visas som **Inte översatt ännu**, och panelen visar hur många som är kvar. Högerklicka på ett och välj **Översätt text…**: dialogrutan visar originaltexten som sägs under tiden. När du håller muspekaren över ett visas knappen **Översätt text…** till höger, som öppnar samma dialogruta.
 
 ### Undertexter och export
 
@@ -74,7 +80,7 @@ För att få transkriberingen direkt på ett annat språk, utan leverantör, kan
 
 ## Leverantörer
 
-Leverantörerna väljs under **Inställningar** → **AI**, separat för sammanfattningar, frågor och översättningar.
+Leverantörerna väljs under **Inställningar** → **Leverantörer**, separat för sammanfattningar, frågor och översättningar.
 
 | Leverantör | Standardmodell | API-nyckel |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Lämna **Modell** tom för att använda leverantörens standardmodell, eller skr
 
 ### Ollama
 
-[Ollama](https://ollama.com) kör modellerna på din dator, utan API-nyckel och utan att skicka texten någonstans. Installera det, ladda ner en modell (t.ex. `ollama pull llama3.2`) och välj **Ollama** som leverantör. Om det inte körs på standardadressen ändrar du **Serverns URL** under **Inställningar** → **AI** (`http://localhost:11434` som standard).
+[Ollama](https://ollama.com) kör modellerna på din dator, utan API-nyckel och utan att skicka texten någonstans. Installera det, ladda ner en modell (t.ex. `ollama pull llama3.2`) och välj **Ollama** som leverantör. Om det inte körs på standardadressen ändrar du **Serverns URL** under **Inställningar** → **Leverantörer** (`http://localhost:11434` som standard).
 
 :::note
 Varje leverantör tar betalt för användningen av sitt API, vilket Audiotext inte ansvarar för. API-nycklarna sparas i systemets lösenordsarkiv. Se [Filer och data](/sv/reference/files-and-data/).

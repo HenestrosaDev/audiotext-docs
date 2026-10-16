@@ -15,6 +15,8 @@ Hiển thị bản chép lời được chia thành các phụ đề của video
 
 Theo mặc định, thời gian được hiển thị chính xác đến mili giây như trong phụ đề (`00:01:05,900 – 00:01:09,350`). Để rút gọn (`01:05 – 01:09`), hãy bỏ chọn **Dấu thời gian chính xác (HH:MM:SS,mmm)** trong menu `⋯`.
 
+Phía trên phụ đề, một dòng đếm số phụ đề và, nếu đã nhận diện người nói, số người nói (ví dụ: `Phụ đề: 120 · Số người nói: 3`). Một đoạn dài được chia thành nhiều phụ đề được tính là nhiều phụ đề.
+
 Dấu thời gian chỉ có với **WhisperX** và các mô hình `whisper-1` và `gpt-4o-transcribe-diarize` của **Whisper API**. Không có dấu thời gian, bản ghi lời không thể phát theo từng phụ đề; hãy dùng chế độ **Văn bản thuần**.
 
 ### Phát âm thanh
@@ -29,7 +31,7 @@ Nếu tệp nguồn đã bị di chuyển hoặc xóa, âm thanh sẽ không kh�
 
 ### Xem video có phụ đề
 
-Bản chép lời của video hiển thị video phía trên văn bản. Menu của video cho phép **Hiển thị phụ đề trên video** và chọn **Kích thước** (nhỏ, vừa hoặc lớn), **Vị trí** (dưới hoặc trên) và **Kiểu** (nền tối hoặc viền chữ). Nếu bản chép lời có [bản dịch](/vi/guides/summary-and-translation/#bản-dịch), menu cũng cho chọn phụ đề hiển thị **Chép lời** hay **Bản dịch** sang một ngôn ngữ.
+Bản chép lời của video hiển thị video phía trên văn bản. Menu của video cho phép **Hiển thị phụ đề trên video** và chọn **Kích thước** (nhỏ, vừa hoặc lớn), **Vị trí** (dưới hoặc trên) và **Kiểu** (nền tối hoặc viền chữ). Nếu bản chép lời có [bản dịch](/vi/guides/summary-and-translation/#bản-dịch), menu cũng cho chọn phụ đề hiển thị **Chép lời** hay **Bản dịch** sang một ngôn ngữ. Nút **Phụ đề** trên thanh trình phát cũng hiện hoặc ẩn chúng, và mũi tên bên cạnh mở cùng menu đó.
 
 ## Tìm và thay thế
 
@@ -39,6 +41,8 @@ Nhấn `Ctrl+F` (`⌘F` trên macOS), hoặc nhấp vào kính lúp ở phần �
 - **Thay thế** thay kết quả hiện tại, còn **Thay thế tất cả** thay mọi kết quả, ví dụ một cái tên bị viết sai. Chọn **Phân biệt hoa thường** để chỉ tìm văn bản có cùng chữ hoa.
 - Cửa sổ không chặn ứng dụng, nên bạn vẫn có thể đọc và phát văn bản khi nó đang mở. **Luôn ở trên cùng** giữ nó phía trên cửa sổ chính.
 - `Esc` đóng cửa sổ.
+
+Ở chế độ **Văn bản thuần**, cửa sổ chỉ tìm (**Tìm trong bản chép lời**), vì không thể liên kết một kết quả ở đó với một phụ đề. Hãy chuyển về **Phụ đề** để thay thế.
 
 ## Sửa bản chép lời
 
@@ -71,7 +75,13 @@ Nếu bản chép lời không có điểm, menu `⋯` cho biết lý do: **Bậ
 
 ## Văn bản thuần
 
-Chế độ **Văn bản thuần** cho phép chỉnh sửa văn bản tự do, như trong trình soạn thảo văn bản. Thay đổi được lưu tự động. Bản ghi lời giữ văn bản gốc kèm dấu thời gian, nên phụ đề không dùng các chỉnh sửa trong văn bản thuần.
+Chế độ **Văn bản thuần** hiển thị văn bản của bản chép lời không kèm dấu thời gian. Văn bản này được dựng từ phụ đề, nên chỉ đọc, như ghi chú bên cạnh các chế độ cho biết: để thay đổi, hãy [sửa phụ đề](#sửa-bản-chép-lời), và văn bản thuần sẽ theo đó. Nhờ vậy, mọi bản xuất và bản dịch đều dùng cùng một văn bản.
+
+Các bản chép lời không có dấu thời gian (ví dụ: từ Google API) không có phụ đề, nên văn bản thuần của chúng có thể chỉnh sửa tự do, như trong trình soạn thảo văn bản. Thay đổi được lưu tự động.
+
+:::note
+Các phiên bản trước cho phép chỉnh sửa văn bản thuần của bản chép lời có phụ đề. Khi mở một bản chép lời (hoặc bản dịch) như vậy, văn bản thuần của nó được dựng lại từ phụ đề, nên các chỉnh sửa đó bị thay thế.
+:::
 
 ## Sao chép và xuất
 

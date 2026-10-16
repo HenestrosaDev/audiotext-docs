@@ -34,21 +34,27 @@ Abre el modo **Preguntar**, escribe una pregunta en **Haz una pregunta sobre la 
 - Si la transcripción tiene marcas de tiempo, cada respuesta enlaza a las partes de la transcripción donde se dice. Haz clic en una para reproducir el audio desde ahí.
 - Las preguntas y sus respuestas se guardan en el historial con la transcripción. La papelera de la cabecera borra la conversación, después de preguntarte.
 
-Las preguntas las responde el proveedor elegido para ellas en **Preferencias** → **IA** → **Preguntar**, que es el de los resúmenes hasta que lo cambies. Como en los resúmenes, de las transcripciones muy largas solo se lee el principio.
+Las preguntas las responde el proveedor elegido para ellas en **Preferencias** → **Proveedores** → **Preguntar**, que es el de los resúmenes hasta que lo cambies. Como en los resúmenes, de las transcripciones muy largas solo se lee el principio.
 
 ## Traducción
 
 Haz clic en **Traducir**, elige el idioma en **Traducir al:** y el proveedor en **Traducir con:**, y confirma. El diálogo dice qué hace el proveedor elegido, y ofrece configurar su clave de API si falta. La traducción se muestra en un panel a la derecha del texto original.
 
 - Si la transcripción tiene marcas de tiempo, se traduce frase a frase, con el texto que se dice antes y después de cada parte como contexto, así que la traducción empieza con las marcas de tiempo de cada frase: resalta la frase que se reproduce, y al hacer clic en una se reproduce.
-- Si has editado el texto plano, se traduce el texto editado, sin marcas de tiempo.
+- Si la transcripción no tiene marcas de tiempo, se traduce todo su texto de una vez.
 - Los dos textos se desplazan juntos, así que muestran la misma parte del audio. El botón redondo del separador entre ellos lo activa y desactiva. Arrastra el separador para cambiar su tamaño, o haz doble clic en él para restablecerlo.
 
 Los botones de la cabecera de la traducción buscan y reemplazan en ella, la copian, la exportan, la **Vuelven a traducir** (con el mismo proveedor y el mismo modelo) y la ocultan (**Ocultar la traducción**). El botón **Traducir** también te permite volver a mostrarla, **Traducir a otro idioma…** o **Eliminar la traducción**.
 
 ### Varios idiomas
 
-Una transcripción se puede traducir a varios idiomas, incluso a la vez, y se guarda cada traducción. El título del panel elige la que se muestra, dice cuánto está traducido de cada una y termina con la opción de traducir a otro idioma. Traducir a un idioma que ya tiene una traducción la reemplaza, después de preguntarte, ya que se pierden sus correcciones.
+Una transcripción se puede traducir a varios idiomas, incluso a la vez, y se guarda cada traducción. El título del panel elige la que se muestra, dice cuánto está traducido de cada una y termina con la opción de traducir a otro idioma. Traducir a un idioma que ya tiene una traducción la reemplaza, después de preguntarte, ya que se pierden sus correcciones. El menú del título muestra cuántos subtítulos de cada traducción sin terminar están traducidos (p. ej. `Inglés · 148/150`).
+
+### Progreso de la traducción
+
+El progreso se cuenta en subtítulos: uno está traducido cuando tiene texto. Encima de la traducción, una línea muestra cuántos están traducidos (p. ej. `Traducido: 148/150 · 98 %`). El porcentaje se redondea hacia abajo, así que `100 %` solo aparece cuando están todos traducidos.
+
+Mientras queden algunos, las flechas junto a ella van a los subtítulos anterior y siguiente **Sin traducir todavía**, resaltando cada uno, y muestran en cuál estás (p. ej. `1 de 2`). Pasa el ratón por encima de uno para mostrar el botón **Traducir texto…** a su derecha, que abre el diálogo para traducirlo.
 
 ### Corrige y ajusta los tiempos de la traducción
 
@@ -61,7 +67,7 @@ Una traducción suele necesitar otros tiempos que el original, p. ej. subtítulo
 
 ### Tradúcela tú mismo
 
-Para escribir la traducción tú mismo, elige **Manual** en **Traducir con:**. No necesita clave de API. La traducción empieza con un segmento vacío por cada subtítulo de la transcripción, que se muestra como **Sin traducir todavía**, y el panel muestra cuántos quedan. Haz clic derecho en uno y elige **Traducir texto…**: el diálogo muestra el texto original que se dice mientras tanto.
+Para escribir la traducción tú mismo, elige **Manual** en **Traducir con:**. No necesita clave de API. La traducción empieza con un segmento vacío por cada subtítulo de la transcripción, que se muestra como **Sin traducir todavía**, y el panel muestra cuántos quedan. Haz clic derecho en uno y elige **Traducir texto…**: el diálogo muestra el texto original que se dice mientras tanto. Al pasar el ratón por encima de uno aparece un botón **Traducir texto…** a su derecha, que abre el mismo diálogo.
 
 ### Subtítulos y exportación
 
@@ -74,7 +80,7 @@ Para obtener la transcripción directamente en otro idioma, sin proveedor, tambi
 
 ## Proveedores
 
-Los proveedores se eligen en **Preferencias** → **IA**, por separado para los resúmenes, las preguntas y las traducciones.
+Los proveedores se eligen en **Preferencias** → **Proveedores**, por separado para los resúmenes, las preguntas y las traducciones.
 
 | Proveedor | Modelo por defecto | Clave de API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Las traducciones también se pueden hacer con:
 
 ### Ollama
 
-[Ollama](https://ollama.com) ejecuta los modelos en tu ordenador, sin clave de API y sin enviar el texto a ninguna parte. Instálalo, descarga un modelo (p. ej. `ollama pull llama3.2`) y elige **Ollama** como proveedor. Si no se ejecuta en la dirección por defecto, cambia la **URL del servidor** en **Preferencias** → **IA** (`http://localhost:11434` por defecto).
+[Ollama](https://ollama.com) ejecuta los modelos en tu ordenador, sin clave de API y sin enviar el texto a ninguna parte. Instálalo, descarga un modelo (p. ej. `ollama pull llama3.2`) y elige **Ollama** como proveedor. Si no se ejecuta en la dirección por defecto, cambia la **URL del servidor** en **Preferencias** → **Proveedores** (`http://localhost:11434` por defecto).
 
 :::note
 Cada proveedor cobra por el uso de su API, del que Audiotext no se hace responsable. Las claves de API se guardan en el almacén de credenciales de tu sistema. Consulta [Archivos y datos](/es/reference/files-and-data/).

@@ -34,21 +34,27 @@ Otevřete režim **Zeptat se**, napište otázku do pole **Položte otázku k p�
 - Pokud má přepis časové značky, každá odpověď odkazuje na části přepisu, kde to zazní. Kliknutím na jednu přehrajete zvuk od toho místa.
 - Otázky a odpovědi se ukládají do historie spolu s přepisem. Koš v záhlaví po potvrzení vymaže konverzaci.
 
-Na otázky odpovídá poskytovatel zvolený pro ně v **Předvolby** → **AI** → **Zeptat se**, což je poskytovatel shrnutí, dokud ho nezměníte. Stejně jako u shrnutí se z velmi dlouhých přepisů čte jen začátek.
+Na otázky odpovídá poskytovatel zvolený pro ně v **Předvolby** → **Poskytovatelé** → **Zeptat se**, což je poskytovatel shrnutí, dokud ho nezměníte. Stejně jako u shrnutí se z velmi dlouhých přepisů čte jen začátek.
 
 ## Překlad
 
 Klikněte na **Přeložit**, vyberte jazyk v poli **Přeložit do:** a poskytovatele v poli **Přeložit pomocí:** a potvrďte. Dialog vysvětluje, co zvolený poskytovatel dělá, a pokud chybí jeho klíč API, nabídne jeho nastavení. Překlad se zobrazí v panelu vpravo od původního textu.
 
 - Pokud má přepis časové značky, překládá se větu po větě s textem řečeným před a po každé části jako kontextem, takže překlad začíná s časovými značkami každé věty: zvýrazňuje přehrávanou větu a kliknutím na větu ji přehrajete.
-- Pokud jste upravili prostý text, přeloží se upravený text, bez časových značek.
+- Pokud přepis nemá časové značky, přeloží se celý jeho text najednou.
 - Oba texty se posouvají společně, takže ukazují stejnou část zvuku. Kulaté tlačítko na úchytu mezi nimi to zapíná a vypíná. Přetažením úchytu změníte jejich velikost, dvojitým kliknutím na něj velikosti obnovíte.
 
 Tlačítka v záhlaví překladu v něm hledají a nahrazují, kopírují ho, exportují, nabízejí **Přeložit znovu** (se stejným poskytovatelem a modelem) a **Skrýt překlad**. Tlačítko **Přeložit** také umožňuje překlad znovu zobrazit, **Přeložit do jiného jazyka…** nebo **Smazat překlad**.
 
 ### Více jazyků
 
-Přepis lze přeložit do více jazyků, i současně, a každý překlad se uchová. Nadpis panelu vybírá zobrazený překlad, ukazuje, kolik z každého je přeloženo, a končí možností přeložit do jiného jazyka. Překlad do jazyka, který už překlad má, ho po potvrzení nahradí, protože se ztratí jeho opravy.
+Přepis lze přeložit do více jazyků, i současně, a každý překlad se uchová. Nadpis panelu vybírá zobrazený překlad, ukazuje, kolik z každého je přeloženo, a končí možností přeložit do jiného jazyka. Překlad do jazyka, který už překlad má, ho po potvrzení nahradí, protože se ztratí jeho opravy. Nabídka v názvu panelu ukazuje, kolik titulků každého nedokončeného překladu je přeloženo (např. `Angličtina · 148/150`).
+
+### Průběh překladu
+
+Průběh se počítá v titulcích: titulek je přeložený, když má text. Nad překladem ukazuje řádek, kolik jich je přeloženo (např. `Přeloženo: 148/150 · 98 %`). Procento se zaokrouhluje dolů, takže `100 %` se zobrazí, až když jsou přeložené všechny.
+
+Dokud nějaké zbývají, šipky vedle něj přecházejí na předchozí a další titulek **Zatím nepřeloženo**, každý zvýrazní a ukazují, na kterém jste (např. `1 z 2`). Najeďte myší na některý z nich a vpravo se zobrazí tlačítko **Přeložit text…**, které otevře dialog k jeho překladu.
 
 ### Oprava a časování překladu
 
@@ -61,7 +67,7 @@ Překlad často potřebuje jiné časování než originál, např. titulky, jej
 
 ### Vlastní překlad
 
-Chcete-li překlad napsat sami, zvolte v poli **Přeložit pomocí:** možnost **Ručně**. Nepotřebuje žádný klíč API. Překlad začíná prázdným segmentem pro každý titulek přepisu, označeným **Zatím nepřeloženo**, a panel ukazuje, kolik jich zbývá. Klikněte na některý pravým tlačítkem a zvolte **Přeložit text…**: dialog zobrazí původní text řečený v tu dobu.
+Chcete-li překlad napsat sami, zvolte v poli **Přeložit pomocí:** možnost **Ručně**. Nepotřebuje žádný klíč API. Překlad začíná prázdným segmentem pro každý titulek přepisu, označeným **Zatím nepřeloženo**, a panel ukazuje, kolik jich zbývá. Klikněte na některý pravým tlačítkem a zvolte **Přeložit text…**: dialog zobrazí původní text řečený v tu dobu. Po najetí myší na některý se vpravo zobrazí tlačítko **Přeložit text…**, které otevře stejný dialog.
 
 ### Titulky a export
 
@@ -74,7 +80,7 @@ Chcete-li přepis rovnou v jiném jazyce bez poskytovatele, můžete překládat
 
 ## Poskytovatelé
 
-Poskytovatele vyberete v **Předvolby** → **AI**, zvlášť pro shrnutí, otázky a překlady.
+Poskytovatele vyberete v **Předvolby** → **Poskytovatelé**, zvlášť pro shrnutí, otázky a překlady.
 
 | Poskytovatel | Výchozí model | Klíč API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Překládat lze také pomocí:
 
 ### Ollama
 
-[Ollama](https://ollama.com) spouští modely na vašem počítači, bez klíče API a bez odesílání textu kamkoli. Nainstalujte ji, stáhněte model (např. `ollama pull llama3.2`) a jako poskytovatele vyberte **Ollama**. Pokud neběží na výchozí adrese, změňte **URL serveru** v **Předvolby** → **AI** (výchozí `http://localhost:11434`).
+[Ollama](https://ollama.com) spouští modely na vašem počítači, bez klíče API a bez odesílání textu kamkoli. Nainstalujte ji, stáhněte model (např. `ollama pull llama3.2`) a jako poskytovatele vyberte **Ollama**. Pokud neběží na výchozí adrese, změňte **URL serveru** v **Předvolby** → **Poskytovatelé** (výchozí `http://localhost:11434`).
 
 :::note
 Každý poskytovatel si účtuje používání svého API, za které Audiotext neodpovídá. Klíče API jsou uloženy v úložišti přihlašovacích údajů systému. Viz [Soubory a data](/cs/reference/files-and-data/).

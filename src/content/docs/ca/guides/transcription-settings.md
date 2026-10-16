@@ -44,8 +44,8 @@ Els fan servir WhisperX i l'API de Whisper, excepte el model `gpt-4o-transcribe-
 
 ## Opcions
 
-- **Temps per paraula** (WhisperX): alinea cada paraula amb l'àudio, per ressaltar-la en reproduir i per [revisar les paraules](/ca/guides/transcript/#revisa-les-paraules-de-baixa-confiança) de què està menys segur. Triga una mica més. Activat per defecte.
-- **Extreu la veu**: redueix la música i el soroll de fons abans de transcriure.
+- **Temps per paraula** (WhisperX): alinea cada paraula amb l'àudio, per ressaltar-la en reproduir i per [revisar les paraules](/ca/guides/transcript/#revisa-les-paraules-de-baixa-confiança) de què està menys segur. Triga una mica més. Activat per defecte. Els subtítols necessiten els temps de les paraules, així que s'activa i es bloqueja mentre `.srt` o `.vtt` estan triats als **Tipus de fitxer** d'una carpeta; la teva elecció torna quan deixen d'estar-ho.
+- **Reduir el soroll de fons**: redueix el brunzit i el soroll de fons constant, i iguala la veu baixa, abans de transcriure. Triga més.
 - **Identifica els parlants** (WhisperX): indica qui parla a cada part, p. ex. `SPEAKER_00`. Si saps quantes persones parlen, indica-ho a **Nombre de parlants** (`0` ho detecta). Requereix un token gratuït de Hugging Face; consulta [Identifica els parlants](#identifica-els-parlants). Amb l'API de Whisper, el model `gpt-4o-transcribe-diarize` identifica els parlants.
 
 ### Identifica els parlants

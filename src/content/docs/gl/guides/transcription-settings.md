@@ -44,8 +44,8 @@ Dous campos opcionais que axudan ao modelo:
 
 ## Opcións
 
-- **Tempos por palabra** (WhisperX): aliña cada palabra co audio, para resaltala ao reproducir e para [revisar as palabras](/gl/guides/transcript/#revisa-as-palabras-de-baixa-confianza) das que está menos seguro. Tarda un pouco máis. Activado de forma predeterminada.
-- **Extraer a voz**: reduce a música e o ruído de fondo antes de transcribir.
+- **Tempos por palabra** (WhisperX): aliña cada palabra co audio, para resaltala ao reproducir e para [revisar as palabras](/gl/guides/transcript/#revisa-as-palabras-de-baixa-confianza) das que está menos seguro. Tarda un pouco máis. Activado de forma predeterminada. Os subtítulos precisan os tempos das palabras, así que se activa e se bloquea mentres `.srt` ou `.vtt` están escollidos nos **Tipos de ficheiro** dun cartafol; a túa escolla volve cando deixan de estalo.
+- **Reducir o ruído de fondo**: reduce o zumbido e o ruído de fondo constante, e iguala a voz baixa, antes de transcribir. Tarda máis.
 - **Identificar falantes** (WhisperX): indica quen fala en cada parte, p. ex. `SPEAKER_00`. Se sabes cantas persoas falan, indícao en **Número de falantes** (`0` detéctao). Require un token gratuíto de Hugging Face; consulta [Identifica os falantes](#identifica-os-falantes). Coa API de Whisper, o modelo `gpt-4o-transcribe-diarize` identifica os falantes.
 
 ### Identifica os falantes

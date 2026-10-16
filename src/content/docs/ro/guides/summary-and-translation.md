@@ -34,21 +34,27 @@ Deschideți modul **Întreabă**, scrieți o întrebare în **Puneți o întreba
 - Dacă transcrierea are marcaje de timp, fiecare răspuns trimite la părțile transcrierii în care este spus. Faceți clic pe una pentru a reda sunetul de acolo.
 - Întrebările și răspunsurile sunt păstrate în istoric împreună cu transcrierea. Coșul din antet șterge conversația, după confirmare.
 
-La întrebări răspunde furnizorul ales pentru ele în **Preferințe** → **IA** → **Întreabă**, care este cel al rezumatelor până îl schimbați. Ca la rezumate, din transcrierile foarte lungi se citește doar începutul.
+La întrebări răspunde furnizorul ales pentru ele în **Preferințe** → **Furnizori** → **Întreabă**, care este cel al rezumatelor până îl schimbați. Ca la rezumate, din transcrierile foarte lungi se citește doar începutul.
 
 ## Traducere
 
 Faceți clic pe **Tradu**, alegeți limba în **Tradu în:** și furnizorul în **Tradu cu:**, apoi confirmați. Dialogul spune ce face furnizorul ales și oferă setarea cheii API dacă lipsește. Traducerea apare într-un panou în dreapta textului original.
 
 - Dacă transcrierea are marcaje de timp, este tradusă propoziție cu propoziție, cu textul spus înainte și după fiecare parte drept context, deci traducerea începe cu marcajele de timp ale fiecărei propoziții: evidențiază propoziția redată, iar un clic pe o propoziție o redă.
-- Dacă ați editat textul simplu, se traduce textul editat, fără marcaje de timp.
+- Dacă transcrierea nu are marcaje de timp, tot textul ei este tradus deodată.
 - Cele două texte derulează împreună, deci arată aceeași parte a sunetului. Butonul rotund de pe mânerul dintre ele activează și dezactivează acest lucru. Trageți mânerul pentru a le redimensiona sau faceți dublu clic pe el pentru a reveni la dimensiunile inițiale.
 
 Butoanele din antetul traducerii caută și înlocuiesc în ea, o copiază, o exportă, oferă **Tradu din nou** (cu același furnizor și model) și **Ascunde traducerea**. Butonul **Tradu** permite și afișarea ei din nou, **Tradu în altă limbă…** sau **Șterge traducerea**.
 
 ### Mai multe limbi
 
-O transcriere poate fi tradusă în mai multe limbi, chiar în același timp, și fiecare traducere este păstrată. Titlul panoului alege traducerea afișată, arată cât din fiecare este tradus și se încheie cu opțiunea de a traduce în altă limbă. Traducerea într-o limbă care are deja o traducere o înlocuiește, după confirmare, deoarece corecturile ei se pierd.
+O transcriere poate fi tradusă în mai multe limbi, chiar în același timp, și fiecare traducere este păstrată. Titlul panoului alege traducerea afișată, arată cât din fiecare este tradus și se încheie cu opțiunea de a traduce în altă limbă. Traducerea într-o limbă care are deja o traducere o înlocuiește, după confirmare, deoarece corecturile ei se pierd. Meniul titlului arată câte subtitrări din fiecare traducere neterminată sunt traduse (de ex. `Engleză · 148/150`).
+
+### Progresul traducerii
+
+Progresul se numără în subtitrări: una este tradusă când are text. Deasupra traducerii, un rând arată câte sunt traduse (de ex. `Tradus: 148/150 · 98 %`). Procentul este rotunjit în jos, așa că `100 %` apare doar când sunt toate traduse.
+
+Cât timp mai rămân unele, săgețile de lângă el merg la subtitrarea anterioară și următoare **Netradus încă**, evidențiind-o pe fiecare, și arată la care sunteți (de ex. `1 din 2`). Treceți cu mouse-ul peste una dintre ele pentru a afișa butonul **Tradu textul…** în dreapta ei, care deschide dialogul pentru a o traduce.
 
 ### Corectați și retemporizați traducerea
 
@@ -61,7 +67,7 @@ O traducere are adesea nevoie de altă temporizare decât originalul, de ex. sub
 
 ### Traduceți-o singur
 
-Pentru a scrie singur traducerea, alegeți **Manual** în **Tradu cu:**. Nu are nevoie de o cheie API. Traducerea începe cu un segment gol pentru fiecare subtitrare a transcrierii, afișat ca **Netradus încă**, iar panoul arată câte au mai rămas. Faceți clic dreapta pe unul și alegeți **Tradu textul…**: dialogul arată textul original spus în acel interval.
+Pentru a scrie singur traducerea, alegeți **Manual** în **Tradu cu:**. Nu are nevoie de o cheie API. Traducerea începe cu un segment gol pentru fiecare subtitrare a transcrierii, afișat ca **Netradus încă**, iar panoul arată câte au mai rămas. Faceți clic dreapta pe unul și alegeți **Tradu textul…**: dialogul arată textul original spus în acel interval. Trecând cu mouse-ul peste unul apare un buton **Tradu textul…** în dreapta lui, care deschide același dialog.
 
 ### Subtitrări și export
 
@@ -74,7 +80,7 @@ Pentru a obține transcrierea direct în altă limbă, fără furnizor, puteți 
 
 ## Furnizori
 
-Furnizorii se aleg în **Preferințe** → **IA**, separat pentru rezumate, întrebări și traduceri.
+Furnizorii se aleg în **Preferințe** → **Furnizori**, separat pentru rezumate, întrebări și traduceri.
 
 | Furnizor | Model implicit | Cheie API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Traducerile pot fi făcute și cu:
 
 ### Ollama
 
-[Ollama](https://ollama.com) rulează modelele pe computerul dumneavoastră, fără cheie API și fără a trimite textul nicăieri. Instalați-l, descărcați un model (de ex. `ollama pull llama3.2`) și alegeți **Ollama** ca furnizor. Dacă nu rulează la adresa implicită, schimbați **URL-ul serverului** în **Preferințe** → **IA** (implicit `http://localhost:11434`).
+[Ollama](https://ollama.com) rulează modelele pe computerul dumneavoastră, fără cheie API și fără a trimite textul nicăieri. Instalați-l, descărcați un model (de ex. `ollama pull llama3.2`) și alegeți **Ollama** ca furnizor. Dacă nu rulează la adresa implicită, schimbați **URL-ul serverului** în **Preferințe** → **Furnizori** (implicit `http://localhost:11434`).
 
 :::note
 Fiecare furnizor taxează utilizarea API-ului său, pentru care Audiotext nu este responsabil. Cheile API sunt păstrate în depozitul de credențiale al sistemului. Consultați [Fișiere și date](/ro/reference/files-and-data/).

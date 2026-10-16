@@ -15,6 +15,8 @@ Zobrazuje přepis rozdělený na titulky videa, se začátkem a koncem každého
 
 Časy se ve výchozím nastavení zobrazují s přesností na milisekundy jako v titulcích (`00:01:05,900 – 00:01:09,350`). Chcete-li je zjednodušit (`01:05 – 01:09`), zrušte v nabídce `⋯` zaškrtnutí **Přesné časové značky (HH:MM:SS,mmm)**.
 
+Nad titulky je řádek, který je spočítá, a pokud byli rozpoznáni mluvčí, spočítá i je (např. `Titulky: 120 · Mluvčí: 3`). Dlouhý segment rozdělený do více titulků se počítá jako více titulků.
+
 Časové značky jsou k dispozici jen s **WhisperX** a s modely `whisper-1` a `gpt-4o-transcribe-diarize` **Whisper API**. Bez nich nelze přepis přehrávat titulek po titulku; použijte místo toho režim **Prostý text**.
 
 ### Přehrávání zvuku
@@ -29,7 +31,7 @@ Pokud byl zdrojový soubor přesunut nebo smazán, zvuk není k dispozici, ale t
 
 ### Sledování videí s titulky
 
-Přepisy videí zobrazují video nad textem. Jeho nabídka umožňuje **Zobrazit titulky ve videu** a zvolit jejich **Velikost** (malá, střední nebo velká), **Umístění** (dole nebo nahoře) a **Styl** (tmavé pozadí nebo obrys). Pokud má přepis [překlady](/cs/guides/summary-and-translation/#překlad), nabídka také umožňuje zvolit, zda titulky zobrazí **Přepis**, nebo **Překlad** do některého jazyka.
+Přepisy videí zobrazují video nad textem. Jeho nabídka umožňuje **Zobrazit titulky ve videu** a zvolit jejich **Velikost** (malá, střední nebo velká), **Umístění** (dole nebo nahoře) a **Styl** (tmavé pozadí nebo obrys). Pokud má přepis [překlady](/cs/guides/summary-and-translation/#překlad), nabídka také umožňuje zvolit, zda titulky zobrazí **Přepis**, nebo **Překlad** do některého jazyka. Tlačítko **Titulky** na liště přehrávače je také zobrazí nebo skryje a šipka vedle něj otevře stejnou nabídku.
 
 ## Najít a nahradit
 
@@ -39,6 +41,8 @@ Stiskněte `Ctrl+F` (v macOS `⌘F`) nebo klikněte na lupu v záhlaví a otevř
 - **Nahradit** nahradí aktuální shodu a **Nahradit vše** všechny, např. chybně napsané jméno. Zaškrtnutím **Rozlišovat velikost písmen** najdete jen text se stejnými velkými písmeny.
 - Okno není modální, takže můžete text číst a přehrávat, zatímco je otevřené. **Vždy navrchu** ho drží nad hlavním oknem.
 - `Esc` ho zavře.
+
+V režimu **Prostý text** okno jen hledá (**Hledat v přepisu**), protože shodu v něm nelze přiřadit k titulku. Pro nahrazování se přepněte zpět na **Titulky**.
 
 ## Opravy přepisu
 
@@ -71,7 +75,13 @@ Pokud přepis nemá hodnocení, nabídka `⋯` uvede proč: **Zapněte „Časov
 
 ## Prostý text
 
-Režim **Prostý text** umožňuje text volně upravovat jako v textovém editoru. Změny se ukládají automaticky. Přepis si zachovává původní text s časovými značkami, takže titulky úpravy prostého textu nepoužívají.
+Režim **Prostý text** zobrazuje text přepisu bez časových značek. Skládá se z titulků, takže je jen pro čtení, jak říká poznámka vedle režimů: chcete-li ho změnit, [opravte titulky](#opravy-přepisu) a prostý text se jim přizpůsobí. Všechny exporty a překlady tak používají stejný text.
+
+Přepisy bez časových značek (např. z Google API) titulky nemají, takže jejich prostý text lze volně upravovat jako v textovém editoru. Změny se ukládají automaticky.
+
+:::note
+Dřívější verze umožňovaly upravovat prostý text přepisů s titulky. Když se takový přepis (nebo překlad) otevře, jeho prostý text se znovu složí z titulků, takže se tyto úpravy nahradí.
+:::
 
 ## Kopírování a export
 

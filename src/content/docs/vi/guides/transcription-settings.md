@@ -44,8 +44,8 @@ WhisperX và Whisper API sử dụng chúng, trừ mô hình `gpt-4o-transcribe-
 
 ## Tùy chọn
 
-- **Thời gian theo từng từ** (WhisperX): căn chỉnh từng từ với âm thanh để đánh dấu khi phát và để [rà soát các từ](/vi/guides/transcript/#rà-soát-các-từ-có-độ-tin-cậy-thấp) mà nó kém chắc chắn nhất. Mất thêm một chút thời gian. Bật theo mặc định.
-- **Tách giọng nói**: giảm nhạc và tiếng ồn nền trước khi chép lời.
+- **Thời gian theo từng từ** (WhisperX): căn chỉnh từng từ với âm thanh để đánh dấu khi phát và để [rà soát các từ](/vi/guides/transcript/#rà-soát-các-từ-có-độ-tin-cậy-thấp) mà nó kém chắc chắn nhất. Mất thêm một chút thời gian. Bật theo mặc định. Phụ đề cần thời gian của từng từ, nên tùy chọn này được bật và khóa khi `.srt` hoặc `.vtt` được chọn trong **Loại tệp** của một thư mục; lựa chọn của bạn sẽ trở lại khi chúng không còn được chọn.
+- **Giảm tiếng ồn nền**: giảm tiếng ù và tiếng ồn nền đều đều, và cân bằng giọng nói nhỏ, trước khi chép lời. Mất nhiều thời gian hơn.
 - **Nhận diện người nói** (WhisperX): gắn nhãn ai nói ở mỗi đoạn, ví dụ `SPEAKER_00`. Nếu bạn biết có bao nhiêu người nói, hãy nhập vào **Số người nói** (`0` để tự phát hiện). Cần token Hugging Face miễn phí; xem [Nhận diện những người nói](#nhận-diện-những-người-nói). Với Whisper API, mô hình `gpt-4o-transcribe-diarize` nhận diện người nói.
 
 ### Nhận diện những người nói

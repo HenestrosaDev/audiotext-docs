@@ -55,11 +55,12 @@ On Macs with Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-exam
 - The MLX version of the model is downloaded the first time it's used.
 - `distil-small.en`, `distil-large-v2` and `distil-large-v3.5` have no MLX version, so they run on the CPU.
 - The [live text](/en/guides/sources/#live-text) always runs on the CPU.
-- To transcribe on the CPU, turn on **Use CPU** in **Preferences** → **WhisperX**.
+- **Compute type** and **Batch size** don't apply on the GPU, since MLX always calculates in half precision and without batches.
+- To transcribe on the CPU, turn on **Use CPU** in **Preferences** → **Transcription**.
 
 ### Advanced options
 
-They're in **Preferences** → **WhisperX**. Change them only if you have problems or know what you're doing: a GPU that runs out of memory can freeze your system.
+They're in **Preferences** → **Transcription** → **WhisperX**. Change them only if you have problems or know what you're doing: a GPU that runs out of memory can freeze your system.
 
 - **Compute type**: the precision of the numbers of the model. `float16` is faster on NVIDIA GPUs (the default with CUDA). `int8` uses less memory and is the default on the CPU, since many CPUs don't support `float16` efficiently. `float32` is the most precise, for GPUs with more than 8 GB of VRAM.
 - **Batch size**: how many parts of the audio are processed at once (`8` by default). It doesn't change the quality, only the speed. Lower it if you run out of memory; up to `16` is recommended.
@@ -82,8 +83,8 @@ Long audios are split into chunks of up to 10 minutes, cut at a silence so no wo
 ### Options
 
 - **Response format** (Output card, for folders): `text` (default), `json`, `verbose_json`, `srt` or `vtt`. The subtitles and `verbose_json` need a model with timestamps.
-- **Temperature** (Preferences → Whisper API): between 0 and 1. Higher values like 0.8 make the output more random, and lower values like 0.2 more focused. With 0 (default), the model raises it automatically when needed.
-- **Timestamps of the words** (Preferences → Whisper API): whether `whisper-1` also returns the timestamps of each word, to highlight it while playing. It takes longer. On by default.
+- **Temperature** (Preferences → Transcription): between 0 and 1. Higher values like 0.8 make the output more random, and lower values like 0.2 more focused. With 0 (default), the model raises it automatically when needed.
+- **Timestamps of the words** (Preferences → Transcription): whether `whisper-1` also returns the timestamps of each word, to highlight it while playing. It takes longer. On by default.
 
 ## Google API
 

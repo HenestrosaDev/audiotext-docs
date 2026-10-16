@@ -44,8 +44,8 @@ Keduanya digunakan oleh WhisperX dan Whisper API, kecuali model `gpt-4o-transcri
 
 ## Opsi
 
-- **Waktu per kata** (WhisperX): menyelaraskan setiap kata dengan audio agar disorot saat diputar dan untuk [meninjau kata](/id/guides/transcript/#tinjau-kata-dengan-keyakinan-rendah) yang paling tidak diyakininya. Memerlukan sedikit lebih banyak waktu. Aktif secara bawaan.
-- **Ekstrak suara**: mengurangi musik dan suara latar sebelum mentranskripsi.
+- **Waktu per kata** (WhisperX): menyelaraskan setiap kata dengan audio agar disorot saat diputar dan untuk [meninjau kata](/id/guides/transcript/#tinjau-kata-dengan-keyakinan-rendah) yang paling tidak diyakininya. Memerlukan sedikit lebih banyak waktu. Aktif secara bawaan. Subtitle memerlukan waktu kata, jadi opsi ini diaktifkan dan dikunci selama `.srt` atau `.vtt` dipilih di **Jenis file** sebuah folder; pilihan Anda kembali saat keduanya tidak lagi dipilih.
+- **Kurangi derau latar**: mengurangi dengung dan derau latar yang konstan, serta meratakan ucapan yang pelan, sebelum mentranskripsi. Memakan waktu lebih lama.
 - **Identifikasi pembicara** (WhisperX): menandai siapa yang berbicara di setiap bagian, mis. `SPEAKER_00`. Jika Anda tahu berapa orang yang berbicara, masukkan di **Jumlah pembicara** (`0` mendeteksinya otomatis). Memerlukan token Hugging Face gratis; lihat [Identifikasi para pembicara](#identifikasi-para-pembicara). Dengan Whisper API, model `gpt-4o-transcribe-diarize` mengidentifikasi pembicara.
 
 ### Identifikasi para pembicara

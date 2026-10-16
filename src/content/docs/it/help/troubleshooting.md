@@ -13,7 +13,7 @@ Al primo utilizzo un modello viene scaricato, il che può richiedere diversi min
 
 La GPU non ha abbastanza memoria per le impostazioni. Prova, in quest'ordine:
 
-1. Abbassa la **Dimensione del batch** (es. `4`) in **Preferenze** → **WhisperX**.
+1. Abbassa la **Dimensione del batch** (es. `4`) in **Preferenze** → **Trascrizione**.
 2. Usa un modello più piccolo (es. `small` o `base`).
 3. Usa un **Tipo di calcolo** più leggero (es. `int8`).
 
@@ -21,7 +21,7 @@ Gli ultimi due possono ridurre la qualità. Consulta [Motori](/it/reference/engi
 
 ## La trascrizione richiede troppo tempo
 
-La velocità di WhisperX dipende dall'hardware, quindi non aspettarti risultati istantanei su CPU modeste. Prova un modello più piccolo, come `small`, o `large-v3-turbo` su una GPU, o il tipo di calcolo `int8`. Su un Mac con Apple Silicon, verifica che **Usa la CPU** sia disattivata in **Preferenze** → **WhisperX**, così trascrive sulla GPU. In alternativa, usa la **API di Whisper** o la **API di Google**, che funzionano su server remoti.
+La velocità di WhisperX dipende dall'hardware, quindi non aspettarti risultati istantanei su CPU modeste. Prova un modello più piccolo, come `small`, o `large-v3-turbo` su una GPU, o il tipo di calcolo `int8`. Su un Mac con Apple Silicon, verifica che **Usa la CPU** sia disattivata in **Preferenze** → **Trascrizione**, così trascrive sulla GPU. In alternativa, usa la **API di Whisper** o la **API di Google**, che funzionano su server remoti.
 
 ## La API di Whisper restituisce l'errore `429`
 
@@ -81,7 +81,7 @@ La API di Google non può rilevare la lingua. Scegli la **Lingua dell'audio** ne
 ## Un riassunto, una risposta o una traduzione non riesce
 
 - **DeepL non può tradurre in ….**: DeepL non supporta quella lingua. Scegli un altro fornitore, come un modello linguistico.
-- **La risposta del modello era troppo lunga.**, **Il modello non ha restituito un riassunto valido.**, **Il modello non ha restituito una risposta valida.** o **Il modello non ha restituito una traduzione valida.**: il modello non ha scritto il riassunto, la risposta o la traduzione nel formato previsto. Riprova, oppure scegli un modello più grande in **Preferenze** → **IA**. I modelli piccoli di Ollama falliscono più spesso.
+- **La risposta del modello era troppo lunga.**, **Il modello non ha restituito un riassunto valido.**, **Il modello non ha restituito una risposta valida.** o **Il modello non ha restituito una traduzione valida.**: il modello non ha scritto il riassunto, la risposta o la traduzione nel formato previsto. Riprova, oppure scegli un modello più grande in **Preferenze** → **Fornitori**. I modelli piccoli di Ollama falliscono più spesso.
 - Per qualsiasi altro errore, verifica che la chiave API del fornitore sia impostata in **Preferenze** → **Chiavi API** e che il tuo account abbia credito.
 
 ## Le parole a bassa affidabilità non vengono sottolineate

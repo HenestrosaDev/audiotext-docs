@@ -15,6 +15,8 @@ Shows the transcription split into the subtitles of the video, with when each on
 
 The times are shown to the millisecond, like the subtitles (`00:01:05,900 – 00:01:09,350`), by default. To simplify them (`01:05 – 01:09`), uncheck **Precise timestamps (HH:MM:SS,mmm)** in the `⋯` menu.
 
+Above the subtitles, a line counts them and, if the speakers were identified, the speakers (e.g. `Subtitles: 120 · Speakers: 3`). A long segment split into several subtitles counts as several.
+
 Timestamps are only available with **WhisperX** and the `whisper-1` and `gpt-4o-transcribe-diarize` models of the **Whisper API**. Without them, the transcript can't be played subtitle by subtitle; use the **Plain text** mode instead.
 
 ### Play the audio
@@ -29,7 +31,7 @@ If the source file was moved or deleted, the audio isn't available, but the text
 
 ### Watch videos with subtitles
 
-The transcriptions of videos show the video above the text. Its menu lets you **Show subtitles on the video**, and choose their **Size** (small, medium or large), **Position** (bottom or top) and **Style** (dark background or outline). If the transcription has [translations](/en/guides/summary-and-translation/#translation), the menu also chooses whether the subtitles show the **Transcription** or the **Translation into…** a language.
+The transcriptions of videos show the video above the text. Its menu lets you **Show subtitles on the video**, and choose their **Size** (small, medium or large), **Position** (bottom or top) and **Style** (dark background or outline). If the transcription has [translations](/en/guides/summary-and-translation/#translation), the menu also chooses whether the subtitles show the **Transcription** or the **Translation into…** a language. The **Subtitles** button of the player bar also shows or hides them, and the arrow next to it opens the same menu.
 
 ## Find and replace
 
@@ -39,6 +41,8 @@ Press `Ctrl+F` (`⌘F` on macOS), or click the magnifying glass of the header, t
 - **Replace** replaces the current match, and **Replace all** all of them, e.g. a name that was spelled wrong. Check **Match case** to only find the text with the same capital letters.
 - The window isn't modal, so you can read and play the text while it's open. **Stay on top** keeps it above the main window.
 - `Esc` closes it.
+
+In the **Plain text** mode, the window only finds (**Find in the transcription**), since a match there can't be traced back to a subtitle. Switch back to **Subtitles** to replace.
 
 ## Correct the transcription
 
@@ -71,7 +75,13 @@ If a transcription has no scores, the `⋯` menu says why: **Turn on “Word-lev
 
 ## Plain text
 
-The **Plain text** mode lets you edit the text freely, like in a text editor. The changes are saved automatically. The transcript keeps the original text with its timestamps, so the edits of the plain text aren't used by the subtitles.
+The **Plain text** mode shows the text of the transcription without timestamps. It's built from the subtitles, so it's read-only, as the note next to the modes says: to change it, [correct the subtitles](#correct-the-transcription), and the plain text follows them. This way, every export and translation uses the same text.
+
+The transcriptions without timestamps (e.g. from the Google API) have no subtitles, so their plain text can be edited freely, like in a text editor. The changes are saved automatically.
+
+:::note
+Earlier versions let you edit the plain text of transcriptions with subtitles. When one of those transcriptions (or translations) is opened, its plain text is built again from its subtitles, so those edits are replaced.
+:::
 
 ## Copy and export
 

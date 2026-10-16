@@ -55,11 +55,12 @@ Sui Mac con Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-examp
 - La versione MLX del modello viene scaricata al primo utilizzo.
 - `distil-small.en`, `distil-large-v2` e `distil-large-v3.5` non hanno una versione MLX, quindi funzionano sulla CPU.
 - Il [testo dal vivo](/it/guides/sources/#testo-dal-vivo) funziona sempre sulla CPU.
-- Per trascrivere sulla CPU, attiva **Usa la CPU** in **Preferenze** → **WhisperX**.
+- **Tipo di calcolo** e **Dimensione del batch** non si applicano sulla GPU, perché MLX calcola sempre a mezza precisione e senza batch.
+- Per trascrivere sulla CPU, attiva **Usa la CPU** in **Preferenze** → **Trascrizione**.
 
 ### Opzioni avanzate
 
-Si trovano in **Preferenze** → **WhisperX**. Cambiale solo se hai problemi o sai cosa stai facendo: una GPU senza memoria può bloccare il sistema.
+Si trovano in **Preferenze** → **Trascrizione** → **WhisperX**. Cambiale solo se hai problemi o sai cosa stai facendo: una GPU senza memoria può bloccare il sistema.
 
 - **Tipo di calcolo**: la precisione dei numeri del modello. `float16` è più veloce sulle GPU NVIDIA (il predefinito con CUDA). `int8` usa meno memoria ed è il predefinito sulla CPU, perché molte CPU non supportano `float16` in modo efficiente. `float32` è il più preciso, per GPU con più di 8 GB di VRAM.
 - **Dimensione del batch**: quante parti dell'audio vengono elaborate insieme (`8` per impostazione predefinita). Non cambia la qualità, solo la velocità. Abbassala se finisci la memoria; si consiglia fino a `16`.
@@ -82,8 +83,8 @@ Gli audio lunghi vengono divisi in parti di massimo 10 minuti, tagliate in un si
 ### Opzioni
 
 - **Formato della risposta** (scheda Output, per le cartelle): `text` (predefinito), `json`, `verbose_json`, `srt` o `vtt`. I sottotitoli e `verbose_json` richiedono un modello con marcatori temporali.
-- **Temperatura** (Preferenze → Whisper API): tra 0 e 1. Valori alti come 0,8 rendono il risultato più casuale, valori bassi come 0,2 più mirato. Con 0 (predefinito), il modello la aumenta automaticamente quando serve.
-- **Marcatori temporali delle parole** (Preferenze → Whisper API): se `whisper-1` restituisce anche i marcatori temporali di ogni parola, per evidenziarla durante la riproduzione. Richiede più tempo. Attivo per impostazione predefinita.
+- **Temperatura** (Preferenze → Trascrizione): tra 0 e 1. Valori alti come 0,8 rendono il risultato più casuale, valori bassi come 0,2 più mirato. Con 0 (predefinito), il modello la aumenta automaticamente quando serve.
+- **Marcatori temporali delle parole** (Preferenze → Trascrizione): se `whisper-1` restituisce anche i marcatori temporali di ogni parola, per evidenziarla durante la riproduzione. Richiede più tempo. Attivo per impostazione predefinita.
 
 ## API di Google
 

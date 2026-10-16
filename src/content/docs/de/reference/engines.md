@@ -55,11 +55,12 @@ Auf Macs mit Apple Silicon transkribiert [MLX Whisper](https://github.com/ml-exp
 - Die MLX-Version des Modells wird bei der ersten Verwendung heruntergeladen.
 - `distil-small.en`, `distil-large-v2` und `distil-large-v3.5` haben keine MLX-Version und laufen daher auf der CPU.
 - Der [Live-Text](/de/guides/sources/#live-text) läuft immer auf der CPU.
-- Um auf der CPU zu transkribieren, aktivieren Sie **CPU verwenden** unter **Einstellungen** → **WhisperX**.
+- **Berechnungstyp** und **Batchgröße** gelten auf der GPU nicht, da MLX immer mit halber Genauigkeit und ohne Batches rechnet.
+- Um auf der CPU zu transkribieren, aktivieren Sie **CPU verwenden** unter **Einstellungen** → **Transkription**.
 
 ### Erweiterte Optionen
 
-Sie finden sie unter **Einstellungen** → **WhisperX**. Ändern Sie sie nur bei Problemen oder wenn Sie wissen, was Sie tun: Eine GPU ohne freien Speicher kann Ihr System einfrieren.
+Sie finden sie unter **Einstellungen** → **Transkription** → **WhisperX**. Ändern Sie sie nur bei Problemen oder wenn Sie wissen, was Sie tun: Eine GPU ohne freien Speicher kann Ihr System einfrieren.
 
 - **Berechnungstyp**: die Genauigkeit der Zahlen des Modells. `float16` ist auf NVIDIA-GPUs schneller (Standard mit CUDA). `int8` braucht weniger Speicher und ist der Standard auf der CPU, da viele CPUs `float16` nicht effizient unterstützen. `float32` ist am genauesten, für GPUs mit mehr als 8 GB VRAM.
 - **Batchgröße**: wie viele Teile des Audios gleichzeitig verarbeitet werden (standardmäßig `8`). Sie ändert nicht die Qualität, nur die Geschwindigkeit. Verringern Sie sie, wenn der Speicher nicht reicht; empfohlen sind höchstens `16`.
@@ -82,8 +83,8 @@ Lange Aufnahmen werden in Abschnitte von bis zu 10 Minuten geteilt, jeweils an e
 ### Optionen
 
 - **Antwortformat** (Karte Ausgabe, für Ordner): `text` (Standard), `json`, `verbose_json`, `srt` oder `vtt`. Untertitel und `verbose_json` erfordern ein Modell mit Zeitstempeln.
-- **Temperatur** (Einstellungen → Whisper API): zwischen 0 und 1. Hohe Werte wie 0,8 machen das Ergebnis zufälliger, niedrige wie 0,2 fokussierter. Bei 0 (Standard) erhöht das Modell sie bei Bedarf automatisch.
-- **Zeitstempel der Wörter** (Einstellungen → Whisper API): ob `whisper-1` auch die Zeitstempel jedes Wortes liefert, um es beim Abspielen hervorzuheben. Dauert länger. Standardmäßig aktiv.
+- **Temperatur** (Einstellungen → Transkription): zwischen 0 und 1. Hohe Werte wie 0,8 machen das Ergebnis zufälliger, niedrige wie 0,2 fokussierter. Bei 0 (Standard) erhöht das Modell sie bei Bedarf automatisch.
+- **Zeitstempel der Wörter** (Einstellungen → Transkription): ob `whisper-1` auch die Zeitstempel jedes Wortes liefert, um es beim Abspielen hervorzuheben. Dauert länger. Standardmäßig aktiv.
 
 ## Google-API
 

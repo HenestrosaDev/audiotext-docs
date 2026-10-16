@@ -55,11 +55,12 @@ Op Macs met Apple Silicon transcribeert [MLX Whisper](https://github.com/ml-expl
 - De MLX-versie van het model wordt gedownload wanneer het voor het eerst wordt gebruikt.
 - `distil-small.en`, `distil-large-v2` en `distil-large-v3.5` hebben geen MLX-versie en draaien dus op de CPU.
 - De [livetekst](/nl/guides/sources/#livetekst) draait altijd op de CPU.
-- Om op de CPU te transcriberen, zet je **CPU gebruiken** aan bij **Voorkeuren** → **WhisperX**.
+- **Rekentype** en **Batchgrootte** zijn niet van toepassing op de GPU, omdat MLX altijd met halve precisie en zonder batches rekent.
+- Om op de CPU te transcriberen, zet je **CPU gebruiken** aan bij **Voorkeuren** → **Transcriptie**.
 
 ### Geavanceerde opties
 
-Ze staan bij **Voorkeuren** → **WhisperX**. Wijzig ze alleen als je problemen hebt of weet wat je doet: een GPU zonder geheugen kan je systeem laten vastlopen.
+Ze staan bij **Voorkeuren** → **Transcriptie** → **WhisperX**. Wijzig ze alleen als je problemen hebt of weet wat je doet: een GPU zonder geheugen kan je systeem laten vastlopen.
 
 - **Rekentype**: de precisie van de getallen van het model. `float16` is sneller op NVIDIA-GPU's (de standaard met CUDA). `int8` gebruikt minder geheugen en is de standaard op de CPU, omdat veel CPU's `float16` niet efficiënt ondersteunen. `float32` is het nauwkeurigst, voor GPU's met meer dan 8 GB VRAM.
 - **Batchgrootte**: hoeveel delen van de audio tegelijk worden verwerkt (standaard `8`). Het verandert de kwaliteit niet, alleen de snelheid. Verlaag hem als het geheugen opraakt; tot `16` wordt aanbevolen.
@@ -82,8 +83,8 @@ Lange audio wordt opgedeeld in stukken van maximaal 10 minuten, geknipt bij een 
 ### Opties
 
 - **Antwoordformaat** (kaart Uitvoer, voor mappen): `text` (standaard), `json`, `verbose_json`, `srt` of `vtt`. Ondertitels en `verbose_json` vereisen een model met tijdstempels.
-- **Temperatuur** (Voorkeuren → Whisper API): tussen 0 en 1. Hoge waarden zoals 0,8 maken het resultaat willekeuriger, lage waarden zoals 0,2 gerichter. Bij 0 (standaard) verhoogt het model hem automatisch als dat nodig is.
-- **Tijdstempels van de woorden** (Voorkeuren → Whisper API): of `whisper-1` ook de tijdstempels van elk woord teruggeeft, om het tijdens het afspelen te markeren. Duurt langer. Standaard aan.
+- **Temperatuur** (Voorkeuren → Transcriptie): tussen 0 en 1. Hoge waarden zoals 0,8 maken het resultaat willekeuriger, lage waarden zoals 0,2 gerichter. Bij 0 (standaard) verhoogt het model hem automatisch als dat nodig is.
+- **Tijdstempels van de woorden** (Voorkeuren → Transcriptie): of `whisper-1` ook de tijdstempels van elk woord teruggeeft, om het tijdens het afspelen te markeren. Duurt langer. Standaard aan.
 
 ## Google-API
 

@@ -44,8 +44,8 @@ They're used by WhisperX and the Whisper API, except by the `gpt-4o-transcribe-d
 
 ## Options
 
-- **Word-level timings** (WhisperX): aligns each word with the audio, to highlight it while playing and to [review the words](/en/guides/transcript/#review-the-low-confidence-words) it's least sure of. Takes a bit longer. On by default.
-- **Extract speech**: reduces music and background noise before transcribing.
+- **Word-level timings** (WhisperX): aligns each word with the audio, to highlight it while playing and to [review the words](/en/guides/transcript/#review-the-low-confidence-words) it's least sure of. Takes a bit longer. On by default. The subtitles need the timings of the words, so it's turned on and locked while `.srt` or `.vtt` is chosen in the **File types** of a folder; your own choice comes back when they're no longer chosen.
+- **Reduce background noise**: reduces hum and steady background noise, and evens out quiet speech, before transcribing. Takes longer.
 - **Identify speakers** (WhisperX): labels who speaks in each part, e.g. `SPEAKER_00`. If you know how many people speak, enter it in **Number of speakers** (`0` detects it). It requires a free Hugging Face token; see [Identify the speakers](#identify-the-speakers). With the Whisper API, the `gpt-4o-transcribe-diarize` model identifies the speakers.
 
 ### Identify the speakers

@@ -44,8 +44,8 @@ De används av WhisperX och Whisper-API:t, utom av modellen `gpt-4o-transcribe-d
 
 ## Alternativ
 
-- **Tider per ord** (WhisperX): justerar varje ord mot ljudet för att markera det under uppspelning och för att [granska orden](/sv/guides/transcript/#granska-ord-med-låg-säkerhet) som den är minst säker på. Tar lite längre tid. På som standard.
-- **Extrahera tal**: minskar musik och bakgrundsljud före transkriberingen.
+- **Tider per ord** (WhisperX): justerar varje ord mot ljudet för att markera det under uppspelning och för att [granska orden](/sv/guides/transcript/#granska-ord-med-låg-säkerhet) som den är minst säker på. Tar lite längre tid. På som standard. Undertexterna behöver ordens tider, så alternativet slås på och låses medan `.srt` eller `.vtt` är valt under **Filtyper** för en mapp; ditt eget val kommer tillbaka när de inte längre är valda.
+- **Minska bakgrundsbrus**: minskar brum och jämnt bakgrundsbrus, och jämnar ut tyst tal, innan transkriberingen. Tar längre tid.
 - **Identifiera talare** (WhisperX): anger vem som talar i varje del, t.ex. `SPEAKER_00`. Om du vet hur många som talar anger du det i **Antal talare** (`0` identifierar det automatiskt). Kräver en gratis Hugging Face-token; se [Identifiera talarna](#identifiera-talarna). Med Whisper-API:t identifierar modellen `gpt-4o-transcribe-diarize` talarna.
 
 ### Identifiera talarna

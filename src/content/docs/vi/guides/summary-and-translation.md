@@ -34,21 +34,27 @@ Mở chế độ **Hỏi**, gõ câu hỏi vào **Đặt câu hỏi về bản c
 - Nếu bản chép lời có dấu thời gian, mỗi câu trả lời liên kết đến các phần của bản chép lời nơi điều đó được nói. Nhấp vào một liên kết để phát âm thanh từ đó.
 - Các câu hỏi và câu trả lời được lưu trong lịch sử cùng bản chép lời. Thùng rác ở phần đầu xóa cuộc trò chuyện, sau khi hỏi bạn.
 
-Các câu hỏi được trả lời bởi nhà cung cấp đã chọn cho chúng trong **Tùy chọn ưu tiên** → **AI** → **Hỏi**, tức là nhà cung cấp của bản tóm tắt cho đến khi bạn đổi. Giống như bản tóm tắt, với các bản chép lời rất dài thì chỉ phần đầu được đọc.
+Các câu hỏi được trả lời bởi nhà cung cấp đã chọn cho chúng trong **Tùy chọn ưu tiên** → **Nhà cung cấp** → **Hỏi**, tức là nhà cung cấp của bản tóm tắt cho đến khi bạn đổi. Giống như bản tóm tắt, với các bản chép lời rất dài thì chỉ phần đầu được đọc.
 
 ## Bản dịch
 
 Nhấp **Dịch**, chọn ngôn ngữ ở **Dịch sang:** và nhà cung cấp ở **Dịch bằng:**, rồi xác nhận. Hộp thoại cho biết nhà cung cấp đã chọn làm gì, và đề nghị đặt khóa API nếu còn thiếu. Bản dịch hiển thị trong một bảng bên phải văn bản gốc.
 
 - Nếu bản chép lời có dấu thời gian, nó được dịch theo từng câu, với văn bản được nói trước và sau mỗi phần làm ngữ cảnh, nên bản dịch bắt đầu với dấu thời gian của từng câu: câu đang phát được đánh dấu, và nhấp vào một câu sẽ phát câu đó.
-- Nếu bạn đã chỉnh sửa văn bản thuần, văn bản đã chỉnh sửa sẽ được dịch, không có dấu thời gian.
+- Nếu bản chép lời không có dấu thời gian, toàn bộ văn bản được dịch một lần.
 - Hai văn bản cuộn cùng nhau, nên chúng hiển thị cùng một phần của âm thanh. Nút tròn trên tay nắm giữa chúng bật và tắt tính năng này. Kéo tay nắm để đổi kích thước, hoặc nhấp đúp vào đó để đặt lại.
 
 Các nút ở phần đầu bản dịch cho phép tìm và thay thế trong đó, sao chép, xuất, **Dịch lại** (với cùng nhà cung cấp và mô hình) và **Ẩn bản dịch**. Nút **Dịch** cũng cho phép hiển thị lại nó, **Dịch sang ngôn ngữ khác…** hoặc **Xóa bản dịch**.
 
 ### Nhiều ngôn ngữ
 
-Một bản chép lời có thể được dịch sang nhiều ngôn ngữ, thậm chí cùng lúc, và mỗi bản dịch đều được lưu. Tiêu đề của bảng chọn bản dịch được hiển thị, cho biết mỗi bản đã dịch được bao nhiêu, và kết thúc bằng tùy chọn dịch sang ngôn ngữ khác. Dịch sang một ngôn ngữ đã có bản dịch sẽ thay thế bản đó, sau khi hỏi bạn, vì các chỉnh sửa của nó sẽ mất.
+Một bản chép lời có thể được dịch sang nhiều ngôn ngữ, thậm chí cùng lúc, và mỗi bản dịch đều được lưu. Tiêu đề của bảng chọn bản dịch được hiển thị, cho biết mỗi bản đã dịch được bao nhiêu, và kết thúc bằng tùy chọn dịch sang ngôn ngữ khác. Dịch sang một ngôn ngữ đã có bản dịch sẽ thay thế bản đó, sau khi hỏi bạn, vì các chỉnh sửa của nó sẽ mất. Menu của tiêu đề cho biết mỗi bản dịch chưa xong đã dịch được bao nhiêu phụ đề (ví dụ: `Tiếng Anh · 148/150`).
+
+### Tiến độ dịch
+
+Tiến độ được tính theo phụ đề: một phụ đề được coi là đã dịch khi có văn bản. Phía trên bản dịch, một dòng cho biết đã dịch được bao nhiêu (ví dụ: `Đã dịch: 148/150 · 98%`). Tỷ lệ phần trăm được làm tròn xuống, nên `100%` chỉ hiện khi tất cả đã được dịch.
+
+Khi vẫn còn phụ đề chưa dịch, các mũi tên bên cạnh chuyển đến phụ đề **Chưa được dịch** trước và sau, tô sáng từng phụ đề, và cho biết bạn đang ở phụ đề nào (ví dụ: `1/2`). Di chuột lên một phụ đề để hiện nút **Dịch văn bản…** bên phải nó, nút này mở hộp thoại để dịch.
 
 ### Sửa và căn lại thời gian bản dịch
 
@@ -61,7 +67,7 @@ Bản dịch thường cần thời gian khác với bản gốc, ví dụ phụ
 
 ### Tự dịch
 
-Để tự viết bản dịch, hãy chọn **Thủ công** ở **Dịch bằng:**. Không cần khóa API. Bản dịch bắt đầu với một đoạn trống cho mỗi phụ đề của bản chép lời, hiển thị là **Chưa được dịch**, và bảng cho biết còn bao nhiêu đoạn. Nhấp chuột phải vào một đoạn và chọn **Dịch văn bản…**: hộp thoại hiển thị văn bản gốc được nói trong khoảng đó.
+Để tự viết bản dịch, hãy chọn **Thủ công** ở **Dịch bằng:**. Không cần khóa API. Bản dịch bắt đầu với một đoạn trống cho mỗi phụ đề của bản chép lời, hiển thị là **Chưa được dịch**, và bảng cho biết còn bao nhiêu đoạn. Nhấp chuột phải vào một đoạn và chọn **Dịch văn bản…**: hộp thoại hiển thị văn bản gốc được nói trong khoảng đó. Di chuột lên một đoạn sẽ hiện nút **Dịch văn bản…** bên phải nó, nút này mở cùng hộp thoại đó.
 
 ### Phụ đề và xuất tệp
 
@@ -74,7 +80,7 @@ Bản dịch thường cần thời gian khác với bản gốc, ví dụ phụ
 
 ## Nhà cung cấp
 
-Nhà cung cấp được chọn trong **Tùy chọn ưu tiên** → **AI**, riêng cho tóm tắt, câu hỏi và bản dịch.
+Nhà cung cấp được chọn trong **Tùy chọn ưu tiên** → **Nhà cung cấp**, riêng cho tóm tắt, câu hỏi và bản dịch.
 
 | Nhà cung cấp | Mô hình mặc định | Khóa API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Bản dịch cũng có thể được tạo bởi:
 
 ### Ollama
 
-[Ollama](https://ollama.com) chạy mô hình trên máy tính của bạn, không cần khóa API và không gửi văn bản đi đâu cả. Cài đặt Ollama, tải một mô hình (ví dụ `ollama pull llama3.2`) và chọn **Ollama** làm nhà cung cấp. Nếu Ollama không chạy ở địa chỉ mặc định, hãy đổi **URL máy chủ** trong **Tùy chọn ưu tiên** → **AI** (mặc định `http://localhost:11434`).
+[Ollama](https://ollama.com) chạy mô hình trên máy tính của bạn, không cần khóa API và không gửi văn bản đi đâu cả. Cài đặt Ollama, tải một mô hình (ví dụ `ollama pull llama3.2`) và chọn **Ollama** làm nhà cung cấp. Nếu Ollama không chạy ở địa chỉ mặc định, hãy đổi **URL máy chủ** trong **Tùy chọn ưu tiên** → **Nhà cung cấp** (mặc định `http://localhost:11434`).
 
 :::note
 Mỗi nhà cung cấp tính phí cho việc sử dụng API của họ, và Audiotext không chịu trách nhiệm về khoản phí này. Khóa API được lưu trong kho thông tin xác thực của hệ thống. Xem [Tệp và dữ liệu](/vi/reference/files-and-data/).

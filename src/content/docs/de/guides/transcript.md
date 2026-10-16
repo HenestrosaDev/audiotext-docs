@@ -15,6 +15,8 @@ Zeigt die Transkription aufgeteilt in die Untertitel des Videos, jeweils mit Anf
 
 Standardmäßig werden die Zeiten millisekundengenau wie in den Untertiteln angezeigt (`00:01:05,900 – 00:01:09,350`). Um sie zu vereinfachen (`01:05 – 01:09`), deaktivieren Sie **Genaue Zeitstempel (HH:MM:SS,mmm)** im Menü `⋯`.
 
+Über den Untertiteln zählt eine Zeile sie und, falls die Sprecher erkannt wurden, auch die Sprecher (z. B. `Untertitel: 120 · Sprecher: 3`). Ein langes Segment, das auf mehrere Untertitel aufgeteilt ist, zählt als mehrere.
+
 Zeitstempel gibt es nur mit **WhisperX** und mit den Modellen `whisper-1` und `gpt-4o-transcribe-diarize` der **Whisper-API**. Ohne sie lässt sich das Transkript nicht Untertitel für Untertitel abspielen; verwenden Sie stattdessen den Modus **Nur-Text**.
 
 ### Audio abspielen
@@ -29,7 +31,7 @@ Wurde die Quelldatei verschoben oder gelöscht, ist das Audio nicht verfügbar, 
 
 ### Videos mit Untertiteln ansehen
 
-Bei Transkriptionen von Videos wird das Video über dem Text angezeigt. Über sein Menü können Sie **Untertitel im Video anzeigen** und deren **Größe** (klein, mittel oder groß), **Position** (unten oder oben) und **Stil** (dunkler Hintergrund oder Kontur) wählen. Hat die Transkription [Übersetzungen](/de/guides/summary-and-translation/#übersetzung), legt das Menü auch fest, ob die Untertitel die **Transkription** oder die **Übersetzung nach…** einer Sprache zeigen.
+Bei Transkriptionen von Videos wird das Video über dem Text angezeigt. Über sein Menü können Sie **Untertitel im Video anzeigen** und deren **Größe** (klein, mittel oder groß), **Position** (unten oder oben) und **Stil** (dunkler Hintergrund oder Kontur) wählen. Hat die Transkription [Übersetzungen](/de/guides/summary-and-translation/#übersetzung), legt das Menü auch fest, ob die Untertitel die **Transkription** oder die **Übersetzung nach…** einer Sprache zeigen. Die Schaltfläche **Untertitel** der Wiedergabeleiste blendet sie ebenfalls ein oder aus, und der Pfeil daneben öffnet dasselbe Menü.
 
 ## Suchen und ersetzen
 
@@ -39,6 +41,8 @@ Drücken Sie `Strg+F` (`⌘F` unter macOS) oder klicken Sie auf die Lupe in der 
 - **Ersetzen** ersetzt den aktuellen Treffer, **Alle ersetzen** alle, z. B. einen falsch geschriebenen Namen. Mit **Groß-/Kleinschreibung beachten** finden Sie nur Text mit derselben Schreibung.
 - Das Fenster ist nicht modal, Sie können den Text also lesen und abspielen, während es offen ist. **Im Vordergrund halten** hält es über dem Hauptfenster.
 - `Esc` schließt es.
+
+Im Modus **Nur-Text** sucht das Fenster nur (**In der Transkription suchen**), da sich ein Treffer dort keinem Untertitel zuordnen lässt. Wechseln Sie zurück zu **Untertitel**, um zu ersetzen.
 
 ## Die Transkription korrigieren
 
@@ -71,7 +75,13 @@ Hat eine Transkription keine Bewertungen, nennt das Menü `⋯` den Grund: **„
 
 ## Nur-Text
 
-Im Modus **Nur-Text** können Sie den Text frei bearbeiten, wie in einem Texteditor. Die Änderungen werden automatisch gespeichert. Das Transkript behält den Originaltext mit seinen Zeitstempeln, daher nutzen die Untertitel die Änderungen am Nur-Text nicht.
+Der Modus **Nur-Text** zeigt den Text der Transkription ohne Zeitstempel. Er wird aus den Untertiteln erstellt und ist daher schreibgeschützt, wie der Hinweis neben den Modi sagt: Um ihn zu ändern, [korrigieren Sie die Untertitel](#die-transkription-korrigieren), und der Nur-Text folgt ihnen. So verwenden alle Exporte und Übersetzungen denselben Text.
+
+Transkriptionen ohne Zeitstempel (z. B. von der Google-API) haben keine Untertitel, daher lässt sich ihr Nur-Text frei bearbeiten, wie in einem Texteditor. Die Änderungen werden automatisch gespeichert.
+
+:::note
+Frühere Versionen erlaubten es, den Nur-Text von Transkriptionen mit Untertiteln zu bearbeiten. Wenn eine solche Transkription (oder Übersetzung) geöffnet wird, wird ihr Nur-Text neu aus den Untertiteln erstellt, sodass diese Änderungen ersetzt werden.
+:::
 
 ## Kopieren und exportieren
 

@@ -15,9 +15,9 @@ The **Preferences** hold the settings that don't change with each transcription.
 - **Date format**: how the dates of the transcriptions are shown, in the interface language: short (`10/4/26`), medium (`Oct 4, 2026`, the default), long (`October 4, 2026`) or ISO (`2026-10-04`). The menu shows each one with an example.
 - **Time format**: **Automatic** (the clock of the interface language), 12-hour (`1:30 PM`) or 24-hour (`13:30`).
 - **Notifications**: shows a notification of the system when a transcription is ready (for a folder, when all its files are, and for a watched folder, each time a new file is). On by default. On macOS, they come from **Script Editor**, and on Windows from **Windows PowerShell**, so they're allowed or silenced for those apps in the settings of the system. On Linux, they require `notify-send` (the `libnotify-bin` or `libnotify` package).
-- **Updates**: checks for a new version when the app opens and, if there's one, shows a **Version … is available** button in the top bar that opens its download page. Pre-releases aren't offered. On by default.
+- **Check for updates automatically**: checks for a new version when the app opens and, if there's one, shows a **Version … is available** button in the top bar that opens its download page. Pre-releases aren't offered. On by default.
 
-## AI
+## Providers
 
 The providers of the [summaries, the questions and the translations](/en/guides/summary-and-translation/):
 
@@ -30,27 +30,35 @@ Leave the **Model** empty to use the default one of the provider. The button nex
 
 ## API keys
 
-The keys of each service. Click **Set API key…** to enter one, or **Change API key…** to replace it (leave it empty to remove it). They're kept in the credential store of your system.
+The keys of each service, grouped by what they're for. Click **Set API key…** to enter one, or **Change API key…** to replace it (leave it empty to remove it). The keys that are set show a check. They're kept in the credential store of your system.
 
-| Key | Used for |
-| --- | --- |
-| OpenAI API key | The Whisper API, and summarizing, asking and translating with OpenAI |
-| Anthropic API key | Summarizing, asking and translating with Claude |
-| DeepSeek API key | Summarizing, asking and translating with DeepSeek |
-| Gemini API key | Summarizing, asking and translating with Gemini (from Google AI Studio) |
-| Mistral API key | Summarizing, asking and translating with Mistral |
-| xAI API key | Summarizing, asking and translating with Grok |
-| DeepL API key | Translating with DeepL (keys of the free plan work too) |
-| Google API key | Google Speech-to-Text beyond the free tier, and Google Translate (Cloud Translation API) |
-| Hugging Face token | Identifying the speakers with WhisperX |
+| Group | Key | Used for |
+| --- | --- | --- |
+| **LLM providers** | OpenAI API key | The Whisper API, and summarizing, asking and translating with OpenAI |
+| | Anthropic API key | Summarizing, asking and translating with Claude |
+| | DeepSeek API key | Summarizing, asking and translating with DeepSeek |
+| | Gemini API key | Summarizing, asking and translating with Gemini (from Google AI Studio) |
+| | Mistral API key | Summarizing, asking and translating with Mistral |
+| | xAI API key | Summarizing, asking and translating with Grok |
+| **Translation** | DeepL API key | Translating with DeepL (keys of the free plan work too) |
+| | Google API key | Google Speech-to-Text beyond the free tier, and Google Translate (Cloud Translation API) |
+| **Transcription** | Hugging Face token | Identifying the speakers with WhisperX |
 
 :::caution
 Each provider charges for the use of its API, for which Audiotext is not responsible. If OpenAI returns the error `429` with a new key, see [Troubleshooting](/en/help/troubleshooting/#the-whisper-api-returns-the-error-429).
 :::
 
-## WhisperX
+## Transcription
 
-**Compute type**, **Batch size** and **Use CPU**. See [WhisperX advanced options](/en/reference/engines/#advanced-options). On a Mac with Apple Silicon, WhisperX transcribes on its GPU unless **Use CPU** is on. See [On a Mac](/en/reference/engines/#on-a-mac).
+The options of the engines, in one section each.
+
+### WhisperX
+
+**Compute type**, **Batch size** and **Use CPU**. See [WhisperX advanced options](/en/reference/engines/#advanced-options). On a Mac with Apple Silicon, WhisperX transcribes on its GPU unless **Use CPU** is on. See [On a Mac](/en/reference/engines/#on-a-mac). On the GPU of the Mac, the hints of **Compute type** and **Batch size** say they don't apply, and **Use CPU** links to the **Supported models**.
+
+### Whisper API
+
+**Temperature** and **Timestamps of the words**. See [Whisper API options](/en/reference/engines/#options).
 
 ## Subtitles
 
@@ -65,10 +73,6 @@ How the subtitles are split: the ones shown over the video and in the **Subtitle
 The lines of a subtitle are evened out, and the languages written without spaces are broken between characters.
 
 **Highlight words** underlines each word as it's said in the `.srt` and `.vtt` files. Off by default.
-
-## Whisper API
-
-**Temperature** and **Timestamps of the words**. See [Whisper API options](/en/reference/engines/#options).
 
 ## About
 

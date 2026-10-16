@@ -15,6 +15,8 @@ Muestra la transcripción dividida en los subtítulos del vídeo, con cuándo em
 
 Por defecto, los tiempos se muestran al milisegundo, como en los subtítulos (`00:01:05,900 – 00:01:09,350`). Para simplificarlos (`01:05 – 01:09`), desmarca **Marcas de tiempo precisas (HH:MM:SS,mmm)** en el menú `⋯`.
 
+Encima de los subtítulos, una línea los cuenta y, si se han identificado los hablantes, también a ellos (p. ej. `Subtítulos: 120 · Hablantes: 3`). Un segmento largo dividido en varios subtítulos cuenta como varios.
+
 Las marcas de tiempo solo están disponibles con **WhisperX** y con los modelos `whisper-1` y `gpt-4o-transcribe-diarize` de la **API de Whisper**. Sin ellas, la transcripción no se puede reproducir subtítulo a subtítulo; usa el modo **Texto plano**.
 
 ### Reproduce el audio
@@ -29,7 +31,7 @@ Si el archivo de origen se ha movido o eliminado, el audio no está disponible, 
 
 ### Mira vídeos con subtítulos
 
-Las transcripciones de vídeos muestran el vídeo encima del texto. Su menú te permite **Mostrar subtítulos en el vídeo** y elegir su **Tamaño** (pequeño, mediano o grande), su **Posición** (abajo o arriba) y su **Estilo** (fondo oscuro o contorno). Si la transcripción tiene [traducciones](/es/guides/summary-and-translation/#traducción), el menú también elige si los subtítulos muestran la **Transcripción** o la **Traducción al…** un idioma.
+Las transcripciones de vídeos muestran el vídeo encima del texto. Su menú te permite **Mostrar subtítulos en el vídeo** y elegir su **Tamaño** (pequeño, mediano o grande), su **Posición** (abajo o arriba) y su **Estilo** (fondo oscuro o contorno). Si la transcripción tiene [traducciones](/es/guides/summary-and-translation/#traducción), el menú también elige si los subtítulos muestran la **Transcripción** o la **Traducción al…** un idioma. El botón **Subtítulos** de la barra del reproductor también los muestra u oculta, y la flecha junto a él abre el mismo menú.
 
 ## Busca y reemplaza
 
@@ -39,6 +41,8 @@ Pulsa `Ctrl+F` (`⌘F` en macOS), o haz clic en la lupa de la cabecera, para abr
 - **Reemplazar** reemplaza la coincidencia actual, y **Reemplazar todo** todas ellas, p. ej. un nombre mal escrito. Marca **Distinguir mayúsculas** para encontrar solo el texto con las mismas mayúsculas.
 - La ventana no es modal, así que puedes leer y reproducir el texto mientras está abierta. **Mantener encima** la mantiene sobre la ventana principal.
 - `Esc` la cierra.
+
+En el modo **Texto plano**, la ventana solo busca (**Buscar en la transcripción**), ya que una coincidencia ahí no se puede relacionar con un subtítulo. Vuelve a **Subtítulos** para reemplazar.
 
 ## Corrige la transcripción
 
@@ -71,7 +75,13 @@ Si una transcripción no tiene puntuaciones, el menú `⋯` dice por qué: **Act
 
 ## Texto plano
 
-El modo **Texto plano** te permite editar el texto libremente, como en un editor de texto. Los cambios se guardan automáticamente. La transcripción conserva el texto original con sus marcas de tiempo, así que los subtítulos no usan los cambios del texto plano.
+El modo **Texto plano** muestra el texto de la transcripción sin marcas de tiempo. Se construye a partir de los subtítulos, así que es de solo lectura, como dice la nota junto a los modos: para cambiarlo, [corrige los subtítulos](#corrige-la-transcripción), y el texto plano los sigue. Así, todas las exportaciones y traducciones usan el mismo texto.
+
+Las transcripciones sin marcas de tiempo (p. ej. de la API de Google) no tienen subtítulos, así que su texto plano se puede editar libremente, como en un editor de texto. Los cambios se guardan automáticamente.
+
+:::note
+Las versiones anteriores permitían editar el texto plano de las transcripciones con subtítulos. Al abrir una de esas transcripciones (o traducciones), su texto plano se vuelve a construir a partir de sus subtítulos, así que esos cambios se reemplazan.
+:::
 
 ## Copia y exporta
 

@@ -44,8 +44,8 @@ Sunt folosite de WhisperX și de API-ul Whisper, cu excepția modelului `gpt-4o-
 
 ## Opțiuni
 
-- **Temporizare pe cuvânt** (WhisperX): aliniază fiecare cuvânt cu sunetul, pentru a-l evidenția la redare și pentru a [verifica cuvintele](/ro/guides/transcript/#verificați-cuvintele-cu-încredere-scăzută) de care este cel mai puțin sigur. Durează puțin mai mult. Activată implicit.
-- **Extrage vocea**: reduce muzica și zgomotul de fond înainte de transcriere.
+- **Temporizare pe cuvânt** (WhisperX): aliniază fiecare cuvânt cu sunetul, pentru a-l evidenția la redare și pentru a [verifica cuvintele](/ro/guides/transcript/#verificați-cuvintele-cu-încredere-scăzută) de care este cel mai puțin sigur. Durează puțin mai mult. Activată implicit. Subtitrările au nevoie de temporizarea cuvintelor, așa că opțiunea este activată și blocată cât timp `.srt` sau `.vtt` sunt alese în **Tipuri de fișiere** ale unui dosar; alegerea dvs. revine când nu mai sunt alese.
+- **Reduce zgomotul de fond**: reduce bâzâitul și zgomotul de fond constant și egalizează vorbirea încetă, înainte de transcriere. Durează mai mult.
 - **Identifică vorbitorii** (WhisperX): indică cine vorbește în fiecare parte, de ex. `SPEAKER_00`. Dacă știți câte persoane vorbesc, introduceți numărul în **Număr de vorbitori** (`0` îl detectează). Necesită un token Hugging Face gratuit; consultați [Identificarea vorbitorilor](#identificarea-vorbitorilor). La API-ul Whisper, vorbitorii sunt identificați de modelul `gpt-4o-transcribe-diarize`.
 
 ### Identificarea vorbitorilor

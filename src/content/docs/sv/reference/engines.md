@@ -55,11 +55,12 @@ På Mac-datorer med Apple Silicon transkriberar [MLX Whisper](https://github.com
 - MLX-versionen av modellen laddas ned första gången den används.
 - `distil-small.en`, `distil-large-v2` och `distil-large-v3.5` har ingen MLX-version, så de körs på processorn.
 - [Livetexten](/sv/guides/sources/#livetext) körs alltid på processorn.
-- För att transkribera på processorn slår du på **Använd CPU** under **Inställningar** → **WhisperX**.
+- **Beräkningstyp** och **Batchstorlek** gäller inte på GPU:n, eftersom MLX alltid räknar med halv precision och utan batchar.
+- För att transkribera på processorn slår du på **Använd CPU** under **Inställningar** → **Transkribering**.
 
 ### Avancerade alternativ
 
-De finns under **Inställningar** → **WhisperX**. Ändra dem bara om du har problem eller vet vad du gör: ett grafikkort som får slut på minne kan låsa systemet.
+De finns under **Inställningar** → **Transkribering** → **WhisperX**. Ändra dem bara om du har problem eller vet vad du gör: ett grafikkort som får slut på minne kan låsa systemet.
 
 - **Beräkningstyp**: precisionen i modellens tal. `float16` är snabbare på NVIDIA-grafikkort (standard med CUDA). `int8` använder mindre minne och är standard på processorn, eftersom många processorer inte hanterar `float16` effektivt. `float32` är mest exakt, för grafikkort med mer än 8 GB VRAM.
 - **Batchstorlek**: hur många delar av ljudet som bearbetas samtidigt (`8` som standard). Den påverkar inte kvaliteten, bara hastigheten. Sänk den om minnet tar slut; högst `16` rekommenderas.
@@ -82,8 +83,8 @@ Långa inspelningar delas upp i delar på upp till 10 minuter, kapade vid en tys
 ### Alternativ
 
 - **Svarsformat** (kortet Utdata, för mappar): `text` (standard), `json`, `verbose_json`, `srt` eller `vtt`. Undertexter och `verbose_json` kräver en modell med tidsstämplar.
-- **Temperatur** (Inställningar → Whisper API): mellan 0 och 1. Höga värden som 0,8 gör resultatet mer slumpmässigt, låga som 0,2 mer fokuserat. Med 0 (standard) höjer modellen den automatiskt vid behov.
-- **Tidsstämplar för orden** (Inställningar → Whisper API): om `whisper-1` även returnerar tidsstämplar för varje ord, för att markera det under uppspelning. Tar längre tid. Aktiverat som standard.
+- **Temperatur** (Inställningar → Transkribering): mellan 0 och 1. Höga värden som 0,8 gör resultatet mer slumpmässigt, låga som 0,2 mer fokuserat. Med 0 (standard) höjer modellen den automatiskt vid behov.
+- **Tidsstämplar för orden** (Inställningar → Transkribering): om `whisper-1` även returnerar tidsstämplar för varje ord, för att markera det under uppspelning. Tar längre tid. Aktiverat som standard.
 
 ## Google-API
 

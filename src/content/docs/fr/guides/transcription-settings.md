@@ -44,8 +44,8 @@ Ils sont utilisés par WhisperX et l’API Whisper, sauf par le modèle `gpt-4o-
 
 ## Options
 
-- **Minutage par mot** (WhisperX) : aligne chaque mot sur l’audio, pour le surligner pendant la lecture et pour [réviser les mots](/fr/guides/transcript/#révisez-les-mots-peu-fiables) dont il est le moins sûr. Un peu plus long. Activé par défaut.
-- **Extraire la voix** : réduit la musique et le bruit de fond avant de transcrire.
+- **Minutage par mot** (WhisperX) : aligne chaque mot sur l’audio, pour le surligner pendant la lecture et pour [réviser les mots](/fr/guides/transcript/#révisez-les-mots-peu-fiables) dont il est le moins sûr. Un peu plus long. Activé par défaut. Les sous-titres ont besoin du minutage des mots : l’option est donc activée et verrouillée tant que `.srt` ou `.vtt` est choisi dans les **Types de fichiers** d’un dossier ; votre propre choix revient dès qu’ils ne le sont plus.
+- **Réduire le bruit de fond** : réduit le ronflement et le bruit de fond constant, et égalise la parole faible, avant la transcription. Prend plus de temps.
 - **Identifier les locuteurs** (WhisperX) : indique qui parle dans chaque partie, p. ex. `SPEAKER_00`. Si vous savez combien de personnes parlent, indiquez-le dans **Nombre de locuteurs** (`0` le détecte). Nécessite un jeton Hugging Face gratuit ; consultez [Identifiez les locuteurs](#identifiez-les-locuteurs). Avec l’API Whisper, le modèle `gpt-4o-transcribe-diarize` identifie les locuteurs.
 
 ### Identifiez les locuteurs

@@ -15,6 +15,8 @@ Visar transkriberingen uppdelad i videons undertexter, med när varje undertext 
 
 Som standard visas tiderna på millisekunden, som i undertexterna (`00:01:05,900 – 00:01:09,350`). För att förenkla dem (`01:05 – 01:09`) avmarkerar du **Exakta tidsstämplar (HH:MM:SS,mmm)** i menyn `⋯`.
 
+Ovanför undertexterna räknar en rad dem och, om talarna har identifierats, även talarna (t.ex. `Undertexter: 120 · Talare: 3`). Ett långt segment som delats upp i flera undertexter räknas som flera.
+
 Tidsstämplar finns bara med **WhisperX** och med modellerna `whisper-1` och `gpt-4o-transcribe-diarize` i **Whisper-API:t**. Utan dem kan transkriptet inte spelas upp undertext för undertext; använd läget **Oformaterad text** i stället.
 
 ### Spela upp ljudet
@@ -29,7 +31,7 @@ Om källfilen har flyttats eller tagits bort är ljudet inte tillgängligt, men 
 
 ### Se videor med undertexter
 
-Transkriberingar av videor visar videon ovanför texten. Dess meny låter dig **Visa undertexter på videon** och välja deras **Storlek** (liten, medel eller stor), **Position** (nederst eller överst) och **Stil** (mörk bakgrund eller kontur). Om transkriberingen har [översättningar](/sv/guides/summary-and-translation/#översättning) väljer menyn även om undertexterna visar **Transkribering** eller **Översättning till…** ett språk.
+Transkriberingar av videor visar videon ovanför texten. Dess meny låter dig **Visa undertexter på videon** och välja deras **Storlek** (liten, medel eller stor), **Position** (nederst eller överst) och **Stil** (mörk bakgrund eller kontur). Om transkriberingen har [översättningar](/sv/guides/summary-and-translation/#översättning) väljer menyn även om undertexterna visar **Transkribering** eller **Översättning till…** ett språk. Knappen **Undertexter** i spelarfältet visar eller döljer dem också, och pilen bredvid öppnar samma meny.
 
 ## Sök och ersätt
 
@@ -39,6 +41,8 @@ Tryck `Ctrl+F` (`⌘F` på macOS), eller klicka på förstoringsglaset i rubrike
 - **Ersätt** ersätter den aktuella träffen, och **Ersätt alla** alla, t.ex. ett felstavat namn. Markera **Matcha skiftläge** för att bara hitta text med samma versaler.
 - Fönstret är inte modalt, så du kan läsa och spela upp texten medan det är öppet. **Håll överst** håller det ovanför huvudfönstret.
 - `Esc` stänger det.
+
+I läget **Oformaterad text** söker fönstret bara (**Sök i transkriptionen**), eftersom en träff där inte kan kopplas till en undertext. Byt tillbaka till **Undertexter** för att ersätta.
 
 ## Korrigera transkriberingen
 
@@ -71,7 +75,13 @@ Om en transkribering saknar poäng säger menyn `⋯` varför: **Slå på ”Tid
 
 ## Oformaterad text
 
-Läget **Oformaterad text** låter dig redigera texten fritt, som i en textredigerare. Ändringarna sparas automatiskt. Transkriptet behåller originaltexten med tidsstämplar, så undertexterna använder inte ändringarna i den oformaterade texten.
+Läget **Oformaterad text** visar transkriberingens text utan tidsstämplar. Den byggs upp från undertexterna och är därför skrivskyddad, som anteckningen bredvid lägena säger: för att ändra den [korrigerar du undertexterna](#korrigera-transkriberingen), och den oformaterade texten följer dem. På så sätt använder alla exporter och översättningar samma text.
+
+Transkriberingar utan tidsstämplar (t.ex. från Google-API:t) har inga undertexter, så deras oformaterade text kan redigeras fritt, som i en textredigerare. Ändringarna sparas automatiskt.
+
+:::note
+Tidigare versioner lät dig redigera den oformaterade texten i transkriberingar med undertexter. När en sådan transkribering (eller översättning) öppnas byggs dess oformaterade text upp igen från undertexterna, så de ändringarna ersätts.
+:::
 
 ## Kopiera och exportera
 

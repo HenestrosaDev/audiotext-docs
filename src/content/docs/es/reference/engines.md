@@ -55,11 +55,12 @@ En los Mac con Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-ex
 - La versión MLX del modelo se descarga la primera vez que se usa.
 - `distil-small.en`, `distil-large-v2` y `distil-large-v3.5` no tienen versión MLX, así que se ejecutan en la CPU.
 - El [texto en directo](/es/guides/sources/#texto-en-directo) siempre se ejecuta en la CPU.
-- Para transcribir en la CPU, activa **Usar CPU** en **Preferencias** → **WhisperX**.
+- **Tipo de cómputo** y **Tamaño de lote** no se aplican en la GPU, ya que MLX siempre calcula en media precisión y sin lotes.
+- Para transcribir en la CPU, activa **Usar CPU** en **Preferencias** → **Transcripción**.
 
 ### Opciones avanzadas
 
-Están en **Preferencias** → **WhisperX**. Cámbialas solo si tienes problemas o sabes lo que haces: una GPU que se queda sin memoria puede bloquear tu sistema.
+Están en **Preferencias** → **Transcripción** → **WhisperX**. Cámbialas solo si tienes problemas o sabes lo que haces: una GPU que se queda sin memoria puede bloquear tu sistema.
 
 - **Tipo de cómputo**: la precisión de los números del modelo. `float16` es más rápido en GPU NVIDIA (el valor por defecto con CUDA). `int8` usa menos memoria y es el valor por defecto en la CPU, ya que muchas CPU no admiten `float16` de forma eficiente. `float32` es el más preciso, para GPU con más de 8 GB de VRAM.
 - **Tamaño de lote**: cuántas partes del audio se procesan a la vez (`8` por defecto). No cambia la calidad, solo la velocidad. Bájalo si te quedas sin memoria; se recomienda hasta `16`.
@@ -82,8 +83,8 @@ Los audios largos se dividen en fragmentos de hasta 10 minutos, cortados en un s
 ### Opciones
 
 - **Formato de respuesta** (tarjeta Salida, para carpetas): `text` (por defecto), `json`, `verbose_json`, `srt` o `vtt`. Los subtítulos y `verbose_json` necesitan un modelo con marcas de tiempo.
-- **Temperatura** (Preferencias → API de Whisper): entre 0 y 1. Los valores altos como 0,8 hacen que el resultado sea más aleatorio, y los bajos como 0,2, más preciso. Con 0 (por defecto), el modelo la sube automáticamente cuando hace falta.
-- **Marcas de tiempo de las palabras** (Preferencias → API de Whisper): si `whisper-1` también devuelve las marcas de tiempo de cada palabra, para resaltarla al reproducir. Tarda más. Activado por defecto.
+- **Temperatura** (Preferencias → Transcripción): entre 0 y 1. Los valores altos como 0,8 hacen que el resultado sea más aleatorio, y los bajos como 0,2, más preciso. Con 0 (por defecto), el modelo la sube automáticamente cuando hace falta.
+- **Marcas de tiempo de las palabras** (Preferencias → Transcripción): si `whisper-1` también devuelve las marcas de tiempo de cada palabra, para resaltarla al reproducir. Tarda más. Activado por defecto.
 
 ## API de Google
 

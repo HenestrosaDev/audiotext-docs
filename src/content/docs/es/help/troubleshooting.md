@@ -13,7 +13,7 @@ La primera vez que se usa un modelo, se descarga, lo que puede tardar varios min
 
 Tu GPU no tiene memoria suficiente para los ajustes. Prueba, en este orden:
 
-1. Baja el **Tamaño de lote** (p. ej. `4`) en **Preferencias** → **WhisperX**.
+1. Baja el **Tamaño de lote** (p. ej. `4`) en **Preferencias** → **Transcripción**.
 2. Usa un modelo más pequeño (p. ej. `small` o `base`).
 3. Usa un **Tipo de cómputo** más ligero (p. ej. `int8`).
 
@@ -21,7 +21,7 @@ Los dos últimos pueden reducir la calidad. Consulta [Motores](/es/reference/eng
 
 ## Transcribir tarda demasiado
 
-La velocidad de WhisperX depende de tu hardware, así que no esperes resultados instantáneos en CPU modestas. Prueba un modelo más pequeño, como `small`, o `large-v3-turbo` en una GPU, o el tipo de cómputo `int8`. En un Mac con Apple Silicon, comprueba que **Usar CPU** está desactivado en **Preferencias** → **WhisperX**, para que transcriba en la GPU. También puedes usar la **API de Whisper** o la **API de Google**, que se ejecutan en servidores remotos.
+La velocidad de WhisperX depende de tu hardware, así que no esperes resultados instantáneos en CPU modestas. Prueba un modelo más pequeño, como `small`, o `large-v3-turbo` en una GPU, o el tipo de cómputo `int8`. En un Mac con Apple Silicon, comprueba que **Usar CPU** está desactivado en **Preferencias** → **Transcripción**, para que transcriba en la GPU. También puedes usar la **API de Whisper** o la **API de Google**, que se ejecutan en servidores remotos.
 
 ## La API de Whisper devuelve el error `429`
 
@@ -81,7 +81,7 @@ La API de Google no puede detectar el idioma. Elige el **Idioma del audio** en l
 ## Falla un resumen, una respuesta o una traducción
 
 - **DeepL no puede traducir al ….**: DeepL no admite ese idioma. Elige otro proveedor, como un modelo de lenguaje.
-- **La respuesta del modelo era demasiado larga.**, **El modelo no ha devuelto un resumen válido.**, **El modelo no ha devuelto una respuesta válida.** o **El modelo no ha devuelto una traducción válida.**: el modelo no escribió el resumen, la respuesta o la traducción con el formato esperado. Vuelve a intentarlo o elige un modelo más grande en **Preferencias** → **IA**. Los modelos pequeños de Ollama fallan más a menudo.
+- **La respuesta del modelo era demasiado larga.**, **El modelo no ha devuelto un resumen válido.**, **El modelo no ha devuelto una respuesta válida.** o **El modelo no ha devuelto una traducción válida.**: el modelo no escribió el resumen, la respuesta o la traducción con el formato esperado. Vuelve a intentarlo o elige un modelo más grande en **Preferencias** → **Proveedores**. Los modelos pequeños de Ollama fallan más a menudo.
 - Para cualquier otro error, comprueba que la clave de API del proveedor está configurada en **Preferencias** → **Claves de API** y que tu cuenta tiene saldo.
 
 ## No se subrayan las palabras de baja confianza

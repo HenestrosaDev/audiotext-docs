@@ -34,21 +34,27 @@ Open the **Ask** mode, type a question in **Ask a question about the transcripti
 - If the transcription has timestamps, each answer links to the parts of the transcription where it's said. Click one to play the audio from there.
 - The questions and their answers are kept in the history with the transcription. The trash can of the header clears the conversation, after asking you.
 
-The questions are answered by the provider chosen for them in **Preferences** → **AI** → **Ask**, which is the one of the summaries until you change it. Like the summaries, very long transcriptions are only read from their beginning.
+The questions are answered by the provider chosen for them in **Preferences** → **Providers** → **Ask**, which is the one of the summaries until you change it. Like the summaries, very long transcriptions are only read from their beginning.
 
 ## Translation
 
 Click **Translate**, choose the language in **Translate into:** and the provider in **Translate with:**, and confirm. The dialog says what the provider chosen does, and offers to set its API key if it's missing. The translation is shown in a panel on the right of the original text.
 
 - If the transcription has timestamps, it's translated sentence by sentence, with the text said before and after each part as context, so the translation starts with the timestamps of each sentence: it highlights the sentence being played, and clicking one plays it.
-- If you edited the plain text, the edited text is translated instead, without timestamps.
+- If the transcription has no timestamps, its whole text is translated at once.
 - Both texts scroll together, so they show the same part of the audio. The round button on the handle between them turns it on and off. Drag the handle to resize them, or double-click it to reset their sizes.
 
 The buttons of the header of the translation find and replace in it, copy it, export it, **Translate again** (with the same provider and model) and **Hide the translation**. The **Translate** button also lets you show it again, **Translate into another language…** or **Delete the translation**.
 
 ### Several languages
 
-A transcription can be translated into several languages, even at the same time, and each translation is kept. The title of the panel chooses the one shown, says how much of each one is translated, and ends with the option to translate into another language. Translating into a language that already has a translation replaces it, after asking you, since its corrections are lost.
+A transcription can be translated into several languages, even at the same time, and each translation is kept. The title of the panel chooses the one shown, says how much of each one is translated, and ends with the option to translate into another language. Translating into a language that already has a translation replaces it, after asking you, since its corrections are lost. The menu of the title shows how many subtitles of each unfinished translation are translated (e.g. `Spanish · 148/150`).
+
+### Translation progress
+
+The progress is counted in subtitles: one is translated when it has a text. Above the translation, a line shows how many are translated (e.g. `Translated: 148/150 · 98%`). The percentage is rounded down, so `100%` only shows when all of them are translated.
+
+While some are left, the arrows next to it go to the previous and next subtitles **Not translated yet**, highlighting each one, and show which one you're on (e.g. `1 of 2`). Hover over one of them to show the **Translate text…** button on its right, which opens the dialog to translate it.
 
 ### Correct and retime the translation
 
@@ -61,7 +67,7 @@ A translation often needs another timing than the original, e.g. subtitles that 
 
 ### Translate it yourself
 
-To write the translation yourself, choose **Manual** in **Translate with:**. It needs no API key. The translation starts with an empty segment for each subtitle of the transcription, shown as **Not translated yet**, and the panel shows how many are left. Right-click one and choose **Translate text…**: the dialog shows the original text said meanwhile.
+To write the translation yourself, choose **Manual** in **Translate with:**. It needs no API key. The translation starts with an empty segment for each subtitle of the transcription, shown as **Not translated yet**, and the panel shows how many are left. Right-click one and choose **Translate text…**: the dialog shows the original text said meanwhile. Hovering over one shows a **Translate text…** button on its right, which opens the same dialog.
 
 ### Subtitles and export
 
@@ -74,7 +80,7 @@ To get the transcription directly in another language, without a provider, you c
 
 ## Providers
 
-The providers are chosen in **Preferences** → **AI**, separately for the summaries, the questions and the translations.
+The providers are chosen in **Preferences** → **Providers**, separately for the summaries, the questions and the translations.
 
 | Provider | Default model | API key |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ The translations can also be made by:
 
 ### Ollama
 
-[Ollama](https://ollama.com) runs the models on your computer, without an API key and without sending the text anywhere. Install it, download a model (e.g. `ollama pull llama3.2`) and choose **Ollama** as the provider. If it doesn't run on the default address, change the **Server URL** in **Preferences** → **AI** (`http://localhost:11434` by default).
+[Ollama](https://ollama.com) runs the models on your computer, without an API key and without sending the text anywhere. Install it, download a model (e.g. `ollama pull llama3.2`) and choose **Ollama** as the provider. If it doesn't run on the default address, change the **Server URL** in **Preferences** → **Providers** (`http://localhost:11434` by default).
 
 :::note
 Each provider charges for the use of its API, for which Audiotext is not responsible. The API keys are kept in the credential store of your system. See [Files and data](/en/reference/files-and-data/).

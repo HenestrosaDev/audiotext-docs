@@ -58,7 +58,7 @@ GPU eklentisi Windows'ta yaklaşık 2 GB, Linux'ta 4 GB'lık bir indirmedir, bu 
 
 Yeni bir sürüm yayımlandığında Audiotext üst çubukta **Sürüm … kullanılabilir** düğmesini gösterir. Sürümün sayfasını açmak için düğmeye tıklayın, sisteminize uygun dosyayı indirin ve ilk seferdeki gibi kurun: Windows'ta yeni yükleyiciyi çalıştırın, macOS'ta yeni uygulamayı **Uygulamalar** klasörüne sürükleyin veya Linux'ta yeni arşivin `install.sh` dosyasını çalıştırın. Önceki sürüm değiştirilir; ayarlarınız ve geçmişiniz ise [kullanıcı yapılandırma klasörünüzde](/tr/reference/files-and-data/#kullanıcı-yapılandırma-klasörü) saklandığı için korunur. GPU eklentisini kullanıyorsanız kurulum sırasında onu yeniden seçin.
 
-Yeni bir sürümü kendiniz denetlemek için **Tercihler** → **Hakkında** → **Güncellemeleri denetle**'yi açın. Uygulama açılırken denetlemeyi durdurmak için **Genel** → **Güncellemeler**'i kapatın.
+Yeni bir sürümü kendiniz denetlemek için **Tercihler** → **Hakkında** → **Güncellemeleri denetle**'yi açın. Uygulama açılırken denetlemeyi durdurmak için **Genel** → **Güncellemeleri otomatik denetle**'i kapatın.
 
 ## Uygulamayı kaldırın
 

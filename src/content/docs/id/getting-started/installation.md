@@ -58,7 +58,7 @@ Saat pertama kali mentranskripsi dengan **WhisperX** (mesin bawaan), modelnya ak
 
 Saat versi baru dirilis, Audiotext menampilkan tombol **Versi … tersedia** di bilah atas. Klik tombol itu untuk membuka halaman rilis, unduh file untuk sistem Anda, dan instal seperti pertama kali: jalankan penginstal baru di Windows, seret aplikasi baru ke folder **Aplikasi** di macOS, atau jalankan `install.sh` dari arsip baru di Linux. Versi sebelumnya akan diganti, dan pengaturan serta riwayat Anda tetap tersimpan, karena disimpan di [folder konfigurasi pengguna](/id/reference/files-and-data/#folder-konfigurasi-pengguna). Jika Anda menggunakan add-on GPU, pilih lagi saat menginstal.
 
-Untuk memeriksa versi baru sendiri, buka **Preferensi** → **Tentang** → **Periksa pembaruan**. Agar tidak memeriksa saat aplikasi dibuka, nonaktifkan **Umum** → **Pembaruan**.
+Untuk memeriksa versi baru sendiri, buka **Preferensi** → **Tentang** → **Periksa pembaruan**. Agar tidak memeriksa saat aplikasi dibuka, nonaktifkan **Umum** → **Periksa pembaruan secara otomatis**.
 
 ## Copot aplikasi
 

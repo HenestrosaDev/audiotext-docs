@@ -15,9 +15,9 @@ sidebar:
 - **Tarih biçimi**: transkripsiyonların tarihlerinin arayüz dilinde nasıl gösterileceği: kısa (`4.10.2026`), orta (`4 Eki 2026`, varsayılan), uzun (`4 Ekim 2026`) veya ISO (`2026-10-04`). Menü her biçimi bir örnekle gösterir.
 - **Saat biçimi**: **Otomatik** (arayüz dilinin saati), 12 saat (`ÖS 1:30`) veya 24 saat (`13:30`).
 - **Bildirimler**: bir transkripsiyon hazır olduğunda sistem bildirimi gösterir (bir klasörde, tüm dosyaları hazır olduğunda; izlenen bir klasörde ise her yeni dosya hazır olduğunda). Varsayılan olarak açıktır. macOS'ta **Komut Dosyası Düzenleyici**'den, Windows'ta **Windows PowerShell**'den gelir; bu nedenle sistem ayarlarında bu uygulamalar için izin verilir veya sessize alınır. Linux'ta `notify-send` (`libnotify-bin` veya `libnotify` paketi) gerekir.
-- **Güncellemeler**: uygulama açıldığında yeni bir sürüm olup olmadığını denetler ve varsa üst çubukta indirme sayfasını açan **Sürüm … kullanılabilir** düğmesini gösterir. Ön sürümler önerilmez. Varsayılan olarak açıktır.
+- **Güncellemeleri otomatik denetle**: uygulama açıldığında yeni bir sürüm olup olmadığını denetler ve varsa üst çubukta indirme sayfasını açan **Sürüm … kullanılabilir** düğmesini gösterir. Ön sürümler önerilmez. Varsayılan olarak açıktır.
 
-## YZ
+## Sağlayıcılar
 
 [Özetlerin, soruların ve çevirilerin](/tr/guides/summary-and-translation/) sağlayıcıları:
 
@@ -30,27 +30,35 @@ Sağlayıcının varsayılan modelini kullanmak için **Model**'i boş bırakın
 
 ## API anahtarları
 
-Her hizmetin anahtarları. Bir anahtar girmek için **API anahtarını ayarla…**'ya, değiştirmek için **API anahtarını değiştir…**'e tıklayın (kaldırmak için boş bırakın). Sisteminizin kimlik bilgisi deposunda saklanırlar.
+Her hizmetin anahtarları. Bir anahtar girmek için **API anahtarını ayarla…**'ya, değiştirmek için **API anahtarını değiştir…**'e tıklayın (kaldırmak için boş bırakın). Sisteminizin kimlik bilgisi deposunda saklanırlar. Ne için kullanıldıklarına göre gruplanırlar ve ayarlanmış olanlar bir onay işareti gösterir.
 
-| Anahtar | Kullanım amacı |
-| --- | --- |
-| OpenAI API anahtarı | Whisper API ve OpenAI ile özetleme, soru sorma ve çeviri |
-| Anthropic API anahtarı | Claude ile özetleme, soru sorma ve çeviri |
-| DeepSeek API anahtarı | DeepSeek ile özetleme, soru sorma ve çeviri |
-| Gemini API anahtarı | Gemini ile özetleme, soru sorma ve çeviri (Google AI Studio'dan) |
-| Mistral API anahtarı | Mistral ile özetleme, soru sorma ve çeviri |
-| xAI API anahtarı | Grok ile özetleme, soru sorma ve çeviri |
-| DeepL API anahtarı | DeepL ile çeviri (ücretsiz planın anahtarları da çalışır) |
-| Google API anahtarı | Ücretsiz katmanın ötesinde Google Speech-to-Text ve Google Translate (Cloud Translation API) |
-| Hugging Face belirteci | WhisperX ile konuşmacıları belirleme |
+| Grup | Anahtar | Kullanım amacı |
+| --- | --- | --- |
+| **LLM sağlayıcıları** | OpenAI API anahtarı | Whisper API ve OpenAI ile özetleme, soru sorma ve çeviri |
+| | Anthropic API anahtarı | Claude ile özetleme, soru sorma ve çeviri |
+| | DeepSeek API anahtarı | DeepSeek ile özetleme, soru sorma ve çeviri |
+| | Gemini API anahtarı | Gemini ile özetleme, soru sorma ve çeviri (Google AI Studio'dan) |
+| | Mistral API anahtarı | Mistral ile özetleme, soru sorma ve çeviri |
+| | xAI API anahtarı | Grok ile özetleme, soru sorma ve çeviri |
+| **Çeviri** | DeepL API anahtarı | DeepL ile çeviri (ücretsiz planın anahtarları da çalışır) |
+| | Google API anahtarı | Ücretsiz katmanın ötesinde Google Speech-to-Text ve Google Translate (Cloud Translation API) |
+| **Transkripsiyon** | Hugging Face belirteci | WhisperX ile konuşmacıları belirleme |
 
 :::caution
 Her sağlayıcı API'sinin kullanımı için ücret alır; Audiotext bundan sorumlu değildir. OpenAI yeni bir anahtarla `429` hatası döndürürse [Sorun giderme](/tr/help/troubleshooting/#whisper-api-429-hatası-döndürüyor) sayfasına bakın.
 :::
 
-## WhisperX
+## Transkripsiyon
 
-**Hesaplama türü**, **Toplu iş boyutu** ve **CPU kullan**. [WhisperX gelişmiş seçenekleri](/tr/reference/engines/#gelişmiş-seçenekler) bölümüne bakın. Apple Silicon'lu bir Mac'te, **CPU kullan** açık değilse WhisperX onun grafik işlemcisinde yazıya döker. [Mac'te](/tr/reference/engines/#macte) bölümüne bakın.
+Motorların seçenekleri, her biri kendi bölümünde.
+
+### WhisperX
+
+**Hesaplama türü**, **Toplu iş boyutu** ve **CPU kullan**. [WhisperX gelişmiş seçenekleri](/tr/reference/engines/#gelişmiş-seçenekler) bölümüne bakın. Apple Silicon'lu bir Mac'te, **CPU kullan** açık değilse WhisperX onun grafik işlemcisinde yazıya döker. [Mac'te](/tr/reference/engines/#macte) bölümüne bakın. Mac'in GPU'sunda **Hesaplama türü** ve **Toplu iş boyutu** ipuçları bunların geçerli olmadığını söyler, **CPU kullan** ise **Desteklenen modeller** listesine bağlantı verir.
+
+### Whisper API
+
+**Sıcaklık** ve **Kelimelerin zaman damgaları**. [Whisper API seçenekleri](/tr/reference/engines/#seçenekler) bölümüne bakın.
 
 ## Altyazılar
 
@@ -65,10 +73,6 @@ Altyazıların nasıl bölündüğü: videonun üzerinde ve **Altyazılar** modu
 Bir altyazının satırları dengelenir ve boşluksuz yazılan diller karakterler arasında bölünür.
 
 **Kelimeleri vurgula**, `.srt` ve `.vtt` dosyalarında her kelimenin söylendiği anda altını çizer. Varsayılan olarak kapalıdır.
-
-## Whisper API
-
-**Sıcaklık** ve **Kelimelerin zaman damgaları**. [Whisper API seçenekleri](/tr/reference/engines/#seçenekler) bölümüne bakın.
 
 ## Hakkında
 

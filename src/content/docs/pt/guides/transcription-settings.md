@@ -44,8 +44,8 @@ Eles são usados pelo WhisperX e pela API do Whisper, exceto pelo modelo `gpt-4o
 
 ## Opções
 
-- **Tempos por palavra** (WhisperX): alinha cada palavra ao áudio, para destacá-la durante a reprodução e para [revisar as palavras](/pt/guides/transcript/#revise-as-palavras-de-baixa-confiança) de que tem menos certeza. Demora um pouco mais. Ativado por padrão.
-- **Extrair a voz**: reduz a música e o ruído de fundo antes de transcrever.
+- **Tempos por palavra** (WhisperX): alinha cada palavra ao áudio, para destacá-la durante a reprodução e para [revisar as palavras](/pt/guides/transcript/#revise-as-palavras-de-baixa-confiança) de que tem menos certeza. Demora um pouco mais. Ativado por padrão. As legendas precisam dos tempos das palavras, então ela é ativada e bloqueada enquanto `.srt` ou `.vtt` estiverem escolhidos nos **Tipos de arquivo** de uma pasta; a sua escolha volta quando deixam de estar.
+- **Reduzir o ruído de fundo**: reduz o zumbido e o ruído de fundo constante, e equilibra a fala baixa, antes de transcrever. Demora mais.
 - **Identificar falantes** (WhisperX): indica quem fala em cada parte, ex.: `SPEAKER_00`. Se você souber quantas pessoas falam, informe em **Número de falantes** (`0` detecta automaticamente). Exige um token gratuito do Hugging Face; consulte [Identifique os falantes](#identifique-os-falantes). Com a API do Whisper, o modelo `gpt-4o-transcribe-diarize` identifica os falantes.
 
 ### Identifique os falantes

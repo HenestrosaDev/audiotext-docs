@@ -44,8 +44,8 @@ WhisperX ve Whisper API tarafından kullanılırlar; `gpt-4o-transcribe-diarize`
 
 ## Seçenekler
 
-- **Kelime düzeyinde zamanlama** (WhisperX): oynatma sırasında vurgulamak ve en az emin olduğu [kelimeleri incelemek](/tr/guides/transcript/#düşük-güvenilirlikli-kelimeleri-inceleyin) için her kelimeyi sesle hizalar. Biraz daha uzun sürer. Varsayılan olarak açıktır.
-- **Konuşmayı ayıkla**: yazıya dökmeden önce müziği ve arka plan gürültüsünü azaltır.
+- **Kelime düzeyinde zamanlama** (WhisperX): oynatma sırasında vurgulamak ve en az emin olduğu [kelimeleri incelemek](/tr/guides/transcript/#düşük-güvenilirlikli-kelimeleri-inceleyin) için her kelimeyi sesle hizalar. Biraz daha uzun sürer. Varsayılan olarak açıktır. Altyazılar kelimelerin zamanlamalarına ihtiyaç duyar, bu yüzden bir klasörün **Dosya türleri** alanında `.srt` veya `.vtt` seçili olduğu sürece bu seçenek açılır ve kilitlenir; seçili olmadıklarında sizin seçiminiz geri gelir.
+- **Arka plan gürültüsünü azalt**: transkripsiyondan önce uğultuyu ve sabit arka plan gürültüsünü azaltır, kısık konuşmayı dengeler. Daha uzun sürer.
 - **Konuşmacıları belirle** (WhisperX): her bölümde kimin konuştuğunu etiketler, ör. `SPEAKER_00`. Kaç kişinin konuştuğunu biliyorsanız **Konuşmacı sayısı**'na girin (`0` otomatik algılar). Ücretsiz bir Hugging Face belirteci gerektirir; [Konuşmacıları belirleme](#konuşmacıları-belirleme) bölümüne bakın. Whisper API'de konuşmacıları `gpt-4o-transcribe-diarize` modeli belirler.
 
 ### Konuşmacıları belirleme

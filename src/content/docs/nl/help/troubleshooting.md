@@ -13,7 +13,7 @@ Bij het eerste gebruik wordt een model gedownload, wat enkele minuten kan duren,
 
 Je GPU heeft niet genoeg geheugen voor de instellingen. Probeer in deze volgorde:
 
-1. Verlaag de **Batchgrootte** (bijv. `4`) bij **Voorkeuren** → **WhisperX**.
+1. Verlaag de **Batchgrootte** (bijv. `4`) bij **Voorkeuren** → **Transcriptie**.
 2. Gebruik een kleiner model (bijv. `small` of `base`).
 3. Gebruik een lichter **Rekentype** (bijv. `int8`).
 
@@ -21,7 +21,7 @@ De laatste twee kunnen de kwaliteit verlagen. Zie [Engines](/nl/reference/engine
 
 ## Transcriberen duurt te lang
 
-De snelheid van WhisperX hangt af van je hardware, dus verwacht geen directe resultaten op bescheiden CPU's. Probeer een kleiner model, zoals `small`, of `large-v3-turbo` op een GPU, of het rekentype `int8`. Controleer op een Mac met Apple Silicon of **CPU gebruiken** uit staat bij **Voorkeuren** → **WhisperX**, zodat er op de GPU wordt getranscribeerd. Je kunt ook de **Whisper-API** of de **Google-API** gebruiken, die op externe servers draaien.
+De snelheid van WhisperX hangt af van je hardware, dus verwacht geen directe resultaten op bescheiden CPU's. Probeer een kleiner model, zoals `small`, of `large-v3-turbo` op een GPU, of het rekentype `int8`. Controleer op een Mac met Apple Silicon of **CPU gebruiken** uit staat bij **Voorkeuren** → **Transcriptie**, zodat er op de GPU wordt getranscribeerd. Je kunt ook de **Whisper-API** of de **Google-API** gebruiken, die op externe servers draaien.
 
 ## De Whisper-API geeft de fout `429`
 
@@ -81,7 +81,7 @@ De Google-API kan de taal niet detecteren. Kies de **Taal van de audio** in de i
 ## Een samenvatting, antwoord of vertaling mislukt
 
 - **DeepL kan niet naar het … vertalen.**: DeepL ondersteunt die taal niet. Kies een andere aanbieder, zoals een taalmodel.
-- **Het antwoord van het model was te lang.**, **Het model gaf geen geldige samenvatting terug.**, **Het model gaf geen geldig antwoord terug.** of **Het model gaf geen geldige vertaling terug.**: het model schreef de samenvatting, het antwoord of de vertaling niet in de verwachte vorm. Probeer het opnieuw, of kies een groter model via **Voorkeuren** → **AI**. De kleine modellen van Ollama mislukken vaker.
+- **Het antwoord van het model was te lang.**, **Het model gaf geen geldige samenvatting terug.**, **Het model gaf geen geldig antwoord terug.** of **Het model gaf geen geldige vertaling terug.**: het model schreef de samenvatting, het antwoord of de vertaling niet in de verwachte vorm. Probeer het opnieuw, of kies een groter model via **Voorkeuren** → **Aanbieders**. De kleine modellen van Ollama mislukken vaker.
 - Controleer bij elke andere fout of de API-sleutel van de aanbieder is ingesteld via **Voorkeuren** → **API-sleutels** en of je account tegoed heeft.
 
 ## Woorden met lage betrouwbaarheid worden niet onderstreept

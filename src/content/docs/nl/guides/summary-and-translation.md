@@ -34,21 +34,27 @@ Open de modus **Vragen**, typ een vraag bij **Stel een vraag over de transcripti
 - Als de transcriptie tijdstempels heeft, verwijst elk antwoord naar de delen van de transcriptie waar het wordt gezegd. Klik op een ervan om de audio vanaf daar af te spelen.
 - De vragen en antwoorden worden met de transcriptie in de geschiedenis bewaard. De prullenbak in de kop wist het gesprek, na bevestiging.
 
-De vragen worden beantwoord door de aanbieder die ervoor is gekozen bij **Voorkeuren** → **AI** → **Vragen**, en dat is die van de samenvattingen totdat je hem wijzigt. Net als bij de samenvattingen wordt van zeer lange transcripties alleen het begin gelezen.
+De vragen worden beantwoord door de aanbieder die ervoor is gekozen bij **Voorkeuren** → **Aanbieders** → **Vragen**, en dat is die van de samenvattingen totdat je hem wijzigt. Net als bij de samenvattingen wordt van zeer lange transcripties alleen het begin gelezen.
 
 ## Vertaling
 
 Klik op **Vertalen**, kies de taal bij **Vertalen naar:** en de aanbieder bij **Vertalen met:**, en bevestig. Het dialoogvenster zegt wat de gekozen aanbieder doet, en biedt aan de API-sleutel in te stellen als die ontbreekt. De vertaling verschijnt in een paneel rechts van de oorspronkelijke tekst.
 
 - Als de transcriptie tijdstempels heeft, wordt ze zin voor zin vertaald, met de tekst die ervoor en erna wordt gezegd als context, zodat de vertaling met de tijdstempels van elke zin begint: de zin die wordt afgespeeld, wordt gemarkeerd, en een klik op een zin speelt die af.
-- Als je de platte tekst hebt bewerkt, wordt de bewerkte tekst vertaald, zonder tijdstempels.
+- Als de transcriptie geen tijdstempels heeft, wordt de hele tekst in één keer vertaald.
 - Beide teksten scrollen samen, zodat ze hetzelfde deel van de audio tonen. De ronde knop op de greep ertussen zet dat aan en uit. Sleep de greep om hun grootte te wijzigen, of dubbelklik erop om de grootte te herstellen.
 
 Met de knoppen in de kop van de vertaling zoek en vervang je erin, kopieer en exporteer je hem, kies je **Opnieuw vertalen** (met dezelfde aanbieder en hetzelfde model) en **Vertaling verbergen**. Met de knop **Vertalen** kun je hem ook weer tonen, **Vertalen naar een andere taal…** of de **Vertaling verwijderen**.
 
 ### Meerdere talen
 
-Een transcriptie kan naar meerdere talen worden vertaald, ook tegelijk, en elke vertaling wordt bewaard. De titel van het paneel kiest welke wordt getoond, zegt hoeveel van elke vertaling klaar is en eindigt met de optie om naar een andere taal te vertalen. Vertalen naar een taal die al een vertaling heeft, vervangt die na bevestiging, want de correcties ervan gaan verloren.
+Een transcriptie kan naar meerdere talen worden vertaald, ook tegelijk, en elke vertaling wordt bewaard. De titel van het paneel kiest welke wordt getoond, zegt hoeveel van elke vertaling klaar is en eindigt met de optie om naar een andere taal te vertalen. Vertalen naar een taal die al een vertaling heeft, vervangt die na bevestiging, want de correcties ervan gaan verloren. Het menu van de titel toont hoeveel ondertitels van elke onvoltooide vertaling zijn vertaald (bijv. `Engels · 148/150`).
+
+### Voortgang van de vertaling
+
+De voortgang wordt in ondertitels geteld: een ondertitel is vertaald als hij tekst heeft. Boven de vertaling toont een regel hoeveel er vertaald zijn (bijv. `Vertaald: 148/150 · 98%`). Het percentage wordt naar beneden afgerond, dus `100%` verschijnt pas als ze allemaal vertaald zijn.
+
+Zolang er nog over zijn, gaan de pijlen ernaast naar de vorige en volgende ondertitel **Nog niet vertaald**, markeren ze elke ondertitel en tonen ze bij welke je bent (bijv. `1 van 2`). Beweeg de muis over een ervan om rechts de knop **Tekst vertalen…** te tonen, die het dialoogvenster opent om hem te vertalen.
 
 ### De vertaling corrigeren en opnieuw timen
 
@@ -61,7 +67,7 @@ Een vertaling heeft vaak een andere timing nodig dan het origineel, bijv. ondert
 
 ### Zelf vertalen
 
-Om de vertaling zelf te schrijven, kies je **Handmatig** bij **Vertalen met:**. Daarvoor is geen API-sleutel nodig. De vertaling begint met een leeg segment voor elke ondertitel van de transcriptie, getoond als **Nog niet vertaald**, en het paneel toont hoeveel er nog over zijn. Klik met de rechtermuisknop op een ervan en kies **Tekst vertalen…**: het dialoogvenster toont de oorspronkelijke tekst die in die tijd wordt gezegd.
+Om de vertaling zelf te schrijven, kies je **Handmatig** bij **Vertalen met:**. Daarvoor is geen API-sleutel nodig. De vertaling begint met een leeg segment voor elke ondertitel van de transcriptie, getoond als **Nog niet vertaald**, en het paneel toont hoeveel er nog over zijn. Klik met de rechtermuisknop op een ervan en kies **Tekst vertalen…**: het dialoogvenster toont de oorspronkelijke tekst die in die tijd wordt gezegd. Als je de muis over een ervan beweegt, verschijnt rechts een knop **Tekst vertalen…**, die hetzelfde dialoogvenster opent.
 
 ### Ondertitels en export
 
@@ -74,7 +80,7 @@ Om de transcriptie direct in een andere taal te krijgen, zonder aanbieder, kun j
 
 ## Aanbieders
 
-De aanbieders kies je bij **Voorkeuren** → **AI**, apart voor samenvattingen, vragen en vertalingen.
+De aanbieders kies je bij **Voorkeuren** → **Aanbieders**, apart voor samenvattingen, vragen en vertalingen.
 
 | Aanbieder | Standaardmodel | API-sleutel |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Vertalingen kunnen ook gemaakt worden door:
 
 ### Ollama
 
-[Ollama](https://ollama.com) draait de modellen op je computer, zonder API-sleutel en zonder de tekst ergens naartoe te sturen. Installeer het, download een model (bijv. `ollama pull llama3.2`) en kies **Ollama** als aanbieder. Draait het niet op het standaardadres, wijzig dan de **Server-URL** bij **Voorkeuren** → **AI** (standaard `http://localhost:11434`).
+[Ollama](https://ollama.com) draait de modellen op je computer, zonder API-sleutel en zonder de tekst ergens naartoe te sturen. Installeer het, download een model (bijv. `ollama pull llama3.2`) en kies **Ollama** als aanbieder. Draait het niet op het standaardadres, wijzig dan de **Server-URL** bij **Voorkeuren** → **Aanbieders** (standaard `http://localhost:11434`).
 
 :::note
 Elke aanbieder rekent kosten voor het gebruik van zijn API, waarvoor Audiotext niet verantwoordelijk is. De API-sleutels worden bewaard in de wachtwoordopslag van je systeem. Zie [Bestanden en gegevens](/nl/reference/files-and-data/).

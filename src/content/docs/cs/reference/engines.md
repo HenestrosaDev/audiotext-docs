@@ -55,11 +55,12 @@ Na Macích s Apple Silicon přepisuje [MLX Whisper](https://github.com/ml-explor
 - Verze MLX modelu se stáhne při prvním použití.
 - `distil-small.en`, `distil-large-v2` a `distil-large-v3.5` verzi MLX nemají, takže běží na procesoru.
 - [Živý text](/cs/guides/sources/#živý-text) běží vždy na procesoru.
-- Chcete-li přepisovat na procesoru, zapněte **Použít CPU** v **Předvolby** → **WhisperX**.
+- **Typ výpočtu** a **Velikost dávky** se na grafickém procesoru neuplatní, protože MLX vždy počítá s poloviční přesností a bez dávek.
+- Chcete-li přepisovat na procesoru, zapněte **Použít CPU** v **Předvolby** → **Přepis**.
 
 ### Pokročilé možnosti
 
-Najdete je v **Předvolby** → **WhisperX**. Měňte je jen při problémech nebo pokud víte, co děláte: grafická karta bez volné paměti může systém zamrazit.
+Najdete je v **Předvolby** → **Přepis** → **WhisperX**. Měňte je jen při problémech nebo pokud víte, co děláte: grafická karta bez volné paměti může systém zamrazit.
 
 - **Typ výpočtu**: přesnost čísel modelu. `float16` je rychlejší na grafických kartách NVIDIA (výchozí s CUDA). `int8` spotřebuje méně paměti a je výchozí na procesoru, protože mnoho procesorů `float16` efektivně nepodporuje. `float32` je nejpřesnější, pro grafické karty s více než 8 GB VRAM.
 - **Velikost dávky**: kolik částí zvuku se zpracovává najednou (výchozí `8`). Nemění kvalitu, jen rychlost. Pokud dochází paměť, snižte ji; doporučuje se nejvýše `16`.
@@ -82,8 +83,8 @@ Dlouhé nahrávky se dělí na části do 10 minut, střižené v tichu, aby se 
 ### Možnosti
 
 - **Formát odpovědi** (karta Výstup, pro složky): `text` (výchozí), `json`, `verbose_json`, `srt` nebo `vtt`. Titulky a `verbose_json` vyžadují model s časovými značkami.
-- **Teplota** (Předvolby → Whisper API): mezi 0 a 1. Vysoké hodnoty jako 0,8 činí výsledek náhodnějším, nízké jako 0,2 cílenějším. Při 0 (výchozí) ji model podle potřeby sám zvýší.
-- **Časové značky slov** (Předvolby → Whisper API): zda `whisper-1` vrací i časové značky každého slova, aby se při přehrávání zvýrazňovalo. Trvá déle. Ve výchozím stavu zapnuto.
+- **Teplota** (Předvolby → Přepis): mezi 0 a 1. Vysoké hodnoty jako 0,8 činí výsledek náhodnějším, nízké jako 0,2 cílenějším. Při 0 (výchozí) ji model podle potřeby sám zvýší.
+- **Časové značky slov** (Předvolby → Přepis): zda `whisper-1` vrací i časové značky každého slova, aby se při přehrávání zvýrazňovalo. Trvá déle. Ve výchozím stavu zapnuto.
 
 ## Google API
 

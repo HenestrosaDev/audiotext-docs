@@ -13,7 +13,7 @@ Przy pierwszym użyciu model jest pobierany, co może potrwać kilka minut, zale
 
 Karta graficzna nie ma dość pamięci dla tych ustawień. Spróbuj w tej kolejności:
 
-1. Zmniejsz **Rozmiar partii** (np. `4`) w **Preferencje** → **WhisperX**.
+1. Zmniejsz **Rozmiar partii** (np. `4`) w **Preferencje** → **Transkrypcja**.
 2. Użyj mniejszego modelu (np. `small` lub `base`).
 3. Użyj lżejszego **Typu obliczeń** (np. `int8`).
 
@@ -21,7 +21,7 @@ Dwa ostatnie mogą obniżyć jakość. Ile pamięci potrzebuje każdy model, zob
 
 ## Transkrypcja trwa zbyt długo
 
-Szybkość WhisperX zależy od sprzętu, więc na słabszych procesorach nie oczekuj natychmiastowych wyników. Wypróbuj mniejszy model, np. `small`, `large-v3-turbo` na karcie graficznej lub typ obliczeń `int8`. Na Macu z Apple Silicon sprawdź, czy **Używaj CPU** jest wyłączone w **Preferencje** → **WhisperX**, aby transkrypcja odbywała się na karcie graficznej. Możesz też użyć **API Whisper** lub **API Google**, które działają na zdalnych serwerach.
+Szybkość WhisperX zależy od sprzętu, więc na słabszych procesorach nie oczekuj natychmiastowych wyników. Wypróbuj mniejszy model, np. `small`, `large-v3-turbo` na karcie graficznej lub typ obliczeń `int8`. Na Macu z Apple Silicon sprawdź, czy **Używaj CPU** jest wyłączone w **Preferencje** → **Transkrypcja**, aby transkrypcja odbywała się na karcie graficznej. Możesz też użyć **API Whisper** lub **API Google**, które działają na zdalnych serwerach.
 
 ## API Whisper zwraca błąd `429`
 
@@ -81,7 +81,7 @@ API Google nie potrafi wykryć języka. Wybierz **Język nagrania** w ustawienia
 ## Podsumowanie, odpowiedź lub tłumaczenie kończy się błędem
 
 - **DeepL nie może tłumaczyć na język: ….**: DeepL nie obsługuje tego języka. Wybierz innego dostawcę, na przykład model językowy.
-- **Odpowiedź modelu była za długa.**, **Model nie zwrócił prawidłowego podsumowania.**, **Model nie zwrócił prawidłowej odpowiedzi.** lub **Model nie zwrócił prawidłowego tłumaczenia.**: model nie napisał podsumowania, odpowiedzi lub tłumaczenia w oczekiwanym formacie. Spróbuj ponownie lub wybierz większy model w **Preferencje** → **AI**. Małe modele Ollamy zawodzą częściej.
+- **Odpowiedź modelu była za długa.**, **Model nie zwrócił prawidłowego podsumowania.**, **Model nie zwrócił prawidłowej odpowiedzi.** lub **Model nie zwrócił prawidłowego tłumaczenia.**: model nie napisał podsumowania, odpowiedzi lub tłumaczenia w oczekiwanym formacie. Spróbuj ponownie lub wybierz większy model w **Preferencje** → **Dostawcy**. Małe modele Ollamy zawodzą częściej.
 - Przy każdym innym błędzie sprawdź, czy klucz API dostawcy jest ustawiony w **Preferencje** → **Klucze API** i czy na koncie są środki.
 
 ## Słowa o niskiej pewności nie są podkreślane

@@ -13,7 +13,7 @@ Při prvním použití se model stáhne, což může podle připojení a velikos
 
 Grafická karta nemá pro dané nastavení dost paměti. Zkuste v tomto pořadí:
 
-1. Snižte **Velikost dávky** (např. `4`) v **Předvolby** → **WhisperX**.
+1. Snižte **Velikost dávky** (např. `4`) v **Předvolby** → **Přepis**.
 2. Použijte menší model (např. `small` nebo `base`).
 3. Použijte lehčí **Typ výpočtu** (např. `int8`).
 
@@ -21,7 +21,7 @@ Poslední dvě možnosti mohou snížit kvalitu. Kolik paměti potřebuje každ�
 
 ## Přepis trvá příliš dlouho
 
-Rychlost WhisperX závisí na hardwaru, takže na slabších procesorech nečekejte okamžité výsledky. Zkuste menší model jako `small`, `large-v3-turbo` na grafické kartě nebo typ výpočtu `int8`. Na Macu s Apple Silicon zkontrolujte, že je **Použít CPU** vypnuto v **Předvolby** → **WhisperX**, aby se přepisovalo na grafickém procesoru. Případně použijte **Whisper API** nebo **Google API**, která běží na vzdálených serverech.
+Rychlost WhisperX závisí na hardwaru, takže na slabších procesorech nečekejte okamžité výsledky. Zkuste menší model jako `small`, `large-v3-turbo` na grafické kartě nebo typ výpočtu `int8`. Na Macu s Apple Silicon zkontrolujte, že je **Použít CPU** vypnuto v **Předvolby** → **Přepis**, aby se přepisovalo na grafickém procesoru. Případně použijte **Whisper API** nebo **Google API**, která běží na vzdálených serverech.
 
 ## Whisper API vrací chybu `429`
 
@@ -81,7 +81,7 @@ Google API neumí jazyk rozpoznat. V nastavení vyberte **Jazyk zvuku**.
 ## Shrnutí, odpověď nebo překlad selže
 
 - **DeepL nedokáže překládat do jazyka: ….**: DeepL tento jazyk nepodporuje. Zvolte jiného poskytovatele, například jazykový model.
-- **Odpověď modelu byla příliš dlouhá.**, **Model nevrátil platné shrnutí.**, **Model nevrátil platnou odpověď.** nebo **Model nevrátil platný překlad.**: model nenapsal shrnutí, odpověď nebo překlad v očekávaném formátu. Zkuste to znovu nebo zvolte větší model v **Předvolby** → **AI**. Malé modely Ollamy selhávají častěji.
+- **Odpověď modelu byla příliš dlouhá.**, **Model nevrátil platné shrnutí.**, **Model nevrátil platnou odpověď.** nebo **Model nevrátil platný překlad.**: model nenapsal shrnutí, odpověď nebo překlad v očekávaném formátu. Zkuste to znovu nebo zvolte větší model v **Předvolby** → **Poskytovatelé**. Malé modely Ollamy selhávají častěji.
 - U jakékoli jiné chyby zkontrolujte, že je klíč API poskytovatele nastaven v **Předvolby** → **Klíče API** a že má váš účet kredit.
 
 ## Slova s nízkou jistotou se nepodtrhávají

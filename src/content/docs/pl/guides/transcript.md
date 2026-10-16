@@ -15,6 +15,8 @@ Pokazuje transkrypcję podzieloną na napisy filmu, z początkiem i końcem każ
 
 Domyślnie czasy są pokazywane z dokładnością do milisekundy, jak w napisach (`00:01:05,900 – 00:01:09,350`). Aby je uprościć (`01:05 – 01:09`), odznacz **Dokładne znaczniki czasu (HH:MM:SS,mmm)** w menu `⋯`.
 
+Nad napisami wiersz podaje ich liczbę oraz, jeśli rozpoznano mówców, liczbę mówców (np. `Napisy: 120 · Mówcy: 3`). Długi segment podzielony na kilka napisów liczy się jako kilka.
+
 Znaczniki czasu są dostępne tylko w **WhisperX** oraz w modelach `whisper-1` i `gpt-4o-transcribe-diarize` **API Whisper**. Bez nich transkrypcji nie da się odtwarzać napis po napisie; użyj wtedy widoku **Zwykły tekst**.
 
 ### Odtwarzaj nagranie
@@ -29,7 +31,7 @@ Jeśli plik źródłowy został przeniesiony lub usunięty, nagranie jest niedos
 
 ### Oglądaj filmy z napisami
 
-Transkrypcje filmów pokazują film nad tekstem. Jego menu pozwala **Pokazuj napisy na filmie** i wybrać ich **Rozmiar** (mały, średni lub duży), **Położenie** (na dole lub na górze) i **Styl** (ciemne tło lub obrys). Jeśli transkrypcja ma [tłumaczenia](/pl/guides/summary-and-translation/#tłumaczenie), w menu można też wybrać, czy napisy pokazują **Transkrypcję**, czy **Tłumaczenie** na dany język.
+Transkrypcje filmów pokazują film nad tekstem. Jego menu pozwala **Pokazuj napisy na filmie** i wybrać ich **Rozmiar** (mały, średni lub duży), **Położenie** (na dole lub na górze) i **Styl** (ciemne tło lub obrys). Jeśli transkrypcja ma [tłumaczenia](/pl/guides/summary-and-translation/#tłumaczenie), w menu można też wybrać, czy napisy pokazują **Transkrypcję**, czy **Tłumaczenie** na dany język. Przycisk **Napisy** na pasku odtwarzacza też je pokazuje lub ukrywa, a strzałka obok otwiera to samo menu.
 
 ## Znajdź i zamień
 
@@ -39,6 +41,8 @@ Naciśnij `Ctrl+F` (`⌘F` w macOS) lub kliknij lupę w nagłówku, aby otworzy�
 - **Zamień** zamienia bieżący wynik, a **Zamień wszystko** wszystkie, np. błędnie zapisane nazwisko. Zaznacz **Uwzględniaj wielkość liter**, aby znaleźć tylko tekst o tej samej wielkości liter.
 - Okno nie jest modalne, więc możesz czytać i odtwarzać tekst, gdy jest otwarte. **Zawsze na wierzchu** utrzymuje je nad głównym oknem.
 - `Esc` je zamyka.
+
+W widoku **Zwykły tekst** okno tylko wyszukuje (**Znajdź w transkrypcji**), bo dopasowania w nim nie da się powiązać z napisem. Aby zastępować, wróć do widoku **Napisy**.
 
 ## Poprawianie transkrypcji
 
@@ -71,7 +75,13 @@ Jeśli transkrypcja nie ma ocen, menu `⋯` podaje powód: **Włącz „Czasy po
 
 ## Zwykły tekst
 
-Widok **Zwykły tekst** pozwala swobodnie edytować tekst, jak w edytorze tekstu. Zmiany zapisują się automatycznie. Transkrypcja zachowuje oryginalny tekst ze znacznikami czasu, więc napisy nie korzystają z edycji zwykłego tekstu.
+Widok **Zwykły tekst** pokazuje tekst transkrypcji bez znaczników czasu. Jest budowany z napisów, więc jest tylko do odczytu, jak mówi uwaga obok widoków: aby go zmienić, [popraw napisy](#poprawianie-transkrypcji), a zwykły tekst za nimi podąży. Dzięki temu wszystkie eksporty i tłumaczenia używają tego samego tekstu.
+
+Transkrypcje bez znaczników czasu (np. z API Google) nie mają napisów, więc ich zwykły tekst można swobodnie edytować, jak w edytorze tekstu. Zmiany zapisują się automatycznie.
+
+:::note
+Wcześniejsze wersje pozwalały edytować zwykły tekst transkrypcji z napisami. Po otwarciu takiej transkrypcji (lub tłumaczenia) jej zwykły tekst jest budowany od nowa z napisów, więc te zmiany zostają zastąpione.
+:::
 
 ## Kopiowanie i eksport
 

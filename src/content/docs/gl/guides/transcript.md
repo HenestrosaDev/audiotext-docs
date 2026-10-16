@@ -15,6 +15,8 @@ Mostra a transcrición dividida nos subtítulos do vídeo, con cando comeza e re
 
 Por defecto, os tempos móstranse ao milisegundo, como nos subtítulos (`00:01:05,900 – 00:01:09,350`). Para simplificalos (`01:05 – 01:09`), desmarca **Marcas de tempo precisas (HH:MM:SS,mmm)** no menú `⋯`.
 
+Enriba dos subtítulos, unha liña cóntaos e, se se identificaron os falantes, tamén a eles (p. ex. `Subtítulos: 120 · Falantes: 3`). Un segmento longo dividido en varios subtítulos conta como varios.
+
 As marcas de tempo só están dispoñibles con **WhisperX** e cos modelos `whisper-1` e `gpt-4o-transcribe-diarize` da **API de Whisper**. Sen elas, a transcrición non se pode reproducir subtítulo a subtítulo; usa o modo **Texto simple**.
 
 ### Reproduce o audio
@@ -29,7 +31,7 @@ Se o ficheiro de orixe se moveu ou eliminou, o audio non está dispoñible, pero
 
 ### Mira vídeos con subtítulos
 
-As transcricións de vídeos mostran o vídeo enriba do texto. O seu menú permíteche **Mostrar subtítulos no vídeo** e escoller o seu **Tamaño** (pequeno, mediano ou grande), a súa **Posición** (abaixo ou arriba) e o seu **Estilo** (fondo escuro ou contorno). Se a transcrición ten [traducións](/gl/guides/summary-and-translation/#tradución), o menú tamén escolle se os subtítulos mostran a **Transcrición** ou a **Tradución ao idioma…** dun idioma.
+As transcricións de vídeos mostran o vídeo enriba do texto. O seu menú permíteche **Mostrar subtítulos no vídeo** e escoller o seu **Tamaño** (pequeno, mediano ou grande), a súa **Posición** (abaixo ou arriba) e o seu **Estilo** (fondo escuro ou contorno). Se a transcrición ten [traducións](/gl/guides/summary-and-translation/#tradución), o menú tamén escolle se os subtítulos mostran a **Transcrición** ou a **Tradución ao idioma…** dun idioma. O botón **Subtítulos** da barra do reprodutor tamén os mostra ou oculta, e a frecha xunto a el abre o mesmo menú.
 
 ## Busca e substitúe
 
@@ -39,6 +41,8 @@ Preme `Ctrl+F` (`⌘F` en macOS), ou fai clic na lupa da cabeceira, para abrir a
 - **Substituír** substitúe a coincidencia actual, e **Substituír todo** todas elas, p. ex. un nome mal escrito. Marca **Distinguir maiúsculas** para atopar só o texto coas mesmas maiúsculas.
 - A xanela non é modal, así que podes ler e reproducir o texto mentres está aberta. **Manter enriba** mantena sobre a xanela principal.
 - `Esc` péchaa.
+
+No modo **Texto simple**, a xanela só busca (**Buscar na transcrición**), xa que unha coincidencia aí non se pode relacionar cun subtítulo. Volve a **Subtítulos** para substituír.
 
 ## Corrixe a transcrición
 
@@ -71,7 +75,13 @@ Se unha transcrición non ten puntuacións, o menú `⋯` di por que: **Activa �
 
 ## Texto simple
 
-O modo **Texto simple** permíteche editar o texto libremente, como nun editor de texto. Os cambios gárdanse automaticamente. A transcrición conserva o texto orixinal coas súas marcas de tempo, así que os subtítulos non usan os cambios do texto simple.
+O modo **Texto simple** mostra o texto da transcrición sen marcas de tempo. Constrúese a partir dos subtítulos, así que é de só lectura, como di a nota xunto aos modos: para cambialo, [corrixe os subtítulos](#corrixe-a-transcrición), e o texto simple ségueos. Así, todas as exportacións e traducións usan o mesmo texto.
+
+As transcricións sen marcas de tempo (p. ex. da API de Google) non teñen subtítulos, así que o seu texto simple pódese editar libremente, como nun editor de texto. Os cambios gárdanse automaticamente.
+
+:::note
+As versións anteriores permitían editar o texto simple das transcricións con subtítulos. Ao abrir unha desas transcricións (ou traducións), o seu texto simple vólvese construír a partir dos seus subtítulos, así que eses cambios substitúense.
+:::
 
 ## Copia e exporta
 

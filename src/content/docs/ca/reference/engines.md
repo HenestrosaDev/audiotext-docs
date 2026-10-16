@@ -55,11 +55,12 @@ En els Mac amb Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-ex
 - La versió MLX del model es baixa la primera vegada que es fa servir.
 - `distil-small.en`, `distil-large-v2` i `distil-large-v3.5` no tenen versió MLX, així que s'executen a la CPU.
 - El [text en directe](/ca/guides/sources/#text-en-directe) sempre s'executa a la CPU.
-- Per transcriure a la CPU, activa **Utilitza la CPU** a **Preferències** → **WhisperX**.
+- **Tipus de càlcul** i **Mida del lot** no s'apliquen a la GPU, ja que MLX sempre calcula en mitja precisió i sense lots.
+- Per transcriure a la CPU, activa **Utilitza la CPU** a **Preferències** → **Transcripció**.
 
 ### Opcions avançades
 
-Són a **Preferències** → **WhisperX**. Canvia-les només si tens problemes o saps què fas: una GPU que es queda sense memòria pot bloquejar el sistema.
+Són a **Preferències** → **Transcripció** → **WhisperX**. Canvia-les només si tens problemes o saps què fas: una GPU que es queda sense memòria pot bloquejar el sistema.
 
 - **Tipus de càlcul**: la precisió dels nombres del model. `float16` és més ràpid en GPU NVIDIA (el valor per defecte amb CUDA). `int8` fa servir menys memòria i és el valor per defecte a la CPU, ja que moltes CPU no admeten `float16` de manera eficient. `float32` és el més precís, per a GPU amb més de 8 GB de VRAM.
 - **Mida del lot**: quantes parts de l'àudio es processen alhora (`8` per defecte). No canvia la qualitat, només la velocitat. Abaixa-la si et quedes sense memòria; es recomana fins a `16`.
@@ -82,8 +83,8 @@ Els àudios llargs es divideixen en fragments de fins a 10 minuts, tallats en un
 ### Opcions
 
 - **Format de resposta** (targeta Sortida, per a carpetes): `text` (per defecte), `json`, `verbose_json`, `srt` o `vtt`. Els subtítols i `verbose_json` necessiten un model amb marques de temps.
-- **Temperatura** (Preferències → API de Whisper): entre 0 i 1. Els valors alts com 0,8 fan que el resultat sigui més aleatori, i els baixos com 0,2, més precís. Amb 0 (per defecte), el model l'apuja automàticament quan cal.
-- **Marques de temps de les paraules** (Preferències → API de Whisper): si `whisper-1` també retorna les marques de temps de cada paraula, per ressaltar-la en reproduir. Triga més. Activat per defecte.
+- **Temperatura** (Preferències → Transcripció): entre 0 i 1. Els valors alts com 0,8 fan que el resultat sigui més aleatori, i els baixos com 0,2, més precís. Amb 0 (per defecte), el model l'apuja automàticament quan cal.
+- **Marques de temps de les paraules** (Preferències → Transcripció): si `whisper-1` també retorna les marques de temps de cada paraula, per ressaltar-la en reproduir. Triga més. Activat per defecte.
 
 ## API de Google
 

@@ -34,21 +34,27 @@ Abra o modo **Perguntar**, digite uma pergunta em **Faça uma pergunta sobre a t
 - Se a transcrição tiver carimbos de tempo, cada resposta tem links para as partes da transcrição onde isso é dito. Clique em uma para reproduzir o áudio a partir dali.
 - As perguntas e as respostas são salvas no histórico com a transcrição. A lixeira do cabeçalho limpa a conversa, depois de perguntar.
 
-As perguntas são respondidas pelo provedor escolhido para elas em **Preferências** → **IA** → **Perguntar**, que é o dos resumos até você mudá-lo. Como nos resumos, das transcrições muito longas só é lido o começo.
+As perguntas são respondidas pelo provedor escolhido para elas em **Preferências** → **Provedores** → **Perguntar**, que é o dos resumos até você mudá-lo. Como nos resumos, das transcrições muito longas só é lido o começo.
 
 ## Tradução
 
 Clique em **Traduzir**, escolha o idioma em **Traduzir para:** e o provedor em **Traduzir com:**, e confirme. A caixa de diálogo diz o que o provedor escolhido faz, e oferece definir a chave de API dele se estiver faltando. A tradução aparece em um painel à direita do texto original.
 
 - Se a transcrição tiver carimbos de tempo, ela é traduzida frase por frase, com o texto dito antes e depois de cada parte como contexto, então a tradução começa com os carimbos de tempo de cada frase: ela destaca a frase em reprodução, e clicar em uma a reproduz.
-- Se você editou o texto simples, o texto editado é traduzido, sem carimbos de tempo.
+- Se a transcrição não tem carimbos de tempo, todo o texto é traduzido de uma vez.
 - Os dois textos rolam juntos, então mostram a mesma parte do áudio. O botão redondo no divisor entre eles ativa e desativa isso. Arraste o divisor para redimensioná-los, ou clique duas vezes nele para restaurar os tamanhos.
 
 Os botões do cabeçalho da tradução localizam e substituem nela, copiam, exportam, **Traduzir novamente** (com o mesmo provedor e modelo) e **Ocultar a tradução**. O botão **Traduzir** também permite mostrá-la de novo, **Traduzir para outro idioma…** ou **Excluir a tradução**.
 
 ### Vários idiomas
 
-Uma transcrição pode ser traduzida para vários idiomas, até ao mesmo tempo, e cada tradução é mantida. O título do painel escolhe a que é mostrada, diz quanto de cada uma está traduzido e termina com a opção de traduzir para outro idioma. Traduzir para um idioma que já tem uma tradução a substitui, depois de perguntar, já que as correções dela são perdidas.
+Uma transcrição pode ser traduzida para vários idiomas, até ao mesmo tempo, e cada tradução é mantida. O título do painel escolhe a que é mostrada, diz quanto de cada uma está traduzido e termina com a opção de traduzir para outro idioma. Traduzir para um idioma que já tem uma tradução a substitui, depois de perguntar, já que as correções dela são perdidas. O menu do título mostra quantas legendas de cada tradução não concluída estão traduzidas (ex.: `Inglês · 148/150`).
+
+### Progresso da tradução
+
+O progresso é contado em legendas: uma está traduzida quando tem texto. Acima da tradução, uma linha mostra quantas estão traduzidas (ex.: `Traduzido: 148/150 · 98%`). A porcentagem é arredondada para baixo, então `100%` só aparece quando todas estão traduzidas.
+
+Enquanto faltarem algumas, as setas ao lado dela vão para as legendas anterior e seguinte **Ainda não traduzido**, destacando cada uma, e mostram em qual você está (ex.: `1 de 2`). Passe o mouse sobre uma delas para mostrar o botão **Traduzir texto…** à direita, que abre a caixa de diálogo para traduzi-la.
 
 ### Corrija e ajuste os tempos da tradução
 
@@ -61,7 +67,7 @@ Uma tradução costuma precisar de outros tempos que o original, por exemplo leg
 
 ### Traduza você mesmo
 
-Para escrever a tradução você mesmo, escolha **Manual** em **Traduzir com:**. Não precisa de chave de API. A tradução começa com um segmento vazio para cada legenda da transcrição, exibido como **Ainda não traduzido**, e o painel mostra quantos faltam. Clique com o botão direito em um deles e escolha **Traduzir texto…**: a caixa de diálogo mostra o texto original dito nesse intervalo.
+Para escrever a tradução você mesmo, escolha **Manual** em **Traduzir com:**. Não precisa de chave de API. A tradução começa com um segmento vazio para cada legenda da transcrição, exibido como **Ainda não traduzido**, e o painel mostra quantos faltam. Clique com o botão direito em um deles e escolha **Traduzir texto…**: a caixa de diálogo mostra o texto original dito nesse intervalo. Ao passar o mouse sobre um deles, aparece um botão **Traduzir texto…** à direita, que abre a mesma caixa de diálogo.
 
 ### Legendas e exportação
 
@@ -74,7 +80,7 @@ Para obter a transcrição diretamente em outro idioma, sem provedor, você tamb
 
 ## Provedores
 
-Os provedores são escolhidos em **Preferências** → **IA**, separadamente para os resumos, as perguntas e as traduções.
+Os provedores são escolhidos em **Preferências** → **Provedores**, separadamente para os resumos, as perguntas e as traduções.
 
 | Provedor | Modelo padrão | Chave de API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ As traduções também podem ser feitas com:
 
 ### Ollama
 
-O [Ollama](https://ollama.com) roda os modelos no seu computador, sem chave de API e sem enviar o texto para lugar nenhum. Instale-o, baixe um modelo (ex.: `ollama pull llama3.2`) e escolha **Ollama** como provedor. Se ele não rodar no endereço padrão, mude a **URL do servidor** em **Preferências** → **IA** (`http://localhost:11434` por padrão).
+O [Ollama](https://ollama.com) roda os modelos no seu computador, sem chave de API e sem enviar o texto para lugar nenhum. Instale-o, baixe um modelo (ex.: `ollama pull llama3.2`) e escolha **Ollama** como provedor. Se ele não rodar no endereço padrão, mude a **URL do servidor** em **Preferências** → **Provedores** (`http://localhost:11434` por padrão).
 
 :::note
 Cada provedor cobra pelo uso da sua API, pelo qual o Audiotext não se responsabiliza. As chaves de API ficam no armazenamento de credenciais do seu sistema. Consulte [Arquivos e dados](/pt/reference/files-and-data/).

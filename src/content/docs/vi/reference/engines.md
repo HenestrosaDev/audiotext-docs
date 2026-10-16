@@ -55,11 +55,12 @@ Trên máy Mac dùng Apple Silicon, [MLX Whisper](https://github.com/ml-explore/
 - Phiên bản MLX của mô hình được tải xuống lần đầu khi dùng.
 - `distil-small.en`, `distil-large-v2` và `distil-large-v3.5` không có phiên bản MLX, nên chạy trên CPU.
 - [Văn bản trực tiếp](/vi/guides/sources/#văn-bản-trực-tiếp) luôn chạy trên CPU.
-- Để chép lời trên CPU, hãy bật **Dùng CPU** trong **Tùy chọn ưu tiên** → **WhisperX**.
+- **Kiểu tính toán** và **Kích thước lô** không áp dụng trên GPU, vì MLX luôn tính toán ở độ chính xác một nửa và không chia lô.
+- Để chép lời trên CPU, hãy bật **Dùng CPU** trong **Tùy chọn ưu tiên** → **Chép lời**.
 
 ### Tùy chọn nâng cao
 
-Nằm trong **Tùy chọn ưu tiên** → **WhisperX**. Chỉ thay đổi khi gặp sự cố hoặc khi bạn biết mình đang làm gì: GPU hết bộ nhớ có thể làm treo hệ thống.
+Nằm trong **Tùy chọn ưu tiên** → **Chép lời** → **WhisperX**. Chỉ thay đổi khi gặp sự cố hoặc khi bạn biết mình đang làm gì: GPU hết bộ nhớ có thể làm treo hệ thống.
 
 - **Kiểu tính toán**: độ chính xác số học của mô hình. `float16` nhanh hơn trên GPU NVIDIA (mặc định khi có CUDA). `int8` dùng ít bộ nhớ hơn và là mặc định trên CPU, vì nhiều CPU không hỗ trợ `float16` hiệu quả. `float32` chính xác nhất, dành cho GPU có trên 8 GB VRAM.
 - **Kích thước lô**: số phần âm thanh được xử lý cùng lúc (mặc định `8`). Không ảnh hưởng chất lượng, chỉ ảnh hưởng tốc độ. Giảm xuống nếu hết bộ nhớ; khuyến nghị tối đa `16`.
@@ -82,8 +83,8 @@ Bản dịch sang tiếng Anh luôn do `whisper-1` thực hiện, vì đây là 
 ### Tùy chọn
 
 - **Định dạng phản hồi** (thẻ Đầu ra, cho thư mục): `text` (mặc định), `json`, `verbose_json`, `srt` hoặc `vtt`. Phụ đề và `verbose_json` cần mô hình có dấu thời gian.
-- **Nhiệt độ** (Tùy chọn ưu tiên → Whisper API): từ 0 đến 1. Giá trị cao như 0,8 làm kết quả ngẫu nhiên hơn, giá trị thấp như 0,2 làm kết quả tập trung hơn. Với 0 (mặc định), mô hình tự tăng khi cần.
-- **Dấu thời gian của từ** (Tùy chọn ưu tiên → Whisper API): `whisper-1` có trả về dấu thời gian của từng từ hay không, để đánh dấu khi phát. Mất nhiều thời gian hơn. Bật theo mặc định.
+- **Nhiệt độ** (Tùy chọn ưu tiên → Chép lời): từ 0 đến 1. Giá trị cao như 0,8 làm kết quả ngẫu nhiên hơn, giá trị thấp như 0,2 làm kết quả tập trung hơn. Với 0 (mặc định), mô hình tự tăng khi cần.
+- **Dấu thời gian của từ** (Tùy chọn ưu tiên → Chép lời): `whisper-1` có trả về dấu thời gian của từng từ hay không, để đánh dấu khi phát. Mất nhiều thời gian hơn. Bật theo mặc định.
 
 ## Google API
 

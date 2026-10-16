@@ -34,21 +34,27 @@ Otwórz widok **Zapytaj**, wpisz pytanie w polu **Zadaj pytanie o transkrypcję�
 - Jeśli transkrypcja ma znaczniki czasu, każda odpowiedź zawiera odnośniki do fragmentów transkrypcji, w których to pada. Kliknij jeden, aby odtworzyć nagranie od tego miejsca.
 - Pytania i odpowiedzi są zapisywane w historii razem z transkrypcją. Kosz w nagłówku czyści rozmowę po potwierdzeniu.
 
-Na pytania odpowiada dostawca wybrany dla nich w **Preferencje** → **AI** → **Zapytaj**, czyli dostawca podsumowań, dopóki go nie zmienisz. Tak jak przy podsumowaniach, z bardzo długich transkrypcji czytany jest tylko początek.
+Na pytania odpowiada dostawca wybrany dla nich w **Preferencje** → **Dostawcy** → **Zapytaj**, czyli dostawca podsumowań, dopóki go nie zmienisz. Tak jak przy podsumowaniach, z bardzo długich transkrypcji czytany jest tylko początek.
 
 ## Tłumaczenie
 
 Kliknij **Przetłumacz**, wybierz język w polu **Przetłumacz na:** i dostawcę w polu **Tłumacz za pomocą:**, a następnie potwierdź. Okno wyjaśnia, co robi wybrany dostawca, i proponuje ustawienie jego klucza API, jeśli go brakuje. Tłumaczenie pojawi się w panelu po prawej stronie oryginalnego tekstu.
 
 - Jeśli transkrypcja ma znaczniki czasu, jest tłumaczona zdanie po zdaniu, z tekstem wypowiedzianym przed i po każdym fragmencie jako kontekstem, więc tłumaczenie zaczyna się ze znacznikami czasu każdego zdania: wyróżnia odtwarzane zdanie, a kliknięcie zdania je odtwarza.
-- Jeśli edytowałeś zwykły tekst, tłumaczony jest edytowany tekst, bez znaczników czasu.
+- Jeśli transkrypcja nie ma znaczników czasu, cały jej tekst jest tłumaczony naraz.
 - Oba teksty przewijają się razem, więc pokazują ten sam fragment nagrania. Okrągły przycisk na uchwycie między nimi włącza i wyłącza tę funkcję. Przeciągnij uchwyt, aby zmienić ich rozmiar, lub kliknij go dwukrotnie, aby przywrócić rozmiary.
 
 Przyciski w nagłówku tłumaczenia pozwalają znaleźć i zamienić w nim tekst, skopiować je, wyeksportować, **Przetłumacz ponownie** (z tym samym dostawcą i modelem) oraz **Ukryj tłumaczenie**. Przycisk **Przetłumacz** pozwala też pokazać je ponownie, **Przetłumacz na inny język…** lub **Usuń tłumaczenie**.
 
 ### Kilka języków
 
-Transkrypcję można przetłumaczyć na kilka języków, nawet jednocześnie, a każde tłumaczenie jest zachowywane. Tytuł panelu wybiera wyświetlane tłumaczenie, pokazuje, jaka część każdego jest przetłumaczona, i kończy się opcją tłumaczenia na inny język. Tłumaczenie na język, który ma już tłumaczenie, zastępuje je po potwierdzeniu, bo jego poprawki zostaną utracone.
+Transkrypcję można przetłumaczyć na kilka języków, nawet jednocześnie, a każde tłumaczenie jest zachowywane. Tytuł panelu wybiera wyświetlane tłumaczenie, pokazuje, jaka część każdego jest przetłumaczona, i kończy się opcją tłumaczenia na inny język. Tłumaczenie na język, który ma już tłumaczenie, zastępuje je po potwierdzeniu, bo jego poprawki zostaną utracone. Menu tytułu pokazuje, ile napisów każdego niedokończonego tłumaczenia jest przetłumaczonych (np. `Angielski · 148/150`).
+
+### Postęp tłumaczenia
+
+Postęp jest liczony w napisach: napis jest przetłumaczony, gdy ma tekst. Nad tłumaczeniem wiersz pokazuje, ile jest przetłumaczonych (np. `Przetłumaczono: 148/150 · 98%`). Procent jest zaokrąglany w dół, więc `100%` pojawia się dopiero, gdy wszystkie są przetłumaczone.
+
+Dopóki jakieś zostały, strzałki obok przechodzą do poprzedniego i następnego napisu **Jeszcze nieprzetłumaczone**, podświetlając każdy z nich, i pokazują, na którym jesteś (np. `1 z 2`). Najedź kursorem na jeden z nich, aby po prawej pokazać przycisk **Przetłumacz tekst…**, który otwiera okno do jego przetłumaczenia.
 
 ### Poprawianie i zmiana czasów tłumaczenia
 
@@ -61,7 +67,7 @@ Tłumaczenie często wymaga innych czasów niż oryginał, np. napisy, których 
 
 ### Tłumaczenie samodzielne
 
-Aby samodzielnie napisać tłumaczenie, wybierz **Ręcznie** w polu **Tłumacz za pomocą:**. Nie wymaga to klucza API. Tłumaczenie zaczyna się od pustego segmentu dla każdego napisu transkrypcji, oznaczonego jako **Jeszcze nieprzetłumaczone**, a panel pokazuje, ile ich zostało. Kliknij jeden z nich prawym przyciskiem i wybierz **Przetłumacz tekst…**: okno pokazuje oryginalny tekst wypowiedziany w tym czasie.
+Aby samodzielnie napisać tłumaczenie, wybierz **Ręcznie** w polu **Tłumacz za pomocą:**. Nie wymaga to klucza API. Tłumaczenie zaczyna się od pustego segmentu dla każdego napisu transkrypcji, oznaczonego jako **Jeszcze nieprzetłumaczone**, a panel pokazuje, ile ich zostało. Kliknij jeden z nich prawym przyciskiem i wybierz **Przetłumacz tekst…**: okno pokazuje oryginalny tekst wypowiedziany w tym czasie. Po najechaniu kursorem na jeden z nich po prawej pojawia się przycisk **Przetłumacz tekst…**, który otwiera to samo okno.
 
 ### Napisy i eksport
 
@@ -74,7 +80,7 @@ Aby otrzymać transkrypcję od razu w innym języku, bez dostawcy, możesz też 
 
 ## Dostawcy
 
-Dostawców wybiera się w **Preferencje** → **AI**, osobno dla podsumowań, pytań i tłumaczeń.
+Dostawców wybiera się w **Preferencje** → **Dostawcy**, osobno dla podsumowań, pytań i tłumaczeń.
 
 | Dostawca | Domyślny model | Klucz API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Tłumaczyć można też za pomocą:
 
 ### Ollama
 
-[Ollama](https://ollama.com) uruchamia modele na twoim komputerze, bez klucza API i bez wysyłania tekstu gdziekolwiek. Zainstaluj ją, pobierz model (np. `ollama pull llama3.2`) i wybierz **Ollama** jako dostawcę. Jeśli nie działa pod domyślnym adresem, zmień **Adres URL serwera** w **Preferencje** → **AI** (domyślnie `http://localhost:11434`).
+[Ollama](https://ollama.com) uruchamia modele na twoim komputerze, bez klucza API i bez wysyłania tekstu gdziekolwiek. Zainstaluj ją, pobierz model (np. `ollama pull llama3.2`) i wybierz **Ollama** jako dostawcę. Jeśli nie działa pod domyślnym adresem, zmień **Adres URL serwera** w **Preferencje** → **Dostawcy** (domyślnie `http://localhost:11434`).
 
 :::note
 Każdy dostawca pobiera opłaty za korzystanie ze swojego API, za które Audiotext nie odpowiada. Klucze API są przechowywane w magazynie poświadczeń systemu. Zobacz [Pliki i dane](/pl/reference/files-and-data/).

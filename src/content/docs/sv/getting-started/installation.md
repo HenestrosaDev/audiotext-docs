@@ -58,7 +58,7 @@ Första gången du transkriberar med **WhisperX** (standardmotorn) laddas dess m
 
 När en ny version släpps visar Audiotext knappen **Version … är tillgänglig** i det övre fältet. Klicka på den för att öppna versionens sida, ladda ned filen för ditt system och installera den som första gången: kör det nya installationsprogrammet i Windows, dra den nya appen till mappen **Program** i macOS eller kör `install.sh` i det nya arkivet i Linux. Den tidigare versionen ersätts, och dina inställningar och din historik behålls, eftersom de lagras i din [användarens konfigurationsmapp](/sv/reference/files-and-data/#användarens-konfigurationsmapp). Om du använder GPU-tillägget väljer du det igen vid installationen.
 
-Om du vill söka efter en ny version själv öppnar du **Inställningar** → **Om** → **Sök efter uppdateringar**. Om du inte vill att appen söker när den öppnas stänger du av **Allmänt** → **Uppdateringar**.
+Om du vill söka efter en ny version själv öppnar du **Inställningar** → **Om** → **Sök efter uppdateringar**. Om du inte vill att appen söker när den öppnas stänger du av **Allmänt** → **Sök efter uppdateringar automatiskt**.
 
 ## Avinstallera appen
 

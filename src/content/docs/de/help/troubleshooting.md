@@ -13,7 +13,7 @@ Bei der ersten Verwendung wird ein Modell heruntergeladen, was je nach Verbindun
 
 Ihre GPU hat nicht genug Speicher für die Einstellungen. Versuchen Sie in dieser Reihenfolge:
 
-1. Verringern Sie die **Batchgröße** (z. B. `4`) unter **Einstellungen** → **WhisperX**.
+1. Verringern Sie die **Batchgröße** (z. B. `4`) unter **Einstellungen** → **Transkription**.
 2. Verwenden Sie ein kleineres Modell (z. B. `small` oder `base`).
 3. Verwenden Sie einen leichteren **Berechnungstyp** (z. B. `int8`).
 
@@ -21,7 +21,7 @@ Die letzten beiden können die Qualität verringern. Wie viel Speicher jedes Mod
 
 ## Das Transkribieren dauert zu lange
 
-Die Geschwindigkeit von WhisperX hängt von Ihrer Hardware ab; auf schwachen CPUs sind keine sofortigen Ergebnisse zu erwarten. Versuchen Sie ein kleineres Modell wie `small`, `large-v3-turbo` auf einer GPU oder den Berechnungstyp `int8`. Prüfen Sie auf einem Mac mit Apple Silicon, ob **CPU verwenden** unter **Einstellungen** → **WhisperX** deaktiviert ist, damit auf der GPU transkribiert wird. Alternativ können Sie die **Whisper-API** oder die **Google-API** verwenden, die auf entfernten Servern laufen.
+Die Geschwindigkeit von WhisperX hängt von Ihrer Hardware ab; auf schwachen CPUs sind keine sofortigen Ergebnisse zu erwarten. Versuchen Sie ein kleineres Modell wie `small`, `large-v3-turbo` auf einer GPU oder den Berechnungstyp `int8`. Prüfen Sie auf einem Mac mit Apple Silicon, ob **CPU verwenden** unter **Einstellungen** → **Transkription** deaktiviert ist, damit auf der GPU transkribiert wird. Alternativ können Sie die **Whisper-API** oder die **Google-API** verwenden, die auf entfernten Servern laufen.
 
 ## Die Whisper-API gibt den Fehler `429` zurück
 
@@ -81,7 +81,7 @@ Die Google-API kann die Sprache nicht erkennen. Wählen Sie in den Einstellungen
 ## Eine Zusammenfassung, Antwort oder Übersetzung schlägt fehl
 
 - **DeepL kann nicht nach … übersetzen.**: DeepL unterstützt diese Sprache nicht. Wählen Sie einen anderen Anbieter, etwa ein Sprachmodell.
-- **Die Antwort des Modells war zu lang.**, **Das Modell hat keine gültige Zusammenfassung zurückgegeben.**, **Das Modell hat keine gültige Antwort zurückgegeben.** oder **Das Modell hat keine gültige Übersetzung zurückgegeben.**: Das Modell hat die Zusammenfassung, die Antwort oder die Übersetzung nicht im erwarteten Format geschrieben. Versuchen Sie es erneut oder wählen Sie unter **Einstellungen** → **KI** ein größeres Modell. Die kleinen Modelle von Ollama scheitern häufiger.
+- **Die Antwort des Modells war zu lang.**, **Das Modell hat keine gültige Zusammenfassung zurückgegeben.**, **Das Modell hat keine gültige Antwort zurückgegeben.** oder **Das Modell hat keine gültige Übersetzung zurückgegeben.**: Das Modell hat die Zusammenfassung, die Antwort oder die Übersetzung nicht im erwarteten Format geschrieben. Versuchen Sie es erneut oder wählen Sie unter **Einstellungen** → **Anbieter** ein größeres Modell. Die kleinen Modelle von Ollama scheitern häufiger.
 - Prüfen Sie bei jedem anderen Fehler, ob der API-Schlüssel des Anbieters unter **Einstellungen** → **API-Schlüssel** gesetzt ist und Ihr Konto Guthaben hat.
 
 ## Wörter mit geringer Konfidenz werden nicht unterstrichen

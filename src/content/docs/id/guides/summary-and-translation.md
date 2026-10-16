@@ -34,21 +34,27 @@ Buka mode **Tanya**, ketik pertanyaan di **Ajukan pertanyaan tentang transkripsi
 - Jika transkripsi memiliki stempel waktu, setiap jawaban menautkan ke bagian transkripsi tempat hal itu diucapkan. Klik salah satunya untuk memutar audio dari sana.
 - Pertanyaan dan jawabannya disimpan di riwayat bersama transkripsi. Tempat sampah di header menghapus percakapan, setelah meminta konfirmasi.
 
-Pertanyaan dijawab oleh penyedia yang dipilih untuknya di **Preferensi** → **AI** → **Tanya**, yaitu penyedia ringkasan sampai Anda mengubahnya. Seperti ringkasan, transkripsi yang sangat panjang hanya dibaca bagian awalnya.
+Pertanyaan dijawab oleh penyedia yang dipilih untuknya di **Preferensi** → **Penyedia** → **Tanya**, yaitu penyedia ringkasan sampai Anda mengubahnya. Seperti ringkasan, transkripsi yang sangat panjang hanya dibaca bagian awalnya.
 
 ## Terjemahan
 
 Klik **Terjemahkan**, pilih bahasa di **Terjemahkan ke:** dan penyedia di **Terjemahkan dengan:**, lalu konfirmasi. Dialog menjelaskan apa yang dilakukan penyedia yang dipilih, dan menawarkan untuk mengatur kunci API-nya jika belum ada. Terjemahan ditampilkan di panel di sebelah kanan teks asli.
 
 - Jika transkripsi memiliki stempel waktu, transkripsi diterjemahkan kalimat demi kalimat, dengan teks yang diucapkan sebelum dan sesudah setiap bagian sebagai konteks, sehingga terjemahan dimulai dengan stempel waktu setiap kalimat: kalimat yang diputar disorot, dan mengklik kalimat akan memutarnya.
-- Jika Anda telah mengedit teks biasa, yang diterjemahkan adalah teks yang sudah diedit, tanpa stempel waktu.
+- Jika transkripsi tidak punya stempel waktu, seluruh teksnya diterjemahkan sekaligus.
 - Kedua teks bergulir bersama, sehingga menampilkan bagian audio yang sama. Tombol bulat di pegangan di antara keduanya mengaktifkan dan menonaktifkannya. Seret pegangan untuk mengubah ukurannya, atau klik dua kali untuk mengembalikan ukurannya.
 
 Tombol di header terjemahan mencari dan mengganti di dalamnya, menyalinnya, mengekspornya, **Terjemahkan ulang** (dengan penyedia dan model yang sama), dan **Sembunyikan terjemahan**. Tombol **Terjemahkan** juga memungkinkan Anda menampilkannya lagi, **Terjemahkan ke bahasa lain…**, atau **Hapus terjemahan**.
 
 ### Beberapa bahasa
 
-Transkripsi dapat diterjemahkan ke beberapa bahasa, bahkan secara bersamaan, dan setiap terjemahan disimpan. Judul panel memilih terjemahan yang ditampilkan, menunjukkan seberapa banyak masing-masing sudah diterjemahkan, dan diakhiri dengan opsi untuk menerjemahkan ke bahasa lain. Menerjemahkan ke bahasa yang sudah memiliki terjemahan akan menggantikannya, setelah meminta konfirmasi, karena koreksinya akan hilang.
+Transkripsi dapat diterjemahkan ke beberapa bahasa, bahkan secara bersamaan, dan setiap terjemahan disimpan. Judul panel memilih terjemahan yang ditampilkan, menunjukkan seberapa banyak masing-masing sudah diterjemahkan, dan diakhiri dengan opsi untuk menerjemahkan ke bahasa lain. Menerjemahkan ke bahasa yang sudah memiliki terjemahan akan menggantikannya, setelah meminta konfirmasi, karena koreksinya akan hilang. Menu judul menampilkan berapa subtitle dari setiap terjemahan yang belum selesai yang sudah diterjemahkan (mis. `Inggris · 148/150`).
+
+### Kemajuan terjemahan
+
+Kemajuan dihitung dalam subtitle: sebuah subtitle sudah diterjemahkan jika memiliki teks. Di atas terjemahan, sebuah baris menampilkan berapa yang sudah diterjemahkan (mis. `Diterjemahkan: 148/150 · 98%`). Persentasenya dibulatkan ke bawah, jadi `100%` hanya muncul jika semuanya sudah diterjemahkan.
+
+Selama masih ada yang tersisa, panah di sebelahnya menuju subtitle **Belum diterjemahkan** sebelumnya dan berikutnya, menyorot masing-masing, dan menampilkan posisi Anda (mis. `1 dari 2`). Arahkan kursor ke salah satunya untuk menampilkan tombol **Terjemahkan teks…** di sebelah kanannya, yang membuka dialog untuk menerjemahkannya.
 
 ### Koreksi dan atur ulang waktu terjemahan
 
@@ -61,7 +67,7 @@ Terjemahan sering kali memerlukan waktu yang berbeda dari aslinya, mis. subtitle
 
 ### Terjemahkan sendiri
 
-Untuk menulis terjemahan sendiri, pilih **Manual** di **Terjemahkan dengan:**. Tidak memerlukan kunci API. Terjemahan dimulai dengan segmen kosong untuk setiap subtitle transkripsi, yang ditampilkan sebagai **Belum diterjemahkan**, dan panel menampilkan berapa yang tersisa. Klik kanan salah satunya dan pilih **Terjemahkan teks…**: dialog menampilkan teks asli yang diucapkan pada saat itu.
+Untuk menulis terjemahan sendiri, pilih **Manual** di **Terjemahkan dengan:**. Tidak memerlukan kunci API. Terjemahan dimulai dengan segmen kosong untuk setiap subtitle transkripsi, yang ditampilkan sebagai **Belum diterjemahkan**, dan panel menampilkan berapa yang tersisa. Klik kanan salah satunya dan pilih **Terjemahkan teks…**: dialog menampilkan teks asli yang diucapkan pada saat itu. Mengarahkan kursor ke salah satunya menampilkan tombol **Terjemahkan teks…** di sebelah kanannya, yang membuka dialog yang sama.
 
 ### Subtitle dan ekspor
 
@@ -74,7 +80,7 @@ Untuk mendapatkan transkripsi langsung dalam bahasa lain tanpa penyedia, Anda ju
 
 ## Penyedia
 
-Penyedia dipilih di **Preferensi** → **AI**, terpisah untuk ringkasan, pertanyaan, dan terjemahan.
+Penyedia dipilih di **Preferensi** → **Penyedia**, terpisah untuk ringkasan, pertanyaan, dan terjemahan.
 
 | Penyedia | Model bawaan | Kunci API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Terjemahan juga dapat dibuat oleh:
 
 ### Ollama
 
-[Ollama](https://ollama.com) menjalankan model di komputer Anda, tanpa kunci API dan tanpa mengirim teks ke mana pun. Instal, unduh model (mis. `ollama pull llama3.2`), lalu pilih **Ollama** sebagai penyedia. Jika tidak berjalan di alamat bawaan, ubah **URL server** di **Preferensi** → **AI** (`http://localhost:11434` secara bawaan).
+[Ollama](https://ollama.com) menjalankan model di komputer Anda, tanpa kunci API dan tanpa mengirim teks ke mana pun. Instal, unduh model (mis. `ollama pull llama3.2`), lalu pilih **Ollama** sebagai penyedia. Jika tidak berjalan di alamat bawaan, ubah **URL server** di **Preferensi** → **Penyedia** (`http://localhost:11434` secara bawaan).
 
 :::note
 Setiap penyedia mengenakan biaya atas penggunaan API-nya, dan Audiotext tidak bertanggung jawab atas hal itu. Kunci API disimpan di penyimpanan kredensial sistem Anda. Lihat [File dan data](/id/reference/files-and-data/).

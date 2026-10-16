@@ -13,7 +13,7 @@ La primera vegada que es fa servir un model, es descarrega, cosa que pot trigar 
 
 La GPU no té prou memòria per a la configuració. Prova, en aquest ordre:
 
-1. Abaixa la **Mida del lot** (p. ex. `4`) a **Preferències** → **WhisperX**.
+1. Abaixa la **Mida del lot** (p. ex. `4`) a **Preferències** → **Transcripció**.
 2. Fes servir un model més petit (p. ex. `small` o `base`).
 3. Fes servir un **Tipus de càlcul** més lleuger (p. ex. `int8`).
 
@@ -21,7 +21,7 @@ Els dos últims poden reduir la qualitat. Consulta [Motors](/ca/reference/engine
 
 ## Transcriure triga massa
 
-La velocitat de WhisperX depèn del maquinari, així que no esperis resultats instantanis en CPU modestes. Prova un model més petit, com `small`, o `large-v3-turbo` en una GPU, o el tipus de càlcul `int8`. En un Mac amb Apple Silicon, comprova que **Utilitza la CPU** està desactivat a **Preferències** → **WhisperX**, perquè transcrigui a la GPU. També pots fer servir l'**API de Whisper** o l'**API de Google**, que s'executen en servidors remots.
+La velocitat de WhisperX depèn del maquinari, així que no esperis resultats instantanis en CPU modestes. Prova un model més petit, com `small`, o `large-v3-turbo` en una GPU, o el tipus de càlcul `int8`. En un Mac amb Apple Silicon, comprova que **Utilitza la CPU** està desactivat a **Preferències** → **Transcripció**, perquè transcrigui a la GPU. També pots fer servir l'**API de Whisper** o l'**API de Google**, que s'executen en servidors remots.
 
 ## L'API de Whisper retorna l'error `429`
 
@@ -81,7 +81,7 @@ L'API de Google no pot detectar l'idioma. Tria l'**Idioma de l'àudio** a la con
 ## Falla un resum, una resposta o una traducció
 
 - **DeepL no pot traduir a l'idioma ….**: DeepL no admet aquest idioma. Tria un altre proveïdor, com ara un model de llenguatge.
-- **La resposta del model era massa llarga.**, **El model no ha retornat un resum vàlid.**, **El model no ha retornat una resposta vàlida.** o **El model no ha retornat una traducció vàlida.**: el model no ha escrit el resum, la resposta o la traducció en el format esperat. Torna-ho a provar o tria un model més gran a **Preferències** → **IA**. Els models petits d'Ollama fallen més sovint.
+- **La resposta del model era massa llarga.**, **El model no ha retornat un resum vàlid.**, **El model no ha retornat una resposta vàlida.** o **El model no ha retornat una traducció vàlida.**: el model no ha escrit el resum, la resposta o la traducció en el format esperat. Torna-ho a provar o tria un model més gran a **Preferències** → **Proveïdors**. Els models petits d'Ollama fallen més sovint.
 - Per a qualsevol altre error, comprova que la clau d'API del proveïdor està definida a **Preferències** → **Claus d'API** i que el teu compte té crèdit.
 
 ## No se subratllen les paraules de baixa confiança

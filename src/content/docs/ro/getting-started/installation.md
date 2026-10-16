@@ -58,7 +58,7 @@ Prima dată când transcrieți cu **WhisperX** (motorul implicit), modelul acest
 
 Când apare o versiune nouă, Audiotext afișează butonul **Versiunea … este disponibilă** în bara de sus. Faceți clic pe el pentru a deschide pagina versiunii, descărcați fișierul pentru sistemul dumneavoastră și instalați-l ca prima dată: pe Windows rulați noul program de instalare, pe macOS trageți noua aplicație în dosarul **Aplicații**, iar pe Linux rulați `install.sh` din noua arhivă. Versiunea anterioară este înlocuită, iar setările și istoricul se păstrează, deoarece sunt stocate în [dosarul de configurare al utilizatorului](/ro/reference/files-and-data/#dosarul-de-configurare-al-utilizatorului). Dacă folosiți suplimentul GPU, alegeți-l din nou la instalare.
 
-Pentru a verifica singur dacă există o versiune nouă, deschideți **Preferințe** → **Despre** → **Caută actualizări**. Pentru a nu mai verifica la deschiderea aplicației, dezactivați **General** → **Actualizări**.
+Pentru a verifica singur dacă există o versiune nouă, deschideți **Preferințe** → **Despre** → **Caută actualizări**. Pentru a nu mai verifica la deschiderea aplicației, dezactivați **General** → **Caută automat actualizări**.
 
 ## Dezinstalați aplicația
 

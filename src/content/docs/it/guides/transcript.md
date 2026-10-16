@@ -15,6 +15,8 @@ Mostra la trascrizione divisa nei sottotitoli del video, con l'inizio e la fine 
 
 Per impostazione predefinita, i tempi sono mostrati al millisecondo, come nei sottotitoli (`00:01:05,900 – 00:01:09,350`). Per semplificarli (`01:05 – 01:09`), deseleziona **Marche temporali precise (HH:MM:SS,mmm)** nel menu `⋯`.
 
+Sopra i sottotitoli, una riga li conta e, se i parlanti sono stati identificati, conta anche loro (ad es. `Sottotitoli: 120 · Parlanti: 3`). Un segmento lungo diviso in più sottotitoli conta come più sottotitoli.
+
 I marcatori temporali sono disponibili solo con **WhisperX** e con i modelli `whisper-1` e `gpt-4o-transcribe-diarize` della **API di Whisper**. Senza di essi, la trascrizione non può essere riprodotta sottotitolo per sottotitolo; usa invece la modalità **Testo semplice**.
 
 ### Riproduci l'audio
@@ -29,7 +31,7 @@ Se il file di origine è stato spostato o eliminato, l'audio non è disponibile,
 
 ### Guarda i video con i sottotitoli
 
-Le trascrizioni dei video mostrano il video sopra il testo. Il suo menu permette di **Mostra i sottotitoli sul video** e di sceglierne la **Dimensione** (piccola, media o grande), la **Posizione** (in basso o in alto) e lo **Stile** (sfondo scuro o contorno). Se la trascrizione ha delle [traduzioni](/it/guides/summary-and-translation/#traduzione), il menu permette anche di scegliere se i sottotitoli mostrano la **Trascrizione** o la **Traduzione in…** una lingua.
+Le trascrizioni dei video mostrano il video sopra il testo. Il suo menu permette di **Mostra i sottotitoli sul video** e di sceglierne la **Dimensione** (piccola, media o grande), la **Posizione** (in basso o in alto) e lo **Stile** (sfondo scuro o contorno). Se la trascrizione ha delle [traduzioni](/it/guides/summary-and-translation/#traduzione), il menu permette anche di scegliere se i sottotitoli mostrano la **Trascrizione** o la **Traduzione in…** una lingua. Anche il pulsante **Sottotitoli** della barra del lettore li mostra o li nasconde, e la freccia accanto apre lo stesso menu.
 
 ## Trova e sostituisci
 
@@ -39,6 +41,8 @@ Premi `Ctrl+F` (`⌘F` su macOS), o fai clic sulla lente dell'intestazione, per 
 - **Sostituisci** sostituisce la corrispondenza attuale, e **Sostituisci tutto** tutte, es. un nome scritto male. Seleziona **Maiuscole/minuscole** per trovare solo il testo con le stesse maiuscole.
 - La finestra non è modale, quindi puoi leggere e riprodurre il testo mentre è aperta. **Mantieni in primo piano** la tiene sopra la finestra principale.
 - `Esc` la chiude.
+
+Nella modalità **Testo semplice**, la finestra cerca soltanto (**Cerca nella trascrizione**), perché lì una corrispondenza non può essere ricondotta a un sottotitolo. Torna a **Sottotitoli** per sostituire.
 
 ## Correggi la trascrizione
 
@@ -71,7 +75,13 @@ Se una trascrizione non ha valutazioni, il menu `⋯` dice perché: **Attiva «T
 
 ## Testo semplice
 
-La modalità **Testo semplice** permette di modificare liberamente il testo, come in un editor di testo. Le modifiche vengono salvate automaticamente. La trascrizione conserva il testo originale con i marcatori temporali, quindi i sottotitoli non usano le modifiche del testo semplice.
+La modalità **Testo semplice** mostra il testo della trascrizione senza marcatori temporali. È costruito dai sottotitoli, quindi è di sola lettura, come dice la nota accanto alle modalità: per cambiarlo, [correggi i sottotitoli](#correggi-la-trascrizione), e il testo semplice li segue. Così, tutte le esportazioni e le traduzioni usano lo stesso testo.
+
+Le trascrizioni senza marcatori temporali (ad es. della API di Google) non hanno sottotitoli, quindi il loro testo semplice si può modificare liberamente, come in un editor di testo. Le modifiche vengono salvate automaticamente.
+
+:::note
+Le versioni precedenti permettevano di modificare il testo semplice delle trascrizioni con sottotitoli. Quando si apre una di quelle trascrizioni (o traduzioni), il suo testo semplice viene ricostruito dai sottotitoli, quindi quelle modifiche vengono sostituite.
+:::
 
 ## Copia ed esporta
 

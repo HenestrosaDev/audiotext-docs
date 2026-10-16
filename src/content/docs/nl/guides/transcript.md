@@ -15,6 +15,8 @@ Toont de transcriptie verdeeld in de ondertitels van de video, met het begin en 
 
 Standaard worden de tijden tot op de milliseconde getoond, zoals in de ondertitels (`00:01:05,900 – 00:01:09,350`). Om ze te vereenvoudigen (`01:05 – 01:09`), vink je **Nauwkeurige tijdstempels (HH:MM:SS,mmm)** uit in het menu `⋯`.
 
+Boven de ondertitels telt een regel ze en, als de sprekers zijn herkend, ook de sprekers (bijv. `Ondertitels: 120 · Sprekers: 3`). Een lang segment dat over meerdere ondertitels is verdeeld, telt als meerdere.
+
 Tijdstempels zijn alleen beschikbaar met **WhisperX** en met de modellen `whisper-1` en `gpt-4o-transcribe-diarize` van de **Whisper-API**. Zonder tijdstempels kan het transcript niet ondertitel voor ondertitel worden afgespeeld; gebruik dan de modus **Platte tekst**.
 
 ### De audio afspelen
@@ -29,7 +31,7 @@ Als het bronbestand is verplaatst of verwijderd, is de audio niet beschikbaar, m
 
 ### Video's met ondertitels bekijken
 
-Transcripties van video's tonen de video boven de tekst. Via het menu kun je **Ondertitels op de video weergeven** en hun **Grootte** (klein, middel of groot), **Positie** (onder of boven) en **Stijl** (donkere achtergrond of omlijning) kiezen. Als de transcriptie [vertalingen](/nl/guides/summary-and-translation/#vertaling) heeft, kies je in het menu ook of de ondertitels de **Transcriptie** of de **Vertaling naar het…** van een taal tonen.
+Transcripties van video's tonen de video boven de tekst. Via het menu kun je **Ondertitels op de video weergeven** en hun **Grootte** (klein, middel of groot), **Positie** (onder of boven) en **Stijl** (donkere achtergrond of omlijning) kiezen. Als de transcriptie [vertalingen](/nl/guides/summary-and-translation/#vertaling) heeft, kies je in het menu ook of de ondertitels de **Transcriptie** of de **Vertaling naar het…** van een taal tonen. De knop **Ondertitels** van de spelerbalk toont of verbergt ze ook, en de pijl ernaast opent hetzelfde menu.
 
 ## Zoeken en vervangen
 
@@ -39,6 +41,8 @@ Druk op `Ctrl+F` (`⌘F` op macOS), of klik op het vergrootglas in de kop, om he
 - **Vervangen** vervangt de huidige overeenkomst, en **Alles vervangen** ze allemaal, bijv. een verkeerd gespelde naam. Vink **Hoofdlettergevoelig** aan om alleen tekst met dezelfde hoofdletters te vinden.
 - Het venster is niet modaal, dus je kunt de tekst lezen en afspelen terwijl het open is. **Bovenop houden** houdt het boven het hoofdvenster.
 - `Esc` sluit het.
+
+In de modus **Platte tekst** zoekt het venster alleen (**Zoeken in de transcriptie**), omdat een overeenkomst daar niet aan een ondertitel kan worden gekoppeld. Ga terug naar **Ondertitels** om te vervangen.
 
 ## De transcriptie corrigeren
 
@@ -71,7 +75,13 @@ Als een transcriptie geen scores heeft, zegt het menu `⋯` waarom: **Zet „Tij
 
 ## Platte tekst
 
-In de modus **Platte tekst** kun je de tekst vrij bewerken, zoals in een teksteditor. Wijzigingen worden automatisch opgeslagen. Het transcript behoudt de oorspronkelijke tekst met tijdstempels, dus de ondertitels gebruiken de bewerkingen van de platte tekst niet.
+De modus **Platte tekst** toont de tekst van de transcriptie zonder tijdstempels. Die wordt opgebouwd uit de ondertitels en is dus alleen-lezen, zoals de notitie naast de modi zegt: om hem te wijzigen, [corrigeer je de ondertitels](#de-transcriptie-corrigeren), en de platte tekst volgt ze. Zo gebruiken alle exports en vertalingen dezelfde tekst.
+
+Transcripties zonder tijdstempels (bijv. van de Google-API) hebben geen ondertitels, dus hun platte tekst kun je vrij bewerken, zoals in een teksteditor. Wijzigingen worden automatisch opgeslagen.
+
+:::note
+In eerdere versies kon je de platte tekst van transcripties met ondertitels bewerken. Wanneer zo'n transcriptie (of vertaling) wordt geopend, wordt de platte tekst opnieuw opgebouwd uit de ondertitels, dus die bewerkingen worden vervangen.
+:::
 
 ## Kopiëren en exporteren
 

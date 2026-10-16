@@ -15,6 +15,8 @@ Affiche la transcription découpée en sous-titres de la vidéo, avec le début 
 
 Par défaut, les temps sont affichés à la milliseconde, comme dans les sous-titres (`00:01:05,900 – 00:01:09,350`). Pour les simplifier (`01:05 – 01:09`), décochez **Horodatages précis (HH:MM:SS,mmm)** dans le menu `⋯`.
 
+Au-dessus des sous-titres, une ligne les compte et, si les intervenants ont été identifiés, compte aussi ceux-ci (p. ex. `Sous-titres : 120 · Intervenants : 3`). Un long segment divisé en plusieurs sous-titres compte pour plusieurs.
+
 Les horodatages ne sont disponibles qu’avec **WhisperX** et les modèles `whisper-1` et `gpt-4o-transcribe-diarize` de l’**API Whisper**. Sans eux, la transcription ne peut pas être lue sous-titre par sous-titre ; utilisez plutôt le mode **Texte brut**.
 
 ### Lisez l’audio
@@ -29,7 +31,7 @@ Si le fichier source a été déplacé ou supprimé, l’audio n’est pas dispo
 
 ### Regardez les vidéos avec sous-titres
 
-Les transcriptions de vidéos affichent la vidéo au-dessus du texte. Son menu permet d’**Afficher les sous-titres sur la vidéo** et d’en choisir la **Taille** (petite, moyenne ou grande), la **Position** (en bas ou en haut) et le **Style** (fond sombre ou contour). Si la transcription a des [traductions](/fr/guides/summary-and-translation/#traduction), le menu permet aussi de choisir si les sous-titres affichent la **Transcription** ou la **Traduction** dans une langue.
+Les transcriptions de vidéos affichent la vidéo au-dessus du texte. Son menu permet d’**Afficher les sous-titres sur la vidéo** et d’en choisir la **Taille** (petite, moyenne ou grande), la **Position** (en bas ou en haut) et le **Style** (fond sombre ou contour). Si la transcription a des [traductions](/fr/guides/summary-and-translation/#traduction), le menu permet aussi de choisir si les sous-titres affichent la **Transcription** ou la **Traduction** dans une langue. Le bouton **Sous-titres** de la barre du lecteur les affiche ou les masque aussi, et la flèche à côté ouvre le même menu.
 
 ## Recherchez et remplacez
 
@@ -39,6 +41,8 @@ Appuyez sur `Ctrl+F` (`⌘F` sous macOS), ou cliquez sur la loupe de l’en-têt
 - **Remplacer** remplace l’occurrence actuelle, et **Tout remplacer** toutes, p. ex. un nom mal orthographié. Cochez **Respecter la casse** pour ne trouver que le texte avec les mêmes majuscules.
 - La fenêtre n’est pas modale : vous pouvez lire et écouter le texte pendant qu’elle est ouverte. **Garder au premier plan** la garde au-dessus de la fenêtre principale.
 - `Échap` la ferme.
+
+En mode **Texte brut**, la fenêtre ne fait que rechercher (**Rechercher dans la transcription**), car une correspondance n’y peut pas être rattachée à un sous-titre. Revenez à **Sous-titres** pour remplacer.
 
 ## Corrigez la transcription
 
@@ -71,7 +75,13 @@ Si une transcription n’a pas de notes, le menu `⋯` indique pourquoi : **Acti
 
 ## Texte brut
 
-Le mode **Texte brut** permet de modifier librement le texte, comme dans un éditeur de texte. Les modifications sont enregistrées automatiquement. La transcription conserve le texte original avec ses horodatages : les sous-titres n’utilisent donc pas les modifications du texte brut.
+Le mode **Texte brut** affiche le texte de la transcription sans horodatages. Il est construit à partir des sous-titres : il est donc en lecture seule, comme l’indique la note à côté des modes. Pour le modifier, [corrigez les sous-titres](#corrigez-la-transcription), et le texte brut les suit. Ainsi, tous les exports et toutes les traductions utilisent le même texte.
+
+Les transcriptions sans horodatages (p. ex. de l’API Google) n’ont pas de sous-titres : leur texte brut peut donc être modifié librement, comme dans un éditeur de texte. Les modifications sont enregistrées automatiquement.
+
+:::note
+Les versions précédentes permettaient de modifier le texte brut des transcriptions avec sous-titres. À l’ouverture d’une de ces transcriptions (ou traductions), son texte brut est reconstruit à partir de ses sous-titres : ces modifications sont donc remplacées.
+:::
 
 ## Copiez et exportez
 

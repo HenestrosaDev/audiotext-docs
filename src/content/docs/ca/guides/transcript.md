@@ -15,6 +15,8 @@ Mostra la transcripció dividida en els subtítols del vídeo, amb quan comença
 
 Per defecte, els temps es mostren amb precisió de mil·lisegons, com als subtítols (`00:01:05,900 – 00:01:09,350`). Per simplificar-los (`01:05 – 01:09`), desmarca **Marques de temps precises (HH:MM:SS,mmm)** al menú `⋯`.
 
+A sobre dels subtítols, una línia els compta i, si s'han identificat els parlants, també a ells (p. ex. `Subtítols: 120 · Parlants: 3`). Un segment llarg dividit en diversos subtítols compta com a diversos.
+
 Les marques de temps només estan disponibles amb **WhisperX** i amb els models `whisper-1` i `gpt-4o-transcribe-diarize` de l'**API de Whisper**. Sense elles, la transcripció no es pot reproduir subtítol a subtítol; fes servir el mode **Text pla**.
 
 ### Reprodueix l'àudio
@@ -29,7 +31,7 @@ Si el fitxer d'origen s'ha mogut o eliminat, l'àudio no està disponible, però
 
 ### Mira vídeos amb subtítols
 
-Les transcripcions de vídeos mostren el vídeo damunt del text. El seu menú et permet **Mostrar els subtítols al vídeo** i triar-ne la **Mida** (petita, mitjana o gran), la **Posició** (a baix o a dalt) i l'**Estil** (fons fosc o contorn). Si la transcripció té [traduccions](/ca/guides/summary-and-translation/#traducció), el menú també permet triar si els subtítols mostren la **Transcripció** o la **Traducció a l'idioma…** d'un idioma.
+Les transcripcions de vídeos mostren el vídeo damunt del text. El seu menú et permet **Mostrar els subtítols al vídeo** i triar-ne la **Mida** (petita, mitjana o gran), la **Posició** (a baix o a dalt) i l'**Estil** (fons fosc o contorn). Si la transcripció té [traduccions](/ca/guides/summary-and-translation/#traducció), el menú també permet triar si els subtítols mostren la **Transcripció** o la **Traducció a l'idioma…** d'un idioma. El botó **Subtítols** de la barra del reproductor també els mostra o els amaga, i la fletxa del costat obre el mateix menú.
 
 ## Cerca i substitueix
 
@@ -39,6 +41,8 @@ Prem `Ctrl+F` (`⌘F` a macOS), o fes clic a la lupa de la capçalera, per obrir
 - **Substitueix** substitueix la coincidència actual, i **Substitueix-ho tot** totes, p. ex. un nom mal escrit. Marca **Distingeix majúscules** per trobar només el text amb les mateixes majúscules.
 - La finestra no és modal, així que pots llegir i reproduir el text mentre és oberta. **Mantén-la al davant** la manté damunt de la finestra principal.
 - `Esc` la tanca.
+
+Al mode **Text pla**, la finestra només cerca (**Cerca a la transcripció**), ja que una coincidència allà no es pot relacionar amb un subtítol. Torna a **Subtítols** per reemplaçar.
 
 ## Corregeix la transcripció
 
@@ -71,7 +75,13 @@ Si una transcripció no té puntuacions, el menú `⋯` diu per què: **Activa �
 
 ## Text pla
 
-El mode **Text pla** et permet editar el text lliurement, com en un editor de text. Els canvis es desen automàticament. La transcripció conserva el text original amb les marques de temps, així que els subtítols no fan servir els canvis del text pla.
+El mode **Text pla** mostra el text de la transcripció sense marques de temps. Es construeix a partir dels subtítols, així que és només de lectura, com diu la nota al costat dels modes: per canviar-lo, [corregeix els subtítols](#corregeix-la-transcripció), i el text pla els segueix. Així, totes les exportacions i traduccions fan servir el mateix text.
+
+Les transcripcions sense marques de temps (p. ex. de l'API de Google) no tenen subtítols, així que el seu text pla es pot editar lliurement, com en un editor de text. Els canvis es desen automàticament.
+
+:::note
+Les versions anteriors permetien editar el text pla de les transcripcions amb subtítols. En obrir una d'aquestes transcripcions (o traduccions), el seu text pla es torna a construir a partir dels subtítols, així que aquests canvis es reemplacen.
+:::
 
 ## Copia i exporta
 

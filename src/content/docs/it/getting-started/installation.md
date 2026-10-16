@@ -58,7 +58,7 @@ La prima volta che trascrivi con **WhisperX** (il motore predefinito), viene sca
 
 Quando esce una nuova versione, Audiotext mostra un pulsante **La versione … è disponibile** nella barra superiore. Fai clic per aprire la pagina della versione, scarica il file per il tuo sistema e installalo come la prima volta: esegui il nuovo programma di installazione su Windows, trascina la nuova app nella cartella **Applicazioni** su macOS, oppure esegui l'`install.sh` del nuovo archivio su Linux. La versione precedente viene sostituita, e le impostazioni e la cronologia vengono mantenute, perché sono salvate nella tua [cartella di configurazione dell'utente](/it/reference/files-and-data/#cartella-di-configurazione-dellutente). Se usi il componente aggiuntivo per la GPU, sceglilo di nuovo durante l'installazione.
 
-Per controllare tu stesso se c'è una nuova versione, apri **Preferenze** → **Informazioni** → **Controlla aggiornamenti**. Per non controllare più all'apertura dell'app, disattiva **Generale** → **Aggiornamenti**.
+Per controllare tu stesso se c'è una nuova versione, apri **Preferenze** → **Informazioni** → **Controlla aggiornamenti**. Per non controllare più all'apertura dell'app, disattiva **Generale** → **Controlla automaticamente gli aggiornamenti**.
 
 ## Disinstalla l'app
 

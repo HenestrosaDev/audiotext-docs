@@ -15,9 +15,9 @@ Les **Preferències** contenen la configuració que no canvia amb cada transcrip
 - **Format de la data**: com es mostren les dates de les transcripcions, en l'idioma de la interfície: curt (`4/10/26`), mitjà (`4 d’oct. 2026`, per defecte), llarg (`4 d’octubre de 2026`) o ISO (`2026-10-04`). El menú mostra cada format amb un exemple.
 - **Format de l'hora**: **Automàtic** (el rellotge de l'idioma de la interfície), de 12 hores (`1:30 p. m.`) o de 24 hores (`13:30`).
 - **Notificacions**: mostra una notificació del sistema quan una transcripció està a punt (en una carpeta, quan ho estan tots els fitxers, i en una carpeta vigilada, cada vegada que ho està un fitxer nou). Activat per defecte. A macOS provenen de **Script Editor** i a Windows de **Windows PowerShell**, de manera que es permeten o se silencien per a aquestes aplicacions a la configuració del sistema. A Linux requereixen `notify-send` (el paquet `libnotify-bin` o `libnotify`).
-- **Actualitzacions**: comprova si hi ha una versió nova quan s'obre l'aplicació i, si n'hi ha, mostra un botó **Versió … disponible** a la barra superior que obre la seva pàgina de baixada. No s'ofereixen les versions preliminars. Activat per defecte.
+- **Cerca actualitzacions automàticament**: comprova si hi ha una versió nova quan s'obre l'aplicació i, si n'hi ha, mostra un botó **Versió … disponible** a la barra superior que obre la seva pàgina de baixada. No s'ofereixen les versions preliminars. Activat per defecte.
 
-## IA
+## Proveïdors
 
 Els proveïdors dels [resums, les preguntes i les traduccions](/ca/guides/summary-and-translation/):
 
@@ -30,27 +30,35 @@ Deixa el **Model** buit per fer servir el model per defecte del proveïdor. El b
 
 ## Claus d'API
 
-Les claus de cada servei. Fes clic a **Configura la clau d'API…** per introduir-ne una, o a **Canvia la clau d'API…** per substituir-la (deixa-la buida per eliminar-la). Es desen al magatzem de credencials del sistema.
+Les claus de cada servei. Fes clic a **Configura la clau d'API…** per introduir-ne una, o a **Canvia la clau d'API…** per substituir-la (deixa-la buida per eliminar-la). Es desen al magatzem de credencials del sistema. S'agrupen segons per a què serveixen, i les que estan configurades mostren una marca.
 
-| Clau | Es fa servir per a |
-| --- | --- |
-| Clau d'API d'OpenAI | L'API de Whisper, i resumir, preguntar i traduir amb OpenAI |
-| Clau d'API d'Anthropic | Resumir, preguntar i traduir amb Claude |
-| Clau d'API de DeepSeek | Resumir, preguntar i traduir amb DeepSeek |
-| Clau d'API de Gemini | Resumir, preguntar i traduir amb Gemini (de Google AI Studio) |
-| Clau d'API de Mistral | Resumir, preguntar i traduir amb Mistral |
-| Clau d'API de xAI | Resumir, preguntar i traduir amb Grok |
-| Clau d'API de DeepL | Traduir amb DeepL (les claus del pla gratuït també funcionen) |
-| Clau d'API de Google | Google Speech-to-Text més enllà del nivell gratuït, i Google Translate (Cloud Translation API) |
-| Token de Hugging Face | Identificar els parlants amb WhisperX |
+| Grup | Clau | Es fa servir per a |
+| --- | --- | --- |
+| **Proveïdors de LLM** | Clau d'API d'OpenAI | L'API de Whisper, i resumir, preguntar i traduir amb OpenAI |
+| | Clau d'API d'Anthropic | Resumir, preguntar i traduir amb Claude |
+| | Clau d'API de DeepSeek | Resumir, preguntar i traduir amb DeepSeek |
+| | Clau d'API de Gemini | Resumir, preguntar i traduir amb Gemini (de Google AI Studio) |
+| | Clau d'API de Mistral | Resumir, preguntar i traduir amb Mistral |
+| | Clau d'API de xAI | Resumir, preguntar i traduir amb Grok |
+| **Traducció** | Clau d'API de DeepL | Traduir amb DeepL (les claus del pla gratuït també funcionen) |
+| | Clau d'API de Google | Google Speech-to-Text més enllà del nivell gratuït, i Google Translate (Cloud Translation API) |
+| **Transcripció** | Token de Hugging Face | Identificar els parlants amb WhisperX |
 
 :::caution
 Cada proveïdor cobra per l'ús de la seva API, del qual Audiotext no es fa responsable. Si OpenAI retorna l'error `429` amb una clau nova, consulta [Resolució de problemes](/ca/help/troubleshooting/#lapi-de-whisper-retorna-lerror-429).
 :::
 
-## WhisperX
+## Transcripció
 
-**Tipus de càlcul**, **Mida del lot** i **Utilitza la CPU**. Consulta les [opcions avançades de WhisperX](/ca/reference/engines/#opcions-avançades). En un Mac amb Apple Silicon, WhisperX transcriu a la seva GPU tret que **Utilitza la CPU** estigui activat. Consulta [En un Mac](/ca/reference/engines/#en-un-mac).
+Les opcions dels motors, en una secció cadascun.
+
+### WhisperX
+
+**Tipus de càlcul**, **Mida del lot** i **Utilitza la CPU**. Consulta les [opcions avançades de WhisperX](/ca/reference/engines/#opcions-avançades). En un Mac amb Apple Silicon, WhisperX transcriu a la seva GPU tret que **Utilitza la CPU** estigui activat. Consulta [En un Mac](/ca/reference/engines/#en-un-mac). A la GPU del Mac, les indicacions de **Tipus de càlcul** i **Mida del lot** diuen que no s'apliquen, i **Utilitza la CPU** enllaça als **Models compatibles**.
+
+### API de Whisper
+
+**Temperatura** i **Marques de temps de les paraules**. Consulta les [opcions de l'API de Whisper](/ca/reference/engines/#opcions).
 
 ## Subtítols
 
@@ -65,10 +73,6 @@ Com es divideixen els subtítols: els que es mostren damunt del vídeo i al mode
 Les línies d'un subtítol s'equilibren, i les llengües que s'escriuen sense espais es parteixen entre caràcters.
 
 **Ressalta les paraules** subratlla cada paraula mentre es diu als fitxers `.srt` i `.vtt`. Desactivat per defecte.
-
-## API de Whisper
-
-**Temperatura** i **Marques de temps de les paraules**. Consulta les [opcions de l'API de Whisper](/ca/reference/engines/#opcions).
 
 ## Quant a
 

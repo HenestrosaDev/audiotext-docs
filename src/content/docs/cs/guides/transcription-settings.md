@@ -44,8 +44,8 @@ Používá je WhisperX a Whisper API, kromě modelu `gpt-4o-transcribe-diarize`.
 
 ## Možnosti
 
-- **Časování slov** (WhisperX): zarovná každé slovo se zvukem, aby se při přehrávání zvýrazňovalo a abyste mohli [zkontrolovat slova](/cs/guides/transcript/#kontrola-slov-s-nízkou-jistotou), kterými si je nejméně jistý. Trvá o něco déle. Ve výchozím stavu zapnuto.
-- **Extrahovat řeč**: před přepisem potlačí hudbu a hluk v pozadí.
+- **Časování slov** (WhisperX): zarovná každé slovo se zvukem, aby se při přehrávání zvýrazňovalo a abyste mohli [zkontrolovat slova](/cs/guides/transcript/#kontrola-slov-s-nízkou-jistotou), kterými si je nejméně jistý. Trvá o něco déle. Ve výchozím stavu zapnuto. Titulky potřebují časy slov, proto se volba zapne a uzamkne, dokud je v poli **Typy souborů** u složky zvolen `.srt` nebo `.vtt`; vaše vlastní volba se vrátí, jakmile zvolené nejsou.
+- **Potlačit šum na pozadí**: před přepisem potlačí brum a stálý šum na pozadí a vyrovná tichou řeč. Trvá déle.
 - **Rozpoznat mluvčí** (WhisperX): označí, kdo v které části mluví, např. `SPEAKER_00`. Pokud víte, kolik lidí mluví, zadejte to do pole **Počet mluvčích** (`0` ho rozpozná automaticky). Vyžaduje bezplatný token Hugging Face; viz [Rozpoznání mluvčích](#rozpoznání-mluvčích). U Whisper API rozpoznává mluvčí model `gpt-4o-transcribe-diarize`.
 
 ### Rozpoznání mluvčích

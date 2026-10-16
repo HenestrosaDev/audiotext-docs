@@ -34,21 +34,27 @@ Sağlayıcının API anahtarı ayarlanmamışsa **Özet** modu onu ayarlamayı �
 - Transkripsiyonun zaman damgaları varsa her yanıt, bunun söylendiği transkripsiyon bölümlerine bağlantı verir. Sesi oradan oynatmak için birine tıklayın.
 - Sorular ve yanıtları transkripsiyonla birlikte geçmişte saklanır. Başlıktaki çöp kutusu, önce sorarak konuşmayı temizler.
 
-Soruları, **Tercihler** → **YZ** → **Sor** bölümünde onlar için seçilen sağlayıcı yanıtlar; siz değiştirene kadar bu, özetlerin sağlayıcısıdır. Özetlerde olduğu gibi çok uzun transkripsiyonların yalnızca başı okunur.
+Soruları, **Tercihler** → **Sağlayıcılar** → **Sor** bölümünde onlar için seçilen sağlayıcı yanıtlar; siz değiştirene kadar bu, özetlerin sağlayıcısıdır. Özetlerde olduğu gibi çok uzun transkripsiyonların yalnızca başı okunur.
 
 ## Çeviri
 
 **Çevir**'e tıklayın, **Hedef dil:** alanından dili ve **Şununla çevir:** alanından sağlayıcıyı seçin ve onaylayın. İletişim kutusu seçilen sağlayıcının ne yaptığını açıklar ve API anahtarı eksikse ayarlamayı önerir. Çeviri, orijinal metnin sağındaki bir panelde gösterilir.
 
 - Transkripsiyonun zaman damgaları varsa, her bölümden önce ve sonra söylenen metin bağlam olarak kullanılarak cümle cümle çevrilir; böylece çeviri her cümlenin zaman damgalarıyla başlar: oynatılan cümleyi vurgular ve bir cümleye tıklamak onu oynatır.
-- Düz metni düzenlediyseniz bunun yerine düzenlenmiş metin zaman damgası olmadan çevrilir.
+- Transkripsiyonun zaman damgaları yoksa tüm metni tek seferde çevrilir.
 - İki metin birlikte kaydırılır, böylece sesin aynı bölümünü gösterirler. Aralarındaki tutamaktaki yuvarlak düğme bunu açar ve kapatır. Boyutlarını değiştirmek için tutamağı sürükleyin veya boyutları sıfırlamak için çift tıklayın.
 
 Çevirinin başlığındaki düğmeler içinde bulup değiştirir, onu kopyalar, dışa aktarır ve **Yeniden çevir** (aynı sağlayıcı ve modelle) ile **Çeviriyi gizle** seçeneklerini sunar. **Çevir** düğmesi ayrıca onu yeniden göstermeyi, **Başka bir dile çevir…** veya **Çeviriyi sil** seçeneklerini sunar.
 
 ### Birden fazla dil
 
-Bir transkripsiyon birden fazla dile, hatta aynı anda çevrilebilir ve her çeviri saklanır. Panelin başlığı gösterileni seçer, her birinin ne kadarının çevrildiğini gösterir ve başka bir dile çevirme seçeneğiyle biter. Zaten çevirisi olan bir dile çevirmek, düzeltmeleri kaybolacağı için önce sorarak onun yerini alır.
+Bir transkripsiyon birden fazla dile, hatta aynı anda çevrilebilir ve her çeviri saklanır. Panelin başlığı gösterileni seçer, her birinin ne kadarının çevrildiğini gösterir ve başka bir dile çevirme seçeneğiyle biter. Zaten çevirisi olan bir dile çevirmek, düzeltmeleri kaybolacağı için önce sorarak onun yerini alır. Başlığın menüsü, bitmemiş her çevirinin kaç altyazısının çevrildiğini gösterir (ör. `İngilizce · 148/150`).
+
+### Çevirinin ilerlemesi
+
+İlerleme altyazı cinsinden sayılır: bir altyazı, metni olduğunda çevrilmiş sayılır. Çevirinin üstündeki bir satır kaç tanesinin çevrildiğini gösterir (ör. `Çevrildi: 148/150 · %98`). Yüzde aşağı yuvarlanır, bu yüzden `%100` yalnızca hepsi çevrildiğinde görünür.
+
+Çevrilmemiş olanlar kaldıkça yanındaki oklar önceki ve sonraki **Henüz çevrilmedi** altyazısına gider, her birini vurgular ve hangisinde olduğunuzu gösterir (ör. `1 / 2`). Birinin üzerine geldiğinizde sağında, onu çevirmek için iletişim kutusunu açan **Metni çevir…** düğmesi görünür.
 
 ### Çeviriyi düzeltin ve zamanlamasını değiştirin
 
@@ -61,7 +67,7 @@ Bir çeviri çoğu zaman orijinalden farklı bir zamanlamaya ihtiyaç duyar, ör
 
 ### Kendiniz çevirin
 
-Çeviriyi kendiniz yazmak için **Şununla çevir:** alanında **Elle** seçeneğini seçin. API anahtarı gerekmez. Çeviri, transkripsiyonun her altyazısı için **Henüz çevrilmedi** olarak gösterilen boş bir segmentle başlar; panel kaç tane kaldığını gösterir. Birine sağ tıklayıp **Metni çevir…** seçeneğini seçin: iletişim kutusu o sırada söylenen orijinal metni gösterir.
+Çeviriyi kendiniz yazmak için **Şununla çevir:** alanında **Elle** seçeneğini seçin. API anahtarı gerekmez. Çeviri, transkripsiyonun her altyazısı için **Henüz çevrilmedi** olarak gösterilen boş bir segmentle başlar; panel kaç tane kaldığını gösterir. Birine sağ tıklayıp **Metni çevir…** seçeneğini seçin: iletişim kutusu o sırada söylenen orijinal metni gösterir. Birinin üzerine geldiğinizde sağında, aynı iletişim kutusunu açan bir **Metni çevir…** düğmesi görünür.
 
 ### Altyazılar ve dışa aktarma
 
@@ -74,7 +80,7 @@ Transkripsiyonu bir sağlayıcı olmadan doğrudan başka bir dilde almak için 
 
 ## Sağlayıcılar
 
-Sağlayıcılar **Tercihler** → **YZ** bölümünde, özetler, sorular ve çeviriler için ayrı ayrı seçilir.
+Sağlayıcılar **Tercihler** → **Sağlayıcılar** bölümünde, özetler, sorular ve çeviriler için ayrı ayrı seçilir.
 
 | Sağlayıcı | Varsayılan model | API anahtarı |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ Sağlayıcının varsayılan modelini kullanmak için **Model**'i boş bırakın
 
 ### Ollama
 
-[Ollama](https://ollama.com), modelleri bilgisayarınızda, API anahtarı olmadan ve metni hiçbir yere göndermeden çalıştırır. Kurun, bir model indirin (ör. `ollama pull llama3.2`) ve sağlayıcı olarak **Ollama**'yı seçin. Varsayılan adreste çalışmıyorsa **Tercihler** → **YZ** bölümündeki **Sunucu URL'si**'ni değiştirin (varsayılan `http://localhost:11434`).
+[Ollama](https://ollama.com), modelleri bilgisayarınızda, API anahtarı olmadan ve metni hiçbir yere göndermeden çalıştırır. Kurun, bir model indirin (ör. `ollama pull llama3.2`) ve sağlayıcı olarak **Ollama**'yı seçin. Varsayılan adreste çalışmıyorsa **Tercihler** → **Sağlayıcılar** bölümündeki **Sunucu URL'si**'ni değiştirin (varsayılan `http://localhost:11434`).
 
 :::note
 Her sağlayıcı API'sinin kullanımı için ücret alır; Audiotext bundan sorumlu değildir. API anahtarları sisteminizin kimlik bilgisi deposunda saklanır. [Dosyalar ve veriler](/tr/reference/files-and-data/) sayfasına bakın.

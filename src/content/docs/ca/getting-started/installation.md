@@ -58,7 +58,7 @@ La primera vegada que transcrius amb **WhisperX** (el motor per defecte), es des
 
 Quan es publica una versió nova, Audiotext mostra un botó **Versió … disponible** a la barra superior. Fes-hi clic per obrir la pàgina de la versió, baixa el fitxer del teu sistema i instal·la'l com la primera vegada: executa l'instal·lador nou a Windows, arrossega l'aplicació nova a la carpeta **Aplicacions** a macOS o executa l'`install.sh` de l'arxiu nou a Linux. La versió anterior es reemplaça, i la configuració i l'historial es mantenen, ja que es desen a la teva [carpeta de configuració d'usuari](/ca/reference/files-and-data/#carpeta-de-configuració-dusuari). Si fas servir el complement de GPU, torna a triar-lo en instal·lar.
 
-Per comprovar tu mateix si hi ha una versió nova, obre **Preferències** → **Quant a** → **Cerca actualitzacions**. Perquè no es comprovi en obrir l'aplicació, desactiva **General** → **Actualitzacions**.
+Per comprovar tu mateix si hi ha una versió nova, obre **Preferències** → **Quant a** → **Cerca actualitzacions**. Perquè no es comprovi en obrir l'aplicació, desactiva **General** → **Cerca actualitzacions automàticament**.
 
 ## Desinstal·la l'aplicació
 

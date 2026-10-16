@@ -34,21 +34,27 @@ Abre o modo **Preguntar**, escribe unha pregunta en **Fai unha pregunta sobre a 
 - Se a transcrición ten marcas de tempo, cada resposta enlaza coas partes da transcrición onde se di. Fai clic nunha para reproducir o audio desde aí.
 - As preguntas e as súas respostas gárdanse no historial coa transcrición. A papeleira da cabeceira borra a conversa, despois de preguntarche.
 
-As preguntas respóndeas o provedor escollido para elas en **Preferencias** → **IA** → **Preguntar**, que é o dos resumos ata que o cambies. Como nos resumos, das transcricións moi longas só se le o comezo.
+As preguntas respóndeas o provedor escollido para elas en **Preferencias** → **Provedores** → **Preguntar**, que é o dos resumos ata que o cambies. Como nos resumos, das transcricións moi longas só se le o comezo.
 
 ## Tradución
 
 Fai clic en **Traducir**, escolle o idioma en **Traducir ao:** e o provedor en **Traducir con:**, e confirma. O diálogo di que fai o provedor escollido, e ofrece configurar a súa clave de API se falta. A tradución móstrase nun panel á dereita do texto orixinal.
 
 - Se a transcrición ten marcas de tempo, tradúcese frase a frase, co texto que se di antes e despois de cada parte como contexto, así que a tradución comeza coas marcas de tempo de cada frase: resalta a frase que se reproduce, e ao facer clic nunha reprodúcese.
-- Se editaches o texto plano, tradúcese o texto editado, sen marcas de tempo.
+- Se a transcrición non ten marcas de tempo, tradúcese todo o seu texto dunha vez.
 - Os dous textos desprázanse xuntos, así que mostran a mesma parte do audio. O botón redondo do separador entre eles actívao e desactívao. Arrastra o separador para cambiar o seu tamaño, ou fai dobre clic nel para restablecelo.
 
 Os botóns da cabeceira da tradución buscan e substitúen nela, cópiana, expórtana, **Tradúcena de novo** (co mesmo provedor e o mesmo modelo) e ocúltana (**Ocultar a tradución**). O botón **Traducir** tamén che permite mostrala de novo, **Traducir a outro idioma…** ou **Eliminar a tradución**.
 
 ### Varios idiomas
 
-Unha transcrición pódese traducir a varios idiomas, mesmo á vez, e gárdase cada tradución. O título do panel escolle a que se mostra, di canto está traducida cada unha e remata coa opción de traducir a outro idioma. Traducir a un idioma que xa ten unha tradución substitúea, despois de preguntarche, xa que se perden as súas correccións.
+Unha transcrición pódese traducir a varios idiomas, mesmo á vez, e gárdase cada tradución. O título do panel escolle a que se mostra, di canto está traducida cada unha e remata coa opción de traducir a outro idioma. Traducir a un idioma que xa ten unha tradución substitúea, despois de preguntarche, xa que se perden as súas correccións. O menú do título mostra cantos subtítulos de cada tradución sen rematar están traducidos (p. ex. `Inglés · 148/150`).
+
+### Progreso da tradución
+
+O progreso cóntase en subtítulos: un está traducido cando ten texto. Enriba da tradución, unha liña mostra cantos están traducidos (p. ex. `Traducido: 148/150 · 98 %`). A porcentaxe arredóndase cara abaixo, así que `100 %` só aparece cando están todos traducidos.
+
+Mentres queden algúns, as frechas xunto a ela van aos subtítulos anterior e seguinte **Aínda sen traducir**, resaltando cada un, e mostran en cal estás (p. ex. `1 de 2`). Pasa o rato por riba dun para mostrar o botón **Traducir texto…** á súa dereita, que abre o diálogo para traducilo.
 
 ### Corrixe e axusta os tempos da tradución
 
@@ -61,7 +67,7 @@ Unha tradución adoita precisar outros tempos ca o orixinal, p. ex. subtítulos 
 
 ### Tradúcea ti mesmo
 
-Para escribir a tradución ti mesmo, escolle **Manual** en **Traducir con:**. Non precisa clave de API. A tradución comeza cun segmento baleiro por cada subtítulo da transcrición, que se mostra como **Aínda sen traducir**, e o panel mostra cantos quedan. Fai clic dereito nun e escolle **Traducir texto…**: o diálogo mostra o texto orixinal que se di mentres tanto.
+Para escribir a tradución ti mesmo, escolle **Manual** en **Traducir con:**. Non precisa clave de API. A tradución comeza cun segmento baleiro por cada subtítulo da transcrición, que se mostra como **Aínda sen traducir**, e o panel mostra cantos quedan. Fai clic dereito nun e escolle **Traducir texto…**: o diálogo mostra o texto orixinal que se di mentres tanto. Ao pasar o rato por riba dun aparece un botón **Traducir texto…** á súa dereita, que abre o mesmo diálogo.
 
 ### Subtítulos e exportación
 
@@ -74,7 +80,7 @@ Para obter a transcrición directamente noutro idioma, sen provedor, tamén pode
 
 ## Provedores
 
-Os provedores escóllense en **Preferencias** → **IA**, por separado para os resumos, as preguntas e as traducións.
+Os provedores escóllense en **Preferencias** → **Provedores**, por separado para os resumos, as preguntas e as traducións.
 
 | Provedor | Modelo predeterminado | Clave de API |
 | --- | --- | --- |
@@ -95,7 +101,7 @@ As traducións tamén se poden facer con:
 
 ### Ollama
 
-[Ollama](https://ollama.com) executa os modelos no teu ordenador, sen clave de API e sen enviar o texto a ningures. Instálao, descarga un modelo (p. ex. `ollama pull llama3.2`) e escolle **Ollama** como provedor. Se non se executa no enderezo predeterminado, cambia o **URL do servidor** en **Preferencias** → **IA** (`http://localhost:11434` de forma predeterminada).
+[Ollama](https://ollama.com) executa os modelos no teu ordenador, sen clave de API e sen enviar o texto a ningures. Instálao, descarga un modelo (p. ex. `ollama pull llama3.2`) e escolle **Ollama** como provedor. Se non se executa no enderezo predeterminado, cambia o **URL do servidor** en **Preferencias** → **Provedores** (`http://localhost:11434` de forma predeterminada).
 
 :::note
 Cada provedor cobra polo uso da súa API, do que Audiotext non se fai responsable. As claves de API gárdanse no almacén de credenciais do teu sistema. Consulta [Ficheiros e datos](/gl/reference/files-and-data/).

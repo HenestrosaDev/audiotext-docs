@@ -15,6 +15,8 @@ Afișează transcrierea împărțită în subtitrările videoclipului, cu moment
 
 Implicit, timpii sunt afișați la milisecundă, ca în subtitrări (`00:01:05,900 – 00:01:09,350`). Pentru a-i simplifica (`01:05 – 01:09`), debifați **Marcaje de timp precise (HH:MM:SS,mmm)** în meniul `⋯`.
 
+Deasupra subtitrărilor, un rând le numără și, dacă vorbitorii au fost identificați, îi numără și pe ei (de ex. `Subtitrări: 120 · Vorbitori: 3`). Un segment lung împărțit în mai multe subtitrări contează ca mai multe.
+
 Marcajele de timp sunt disponibile doar cu **WhisperX** și cu modelele `whisper-1` și `gpt-4o-transcribe-diarize` ale **API-ului Whisper**. Fără ele, transcrierea nu poate fi redată subtitrare cu subtitrare; folosiți în schimb modul **Text simplu**.
 
 ### Redați sunetul
@@ -29,7 +31,7 @@ Dacă fișierul sursă a fost mutat sau șters, sunetul nu este disponibil, dar 
 
 ### Urmăriți videoclipuri cu subtitrări
 
-Transcrierile videoclipurilor afișează videoclipul deasupra textului. Meniul lui permite **Afișează subtitrările pe videoclip** și alegerea **Dimensiunii** (mică, medie sau mare), a **Poziției** (jos sau sus) și a **Stilului** (fundal întunecat sau contur). Dacă transcrierea are [traduceri](/ro/guides/summary-and-translation/#traducere), meniul alege și dacă subtitrările arată **Transcrierea** sau **Traducerea** într-o limbă.
+Transcrierile videoclipurilor afișează videoclipul deasupra textului. Meniul lui permite **Afișează subtitrările pe videoclip** și alegerea **Dimensiunii** (mică, medie sau mare), a **Poziției** (jos sau sus) și a **Stilului** (fundal întunecat sau contur). Dacă transcrierea are [traduceri](/ro/guides/summary-and-translation/#traducere), meniul alege și dacă subtitrările arată **Transcrierea** sau **Traducerea** într-o limbă. Butonul **Subtitrări** din bara playerului le afișează sau le ascunde și el, iar săgeata de lângă el deschide același meniu.
 
 ## Căutați și înlocuiți
 
@@ -39,6 +41,8 @@ Apăsați `Ctrl+F` (`⌘F` pe macOS) sau faceți clic pe lupa din antet pentru a
 - **Înlocuiește** înlocuiește potrivirea curentă, iar **Înlocuiește tot** pe toate, de ex. un nume scris greșit. Bifați **Potrivire majuscule** pentru a găsi doar textul cu aceleași majuscule.
 - Fereastra nu este modală, deci puteți citi și reda textul cât timp este deschisă. **Păstrează deasupra** o ține deasupra ferestrei principale.
 - `Esc` o închide.
+
+În modul **Text simplu**, fereastra doar caută (**Caută în transcriere**), deoarece o potrivire de acolo nu poate fi legată de o subtitrare. Reveniți la **Subtitrări** pentru a înlocui.
 
 ## Corectați transcrierea
 
@@ -71,7 +75,13 @@ Dacă o transcriere nu are scoruri, meniul `⋯` spune de ce: **Activează „Te
 
 ## Text simplu
 
-Modul **Text simplu** vă permite să editați liber textul, ca într-un editor de text. Modificările se salvează automat. Transcrierea păstrează textul original cu marcajele de timp, deci subtitrările nu folosesc editările textului simplu.
+Modul **Text simplu** afișează textul transcrierii fără marcaje de timp. Este construit din subtitrări, deci este doar pentru citire, cum spune nota de lângă moduri: pentru a-l schimba, [corectați subtitrările](#corectați-transcrierea), iar textul simplu le urmează. Astfel, toate exporturile și traducerile folosesc același text.
+
+Transcrierile fără marcaje de timp (de ex. de la API-ul Google) nu au subtitrări, așa că textul lor simplu poate fi editat liber, ca într-un editor de text. Modificările se salvează automat.
+
+:::note
+Versiunile anterioare permiteau editarea textului simplu al transcrierilor cu subtitrări. Când se deschide una dintre aceste transcrieri (sau traduceri), textul ei simplu este reconstruit din subtitrări, așa că acele editări sunt înlocuite.
+:::
 
 ## Copiați și exportați
 
