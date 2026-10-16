@@ -25,7 +25,7 @@ Chạy trình cài đặt và làm theo các bước. Không cần quyền quả
 
 ### macOS
 
-Mở tệp `.dmg` và kéo **Audiotext** vào thư mục **Ứng dụng**. Ứng dụng chưa được Apple công chứng, nên macOS sẽ chặn lần mở đầu tiên: vào **Cài đặt hệ thống** → **Quyền riêng tư & Bảo mật** và nhấp **Vẫn mở** cạnh thông báo về Audiotext. Trên macOS, WhisperX chạy trên CPU vì không có CUDA. Máy Mac dùng chip Intel không được hỗ trợ, vì PyTorch không còn hỗ trợ chúng.
+Mở tệp `.dmg` và kéo **Audiotext** vào thư mục **Ứng dụng**. Ứng dụng chưa được Apple công chứng, nên macOS sẽ chặn lần mở đầu tiên: vào **Cài đặt hệ thống** → **Quyền riêng tư & Bảo mật** và nhấp **Vẫn mở** cạnh thông báo về Audiotext. Trên máy Mac, WhisperX chép lời trên GPU của Apple Silicon bằng [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), nhanh hơn nhiều so với trên CPU, không cần tiện ích bổ sung nào. Máy Mac dùng chip Intel không được hỗ trợ, vì PyTorch không còn hỗ trợ chúng.
 
 ### Linux
 
@@ -49,7 +49,7 @@ Lần đầu chép lời bằng **WhisperX** (công cụ mặc định), mô hì
 
 ## Yêu cầu
 
-- **WhisperX** chạy trên máy tính của bạn. Nó hoạt động trên mọi CPU, nhưng nhanh hơn nhiều trên GPU NVIDIA có CUDA. Xem [Công cụ](/vi/reference/engines/) để chọn mô hình phù hợp với phần cứng của bạn.
+- **WhisperX** chạy trên máy tính của bạn. Nó hoạt động trên mọi CPU, nhưng nhanh hơn nhiều trên GPU NVIDIA có CUDA hoặc trên GPU của máy Mac dùng Apple Silicon. Xem [Công cụ](/vi/reference/engines/) để chọn mô hình phù hợp với phần cứng của bạn.
 - **Whisper API** và **Google API** chạy trên máy chủ từ xa, nên cần kết nối Internet nhưng không cần phần cứng mạnh.
 - Để chép lời từ micrô, hệ thống phải nhận diện được thiết bị đầu vào.
 - Trên Linux, ghi âm và phát âm thanh cần [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` trên Ubuntu hoặc Debian).

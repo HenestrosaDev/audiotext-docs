@@ -15,7 +15,7 @@ Trước khi chép lời, Audiotext hiển thị cài đặt của bản chép l
 
 | Công cụ | Chạy ở đâu | Chi phí | Ghi chú |
 | --- | --- | --- | --- |
-| **WhisperX** (mặc định) | Máy tính của bạn | Miễn phí, không giới hạn | Riêng tư và ngoại tuyến. Nhiều tùy chọn hơn: người nói, thời gian theo từng từ, văn bản trực tiếp. |
+| **WhisperX** (mặc định) | Máy tính của bạn | Miễn phí, không giới hạn | Riêng tư và ngoại tuyến. Nhiều tùy chọn hơn: người nói, thời gian theo từng từ, văn bản trực tiếp. Chạy trên GPU của máy Mac dùng Apple Silicon. |
 | **Whisper API** | Máy chủ của OpenAI | Trả phí theo phút | Cần [khóa API OpenAI](/vi/reference/preferences/#khóa-api). Dành cho máy tính không chạy WhisperX mượt mà. |
 | **Google API** | Máy chủ của Google | Gói miễn phí hoặc trả phí | Chất lượng thấp hơn và không có dấu thời gian. Khóa API là tùy chọn. |
 
@@ -44,7 +44,7 @@ WhisperX và Whisper API sử dụng chúng, trừ mô hình `gpt-4o-transcribe-
 
 ## Tùy chọn
 
-- **Thời gian theo từng từ** (WhisperX): căn chỉnh từng từ với âm thanh để đánh dấu khi phát. Mất thêm một chút thời gian. Phụ đề đã sử dụng sẵn.
+- **Thời gian theo từng từ** (WhisperX): căn chỉnh từng từ với âm thanh để đánh dấu khi phát và để [rà soát các từ](/vi/guides/transcript/#rà-soát-các-từ-có-độ-tin-cậy-thấp) mà nó kém chắc chắn nhất. Mất thêm một chút thời gian. Bật theo mặc định.
 - **Tách giọng nói**: giảm nhạc và tiếng ồn nền trước khi chép lời.
 - **Nhận diện người nói** (WhisperX): gắn nhãn ai nói ở mỗi đoạn, ví dụ `SPEAKER_00`. Nếu bạn biết có bao nhiêu người nói, hãy nhập vào **Số người nói** (`0` để tự phát hiện). Cần token Hugging Face miễn phí; xem [Nhận diện những người nói](#nhận-diện-những-người-nói). Với Whisper API, mô hình `gpt-4o-transcribe-diarize` nhận diện người nói.
 

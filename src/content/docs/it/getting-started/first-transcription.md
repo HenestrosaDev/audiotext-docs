@@ -41,8 +41,9 @@ Se c'è un'altra trascrizione in corso, il pulsante diventa **Aggiungi alla coda
 Quando finisce, la trascrizione si apre:
 
 - Fai clic su un segmento per riprodurre l'audio da quel punto.
-- Passa tra **Trascrizione**, **Testo semplice** e **Riassunto**.
-- Usa **Traduci**, **Copia** ed **Esporta** per tradurla, copiarla o salvarla come file.
+- Passa tra **Sottotitoli**, **Testo semplice**, **Riassunto** e **Chiedi**, per fare domande su di essa.
+- Usa **Traduci** per tradurla, e i pulsanti dell'intestazione della trascrizione per trovare e sostituire, copiarla o salvarla come file.
+- Rivedi le parole sottolineate, di cui il motore è meno sicuro.
 
 Consulta [La trascrizione](/it/guides/transcript/) per scoprire tutto quello che puoi farci.
 
@@ -52,8 +53,10 @@ Consulta [La trascrizione](/it/guides/transcript/) per scoprire tutto quello che
 | --- | --- |
 | `Ctrl+Invio` / `⌘↩` | Avviare la trascrizione, o avviare e fermare la registrazione |
 | `Ctrl+O` / `⌘O` | Scegliere un file (o una cartella, nell'origine cartella) |
-| `Ctrl+S` / `⌘S` | Esportare la trascrizione mostrata |
-| `Ctrl+F` / `⌘F` | Cercare nella trascrizione |
+| `Ctrl+S` / `⌘S` | Esportare il testo su cui stai lavorando: la trascrizione o la sua traduzione |
+| `Ctrl+F` / `⌘F` | Trovare e sostituire nel testo su cui stai lavorando (o cercare nel riassunto) |
+| `Ctrl+J` / `⌘J` | Andare alla parola a bassa affidabilità successiva |
+| `Maiusc+Ctrl+J` / `⇧⌘J` | Andare alla parola a bassa affidabilità precedente |
 | `Esc` | Annullare la trascrizione in corso |
 | `Spazio` | Riprodurre o mettere in pausa l'audio |
 | `←` / `→` | Tornare indietro o andare avanti di 5 secondi |

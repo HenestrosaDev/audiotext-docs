@@ -41,8 +41,9 @@ Nếu có bản chép lời khác đang chạy, nút sẽ đổi thành **Thêm 
 Khi hoàn tất, bản chép lời sẽ mở ra:
 
 - Nhấp vào một đoạn để phát âm thanh từ chỗ đó.
-- Chuyển giữa **Bản ghi lời**, **Văn bản thuần** và **Bản tóm tắt**.
-- Dùng **Dịch**, **Sao chép** và **Xuất** để dịch, sao chép hoặc lưu thành tệp.
+- Chuyển giữa **Phụ đề**, **Văn bản thuần**, **Bản tóm tắt** và **Hỏi**, để đặt câu hỏi về nó.
+- Dùng **Dịch** để dịch, và các nút ở phần đầu bản chép lời để tìm và thay thế trong đó, sao chép hoặc lưu thành tệp.
+- Rà soát các từ được gạch chân, là những từ công cụ kém chắc chắn nhất.
 
 Xem [Bản ghi lời](/vi/guides/transcript/) để biết mọi điều bạn có thể làm với nó.
 
@@ -52,8 +53,10 @@ Xem [Bản ghi lời](/vi/guides/transcript/) để biết mọi điều bạn c
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Bắt đầu chép lời, hoặc bắt đầu và dừng ghi âm |
 | `Ctrl+O` / `⌘O` | Chọn tệp (hoặc thư mục, ở nguồn thư mục) |
-| `Ctrl+S` / `⌘S` | Xuất bản chép lời đang hiển thị |
-| `Ctrl+F` / `⌘F` | Tìm kiếm trong bản chép lời |
+| `Ctrl+S` / `⌘S` | Xuất văn bản bạn đang làm việc: bản chép lời hoặc bản dịch của nó |
+| `Ctrl+F` / `⌘F` | Tìm và thay thế trong văn bản bạn đang làm việc (hoặc tìm trong bản tóm tắt) |
+| `Ctrl+J` / `⌘J` | Chuyển đến từ có độ tin cậy thấp tiếp theo |
+| `Shift+Ctrl+J` / `⇧⌘J` | Chuyển đến từ có độ tin cậy thấp trước đó |
 | `Esc` | Hủy bản chép lời đang chạy |
 | `Phím cách` | Phát hoặc tạm dừng âm thanh |
 | `←` / `→` | Lùi hoặc tiến 5 giây |

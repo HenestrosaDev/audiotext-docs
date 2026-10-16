@@ -25,7 +25,7 @@ Jalankan penginstal dan ikuti langkah-langkahnya. Tidak memerlukan izin administ
 
 ### macOS
 
-Buka file `.dmg` dan seret **Audiotext** ke folder **Aplikasi**. Aplikasi ini tidak dinotarisasi oleh Apple, sehingga macOS memblokirnya saat pertama kali dibuka: buka **Pengaturan Sistem** → **Privasi & Keamanan** dan klik **Tetap Buka** di samping pesan tentang Audiotext. Di macOS, WhisperX berjalan di CPU, karena CUDA tidak tersedia. Mac dengan prosesor Intel tidak didukung, karena PyTorch tidak lagi mendukungnya.
+Buka file `.dmg` dan seret **Audiotext** ke folder **Aplikasi**. Aplikasi ini tidak dinotarisasi oleh Apple, sehingga macOS memblokirnya saat pertama kali dibuka: buka **Pengaturan Sistem** → **Privasi & Keamanan** dan klik **Tetap Buka** di samping pesan tentang Audiotext. Di Mac, WhisperX mentranskripsi di GPU Apple Silicon dengan [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), jauh lebih cepat daripada di CPU, tanpa add-on apa pun. Mac dengan prosesor Intel tidak didukung, karena PyTorch tidak lagi mendukungnya.
 
 ### Linux
 
@@ -49,7 +49,7 @@ Saat pertama kali mentranskripsi dengan **WhisperX** (mesin bawaan), modelnya ak
 
 ## Persyaratan
 
-- **WhisperX** berjalan di komputer Anda. Ia bekerja di CPU apa pun, tetapi jauh lebih cepat di GPU NVIDIA dengan CUDA. Lihat [Mesin](/id/reference/engines/) untuk memilih model yang sesuai dengan perangkat keras Anda.
+- **WhisperX** berjalan di komputer Anda. Ia bekerja di CPU apa pun, tetapi jauh lebih cepat di GPU NVIDIA dengan CUDA atau di GPU Mac dengan Apple Silicon. Lihat [Mesin](/id/reference/engines/) untuk memilih model yang sesuai dengan perangkat keras Anda.
 - **Whisper API** dan **Google API** berjalan di server jarak jauh, jadi memerlukan koneksi internet, tetapi tidak memerlukan perangkat keras yang kuat.
 - Untuk mentranskripsi dari mikrofon, sistem Anda harus mendeteksi perangkat input.
 - Di Linux, merekam dan memutar audio memerlukan [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` di Ubuntu atau Debian).

@@ -18,10 +18,11 @@ Audiotext přepisuje pomocí jednoho ze tří nástrojů, který vyberete na kar
 | Rozpozná mluvčí | ✓ (token Hugging Face) | `gpt-4o-transcribe-diarize` | ✗ |
 | Časování slov | ✓ | `whisper-1` | ✗ |
 | Živý text | ✓ | ✗ | ✗ |
+| [Slova s nízkou jistotou](/cs/guides/transcript/#kontrola-slov-s-nízkou-jistotou) | ✓ (časování slov) | `whisper-1` (segmenty) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) je rychlá implementace Whisperu od OpenAI, která běží na vašem počítači, takže zvuk ho nikdy neopustí. Běží na procesoru, nebo mnohem rychleji na grafické kartě NVIDIA s CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) je rychlá implementace Whisperu od OpenAI, která běží na vašem počítači, takže zvuk ho nikdy neopustí. Běží na procesoru, nebo mnohem rychleji na grafické kartě NVIDIA s CUDA či na grafickém procesoru Macu s Apple Silicon.
 
 ### Model
 
@@ -47,13 +48,22 @@ Větší modely jsou přesnější, ale pomalejší a spotřebují více paměti
 Pro rychlé vyzkoušení Audiotextu vyberte `tiny` nebo `small`. Pro nejlepší kvalitu použijte `large-v2` nebo `large-v3-turbo` na grafické kartě.
 :::
 
+### Na Macu
+
+Na Macích s Apple Silicon přepisuje [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) na grafickém procesoru, mnohem rychleji než na procesoru. WhisperX pak jako vždy zarovná slova a rozpozná mluvčí na procesoru, takže přepisy si zachovají časování slov, hodnocení i mluvčí.
+
+- Verze MLX modelu se stáhne při prvním použití.
+- `distil-small.en`, `distil-large-v2` a `distil-large-v3.5` verzi MLX nemají, takže běží na procesoru.
+- [Živý text](/cs/guides/sources/#živý-text) běží vždy na procesoru.
+- Chcete-li přepisovat na procesoru, zapněte **Použít CPU** v **Předvolby** → **WhisperX**.
+
 ### Pokročilé možnosti
 
 Najdete je v **Předvolby** → **WhisperX**. Měňte je jen při problémech nebo pokud víte, co děláte: grafická karta bez volné paměti může systém zamrazit.
 
-- **Typ výpočtu**: přesnost čísel modelu. `float16` je rychlejší na grafických kartách (výchozí s CUDA). `int8` spotřebuje méně paměti a je výchozí na procesoru, protože mnoho procesorů `float16` efektivně nepodporuje. `float32` je nejpřesnější, pro grafické karty s více než 8 GB VRAM.
+- **Typ výpočtu**: přesnost čísel modelu. `float16` je rychlejší na grafických kartách NVIDIA (výchozí s CUDA). `int8` spotřebuje méně paměti a je výchozí na procesoru, protože mnoho procesorů `float16` efektivně nepodporuje. `float32` je nejpřesnější, pro grafické karty s více než 8 GB VRAM.
 - **Velikost dávky**: kolik částí zvuku se zpracovává najednou (výchozí `8`). Nemění kvalitu, jen rychlost. Pokud dochází paměť, snižte ji; doporučuje se nejvýše `16`.
-- **Použít CPU**: spouští WhisperX na procesoru. Je vždy zapnuto, pokud nebyla nalezena grafická karta s CUDA.
+- **Použít CPU**: spouští WhisperX na procesoru. Je vždy zapnuto, pokud nebyl nalezen grafický procesor (karta NVIDIA s CUDA nebo grafický procesor Macu s Apple Silicon).
 
 ## Whisper API
 
@@ -61,7 +71,7 @@ Používá [API OpenAI pro převod řeči na text](https://platform.openai.com/d
 
 | Model | Časové značky | Mluvčí | Poznámky |
 | --- | :---: | :---: | --- |
-| `whisper-1` (výchozí) | ✓ | ✗ | Lze přehrávat segment po segmentu a převést na titulky. Překládá do angličtiny. |
+| `whisper-1` (výchozí) | ✓ | ✗ | Lze přehrávat segment po segmentu a převést na titulky. Překládá do angličtiny. Hodnotí každý segment, abyste mohli zkontrolovat ty s nízkou jistotou. |
 | `gpt-transcribe` | ✗ | ✗ | Přesnější, ale bez časových značek. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Rozpozná mluvčí. Nepoužívá klíčová slova ani popis. |
 

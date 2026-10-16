@@ -18,10 +18,11 @@ Audiotext chép lời bằng một trong ba công cụ, được chọn trong th
 | Nhận diện người nói | ✓ (token Hugging Face) | `gpt-4o-transcribe-diarize` | ✗ |
 | Thời gian theo từng từ | ✓ | `whisper-1` | ✗ |
 | Văn bản trực tiếp | ✓ | ✗ | ✗ |
+| [Từ có độ tin cậy thấp](/vi/guides/transcript/#rà-soát-các-từ-có-độ-tin-cậy-thấp) | ✓ (thời gian theo từng từ) | `whisper-1` (đoạn) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) là bản triển khai nhanh của Whisper (OpenAI) chạy trên máy tính của bạn, nên âm thanh không bao giờ rời khỏi máy. Nó chạy trên CPU hoặc, nhanh hơn nhiều, trên GPU NVIDIA có CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) là bản triển khai nhanh của Whisper (OpenAI) chạy trên máy tính của bạn, nên âm thanh không bao giờ rời khỏi máy. Nó chạy trên CPU hoặc, nhanh hơn nhiều, trên GPU NVIDIA có CUDA hoặc trên GPU của máy Mac dùng Apple Silicon.
 
 ### Mô hình
 
@@ -47,13 +48,22 @@ Mô hình lớn hơn chính xác hơn, nhưng chậm hơn và dùng nhiều bộ
 Để dùng thử Audiotext nhanh, hãy chọn `tiny` hoặc `small`. Để có chất lượng tốt nhất, hãy dùng `large-v2` hoặc `large-v3-turbo` trên GPU.
 :::
 
+### Trên máy Mac
+
+Trên máy Mac dùng Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) chép lời trên GPU, nhanh hơn nhiều so với trên CPU. Sau đó WhisperX căn chỉnh các từ và nhận diện người nói trên CPU như thường lệ, nên bản chép lời vẫn giữ thời gian theo từng từ, điểm và người nói.
+
+- Phiên bản MLX của mô hình được tải xuống lần đầu khi dùng.
+- `distil-small.en`, `distil-large-v2` và `distil-large-v3.5` không có phiên bản MLX, nên chạy trên CPU.
+- [Văn bản trực tiếp](/vi/guides/sources/#văn-bản-trực-tiếp) luôn chạy trên CPU.
+- Để chép lời trên CPU, hãy bật **Dùng CPU** trong **Tùy chọn ưu tiên** → **WhisperX**.
+
 ### Tùy chọn nâng cao
 
 Nằm trong **Tùy chọn ưu tiên** → **WhisperX**. Chỉ thay đổi khi gặp sự cố hoặc khi bạn biết mình đang làm gì: GPU hết bộ nhớ có thể làm treo hệ thống.
 
-- **Kiểu tính toán**: độ chính xác số học của mô hình. `float16` nhanh hơn trên GPU (mặc định khi có CUDA). `int8` dùng ít bộ nhớ hơn và là mặc định trên CPU, vì nhiều CPU không hỗ trợ `float16` hiệu quả. `float32` chính xác nhất, dành cho GPU có trên 8 GB VRAM.
+- **Kiểu tính toán**: độ chính xác số học của mô hình. `float16` nhanh hơn trên GPU NVIDIA (mặc định khi có CUDA). `int8` dùng ít bộ nhớ hơn và là mặc định trên CPU, vì nhiều CPU không hỗ trợ `float16` hiệu quả. `float32` chính xác nhất, dành cho GPU có trên 8 GB VRAM.
 - **Kích thước lô**: số phần âm thanh được xử lý cùng lúc (mặc định `8`). Không ảnh hưởng chất lượng, chỉ ảnh hưởng tốc độ. Giảm xuống nếu hết bộ nhớ; khuyến nghị tối đa `16`.
-- **Dùng CPU**: chạy WhisperX trên CPU. Luôn bật nếu không tìm thấy GPU CUDA.
+- **Dùng CPU**: chạy WhisperX trên CPU. Luôn bật nếu không tìm thấy GPU (GPU NVIDIA có CUDA, hoặc GPU của máy Mac dùng Apple Silicon).
 
 ## Whisper API
 
@@ -61,7 +71,7 @@ Dùng [API chuyển giọng nói thành văn bản của OpenAI](https://platfor
 
 | Mô hình | Dấu thời gian | Người nói | Ghi chú |
 | --- | :---: | :---: | --- |
-| `whisper-1` (mặc định) | ✓ | ✗ | Có thể phát theo từng đoạn và tạo phụ đề. Dịch sang tiếng Anh. |
+| `whisper-1` (mặc định) | ✓ | ✗ | Có thể phát theo từng đoạn và tạo phụ đề. Dịch sang tiếng Anh. Chấm điểm từng đoạn, để rà soát các đoạn có độ tin cậy thấp. |
 | `gpt-transcribe` | ✗ | ✗ | Chính xác hơn, nhưng không có dấu thời gian. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Nhận diện người nói. Không dùng từ khóa và mô tả. |
 

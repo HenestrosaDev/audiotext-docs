@@ -20,7 +20,7 @@ Audiotext 将你的数据保存在你的电脑上。除非你使用远程引擎�
 其中包含：
 
 - `config.ini`：你的设置。删除它即可恢复默认值。
-- `history.json`：你的转写，以及其摘要、翻译和校对。
+- `history.json`：你的转写，以及其摘要、提问、翻译和校对。
 - `media/`：麦克风录音以及从 URL 下载的音频，以便之后播放。从历史记录中删除对应的转写时，它们也会被删除。
 
 如需使用其他文件夹（例如便携安装），请设置环境变量 `AUDIOTEXT_CONFIG_DIR`。
@@ -47,7 +47,7 @@ API 密钥和 Hugging Face 令牌保存在系统的凭据存储中：
 
 | 变量 | 服务 |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI（Whisper API、摘要、翻译） |
+| `OPENAI_API_KEY` | OpenAI（Whisper API、摘要、提问、翻译） |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ API 密钥和 Hugging Face 令牌保存在系统的凭据存储中：
 
 ## 模型
 
-WhisperX 和说话人识别的模型会在首次使用时下载，并由 Hugging Face 缓存在 `~/.cache/huggingface`（Windows 上为 `%USERPROFILE%\.cache\huggingface`）。用于对齐英语、法语、德语、西班牙语和意大利语单词的模型由 PyTorch 缓存在 `~/.cache/torch`（Windows 上为 `%USERPROFILE%\.cache\torch`）。删除这些文件夹即可释放它们占用的空间。其他应用也可能把模型存放在那里，并像 Audiotext 一样在需要时重新下载。
+WhisperX（以及 Mac 上的 MLX Whisper）和说话人识别的模型会在首次使用时下载，并由 Hugging Face 缓存在 `~/.cache/huggingface`（Windows 上为 `%USERPROFILE%\.cache\huggingface`）。用于对齐英语、法语、德语、西班牙语和意大利语单词的模型由 PyTorch 缓存在 `~/.cache/torch`（Windows 上为 `%USERPROFILE%\.cache\torch`）。删除这些文件夹即可释放它们占用的空间。其他应用也可能把模型存放在那里，并像 Audiotext 一样在需要时重新下载。

@@ -19,9 +19,10 @@ sidebar:
 
 ## YZ
 
-[Özetlerin ve çevirilerin](/tr/guides/summary-and-translation/) sağlayıcıları:
+[Özetlerin, soruların ve çevirilerin](/tr/guides/summary-and-translation/) sağlayıcıları:
 
 - **Özet** → **Sağlayıcı** ve **Model**.
+- **Sor** → **Sağlayıcı** ve **Model**: transkripsiyonlarla ilgili soruları yanıtlayanlar. Siz değiştirene kadar özetlerinkilerle aynıdır.
 - **Çeviri** → **Sağlayıcı** ve **Model**. DeepL ve Google Translate'in seçilecek modeli yoktur.
 - **Ollama** → **Sunucu URL'si**: Ollama'nın adresi, varsayılan `http://localhost:11434`.
 
@@ -29,16 +30,16 @@ Sağlayıcının varsayılan modelini kullanmak için **Model**'i boş bırakın
 
 ## API anahtarları
 
-Her hizmetin anahtarları. Bir anahtar girmek için **Ayarla…**'ya, değiştirmek için **Değiştir…**'e tıklayın (kaldırmak için boş bırakın). Sisteminizin kimlik bilgisi deposunda saklanırlar.
+Her hizmetin anahtarları. Bir anahtar girmek için **API anahtarını ayarla…**'ya, değiştirmek için **API anahtarını değiştir…**'e tıklayın (kaldırmak için boş bırakın). Sisteminizin kimlik bilgisi deposunda saklanırlar.
 
 | Anahtar | Kullanım amacı |
 | --- | --- |
-| OpenAI API anahtarı | Whisper API ve OpenAI ile özetleme ve çeviri |
-| Anthropic API anahtarı | Claude ile özetleme ve çeviri |
-| DeepSeek API anahtarı | DeepSeek ile özetleme ve çeviri |
-| Gemini API anahtarı | Gemini ile özetleme ve çeviri (Google AI Studio'dan) |
-| Mistral API anahtarı | Mistral ile özetleme ve çeviri |
-| xAI API anahtarı | Grok ile özetleme ve çeviri |
+| OpenAI API anahtarı | Whisper API ve OpenAI ile özetleme, soru sorma ve çeviri |
+| Anthropic API anahtarı | Claude ile özetleme, soru sorma ve çeviri |
+| DeepSeek API anahtarı | DeepSeek ile özetleme, soru sorma ve çeviri |
+| Gemini API anahtarı | Gemini ile özetleme, soru sorma ve çeviri (Google AI Studio'dan) |
+| Mistral API anahtarı | Mistral ile özetleme, soru sorma ve çeviri |
+| xAI API anahtarı | Grok ile özetleme, soru sorma ve çeviri |
 | DeepL API anahtarı | DeepL ile çeviri (ücretsiz planın anahtarları da çalışır) |
 | Google API anahtarı | Ücretsiz katmanın ötesinde Google Speech-to-Text ve Google Translate (Cloud Translation API) |
 | Hugging Face belirteci | WhisperX ile konuşmacıları belirleme |
@@ -49,15 +50,21 @@ Her sağlayıcı API'sinin kullanımı için ücret alır; Audiotext bundan soru
 
 ## WhisperX
 
-**Hesaplama türü**, **Toplu iş boyutu** ve **CPU kullan**. [WhisperX gelişmiş seçenekleri](/tr/reference/engines/#gelişmiş-seçenekler) bölümüne bakın.
+**Hesaplama türü**, **Toplu iş boyutu** ve **CPU kullan**. [WhisperX gelişmiş seçenekleri](/tr/reference/engines/#gelişmiş-seçenekler) bölümüne bakın. Apple Silicon'lu bir Mac'te, **CPU kullan** açık değilse WhisperX onun grafik işlemcisinde yazıya döker. [Mac'te](/tr/reference/engines/#macte) bölümüne bakın.
 
 ## Altyazılar
 
-Bir klasör WhisperX ile yazıya döküldüğünde kaydedilen `.srt` ve `.vtt` dosyalarının seçenekleri:
+Altyazıların nasıl bölündüğü: videonun üzerinde ve **Altyazılar** modunda gösterilenler, dışa aktarılan altyazı dosyaları ve [altyazılı videolar](/tr/guides/transcript/#videoyu-altyazılarıyla-dışa-aktarın). Her seçeneğin yatay videolar için bir değeri ve daha dar olan dikey videolar (genişliğinden uzun, ör. telefonlar için) için başka bir değeri vardır:
 
-- **Kelimeleri vurgula**: her kelimeyi söylendiği anda altını çizer. Varsayılan olarak kapalıdır.
-- **Maks. satır sayısı**: her altyazının en fazla satır sayısı. Varsayılan `2`.
-- **Maks. satır genişliği**: bir satırın bölünmeden önceki en fazla karakter sayısı. Varsayılan `42`.
+| Seçenek | Yatay | Dikey |
+| --- | :---: | :---: |
+| **Altyazı başına maks. satır** | `2` | `2` |
+| **Satır başına maks. karakter** | `42` | `24` |
+| **Çince, Japonca ve Korece**: karakterleri Latin karakterlerinin yaklaşık iki katı geniş olan bu dillerde satır başına karakter | `16` | `10` |
+
+Bir altyazının satırları dengelenir ve boşluksuz yazılan diller karakterler arasında bölünür.
+
+**Kelimeleri vurgula**, `.srt` ve `.vtt` dosyalarında her kelimenin söylendiği anda altını çizer. Varsayılan olarak kapalıdır.
 
 ## Whisper API
 

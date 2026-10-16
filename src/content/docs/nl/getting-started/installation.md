@@ -25,7 +25,7 @@ Voer het installatieprogramma uit en volg de stappen. Er zijn geen beheerdersrec
 
 ### macOS
 
-Open het `.dmg`-bestand en sleep **Audiotext** naar de map **Apps**. De app is niet door Apple genotariseerd, dus macOS blokkeert hem de eerste keer dat je hem opent: ga naar **Systeeminstellingen** → **Privacy en beveiliging** en klik op **Toch openen** naast de melding over Audiotext. Op macOS draait WhisperX op de CPU, omdat CUDA daar niet beschikbaar is. Intel-Macs worden niet ondersteund, omdat PyTorch ze niet meer ondersteunt.
+Open het `.dmg`-bestand en sleep **Audiotext** naar de map **Apps**. De app is niet door Apple genotariseerd, dus macOS blokkeert hem de eerste keer dat je hem opent: ga naar **Systeeminstellingen** → **Privacy en beveiliging** en klik op **Toch openen** naast de melding over Audiotext. Op Macs transcribeert WhisperX op de GPU van Apple Silicon met [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), veel sneller dan op de CPU, zonder extra pakket. Intel-Macs worden niet ondersteund, omdat PyTorch ze niet meer ondersteunt.
 
 ### Linux
 
@@ -49,7 +49,7 @@ De eerste keer dat je transcribeert met **WhisperX** (de standaard-engine), word
 
 ## Vereisten
 
-- **WhisperX** draait op je computer. Het werkt op elke CPU, maar is veel sneller op een NVIDIA-GPU met CUDA. Zie [Engines](/nl/reference/engines/) om een model te kiezen dat bij je hardware past.
+- **WhisperX** draait op je computer. Het werkt op elke CPU, maar is veel sneller op een NVIDIA-GPU met CUDA of op de GPU van een Mac met Apple Silicon. Zie [Engines](/nl/reference/engines/) om een model te kiezen dat bij je hardware past.
 - De **Whisper-API** en de **Google-API** draaien op externe servers, dus ze hebben een internetverbinding nodig, maar geen krachtige hardware.
 - Om vanaf de microfoon te transcriberen, moet je systeem een invoerapparaat herkennen.
 - Op Linux is voor opnemen en afspelen [PortAudio](https://www.portaudio.com/) nodig (`sudo apt install libportaudio2` op Ubuntu of Debian).

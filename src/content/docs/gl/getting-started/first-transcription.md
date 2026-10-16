@@ -41,8 +41,9 @@ Se hai outra transcrición en curso, o botón pasa a ser **Engadir á cola**, e 
 Cando remata, ábrese a transcrición:
 
 - Fai clic nun segmento para reproducir o audio desde aí.
-- Cambia entre **Transcrición**, **Texto plano** e **Resumo**.
-- Usa **Traducir**, **Copiar** e **Exportar** para traducila, copiala ou gardala como ficheiro.
+- Cambia entre **Subtítulos**, **Texto simple**, **Resumo** e **Preguntar**, para facer preguntas sobre ela.
+- Usa **Traducir** para traducila, e os botóns da cabeceira da transcrición para buscar e substituír nela, copiala ou gardala como ficheiro.
+- Revisa as palabras subliñadas, das que o motor está menos seguro.
 
 Consulta [A transcrición](/gl/guides/transcript/) para saber todo o que podes facer con ela.
 
@@ -52,8 +53,10 @@ Consulta [A transcrición](/gl/guides/transcript/) para saber todo o que podes f
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Comezar a transcrición, ou comezar e deter a gravación |
 | `Ctrl+O` / `⌘O` | Escoller un ficheiro (ou un cartafol, na orixe de cartafol) |
-| `Ctrl+S` / `⌘S` | Exportar a transcrición que se mostra |
-| `Ctrl+F` / `⌘F` | Buscar na transcrición |
+| `Ctrl+S` / `⌘S` | Exportar o texto co que traballas: a transcrición ou a súa tradución |
+| `Ctrl+F` / `⌘F` | Buscar e substituír no texto co que traballas (ou buscar no resumo) |
+| `Ctrl+J` / `⌘J` | Ir á seguinte palabra de baixa confianza |
+| `Maiús+Ctrl+J` / `⇧⌘J` | Ir á anterior palabra de baixa confianza |
 | `Esc` | Cancelar a transcrición en curso |
 | `Espazo` | Reproducir ou pausar o audio |
 | `←` / `→` | Retroceder ou avanzar 5 segundos |

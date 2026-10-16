@@ -20,7 +20,7 @@ Les réglages, l’historique et les enregistrements sont stockés dans votre do
 Il contient :
 
 - `config.ini` : vos réglages. Supprimez-le pour rétablir les valeurs par défaut.
-- `history.json` : vos transcriptions, avec leurs résumés, traductions et corrections.
+- `history.json` : vos transcriptions, avec leurs résumés, questions, traductions et corrections.
 - `media/` : les enregistrements du microphone et l’audio téléchargé depuis des URL, pour pouvoir les réécouter plus tard. Ils sont supprimés lorsque leur transcription est supprimée de l’historique.
 
 Pour utiliser un autre dossier, p. ex. pour une installation portable, définissez la variable d’environnement `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Les variables d’environnement portant le nom des clés sont prioritaires sur c
 
 | Variable | Service |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (API Whisper, résumés, traductions) |
+| `OPENAI_API_KEY` | OpenAI (API Whisper, résumés, questions, traductions) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Les variables d’environnement portant le nom des clés sont prioritaires sur c
 
 ## Modèles
 
-Les modèles de WhisperX et de l’identification des locuteurs sont téléchargés lors de leur première utilisation et mis en cache par Hugging Face dans `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` sous Windows). Les modèles qui alignent les mots de l’anglais, du français, de l’allemand, de l’espagnol et de l’italien sont mis en cache par PyTorch dans `~/.cache/torch` (`%USERPROFILE%\.cache\torch` sous Windows). Supprimez ces dossiers pour libérer l’espace qu’ils occupent. D’autres applications peuvent aussi y garder leurs modèles et les retéléchargent au besoin, comme Audiotext.
+Les modèles de WhisperX (et de MLX Whisper, sur Mac) et de l’identification des locuteurs sont téléchargés lors de leur première utilisation et mis en cache par Hugging Face dans `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` sous Windows). Les modèles qui alignent les mots de l’anglais, du français, de l’allemand, de l’espagnol et de l’italien sont mis en cache par PyTorch dans `~/.cache/torch` (`%USERPROFILE%\.cache\torch` sous Windows). Supprimez ces dossiers pour libérer l’espace qu’ils occupent. D’autres applications peuvent aussi y garder leurs modèles et les retéléchargent au besoin, comme Audiotext.

@@ -19,9 +19,10 @@ Le **Preferenze** contengono le impostazioni che non cambiano a ogni trascrizion
 
 ## IA
 
-I fornitori dei [riassunti e delle traduzioni](/it/guides/summary-and-translation/):
+I fornitori dei [riassunti, delle domande e delle traduzioni](/it/guides/summary-and-translation/):
 
 - **Riassunto** → **Fornitore** e **Modello**.
+- **Chiedi** → **Fornitore** e **Modello**: quelli che rispondono alle domande sulle trascrizioni. Sono quelli dei riassunti finché non li cambi.
 - **Traduzione** → **Fornitore** e **Modello**. DeepL e Google Translate non hanno modelli da scegliere.
 - **Ollama** → **URL del server**: l'indirizzo di Ollama, `http://localhost:11434` per impostazione predefinita.
 
@@ -29,16 +30,16 @@ Lascia il **Modello** vuoto per usare il modello predefinito del fornitore. Il p
 
 ## Chiavi API
 
-Le chiavi di ogni servizio. Fai clic su **Imposta…** per inserirne una, o su **Cambia…** per sostituirla (lasciala vuota per rimuoverla). Sono conservate nell'archivio delle credenziali del sistema.
+Le chiavi di ogni servizio. Fai clic su **Imposta chiave API…** per inserirne una, o su **Cambia chiave API…** per sostituirla (lasciala vuota per rimuoverla). Sono conservate nell'archivio delle credenziali del sistema.
 
 | Chiave | Usata per |
 | --- | --- |
-| Chiave API di OpenAI | La API di Whisper, e riassumere e tradurre con OpenAI |
-| Chiave API di Anthropic | Riassumere e tradurre con Claude |
-| Chiave API di DeepSeek | Riassumere e tradurre con DeepSeek |
-| Chiave API di Gemini | Riassumere e tradurre con Gemini (da Google AI Studio) |
-| Chiave API di Mistral | Riassumere e tradurre con Mistral |
-| Chiave API di xAI | Riassumere e tradurre con Grok |
+| Chiave API di OpenAI | La API di Whisper, e riassumere, fare domande e tradurre con OpenAI |
+| Chiave API di Anthropic | Riassumere, fare domande e tradurre con Claude |
+| Chiave API di DeepSeek | Riassumere, fare domande e tradurre con DeepSeek |
+| Chiave API di Gemini | Riassumere, fare domande e tradurre con Gemini (da Google AI Studio) |
+| Chiave API di Mistral | Riassumere, fare domande e tradurre con Mistral |
+| Chiave API di xAI | Riassumere, fare domande e tradurre con Grok |
 | Chiave API di DeepL | Tradurre con DeepL (funzionano anche le chiavi del piano gratuito) |
 | Chiave API di Google | Google Speech-to-Text oltre il livello gratuito, e Google Translate (Cloud Translation API) |
 | Token di Hugging Face | Identificare i parlanti con WhisperX |
@@ -49,15 +50,21 @@ Ogni fornitore addebita l'uso della sua API, di cui Audiotext non è responsabil
 
 ## WhisperX
 
-**Tipo di calcolo**, **Dimensione del batch** e **Usa la CPU**. Consulta le [opzioni avanzate di WhisperX](/it/reference/engines/#opzioni-avanzate).
+**Tipo di calcolo**, **Dimensione del batch** e **Usa la CPU**. Consulta le [opzioni avanzate di WhisperX](/it/reference/engines/#opzioni-avanzate). Su un Mac con Apple Silicon, WhisperX trascrive sulla sua GPU a meno che **Usa la CPU** sia attiva. Consulta [Su un Mac](/it/reference/engines/#su-un-mac).
 
 ## Sottotitoli
 
-Le opzioni dei file `.srt` e `.vtt` salvati quando si trascrive una cartella con WhisperX:
+Come vengono divisi i sottotitoli: quelli mostrati sul video e nella modalità **Sottotitoli**, i file di sottotitoli esportati e i [video con sottotitoli](/it/guides/transcript/#esporta-il-video-con-i-sottotitoli). Ogni opzione ha un valore per i video orizzontali e un altro per quelli verticali (più alti che larghi, es. per i telefoni), che sono più stretti:
 
-- **Evidenzia le parole**: sottolinea ogni parola mentre viene pronunciata. Disattivato per impostazione predefinita.
-- **N. max di righe**: il numero massimo di righe di ogni sottotitolo. `2` per impostazione predefinita.
-- **Larghezza max riga**: il numero massimo di caratteri di una riga prima di andare a capo. `42` per impostazione predefinita.
+| Opzione | Orizzontale | Verticale |
+| --- | :---: | :---: |
+| **Righe max per sottotitolo** | `2` | `2` |
+| **Caratteri max per riga** | `42` | `24` |
+| **Cinese, giapponese e coreano**: i caratteri per riga in queste lingue, i cui caratteri sono larghi circa il doppio di quelli latini | `16` | `10` |
+
+Le righe di un sottotitolo vengono bilanciate, e le lingue scritte senza spazi vanno a capo tra i caratteri.
+
+**Evidenzia le parole** sottolinea ogni parola mentre viene pronunciata nei file `.srt` e `.vtt`. Disattivato per impostazione predefinita.
 
 ## Whisper API
 

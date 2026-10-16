@@ -1,11 +1,11 @@
 ---
-title: Özet ve çeviri
-description: Transkripsiyonları OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL veya Google Translate ile özetleyin ve çevirin.
+title: Özet, sorular ve çeviri
+description: Transkripsiyonları OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL veya Google Translate ile özetleyin, hakkında soru sorun ve çevirin.
 sidebar:
   order: 4
 ---
 
-Bir transkripsiyon hazır olduğunda Audiotext onu bir dil modeli veya çeviri hizmetiyle özetleyebilir ve çevirebilir. Her ikisi de geçmişte saklanır, bu yüzden yalnızca bir kez oluşturulur.
+Bir transkripsiyon hazır olduğunda Audiotext onu bir dil modeli veya çeviri hizmetiyle özetleyebilir, hakkındaki soruları yanıtlayabilir ve çevirebilir. Hepsi geçmişte saklanır, bu yüzden yalnızca bir kez oluşturulur.
 
 ## Özet
 
@@ -15,20 +15,40 @@ Bir transkripsiyonun **Özet** modunu açın ve **Özet oluştur**'a tıklayın.
 - **Önemli noktaları**.
 - Zaman damgaları varsa **bölümleri**. Sesi bir bölümün başladığı yerden oynatmak için bölüme tıklayın.
 
-**Yeniden oluştur** özeti yeniden yazar (ör. başka bir model seçtikten sonra). **Kopyala** onu kopyalar; Markdown ve Word [dışa aktarımları](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın) onu içerir.
+Panel, başlığının altında onu hangi modelin ne zaman oluşturduğunu gösterir. Başlığındaki düğmeler:
+
+- **Bul** (`Ctrl+F`, macOS'ta `⌘F`): özette bir metin arar.
+- **Kopyala**: onu kopyalar.
+- **Dışa aktar**: transkripsiyonun yerini almaması için `video.summary.md` gibi bir adla onu ayrı olarak düz metin, Markdown veya Word belgesi şeklinde kaydeder. Transkripsiyonun Markdown ve Word [dışa aktarımları](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın) da onu içerir.
+- **Özeti yeniden oluştur**: onu yeniden yazar (ör. başka bir model seçtikten sonra); mevcut özet değiştirileceği için önce sorar.
 
 Sağlayıcının API anahtarı ayarlanmamışsa **Özet** modu onu ayarlamayı önerir. Çok uzun transkripsiyonlar (yaklaşık üç saat veya daha uzun konuşma) yalnızca başından itibaren özetlenir.
 
 ![Önemli noktaları ve bölümleriyle bir transkripsiyonun özeti](/screenshots/summary.png)
 
+## Transkripsiyon hakkında soru sorun
+
+**Sor** modunu açın, **Transkripsiyon hakkında bir soru sorun…** alanına bir soru yazın (ör. neye karar verildiği veya kimin bir şey söylediği) ve `Enter`'a basın veya **Sor**'a tıklayın.
+
+- Dil modeli transkripsiyona ve önceki sorular ile yanıtlarına dayanarak yanıt verir, bu yüzden bir soru onlara atıfta bulunabilir (ör. “Neden?”).
+- Transkripsiyonun zaman damgaları varsa her yanıt, bunun söylendiği transkripsiyon bölümlerine bağlantı verir. Sesi oradan oynatmak için birine tıklayın.
+- Sorular ve yanıtları transkripsiyonla birlikte geçmişte saklanır. Başlıktaki çöp kutusu, önce sorarak konuşmayı temizler.
+
+Soruları, **Tercihler** → **YZ** → **Sor** bölümünde onlar için seçilen sağlayıcı yanıtlar; siz değiştirene kadar bu, özetlerin sağlayıcısıdır. Özetlerde olduğu gibi çok uzun transkripsiyonların yalnızca başı okunur.
+
 ## Çeviri
 
-**Çevir**'e tıklayın, **Hedef dil** alanından dili ve **Sağlayıcı**'yı seçin ve onaylayın. Çeviri, orijinal metnin sağındaki bir panelde gösterilir.
+**Çevir**'e tıklayın, **Hedef dil:** alanından dili ve **Şununla çevir:** alanından sağlayıcıyı seçin ve onaylayın. İletişim kutusu seçilen sağlayıcının ne yaptığını açıklar ve API anahtarı eksikse ayarlamayı önerir. Çeviri, orijinal metnin sağındaki bir panelde gösterilir.
 
-- Transkripsiyonun zaman damgaları varsa her segment ayrı çevrilir, böylece çeviri aynı zaman damgalarıyla başlar: oynatılan segmenti vurgular ve bir segmente tıklamak onu oynatır.
+- Transkripsiyonun zaman damgaları varsa, her bölümden önce ve sonra söylenen metin bağlam olarak kullanılarak cümle cümle çevrilir; böylece çeviri her cümlenin zaman damgalarıyla başlar: oynatılan cümleyi vurgular ve bir cümleye tıklamak onu oynatır.
 - Düz metni düzenlediyseniz bunun yerine düzenlenmiş metin zaman damgası olmadan çevrilir.
-- İki metin arasındaki tutamağı sürükleyerek boyutlarını değiştirin veya boyutları sıfırlamak için çift tıklayın.
-- **Çevir** düğmesi ayrıca **Çeviriyi gizle**, **Başka bir dile çevir…** veya **Çeviriyi sil** seçeneklerini sunar.
+- İki metin birlikte kaydırılır, böylece sesin aynı bölümünü gösterirler. Aralarındaki tutamaktaki yuvarlak düğme bunu açar ve kapatır. Boyutlarını değiştirmek için tutamağı sürükleyin veya boyutları sıfırlamak için çift tıklayın.
+
+Çevirinin başlığındaki düğmeler içinde bulup değiştirir, onu kopyalar, dışa aktarır ve **Yeniden çevir** (aynı sağlayıcı ve modelle) ile **Çeviriyi gizle** seçeneklerini sunar. **Çevir** düğmesi ayrıca onu yeniden göstermeyi, **Başka bir dile çevir…** veya **Çeviriyi sil** seçeneklerini sunar.
+
+### Birden fazla dil
+
+Bir transkripsiyon birden fazla dile, hatta aynı anda çevrilebilir ve her çeviri saklanır. Panelin başlığı gösterileni seçer, her birinin ne kadarının çevrildiğini gösterir ve başka bir dile çevirme seçeneğiyle biter. Zaten çevirisi olan bir dile çevirmek, düzeltmeleri kaybolacağı için önce sorarak onun yerini alır.
 
 ### Çeviriyi düzeltin ve zamanlamasını değiştirin
 
@@ -41,12 +61,12 @@ Bir çeviri çoğu zaman orijinalden farklı bir zamanlamaya ihtiyaç duyar, ör
 
 ### Kendiniz çevirin
 
-Çeviriyi kendiniz yazmak için **Sağlayıcı** olarak **Kendim, sıfırdan** seçeneğini seçin. API anahtarı gerekmez. Çeviri, transkripsiyonun zaman damgaları ve **Henüz çevrilmedi** olarak gösterilen boş segmentlerle başlar; panel kaç tane kaldığını gösterir. Birine sağ tıklayıp **Metni çevir…** seçeneğini seçin: iletişim kutusu o sırada söylenen orijinal metni gösterir.
+Çeviriyi kendiniz yazmak için **Şununla çevir:** alanında **Elle** seçeneğini seçin. API anahtarı gerekmez. Çeviri, transkripsiyonun her altyazısı için **Henüz çevrilmedi** olarak gösterilen boş bir segmentle başlar; panel kaç tane kaldığını gösterir. Birine sağ tıklayıp **Metni çevir…** seçeneğini seçin: iletişim kutusu o sırada söylenen orijinal metni gösterir.
 
 ### Altyazılar ve dışa aktarma
 
 - Video transkripsiyonlarında, çeviriyi altyazı olarak göstermek için **Çevir** menüsünde **Videonun altyazısı olarak göster** seçeneğini işaretleyin. Videonun menüsü de bunları değiştirir. Bkz. [Videoları altyazılarıyla izleyin](/tr/guides/transcript/#videoları-altyazılarıyla-izleyin).
-- Çeviriyi dosya olarak kaydetmek için **Dışa aktar** menüsünde **Çeviri**yi seçin veya çevirinin dışa aktarma düğmesine tıklayın. Transkripsiyonla aynı [biçimlerde](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın), dosya adında diliyle (ör. `video.es.srt`) dışa aktarılır, böylece video oynatıcılar onu videoyla birlikte yükler. Henüz çevrilmemiş segmentler altyazılara dahil edilmez.
+- Çeviriyi dosya olarak kaydetmek için panelinin dışa aktarma düğmesine tıklayın. Transkripsiyonla aynı [biçimlerde](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın), dosya adında diliyle (ör. `video.es.srt`) dışa aktarılır, böylece video oynatıcılar onu videoyla birlikte yükler. Henüz çevrilmemiş segmentler altyazılara dahil edilmez. Aynı menü [videonun altyazılı bir kopyasını](/tr/guides/transcript/#videoyu-altyazılarıyla-dışa-aktarın) oluşturur.
 
 :::tip
 Transkripsiyonu bir sağlayıcı olmadan doğrudan başka bir dilde almak için yazıya dökme sırasında da çeviri yapabilirsiniz. [Dil](/tr/guides/transcription-settings/#dil) bölümüne bakın.
@@ -54,7 +74,7 @@ Transkripsiyonu bir sağlayıcı olmadan doğrudan başka bir dilde almak için 
 
 ## Sağlayıcılar
 
-Sağlayıcılar **Tercihler** → **YZ** bölümünde, özetler ve çeviriler için ayrı ayrı seçilir.
+Sağlayıcılar **Tercihler** → **YZ** bölümünde, özetler, sorular ve çeviriler için ayrı ayrı seçilir.
 
 | Sağlayıcı | Varsayılan model | API anahtarı |
 | --- | --- | --- |

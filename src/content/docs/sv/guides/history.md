@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Varje transkribering sparas i historiken, till vänster i fönstret, tillsammans med sammanfattningen, översättningen och dina korrigeringar. Knappen till vänster i det övre fältet visar eller döljer den.
+Varje transkribering sparas i historiken, till vänster i fönstret, tillsammans med sammanfattningen, frågorna, översättningarna och dina korrigeringar. Knappen till vänster i det övre fältet visar eller döljer den.
 
 ## Hitta en transkribering
 
@@ -32,7 +32,7 @@ Grupper samlar relaterade transkriberingar, som de för ett projekt eller en kur
 
 ## Ta bort en transkribering
 
-När du tar bort en transkribering tas den, dess sammanfattning och dess översättning bort ur historiken. Transkriberingarna av filerna i en mapp tas också bort. Dina ljud-, video- och sparade filer tas **inte** bort.
+När du tar bort en transkribering tas den, dess sammanfattning, dess frågor och dess översättningar bort ur historiken. Transkriberingarna av filerna i en mapp tas också bort. Dina ljud-, video- och sparade filer tas **inte** bort.
 
 ## Misslyckade och ofullständiga transkriberingar
 

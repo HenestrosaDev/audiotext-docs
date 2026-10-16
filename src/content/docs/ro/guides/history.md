@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Fiecare transcriere este păstrată în istoric, în stânga ferestrei, împreună cu rezumatul, traducerea și corecturile făcute. Butonul din stânga barei de sus îl afișează sau îl ascunde.
+Fiecare transcriere este păstrată în istoric, în stânga ferestrei, împreună cu rezumatul, întrebările, traducerile și corecturile făcute. Butonul din stânga barei de sus îl afișează sau îl ascunde.
 
 ## Găsiți o transcriere
 
@@ -32,7 +32,7 @@ Grupurile adună transcrieri înrudite, cum ar fi cele ale unui proiect sau curs
 
 ## Ștergeți o transcriere
 
-Ștergerea unei transcrieri o elimină din istoric, împreună cu rezumatul și traducerea. Sunt șterse și transcrierile fișierelor unui dosar. Fișierele dumneavoastră audio, video și cele salvate **nu** sunt șterse.
+Ștergerea unei transcrieri o elimină din istoric, împreună cu rezumatul, întrebările și traducerile. Sunt șterse și transcrierile fișierelor unui dosar. Fișierele dumneavoastră audio, video și cele salvate **nu** sunt șterse.
 
 ## Transcrieri eșuate și întrerupte
 

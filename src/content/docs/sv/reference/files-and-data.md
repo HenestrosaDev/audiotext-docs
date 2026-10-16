@@ -20,7 +20,7 @@ Inställningarna, historiken och inspelningarna sparas i din användarkonfigurat
 Den innehåller:
 
 - `config.ini`: dina inställningar. Ta bort filen för att återställa standardvärdena.
-- `history.json`: dina transkriberingar, med sammanfattningar, översättningar och korrigeringar.
+- `history.json`: dina transkriberingar, med sammanfattningar, frågor, översättningar och korrigeringar.
 - `media/`: mikrofoninspelningarna och ljudet som laddats ner från URL:er, så att de kan spelas upp senare. De tas bort när deras transkribering tas bort ur historiken.
 
 För att använda en annan mapp, t.ex. för en portabel installation, anger du miljövariabeln `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Miljövariabler med nycklarnas namn har företräde framför de som angetts i ap
 
 | Variabel | Tjänst |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (Whisper-API, sammanfattningar, översättningar) |
+| `OPENAI_API_KEY` | OpenAI (Whisper-API, sammanfattningar, frågor, översättningar) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Miljövariabler med nycklarnas namn har företräde framför de som angetts i ap
 
 ## Modeller
 
-Modellerna för WhisperX och talaridentifieringen laddas ned första gången de används och cachelagras av Hugging Face i `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` i Windows). Modellerna som justerar orden på engelska, franska, tyska, spanska och italienska cachelagras av PyTorch i `~/.cache/torch` (`%USERPROFILE%\.cache\torch` i Windows). Ta bort de mapparna för att frigöra utrymmet de tar. Andra appar kan också ha sina modeller där, och laddar ned dem igen när de behövs, precis som Audiotext.
+Modellerna för WhisperX (och för MLX Whisper, på Mac-datorer) och talaridentifieringen laddas ned första gången de används och cachelagras av Hugging Face i `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` i Windows). Modellerna som justerar orden på engelska, franska, tyska, spanska och italienska cachelagras av PyTorch i `~/.cache/torch` (`%USERPROFILE%\.cache\torch` i Windows). Ta bort de mapparna för att frigöra utrymmet de tar. Andra appar kan också ha sina modeller där, och laddar ned dem igen när de behövs, precis som Audiotext.

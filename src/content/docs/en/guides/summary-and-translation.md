@@ -1,11 +1,11 @@
 ---
-title: Summary and translation
-description: Summarize and translate transcriptions with OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL or Google Translate.
+title: Summary, questions and translation
+description: Summarize, ask about and translate transcriptions with OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL or Google Translate.
 sidebar:
   order: 4
 ---
 
-Once a transcription is ready, Audiotext can summarize it and translate it with a language model or a translation service. Both are kept in the history, so they're only generated once.
+Once a transcription is ready, Audiotext can summarize it, answer questions about it and translate it with a language model or a translation service. All of them are kept in the history, so they're only generated once.
 
 ## Summary
 
@@ -15,38 +15,58 @@ Open the **Summary** mode of a transcription and click **Generate summary**. The
 - Its **key points**.
 - Its **chapters**, if it has timestamps. Click a chapter to play the audio from where it starts.
 
-**Regenerate** writes it again (e.g. after choosing another model). **Copy** copies it, and the Markdown and Word [exports](/en/guides/transcript/#copy-and-export) include it.
+Below its title, the panel says which model generated it and when. The buttons of its header:
+
+- **Find** (`Ctrl+F`, `⌘F` on macOS): finds a text in the summary.
+- **Copy**: copies it.
+- **Export**: saves it by itself as plain text, Markdown or a Word document, named like `video.summary.md` so it doesn't replace the transcription. The Markdown and Word [exports](/en/guides/transcript/#copy-and-export) of the transcription include it too.
+- **Regenerate the summary**: writes it again (e.g. after choosing another model), after asking you, since the current one is replaced.
 
 If the API key of the provider isn't set, the **Summary** mode offers to set it. Very long transcriptions (about three hours of speech or more) are summarized from their beginning only.
 
 ![The summary of a transcription, with its key points and chapters](/screenshots/summary.png)
 
+## Ask about the transcription
+
+Open the **Ask** mode, type a question in **Ask a question about the transcription…** (e.g. what was decided, or who said something) and press `Enter` or click **Ask**.
+
+- The language model answers with the transcription, and with the previous questions and their answers, so a question can refer to them (e.g. “Why?”).
+- If the transcription has timestamps, each answer links to the parts of the transcription where it's said. Click one to play the audio from there.
+- The questions and their answers are kept in the history with the transcription. The trash can of the header clears the conversation, after asking you.
+
+The questions are answered by the provider chosen for them in **Preferences** → **AI** → **Ask**, which is the one of the summaries until you change it. Like the summaries, very long transcriptions are only read from their beginning.
+
 ## Translation
 
-Click **Translate**, choose the language in **Translate into** and the **Provider**, and confirm. The translation is shown in a panel on the right of the original text.
+Click **Translate**, choose the language in **Translate into:** and the provider in **Translate with:**, and confirm. The dialog says what the provider chosen does, and offers to set its API key if it's missing. The translation is shown in a panel on the right of the original text.
 
-- If the transcription has timestamps, each segment is translated on its own, so the translation starts with the same timestamps: it highlights the segment being played, and clicking a segment plays it.
+- If the transcription has timestamps, it's translated sentence by sentence, with the text said before and after each part as context, so the translation starts with the timestamps of each sentence: it highlights the sentence being played, and clicking one plays it.
 - If you edited the plain text, the edited text is translated instead, without timestamps.
-- Drag the handle between both texts to resize them, or double-click it to reset their sizes.
-- The **Translate** button also lets you **Hide the translation**, **Translate into another language…** or **Delete the translation**.
+- Both texts scroll together, so they show the same part of the audio. The round button on the handle between them turns it on and off. Drag the handle to resize them, or double-click it to reset their sizes.
+
+The buttons of the header of the translation find and replace in it, copy it, export it, **Translate again** (with the same provider and model) and **Hide the translation**. The **Translate** button also lets you show it again, **Translate into another language…** or **Delete the translation**.
+
+### Several languages
+
+A transcription can be translated into several languages, even at the same time, and each translation is kept. The title of the panel chooses the one shown, says how much of each one is translated, and ends with the option to translate into another language. Translating into a language that already has a translation replaces it, after asking you, since its corrections are lost.
 
 ### Correct and retime the translation
 
 A translation often needs another timing than the original, e.g. subtitles that take longer to read. Right-click a segment of the translation to:
 
-- **Edit the text…**: change its text.
+- **Edit text…**: change its text.
 - **Edit the timing…**: change when it starts and ends, to the millisecond. Type the times as `00:01:05,900`, `01:05,9` or `65.9`.
 - **Add a segment after…**: add a segment, which by default fills the gap until the next one.
 - **Delete the segment**.
 
 ### Translate it yourself
 
-To write the translation yourself, choose **Myself, from scratch** as the **Provider**. It needs no API key. The translation starts with the timestamps of the transcription and empty segments, shown as **Not translated yet**, and the panel shows how many are left. Right-click one and choose **Translate the text…**: the dialog shows the original text said meanwhile.
+To write the translation yourself, choose **Manual** in **Translate with:**. It needs no API key. The translation starts with an empty segment for each subtitle of the transcription, shown as **Not translated yet**, and the panel shows how many are left. Right-click one and choose **Translate text…**: the dialog shows the original text said meanwhile.
 
 ### Subtitles and export
 
 - In the transcriptions of videos, check **Show it as the subtitles of the video** in the **Translate** menu to show the translation as the subtitles. The menu of the video switches them too. See [Watch videos with subtitles](/en/guides/transcript/#watch-videos-with-subtitles).
-- To save the translation as a file, choose **Translation into…** in the **Export** menu, or click the export button of the translation. It's exported in the same [formats](/en/guides/transcript/#copy-and-export) as the transcription, with its language in the name of the file (e.g. `video.es.srt`), so the video players load it with the video. The segments not translated yet are left out of the subtitles.
+- To save the translation as a file, click the export button of its panel. It's exported in the same [formats](/en/guides/transcript/#copy-and-export) as the transcription, with its language in the name of the file (e.g. `video.es.srt`), so the video players load it with the video. The segments not translated yet are left out of the subtitles. The same menu makes a [copy of the video with its subtitles](/en/guides/transcript/#export-the-video-with-its-subtitles).
 
 :::tip
 To get the transcription directly in another language, without a provider, you can also translate while transcribing. See [Language](/en/guides/transcription-settings/#language).
@@ -54,7 +74,7 @@ To get the transcription directly in another language, without a provider, you c
 
 ## Providers
 
-The providers are chosen in **Preferences** → **AI**, separately for the summaries and the translations.
+The providers are chosen in **Preferences** → **AI**, separately for the summaries, the questions and the translations.
 
 | Provider | Default model | API key |
 | --- | --- | --- |

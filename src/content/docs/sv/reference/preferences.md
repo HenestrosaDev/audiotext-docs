@@ -19,9 +19,10 @@ sidebar:
 
 ## AI
 
-Leverantörerna för [sammanfattningar och översättningar](/sv/guides/summary-and-translation/):
+Leverantörerna för [sammanfattningar, frågor och översättningar](/sv/guides/summary-and-translation/):
 
 - **Sammanfattning** → **Leverantör** och **Modell**.
+- **Fråga** → **Leverantör** och **Modell**: de som svarar på frågorna om transkriberingarna. Tills du ändrar dem är de samma som för sammanfattningarna.
 - **Översättning** → **Leverantör** och **Modell**. DeepL och Google Translate har inga modeller att välja.
 - **Ollama** → **Serverns URL**: Ollamas adress, `http://localhost:11434` som standard.
 
@@ -29,16 +30,16 @@ Lämna **Modell** tom för att använda leverantörens standardmodell. Knappen b
 
 ## API-nycklar
 
-Nycklarna för varje tjänst. Klicka på **Ange…** för att ange en, eller på **Ändra…** för att ersätta den (lämna fältet tomt för att ta bort den). De sparas i systemets lösenordsarkiv.
+Nycklarna för varje tjänst. Klicka på **Ange API-nyckel…** för att ange en, eller på **Ändra API-nyckel…** för att ersätta den (lämna fältet tomt för att ta bort den). De sparas i systemets lösenordsarkiv.
 
 | Nyckel | Används för |
 | --- | --- |
-| API-nyckel för OpenAI | Whisper-API:t, och att sammanfatta och översätta med OpenAI |
-| API-nyckel för Anthropic | Att sammanfatta och översätta med Claude |
-| API-nyckel för DeepSeek | Att sammanfatta och översätta med DeepSeek |
-| API-nyckel för Gemini | Att sammanfatta och översätta med Gemini (från Google AI Studio) |
-| API-nyckel för Mistral | Att sammanfatta och översätta med Mistral |
-| API-nyckel för xAI | Att sammanfatta och översätta med Grok |
+| API-nyckel för OpenAI | Whisper-API:t, och att sammanfatta, fråga och översätta med OpenAI |
+| API-nyckel för Anthropic | Att sammanfatta, fråga och översätta med Claude |
+| API-nyckel för DeepSeek | Att sammanfatta, fråga och översätta med DeepSeek |
+| API-nyckel för Gemini | Att sammanfatta, fråga och översätta med Gemini (från Google AI Studio) |
+| API-nyckel för Mistral | Att sammanfatta, fråga och översätta med Mistral |
+| API-nyckel för xAI | Att sammanfatta, fråga och översätta med Grok |
 | API-nyckel för DeepL | Att översätta med DeepL (nycklar från gratisplanen fungerar också) |
 | API-nyckel för Google | Google Speech-to-Text utöver gratisnivån, och Google Translate (Cloud Translation API) |
 | Hugging Face-token | Att identifiera talarna med WhisperX |
@@ -49,15 +50,21 @@ Varje leverantör tar betalt för användningen av sitt API, vilket Audiotext in
 
 ## WhisperX
 
-**Beräkningstyp**, **Batchstorlek** och **Använd CPU**. Se [WhisperX avancerade alternativ](/sv/reference/engines/#avancerade-alternativ).
+**Beräkningstyp**, **Batchstorlek** och **Använd CPU**. Se [WhisperX avancerade alternativ](/sv/reference/engines/#avancerade-alternativ). På en Mac med Apple Silicon transkriberar WhisperX på dess grafikprocessor om inte **Använd CPU** är på. Se [På en Mac](/sv/reference/engines/#på-en-mac).
 
 ## Undertexter
 
-Alternativen för `.srt`- och `.vtt`-filerna som sparas när en mapp transkriberas med WhisperX:
+Hur undertexterna delas upp: de som visas på videon och i läget **Undertexter**, de exporterade undertextfilerna och [videorna med undertexter](/sv/guides/transcript/#exportera-videon-med-undertexterna). Varje alternativ har ett värde för liggande videor och ett för stående (högre än breda, t.ex. för mobiler), som är smalare:
 
-- **Markera ord**: stryker under varje ord medan det sägs. Av som standard.
-- **Max. antal rader**: det högsta antalet rader per undertext. `2` som standard.
-- **Max. radbredd**: det högsta antalet tecken på en rad innan den bryts. `42` som standard.
+| Alternativ | Horisontell | Vertikal |
+| --- | :---: | :---: |
+| **Max. rader per undertext** | `2` | `2` |
+| **Max. tecken per rad** | `42` | `24` |
+| **Kinesiska, japanska och koreanska**: tecknen per rad på dessa språk, vars tecken är ungefär dubbelt så breda som latinska | `16` | `10` |
+
+Raderna i en undertext jämnas ut, och språk som skrivs utan mellanslag bryts mellan tecken.
+
+**Markera ord** stryker under varje ord medan det sägs i `.srt`- och `.vtt`-filerna. Av som standard.
 
 ## Whisper API
 

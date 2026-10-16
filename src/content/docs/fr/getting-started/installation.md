@@ -25,7 +25,7 @@ Lancez le programme d’installation et suivez les étapes. Il ne nécessite pas
 
 ### macOS
 
-Ouvrez le fichier `.dmg` et faites glisser **Audiotext** dans le dossier **Applications**. L’application n’est pas notarisée par Apple : macOS la bloque donc à la première ouverture. Allez dans **Réglages Système** → **Confidentialité et sécurité** et cliquez sur **Ouvrir quand même** à côté du message concernant Audiotext. Sous macOS, WhisperX s’exécute sur le CPU, car CUDA n’y est pas disponible. Les Mac Intel ne sont pas pris en charge, car PyTorch ne les prend plus en charge.
+Ouvrez le fichier `.dmg` et faites glisser **Audiotext** dans le dossier **Applications**. L’application n’est pas notarisée par Apple : macOS la bloque donc à la première ouverture. Allez dans **Réglages Système** → **Confidentialité et sécurité** et cliquez sur **Ouvrir quand même** à côté du message concernant Audiotext. Sur Mac, WhisperX transcrit sur le GPU d’Apple Silicon avec [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), bien plus vite que sur le CPU, sans module complémentaire. Les Mac Intel ne sont pas pris en charge, car PyTorch ne les prend plus en charge.
 
 ### Linux
 
@@ -49,7 +49,7 @@ La première fois que vous transcrivez avec **WhisperX** (le moteur par défaut)
 
 ## Configuration requise
 
-- **WhisperX** s’exécute sur votre ordinateur. Il fonctionne sur n’importe quel CPU, mais il est bien plus rapide sur un GPU NVIDIA avec CUDA. Consultez [Moteurs](/fr/reference/engines/) pour choisir un modèle adapté à votre matériel.
+- **WhisperX** s’exécute sur votre ordinateur. Il fonctionne sur n’importe quel CPU, mais il est bien plus rapide sur un GPU NVIDIA avec CUDA ou sur le GPU d’un Mac avec Apple Silicon. Consultez [Moteurs](/fr/reference/engines/) pour choisir un modèle adapté à votre matériel.
 - L’**API Whisper** et l’**API Google** s’exécutent sur des serveurs distants : elles nécessitent une connexion Internet, mais pas de matériel puissant.
 - Pour transcrire depuis le microphone, votre système doit détecter un périphérique d’entrée.
 - Sous Linux, l’enregistrement et la lecture audio nécessitent [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` sous Ubuntu ou Debian).

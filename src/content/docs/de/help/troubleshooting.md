@@ -21,7 +21,7 @@ Die letzten beiden können die Qualität verringern. Wie viel Speicher jedes Mod
 
 ## Das Transkribieren dauert zu lange
 
-Die Geschwindigkeit von WhisperX hängt von Ihrer Hardware ab; auf schwachen CPUs sind keine sofortigen Ergebnisse zu erwarten. Versuchen Sie ein kleineres Modell wie `small`, `large-v3-turbo` auf einer GPU oder den Berechnungstyp `int8`. Alternativ können Sie die **Whisper-API** oder die **Google-API** verwenden, die auf entfernten Servern laufen.
+Die Geschwindigkeit von WhisperX hängt von Ihrer Hardware ab; auf schwachen CPUs sind keine sofortigen Ergebnisse zu erwarten. Versuchen Sie ein kleineres Modell wie `small`, `large-v3-turbo` auf einer GPU oder den Berechnungstyp `int8`. Prüfen Sie auf einem Mac mit Apple Silicon, ob **CPU verwenden** unter **Einstellungen** → **WhisperX** deaktiviert ist, damit auf der GPU transkribiert wird. Alternativ können Sie die **Whisper-API** oder die **Google-API** verwenden, die auf entfernten Servern laufen.
 
 ## Die Whisper-API gibt den Fehler `429` zurück
 
@@ -78,11 +78,26 @@ Dateien, die bereits eine Transkription haben, werden übersprungen. Aktivieren 
 
 Die Google-API kann die Sprache nicht erkennen. Wählen Sie in den Einstellungen die **Sprache des Audios**.
 
-## Eine Zusammenfassung oder Übersetzung schlägt fehl
+## Eine Zusammenfassung, Antwort oder Übersetzung schlägt fehl
 
 - **DeepL kann nicht nach … übersetzen.**: DeepL unterstützt diese Sprache nicht. Wählen Sie einen anderen Anbieter, etwa ein Sprachmodell.
-- **Die Antwort des Modells war zu lang.**, **Das Modell hat keine gültige Zusammenfassung zurückgegeben.** oder **Das Modell hat keine gültige Übersetzung zurückgegeben.**: Das Modell hat die Zusammenfassung oder die Übersetzung nicht im erwarteten Format geschrieben. Versuchen Sie es erneut oder wählen Sie unter **Einstellungen** → **KI** ein größeres Modell. Die kleinen Modelle von Ollama scheitern häufiger.
+- **Die Antwort des Modells war zu lang.**, **Das Modell hat keine gültige Zusammenfassung zurückgegeben.**, **Das Modell hat keine gültige Antwort zurückgegeben.** oder **Das Modell hat keine gültige Übersetzung zurückgegeben.**: Das Modell hat die Zusammenfassung, die Antwort oder die Übersetzung nicht im erwarteten Format geschrieben. Versuchen Sie es erneut oder wählen Sie unter **Einstellungen** → **KI** ein größeres Modell. Die kleinen Modelle von Ollama scheitern häufiger.
 - Prüfen Sie bei jedem anderen Fehler, ob der API-Schlüssel des Anbieters unter **Einstellungen** → **API-Schlüssel** gesetzt ist und Ihr Konto Guthaben hat.
+
+## Wörter mit geringer Konfidenz werden nicht unterstrichen
+
+Prüfen Sie, ob **Wörter mit geringer Konfidenz hervorheben** im Menü `⋯` der Transkription aktiviert ist. Hat die Transkription keine Bewertungen, nennt das Menü den Grund:
+
+- **„Zeiten pro Wort“ aktivieren und erneut transkribieren**: WhisperX bewertet die Wörter, wenn es ihre Zeiten bestimmt.
+- **Für diese Sprache gibt es kein Ausrichtungsmodell**: Die Wörter dieser Sprache lassen sich weder zeitlich ausrichten noch bewerten.
+- **Erneut transkribieren, um die Wörter zu bewerten**: Sie wurde transkribiert, bevor Wörter bewertet wurden.
+- **Nur WhisperX und whisper-1 bewerten die Wörter**: Die anderen Engines und Modelle tun das nicht.
+
+Siehe [Wörter mit geringer Konfidenz prüfen](/de/guides/transcript/#wörter-mit-geringer-konfidenz-prüfen).
+
+## Das Video mit Untertiteln zeigt Kästchen
+
+Erscheint nach dem [Export des Videos mit seinen Untertiteln](/de/guides/transcript/#das-video-mit-seinen-untertiteln-exportieren) **Exportiert nach …, aber keine Schriftart enthält diese Zeichen, daher werden sie als Kästchen angezeigt: …**, kann keine Schriftart Ihres Systems diese Zeichen darstellen. Installieren Sie eine Schriftart für diese Schrift (z. B. [Noto](https://fonts.google.com/noto)) und exportieren Sie es erneut.
 
 ## Updates können nicht gesucht werden
 

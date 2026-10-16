@@ -1,11 +1,11 @@
 ---
-title: Samenvatting en vertaling
-description: Vat transcripties samen en vertaal ze met OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL of Google Translate.
+title: Samenvatting, vragen en vertaling
+description: Vat transcripties samen, stel er vragen over en vertaal ze met OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL of Google Translate.
 sidebar:
   order: 4
 ---
 
-Zodra een transcriptie klaar is, kan Audiotext hem samenvatten en vertalen met een taalmodel of een vertaaldienst. Beide worden in de geschiedenis bewaard, dus ze worden maar één keer gemaakt.
+Zodra een transcriptie klaar is, kan Audiotext hem samenvatten, er vragen over beantwoorden en hem vertalen met een taalmodel of een vertaaldienst. Alles wordt in de geschiedenis bewaard, dus het wordt maar één keer gemaakt.
 
 ## Samenvatting
 
@@ -15,20 +15,40 @@ Open de modus **Samenvatting** van een transcriptie en klik op **Samenvatting ma
 - De **belangrijkste punten**.
 - De **hoofdstukken**, als hij tijdstempels heeft. Klik op een hoofdstuk om de audio vanaf het begin ervan af te spelen.
 
-**Opnieuw maken** schrijft hem opnieuw (bijv. na het kiezen van een ander model). **Kopiëren** kopieert hem, en de [exports](/nl/guides/transcript/#kopiëren-en-exporteren) naar Markdown en Word bevatten hem.
+Onder de titel toont het paneel welk model hem heeft gemaakt en wanneer. De knoppen in de kop:
+
+- **Zoeken** (`Ctrl+F`, `⌘F` op macOS): zoekt een tekst in de samenvatting.
+- **Kopiëren**: kopieert hem.
+- **Exporteren**: slaat hem apart op als platte tekst, Markdown of Word-document, met een naam als `video.summary.md`, zodat hij de transcriptie niet vervangt. De [exports](/nl/guides/transcript/#kopiëren-en-exporteren) van de transcriptie naar Markdown en Word bevatten hem ook.
+- **Samenvatting opnieuw genereren**: schrijft hem opnieuw (bijv. na het kiezen van een ander model), na bevestiging, want de huidige wordt vervangen.
 
 Als de API-sleutel van de aanbieder niet is ingesteld, biedt de modus **Samenvatting** aan om die in te stellen. Zeer lange transcripties (ongeveer drie uur spraak of meer) worden alleen vanaf het begin samengevat.
 
 ![De samenvatting van een transcriptie, met de kernpunten en hoofdstukken](/screenshots/summary.png)
 
+## Vragen over de transcriptie stellen
+
+Open de modus **Vragen**, typ een vraag bij **Stel een vraag over de transcriptie…** (bijv. wat er is besloten, of wie iets heeft gezegd) en druk op `Enter` of klik op **Vragen**.
+
+- Het taalmodel antwoordt op basis van de transcriptie en van de vorige vragen en antwoorden, dus een vraag kan daarnaar verwijzen (bijv. „Waarom?”).
+- Als de transcriptie tijdstempels heeft, verwijst elk antwoord naar de delen van de transcriptie waar het wordt gezegd. Klik op een ervan om de audio vanaf daar af te spelen.
+- De vragen en antwoorden worden met de transcriptie in de geschiedenis bewaard. De prullenbak in de kop wist het gesprek, na bevestiging.
+
+De vragen worden beantwoord door de aanbieder die ervoor is gekozen bij **Voorkeuren** → **AI** → **Vragen**, en dat is die van de samenvattingen totdat je hem wijzigt. Net als bij de samenvattingen wordt van zeer lange transcripties alleen het begin gelezen.
+
 ## Vertaling
 
-Klik op **Vertalen**, kies de taal bij **Vertalen naar** en de **Aanbieder**, en bevestig. De vertaling verschijnt in een paneel rechts van de oorspronkelijke tekst.
+Klik op **Vertalen**, kies de taal bij **Vertalen naar:** en de aanbieder bij **Vertalen met:**, en bevestig. Het dialoogvenster zegt wat de gekozen aanbieder doet, en biedt aan de API-sleutel in te stellen als die ontbreekt. De vertaling verschijnt in een paneel rechts van de oorspronkelijke tekst.
 
-- Als de transcriptie tijdstempels heeft, wordt elk segment apart vertaald, zodat de vertaling met dezelfde tijdstempels begint: het segment dat wordt afgespeeld, wordt gemarkeerd, en een klik op een segment speelt het af.
+- Als de transcriptie tijdstempels heeft, wordt ze zin voor zin vertaald, met de tekst die ervoor en erna wordt gezegd als context, zodat de vertaling met de tijdstempels van elke zin begint: de zin die wordt afgespeeld, wordt gemarkeerd, en een klik op een zin speelt die af.
 - Als je de platte tekst hebt bewerkt, wordt de bewerkte tekst vertaald, zonder tijdstempels.
-- Sleep de greep tussen beide teksten om hun grootte te wijzigen, of dubbelklik erop om de grootte te herstellen.
-- Met de knop **Vertalen** kun je ook de **Vertaling verbergen**, **Vertalen naar een andere taal…** of de **Vertaling verwijderen**.
+- Beide teksten scrollen samen, zodat ze hetzelfde deel van de audio tonen. De ronde knop op de greep ertussen zet dat aan en uit. Sleep de greep om hun grootte te wijzigen, of dubbelklik erop om de grootte te herstellen.
+
+Met de knoppen in de kop van de vertaling zoek en vervang je erin, kopieer en exporteer je hem, kies je **Opnieuw vertalen** (met dezelfde aanbieder en hetzelfde model) en **Vertaling verbergen**. Met de knop **Vertalen** kun je hem ook weer tonen, **Vertalen naar een andere taal…** of de **Vertaling verwijderen**.
+
+### Meerdere talen
+
+Een transcriptie kan naar meerdere talen worden vertaald, ook tegelijk, en elke vertaling wordt bewaard. De titel van het paneel kiest welke wordt getoond, zegt hoeveel van elke vertaling klaar is en eindigt met de optie om naar een andere taal te vertalen. Vertalen naar een taal die al een vertaling heeft, vervangt die na bevestiging, want de correcties ervan gaan verloren.
 
 ### De vertaling corrigeren en opnieuw timen
 
@@ -41,12 +61,12 @@ Een vertaling heeft vaak een andere timing nodig dan het origineel, bijv. ondert
 
 ### Zelf vertalen
 
-Om de vertaling zelf te schrijven, kies je **Zelf, vanaf nul** als **Aanbieder**. Daarvoor is geen API-sleutel nodig. De vertaling begint met de tijdstempels van de transcriptie en lege segmenten, getoond als **Nog niet vertaald**, en het paneel toont hoeveel er nog over zijn. Klik met de rechtermuisknop op een ervan en kies **Tekst vertalen…**: het dialoogvenster toont de oorspronkelijke tekst die in die tijd wordt gezegd.
+Om de vertaling zelf te schrijven, kies je **Handmatig** bij **Vertalen met:**. Daarvoor is geen API-sleutel nodig. De vertaling begint met een leeg segment voor elke ondertitel van de transcriptie, getoond als **Nog niet vertaald**, en het paneel toont hoeveel er nog over zijn. Klik met de rechtermuisknop op een ervan en kies **Tekst vertalen…**: het dialoogvenster toont de oorspronkelijke tekst die in die tijd wordt gezegd.
 
 ### Ondertitels en export
 
 - Vink bij transcripties van video's **Als ondertitels van de video tonen** aan in het menu **Vertalen** om de vertaling als ondertitels te tonen. Ook het menu van de video schakelt ze om. Zie [Video's met ondertitels bekijken](/nl/guides/transcript/#videos-met-ondertitels-bekijken).
-- Om de vertaling als bestand op te slaan, kies je **Vertaling naar het…** in het menu **Exporteren**, of klik je op de exportknop van de vertaling. Ze wordt geëxporteerd in dezelfde [formaten](/nl/guides/transcript/#kopiëren-en-exporteren) als de transcriptie, met de taal in de bestandsnaam (bijv. `video.es.srt`), zodat videospelers ze met de video laden. Segmenten die nog niet vertaald zijn, worden uit de ondertitels weggelaten.
+- Om de vertaling als bestand op te slaan, klik je op de exportknop van het paneel. Ze wordt geëxporteerd in dezelfde [formaten](/nl/guides/transcript/#kopiëren-en-exporteren) als de transcriptie, met de taal in de bestandsnaam (bijv. `video.es.srt`), zodat videospelers ze met de video laden. Segmenten die nog niet vertaald zijn, worden uit de ondertitels weggelaten. Hetzelfde menu maakt een [kopie van de video met de ondertitels](/nl/guides/transcript/#de-video-met-ondertitels-exporteren).
 
 :::tip
 Om de transcriptie direct in een andere taal te krijgen, zonder aanbieder, kun je ook tijdens het transcriberen vertalen. Zie [Taal](/nl/guides/transcription-settings/#taal).
@@ -54,7 +74,7 @@ Om de transcriptie direct in een andere taal te krijgen, zonder aanbieder, kun j
 
 ## Aanbieders
 
-De aanbieders kies je bij **Voorkeuren** → **AI**, apart voor samenvattingen en vertalingen.
+De aanbieders kies je bij **Voorkeuren** → **AI**, apart voor samenvattingen, vragen en vertalingen.
 
 | Aanbieder | Standaardmodel | API-sleutel |
 | --- | --- | --- |

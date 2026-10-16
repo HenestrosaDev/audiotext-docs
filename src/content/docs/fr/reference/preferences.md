@@ -19,9 +19,10 @@ Les **Préférences** regroupent les réglages qui ne changent pas à chaque tra
 
 ## IA
 
-Les fournisseurs des [résumés et des traductions](/fr/guides/summary-and-translation/) :
+Les fournisseurs des [résumés, des questions et des traductions](/fr/guides/summary-and-translation/) :
 
 - **Résumé** → **Fournisseur** et **Modèle**.
+- **Demander** → **Fournisseur** et **Modèle** : ceux qui répondent aux questions sur les transcriptions. Ce sont ceux des résumés tant que vous ne les changez pas.
 - **Traduction** → **Fournisseur** et **Modèle**. DeepL et Google Translate n’ont pas de modèle à choisir.
 - **Ollama** → **URL du serveur** : l’adresse d’Ollama, `http://localhost:11434` par défaut.
 
@@ -29,16 +30,16 @@ Laissez le **Modèle** vide pour utiliser le modèle par défaut du fournisseur.
 
 ## Clés API
 
-Les clés de chaque service. Cliquez sur **Configurer…** pour en saisir une, ou sur **Modifier…** pour la remplacer (laissez-la vide pour la supprimer). Elles sont conservées dans le gestionnaire d’identifiants de votre système.
+Les clés de chaque service. Cliquez sur **Configurer la clé API…** pour en saisir une, ou sur **Modifier la clé API…** pour la remplacer (laissez-la vide pour la supprimer). Elles sont conservées dans le gestionnaire d’identifiants de votre système.
 
 | Clé | Utilisée pour |
 | --- | --- |
-| Clé API OpenAI | L’API Whisper, et résumer et traduire avec OpenAI |
-| Clé API Anthropic | Résumer et traduire avec Claude |
-| Clé API DeepSeek | Résumer et traduire avec DeepSeek |
-| Clé API Gemini | Résumer et traduire avec Gemini (de Google AI Studio) |
-| Clé API Mistral | Résumer et traduire avec Mistral |
-| Clé API xAI | Résumer et traduire avec Grok |
+| Clé API OpenAI | L’API Whisper, et résumer, interroger et traduire avec OpenAI |
+| Clé API Anthropic | Résumer, interroger et traduire avec Claude |
+| Clé API DeepSeek | Résumer, interroger et traduire avec DeepSeek |
+| Clé API Gemini | Résumer, interroger et traduire avec Gemini (de Google AI Studio) |
+| Clé API Mistral | Résumer, interroger et traduire avec Mistral |
+| Clé API xAI | Résumer, interroger et traduire avec Grok |
 | Clé API DeepL | Traduire avec DeepL (les clés de l’offre gratuite fonctionnent aussi) |
 | Clé API Google | Google Speech-to-Text au-delà de l’offre gratuite, et Google Translate (Cloud Translation API) |
 | Jeton Hugging Face | Identifier les locuteurs avec WhisperX |
@@ -49,15 +50,21 @@ Chaque fournisseur facture l’utilisation de son API, dont Audiotext n’est pa
 
 ## WhisperX
 
-**Type de calcul**, **Taille de lot** et **Utiliser le CPU**. Consultez les [options avancées de WhisperX](/fr/reference/engines/#options-avancées).
+**Type de calcul**, **Taille de lot** et **Utiliser le CPU**. Consultez les [options avancées de WhisperX](/fr/reference/engines/#options-avancées). Sur un Mac avec Apple Silicon, WhisperX transcrit sur son GPU sauf si **Utiliser le CPU** est activé. Consultez [Sur un Mac](/fr/reference/engines/#sur-un-mac).
 
 ## Sous-titres
 
-Les options des fichiers `.srt` et `.vtt` enregistrés lors de la transcription d’un dossier avec WhisperX :
+Comment les sous-titres sont découpés : ceux affichés sur la vidéo et dans le mode **Sous-titres**, les fichiers de sous-titres exportés et les [vidéos avec sous-titres](/fr/guides/transcript/#exportez-la-vidéo-avec-ses-sous-titres). Chaque option a une valeur pour les vidéos horizontales et une autre pour les verticales (plus hautes que larges, p. ex. pour les téléphones), qui sont plus étroites :
 
-- **Surligner les mots** : souligne chaque mot au moment où il est prononcé. Désactivé par défaut.
-- **Nb max. de lignes** : le nombre maximal de lignes de chaque sous-titre. `2` par défaut.
-- **Nb max. de caractères par ligne** : le nombre maximal de caractères d’une ligne avant de la couper. `42` par défaut.
+| Option | Horizontale | Verticale |
+| --- | :---: | :---: |
+| **Nb max. de lignes par sous-titre** | `2` | `2` |
+| **Nb max. de caractères par ligne** | `42` | `24` |
+| **Chinois, japonais et coréen** : les caractères par ligne dans ces langues, dont les caractères sont environ deux fois plus larges que les caractères latins | `16` | `10` |
+
+Les lignes d’un sous-titre sont équilibrées, et les langues écrites sans espaces sont coupées entre les caractères.
+
+**Surligner les mots** souligne chaque mot au moment où il est prononcé dans les fichiers `.srt` et `.vtt`. Désactivé par défaut.
 
 ## API Whisper
 

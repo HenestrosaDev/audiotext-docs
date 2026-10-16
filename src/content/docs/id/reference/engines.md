@@ -18,10 +18,11 @@ Audiotext mentranskripsi dengan salah satu dari tiga mesin, yang dipilih di kart
 | Mengidentifikasi pembicara | ✓ (token Hugging Face) | `gpt-4o-transcribe-diarize` | ✗ |
 | Waktu per kata | ✓ | `whisper-1` | ✗ |
 | Teks langsung | ✓ | ✗ | ✗ |
+| [Kata dengan keyakinan rendah](/id/guides/transcript/#tinjau-kata-dengan-keyakinan-rendah) | ✓ (waktu per kata) | `whisper-1` (segmen) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) adalah implementasi cepat Whisper dari OpenAI yang berjalan di komputer Anda, sehingga audio Anda tidak pernah meninggalkannya. Ia berjalan di CPU atau, jauh lebih cepat, di GPU NVIDIA dengan CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) adalah implementasi cepat Whisper dari OpenAI yang berjalan di komputer Anda, sehingga audio Anda tidak pernah meninggalkannya. Ia berjalan di CPU atau, jauh lebih cepat, di GPU NVIDIA dengan CUDA atau di GPU Mac dengan Apple Silicon.
 
 ### Model
 
@@ -47,13 +48,22 @@ Model yang lebih besar lebih akurat, tetapi lebih lambat dan menggunakan lebih b
 Untuk mencoba Audiotext dengan cepat, pilih `tiny` atau `small`. Untuk kualitas terbaik, gunakan `large-v2` atau `large-v3-turbo` di GPU.
 :::
 
+### Di Mac
+
+Di Mac dengan Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) mentranskripsi di GPU, jauh lebih cepat daripada di CPU. Setelah itu WhisperX menyelaraskan kata dan mengidentifikasi pembicara di CPU, seperti biasa, sehingga transkripsi tetap memiliki waktu per kata, nilai, dan pembicaranya.
+
+- Versi MLX dari model diunduh saat pertama kali digunakan.
+- `distil-small.en`, `distil-large-v2`, dan `distil-large-v3.5` tidak memiliki versi MLX, sehingga berjalan di CPU.
+- [Teks langsung](/id/guides/sources/#teks-langsung) selalu berjalan di CPU.
+- Untuk mentranskripsi di CPU, aktifkan **Gunakan CPU** di **Preferensi** → **WhisperX**.
+
 ### Opsi lanjutan
 
 Opsi ini ada di **Preferensi** → **WhisperX**. Ubah hanya jika Anda mengalami masalah atau tahu apa yang Anda lakukan: GPU yang kehabisan memori dapat membuat sistem Anda macet.
 
-- **Jenis komputasi**: presisi angka model. `float16` lebih cepat di GPU (bawaan dengan CUDA). `int8` menggunakan lebih sedikit memori dan menjadi bawaan di CPU, karena banyak CPU tidak mendukung `float16` secara efisien. `float32` paling presisi, untuk GPU dengan VRAM lebih dari 8 GB.
+- **Jenis komputasi**: presisi angka model. `float16` lebih cepat di GPU NVIDIA (bawaan dengan CUDA). `int8` menggunakan lebih sedikit memori dan menjadi bawaan di CPU, karena banyak CPU tidak mendukung `float16` secara efisien. `float32` paling presisi, untuk GPU dengan VRAM lebih dari 8 GB.
 - **Ukuran batch**: berapa banyak bagian audio yang diproses sekaligus (`8` secara bawaan). Tidak memengaruhi kualitas, hanya kecepatan. Turunkan jika memori habis; disarankan maksimal `16`.
-- **Gunakan CPU**: menjalankan WhisperX di CPU. Selalu aktif jika tidak ditemukan GPU CUDA.
+- **Gunakan CPU**: menjalankan WhisperX di CPU. Selalu aktif jika tidak ditemukan GPU (GPU NVIDIA dengan CUDA, atau GPU Mac dengan Apple Silicon).
 
 ## Whisper API
 
@@ -61,7 +71,7 @@ Menggunakan [API ucapan-ke-teks OpenAI](https://platform.openai.com/docs/guides/
 
 | Model | Stempel waktu | Pembicara | Catatan |
 | --- | :---: | :---: | --- |
-| `whisper-1` (bawaan) | ✓ | ✗ | Dapat diputar per segmen dan dibuatkan subtitle. Menerjemahkan ke bahasa Inggris. |
+| `whisper-1` (bawaan) | ✓ | ✗ | Dapat diputar per segmen dan dibuatkan subtitle. Menerjemahkan ke bahasa Inggris. Menilai setiap segmen, untuk meninjau yang keyakinannya rendah. |
 | `gpt-transcribe` | ✗ | ✗ | Lebih akurat, tetapi tanpa stempel waktu. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Mengidentifikasi pembicara. Tidak menggunakan kata kunci maupun deskripsi. |
 

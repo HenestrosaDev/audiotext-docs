@@ -19,9 +19,10 @@ Die **Einstellungen** enthalten alles, was sich nicht mit jeder Transkription ä
 
 ## KI
 
-Die Anbieter der [Zusammenfassungen und Übersetzungen](/de/guides/summary-and-translation/):
+Die Anbieter der [Zusammenfassungen, Fragen und Übersetzungen](/de/guides/summary-and-translation/):
 
 - **Zusammenfassung** → **Anbieter** und **Modell**.
+- **Fragen** → **Anbieter** und **Modell**: die, die Fragen zu den Transkriptionen beantworten. Bis Sie sie ändern, sind es die der Zusammenfassungen.
 - **Übersetzung** → **Anbieter** und **Modell**. DeepL und Google Translate haben keine Modelle zur Auswahl.
 - **Ollama** → **Server-URL**: die Adresse von Ollama, standardmäßig `http://localhost:11434`.
 
@@ -29,16 +30,16 @@ Lassen Sie das **Modell** leer, um das Standardmodell des Anbieters zu verwenden
 
 ## API-Schlüssel
 
-Die Schlüssel der einzelnen Dienste. Klicken Sie auf **Festlegen…**, um einen einzugeben, oder auf **Ändern…**, um ihn zu ersetzen (lassen Sie das Feld leer, um ihn zu entfernen). Sie werden im Anmeldedatenspeicher Ihres Systems aufbewahrt.
+Die Schlüssel der einzelnen Dienste. Klicken Sie auf **API-Schlüssel festlegen…**, um einen einzugeben, oder auf **API-Schlüssel ändern…**, um ihn zu ersetzen (lassen Sie das Feld leer, um ihn zu entfernen). Sie werden im Anmeldedatenspeicher Ihres Systems aufbewahrt.
 
 | Schlüssel | Verwendet für |
 | --- | --- |
-| OpenAI-API-Schlüssel | Die Whisper-API sowie Zusammenfassen und Übersetzen mit OpenAI |
-| Anthropic-API-Schlüssel | Zusammenfassen und Übersetzen mit Claude |
-| DeepSeek-API-Schlüssel | Zusammenfassen und Übersetzen mit DeepSeek |
-| Gemini-API-Schlüssel | Zusammenfassen und Übersetzen mit Gemini (aus Google AI Studio) |
-| Mistral-API-Schlüssel | Zusammenfassen und Übersetzen mit Mistral |
-| xAI-API-Schlüssel | Zusammenfassen und Übersetzen mit Grok |
+| OpenAI-API-Schlüssel | Die Whisper-API sowie Zusammenfassen, Fragen und Übersetzen mit OpenAI |
+| Anthropic-API-Schlüssel | Zusammenfassen, Fragen und Übersetzen mit Claude |
+| DeepSeek-API-Schlüssel | Zusammenfassen, Fragen und Übersetzen mit DeepSeek |
+| Gemini-API-Schlüssel | Zusammenfassen, Fragen und Übersetzen mit Gemini (aus Google AI Studio) |
+| Mistral-API-Schlüssel | Zusammenfassen, Fragen und Übersetzen mit Mistral |
+| xAI-API-Schlüssel | Zusammenfassen, Fragen und Übersetzen mit Grok |
 | DeepL-API-Schlüssel | Übersetzen mit DeepL (Schlüssel des kostenlosen Tarifs funktionieren auch) |
 | Google-API-Schlüssel | Google Speech-to-Text über das kostenlose Kontingent hinaus sowie Google Translate (Cloud Translation API) |
 | Hugging-Face-Token | Sprecher mit WhisperX erkennen |
@@ -49,15 +50,21 @@ Jeder Anbieter berechnet die Nutzung seiner API; Audiotext übernimmt dafür kei
 
 ## WhisperX
 
-**Berechnungstyp**, **Batchgröße** und **CPU verwenden**. Siehe [Erweiterte Optionen von WhisperX](/de/reference/engines/#erweiterte-optionen).
+**Berechnungstyp**, **Batchgröße** und **CPU verwenden**. Siehe [Erweiterte Optionen von WhisperX](/de/reference/engines/#erweiterte-optionen). Auf einem Mac mit Apple Silicon transkribiert WhisperX auf dessen GPU, sofern **CPU verwenden** nicht aktiv ist. Siehe [Auf einem Mac](/de/reference/engines/#auf-einem-mac).
 
 ## Untertitel
 
-Die Optionen der `.srt`- und `.vtt`-Dateien, die beim Transkribieren eines Ordners mit WhisperX gespeichert werden:
+Wie die Untertitel aufgeteilt werden: die über dem Video und im Modus **Untertitel** angezeigten, die exportierten Untertiteldateien und die [Videos mit Untertiteln](/de/guides/transcript/#das-video-mit-seinen-untertiteln-exportieren). Jede Option hat einen Wert für Querformat-Videos und einen für Hochformat-Videos (höher als breit, z. B. für Smartphones), die schmaler sind:
 
-- **Wörter hervorheben**: unterstreicht jedes Wort, während es gesprochen wird. Standardmäßig aus.
-- **Max. Zeilenanzahl**: die maximale Anzahl Zeilen pro Untertitel. Standardmäßig `2`.
-- **Max. Zeilenbreite**: die maximale Anzahl Zeichen einer Zeile vor dem Umbruch. Standardmäßig `42`.
+| Option | Horizontal | Vertikal |
+| --- | :---: | :---: |
+| **Max. Zeilen pro Untertitel** | `2` | `2` |
+| **Max. Zeichen pro Zeile** | `42` | `24` |
+| **Chinesisch, Japanisch und Koreanisch**: die Zeichen pro Zeile in diesen Sprachen, deren Zeichen etwa doppelt so breit wie lateinische sind | `16` | `10` |
+
+Die Zeilen eines Untertitels werden ausgeglichen, und Sprachen ohne Leerzeichen werden zwischen Zeichen umbrochen.
+
+**Wörter hervorheben** unterstreicht in den `.srt`- und `.vtt`-Dateien jedes Wort, während es gesprochen wird. Standardmäßig aus.
 
 ## Whisper API
 

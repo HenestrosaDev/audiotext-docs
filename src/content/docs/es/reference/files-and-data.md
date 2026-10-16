@@ -20,7 +20,7 @@ Los ajustes, el historial y las grabaciones se guardan en tu carpeta de configur
 Contiene:
 
 - `config.ini`: tus ajustes. Elimínalo para restablecer los valores por defecto.
-- `history.json`: tus transcripciones, con sus resúmenes, traducciones y correcciones.
+- `history.json`: tus transcripciones, con sus resúmenes, preguntas, traducciones y correcciones.
 - `media/`: las grabaciones del micrófono y el audio descargado de URL, para poder reproducirlos después. Se eliminan cuando se elimina su transcripción del historial.
 
 Para usar otra carpeta, p. ej. para una instalación portátil, configura la variable de entorno `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Las variables de entorno con los nombres de las claves tienen prioridad sobre la
 
 | Variable | Servicio |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (API de Whisper, resúmenes, traducciones) |
+| `OPENAI_API_KEY` | OpenAI (API de Whisper, resúmenes, preguntas, traducciones) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Las variables de entorno con los nombres de las claves tienen prioridad sobre la
 
 ## Modelos
 
-Los modelos de WhisperX y de la identificación de hablantes se descargan la primera vez que se usan y Hugging Face los guarda en la caché de `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` en Windows). Los modelos que alinean las palabras del inglés, el francés, el alemán, el español y el italiano los guarda PyTorch en `~/.cache/torch` (`%USERPROFILE%\.cache\torch` en Windows). Elimina esas carpetas para liberar el espacio que ocupan. Otras aplicaciones también pueden guardar ahí sus modelos, y los vuelven a descargar cuando los necesitan, como Audiotext.
+Los modelos de WhisperX (y de MLX Whisper, en los Mac) y de la identificación de hablantes se descargan la primera vez que se usan y Hugging Face los guarda en la caché de `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` en Windows). Los modelos que alinean las palabras del inglés, el francés, el alemán, el español y el italiano los guarda PyTorch en `~/.cache/torch` (`%USERPROFILE%\.cache\torch` en Windows). Elimina esas carpetas para liberar el espacio que ocupan. Otras aplicaciones también pueden guardar ahí sus modelos, y los vuelven a descargar cuando los necesitan, como Audiotext.

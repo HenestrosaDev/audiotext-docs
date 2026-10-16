@@ -20,7 +20,7 @@ Setările, istoricul și înregistrările sunt salvate în dosarul de configurar
 Conține:
 
 - `config.ini`: setările dumneavoastră. Ștergeți-l pentru a reveni la valorile implicite.
-- `history.json`: transcrierile, cu rezumatele, traducerile și corecturile lor.
+- `history.json`: transcrierile, cu rezumatele, întrebările, traducerile și corecturile lor.
 - `media/`: înregistrările de la microfon și sunetul descărcat de la URL-uri, ca să poată fi redate mai târziu. Sunt eliminate când transcrierea lor este ștearsă din istoric.
 
 Pentru a folosi alt dosar, de ex. pentru o instalare portabilă, setați variabila de mediu `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Variabilele de mediu cu numele cheilor au prioritate față de cele setate în a
 
 | Variabilă | Serviciu |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (API Whisper, rezumate, traduceri) |
+| `OPENAI_API_KEY` | OpenAI (API Whisper, rezumate, întrebări, traduceri) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Variabilele de mediu cu numele cheilor au prioritate față de cele setate în a
 
 ## Modele
 
-Modelele WhisperX și de identificare a vorbitorilor se descarcă la prima utilizare și sunt păstrate în cache de Hugging Face în `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` pe Windows). Modelele care aliniază cuvintele din engleză, franceză, germană, spaniolă și italiană sunt păstrate de PyTorch în `~/.cache/torch` (`%USERPROFILE%\.cache\torch` pe Windows). Ștergeți aceste dosare pentru a elibera spațiul pe care îl ocupă. Și alte aplicații își pot păstra modelele acolo și le descarcă din nou când au nevoie de ele, ca Audiotext.
+Modelele WhisperX (și MLX Whisper, pe Mac) și de identificare a vorbitorilor se descarcă la prima utilizare și sunt păstrate în cache de Hugging Face în `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` pe Windows). Modelele care aliniază cuvintele din engleză, franceză, germană, spaniolă și italiană sunt păstrate de PyTorch în `~/.cache/torch` (`%USERPROFILE%\.cache\torch` pe Windows). Ștergeți aceste dosare pentru a elibera spațiul pe care îl ocupă. Și alte aplicații își pot păstra modelele acolo și le descarcă din nou când au nevoie de ele, ca Audiotext.

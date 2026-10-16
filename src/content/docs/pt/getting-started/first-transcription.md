@@ -41,8 +41,9 @@ Se houver outra transcrição em andamento, o botão vira **Adicionar à fila**,
 Quando termina, a transcrição é aberta:
 
 - Clique em um segmento para reproduzir o áudio a partir dali.
-- Alterne entre **Transcrição**, **Texto simples** e **Resumo**.
-- Use **Traduzir**, **Copiar** e **Exportar** para traduzi-la, copiá-la ou salvá-la como arquivo.
+- Alterne entre **Legendas**, **Texto simples**, **Resumo** e **Perguntar**, para fazer perguntas sobre ela.
+- Use **Traduzir** para traduzi-la, e os botões do cabeçalho da transcrição para localizar e substituir nela, copiá-la ou salvá-la como arquivo.
+- Revise as palavras sublinhadas, de que o mecanismo tem menos certeza.
 
 Consulte [A transcrição](/pt/guides/transcript/) para saber tudo o que você pode fazer com ela.
 
@@ -52,8 +53,10 @@ Consulte [A transcrição](/pt/guides/transcript/) para saber tudo o que você p
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Iniciar a transcrição, ou iniciar e parar a gravação |
 | `Ctrl+O` / `⌘O` | Escolher um arquivo (ou uma pasta, na origem de pasta) |
-| `Ctrl+S` / `⌘S` | Exportar a transcrição exibida |
-| `Ctrl+F` / `⌘F` | Pesquisar na transcrição |
+| `Ctrl+S` / `⌘S` | Exportar o texto em que você está trabalhando: a transcrição ou a sua tradução |
+| `Ctrl+F` / `⌘F` | Localizar e substituir no texto em que você está trabalhando (ou pesquisar no resumo) |
+| `Ctrl+J` / `⌘J` | Ir para a próxima palavra de baixa confiança |
+| `Shift+Ctrl+J` / `⇧⌘J` | Ir para a palavra de baixa confiança anterior |
 | `Esc` | Cancelar a transcrição em andamento |
 | `Espaço` | Reproduzir ou pausar o áudio |
 | `←` / `→` | Voltar ou avançar 5 segundos |

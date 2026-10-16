@@ -18,10 +18,11 @@ Audiotext는 세 가지 엔진 중 하나로 받아쓰며, 엔진은 [받아쓰�
 | 화자 식별 | ✓(Hugging Face 토큰) | `gpt-4o-transcribe-diarize` | ✗ |
 | 단어별 타이밍 | ✓ | `whisper-1` | ✗ |
 | 실시간 텍스트 | ✓ | ✗ | ✗ |
+| [신뢰도가 낮은 단어](/ko/guides/transcript/#신뢰도가-낮은-단어-검토) | ✓(단어별 타이밍) | `whisper-1`(세그먼트) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX)는 내 컴퓨터에서 실행되는 OpenAI Whisper의 빠른 구현이라 오디오가 컴퓨터 밖으로 나가지 않습니다. CPU에서 실행되며, CUDA를 지원하는 NVIDIA GPU에서는 훨씬 빠릅니다.
+[WhisperX](https://github.com/m-bain/whisperX)는 내 컴퓨터에서 실행되는 OpenAI Whisper의 빠른 구현이라 오디오가 컴퓨터 밖으로 나가지 않습니다. CPU에서 실행되며, CUDA를 지원하는 NVIDIA GPU나 Apple 실리콘 Mac의 GPU에서는 훨씬 빠릅니다.
 
 ### 모델
 
@@ -47,13 +48,22 @@ Audiotext는 세 가지 엔진 중 하나로 받아쓰며, 엔진은 [받아쓰�
 Audiotext를 빠르게 써 보려면 `tiny`나 `small`을 고르세요. 최고 품질을 원한다면 GPU에서 `large-v2`나 `large-v3-turbo`를 사용하세요.
 :::
 
+### Mac에서
+
+Apple 실리콘 Mac에서는 [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper)가 GPU에서 받아쓰므로 CPU보다 훨씬 빠릅니다. 그런 다음 WhisperX가 평소처럼 CPU에서 단어를 정렬하고 화자를 식별하므로, 받아쓰기에 단어별 타이밍, 점수, 화자가 그대로 남습니다.
+
+- 모델의 MLX 버전은 처음 사용할 때 다운로드됩니다.
+- `distil-small.en`, `distil-large-v2`, `distil-large-v3.5`는 MLX 버전이 없으므로 CPU에서 실행됩니다.
+- [실시간 텍스트](/ko/guides/sources/#실시간-텍스트)는 항상 CPU에서 실행됩니다.
+- CPU에서 받아쓰려면 **환경설정** → **WhisperX**에서 **CPU 사용**을 켜세요.
+
 ### 고급 옵션
 
 **환경설정** → **WhisperX**에 있습니다. 문제가 있거나 무엇을 하는지 알 때만 바꾸세요. GPU 메모리가 부족하면 시스템이 멈출 수 있습니다.
 
-- **연산 유형**: 모델 숫자의 정밀도입니다. `float16`은 GPU에서 더 빠릅니다(CUDA 사용 시 기본값). `int8`은 메모리를 덜 쓰며 CPU의 기본값입니다. 많은 CPU가 `float16`을 효율적으로 처리하지 못하기 때문입니다. `float32`는 가장 정밀하며 VRAM이 8 GB를 넘는 GPU용입니다.
+- **연산 유형**: 모델 숫자의 정밀도입니다. `float16`은 NVIDIA GPU에서 더 빠릅니다(CUDA 사용 시 기본값). `int8`은 메모리를 덜 쓰며 CPU의 기본값입니다. 많은 CPU가 `float16`을 효율적으로 처리하지 못하기 때문입니다. `float32`는 가장 정밀하며 VRAM이 8 GB를 넘는 GPU용입니다.
 - **배치 크기**: 오디오의 몇 부분을 동시에 처리할지 정합니다(기본값 `8`). 품질은 그대로이고 속도만 달라집니다. 메모리가 부족하면 낮추세요. `16`까지 권장합니다.
-- **CPU 사용**: WhisperX를 CPU에서 실행합니다. CUDA GPU를 찾지 못하면 항상 켜집니다.
+- **CPU 사용**: WhisperX를 CPU에서 실행합니다. GPU(CUDA를 지원하는 NVIDIA GPU 또는 Apple 실리콘 Mac의 GPU)를 찾지 못하면 항상 켜집니다.
 
 ## Whisper API
 
@@ -61,7 +71,7 @@ Audiotext를 빠르게 써 보려면 `tiny`나 `small`을 고르세요. 최고 �
 
 | 모델 | 타임스탬프 | 화자 | 참고 |
 | --- | :---: | :---: | --- |
-| `whisper-1`(기본값) | ✓ | ✗ | 세그먼트 단위로 재생하고 자막을 만들 수 있습니다. 영어로 번역합니다. |
+| `whisper-1`(기본값) | ✓ | ✗ | 세그먼트 단위로 재생하고 자막을 만들 수 있습니다. 영어로 번역합니다. 각 세그먼트를 평가하므로 신뢰도가 낮은 세그먼트를 검토할 수 있습니다. |
 | `gpt-transcribe` | ✗ | ✗ | 더 정확하지만 타임스탬프가 없습니다. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | 화자를 식별합니다. 키워드와 설명을 사용하지 않습니다. |
 

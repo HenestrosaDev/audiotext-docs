@@ -15,18 +15,20 @@ Audiotext は FFmpeg で動画ファイルから音声を取り出すので、�
 
 ## 出力形式
 
-| 形式 | エクスポート | フォルダー（WhisperX） | フォルダー（Whisper API） |
-| --- | :---: | :---: | :---: |
-| プレーンテキスト (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Word 文書 (`.docx`) | ✓ | ✗ | ✗ |
-| 字幕 (`.srt`) | ✓ | ✓ | `srt` |
-| Web 字幕 (`.vtt`) | ✓ | ✓ | `vtt` |
-| 表 (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Audacity ラベル (`.aud`) | ✗ | ✓ | ✗ |
+| 形式 | エクスポート | フォルダー（WhisperX） | フォルダー（Whisper API） | コマンドライン |
+| --- | :---: | :---: | :---: | :---: |
+| プレーンテキスト (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Word 文書 (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| 字幕 (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Web 字幕 (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| スタイル付き字幕 (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| 表 (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Audacity ラベル (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| 字幕付き動画 (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-[エクスポート](/ja/guides/transcript/#コピーとエクスポート)と[出力カード](/ja/guides/transcription-settings/#フォルダーと出力)をご覧ください。
+要約は単独で `.txt`、`.md`、`.docx` にエクスポートできます。[エクスポート](/ja/guides/transcript/#コピーとエクスポート)、[出力カード](/ja/guides/transcription-settings/#フォルダーと出力)、[コマンドライン](/ja/reference/cli/#オプション)をご覧ください。
 
 ## 音声の言語
 

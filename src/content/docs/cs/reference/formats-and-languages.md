@@ -15,18 +15,20 @@ Audiotext extrahuje zvuk z video souborů pomocí FFmpeg, takže přepisuje oboj
 
 ## Výstupní formáty
 
-| Formát | Export | Složka (WhisperX) | Složka (Whisper API) |
-| --- | :---: | :---: | :---: |
-| Prostý text (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Dokument Word (`.docx`) | ✓ | ✗ | ✗ |
-| Titulky (`.srt`) | ✓ | ✓ | `srt` |
-| Webové titulky (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabulka (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Štítky Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Formát | Export | Složka (WhisperX) | Složka (Whisper API) | Příkazová řádka |
+| --- | :---: | :---: | :---: | :---: |
+| Prostý text (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Dokument Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Titulky (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Webové titulky (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Stylizované titulky (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabulka (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Štítky Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Video s titulky (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Viz [Export](/cs/guides/transcript/#kopírování-a-export) a [kartu Výstup](/cs/guides/transcription-settings/#složka-a-výstup).
+Shrnutí se exportuje samostatně do `.txt`, `.md` a `.docx`. Viz [Export](/cs/guides/transcript/#kopírování-a-export), [kartu Výstup](/cs/guides/transcription-settings/#složka-a-výstup) a [příkazovou řádku](/cs/reference/cli/#možnosti).
 
 ## Jazyky nahrávek
 

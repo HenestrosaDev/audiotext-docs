@@ -15,7 +15,7 @@ Sebelum mentranskripsi, Audiotext menampilkan pengaturan transkripsi yang dikelo
 
 | Mesin | Tempat berjalan | Biaya | Catatan |
 | --- | --- | --- | --- |
-| **WhisperX** (bawaan) | Komputer Anda | Gratis dan tanpa batas | Privat dan offline. Lebih banyak opsi: pembicara, waktu per kata, teks langsung. |
+| **WhisperX** (bawaan) | Komputer Anda | Gratis dan tanpa batas | Privat dan offline. Lebih banyak opsi: pembicara, waktu per kata, teks langsung. Berjalan di GPU Mac dengan Apple Silicon. |
 | **Whisper API** | Server OpenAI | Berbayar per menit | Memerlukan [kunci API OpenAI](/id/reference/preferences/#kunci-api). Untuk komputer yang tidak bisa menjalankan WhisperX dengan lancar. |
 | **Google API** | Server Google | Tingkat gratis, atau berbayar | Kualitas lebih rendah dan tanpa stempel waktu. Kunci API opsional. |
 
@@ -44,7 +44,7 @@ Keduanya digunakan oleh WhisperX dan Whisper API, kecuali model `gpt-4o-transcri
 
 ## Opsi
 
-- **Waktu per kata** (WhisperX): menyelaraskan setiap kata dengan audio agar disorot saat diputar. Memerlukan sedikit lebih banyak waktu. Subtitle sudah menggunakannya.
+- **Waktu per kata** (WhisperX): menyelaraskan setiap kata dengan audio agar disorot saat diputar dan untuk [meninjau kata](/id/guides/transcript/#tinjau-kata-dengan-keyakinan-rendah) yang paling tidak diyakininya. Memerlukan sedikit lebih banyak waktu. Aktif secara bawaan.
 - **Ekstrak suara**: mengurangi musik dan suara latar sebelum mentranskripsi.
 - **Identifikasi pembicara** (WhisperX): menandai siapa yang berbicara di setiap bagian, mis. `SPEAKER_00`. Jika Anda tahu berapa orang yang berbicara, masukkan di **Jumlah pembicara** (`0` mendeteksinya otomatis). Memerlukan token Hugging Face gratis; lihat [Identifikasi para pembicara](#identifikasi-para-pembicara). Dengan Whisper API, model `gpt-4o-transcribe-diarize` mengidentifikasi pembicara.
 

@@ -1,11 +1,11 @@
 ---
-title: Riassunto e traduzione
-description: Riassumi e traduci le trascrizioni con OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL o Google Translate.
+title: Riassunto, domande e traduzione
+description: Riassumi, fai domande e traduci le trascrizioni con OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL o Google Translate.
 sidebar:
   order: 4
 ---
 
-Quando una trascrizione è pronta, Audiotext può riassumerla e tradurla con un modello linguistico o un servizio di traduzione. Entrambi vengono conservati nella cronologia, quindi vengono generati una sola volta.
+Quando una trascrizione è pronta, Audiotext può riassumerla, rispondere a domande su di essa e tradurla con un modello linguistico o un servizio di traduzione. Tutto viene conservato nella cronologia, quindi viene generato una sola volta.
 
 ## Riassunto
 
@@ -15,38 +15,58 @@ Apri la modalità **Riassunto** di una trascrizione e fai clic su **Genera riass
 - I suoi **punti chiave**.
 - I suoi **capitoli**, se ha marcatori temporali. Fai clic su un capitolo per riprodurre l'audio dal suo inizio.
 
-**Rigenera** lo riscrive (es. dopo aver scelto un altro modello). **Copia** lo copia, e le [esportazioni](/it/guides/transcript/#copia-ed-esporta) in Markdown e Word lo includono.
+Sotto il titolo, il pannello dice quale modello lo ha generato e quando. I pulsanti della sua intestazione:
+
+- **Cerca** (`Ctrl+F`, `⌘F` su macOS): cerca un testo nel riassunto.
+- **Copia**: lo copia.
+- **Esporta**: lo salva da solo come testo semplice, Markdown o documento Word, con un nome come `video.summary.md` perché non sostituisca la trascrizione. Anche le [esportazioni](/it/guides/transcript/#copia-ed-esporta) in Markdown e Word della trascrizione lo includono.
+- **Rigenera il riassunto**: lo riscrive (es. dopo aver scelto un altro modello), dopo averti chiesto conferma, perché quello attuale viene sostituito.
 
 Se la chiave API del fornitore non è impostata, la modalità **Riassunto** propone di impostarla. Le trascrizioni molto lunghe (circa tre ore di parlato o più) vengono riassunte solo dall'inizio.
 
 ![Il riassunto di una trascrizione, con i punti chiave e i capitoli](/screenshots/summary.png)
 
+## Fai domande sulla trascrizione
+
+Apri la modalità **Chiedi**, scrivi una domanda in **Fai una domanda sulla trascrizione…** (es. cosa è stato deciso, o chi ha detto qualcosa) e premi `Invio` o fai clic su **Chiedi**.
+
+- Il modello linguistico risponde con la trascrizione, e con le domande precedenti e le loro risposte, quindi una domanda può riferirsi a esse (es. «Perché?»).
+- Se la trascrizione ha marcatori temporali, ogni risposta rimanda alle parti della trascrizione in cui viene detto. Fai clic su una per riprodurre l'audio da lì.
+- Le domande e le risposte sono conservate nella cronologia con la trascrizione. Il cestino dell'intestazione cancella la conversazione, dopo averti chiesto conferma.
+
+Le domande ricevono risposta dal fornitore scelto per esse in **Preferenze** → **IA** → **Chiedi**, che è quello dei riassunti finché non lo cambi. Come per i riassunti, delle trascrizioni molto lunghe si legge solo l'inizio.
+
 ## Traduzione
 
-Fai clic su **Traduci**, scegli la lingua in **Traduci in** e il **Fornitore**, e conferma. La traduzione viene mostrata in un pannello a destra del testo originale.
+Fai clic su **Traduci**, scegli la lingua in **Traduci in:** e il fornitore in **Traduci con:**, e conferma. La finestra dice cosa fa il fornitore scelto, e propone di impostarne la chiave API se manca. La traduzione viene mostrata in un pannello a destra del testo originale.
 
-- Se la trascrizione ha marcatori temporali, ogni segmento viene tradotto separatamente, quindi la traduzione inizia con gli stessi marcatori temporali: evidenzia il segmento in riproduzione, e fare clic su un segmento lo riproduce.
+- Se la trascrizione ha marcatori temporali, viene tradotta frase per frase, con il testo detto prima e dopo ogni parte come contesto, quindi la traduzione inizia con i marcatori temporali di ogni frase: evidenzia la frase in riproduzione, e fare clic su una la riproduce.
 - Se hai modificato il testo semplice, viene tradotto il testo modificato, senza marcatori temporali.
-- Trascina il separatore tra i due testi per ridimensionarli, o fai doppio clic su di esso per ripristinarne le dimensioni.
-- Il pulsante **Traduci** permette anche di **Nascondere la traduzione**, **Tradurre in un'altra lingua…** o **Eliminare la traduzione**.
+- I due testi scorrono insieme, quindi mostrano la stessa parte dell'audio. Il pulsante rotondo sul separatore tra di essi lo attiva e disattiva. Trascina il separatore per ridimensionarli, o fai doppio clic su di esso per ripristinarne le dimensioni.
+
+I pulsanti dell'intestazione della traduzione trovano e sostituiscono nel testo, lo copiano, lo esportano, **Traduci di nuovo** (con lo stesso fornitore e modello) e **Nascondi la traduzione**. Il pulsante **Traduci** permette anche di mostrarla di nuovo, **Traduci in un'altra lingua…** o **Elimina la traduzione**.
+
+### Più lingue
+
+Una trascrizione si può tradurre in più lingue, anche contemporaneamente, e ogni traduzione viene conservata. Il titolo del pannello sceglie quella mostrata, dice quanto è tradotta ciascuna e termina con l'opzione per tradurre in un'altra lingua. Tradurre in una lingua che ha già una traduzione la sostituisce, dopo averti chiesto conferma, perché le sue correzioni vanno perse.
 
 ### Correggi e cambia i tempi della traduzione
 
 Una traduzione richiede spesso tempi diversi dall'originale, ad es. sottotitoli che richiedono più tempo per essere letti. Fai clic con il tasto destro su un segmento della traduzione per:
 
-- **Modifica il testo…**: cambiarne il testo.
+- **Modifica testo…**: cambiarne il testo.
 - **Modifica i tempi…**: cambiare quando inizia e finisce, al millisecondo. Scrivi i tempi come `00:01:05,900`, `01:05,9` o `65.9`.
 - **Aggiungi un segmento dopo…**: aggiungere un segmento che, per impostazione predefinita, riempie lo spazio fino al successivo.
 - **Elimina il segmento**.
 
 ### Traducila tu stesso
 
-Per scrivere la traduzione tu stesso, scegli **Io stesso, da zero** come **Fornitore**. Non serve una chiave API. La traduzione inizia con i marcatori temporali della trascrizione e segmenti vuoti, mostrati come **Non ancora tradotto**, e il pannello mostra quanti ne mancano. Fai clic con il tasto destro su uno e scegli **Traduci il testo…**: la finestra mostra il testo originale detto in quel momento.
+Per scrivere la traduzione tu stesso, scegli **Manuale** in **Traduci con:**. Non serve una chiave API. La traduzione inizia con un segmento vuoto per ogni sottotitolo della trascrizione, mostrato come **Non ancora tradotto**, e il pannello mostra quanti ne mancano. Fai clic con il tasto destro su uno e scegli **Traduci testo…**: la finestra mostra il testo originale detto in quel momento.
 
 ### Sottotitoli ed esportazione
 
 - Nelle trascrizioni dei video, seleziona **Mostrala come sottotitoli del video** nel menu **Traduci** per mostrare la traduzione come sottotitoli. Anche il menu del video li cambia. Vedi [Guarda i video con i sottotitoli](/it/guides/transcript/#guarda-i-video-con-i-sottotitoli).
-- Per salvare la traduzione in un file, scegli **Traduzione in…** nel menu **Esporta** o fai clic sul pulsante di esportazione della traduzione. Viene esportata negli stessi [formati](/it/guides/transcript/#copia-ed-esporta) della trascrizione, con la sua lingua nel nome del file (ad es. `video.es.srt`), così i lettori video la caricano insieme al video. I segmenti non ancora tradotti vengono esclusi dai sottotitoli.
+- Per salvare la traduzione in un file, fai clic sul pulsante di esportazione del suo pannello. Viene esportata negli stessi [formati](/it/guides/transcript/#copia-ed-esporta) della trascrizione, con la sua lingua nel nome del file (ad es. `video.es.srt`), così i lettori video la caricano insieme al video. I segmenti non ancora tradotti vengono esclusi dai sottotitoli. Lo stesso menu crea una [copia del video con i sottotitoli](/it/guides/transcript/#esporta-il-video-con-i-sottotitoli).
 
 :::tip
 Per ottenere la trascrizione direttamente in un'altra lingua, senza fornitore, puoi anche tradurre durante la trascrizione. Consulta [Lingua](/it/guides/transcription-settings/#lingua).
@@ -54,7 +74,7 @@ Per ottenere la trascrizione direttamente in un'altra lingua, senza fornitore, p
 
 ## Fornitori
 
-I fornitori si scelgono in **Preferenze** → **IA**, separatamente per i riassunti e le traduzioni.
+I fornitori si scelgono in **Preferenze** → **IA**, separatamente per i riassunti, le domande e le traduzioni.
 
 | Fornitore | Modello predefinito | Chiave API |
 | --- | --- | --- |

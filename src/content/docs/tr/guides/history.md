@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Her transkripsiyon, özeti, çevirisi ve yaptığınız düzeltmelerle birlikte pencerenin solundaki geçmişte saklanır. Üst çubuğun solundaki düğme onu gösterir veya gizler.
+Her transkripsiyon, özeti, soruları, çevirileri ve yaptığınız düzeltmelerle birlikte pencerenin solundaki geçmişte saklanır. Üst çubuğun solundaki düğme onu gösterir veya gizler.
 
 ## Bir transkripsiyon bulun
 
@@ -32,7 +32,7 @@ Gruplar, bir projeye veya kursa ait olanlar gibi ilişkili transkripsiyonları b
 
 ## Bir transkripsiyonu silin
 
-Bir transkripsiyonu silmek onu, özetini ve çevirisini geçmişten kaldırır. Bir klasördeki dosyaların transkripsiyonları da silinir. Ses, video ve kaydedilmiş dosyalarınız **silinmez**.
+Bir transkripsiyonu silmek onu, özetini, sorularını ve çevirilerini geçmişten kaldırır. Bir klasördeki dosyaların transkripsiyonları da silinir. Ses, video ve kaydedilmiş dosyalarınız **silinmez**.
 
 ## Başarısız ve yarıda kalan transkripsiyonlar
 

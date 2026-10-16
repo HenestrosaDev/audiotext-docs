@@ -19,9 +19,10 @@ sidebar:
 
 ## AI
 
-Penyedia [ringkasan dan terjemahan](/id/guides/summary-and-translation/):
+Penyedia [ringkasan, pertanyaan, dan terjemahan](/id/guides/summary-and-translation/):
 
 - **Ringkasan** → **Penyedia** dan **Model**.
+- **Tanya** → **Penyedia** dan **Model**: yang menjawab pertanyaan tentang transkripsi. Sampai Anda mengubahnya, keduanya sama dengan milik ringkasan.
 - **Terjemahan** → **Penyedia** dan **Model**. DeepL dan Google Translate tidak memiliki model untuk dipilih.
 - **Ollama** → **URL server**: alamat Ollama, `http://localhost:11434` secara bawaan.
 
@@ -29,16 +30,16 @@ Biarkan **Model** kosong untuk menggunakan model bawaan penyedia. Tombol di samp
 
 ## Kunci API
 
-Kunci untuk setiap layanan. Klik **Atur…** untuk memasukkan kunci, atau **Ubah…** untuk menggantinya (biarkan kosong untuk menghapusnya). Kunci disimpan di penyimpanan kredensial sistem Anda.
+Kunci untuk setiap layanan. Klik **Atur kunci API…** untuk memasukkan kunci, atau **Ubah kunci API…** untuk menggantinya (biarkan kosong untuk menghapusnya). Kunci disimpan di penyimpanan kredensial sistem Anda.
 
 | Kunci | Digunakan untuk |
 | --- | --- |
-| Kunci API OpenAI | Whisper API, serta meringkas dan menerjemahkan dengan OpenAI |
-| Kunci API Anthropic | Meringkas dan menerjemahkan dengan Claude |
-| Kunci API DeepSeek | Meringkas dan menerjemahkan dengan DeepSeek |
-| Kunci API Gemini | Meringkas dan menerjemahkan dengan Gemini (dari Google AI Studio) |
-| Kunci API Mistral | Meringkas dan menerjemahkan dengan Mistral |
-| Kunci API xAI | Meringkas dan menerjemahkan dengan Grok |
+| Kunci API OpenAI | Whisper API, serta meringkas, bertanya, dan menerjemahkan dengan OpenAI |
+| Kunci API Anthropic | Meringkas, bertanya, dan menerjemahkan dengan Claude |
+| Kunci API DeepSeek | Meringkas, bertanya, dan menerjemahkan dengan DeepSeek |
+| Kunci API Gemini | Meringkas, bertanya, dan menerjemahkan dengan Gemini (dari Google AI Studio) |
+| Kunci API Mistral | Meringkas, bertanya, dan menerjemahkan dengan Mistral |
+| Kunci API xAI | Meringkas, bertanya, dan menerjemahkan dengan Grok |
 | Kunci API DeepL | Menerjemahkan dengan DeepL (kunci paket gratis juga berfungsi) |
 | Kunci Google API | Google Speech-to-Text di luar tingkat gratis, dan Google Translate (Cloud Translation API) |
 | Token Hugging Face | Mengidentifikasi pembicara dengan WhisperX |
@@ -49,15 +50,21 @@ Setiap penyedia mengenakan biaya atas penggunaan API-nya, dan Audiotext tidak be
 
 ## WhisperX
 
-**Jenis komputasi**, **Ukuran batch**, dan **Gunakan CPU**. Lihat [opsi lanjutan WhisperX](/id/reference/engines/#opsi-lanjutan).
+**Jenis komputasi**, **Ukuran batch**, dan **Gunakan CPU**. Lihat [opsi lanjutan WhisperX](/id/reference/engines/#opsi-lanjutan). Di Mac dengan Apple Silicon, WhisperX mentranskripsi di GPU-nya kecuali **Gunakan CPU** aktif. Lihat [Di Mac](/id/reference/engines/#di-mac).
 
 ## Subtitle
 
-Opsi file `.srt` dan `.vtt` yang disimpan saat mentranskripsi folder dengan WhisperX:
+Cara subtitle dibagi: yang ditampilkan di atas video dan di mode **Subtitle**, file subtitle yang diekspor, dan [video dengan subtitle](/id/guides/transcript/#ekspor-video-beserta-subtitlenya). Setiap opsi memiliki nilai untuk video horizontal dan nilai lain untuk video vertikal (lebih tinggi daripada lebarnya, mis. untuk ponsel), yang lebih sempit:
 
-- **Sorot kata**: menggarisbawahi setiap kata saat diucapkan. Nonaktif secara bawaan.
-- **Maks. jumlah baris**: jumlah baris maksimum setiap subtitle. `2` secara bawaan.
-- **Maks. lebar baris**: jumlah karakter maksimum satu baris sebelum dipotong. `42` secara bawaan.
+| Opsi | Horizontal | Vertikal |
+| --- | :---: | :---: |
+| **Maks. baris per subtitel** | `2` | `2` |
+| **Maks. karakter per baris** | `42` | `24` |
+| **Mandarin, Jepang, dan Korea**: karakter per baris dalam bahasa-bahasa ini, yang karakternya sekitar dua kali lebih lebar daripada karakter Latin | `16` | `10` |
+
+Baris-baris dalam satu subtitle diseimbangkan, dan bahasa yang ditulis tanpa spasi dipotong di antara karakter.
+
+**Sorot kata** menggarisbawahi setiap kata saat diucapkan di file `.srt` dan `.vtt`. Nonaktif secara bawaan.
 
 ## Whisper API
 

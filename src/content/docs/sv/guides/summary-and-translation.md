@@ -1,11 +1,11 @@
 ---
-title: Sammanfattning och översättning
-description: Sammanfatta och översätt transkriberingar med OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL eller Google Translate.
+title: Sammanfattning, frågor och översättning
+description: Sammanfatta, ställ frågor om och översätt transkriberingar med OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL eller Google Translate.
 sidebar:
   order: 4
 ---
 
-När en transkribering är klar kan Audiotext sammanfatta och översätta den med en språkmodell eller en översättningstjänst. Båda sparas i historiken, så de skapas bara en gång.
+När en transkribering är klar kan Audiotext sammanfatta den, svara på frågor om den och översätta den med en språkmodell eller en översättningstjänst. Allt sparas i historiken, så det skapas bara en gång.
 
 ## Sammanfattning
 
@@ -15,38 +15,58 @@ När en transkribering är klar kan Audiotext sammanfatta och översätta den me
 - Dess **huvudpunkter**.
 - Dess **kapitel**, om den har tidsstämplar. Klicka på ett kapitel för att spela upp ljudet från där det börjar.
 
-**Skapa igen** skriver den på nytt (t.ex. efter att du valt en annan modell). **Kopiera** kopierar den, och [exporterna](/sv/guides/transcript/#kopiera-och-exportera) till Markdown och Word innehåller den.
+Under rubriken visar panelen vilken modell som skapade den och när. Knapparna i dess rubrik:
+
+- **Sök** (`Ctrl+F`, `⌘F` på macOS): söker efter en text i sammanfattningen.
+- **Kopiera**: kopierar den.
+- **Exportera**: sparar den för sig som oformaterad text, Markdown eller Word-dokument, med ett namn som `video.summary.md` så att den inte ersätter transkriberingen. Transkriberingens [exporter](/sv/guides/transcript/#kopiera-och-exportera) till Markdown och Word innehåller den också.
+- **Generera sammanfattningen igen**: skriver den på nytt (t.ex. efter att du valt en annan modell), efter en bekräftelse, eftersom den nuvarande ersätts.
 
 Om leverantörens API-nyckel inte är angiven erbjuder läget **Sammanfattning** att ange den. Mycket långa transkriberingar (ungefär tre timmars tal eller mer) sammanfattas bara från början.
 
 ![Sammanfattningen av en transkription, med nyckelpunkter och kapitel](/screenshots/summary.png)
 
+## Fråga om transkriberingen
+
+Öppna läget **Fråga**, skriv en fråga i **Ställ en fråga om transkriberingen…** (t.ex. vad som beslutades eller vem som sa något) och tryck `Enter` eller klicka på **Fråga**.
+
+- Språkmodellen svarar utifrån transkriberingen och de tidigare frågorna och svaren, så en fråga kan syfta på dem (t.ex. ”Varför?”).
+- Om transkriberingen har tidsstämplar länkar varje svar till de delar av transkriberingen där det sägs. Klicka på en för att spela upp ljudet därifrån.
+- Frågorna och svaren sparas i historiken med transkriberingen. Papperskorgen i rubriken rensar konversationen, efter en bekräftelse.
+
+Frågorna besvaras av leverantören som valts för dem under **Inställningar** → **AI** → **Fråga**, vilket är sammanfattningarnas leverantör tills du ändrar den. Precis som för sammanfattningarna läses bara början av mycket långa transkriberingar.
+
 ## Översättning
 
-Klicka på **Översätt**, välj språk under **Översätt till** och **Leverantör**, och bekräfta. Översättningen visas i en panel till höger om originaltexten.
+Klicka på **Översätt**, välj språk under **Översätt till:** och leverantör under **Översätt med:**, och bekräfta. Dialogrutan förklarar vad den valda leverantören gör, och erbjuder att ange dess API-nyckel om den saknas. Översättningen visas i en panel till höger om originaltexten.
 
-- Om transkriberingen har tidsstämplar översätts varje segment för sig, så översättningen börjar med samma tidsstämplar: den markerar segmentet som spelas upp, och ett klick på ett segment spelar upp det.
+- Om transkriberingen har tidsstämplar översätts den mening för mening, med texten som sägs före och efter varje del som sammanhang, så översättningen börjar med varje menings tidsstämplar: den markerar meningen som spelas upp, och ett klick på en mening spelar upp den.
 - Om du har redigerat den oformaterade texten översätts den redigerade texten i stället, utan tidsstämplar.
-- Dra i handtaget mellan texterna för att ändra deras storlek, eller dubbelklicka på det för att återställa storlekarna.
-- Med knappen **Översätt** kan du också **Dölj översättningen**, **Översätt till ett annat språk…** eller **Ta bort översättningen**.
+- Båda texterna rullar tillsammans, så att de visar samma del av ljudet. Den runda knappen på handtaget mellan dem slår på och av det. Dra i handtaget för att ändra deras storlek, eller dubbelklicka på det för att återställa storlekarna.
+
+Med knapparna i översättningens rubrik söker och ersätter du i den, kopierar och exporterar den, väljer **Översätt igen** (med samma leverantör och modell) och **Dölj översättningen**. Med knappen **Översätt** kan du också visa den igen, **Översätt till ett annat språk…** eller **Ta bort översättningen**.
+
+### Flera språk
+
+En transkribering kan översättas till flera språk, även samtidigt, och varje översättning sparas. Panelens rubrik väljer vilken som visas, visar hur mycket av varje som är översatt och slutar med alternativet att översätta till ett annat språk. Att översätta till ett språk som redan har en översättning ersätter den, efter en bekräftelse, eftersom dess korrigeringar går förlorade.
 
 ### Korrigera och tajma om översättningen
 
 En översättning behöver ofta andra tider än originalet, t.ex. undertexter som tar längre tid att läsa. Högerklicka på ett segment i översättningen för att:
 
-- **Redigera texten…**: ändra dess text.
+- **Redigera text…**: ändra dess text.
 - **Redigera tiderna…**: ändra när det börjar och slutar, på millisekunden. Skriv tiderna som `00:01:05,900`, `01:05,9` eller `65.9`.
 - **Lägg till ett segment efter…**: lägga till ett segment, som som standard fyller luckan fram till nästa.
 - **Radera segmentet**.
 
 ### Översätt själv
 
-För att skriva översättningen själv väljer du **Själv, från grunden** som **Leverantör**. Ingen API-nyckel behövs. Översättningen börjar med transkriberingens tidsstämplar och tomma segment, som visas som **Inte översatt ännu**, och panelen visar hur många som är kvar. Högerklicka på ett och välj **Översätt texten…**: dialogrutan visar originaltexten som sägs under tiden.
+För att skriva översättningen själv väljer du **Manuellt** under **Översätt med:**. Ingen API-nyckel behövs. Översättningen börjar med ett tomt segment för varje undertext i transkriberingen, som visas som **Inte översatt ännu**, och panelen visar hur många som är kvar. Högerklicka på ett och välj **Översätt text…**: dialogrutan visar originaltexten som sägs under tiden.
 
 ### Undertexter och export
 
 - I transkriberingar av videor markerar du **Visa den som videons undertexter** i menyn **Översätt** för att visa översättningen som undertexter. Videons meny växlar dem också. Se [Se videor med undertexter](/sv/guides/transcript/#se-videor-med-undertexter).
-- För att spara översättningen som en fil väljer du **Översättning till…** i menyn **Exportera**, eller klickar på översättningens exportknapp. Den exporteras i samma [format](/sv/guides/transcript/#kopiera-och-exportera) som transkriberingen, med språket i filnamnet (t.ex. `video.es.srt`), så att videospelare läser in den med videon. Segment som inte är översatta ännu utelämnas ur undertexterna.
+- För att spara översättningen som en fil klickar du på exportknappen i dess panel. Den exporteras i samma [format](/sv/guides/transcript/#kopiera-och-exportera) som transkriberingen, med språket i filnamnet (t.ex. `video.es.srt`), så att videospelare läser in den med videon. Segment som inte är översatta ännu utelämnas ur undertexterna. Samma meny gör en [kopia av videon med undertexterna](/sv/guides/transcript/#exportera-videon-med-undertexterna).
 
 :::tip
 För att få transkriberingen direkt på ett annat språk, utan leverantör, kan du också översätta under transkriberingen. Se [Språk](/sv/guides/transcription-settings/#språk).
@@ -54,7 +74,7 @@ För att få transkriberingen direkt på ett annat språk, utan leverantör, kan
 
 ## Leverantörer
 
-Leverantörerna väljs under **Inställningar** → **AI**, separat för sammanfattningar och översättningar.
+Leverantörerna väljs under **Inställningar** → **AI**, separat för sammanfattningar, frågor och översättningar.
 
 | Leverantör | Standardmodell | API-nyckel |
 | --- | --- | --- |

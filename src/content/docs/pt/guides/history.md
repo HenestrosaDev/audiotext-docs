@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Cada transcrição fica no histórico, à esquerda da janela, junto com o resumo, a tradução e as correções que você fez. O botão à esquerda da barra superior o mostra ou oculta.
+Cada transcrição fica no histórico, à esquerda da janela, junto com o resumo, as perguntas, as traduções e as correções que você fez. O botão à esquerda da barra superior o mostra ou oculta.
 
 ## Encontre uma transcrição
 
@@ -32,7 +32,7 @@ Os grupos reúnem transcrições relacionadas, como as de um projeto ou de um cu
 
 ## Exclua uma transcrição
 
-Excluir uma transcrição a remove do histórico, junto com o resumo e a tradução. As transcrições dos arquivos de uma pasta também são excluídas. Os seus arquivos de áudio, vídeo e os arquivos salvos **não** são excluídos.
+Excluir uma transcrição a remove do histórico, junto com o resumo, as perguntas e as traduções. As transcrições dos arquivos de uma pasta também são excluídas. Os seus arquivos de áudio, vídeo e os arquivos salvos **não** são excluídos.
 
 ## Transcrições com falha e interrompidas
 

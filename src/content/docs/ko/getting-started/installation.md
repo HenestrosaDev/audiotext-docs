@@ -25,7 +25,7 @@ GitHub의 [최신 릴리스](https://github.com/HenestrosaDev/audiotext/releases
 
 ### macOS
 
-`.dmg` 파일을 열고 **Audiotext**를 **응용 프로그램** 폴더로 끌어다 놓으세요. 이 앱은 Apple의 공증을 받지 않았으므로 처음 열 때 macOS가 차단합니다. **시스템 설정** → **개인정보 보호 및 보안**으로 이동해 Audiotext 관련 메시지 옆의 **그래도 열기**를 클릭하세요. macOS에서는 CUDA를 사용할 수 없으므로 WhisperX가 CPU에서 실행됩니다. PyTorch가 더 이상 지원하지 않으므로 Intel Mac은 지원되지 않습니다.
+`.dmg` 파일을 열고 **Audiotext**를 **응용 프로그램** 폴더로 끌어다 놓으세요. 이 앱은 Apple의 공증을 받지 않았으므로 처음 열 때 macOS가 차단합니다. **시스템 설정** → **개인정보 보호 및 보안**으로 이동해 Audiotext 관련 메시지 옆의 **그래도 열기**를 클릭하세요. Mac에서는 WhisperX가 [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper)로 Apple 실리콘의 GPU에서 받아쓰므로, 추가 구성 요소 없이 CPU보다 훨씬 빠릅니다. PyTorch가 더 이상 지원하지 않으므로 Intel Mac은 지원되지 않습니다.
 
 ### Linux
 
@@ -49,7 +49,7 @@ GPU 애드온은 Windows에서 약 2 GB, Linux에서 약 4 GB를 내려받으므
 
 ## 요구 사항
 
-- **WhisperX**는 내 컴퓨터에서 실행됩니다. 어떤 CPU에서도 작동하지만 CUDA를 지원하는 NVIDIA GPU에서 훨씬 빠릅니다. 하드웨어에 맞는 모델을 고르려면 [엔진](/ko/reference/engines/)을 참고하세요.
+- **WhisperX**는 내 컴퓨터에서 실행됩니다. 어떤 CPU에서도 작동하지만 CUDA를 지원하는 NVIDIA GPU나 Apple 실리콘 Mac의 GPU에서 훨씬 빠릅니다. 하드웨어에 맞는 모델을 고르려면 [엔진](/ko/reference/engines/)을 참고하세요.
 - **Whisper API**와 **Google API**는 원격 서버에서 실행되므로 인터넷 연결이 필요하지만 고성능 하드웨어는 필요하지 않습니다.
 - 마이크에서 받아쓰려면 시스템이 입력 장치를 인식해야 합니다.
 - Linux에서 녹음과 재생에는 [PortAudio](https://www.portaudio.com/)가 필요합니다(Ubuntu 또는 Debian에서는 `sudo apt install libportaudio2`).

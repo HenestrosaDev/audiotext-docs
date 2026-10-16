@@ -25,7 +25,7 @@ Run the installer and follow its steps. It doesn't need administrator permission
 
 ### macOS
 
-Open the `.dmg` file and drag **Audiotext** to the **Applications** folder. The app isn't notarized by Apple, so macOS blocks it the first time you open it: go to **System Settings** → **Privacy & Security** and click **Open Anyway** next to the message about Audiotext. On macOS, WhisperX runs on the CPU, since CUDA isn't available. Intel Macs aren't supported, since PyTorch no longer supports them.
+Open the `.dmg` file and drag **Audiotext** to the **Applications** folder. The app isn't notarized by Apple, so macOS blocks it the first time you open it: go to **System Settings** → **Privacy & Security** and click **Open Anyway** next to the message about Audiotext. On Macs, WhisperX transcribes on the GPU of Apple Silicon with [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), much faster than on the CPU, without any add-on. Intel Macs aren't supported, since PyTorch no longer supports them.
 
 ### Linux
 
@@ -49,7 +49,7 @@ The first time you transcribe with **WhisperX** (the default engine), its model 
 
 ## Requirements
 
-- **WhisperX** runs on your computer. It works on any CPU, but it's much faster on an NVIDIA GPU with CUDA. See [Engines](/en/reference/engines/) to choose a model that fits your hardware.
+- **WhisperX** runs on your computer. It works on any CPU, but it's much faster on an NVIDIA GPU with CUDA or on the GPU of a Mac with Apple Silicon. See [Engines](/en/reference/engines/) to choose a model that fits your hardware.
 - The **Whisper API** and the **Google API** run on remote servers, so they need an Internet connection but no powerful hardware.
 - To transcribe from the microphone, your system must detect an input device.
 - On Linux, recording and playing audio need [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` on Ubuntu or Debian).

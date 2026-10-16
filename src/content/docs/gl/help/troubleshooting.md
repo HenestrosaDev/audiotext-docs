@@ -21,7 +21,7 @@ Os dous últimos poden reducir a calidade. Consulta [Motores](/gl/reference/engi
 
 ## Transcribir tarda demasiado
 
-A velocidade de WhisperX depende do teu hardware, así que non esperes resultados instantáneos en CPU modestas. Proba un modelo máis pequeno, como `small`, ou `large-v3-turbo` nunha GPU, ou o tipo de cálculo `int8`. Tamén podes usar a **API de Whisper** ou a **API de Google**, que se executan en servidores remotos.
+A velocidade de WhisperX depende do teu hardware, así que non esperes resultados instantáneos en CPU modestas. Proba un modelo máis pequeno, como `small`, ou `large-v3-turbo` nunha GPU, ou o tipo de cálculo `int8`. Nun Mac con Apple Silicon, comproba que **Usar a CPU** está desactivado en **Preferencias** → **WhisperX**, para que transcriba na GPU. Tamén podes usar a **API de Whisper** ou a **API de Google**, que se executan en servidores remotos.
 
 ## A API de Whisper devolve o erro `429`
 
@@ -78,11 +78,26 @@ Os ficheiros que xa teñen unha transcrición omítense. Activa **Sobrescribir o
 
 A API de Google non pode detectar o idioma. Escolle o **Idioma do audio** na configuración.
 
-## Falla un resumo ou unha tradución
+## Falla un resumo, unha resposta ou unha tradución
 
 - **DeepL non pode traducir ao idioma ….**: DeepL non admite ese idioma. Escolle outro provedor, como un modelo de linguaxe.
-- **A resposta do modelo era demasiado longa.**, **O modelo non devolveu un resumo válido.** ou **O modelo non devolveu unha tradución válida.**: o modelo non escribiu o resumo ou a tradución co formato esperado. Téntao de novo ou escolle un modelo máis grande en **Preferencias** → **IA**. Os modelos pequenos de Ollama fallan máis a miúdo.
+- **A resposta do modelo era demasiado longa.**, **O modelo non devolveu un resumo válido.**, **O modelo non devolveu unha resposta válida.** ou **O modelo non devolveu unha tradución válida.**: o modelo non escribiu o resumo, a resposta ou a tradución co formato esperado. Téntao de novo ou escolle un modelo máis grande en **Preferencias** → **IA**. Os modelos pequenos de Ollama fallan máis a miúdo.
 - Para calquera outro erro, comproba que a clave de API do provedor está configurada en **Preferencias** → **Claves de API** e que a túa conta ten saldo.
+
+## Non se subliñan as palabras de baixa confianza
+
+Comproba que **Resaltar as palabras de baixa confianza** está activado no menú `⋯` da transcrición. Se a transcrición non ten puntuacións, o menú di por que:
+
+- **Activa «Tempos por palabra» e transcríbeo de novo**: WhisperX puntúa as palabras cando calcula os seus tempos.
+- **Non hai modelo de aliñamento para o seu idioma**: as palabras dese idioma non se poden temporizar nin puntuar.
+- **Transcríbeo de novo para puntuar as palabras**: transcribiuse antes de que se puntuasen as palabras.
+- **Só WhisperX e whisper-1 puntúan as palabras**: os demais motores e modelos non o fan.
+
+Consulta [Revisa as palabras de baixa confianza](/gl/guides/transcript/#revisa-as-palabras-de-baixa-confianza).
+
+## O vídeo con subtítulos mostra cadros
+
+Se se mostra **Exportado a …, pero ningunha fonte ten estes caracteres, así que se amosan como cadros: …** despois de [exportar o vídeo cos seus subtítulos](/gl/guides/transcript/#exporta-o-vídeo-cos-seus-subtítulos), ningunha fonte do teu sistema pode debuxar eses caracteres. Instala unha fonte para esa escritura (p. ex. [Noto](https://fonts.google.com/noto)) e volve exportalo.
 
 ## Non se poden buscar actualizacións
 

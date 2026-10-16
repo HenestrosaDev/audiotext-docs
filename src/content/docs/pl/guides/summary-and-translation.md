@@ -1,11 +1,11 @@
 ---
-title: Podsumowanie i tłumaczenie
-description: Podsumowuj i tłumacz transkrypcje za pomocą OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL lub Google Translate.
+title: Podsumowanie, pytania i tłumaczenie
+description: Podsumowuj transkrypcje, zadawaj o nie pytania i tłumacz je za pomocą OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL lub Google Translate.
 sidebar:
   order: 4
 ---
 
-Gdy transkrypcja jest gotowa, Audiotext może ją podsumować i przetłumaczyć za pomocą modelu językowego lub usługi tłumaczeniowej. Oba są zapisywane w historii, więc generuje się je tylko raz.
+Gdy transkrypcja jest gotowa, Audiotext może ją podsumować, odpowiadać na pytania o nią i przetłumaczyć ją za pomocą modelu językowego lub usługi tłumaczeniowej. Wszystko jest zapisywane w historii, więc generuje się tylko raz.
 
 ## Podsumowanie
 
@@ -15,20 +15,40 @@ Otwórz widok **Podsumowanie** transkrypcji i kliknij **Wygeneruj podsumowanie**
 - Jej **najważniejsze punkty**.
 - Jej **rozdziały**, jeśli ma znaczniki czasu. Kliknij rozdział, aby odtworzyć nagranie od jego początku.
 
-**Wygeneruj ponownie** pisze je od nowa (np. po wybraniu innego modelu). **Kopiuj** je kopiuje, a [eksport](/pl/guides/transcript/#kopiowanie-i-eksport) do Markdown i Word je zawiera.
+Pod tytułem panel pokazuje, który model je wygenerował i kiedy. Przyciski w jego nagłówku:
+
+- **Szukaj** (`Ctrl+F`, `⌘F` w macOS): wyszukuje tekst w podsumowaniu.
+- **Kopiuj**: kopiuje je.
+- **Eksportuj**: zapisuje je osobno jako zwykły tekst, Markdown lub dokument Word, pod nazwą typu `video.summary.md`, aby nie zastąpiło transkrypcji. [Eksport](/pl/guides/transcript/#kopiowanie-i-eksport) transkrypcji do Markdown i Word też je zawiera.
+- **Wygeneruj podsumowanie ponownie**: pisze je od nowa (np. po wybraniu innego modelu), po potwierdzeniu, bo obecne zostanie zastąpione.
 
 Jeśli klucz API dostawcy nie jest ustawiony, widok **Podsumowanie** proponuje jego ustawienie. Bardzo długie transkrypcje (około trzech godzin mowy lub więcej) są podsumowywane tylko od początku.
 
 ![Podsumowanie transkrypcji z kluczowymi punktami i rozdziałami](/screenshots/summary.png)
 
+## Pytania o transkrypcję
+
+Otwórz widok **Zapytaj**, wpisz pytanie w polu **Zadaj pytanie o transkrypcję…** (np. co postanowiono albo kto coś powiedział) i naciśnij `Enter` lub kliknij **Zapytaj**.
+
+- Model językowy odpowiada na podstawie transkrypcji oraz wcześniejszych pytań i odpowiedzi, więc pytanie może się do nich odnosić (np. „Dlaczego?”).
+- Jeśli transkrypcja ma znaczniki czasu, każda odpowiedź zawiera odnośniki do fragmentów transkrypcji, w których to pada. Kliknij jeden, aby odtworzyć nagranie od tego miejsca.
+- Pytania i odpowiedzi są zapisywane w historii razem z transkrypcją. Kosz w nagłówku czyści rozmowę po potwierdzeniu.
+
+Na pytania odpowiada dostawca wybrany dla nich w **Preferencje** → **AI** → **Zapytaj**, czyli dostawca podsumowań, dopóki go nie zmienisz. Tak jak przy podsumowaniach, z bardzo długich transkrypcji czytany jest tylko początek.
+
 ## Tłumaczenie
 
-Kliknij **Przetłumacz**, wybierz język w polu **Przetłumacz na** oraz **Dostawcę** i potwierdź. Tłumaczenie pojawi się w panelu po prawej stronie oryginalnego tekstu.
+Kliknij **Przetłumacz**, wybierz język w polu **Przetłumacz na:** i dostawcę w polu **Tłumacz za pomocą:**, a następnie potwierdź. Okno wyjaśnia, co robi wybrany dostawca, i proponuje ustawienie jego klucza API, jeśli go brakuje. Tłumaczenie pojawi się w panelu po prawej stronie oryginalnego tekstu.
 
-- Jeśli transkrypcja ma znaczniki czasu, każdy segment jest tłumaczony osobno, więc tłumaczenie zaczyna się z tymi samymi znacznikami czasu: wyróżnia odtwarzany segment, a kliknięcie segmentu go odtwarza.
+- Jeśli transkrypcja ma znaczniki czasu, jest tłumaczona zdanie po zdaniu, z tekstem wypowiedzianym przed i po każdym fragmencie jako kontekstem, więc tłumaczenie zaczyna się ze znacznikami czasu każdego zdania: wyróżnia odtwarzane zdanie, a kliknięcie zdania je odtwarza.
 - Jeśli edytowałeś zwykły tekst, tłumaczony jest edytowany tekst, bez znaczników czasu.
-- Przeciągnij uchwyt między tekstami, aby zmienić ich rozmiar, lub kliknij go dwukrotnie, aby przywrócić rozmiary.
-- Przycisk **Przetłumacz** pozwala też **Ukryć tłumaczenie**, **Przetłumaczyć na inny język…** lub **Usunąć tłumaczenie**.
+- Oba teksty przewijają się razem, więc pokazują ten sam fragment nagrania. Okrągły przycisk na uchwycie między nimi włącza i wyłącza tę funkcję. Przeciągnij uchwyt, aby zmienić ich rozmiar, lub kliknij go dwukrotnie, aby przywrócić rozmiary.
+
+Przyciski w nagłówku tłumaczenia pozwalają znaleźć i zamienić w nim tekst, skopiować je, wyeksportować, **Przetłumacz ponownie** (z tym samym dostawcą i modelem) oraz **Ukryj tłumaczenie**. Przycisk **Przetłumacz** pozwala też pokazać je ponownie, **Przetłumacz na inny język…** lub **Usuń tłumaczenie**.
+
+### Kilka języków
+
+Transkrypcję można przetłumaczyć na kilka języków, nawet jednocześnie, a każde tłumaczenie jest zachowywane. Tytuł panelu wybiera wyświetlane tłumaczenie, pokazuje, jaka część każdego jest przetłumaczona, i kończy się opcją tłumaczenia na inny język. Tłumaczenie na język, który ma już tłumaczenie, zastępuje je po potwierdzeniu, bo jego poprawki zostaną utracone.
 
 ### Poprawianie i zmiana czasów tłumaczenia
 
@@ -41,12 +61,12 @@ Tłumaczenie często wymaga innych czasów niż oryginał, np. napisy, których 
 
 ### Tłumaczenie samodzielne
 
-Aby samodzielnie napisać tłumaczenie, wybierz **Samodzielnie, od zera** jako **Dostawcę**. Nie wymaga to klucza API. Tłumaczenie zaczyna się ze znacznikami czasu transkrypcji i pustymi segmentami, oznaczonymi jako **Jeszcze nieprzetłumaczone**, a panel pokazuje, ile ich zostało. Kliknij jeden z nich prawym przyciskiem i wybierz **Przetłumacz tekst…**: okno pokazuje oryginalny tekst wypowiedziany w tym czasie.
+Aby samodzielnie napisać tłumaczenie, wybierz **Ręcznie** w polu **Tłumacz za pomocą:**. Nie wymaga to klucza API. Tłumaczenie zaczyna się od pustego segmentu dla każdego napisu transkrypcji, oznaczonego jako **Jeszcze nieprzetłumaczone**, a panel pokazuje, ile ich zostało. Kliknij jeden z nich prawym przyciskiem i wybierz **Przetłumacz tekst…**: okno pokazuje oryginalny tekst wypowiedziany w tym czasie.
 
 ### Napisy i eksport
 
 - W transkrypcjach filmów zaznacz **Pokaż jako napisy wideo** w menu **Przetłumacz**, aby pokazać tłumaczenie jako napisy. Przełącza je też menu filmu. Zobacz [Oglądaj filmy z napisami](/pl/guides/transcript/#oglądaj-filmy-z-napisami).
-- Aby zapisać tłumaczenie do pliku, wybierz **Tłumaczenie** w menu **Eksportuj** lub kliknij przycisk eksportu tłumaczenia. Jest eksportowane w tych samych [formatach](/pl/guides/transcript/#kopiowanie-i-eksport) co transkrypcja, z językiem w nazwie pliku (np. `video.es.srt`), więc odtwarzacze wideo wczytują je razem z filmem. Segmenty jeszcze nieprzetłumaczone są pomijane w napisach.
+- Aby zapisać tłumaczenie do pliku, kliknij przycisk eksportu w jego panelu. Jest eksportowane w tych samych [formatach](/pl/guides/transcript/#kopiowanie-i-eksport) co transkrypcja, z językiem w nazwie pliku (np. `video.es.srt`), więc odtwarzacze wideo wczytują je razem z filmem. Segmenty jeszcze nieprzetłumaczone są pomijane w napisach. To samo menu tworzy [kopię filmu z napisami](/pl/guides/transcript/#eksport-filmu-z-napisami).
 
 :::tip
 Aby otrzymać transkrypcję od razu w innym języku, bez dostawcy, możesz też tłumaczyć podczas transkrypcji. Zobacz [Język](/pl/guides/transcription-settings/#język).
@@ -54,7 +74,7 @@ Aby otrzymać transkrypcję od razu w innym języku, bez dostawcy, możesz też 
 
 ## Dostawcy
 
-Dostawców wybiera się w **Preferencje** → **AI**, osobno dla podsumowań i tłumaczeń.
+Dostawców wybiera się w **Preferencje** → **AI**, osobno dla podsumowań, pytań i tłumaczeń.
 
 | Dostawca | Domyślny model | Klucz API |
 | --- | --- | --- |

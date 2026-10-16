@@ -25,7 +25,7 @@ GitHub の[最新リリース](https://github.com/HenestrosaDev/audiotext/releas
 
 ### macOS
 
-`.dmg` ファイルを開き、**Audiotext** を **アプリケーション** フォルダーにドラッグします。このアプリは Apple の公証を受けていないため、初回起動時に macOS がブロックします。**システム設定** → **プライバシーとセキュリティ** を開き、Audiotext に関するメッセージの横にある **このまま開く** をクリックしてください。macOS では CUDA が使えないため、WhisperX は CPU で動作します。 PyTorch のサポートが終了したため、Intel 搭載の Mac には対応していません。
+`.dmg` ファイルを開き、**Audiotext** を **アプリケーション** フォルダーにドラッグします。このアプリは Apple の公証を受けていないため、初回起動時に macOS がブロックします。**システム設定** → **プライバシーとセキュリティ** を開き、Audiotext に関するメッセージの横にある **このまま開く** をクリックしてください。Mac では、WhisperX は [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) を使って Apple シリコンの GPU で文字起こしするため、アドオンなしで CPU よりずっと高速です。 PyTorch のサポートが終了したため、Intel 搭載の Mac には対応していません。
 
 ### Linux
 
@@ -49,7 +49,7 @@ GPU アドオンのダウンロードは Windows で約 2 GB、Linux で約 4 GB
 
 ## 動作要件
 
-- **WhisperX** はお使いのコンピューターで動作します。どの CPU でも動きますが、CUDA 対応の NVIDIA GPU ではずっと高速です。ハードウェアに合ったモデルの選び方は[エンジン](/ja/reference/engines/)をご覧ください。
+- **WhisperX** はお使いのコンピューターで動作します。どの CPU でも動きますが、CUDA 対応の NVIDIA GPU や Apple シリコン搭載 Mac の GPU ではずっと高速です。ハードウェアに合ったモデルの選び方は[エンジン](/ja/reference/engines/)をご覧ください。
 - **Whisper API** と **Google API** はリモートサーバーで動作するため、インターネット接続が必要ですが、高性能なハードウェアは不要です。
 - マイクから文字起こしするには、システムが入力デバイスを認識している必要があります。
 - Linux では、録音と再生に [PortAudio](https://www.portaudio.com/) が必要です（Ubuntu または Debian では `sudo apt install libportaudio2`）。

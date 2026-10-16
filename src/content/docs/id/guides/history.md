@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Setiap transkripsi disimpan di riwayat, di sebelah kiri jendela, bersama ringkasan, terjemahan, dan koreksi yang Anda buat. Tombol di kiri bilah atas menampilkan atau menyembunyikannya.
+Setiap transkripsi disimpan di riwayat, di sebelah kiri jendela, bersama ringkasan, pertanyaan, terjemahan, dan koreksi yang Anda buat. Tombol di kiri bilah atas menampilkan atau menyembunyikannya.
 
 ## Temukan transkripsi
 
@@ -32,7 +32,7 @@ Grup mengumpulkan transkripsi yang saling terkait, seperti transkripsi dari sebu
 
 ## Hapus transkripsi
 
-Menghapus transkripsi akan menghapusnya, beserta ringkasan dan terjemahannya, dari riwayat. Transkripsi file dalam sebuah folder juga dihapus. File audio, video, dan file yang Anda simpan **tidak** dihapus.
+Menghapus transkripsi akan menghapusnya, beserta ringkasan, pertanyaan, dan terjemahannya, dari riwayat. Transkripsi file dalam sebuah folder juga dihapus. File audio, video, dan file yang Anda simpan **tidak** dihapus.
 
 ## Transkripsi yang gagal dan terputus
 

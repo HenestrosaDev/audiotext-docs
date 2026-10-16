@@ -20,7 +20,7 @@ Le impostazioni, la cronologia e le registrazioni vengono salvate nella cartella
 Contiene:
 
 - `config.ini`: le tue impostazioni. Eliminalo per ripristinare i valori predefiniti.
-- `history.json`: le tue trascrizioni, con riassunti, traduzioni e correzioni.
+- `history.json`: le tue trascrizioni, con riassunti, domande, traduzioni e correzioni.
 - `media/`: le registrazioni del microfono e l'audio scaricato dagli URL, per poterli riprodurre in seguito. Vengono rimossi quando la loro trascrizione viene eliminata dalla cronologia.
 
 Per usare un'altra cartella, es. per un'installazione portatile, imposta la variabile d'ambiente `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Le variabili d'ambiente con i nomi delle chiavi hanno la precedenza su quelle im
 
 | Variabile | Servizio |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (API di Whisper, riassunti, traduzioni) |
+| `OPENAI_API_KEY` | OpenAI (API di Whisper, riassunti, domande, traduzioni) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Le variabili d'ambiente con i nomi delle chiavi hanno la precedenza su quelle im
 
 ## Modelli
 
-I modelli di WhisperX e dell'identificazione dei parlanti vengono scaricati al primo utilizzo e memorizzati nella cache da Hugging Face in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` su Windows). I modelli che allineano le parole di inglese, francese, tedesco, spagnolo e italiano sono memorizzati da PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` su Windows). Elimina queste cartelle per liberare lo spazio che occupano. Anche altre app possono tenervi i propri modelli e li riscaricano quando servono, come Audiotext.
+I modelli di WhisperX (e di MLX Whisper, sui Mac) e dell'identificazione dei parlanti vengono scaricati al primo utilizzo e memorizzati nella cache da Hugging Face in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` su Windows). I modelli che allineano le parole di inglese, francese, tedesco, spagnolo e italiano sono memorizzati da PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` su Windows). Elimina queste cartelle per liberare lo spazio che occupano. Anche altre app possono tenervi i propri modelli e li riscaricano quando servono, come Audiotext.

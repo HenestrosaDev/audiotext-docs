@@ -25,7 +25,7 @@ Rulați programul de instalare și urmați pașii. Nu necesită drepturi de admi
 
 ### macOS
 
-Deschideți fișierul `.dmg` și trageți **Audiotext** în dosarul **Aplicații**. Aplicația nu este notarizată de Apple, așa că macOS o blochează la prima deschidere: accesați **Configurări sistem** → **Confidențialitate și securitate** și faceți clic pe **Deschide oricum** lângă mesajul despre Audiotext. Pe macOS, WhisperX rulează pe procesor, deoarece CUDA nu este disponibil. Mac-urile cu Intel nu sunt acceptate, deoarece PyTorch nu le mai acceptă.
+Deschideți fișierul `.dmg` și trageți **Audiotext** în dosarul **Aplicații**. Aplicația nu este notarizată de Apple, așa că macOS o blochează la prima deschidere: accesați **Configurări sistem** → **Confidențialitate și securitate** și faceți clic pe **Deschide oricum** lângă mesajul despre Audiotext. Pe Mac, WhisperX transcrie pe placa video Apple Silicon cu [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), mult mai rapid decât pe procesor, fără niciun supliment. Mac-urile cu Intel nu sunt acceptate, deoarece PyTorch nu le mai acceptă.
 
 ### Linux
 
@@ -49,7 +49,7 @@ Prima dată când transcrieți cu **WhisperX** (motorul implicit), modelul acest
 
 ## Cerințe
 
-- **WhisperX** rulează pe computerul dumneavoastră. Funcționează pe orice procesor, dar este mult mai rapid pe o placă video NVIDIA cu CUDA. Consultați [Motoare](/ro/reference/engines/) pentru a alege un model potrivit hardware-ului.
+- **WhisperX** rulează pe computerul dumneavoastră. Funcționează pe orice procesor, dar este mult mai rapid pe o placă video NVIDIA cu CUDA sau pe placa video a unui Mac cu Apple Silicon. Consultați [Motoare](/ro/reference/engines/) pentru a alege un model potrivit hardware-ului.
 - **API-ul Whisper** și **API-ul Google** rulează pe servere la distanță, deci au nevoie de conexiune la internet, dar nu de hardware puternic.
 - Pentru a transcrie de la microfon, sistemul trebuie să detecteze un dispozitiv de intrare.
 - Pe Linux, înregistrarea și redarea necesită [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` pe Ubuntu sau Debian).

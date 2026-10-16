@@ -21,7 +21,7 @@ Dua yang terakhir dapat menurunkan kualitas. Lihat [Mesin](/id/reference/engines
 
 ## Transkripsi memakan waktu terlalu lama
 
-Kecepatan WhisperX bergantung pada perangkat keras Anda, jadi jangan berharap hasil instan pada CPU yang sederhana. Coba model yang lebih kecil, seperti `small`, atau `large-v3-turbo` di GPU, atau jenis komputasi `int8`. Sebagai alternatif, gunakan **Whisper API** atau **Google API**, yang berjalan di server jarak jauh.
+Kecepatan WhisperX bergantung pada perangkat keras Anda, jadi jangan berharap hasil instan pada CPU yang sederhana. Coba model yang lebih kecil, seperti `small`, atau `large-v3-turbo` di GPU, atau jenis komputasi `int8`. Di Mac dengan Apple Silicon, pastikan **Gunakan CPU** nonaktif di **Preferensi** → **WhisperX**, agar transkripsi dilakukan di GPU. Sebagai alternatif, gunakan **Whisper API** atau **Google API**, yang berjalan di server jarak jauh.
 
 ## Whisper API mengembalikan kesalahan `429`
 
@@ -78,11 +78,26 @@ File yang sudah memiliki transkripsi akan dilewati. Aktifkan **Timpa file yang a
 
 Google API tidak dapat mendeteksi bahasa. Pilih **Bahasa audio** di pengaturan.
 
-## Ringkasan atau terjemahan gagal
+## Ringkasan, jawaban, atau terjemahan gagal
 
 - **DeepL tidak dapat menerjemahkan ke bahasa ….**: DeepL tidak mendukung bahasa tersebut. Pilih penyedia lain, seperti model bahasa.
-- **Balasan model terlalu panjang.**, **Model tidak mengembalikan ringkasan yang valid.**, atau **Model tidak mengembalikan terjemahan yang valid.**: model tidak menulis ringkasan atau terjemahan dalam format yang diharapkan. Coba lagi, atau pilih model yang lebih besar di **Preferensi** → **AI**. Model kecil Ollama lebih sering gagal.
+- **Balasan model terlalu panjang.**, **Model tidak mengembalikan ringkasan yang valid.**, **Model tidak mengembalikan balasan yang valid.**, atau **Model tidak mengembalikan terjemahan yang valid.**: model tidak menulis ringkasan, jawaban, atau terjemahan dalam format yang diharapkan. Coba lagi, atau pilih model yang lebih besar di **Preferensi** → **AI**. Model kecil Ollama lebih sering gagal.
 - Untuk kesalahan lainnya, pastikan kunci API penyedia sudah diatur di **Preferensi** → **Kunci API** dan akun Anda memiliki kredit.
+
+## Kata dengan keyakinan rendah tidak digarisbawahi
+
+Pastikan **Sorot kata dengan keyakinan rendah** aktif di menu `⋯` transkripsi. Jika transkripsi tidak memiliki nilai, menu menjelaskan alasannya:
+
+- **Aktifkan “Waktu per kata” dan transkripsikan ulang**: WhisperX menilai kata saat menentukan waktunya.
+- **Tidak ada model penyelarasan untuk bahasanya**: kata dalam bahasa itu tidak dapat diberi waktu maupun dinilai.
+- **Transkripsikan ulang untuk menilai kata-katanya**: transkripsi dibuat sebelum kata dinilai.
+- **Hanya WhisperX dan whisper-1 yang menilai kata**: mesin dan model lainnya tidak menilai.
+
+Lihat [Tinjau kata dengan keyakinan rendah](/id/guides/transcript/#tinjau-kata-dengan-keyakinan-rendah).
+
+## Video dengan subtitle menampilkan kotak
+
+Jika **Diekspor ke …, tetapi tidak ada fon yang memiliki karakter ini, sehingga ditampilkan sebagai kotak: …** muncul setelah [mengekspor video beserta subtitlenya](/id/guides/transcript/#ekspor-video-beserta-subtitlenya), tidak ada fon di sistem Anda yang dapat menggambar karakter tersebut. Pasang fon untuk aksara itu (mis. [Noto](https://fonts.google.com/noto)) lalu ekspor lagi.
 
 ## Pembaruan tidak dapat diperiksa
 

@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Cada transcrición gárdase no historial, á esquerda da xanela, xunto co seu resumo, a súa tradución e as correccións que fixeses. O botón da esquerda da barra superior móstrao ou ocúltao.
+Cada transcrición gárdase no historial, á esquerda da xanela, xunto co seu resumo, as súas preguntas, as súas traducións e as correccións que fixeses. O botón da esquerda da barra superior móstrao ou ocúltao.
 
 ## Atopa unha transcrición
 
@@ -32,7 +32,7 @@ Os grupos reúnen transcricións relacionadas, como as dun proxecto ou un curso.
 
 ## Elimina unha transcrición
 
-Ao eliminar unha transcrición, bórranse do historial ela, o seu resumo e a súa tradución. Tamén se eliminan as transcricións dos ficheiros dun cartafol. Os teus ficheiros de audio, vídeo e os ficheiros gardados **non** se eliminan.
+Ao eliminar unha transcrición, bórranse do historial ela, o seu resumo, as súas preguntas e as súas traducións. Tamén se eliminan as transcricións dos ficheiros dun cartafol. Os teus ficheiros de audio, vídeo e os ficheiros gardados **non** se eliminan.
 
 ## Transcricións con erros e interrompidas
 

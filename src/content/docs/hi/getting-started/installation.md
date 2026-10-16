@@ -25,7 +25,7 @@ GitHub पर [नवीनतम रिलीज़](https://github.com/Henestr
 
 ### macOS
 
-`.dmg` फ़ाइल खोलें और **Audiotext** को **Applications** फ़ोल्डर में खींचें। ऐप Apple द्वारा नोटराइज़ नहीं है, इसलिए macOS पहली बार खोलने पर इसे रोक देता है: **System Settings** → **Privacy & Security** में जाएँ और Audiotext वाले संदेश के पास **Open Anyway** पर क्लिक करें। macOS पर CUDA उपलब्ध नहीं है, इसलिए WhisperX CPU पर चलता है। Intel वाले Mac समर्थित नहीं हैं, क्योंकि PyTorch अब उन्हें सपोर्ट नहीं करता।
+`.dmg` फ़ाइल खोलें और **Audiotext** को **Applications** फ़ोल्डर में खींचें। ऐप Apple द्वारा नोटराइज़ नहीं है, इसलिए macOS पहली बार खोलने पर इसे रोक देता है: **System Settings** → **Privacy & Security** में जाएँ और Audiotext वाले संदेश के पास **Open Anyway** पर क्लिक करें। Mac पर WhisperX [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) के साथ Apple Silicon के GPU पर ट्रांसक्राइब करता है, जो CPU से कहीं ज़्यादा तेज़ है, और इसके लिए किसी ऐड-ऑन की ज़रूरत नहीं है। Intel वाले Mac समर्थित नहीं हैं, क्योंकि PyTorch अब उन्हें सपोर्ट नहीं करता।
 
 ### Linux
 
@@ -49,7 +49,7 @@ GPU ऐड-ऑन का डाउनलोड Windows पर लगभग 2 GB 
 
 ## आवश्यकताएँ
 
-- **WhisperX** आपके कंप्यूटर पर चलता है। यह किसी भी CPU पर काम करता है, लेकिन CUDA वाले NVIDIA GPU पर कहीं ज़्यादा तेज़ है। अपने हार्डवेयर के अनुसार मॉडल चुनने के लिए [इंजन](/hi/reference/engines/) देखें।
+- **WhisperX** आपके कंप्यूटर पर चलता है। यह किसी भी CPU पर काम करता है, लेकिन CUDA वाले NVIDIA GPU पर या Apple Silicon वाले Mac के GPU पर कहीं ज़्यादा तेज़ है। अपने हार्डवेयर के अनुसार मॉडल चुनने के लिए [इंजन](/hi/reference/engines/) देखें।
 - **Whisper API** और **Google API** दूरस्थ सर्वरों पर चलते हैं, इसलिए उन्हें इंटरनेट कनेक्शन चाहिए, लेकिन शक्तिशाली हार्डवेयर नहीं।
 - माइक्रोफ़ोन से ट्रांसक्राइब करने के लिए आपके सिस्टम को इनपुट डिवाइस पहचानना चाहिए।
 - Linux पर रिकॉर्डिंग और प्लेबैक के लिए [PortAudio](https://www.portaudio.com/) चाहिए (Ubuntu या Debian पर `sudo apt install libportaudio2`)।

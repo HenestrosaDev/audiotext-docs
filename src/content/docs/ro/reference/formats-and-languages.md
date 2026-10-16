@@ -15,18 +15,20 @@ Audiotext extrage sunetul din fișierele video cu FFmpeg, deci le transcrie pe a
 
 ## Formate de ieșire
 
-| Format | Export | Dosar (WhisperX) | Dosar (API Whisper) |
-| --- | :---: | :---: | :---: |
-| Text simplu (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Document Word (`.docx`) | ✓ | ✗ | ✗ |
-| Subtitrări (`.srt`) | ✓ | ✓ | `srt` |
-| Subtitrări web (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabel (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Etichete Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Format | Export | Dosar (WhisperX) | Dosar (API Whisper) | Linia de comandă |
+| --- | :---: | :---: | :---: | :---: |
+| Text simplu (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Document Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Subtitrări (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Subtitrări web (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Subtitrări cu stil (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabel (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Etichete Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Videoclip cu subtitrări (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Consultați [Export](/ro/guides/transcript/#copiați-și-exportați) și [cardul Ieșire](/ro/guides/transcription-settings/#dosar-și-ieșire).
+Rezumatul se exportă separat în `.txt`, `.md` și `.docx`. Consultați [Export](/ro/guides/transcript/#copiați-și-exportați), [cardul Ieșire](/ro/guides/transcription-settings/#dosar-și-ieșire) și [linia de comandă](/ro/reference/cli/#opțiuni).
 
 ## Limbile înregistrărilor
 

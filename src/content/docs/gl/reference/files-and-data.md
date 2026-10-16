@@ -20,7 +20,7 @@ A configuración, o historial e as gravacións gárdanse no teu cartafol de conf
 Contén:
 
 - `config.ini`: a túa configuración. Elimínao para restablecer os valores predeterminados.
-- `history.json`: as túas transcricións, cos seus resumos, traducións e correccións.
+- `history.json`: as túas transcricións, cos seus resumos, preguntas, traducións e correccións.
 - `media/`: as gravacións do micrófono e o audio descargado de URL, para poder reproducilos despois. Elimínanse cando se elimina a súa transcrición do historial.
 
 Para usar outro cartafol, p. ex. para unha instalación portátil, configura a variable de contorno `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ As variables de contorno cos nomes das claves teñen prioridade sobre as configu
 
 | Variable | Servizo |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (API de Whisper, resumos, traducións) |
+| `OPENAI_API_KEY` | OpenAI (API de Whisper, resumos, preguntas, traducións) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ As variables de contorno cos nomes das claves teñen prioridade sobre as configu
 
 ## Modelos
 
-Os modelos de WhisperX e da identificación de falantes descárganse a primeira vez que se usan e Hugging Face gárdaos na caché de `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` en Windows). Os modelos que aliñan as palabras do inglés, o francés, o alemán, o español e o italiano gárdaos PyTorch en `~/.cache/torch` (`%USERPROFILE%\.cache\torch` en Windows). Elimina eses cartafoles para liberar o espazo que ocupan. Outras aplicacións tamén poden gardar alí os seus modelos, e vólvenos descargar cando os precisan, coma Audiotext.
+Os modelos de WhisperX (e de MLX Whisper, nos Mac) e da identificación de falantes descárganse a primeira vez que se usan e Hugging Face gárdaos na caché de `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` en Windows). Os modelos que aliñan as palabras do inglés, o francés, o alemán, o español e o italiano gárdaos PyTorch en `~/.cache/torch` (`%USERPROFILE%\.cache\torch` en Windows). Elimina eses cartafoles para liberar o espazo que ocupan. Outras aplicacións tamén poden gardar alí os seus modelos, e vólvenos descargar cando os precisan, coma Audiotext.

@@ -21,7 +21,7 @@ De två sista kan sänka kvaliteten. Se [Motorer](/sv/reference/engines/#modell)
 
 ## Transkriberingen tar för lång tid
 
-WhisperX hastighet beror på hårdvaran, så förvänta dig inte omedelbara resultat på enkla processorer. Prova en mindre modell som `small`, `large-v3-turbo` på ett grafikkort eller beräkningstypen `int8`. Du kan också använda **Whisper-API:t** eller **Google-API:t**, som körs på fjärrservrar.
+WhisperX hastighet beror på hårdvaran, så förvänta dig inte omedelbara resultat på enkla processorer. Prova en mindre modell som `small`, `large-v3-turbo` på ett grafikkort eller beräkningstypen `int8`. På en Mac med Apple Silicon kontrollerar du att **Använd CPU** är av under **Inställningar** → **WhisperX**, så att den transkriberar på grafikprocessorn. Du kan också använda **Whisper-API:t** eller **Google-API:t**, som körs på fjärrservrar.
 
 ## Whisper-API:t returnerar felet `429`
 
@@ -78,11 +78,26 @@ Filer som redan har en transkribering hoppas över. Aktivera **Skriv över befin
 
 Google-API:t kan inte identifiera språket. Välj **Ljudets språk** i inställningarna.
 
-## En sammanfattning eller översättning misslyckas
+## En sammanfattning, ett svar eller en översättning misslyckas
 
 - **DeepL kan inte översätta till ….**: DeepL stöder inte det språket. Välj en annan leverantör, till exempel en språkmodell.
-- **Modellens svar var för långt.**, **Modellen returnerade ingen giltig sammanfattning.** eller **Modellen returnerade ingen giltig översättning.**: modellen skrev inte sammanfattningen eller översättningen i det förväntade formatet. Försök igen, eller välj en större modell under **Inställningar** → **AI**. Ollamas små modeller misslyckas oftare.
+- **Modellens svar var för långt.**, **Modellen returnerade ingen giltig sammanfattning.**, **Modellen returnerade inget giltigt svar.** eller **Modellen returnerade ingen giltig översättning.**: modellen skrev inte sammanfattningen, svaret eller översättningen i det förväntade formatet. Försök igen, eller välj en större modell under **Inställningar** → **AI**. Ollamas små modeller misslyckas oftare.
 - Vid alla andra fel kontrollerar du att leverantörens API-nyckel är angiven under **Inställningar** → **API-nycklar** och att ditt konto har krediter.
+
+## Ord med låg säkerhet stryks inte under
+
+Kontrollera att **Markera ord med låg säkerhet** är på i transkriberingens meny `⋯`. Om transkriberingen saknar poäng säger menyn varför:
+
+- **Slå på ”Tider per ord” och transkribera igen**: WhisperX poängsätter orden när det bestämmer deras tider.
+- **Det finns ingen justeringsmodell för språket**: orden på det språket kan varken tidsbestämmas eller poängsättas.
+- **Transkribera igen för att poängsätta orden**: den transkriberades innan orden poängsattes.
+- **Bara WhisperX och whisper-1 poängsätter orden**: de andra motorerna och modellerna gör det inte.
+
+Se [Granska ord med låg säkerhet](/sv/guides/transcript/#granska-ord-med-låg-säkerhet).
+
+## Videon med undertexter visar rutor
+
+Om **Exporterad till …, men inget typsnitt har de här tecknen, så de visas som rutor: …** visas efter att du [exporterat videon med undertexterna](/sv/guides/transcript/#exportera-videon-med-undertexterna), kan inget typsnitt i ditt system rita de tecknen. Installera ett typsnitt för den skriften (t.ex. [Noto](https://fonts.google.com/noto)) och exportera igen.
 
 ## Det går inte att söka efter uppdateringar
 

@@ -21,7 +21,7 @@ Els dos últims poden reduir la qualitat. Consulta [Motors](/ca/reference/engine
 
 ## Transcriure triga massa
 
-La velocitat de WhisperX depèn del maquinari, així que no esperis resultats instantanis en CPU modestes. Prova un model més petit, com `small`, o `large-v3-turbo` en una GPU, o el tipus de càlcul `int8`. També pots fer servir l'**API de Whisper** o l'**API de Google**, que s'executen en servidors remots.
+La velocitat de WhisperX depèn del maquinari, així que no esperis resultats instantanis en CPU modestes. Prova un model més petit, com `small`, o `large-v3-turbo` en una GPU, o el tipus de càlcul `int8`. En un Mac amb Apple Silicon, comprova que **Utilitza la CPU** està desactivat a **Preferències** → **WhisperX**, perquè transcrigui a la GPU. També pots fer servir l'**API de Whisper** o l'**API de Google**, que s'executen en servidors remots.
 
 ## L'API de Whisper retorna l'error `429`
 
@@ -78,11 +78,26 @@ Els fitxers que ja tenen una transcripció s'ometen. Activa **Sobreescriu els fi
 
 L'API de Google no pot detectar l'idioma. Tria l'**Idioma de l'àudio** a la configuració.
 
-## Falla un resum o una traducció
+## Falla un resum, una resposta o una traducció
 
 - **DeepL no pot traduir a l'idioma ….**: DeepL no admet aquest idioma. Tria un altre proveïdor, com ara un model de llenguatge.
-- **La resposta del model era massa llarga.**, **El model no ha retornat un resum vàlid.** o **El model no ha retornat una traducció vàlida.**: el model no ha escrit el resum o la traducció en el format esperat. Torna-ho a provar o tria un model més gran a **Preferències** → **IA**. Els models petits d'Ollama fallen més sovint.
+- **La resposta del model era massa llarga.**, **El model no ha retornat un resum vàlid.**, **El model no ha retornat una resposta vàlida.** o **El model no ha retornat una traducció vàlida.**: el model no ha escrit el resum, la resposta o la traducció en el format esperat. Torna-ho a provar o tria un model més gran a **Preferències** → **IA**. Els models petits d'Ollama fallen més sovint.
 - Per a qualsevol altre error, comprova que la clau d'API del proveïdor està definida a **Preferències** → **Claus d'API** i que el teu compte té crèdit.
+
+## No se subratllen les paraules de baixa confiança
+
+Comprova que **Ressalta les paraules de baixa confiança** està activat al menú `⋯` de la transcripció. Si la transcripció no té puntuacions, el menú diu per què:
+
+- **Activa «Temps per paraula» i torna-ho a transcriure**: WhisperX puntua les paraules quan en calcula els temps.
+- **No hi ha cap model d'alineació per a la seva llengua**: les paraules d'aquesta llengua no es poden temporitzar ni puntuar.
+- **Torna-ho a transcriure per puntuar les paraules**: es va transcriure abans que es puntuessin les paraules.
+- **Només WhisperX i whisper-1 puntuen les paraules**: els altres motors i models no ho fan.
+
+Consulta [Revisa les paraules de baixa confiança](/ca/guides/transcript/#revisa-les-paraules-de-baixa-confiança).
+
+## El vídeo amb subtítols mostra quadres
+
+Si es mostra **S'ha exportat a …, però cap tipus de lletra no té aquests caràcters, així que es mostren com a quadres: …** després d'[exportar el vídeo amb els seus subtítols](/ca/guides/transcript/#exporta-el-vídeo-amb-els-seus-subtítols), cap tipus de lletra del sistema no pot dibuixar aquests caràcters. Instal·la un tipus de lletra per a aquesta escriptura (p. ex. [Noto](https://fonts.google.com/noto)) i torna'l a exportar.
 
 ## No es poden cercar actualitzacions
 

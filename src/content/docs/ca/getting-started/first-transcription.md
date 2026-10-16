@@ -41,8 +41,9 @@ Si hi ha una altra transcripció en curs, el botó passa a ser **Afegeix a la cu
 Quan acaba, s'obre la transcripció:
 
 - Fes clic en un segment per reproduir l'àudio des d'aquell punt.
-- Canvia entre **Transcripció**, **Text pla** i **Resum**.
-- Fes servir **Tradueix**, **Copia** i **Exporta** per traduir-la, copiar-la o desar-la com a fitxer.
+- Canvia entre **Subtítols**, **Text pla**, **Resum** i **Pregunta**, per fer-hi preguntes.
+- Fes servir **Tradueix** per traduir-la, i els botons de la capçalera de la transcripció per cercar-hi i substituir, copiar-la o desar-la com a fitxer.
+- Revisa les paraules subratllades, de què el motor està menys segur.
 
 Consulta [La transcripció](/ca/guides/transcript/) per saber tot el que hi pots fer.
 
@@ -52,8 +53,10 @@ Consulta [La transcripció](/ca/guides/transcript/) per saber tot el que hi pots
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Començar la transcripció, o començar i aturar l'enregistrament |
 | `Ctrl+O` / `⌘O` | Triar un fitxer (o una carpeta, a l'origen de carpeta) |
-| `Ctrl+S` / `⌘S` | Exportar la transcripció que es mostra |
-| `Ctrl+F` / `⌘F` | Cercar a la transcripció |
+| `Ctrl+S` / `⌘S` | Exportar el text amb què treballes: la transcripció o la seva traducció |
+| `Ctrl+F` / `⌘F` | Cercar i substituir al text amb què treballes (o cercar al resum) |
+| `Ctrl+J` / `⌘J` | Anar a la paraula de baixa confiança següent |
+| `Maj+Ctrl+J` / `⇧⌘J` | Anar a la paraula de baixa confiança anterior |
 | `Esc` | Cancel·lar la transcripció en curs |
 | `Espai` | Reproduir o posar en pausa l'àudio |
 | `←` / `→` | Retrocedir o avançar 5 segons |

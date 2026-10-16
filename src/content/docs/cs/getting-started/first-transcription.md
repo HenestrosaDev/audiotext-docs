@@ -41,8 +41,9 @@ Pokud probíhá jiný přepis, tlačítko se změní na **Přidat do fronty** a 
 Po dokončení se přepis otevře:
 
 - Kliknutím na segment přehrajete zvuk od tohoto místa.
-- Přepínejte mezi **Přepis s časy**, **Prostý text** a **Shrnutí**.
-- Pomocí **Přeložit**, **Kopírovat** a **Exportovat** ho přeložíte, zkopírujete nebo uložíte jako soubor.
+- Přepínejte mezi **Titulky**, **Prostý text**, **Shrnutí** a **Zeptat se**, kde se na něj můžete ptát.
+- Pomocí **Přeložit** ho přeložíte a tlačítky v záhlaví přepisu v něm hledáte a nahrazujete, kopírujete ho nebo ho uložíte jako soubor.
+- Zkontrolujte podtržená slova, kterými si nástroj je nejméně jistý.
 
 Vše, co s ním můžete dělat, najdete v části [Přepis](/cs/guides/transcript/).
 
@@ -52,8 +53,10 @@ Vše, co s ním můžete dělat, najdete v části [Přepis](/cs/guides/transcri
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Spustit přepis, nebo spustit a zastavit nahrávání |
 | `Ctrl+O` / `⌘O` | Vybrat soubor (nebo složku u zdroje Složka) |
-| `Ctrl+S` / `⌘S` | Exportovat zobrazený přepis |
-| `Ctrl+F` / `⌘F` | Hledat v přepisu |
+| `Ctrl+S` / `⌘S` | Exportovat text, se kterým pracujete: přepis nebo jeho překlad |
+| `Ctrl+F` / `⌘F` | Najít a nahradit v textu, se kterým pracujete (nebo hledat ve shrnutí) |
+| `Ctrl+J` / `⌘J` | Přejít na další slovo s nízkou jistotou |
+| `Shift+Ctrl+J` / `⇧⌘J` | Přejít na předchozí slovo s nízkou jistotou |
 | `Esc` | Zrušit probíhající přepis |
 | `Mezerník` | Přehrát nebo pozastavit zvuk |
 | `←` / `→` | Posunout se o 5 sekund zpět nebo vpřed |

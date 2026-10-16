@@ -15,18 +15,20 @@ Audiotext extraherar ljudet ur videofiler med FFmpeg, så det transkriberar båd
 
 ## Utdataformat
 
-| Format | Exportera | Mapp (WhisperX) | Mapp (Whisper-API) |
-| --- | :---: | :---: | :---: |
-| Oformaterad text (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Word-dokument (`.docx`) | ✓ | ✗ | ✗ |
-| Undertexter (`.srt`) | ✓ | ✓ | `srt` |
-| Webbundertexter (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabell (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Audacity-etiketter (`.aud`) | ✗ | ✓ | ✗ |
+| Format | Exportera | Mapp (WhisperX) | Mapp (Whisper-API) | Kommandorad |
+| --- | :---: | :---: | :---: | :---: |
+| Oformaterad text (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Word-dokument (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Undertexter (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Webbundertexter (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Formaterade undertexter (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabell (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Audacity-etiketter (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Video med undertexter (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Se [Exportera](/sv/guides/transcript/#kopiera-och-exportera) och [kortet Utdata](/sv/guides/transcription-settings/#mapp-och-utdata).
+Sammanfattningen exporteras för sig till `.txt`, `.md` och `.docx`. Se [Exportera](/sv/guides/transcript/#kopiera-och-exportera), [kortet Utdata](/sv/guides/transcription-settings/#mapp-och-utdata) och [kommandoraden](/sv/reference/cli/#alternativ).
 
 ## Ljudets språk
 

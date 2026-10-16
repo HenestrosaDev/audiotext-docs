@@ -21,7 +21,7 @@ Gli ultimi due possono ridurre la qualità. Consulta [Motori](/it/reference/engi
 
 ## La trascrizione richiede troppo tempo
 
-La velocità di WhisperX dipende dall'hardware, quindi non aspettarti risultati istantanei su CPU modeste. Prova un modello più piccolo, come `small`, o `large-v3-turbo` su una GPU, o il tipo di calcolo `int8`. In alternativa, usa la **API di Whisper** o la **API di Google**, che funzionano su server remoti.
+La velocità di WhisperX dipende dall'hardware, quindi non aspettarti risultati istantanei su CPU modeste. Prova un modello più piccolo, come `small`, o `large-v3-turbo` su una GPU, o il tipo di calcolo `int8`. Su un Mac con Apple Silicon, verifica che **Usa la CPU** sia disattivata in **Preferenze** → **WhisperX**, così trascrive sulla GPU. In alternativa, usa la **API di Whisper** o la **API di Google**, che funzionano su server remoti.
 
 ## La API di Whisper restituisce l'errore `429`
 
@@ -78,11 +78,26 @@ I file che hanno già una trascrizione vengono saltati. Attiva **Sovrascrivi i f
 
 La API di Google non può rilevare la lingua. Scegli la **Lingua dell'audio** nelle impostazioni.
 
-## Un riassunto o una traduzione non riesce
+## Un riassunto, una risposta o una traduzione non riesce
 
 - **DeepL non può tradurre in ….**: DeepL non supporta quella lingua. Scegli un altro fornitore, come un modello linguistico.
-- **La risposta del modello era troppo lunga.**, **Il modello non ha restituito un riassunto valido.** o **Il modello non ha restituito una traduzione valida.**: il modello non ha scritto il riassunto o la traduzione nel formato previsto. Riprova, oppure scegli un modello più grande in **Preferenze** → **IA**. I modelli piccoli di Ollama falliscono più spesso.
+- **La risposta del modello era troppo lunga.**, **Il modello non ha restituito un riassunto valido.**, **Il modello non ha restituito una risposta valida.** o **Il modello non ha restituito una traduzione valida.**: il modello non ha scritto il riassunto, la risposta o la traduzione nel formato previsto. Riprova, oppure scegli un modello più grande in **Preferenze** → **IA**. I modelli piccoli di Ollama falliscono più spesso.
 - Per qualsiasi altro errore, verifica che la chiave API del fornitore sia impostata in **Preferenze** → **Chiavi API** e che il tuo account abbia credito.
+
+## Le parole a bassa affidabilità non vengono sottolineate
+
+Verifica che **Evidenzia le parole a bassa affidabilità** sia attivo nel menu `⋯` della trascrizione. Se la trascrizione non ha valutazioni, il menu dice perché:
+
+- **Attiva «Tempi per parola» e trascrivilo di nuovo**: WhisperX valuta le parole quando ne calcola i tempi.
+- **Non c’è un modello di allineamento per la sua lingua**: le parole di quella lingua non si possono temporizzare né valutare.
+- **Trascrivilo di nuovo per valutarne le parole**: è stata trascritta prima che le parole venissero valutate.
+- **Solo WhisperX e whisper-1 valutano le parole**: gli altri motori e modelli non lo fanno.
+
+Consulta [Rivedi le parole a bassa affidabilità](/it/guides/transcript/#rivedi-le-parole-a-bassa-affidabilità).
+
+## Il video con sottotitoli mostra riquadri
+
+Se dopo aver [esportato il video con i sottotitoli](/it/guides/transcript/#esporta-il-video-con-i-sottotitoli) viene mostrato **Esportato in …, ma nessun carattere tipografico contiene questi caratteri, quindi vengono mostrati come riquadri: …**, nessun font del tuo sistema può disegnare quei caratteri. Installa un font per quella scrittura (es. [Noto](https://fonts.google.com/noto)) ed esportalo di nuovo.
 
 ## Non è possibile controllare gli aggiornamenti
 

@@ -21,7 +21,7 @@ Ultimele două pot reduce calitatea. Memoria necesară fiecărui model este în 
 
 ## Transcrierea durează prea mult
 
-Viteza WhisperX depinde de hardware, deci nu vă așteptați la rezultate instantanee pe procesoare modeste. Încercați un model mai mic, precum `small`, `large-v3-turbo` pe o placă video sau tipul de calcul `int8`. Puteți folosi și **API-ul Whisper** sau **API-ul Google**, care rulează pe servere la distanță.
+Viteza WhisperX depinde de hardware, deci nu vă așteptați la rezultate instantanee pe procesoare modeste. Încercați un model mai mic, precum `small`, `large-v3-turbo` pe o placă video sau tipul de calcul `int8`. Pe un Mac cu Apple Silicon, verificați că **Folosește CPU** este dezactivat în **Preferințe** → **WhisperX**, ca să transcrie pe placa video. Puteți folosi și **API-ul Whisper** sau **API-ul Google**, care rulează pe servere la distanță.
 
 ## API-ul Whisper returnează eroarea `429`
 
@@ -78,11 +78,26 @@ Fișierele care au deja o transcriere sunt omise. Activați **Suprascrie fișier
 
 API-ul Google nu poate detecta limba. Alegeți **Limba audio** în setări.
 
-## Un rezumat sau o traducere eșuează
+## Un rezumat, un răspuns sau o traducere eșuează
 
 - **DeepL nu poate traduce în limba: ….**: DeepL nu acceptă acea limbă. Alegeți alt furnizor, cum ar fi un model de limbaj.
-- **Răspunsul modelului a fost prea lung.**, **Modelul nu a returnat un rezumat valid.** sau **Modelul nu a returnat o traducere validă.**: modelul nu a scris rezumatul sau traducerea în formatul așteptat. Încercați din nou sau alegeți un model mai mare în **Preferințe** → **IA**. Modelele mici ale Ollama eșuează mai des.
+- **Răspunsul modelului a fost prea lung.**, **Modelul nu a returnat un rezumat valid.**, **Modelul nu a returnat un răspuns valid.** sau **Modelul nu a returnat o traducere validă.**: modelul nu a scris rezumatul, răspunsul sau traducerea în formatul așteptat. Încercați din nou sau alegeți un model mai mare în **Preferințe** → **IA**. Modelele mici ale Ollama eșuează mai des.
 - Pentru orice altă eroare, verificați că cheia API a furnizorului este setată în **Preferințe** → **Chei API** și că aveți credit în cont.
+
+## Cuvintele cu încredere scăzută nu sunt subliniate
+
+Verificați că **Evidențiază cuvintele cu încredere scăzută** este activat în meniul `⋯` al transcrierii. Dacă transcrierea nu are scoruri, meniul spune de ce:
+
+- **Activează „Temporizare pe cuvânt” și transcrie din nou**: WhisperX evaluează cuvintele când le stabilește temporizarea.
+- **Nu există un model de aliniere pentru limba sa**: cuvintele acelei limbi nu pot fi temporizate și nici evaluate.
+- **Transcrie din nou pentru a evalua cuvintele**: a fost transcrisă înainte ca acestea să fie evaluate.
+- **Doar WhisperX și whisper-1 evaluează cuvintele**: celelalte motoare și modele nu o fac.
+
+Consultați [Verificați cuvintele cu încredere scăzută](/ro/guides/transcript/#verificați-cuvintele-cu-încredere-scăzută).
+
+## Videoclipul cu subtitrări arată pătrățele
+
+Dacă după [exportul videoclipului cu subtitrările](/ro/guides/transcript/#exportați-videoclipul-cu-subtitrările) apare **Exportat în …, dar niciun font nu conține aceste caractere, așa că sunt afișate ca pătrățele: …**, niciun font al sistemului nu poate desena acele caractere. Instalați un font pentru acea scriere (de ex. [Noto](https://fonts.google.com/noto)) și exportați din nou.
 
 ## Actualizările nu pot fi căutate
 

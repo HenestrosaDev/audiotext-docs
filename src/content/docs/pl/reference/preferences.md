@@ -19,9 +19,10 @@ sidebar:
 
 ## AI
 
-Dostawcy [podsumowań i tłumaczeń](/pl/guides/summary-and-translation/):
+Dostawcy [podsumowań, pytań i tłumaczeń](/pl/guides/summary-and-translation/):
 
 - **Podsumowanie** → **Dostawca** i **Model**.
+- **Zapytaj** → **Dostawca** i **Model**: te, które odpowiadają na pytania o transkrypcje. Dopóki ich nie zmienisz, są takie same jak dla podsumowań.
 - **Tłumaczenie** → **Dostawca** i **Model**. DeepL i Google Translate nie mają modeli do wyboru.
 - **Ollama** → **Adres URL serwera**: adres Ollamy, domyślnie `http://localhost:11434`.
 
@@ -29,16 +30,16 @@ Zostaw **Model** pusty, aby użyć domyślnego modelu dostawcy. Przycisk obok do
 
 ## Klucze API
 
-Klucze poszczególnych usług. Kliknij **Ustaw…**, aby wpisać klucz, lub **Zmień…**, aby go zastąpić (zostaw puste pole, aby go usunąć). Są przechowywane w magazynie poświadczeń systemu.
+Klucze poszczególnych usług. Kliknij **Ustaw klucz API…**, aby wpisać klucz, lub **Zmień klucz API…**, aby go zastąpić (zostaw puste pole, aby go usunąć). Są przechowywane w magazynie poświadczeń systemu.
 
 | Klucz | Do czego służy |
 | --- | --- |
-| Klucz API OpenAI | API Whisper oraz podsumowywanie i tłumaczenie za pomocą OpenAI |
-| Klucz API Anthropic | Podsumowywanie i tłumaczenie za pomocą Claude |
-| Klucz API DeepSeek | Podsumowywanie i tłumaczenie za pomocą DeepSeek |
-| Klucz API Gemini | Podsumowywanie i tłumaczenie za pomocą Gemini (z Google AI Studio) |
-| Klucz API Mistral | Podsumowywanie i tłumaczenie za pomocą Mistral |
-| Klucz API xAI | Podsumowywanie i tłumaczenie za pomocą Grok |
+| Klucz API OpenAI | API Whisper oraz podsumowywanie, pytania i tłumaczenie za pomocą OpenAI |
+| Klucz API Anthropic | Podsumowywanie, pytania i tłumaczenie za pomocą Claude |
+| Klucz API DeepSeek | Podsumowywanie, pytania i tłumaczenie za pomocą DeepSeek |
+| Klucz API Gemini | Podsumowywanie, pytania i tłumaczenie za pomocą Gemini (z Google AI Studio) |
+| Klucz API Mistral | Podsumowywanie, pytania i tłumaczenie za pomocą Mistral |
+| Klucz API xAI | Podsumowywanie, pytania i tłumaczenie za pomocą Grok |
 | Klucz API DeepL | Tłumaczenie za pomocą DeepL (działają też klucze z darmowego planu) |
 | Klucz API Google | Google Speech-to-Text ponad darmowy limit oraz Google Translate (Cloud Translation API) |
 | Token Hugging Face | Rozpoznawanie mówców w WhisperX |
@@ -49,15 +50,21 @@ Każdy dostawca pobiera opłaty za korzystanie ze swojego API, za które Audiote
 
 ## WhisperX
 
-**Typ obliczeń**, **Rozmiar partii** i **Używaj CPU**. Zobacz [opcje zaawansowane WhisperX](/pl/reference/engines/#opcje-zaawansowane).
+**Typ obliczeń**, **Rozmiar partii** i **Używaj CPU**. Zobacz [opcje zaawansowane WhisperX](/pl/reference/engines/#opcje-zaawansowane). Na Macu z Apple Silicon WhisperX transkrybuje na jego karcie graficznej, chyba że opcja **Używaj CPU** jest włączona. Zobacz [Na Macu](/pl/reference/engines/#na-macu).
 
 ## Napisy
 
-Opcje plików `.srt` i `.vtt` zapisywanych podczas transkrypcji folderu za pomocą WhisperX:
+Jak dzielone są napisy: te wyświetlane na filmie i w widoku **Napisy**, eksportowane pliki napisów oraz [filmy z napisami](/pl/guides/transcript/#eksport-filmu-z-napisami). Każda opcja ma wartość dla filmów poziomych i drugą dla pionowych (wyższych niż szerokich, np. na telefony), które są węższe:
 
-- **Wyróżniaj słowa**: podkreśla każde słowo w chwili, gdy jest wypowiadane. Domyślnie wyłączone.
-- **Maks. liczba wierszy**: maksymalna liczba wierszy każdego napisu. Domyślnie `2`.
-- **Maks. szerokość wiersza**: maksymalna liczba znaków w wierszu przed jego złamaniem. Domyślnie `42`.
+| Opcja | Poziome | Pionowe |
+| --- | :---: | :---: |
+| **Maks. wierszy na napis** | `2` | `2` |
+| **Maks. znaków w wierszu** | `42` | `24` |
+| **Chiński, japoński i koreański**: znaki w wierszu w tych językach, których znaki są mniej więcej dwa razy szersze od łacińskich | `16` | `10` |
+
+Wiersze napisu są wyrównywane długością, a języki zapisywane bez spacji są łamane między znakami.
+
+**Wyróżniaj słowa** podkreśla w plikach `.srt` i `.vtt` każde słowo w chwili, gdy jest wypowiadane. Domyślnie wyłączone.
 
 ## Whisper API
 

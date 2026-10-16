@@ -15,7 +15,7 @@ Před přepisem Audiotext zobrazí jeho nastavení seskupené do karet. Pamatuj�
 
 | Nástroj | Kde běží | Cena | Poznámky |
 | --- | --- | --- | --- |
-| **WhisperX** (výchozí) | Váš počítač | Zdarma a bez omezení | Soukromě a offline. Více možností: mluvčí, časování slov, živý text. |
+| **WhisperX** (výchozí) | Váš počítač | Zdarma a bez omezení | Soukromě a offline. Více možností: mluvčí, časování slov, živý text. Běží na grafickém procesoru Maců s Apple Silicon. |
 | **Whisper API** | Servery OpenAI | Placené za minutu | Vyžaduje [klíč API OpenAI](/cs/reference/preferences/#klíče-api). Pro počítače, na kterých WhisperX neběží plynule. |
 | **Google API** | Servery Googlu | Bezplatný limit nebo placené | Nižší kvalita a bez časových značek. Klíč API je volitelný. |
 
@@ -44,7 +44,7 @@ Používá je WhisperX a Whisper API, kromě modelu `gpt-4o-transcribe-diarize`.
 
 ## Možnosti
 
-- **Časování slov** (WhisperX): zarovná každé slovo se zvukem, aby se při přehrávání zvýrazňovalo. Trvá o něco déle. Titulky ho už používají.
+- **Časování slov** (WhisperX): zarovná každé slovo se zvukem, aby se při přehrávání zvýrazňovalo a abyste mohli [zkontrolovat slova](/cs/guides/transcript/#kontrola-slov-s-nízkou-jistotou), kterými si je nejméně jistý. Trvá o něco déle. Ve výchozím stavu zapnuto.
 - **Extrahovat řeč**: před přepisem potlačí hudbu a hluk v pozadí.
 - **Rozpoznat mluvčí** (WhisperX): označí, kdo v které části mluví, např. `SPEAKER_00`. Pokud víte, kolik lidí mluví, zadejte to do pole **Počet mluvčích** (`0` ho rozpozná automaticky). Vyžaduje bezplatný token Hugging Face; viz [Rozpoznání mluvčích](#rozpoznání-mluvčích). U Whisper API rozpoznává mluvčí model `gpt-4o-transcribe-diarize`.
 

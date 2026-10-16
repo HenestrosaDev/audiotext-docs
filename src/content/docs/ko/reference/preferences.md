@@ -19,9 +19,10 @@ sidebar:
 
 ## AI
 
-[요약과 번역](/ko/guides/summary-and-translation/)의 제공자입니다.
+[요약, 질문, 번역](/ko/guides/summary-and-translation/)의 제공자입니다.
 
 - **요약** → **제공자**와 **모델**.
+- **질문** → **제공자**와 **모델**: 받아쓰기에 관한 질문에 답하는 제공자와 모델입니다. 바꾸기 전까지는 요약의 것과 같습니다.
 - **번역** → **제공자**와 **모델**. DeepL과 Google Translate에는 고를 모델이 없습니다.
 - **Ollama** → **서버 URL**: Ollama의 주소이며 기본값은 `http://localhost:11434`입니다.
 
@@ -29,16 +30,16 @@ sidebar:
 
 ## API 키
 
-각 서비스의 키입니다. **설정…**을 클릭해 입력하거나 **변경…**을 클릭해 바꿉니다(비워 두면 삭제됩니다). 키는 시스템의 자격 증명 저장소에 보관됩니다.
+각 서비스의 키입니다. **API 키 설정…**을 클릭해 입력하거나 **API 키 변경…**을 클릭해 바꿉니다(비워 두면 삭제됩니다). 키는 시스템의 자격 증명 저장소에 보관됩니다.
 
 | 키 | 용도 |
 | --- | --- |
-| OpenAI API 키 | Whisper API, OpenAI로 요약·번역 |
-| Anthropic API 키 | Claude로 요약·번역 |
-| DeepSeek API 키 | DeepSeek로 요약·번역 |
-| Gemini API 키 | Gemini(Google AI Studio)로 요약·번역 |
-| Mistral API 키 | Mistral로 요약·번역 |
-| xAI API 키 | Grok으로 요약·번역 |
+| OpenAI API 키 | Whisper API, OpenAI로 요약·질문·번역 |
+| Anthropic API 키 | Claude로 요약·질문·번역 |
+| DeepSeek API 키 | DeepSeek로 요약·질문·번역 |
+| Gemini API 키 | Gemini(Google AI Studio)로 요약·질문·번역 |
+| Mistral API 키 | Mistral로 요약·질문·번역 |
+| xAI API 키 | Grok으로 요약·질문·번역 |
 | DeepL API 키 | DeepL로 번역(무료 요금제 키도 작동) |
 | Google API 키 | 무료 등급을 넘는 Google Speech-to-Text, Google Translate(Cloud Translation API) |
 | Hugging Face 토큰 | WhisperX로 화자 식별 |
@@ -49,15 +50,21 @@ sidebar:
 
 ## WhisperX
 
-**연산 유형**, **배치 크기**, **CPU 사용**. [WhisperX 고급 옵션](/ko/reference/engines/#고급-옵션)을 참고하세요.
+**연산 유형**, **배치 크기**, **CPU 사용**. [WhisperX 고급 옵션](/ko/reference/engines/#고급-옵션)을 참고하세요. Apple 실리콘 Mac에서는 **CPU 사용**이 켜져 있지 않으면 WhisperX가 GPU에서 받아씁니다. [Mac에서](/ko/reference/engines/#mac에서)를 참고하세요.
 
 ## 자막
 
-WhisperX로 폴더를 받아쓸 때 저장되는 `.srt`와 `.vtt` 파일의 옵션입니다.
+자막을 나누는 방식입니다. 동영상 위와 **자막** 모드에 표시되는 자막, 내보낸 자막 파일, [자막이 있는 동영상](/ko/guides/transcript/#자막이-있는-동영상-내보내기)에 적용됩니다. 각 옵션에는 가로 동영상용 값과, 폭이 좁은 세로 동영상(예: 휴대폰용처럼 폭보다 높이가 큰 동영상)용 값이 있습니다.
 
-- **단어 강조**: 각 단어를 말하는 순간 밑줄로 표시합니다. 기본적으로 꺼져 있습니다.
-- **최대 줄 수**: 자막 하나의 최대 줄 수. 기본값 `2`.
-- **최대 줄 너비**: 줄을 바꾸기 전 한 줄의 최대 글자 수. 기본값 `42`.
+| 옵션 | 가로 | 세로 |
+| --- | :---: | :---: |
+| **자막당 최대 줄 수** | `2` | `2` |
+| **줄당 최대 글자 수** | `42` | `24` |
+| **중국어, 일본어, 한국어**: 이 언어들의 줄당 글자 수(글자 폭이 라틴 문자의 약 두 배이므로) | `16` | `10` |
+
+자막의 줄 길이는 고르게 맞춰지고, 띄어쓰기 없이 쓰는 언어는 글자 사이에서 줄을 바꿉니다.
+
+**단어 강조**는 `.srt`와 `.vtt` 파일에서 각 단어를 말하는 순간 밑줄로 표시합니다. 기본적으로 꺼져 있습니다.
 
 ## Whisper API
 

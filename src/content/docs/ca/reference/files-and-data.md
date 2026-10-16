@@ -20,7 +20,7 @@ La configuració, l'historial i els enregistraments es desen a la carpeta de con
 Conté:
 
 - `config.ini`: la teva configuració. Elimina'l per restablir els valors per defecte.
-- `history.json`: les teves transcripcions, amb els resums, les traduccions i les correccions.
+- `history.json`: les teves transcripcions, amb els resums, les preguntes, les traduccions i les correccions.
 - `media/`: els enregistraments del micròfon i l'àudio descarregat d'URL, per poder-los reproduir més tard. S'eliminen quan se n'elimina la transcripció de l'historial.
 
 Per fer servir una altra carpeta, p. ex. per a una instal·lació portàtil, configura la variable d'entorn `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Les variables d'entorn amb els noms de les claus tenen prioritat sobre les confi
 
 | Variable | Servei |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (API de Whisper, resums, traduccions) |
+| `OPENAI_API_KEY` | OpenAI (API de Whisper, resums, preguntes, traduccions) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Les variables d'entorn amb els noms de les claus tenen prioritat sobre les confi
 
 ## Models
 
-Els models de WhisperX i de la identificació de parlants es baixen la primera vegada que es fan servir i Hugging Face els desa a la memòria cau de `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` a Windows). Els models que alineen les paraules de l'anglès, el francès, l'alemany, el castellà i l'italià els desa PyTorch a `~/.cache/torch` (`%USERPROFILE%\.cache\torch` a Windows). Elimina aquestes carpetes per alliberar l'espai que ocupen. Altres aplicacions també hi poden desar els seus models, i els tornen a baixar quan els necessiten, com Audiotext.
+Els models de WhisperX (i de MLX Whisper, als Mac) i de la identificació de parlants es baixen la primera vegada que es fan servir i Hugging Face els desa a la memòria cau de `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` a Windows). Els models que alineen les paraules de l'anglès, el francès, l'alemany, el castellà i l'italià els desa PyTorch a `~/.cache/torch` (`%USERPROFILE%\.cache\torch` a Windows). Elimina aquestes carpetes per alliberar l'espai que ocupen. Altres aplicacions també hi poden desar els seus models, i els tornen a baixar quan els necessiten, com Audiotext.

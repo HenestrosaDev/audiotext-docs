@@ -41,8 +41,9 @@ Läuft bereits eine andere Transkription, wird die Schaltfläche zu **Zur Wartes
 Wenn sie fertig ist, öffnet sich die Transkription:
 
 - Klicken Sie auf ein Segment, um das Audio ab dort abzuspielen.
-- Wechseln Sie zwischen **Transkript**, **Nur-Text** und **Zusammenfassung**.
-- Mit **Übersetzen**, **Kopieren** und **Exportieren** übersetzen, kopieren oder speichern Sie sie als Datei.
+- Wechseln Sie zwischen **Untertitel**, **Nur-Text**, **Zusammenfassung** und **Fragen**, um Fragen dazu zu stellen.
+- Mit **Übersetzen** übersetzen Sie sie, und mit den Schaltflächen in der Kopfzeile der Transkription suchen und ersetzen Sie darin, kopieren sie oder speichern sie als Datei.
+- Prüfen Sie die unterstrichenen Wörter, bei denen sich die Engine am wenigsten sicher ist.
 
 Unter [Das Transkript](/de/guides/transcript/) erfahren Sie alles, was Sie damit tun können.
 
@@ -52,8 +53,10 @@ Unter [Das Transkript](/de/guides/transcript/) erfahren Sie alles, was Sie damit
 | --- | --- |
 | `Strg+Eingabe` / `⌘↩` | Transkription starten, oder Aufnahme starten und beenden |
 | `Strg+O` / `⌘O` | Datei auswählen (oder einen Ordner, bei der Ordnerquelle) |
-| `Strg+S` / `⌘S` | Angezeigte Transkription exportieren |
-| `Strg+F` / `⌘F` | Transkription durchsuchen |
+| `Strg+S` / `⌘S` | Den Text exportieren, an dem Sie arbeiten: die Transkription oder ihre Übersetzung |
+| `Strg+F` / `⌘F` | Im Text suchen und ersetzen, an dem Sie arbeiten (oder in der Zusammenfassung suchen) |
+| `Strg+J` / `⌘J` | Zum nächsten Wort mit geringer Konfidenz springen |
+| `Umschalt+Strg+J` / `⇧⌘J` | Zum vorherigen Wort mit geringer Konfidenz springen |
 | `Esc` | Laufende Transkription abbrechen |
 | `Leertaste` | Audio abspielen oder pausieren |
 | `←` / `→` | 5 Sekunden zurück oder vor |

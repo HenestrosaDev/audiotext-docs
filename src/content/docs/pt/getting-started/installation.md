@@ -25,7 +25,7 @@ Execute o instalador e siga os passos. Ele não precisa de permissões de admini
 
 ### macOS
 
-Abra o arquivo `.dmg` e arraste o **Audiotext** para a pasta **Aplicativos**. O aplicativo não é notarizado pela Apple, então o macOS o bloqueia na primeira vez que você o abre: vá em **Ajustes do Sistema** → **Privacidade e Segurança** e clique em **Abrir Mesmo Assim** ao lado da mensagem sobre o Audiotext. No macOS, o WhisperX roda na CPU, já que o CUDA não está disponível. Macs com Intel não são suportados, já que o PyTorch não os suporta mais.
+Abra o arquivo `.dmg` e arraste o **Audiotext** para a pasta **Aplicativos**. O aplicativo não é notarizado pela Apple, então o macOS o bloqueia na primeira vez que você o abre: vá em **Ajustes do Sistema** → **Privacidade e Segurança** e clique em **Abrir Mesmo Assim** ao lado da mensagem sobre o Audiotext. Nos Macs, o WhisperX transcreve na GPU do Apple Silicon com o [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), muito mais rápido do que na CPU, sem nenhum complemento. Macs com Intel não são suportados, já que o PyTorch não os suporta mais.
 
 ### Linux
 
@@ -49,7 +49,7 @@ Na primeira vez que você transcreve com o **WhisperX** (o mecanismo padrão), o
 
 ## Requisitos
 
-- O **WhisperX** roda no seu computador. Ele funciona em qualquer CPU, mas é muito mais rápido em uma GPU NVIDIA com CUDA. Consulte [Mecanismos](/pt/reference/engines/) para escolher um modelo adequado ao seu hardware.
+- O **WhisperX** roda no seu computador. Ele funciona em qualquer CPU, mas é muito mais rápido em uma GPU NVIDIA com CUDA ou na GPU de um Mac com Apple Silicon. Consulte [Mecanismos](/pt/reference/engines/) para escolher um modelo adequado ao seu hardware.
 - A **API do Whisper** e a **API do Google** rodam em servidores remotos, então precisam de conexão com a internet, mas não de um hardware potente.
 - Para transcrever pelo microfone, o seu sistema precisa detectar um dispositivo de entrada.
 - No Linux, gravar e reproduzir áudio exige o [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` no Ubuntu ou Debian).

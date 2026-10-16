@@ -20,7 +20,7 @@ Nastavení, historie a nahrávky se ukládají do vaší uživatelské konfigura
 Obsahuje:
 
 - `config.ini`: vaše nastavení. Jeho smazáním obnovíte výchozí hodnoty.
-- `history.json`: vaše přepisy se shrnutími, překlady a opravami.
+- `history.json`: vaše přepisy se shrnutími, otázkami, překlady a opravami.
 - `media/`: nahrávky z mikrofonu a zvuk stažený z URL, aby je bylo možné později přehrát. Odstraní se při smazání příslušného přepisu z historie.
 
 Chcete-li použít jinou složku, např. pro přenosnou instalaci, nastavte proměnnou prostředí `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Proměnné prostředí s názvy klíčů mají přednost před klíči nastaven�
 
 | Proměnná | Služba |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (Whisper API, shrnutí, překlady) |
+| `OPENAI_API_KEY` | OpenAI (Whisper API, shrnutí, otázky, překlady) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Proměnné prostředí s názvy klíčů mají přednost před klíči nastaven�
 
 ## Modely
 
-Modely WhisperX a rozpoznávání mluvčích se stáhnou při prvním použití a Hugging Face je ukládá do mezipaměti v `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` ve Windows). Modely, které zarovnávají slova angličtiny, francouzštiny, němčiny, španělštiny a italštiny, ukládá PyTorch do `~/.cache/torch` (`%USERPROFILE%\.cache\torch` ve Windows). Smazáním těchto složek uvolníte místo, které zabírají. I jiné aplikace v nich mohou mít své modely a stejně jako Audiotext si je v případě potřeby stáhnou znovu.
+Modely WhisperX (a MLX Whisper na Macu) a rozpoznávání mluvčích se stáhnou při prvním použití a Hugging Face je ukládá do mezipaměti v `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` ve Windows). Modely, které zarovnávají slova angličtiny, francouzštiny, němčiny, španělštiny a italštiny, ukládá PyTorch do `~/.cache/torch` (`%USERPROFILE%\.cache\torch` ve Windows). Smazáním těchto složek uvolníte místo, které zabírají. I jiné aplikace v nich mohou mít své modely a stejně jako Audiotext si je v případě potřeby stáhnou znovu.

@@ -20,7 +20,7 @@ Audiotext はデータをお使いのコンピューターに保存します。�
 中身は次のとおりです。
 
 - `config.ini`: 設定。削除すると既定値に戻ります。
-- `history.json`: 文字起こしと、その要約、翻訳、修正。
+- `history.json`: 文字起こしと、その要約、質問、翻訳、修正。
 - `media/`: 後で再生できるよう保存された、マイクの録音と URL からダウンロードした音声。対応する文字起こしを履歴から削除すると削除されます。
 
 ポータブルインストールなどで別のフォルダーを使うには、環境変数 `AUDIOTEXT_CONFIG_DIR` を設定します。
@@ -47,7 +47,7 @@ API キーと Hugging Face のトークンは、システムの資格情報ス�
 
 | 変数 | サービス |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI（Whisper API、要約、翻訳） |
+| `OPENAI_API_KEY` | OpenAI（Whisper API、要約、質問、翻訳） |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ API キーと Hugging Face のトークンは、システムの資格情報ス�
 
 ## モデル
 
-WhisperX と話者識別のモデルは初回使用時にダウンロードされ、Hugging Face によって `~/.cache/huggingface`（Windows では `%USERPROFILE%\.cache\huggingface`）にキャッシュされます。英語、フランス語、ドイツ語、スペイン語、イタリア語の単語を揃えるモデルは、PyTorch によって `~/.cache/torch`（Windows では `%USERPROFILE%\.cache\torch`）にキャッシュされます。使用している容量を空けるには、これらのフォルダーを削除してください。ほかのアプリもそこにモデルを保存していることがありますが、Audiotext と同じく、必要になれば再びダウンロードされます。
+WhisperX（Mac では MLX Whisper も）と話者識別のモデルは初回使用時にダウンロードされ、Hugging Face によって `~/.cache/huggingface`（Windows では `%USERPROFILE%\.cache\huggingface`）にキャッシュされます。英語、フランス語、ドイツ語、スペイン語、イタリア語の単語を揃えるモデルは、PyTorch によって `~/.cache/torch`（Windows では `%USERPROFILE%\.cache\torch`）にキャッシュされます。使用している容量を空けるには、これらのフォルダーを削除してください。ほかのアプリもそこにモデルを保存していることがありますが、Audiotext と同じく、必要になれば再びダウンロードされます。

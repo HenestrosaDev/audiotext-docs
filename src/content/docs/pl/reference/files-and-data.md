@@ -20,7 +20,7 @@ Ustawienia, historia i nagrania są zapisywane w folderze konfiguracji użytkown
 Zawiera:
 
 - `config.ini`: twoje ustawienia. Usuń go, aby przywrócić wartości domyślne.
-- `history.json`: twoje transkrypcje z podsumowaniami, tłumaczeniami i poprawkami.
+- `history.json`: twoje transkrypcje z podsumowaniami, pytaniami, tłumaczeniami i poprawkami.
 - `media/`: nagrania z mikrofonu i dźwięk pobrany z adresów URL, aby można je było później odtworzyć. Są usuwane razem z ich transkrypcją z historii.
 
 Aby użyć innego folderu, np. w instalacji przenośnej, ustaw zmienną środowiskową `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Zmienne środowiskowe o nazwach kluczy mają pierwszeństwo przed kluczami ustaw
 
 | Zmienna | Usługa |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (API Whisper, podsumowania, tłumaczenia) |
+| `OPENAI_API_KEY` | OpenAI (API Whisper, podsumowania, pytania, tłumaczenia) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Zmienne środowiskowe o nazwach kluczy mają pierwszeństwo przed kluczami ustaw
 
 ## Modele
 
-Modele WhisperX i rozpoznawania mówców są pobierane przy pierwszym użyciu i przechowywane przez Hugging Face w pamięci podręcznej `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` w systemie Windows). Modele, które wyrównują słowa w języku angielskim, francuskim, niemieckim, hiszpańskim i włoskim, PyTorch przechowuje w `~/.cache/torch` (`%USERPROFILE%\.cache\torch` w systemie Windows). Usuń te foldery, aby zwolnić zajmowane przez nie miejsce. Inne aplikacje też mogą trzymać tam swoje modele i, tak jak Audiotext, pobierają je ponownie, gdy są potrzebne.
+Modele WhisperX (i MLX Whisper na Macach) oraz rozpoznawania mówców są pobierane przy pierwszym użyciu i przechowywane przez Hugging Face w pamięci podręcznej `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` w systemie Windows). Modele, które wyrównują słowa w języku angielskim, francuskim, niemieckim, hiszpańskim i włoskim, PyTorch przechowuje w `~/.cache/torch` (`%USERPROFILE%\.cache\torch` w systemie Windows). Usuń te foldery, aby zwolnić zajmowane przez nie miejsce. Inne aplikacje też mogą trzymać tam swoje modele i, tak jak Audiotext, pobierają je ponownie, gdy są potrzebne.

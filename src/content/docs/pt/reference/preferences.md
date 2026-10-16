@@ -19,9 +19,10 @@ As **Preferências** guardam as configurações que não mudam a cada transcriç
 
 ## IA
 
-Os provedores dos [resumos e das traduções](/pt/guides/summary-and-translation/):
+Os provedores dos [resumos, das perguntas e das traduções](/pt/guides/summary-and-translation/):
 
 - **Resumo** → **Provedor** e **Modelo**.
+- **Perguntar** → **Provedor** e **Modelo**: os que respondem às perguntas sobre as transcrições. São os dos resumos até você mudá-los.
 - **Tradução** → **Provedor** e **Modelo**. DeepL e Google Translate não têm modelos para escolher.
 - **Ollama** → **URL do servidor**: o endereço do Ollama, `http://localhost:11434` por padrão.
 
@@ -29,16 +30,16 @@ Deixe o **Modelo** vazio para usar o modelo padrão do provedor. O botão ao lad
 
 ## Chaves de API
 
-As chaves de cada serviço. Clique em **Definir…** para inserir uma, ou em **Alterar…** para substituí-la (deixe-a vazia para removê-la). Elas ficam no armazenamento de credenciais do seu sistema.
+As chaves de cada serviço. Clique em **Definir chave de API…** para inserir uma, ou em **Alterar chave de API…** para substituí-la (deixe-a vazia para removê-la). Elas ficam no armazenamento de credenciais do seu sistema.
 
 | Chave | Usada para |
 | --- | --- |
-| Chave de API da OpenAI | A API do Whisper, e resumir e traduzir com a OpenAI |
-| Chave de API da Anthropic | Resumir e traduzir com o Claude |
-| Chave de API do DeepSeek | Resumir e traduzir com o DeepSeek |
-| Chave de API do Gemini | Resumir e traduzir com o Gemini (do Google AI Studio) |
-| Chave de API da Mistral | Resumir e traduzir com a Mistral |
-| Chave de API da xAI | Resumir e traduzir com o Grok |
+| Chave de API da OpenAI | A API do Whisper, e resumir, perguntar e traduzir com a OpenAI |
+| Chave de API da Anthropic | Resumir, perguntar e traduzir com o Claude |
+| Chave de API do DeepSeek | Resumir, perguntar e traduzir com o DeepSeek |
+| Chave de API do Gemini | Resumir, perguntar e traduzir com o Gemini (do Google AI Studio) |
+| Chave de API da Mistral | Resumir, perguntar e traduzir com a Mistral |
+| Chave de API da xAI | Resumir, perguntar e traduzir com o Grok |
 | Chave de API do DeepL | Traduzir com o DeepL (chaves do plano gratuito também funcionam) |
 | Chave de API do Google | Google Speech-to-Text além da camada gratuita, e Google Translate (Cloud Translation API) |
 | Token do Hugging Face | Identificar os falantes com o WhisperX |
@@ -49,15 +50,21 @@ Cada provedor cobra pelo uso da sua API, pelo qual o Audiotext não se responsab
 
 ## WhisperX
 
-**Tipo de computação**, **Tamanho do lote** e **Usar CPU**. Consulte as [opções avançadas do WhisperX](/pt/reference/engines/#opções-avançadas).
+**Tipo de computação**, **Tamanho do lote** e **Usar CPU**. Consulte as [opções avançadas do WhisperX](/pt/reference/engines/#opções-avançadas). Em um Mac com Apple Silicon, o WhisperX transcreve na GPU dele, a menos que **Usar CPU** esteja ativado. Consulte [Em um Mac](/pt/reference/engines/#em-um-mac).
 
 ## Legendas
 
-As opções dos arquivos `.srt` e `.vtt` salvos ao transcrever uma pasta com o WhisperX:
+Como as legendas são divididas: as mostradas sobre o vídeo e no modo **Legendas**, os arquivos de legendas exportados e os [vídeos com legendas](/pt/guides/transcript/#exporte-o-vídeo-com-as-legendas). Cada opção tem um valor para os vídeos horizontais e outro para os verticais (mais altos do que largos, ex.: para celulares), que são mais estreitos:
 
-- **Destacar palavras**: sublinha cada palavra enquanto ela é dita. Desativado por padrão.
-- **Máx. de linhas**: o número máximo de linhas de cada legenda. `2` por padrão.
-- **Máx. de caracteres por linha**: o número máximo de caracteres de uma linha antes de quebrá-la. `42` por padrão.
+| Opção | Horizontal | Vertical |
+| --- | :---: | :---: |
+| **Máx. de linhas por legenda** | `2` | `2` |
+| **Máx. de caracteres por linha** | `42` | `24` |
+| **Chinês, japonês e coreano**: os caracteres por linha nesses idiomas, cujos caracteres são cerca de duas vezes mais largos que os latinos | `16` | `10` |
+
+As linhas de uma legenda são equilibradas, e os idiomas escritos sem espaços são quebrados entre caracteres.
+
+**Destacar palavras** sublinha cada palavra enquanto ela é dita nos arquivos `.srt` e `.vtt`. Desativado por padrão.
 
 ## API do Whisper
 

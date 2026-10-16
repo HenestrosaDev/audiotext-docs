@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Cada transcripción se guarda en el historial, a la izquierda de la ventana, junto con su resumen, su traducción y las correcciones que hayas hecho. El botón de la izquierda de la barra superior lo muestra u oculta.
+Cada transcripción se guarda en el historial, a la izquierda de la ventana, junto con su resumen, sus preguntas, sus traducciones y las correcciones que hayas hecho. El botón de la izquierda de la barra superior lo muestra u oculta.
 
 ## Encuentra una transcripción
 
@@ -32,7 +32,7 @@ Los grupos reúnen transcripciones relacionadas, como las de un proyecto o un cu
 
 ## Elimina una transcripción
 
-Al eliminar una transcripción, se borran del historial ella, su resumen y su traducción. También se eliminan las transcripciones de los archivos de una carpeta. Tus archivos de audio, vídeo y los archivos guardados **no** se eliminan.
+Al eliminar una transcripción, se borran del historial ella, su resumen, sus preguntas y sus traducciones. También se eliminan las transcripciones de los archivos de una carpeta. Tus archivos de audio, vídeo y los archivos guardados **no** se eliminan.
 
 ## Transcripciones con errores e interrumpidas
 

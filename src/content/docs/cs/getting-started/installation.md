@@ -25,7 +25,7 @@ Spusťte instalační program a postupujte podle kroků. Nepotřebuje oprávněn
 
 ### macOS
 
-Otevřete soubor `.dmg` a přetáhněte **Audiotext** do složky **Aplikace**. Aplikace není ověřená společností Apple, takže ji macOS při prvním otevření zablokuje: přejděte do **Nastavení systému** → **Soukromí a zabezpečení** a klikněte na **Přesto otevřít** u zprávy o Audiotextu. V macOS běží WhisperX na procesoru, protože CUDA tam není k dispozici. Počítače Mac s procesorem Intel nejsou podporovány, protože je PyTorch už nepodporuje.
+Otevřete soubor `.dmg` a přetáhněte **Audiotext** do složky **Aplikace**. Aplikace není ověřená společností Apple, takže ji macOS při prvním otevření zablokuje: přejděte do **Nastavení systému** → **Soukromí a zabezpečení** a klikněte na **Přesto otevřít** u zprávy o Audiotextu. Na Macu WhisperX přepisuje na grafickém procesoru Apple Silicon pomocí [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), mnohem rychleji než na procesoru a bez jakéhokoli doplňku. Počítače Mac s procesorem Intel nejsou podporovány, protože je PyTorch už nepodporuje.
 
 ### Linux
 
@@ -49,7 +49,7 @@ Při prvním přepisu pomocí **WhisperX** (výchozího nástroje) se stáhne je
 
 ## Požadavky
 
-- **WhisperX** běží na vašem počítači. Funguje na jakémkoli procesoru, ale na grafické kartě NVIDIA s CUDA je mnohem rychlejší. V části [Nástroje](/cs/reference/engines/) vyberete model vhodný pro váš hardware.
+- **WhisperX** běží na vašem počítači. Funguje na jakémkoli procesoru, ale na grafické kartě NVIDIA s CUDA nebo na grafickém procesoru Macu s Apple Silicon je mnohem rychlejší. V části [Nástroje](/cs/reference/engines/) vyberete model vhodný pro váš hardware.
 - **Whisper API** a **Google API** běží na vzdálených serverech, takže potřebují připojení k internetu, ale ne výkonný hardware.
 - Pro přepis z mikrofonu musí systém rozpoznat vstupní zařízení.
 - V Linuxu nahrávání a přehrávání vyžaduje [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` v Ubuntu nebo Debianu).

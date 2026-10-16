@@ -18,10 +18,11 @@ Audiotext, [transkripsiyon ayarlarının](/tr/guides/transcription-settings/#mot
 | Konuşmacıları belirler | ✓ (Hugging Face belirteci) | `gpt-4o-transcribe-diarize` | ✗ |
 | Kelime zamanlaması | ✓ | `whisper-1` | ✗ |
 | Canlı metin | ✓ | ✗ | ✗ |
+| [Düşük güvenilirlikli kelimeler](/tr/guides/transcript/#düşük-güvenilirlikli-kelimeleri-inceleyin) | ✓ (kelime zamanlaması) | `whisper-1` (segmentler) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX), OpenAI'nin Whisper'ının bilgisayarınızda çalışan hızlı bir uygulamasıdır; böylece sesiniz bilgisayarınızdan hiç çıkmaz. İşlemcide veya çok daha hızlı biçimde CUDA destekli bir NVIDIA ekran kartında çalışır.
+[WhisperX](https://github.com/m-bain/whisperX), OpenAI'nin Whisper'ının bilgisayarınızda çalışan hızlı bir uygulamasıdır; böylece sesiniz bilgisayarınızdan hiç çıkmaz. İşlemcide veya çok daha hızlı biçimde CUDA destekli bir NVIDIA ekran kartında ya da Apple Silicon'lu bir Mac'in grafik işlemcisinde çalışır.
 
 ### Model
 
@@ -47,13 +48,22 @@ Büyük modeller daha doğrudur ancak daha yavaştır ve daha fazla bellek kulla
 Audiotext'i hızlıca denemek için `tiny` veya `small` seçin. En iyi kalite için bir ekran kartında `large-v2` veya `large-v3-turbo` kullanın.
 :::
 
+### Mac'te
+
+Apple Silicon'lu Mac'lerde [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) grafik işlemcide, işlemciden çok daha hızlı yazıya döker. Ardından WhisperX her zamanki gibi kelimeleri hizalar ve konuşmacıları işlemcide belirler, böylece transkripsiyonlar kelime zamanlamalarını, puanlarını ve konuşmacılarını korur.
+
+- Modelin MLX sürümü ilk kullanıldığında indirilir.
+- `distil-small.en`, `distil-large-v2` ve `distil-large-v3.5` modellerinin MLX sürümü yoktur, bu yüzden işlemcide çalışırlar.
+- [Canlı metin](/tr/guides/sources/#canlı-metin) her zaman işlemcide çalışır.
+- İşlemcide yazıya dökmek için **Tercihler** → **WhisperX** bölümünde **CPU kullan**'ı açın.
+
 ### Gelişmiş seçenekler
 
 **Tercihler** → **WhisperX** bölümündedir. Yalnızca sorun yaşıyorsanız veya ne yaptığınızı biliyorsanız değiştirin: belleği tükenen bir ekran kartı sisteminizi dondurabilir.
 
-- **Hesaplama türü**: modelin sayılarının hassasiyeti. `float16` ekran kartlarında daha hızlıdır (CUDA ile varsayılan). `int8` daha az bellek kullanır ve işlemcide varsayılandır, çünkü birçok işlemci `float16`'yı verimli desteklemez. `float32` en hassas olanıdır; 8 GB'tan fazla VRAM'e sahip ekran kartları içindir.
+- **Hesaplama türü**: modelin sayılarının hassasiyeti. `float16` NVIDIA ekran kartlarında daha hızlıdır (CUDA ile varsayılan). `int8` daha az bellek kullanır ve işlemcide varsayılandır, çünkü birçok işlemci `float16`'yı verimli desteklemez. `float32` en hassas olanıdır; 8 GB'tan fazla VRAM'e sahip ekran kartları içindir.
 - **Toplu iş boyutu**: sesin kaç parçasının aynı anda işlendiği (varsayılan `8`). Kaliteyi değil, yalnızca hızı etkiler. Bellek yetmiyorsa düşürün; en fazla `16` önerilir.
-- **CPU kullan**: WhisperX'i işlemcide çalıştırır. CUDA destekli ekran kartı bulunamazsa her zaman açıktır.
+- **CPU kullan**: WhisperX'i işlemcide çalıştırır. Grafik işlemci bulunamazsa (CUDA destekli bir NVIDIA ekran kartı veya Apple Silicon'lu bir Mac'in grafik işlemcisi) her zaman açıktır.
 
 ## Whisper API
 
@@ -61,7 +71,7 @@ Audiotext'i hızlıca denemek için `tiny` veya `small` seçin. En iyi kalite i�
 
 | Model | Zaman damgaları | Konuşmacılar | Notlar |
 | --- | :---: | :---: | --- |
-| `whisper-1` (varsayılan) | ✓ | ✗ | Segment segment oynatılabilir ve altyazıya dönüştürülebilir. İngilizceye çevirir. |
+| `whisper-1` (varsayılan) | ✓ | ✗ | Segment segment oynatılabilir ve altyazıya dönüştürülebilir. İngilizceye çevirir. Düşük güvenilirlikli olanları incelemek için her segmenti puanlar. |
 | `gpt-transcribe` | ✗ | ✗ | Daha doğru, ancak zaman damgası yok. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Konuşmacıları belirler. Anahtar kelimeleri ve açıklamayı kullanmaz. |
 

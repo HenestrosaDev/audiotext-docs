@@ -18,10 +18,11 @@ Audiotext は 3 つのエンジンのいずれかで文字起こしします。�
 | 話者の識別 | ✓（Hugging Face トークン） | `gpt-4o-transcribe-diarize` | ✗ |
 | 単語ごとのタイミング | ✓ | `whisper-1` | ✗ |
 | ライブテキスト | ✓ | ✗ | ✗ |
+| [信頼度の低い単語](/ja/guides/transcript/#信頼度の低い単語を確認する) | ✓（単語ごとのタイミング） | `whisper-1`（セグメント） | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) は、お使いのコンピューターで動作する OpenAI の Whisper の高速な実装で、音声がコンピューターの外に出ることはありません。CPU で動作し、CUDA 対応の NVIDIA GPU ではずっと高速に動作します。
+[WhisperX](https://github.com/m-bain/whisperX) は、お使いのコンピューターで動作する OpenAI の Whisper の高速な実装で、音声がコンピューターの外に出ることはありません。CPU で動作し、CUDA 対応の NVIDIA GPU や Apple シリコン搭載 Mac の GPU ではずっと高速に動作します。
 
 ### モデル
 
@@ -47,13 +48,22 @@ Audiotext は 3 つのエンジンのいずれかで文字起こしします。�
 Audiotext をすぐに試すには `tiny` か `small` を選びます。最高の品質を得るには、GPU で `large-v2` か `large-v3-turbo` を使います。
 :::
 
+### Mac の場合
+
+Apple シリコン搭載の Mac では、[MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) が GPU で文字起こしするため、CPU よりずっと高速です。その後、WhisperX がいつもどおり CPU で単語を揃え、話者を識別するので、文字起こしには単語ごとのタイミング、評価、話者が残ります。
+
+- モデルの MLX 版は初回使用時にダウンロードされます。
+- `distil-small.en`、`distil-large-v2`、`distil-large-v3.5` には MLX 版がないため、CPU で動作します。
+- [ライブテキスト](/ja/guides/sources/#ライブテキスト)は常に CPU で動作します。
+- CPU で文字起こしするには、**環境設定** → **WhisperX** で **CPU を使用** をオンにします。
+
 ### 詳細オプション
 
 **環境設定** → **WhisperX** にあります。問題があるとき、または内容を理解している場合にのみ変更してください。GPU のメモリが不足するとシステムが固まることがあります。
 
-- **計算タイプ**: モデルの数値の精度です。`float16` は GPU で高速です（CUDA 使用時の既定）。`int8` はメモリ使用量が少なく、CPU での既定です。多くの CPU は `float16` を効率よく扱えないためです。`float32` は最も精度が高く、VRAM が 8 GB を超える GPU 向けです。
+- **計算タイプ**: モデルの数値の精度です。`float16` は NVIDIA GPU で高速です（CUDA 使用時の既定）。`int8` はメモリ使用量が少なく、CPU での既定です。多くの CPU は `float16` を効率よく扱えないためです。`float32` は最も精度が高く、VRAM が 8 GB を超える GPU 向けです。
 - **バッチサイズ**: 音声のいくつの部分を同時に処理するか（既定は `8`）。品質ではなく速度だけに影響します。メモリが足りない場合は下げてください。`16` までが推奨です。
-- **CPU を使用**: WhisperX を CPU で実行します。CUDA 対応 GPU が見つからない場合は常にオンです。
+- **CPU を使用**: WhisperX を CPU で実行します。GPU（CUDA 対応の NVIDIA GPU、または Apple シリコン搭載 Mac の GPU）が見つからない場合は常にオンです。
 
 ## Whisper API
 
@@ -61,7 +71,7 @@ Audiotext をすぐに試すには `tiny` か `small` を選びます。最高�
 
 | モデル | タイムスタンプ | 話者 | 備考 |
 | --- | :---: | :---: | --- |
-| `whisper-1`（既定） | ✓ | ✗ | セグメント単位で再生でき、字幕も作れます。英語に翻訳できます。 |
+| `whisper-1`（既定） | ✓ | ✗ | セグメント単位で再生でき、字幕も作れます。英語に翻訳できます。各セグメントを評価するので、信頼度の低いセグメントを確認できます。 |
 | `gpt-transcribe` | ✗ | ✗ | より正確ですが、タイムスタンプはありません。 |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | 話者を識別します。キーワードと説明は使いません。 |
 

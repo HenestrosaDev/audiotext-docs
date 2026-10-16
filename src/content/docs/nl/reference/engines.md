@@ -18,10 +18,11 @@ Audiotext transcribeert met een van drie engines, die je kiest op de kaart **Eng
 | Herkent sprekers | ✓ (Hugging Face-token) | `gpt-4o-transcribe-diarize` | ✗ |
 | Tijden per woord | ✓ | `whisper-1` | ✗ |
 | Livetekst | ✓ | ✗ | ✗ |
+| [Woorden met lage betrouwbaarheid](/nl/guides/transcript/#woorden-met-lage-betrouwbaarheid-nakijken) | ✓ (tijden per woord) | `whisper-1` (segmenten) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) is een snelle implementatie van Whisper van OpenAI die op je computer draait, zodat je audio hem nooit verlaat. Het draait op de CPU of, veel sneller, op een NVIDIA-GPU met CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) is een snelle implementatie van Whisper van OpenAI die op je computer draait, zodat je audio hem nooit verlaat. Het draait op de CPU of, veel sneller, op een NVIDIA-GPU met CUDA of op de GPU van een Mac met Apple Silicon.
 
 ### Model
 
@@ -47,13 +48,22 @@ Grotere modellen zijn nauwkeuriger, maar trager en gebruiken meer geheugen. Het 
 Kies `tiny` of `small` om Audiotext snel uit te proberen. Gebruik voor de beste kwaliteit `large-v2` of `large-v3-turbo` op een GPU.
 :::
 
+### Op een Mac
+
+Op Macs met Apple Silicon transcribeert [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) op de GPU, veel sneller dan op de CPU. Daarna lijnt WhisperX zoals altijd de woorden uit en herkent het de sprekers op de CPU, zodat de transcripties hun tijden per woord, scores en sprekers behouden.
+
+- De MLX-versie van het model wordt gedownload wanneer het voor het eerst wordt gebruikt.
+- `distil-small.en`, `distil-large-v2` en `distil-large-v3.5` hebben geen MLX-versie en draaien dus op de CPU.
+- De [livetekst](/nl/guides/sources/#livetekst) draait altijd op de CPU.
+- Om op de CPU te transcriberen, zet je **CPU gebruiken** aan bij **Voorkeuren** → **WhisperX**.
+
 ### Geavanceerde opties
 
 Ze staan bij **Voorkeuren** → **WhisperX**. Wijzig ze alleen als je problemen hebt of weet wat je doet: een GPU zonder geheugen kan je systeem laten vastlopen.
 
-- **Rekentype**: de precisie van de getallen van het model. `float16` is sneller op GPU's (de standaard met CUDA). `int8` gebruikt minder geheugen en is de standaard op de CPU, omdat veel CPU's `float16` niet efficiënt ondersteunen. `float32` is het nauwkeurigst, voor GPU's met meer dan 8 GB VRAM.
+- **Rekentype**: de precisie van de getallen van het model. `float16` is sneller op NVIDIA-GPU's (de standaard met CUDA). `int8` gebruikt minder geheugen en is de standaard op de CPU, omdat veel CPU's `float16` niet efficiënt ondersteunen. `float32` is het nauwkeurigst, voor GPU's met meer dan 8 GB VRAM.
 - **Batchgrootte**: hoeveel delen van de audio tegelijk worden verwerkt (standaard `8`). Het verandert de kwaliteit niet, alleen de snelheid. Verlaag hem als het geheugen opraakt; tot `16` wordt aanbevolen.
-- **CPU gebruiken**: draait WhisperX op de CPU. Staat altijd aan als er geen CUDA-GPU is gevonden.
+- **CPU gebruiken**: draait WhisperX op de CPU. Staat altijd aan als er geen GPU is gevonden (een NVIDIA-GPU met CUDA, of de GPU van een Mac met Apple Silicon).
 
 ## Whisper-API
 
@@ -61,7 +71,7 @@ Gebruikt de [spraak-naar-tekst-API van OpenAI](https://platform.openai.com/docs/
 
 | Model | Tijdstempels | Sprekers | Opmerkingen |
 | --- | :---: | :---: | --- |
-| `whisper-1` (standaard) | ✓ | ✗ | Kan segment voor segment worden afgespeeld en ondertiteld. Vertaalt naar het Engels. |
+| `whisper-1` (standaard) | ✓ | ✗ | Kan segment voor segment worden afgespeeld en ondertiteld. Vertaalt naar het Engels. Beoordeelt elk segment, om die met lage betrouwbaarheid na te kijken. |
 | `gpt-transcribe` | ✗ | ✗ | Nauwkeuriger, maar zonder tijdstempels. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Herkent de sprekers. Gebruikt de trefwoorden en de beschrijving niet. |
 

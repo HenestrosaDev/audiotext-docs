@@ -15,7 +15,7 @@ Il **Metodo di trascrizione**:
 
 | Motore | Dove funziona | Costo | Note |
 | --- | --- | --- | --- |
-| **WhisperX** (predefinito) | Il tuo computer | Gratis e senza limiti | Privato e offline. Più opzioni: parlanti, tempi per parola, testo dal vivo. |
+| **WhisperX** (predefinito) | Il tuo computer | Gratis e senza limiti | Privato e offline. Più opzioni: parlanti, tempi per parola, testo dal vivo. Funziona sulla GPU dei Mac con Apple Silicon. |
 | **API di Whisper** | Server di OpenAI | A pagamento al minuto | Richiede una [chiave API di OpenAI](/it/reference/preferences/#chiavi-api). Per i computer che non riescono a eseguire WhisperX in modo fluido. |
 | **API di Google** | Server di Google | Livello gratuito, o a pagamento | Qualità inferiore e senza marcatori temporali. La chiave API è facoltativa. |
 
@@ -44,7 +44,7 @@ Li usano WhisperX e la API di Whisper, tranne il modello `gpt-4o-transcribe-diar
 
 ## Opzioni
 
-- **Tempi per parola** (WhisperX): allinea ogni parola all'audio, per evidenziarla durante la riproduzione. Richiede un po' più di tempo. I sottotitoli li usano già.
+- **Tempi per parola** (WhisperX): allinea ogni parola all'audio, per evidenziarla durante la riproduzione e per [rivedere le parole](/it/guides/transcript/#rivedi-le-parole-a-bassa-affidabilità) di cui è meno sicuro. Richiede un po' più di tempo. Attivo per impostazione predefinita.
 - **Estrai la voce**: riduce la musica e il rumore di fondo prima di trascrivere.
 - **Identifica i parlanti** (WhisperX): indica chi parla in ogni parte, es. `SPEAKER_00`. Se sai quante persone parlano, indicalo in **Numero di parlanti** (`0` lo rileva). Richiede un token gratuito di Hugging Face; consulta [Identifica i parlanti](#identifica-i-parlanti). Con la API di Whisper, il modello `gpt-4o-transcribe-diarize` identifica i parlanti.
 

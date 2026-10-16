@@ -19,9 +19,10 @@ The **Preferences** hold the settings that don't change with each transcription.
 
 ## AI
 
-The providers of the [summaries and the translations](/en/guides/summary-and-translation/):
+The providers of the [summaries, the questions and the translations](/en/guides/summary-and-translation/):
 
 - **Summary** → **Provider** and **Model**.
+- **Ask** → **Provider** and **Model**: the ones that answer the questions about the transcriptions. They're the ones of the summaries until you change them.
 - **Translation** → **Provider** and **Model**. DeepL and Google Translate have no models to choose.
 - **Ollama** → **Server URL**: the address of Ollama, `http://localhost:11434` by default.
 
@@ -29,16 +30,16 @@ Leave the **Model** empty to use the default one of the provider. The button nex
 
 ## API keys
 
-The keys of each service. Click **Set…** to enter one, or **Change…** to replace it (leave it empty to remove it). They're kept in the credential store of your system.
+The keys of each service. Click **Set API key…** to enter one, or **Change API key…** to replace it (leave it empty to remove it). They're kept in the credential store of your system.
 
 | Key | Used for |
 | --- | --- |
-| OpenAI API key | The Whisper API, and summarizing and translating with OpenAI |
-| Anthropic API key | Summarizing and translating with Claude |
-| DeepSeek API key | Summarizing and translating with DeepSeek |
-| Gemini API key | Summarizing and translating with Gemini (from Google AI Studio) |
-| Mistral API key | Summarizing and translating with Mistral |
-| xAI API key | Summarizing and translating with Grok |
+| OpenAI API key | The Whisper API, and summarizing, asking and translating with OpenAI |
+| Anthropic API key | Summarizing, asking and translating with Claude |
+| DeepSeek API key | Summarizing, asking and translating with DeepSeek |
+| Gemini API key | Summarizing, asking and translating with Gemini (from Google AI Studio) |
+| Mistral API key | Summarizing, asking and translating with Mistral |
+| xAI API key | Summarizing, asking and translating with Grok |
 | DeepL API key | Translating with DeepL (keys of the free plan work too) |
 | Google API key | Google Speech-to-Text beyond the free tier, and Google Translate (Cloud Translation API) |
 | Hugging Face token | Identifying the speakers with WhisperX |
@@ -49,15 +50,21 @@ Each provider charges for the use of its API, for which Audiotext is not respons
 
 ## WhisperX
 
-**Compute type**, **Batch size** and **Use CPU**. See [WhisperX advanced options](/en/reference/engines/#advanced-options).
+**Compute type**, **Batch size** and **Use CPU**. See [WhisperX advanced options](/en/reference/engines/#advanced-options). On a Mac with Apple Silicon, WhisperX transcribes on its GPU unless **Use CPU** is on. See [On a Mac](/en/reference/engines/#on-a-mac).
 
 ## Subtitles
 
-The options of the `.srt` and `.vtt` files saved when transcribing a folder with WhisperX:
+How the subtitles are split: the ones shown over the video and in the **Subtitles** mode, the exported subtitle files and the [videos with subtitles](/en/guides/transcript/#export-the-video-with-its-subtitles). Each option has a value for the landscape videos and another for the portrait ones (taller than they're wide, e.g. for phones), which are narrower:
 
-- **Highlight words**: underlines each word as it's said. Off by default.
-- **Max. line count**: the maximum number of lines of each subtitle. `2` by default.
-- **Max. line width**: the maximum number of characters of a line before breaking it. `42` by default.
+| Option | Landscape | Portrait |
+| --- | :---: | :---: |
+| **Max. lines per subtitle** | `2` | `2` |
+| **Max. characters per line** | `42` | `24` |
+| **Chinese, Japanese and Korean**: the characters per line in these languages, whose characters are about twice as wide as Latin ones | `16` | `10` |
+
+The lines of a subtitle are evened out, and the languages written without spaces are broken between characters.
+
+**Highlight words** underlines each word as it's said in the `.srt` and `.vtt` files. Off by default.
 
 ## Whisper API
 

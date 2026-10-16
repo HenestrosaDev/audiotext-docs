@@ -19,9 +19,10 @@ sidebar:
 
 ## AI
 
-Poskytovatelé [shrnutí a překladů](/cs/guides/summary-and-translation/):
+Poskytovatelé [shrnutí, otázek a překladů](/cs/guides/summary-and-translation/):
 
 - **Shrnutí** → **Poskytovatel** a **Model**.
+- **Zeptat se** → **Poskytovatel** a **Model**: ti, kdo odpovídají na otázky k přepisům. Dokud je nezměníte, jsou stejné jako u shrnutí.
 - **Překlad** → **Poskytovatel** a **Model**. DeepL a Google Translate nemají modely na výběr.
 - **Ollama** → **URL serveru**: adresa Ollamy, výchozí `http://localhost:11434`.
 
@@ -29,16 +30,16 @@ Nechte **Model** prázdný, chcete-li použít výchozí model poskytovatele. Tl
 
 ## Klíče API
 
-Klíče jednotlivých služeb. Kliknutím na **Nastavit…** klíč zadáte, kliknutím na **Změnit…** ho nahradíte (prázdným polem ho odstraníte). Jsou uloženy v úložišti přihlašovacích údajů systému.
+Klíče jednotlivých služeb. Kliknutím na **Nastavit klíč API…** klíč zadáte, kliknutím na **Změnit klíč API…** ho nahradíte (prázdným polem ho odstraníte). Jsou uloženy v úložišti přihlašovacích údajů systému.
 
 | Klíč | Používá se pro |
 | --- | --- |
-| Klíč API OpenAI | Whisper API a shrnování a překlad pomocí OpenAI |
-| Klíč API Anthropic | Shrnování a překlad pomocí Claude |
-| Klíč API DeepSeek | Shrnování a překlad pomocí DeepSeek |
-| Klíč API Gemini | Shrnování a překlad pomocí Gemini (z Google AI Studio) |
-| Klíč API Mistral | Shrnování a překlad pomocí Mistral |
-| Klíč API xAI | Shrnování a překlad pomocí Grok |
+| Klíč API OpenAI | Whisper API a shrnování, otázky a překlad pomocí OpenAI |
+| Klíč API Anthropic | Shrnování, otázky a překlad pomocí Claude |
+| Klíč API DeepSeek | Shrnování, otázky a překlad pomocí DeepSeek |
+| Klíč API Gemini | Shrnování, otázky a překlad pomocí Gemini (z Google AI Studio) |
+| Klíč API Mistral | Shrnování, otázky a překlad pomocí Mistral |
+| Klíč API xAI | Shrnování, otázky a překlad pomocí Grok |
 | Klíč API DeepL | Překlad pomocí DeepL (fungují i klíče z bezplatného tarifu) |
 | Klíč Google API | Google Speech-to-Text nad bezplatný limit a Google Translate (Cloud Translation API) |
 | Token Hugging Face | Rozpoznání mluvčích ve WhisperX |
@@ -49,15 +50,21 @@ Každý poskytovatel si účtuje používání svého API, za které Audiotext n
 
 ## WhisperX
 
-**Typ výpočtu**, **Velikost dávky** a **Použít CPU**. Viz [pokročilé možnosti WhisperX](/cs/reference/engines/#pokročilé-možnosti).
+**Typ výpočtu**, **Velikost dávky** a **Použít CPU**. Viz [pokročilé možnosti WhisperX](/cs/reference/engines/#pokročilé-možnosti). Na Macu s Apple Silicon přepisuje WhisperX na jeho grafickém procesoru, pokud není zapnuto **Použít CPU**. Viz [Na Macu](/cs/reference/engines/#na-macu).
 
 ## Titulky
 
-Možnosti souborů `.srt` a `.vtt`, které se ukládají při přepisu složky pomocí WhisperX:
+Jak se titulky dělí: ty zobrazené ve videu a v režimu **Titulky**, exportované soubory titulků a [videa s titulky](/cs/guides/transcript/#export-videa-s-titulky). Každá možnost má hodnotu pro vodorovná videa a jinou pro svislá (vyšší než širší, např. pro telefony), která jsou užší:
 
-- **Zvýrazňovat slova**: podtrhne každé slovo ve chvíli, kdy zazní. Ve výchozím stavu vypnuto.
-- **Max. počet řádků**: maximální počet řádků každého titulku. Výchozí `2`.
-- **Max. šířka řádku**: maximální počet znaků na řádku před zalomením. Výchozí `42`.
+| Možnost | Vodorovné | Svislé |
+| --- | :---: | :---: |
+| **Max. řádků na titulek** | `2` | `2` |
+| **Max. znaků na řádek** | `42` | `24` |
+| **Čínština, japonština a korejština**: znaky na řádek v těchto jazycích, jejichž znaky jsou zhruba dvakrát širší než latinské | `16` | `10` |
+
+Řádky titulku se vyrovnávají a jazyky psané bez mezer se zalamují mezi znaky.
+
+**Zvýrazňovat slova** podtrhne v souborech `.srt` a `.vtt` každé slovo ve chvíli, kdy zazní. Ve výchozím stavu vypnuto.
 
 ## Whisper API
 

@@ -19,9 +19,10 @@ As **Preferencias** conteñen a configuración que non cambia con cada transcric
 
 ## IA
 
-Os provedores dos [resumos e as traducións](/gl/guides/summary-and-translation/):
+Os provedores dos [resumos, as preguntas e as traducións](/gl/guides/summary-and-translation/):
 
 - **Resumo** → **Provedor** e **Modelo**.
+- **Preguntar** → **Provedor** e **Modelo**: os que responden as preguntas sobre as transcricións. Son os dos resumos ata que os cambies.
 - **Tradución** → **Provedor** e **Modelo**. DeepL e Google Translate non teñen modelos que escoller.
 - **Ollama** → **URL do servidor**: o enderezo de Ollama, `http://localhost:11434` de forma predeterminada.
 
@@ -29,16 +30,16 @@ Deixa o **Modelo** baleiro para usar o modelo predeterminado do provedor. O bot�
 
 ## Claves de API
 
-As claves de cada servizo. Fai clic en **Configurar…** para introducir unha, ou en **Cambiar…** para substituíla (déixaa baleira para eliminala). Gárdanse no almacén de credenciais do teu sistema.
+As claves de cada servizo. Fai clic en **Configurar clave de API…** para introducir unha, ou en **Cambiar a clave de API…** para substituíla (déixaa baleira para eliminala). Gárdanse no almacén de credenciais do teu sistema.
 
 | Clave | Úsase para |
 | --- | --- |
-| Clave de API de OpenAI | A API de Whisper, e resumir e traducir con OpenAI |
-| Clave de API de Anthropic | Resumir e traducir con Claude |
-| Clave de API de DeepSeek | Resumir e traducir con DeepSeek |
-| Clave de API de Gemini | Resumir e traducir con Gemini (de Google AI Studio) |
-| Clave de API de Mistral | Resumir e traducir con Mistral |
-| Clave de API de xAI | Resumir e traducir con Grok |
+| Clave de API de OpenAI | A API de Whisper, e resumir, preguntar e traducir con OpenAI |
+| Clave de API de Anthropic | Resumir, preguntar e traducir con Claude |
+| Clave de API de DeepSeek | Resumir, preguntar e traducir con DeepSeek |
+| Clave de API de Gemini | Resumir, preguntar e traducir con Gemini (de Google AI Studio) |
+| Clave de API de Mistral | Resumir, preguntar e traducir con Mistral |
+| Clave de API de xAI | Resumir, preguntar e traducir con Grok |
 | Clave de API de DeepL | Traducir con DeepL (as claves do plan gratuíto tamén serven) |
 | Clave de API de Google | Google Speech-to-Text máis alá do nivel gratuíto, e Google Translate (Cloud Translation API) |
 | Token de Hugging Face | Identificar os falantes con WhisperX |
@@ -49,15 +50,21 @@ Cada provedor cobra polo uso da súa API, do que Audiotext non se fai responsabl
 
 ## WhisperX
 
-**Tipo de cálculo**, **Tamaño do lote** e **Usar a CPU**. Consulta as [opcións avanzadas de WhisperX](/gl/reference/engines/#opcións-avanzadas).
+**Tipo de cálculo**, **Tamaño do lote** e **Usar a CPU**. Consulta as [opcións avanzadas de WhisperX](/gl/reference/engines/#opcións-avanzadas). Nun Mac con Apple Silicon, WhisperX transcribe na súa GPU agás que **Usar a CPU** estea activado. Consulta [Nun Mac](/gl/reference/engines/#nun-mac).
 
 ## Subtítulos
 
-As opcións dos ficheiros `.srt` e `.vtt` que se gardan ao transcribir un cartafol con WhisperX:
+Como se dividen os subtítulos: os que se mostran sobre o vídeo e no modo **Subtítulos**, os ficheiros de subtítulos exportados e os [vídeos con subtítulos](/gl/guides/transcript/#exporta-o-vídeo-cos-seus-subtítulos). Cada opción ten un valor para os vídeos horizontais e outro para os verticais (máis altos ca anchos, p. ex. para móbiles), que son máis estreitos:
 
-- **Resaltar palabras**: subliña cada palabra mentres se di. Desactivado de forma predeterminada.
-- **Máx. de liñas**: o número máximo de liñas de cada subtítulo. `2` de forma predeterminada.
-- **Máx. de caracteres por liña**: o número máximo de caracteres dunha liña antes de partila. `42` de forma predeterminada.
+| Opción | Horizontal | Vertical |
+| --- | :---: | :---: |
+| **Máx. de liñas por subtítulo** | `2` | `2` |
+| **Máx. de caracteres por liña** | `42` | `24` |
+| **Chinés, xaponés e coreano**: os caracteres por liña nestes idiomas, cuxos caracteres son aproximadamente o dobre de anchos ca os latinos | `16` | `10` |
+
+As liñas dun subtítulo equilíbranse, e os idiomas que se escriben sen espazos pártense entre caracteres.
+
+**Resaltar palabras** subliña cada palabra mentres se di nos ficheiros `.srt` e `.vtt`. Desactivado de forma predeterminada.
 
 ## API de Whisper
 

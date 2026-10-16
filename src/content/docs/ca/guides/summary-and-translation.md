@@ -1,11 +1,11 @@
 ---
-title: Resum i traducció
-description: Resumeix i tradueix transcripcions amb OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL o Google Translate.
+title: Resum, preguntes i traducció
+description: Resumeix, pregunta sobre i tradueix transcripcions amb OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL o Google Translate.
 sidebar:
   order: 4
 ---
 
-Quan una transcripció està llesta, Audiotext la pot resumir i traduir amb un model de llenguatge o un servei de traducció. Tots dos es desen a l'historial, així que només es generen una vegada.
+Quan una transcripció està llesta, Audiotext la pot resumir, respondre preguntes sobre ella i traduir-la amb un model de llenguatge o un servei de traducció. Tot es desa a l'historial, així que només es genera una vegada.
 
 ## Resum
 
@@ -15,38 +15,58 @@ Obre el mode **Resum** d'una transcripció i fes clic a **Genera el resum**. El 
 - Els **punts clau**.
 - Els **capítols**, si té marques de temps. Fes clic en un capítol per reproduir l'àudio des d'on comença.
 
-**Torna a generar** el torna a escriure (p. ex. després de triar un altre model). **Copia** el copia, i les [exportacions](/ca/guides/transcript/#copia-i-exporta) a Markdown i Word l'inclouen.
+Sota el títol, el plafó diu quin model l'ha generat i quan. Els botons de la capçalera:
+
+- **Cerca** (`Ctrl+F`, `⌘F` a macOS): cerca un text al resum.
+- **Copia**: el copia.
+- **Exporta**: el desa per separat com a text pla, Markdown o document de Word, amb un nom com `video.summary.md` perquè no substitueixi la transcripció. Les [exportacions](/ca/guides/transcript/#copia-i-exporta) a Markdown i Word de la transcripció també l'inclouen.
+- **Torna a generar el resum**: el torna a escriure (p. ex. després de triar un altre model), després de preguntar-t'ho, ja que se substitueix l'actual.
 
 Si la clau d'API del proveïdor no està configurada, el mode **Resum** ofereix configurar-la. Les transcripcions molt llargues (unes tres hores de parla o més) només es resumeixen des del principi.
 
 ![El resum d'una transcripció, amb els punts clau i els capítols](/screenshots/summary.png)
 
+## Pregunta sobre la transcripció
+
+Obre el mode **Pregunta**, escriu una pregunta a **Fes una pregunta sobre la transcripció…** (p. ex. què es va decidir, o qui va dir alguna cosa) i prem `Retorn` o fes clic a **Pregunta**.
+
+- El model de llenguatge respon amb la transcripció, i amb les preguntes anteriors i les seves respostes, així que una pregunta s'hi pot referir (p. ex. «Per què?»).
+- Si la transcripció té marques de temps, cada resposta enllaça amb les parts de la transcripció on es diu. Fes clic en una per reproduir l'àudio des d'aquell punt.
+- Les preguntes i les respostes es desen a l'historial amb la transcripció. La paperera de la capçalera esborra la conversa, després de preguntar-t'ho.
+
+Les preguntes les respon el proveïdor triat per a elles a **Preferències** → **IA** → **Pregunta**, que és el dels resums fins que el canviïs. Com en els resums, de les transcripcions molt llargues només se'n llegeix el començament.
+
 ## Traducció
 
-Fes clic a **Tradueix**, tria l'idioma a **Tradueix a** i el **Proveïdor**, i confirma. La traducció es mostra en un plafó a la dreta del text original.
+Fes clic a **Tradueix**, tria l'idioma a **Tradueix a:** i el proveïdor a **Tradueix amb:**, i confirma. El diàleg diu què fa el proveïdor triat, i ofereix configurar-ne la clau d'API si falta. La traducció es mostra en un plafó a la dreta del text original.
 
-- Si la transcripció té marques de temps, cada segment es tradueix per separat, així que la traducció comença amb les mateixes marques de temps: ressalta el segment que es reprodueix, i en fer clic en un segment es reprodueix.
+- Si la transcripció té marques de temps, es tradueix frase a frase, amb el text que es diu abans i després de cada part com a context, així que la traducció comença amb les marques de temps de cada frase: ressalta la frase que es reprodueix, i en fer clic en una es reprodueix.
 - Si has editat el text pla, es tradueix el text editat, sense marques de temps.
-- Arrossega el separador entre els dos textos per canviar-ne la mida, o fes-hi doble clic per restablir-la.
-- El botó **Tradueix** també et permet **Amagar la traducció**, **Traduir a un altre idioma…** o **Eliminar la traducció**.
+- Els dos textos es desplacen junts, així que mostren la mateixa part de l'àudio. El botó rodó del separador entre ells ho activa i ho desactiva. Arrossega el separador per canviar-ne la mida, o fes-hi doble clic per restablir-la.
+
+Els botons de la capçalera de la traducció hi cerquen i substitueixen, la copien, l'exporten, la **Tornen a traduir** (amb el mateix proveïdor i model) i l'amaguen (**Amaga la traducció**). El botó **Tradueix** també et permet tornar-la a mostrar, **Traduir a un altre idioma…** o **Eliminar la traducció**.
+
+### Diversos idiomes
+
+Una transcripció es pot traduir a diversos idiomes, fins i tot alhora, i es desa cada traducció. El títol del plafó tria la que es mostra, diu quant està traduïda cadascuna i acaba amb l'opció de traduir a un altre idioma. Traduir a un idioma que ja té una traducció la substitueix, després de preguntar-t'ho, ja que se'n perden les correccions.
 
 ### Corregeix i ajusta els temps de la traducció
 
 Sovint una traducció necessita uns temps diferents dels de l'original, p. ex. subtítols que costen més de llegir. Fes clic amb el botó dret en un segment de la traducció per:
 
-- **Edita el text…**: canviar-ne el text.
+- **Edita text…**: canviar-ne el text.
 - **Edita els temps…**: canviar quan comença i acaba, amb precisió de mil·lisegons. Escriu els temps com a `00:01:05,900`, `01:05,9` o `65.9`.
 - **Afegeix un segment després…**: afegir un segment, que per defecte omple l'espai fins al següent.
 - **Elimina el segment**.
 
 ### Tradueix-la tu mateix
 
-Per escriure la traducció tu mateix, tria **Jo mateix, des de zero** com a **Proveïdor**. No necessita cap clau d'API. La traducció comença amb les marques de temps de la transcripció i els segments buits, que es mostren com a **Encara no traduït**, i el panell mostra quants en queden. Fes clic amb el botó dret en un i tria **Tradueix el text…**: el diàleg mostra el text original que es diu en aquell moment.
+Per escriure la traducció tu mateix, tria **Manual** a **Tradueix amb:**. No necessita cap clau d'API. La traducció comença amb un segment buit per cada subtítol de la transcripció, que es mostra com a **Encara no traduït**, i el plafó mostra quants en queden. Fes clic amb el botó dret en un i tria **Tradueix text…**: el diàleg mostra el text original que es diu en aquell moment.
 
 ### Subtítols i exportació
 
 - A les transcripcions de vídeos, marca **Mostra-la com a subtítols del vídeo** al menú **Tradueix** per mostrar la traducció com a subtítols. El menú del vídeo també els canvia. Consulta [Mira vídeos amb subtítols](/ca/guides/transcript/#mira-vídeos-amb-subtítols).
-- Per desar la traducció com a fitxer, tria **Traducció a l'idioma…** al menú **Exporta** o fes clic al botó d'exportar de la traducció. S'exporta en els mateixos [formats](/ca/guides/transcript/#copia-i-exporta) que la transcripció, amb l'idioma al nom del fitxer (p. ex. `video.es.srt`), així els reproductors de vídeo la carreguen amb el vídeo. Els segments que encara no s'han traduït no s'inclouen als subtítols.
+- Per desar la traducció com a fitxer, fes clic al botó d'exportar del seu plafó. S'exporta en els mateixos [formats](/ca/guides/transcript/#copia-i-exporta) que la transcripció, amb l'idioma al nom del fitxer (p. ex. `video.es.srt`), així els reproductors de vídeo la carreguen amb el vídeo. Els segments que encara no s'han traduït no s'inclouen als subtítols. El mateix menú fa una [còpia del vídeo amb els seus subtítols](/ca/guides/transcript/#exporta-el-vídeo-amb-els-seus-subtítols).
 
 :::tip
 Per obtenir la transcripció directament en un altre idioma, sense proveïdor, també pots traduir mentre transcrius. Consulta [Idioma](/ca/guides/transcription-settings/#idioma).
@@ -54,7 +74,7 @@ Per obtenir la transcripció directament en un altre idioma, sense proveïdor, t
 
 ## Proveïdors
 
-Els proveïdors es trien a **Preferències** → **IA**, per separat per als resums i les traduccions.
+Els proveïdors es trien a **Preferències** → **IA**, per separat per als resums, les preguntes i les traduccions.
 
 | Proveïdor | Model per defecte | Clau d'API |
 | --- | --- | --- |

@@ -20,7 +20,7 @@ Pengaturan, riwayat, dan rekaman disimpan di folder konfigurasi pengguna Anda, s
 Isinya:
 
 - `config.ini`: pengaturan Anda. Hapus untuk mengembalikan nilai bawaan.
-- `history.json`: transkripsi Anda, beserta ringkasan, terjemahan, dan koreksinya.
+- `history.json`: transkripsi Anda, beserta ringkasan, pertanyaan, terjemahan, dan koreksinya.
 - `media/`: rekaman mikrofon dan audio yang diunduh dari URL, agar dapat diputar nanti. Semuanya dihapus saat transkripsinya dihapus dari riwayat.
 
 Untuk menggunakan folder lain, mis. untuk instalasi portabel, atur variabel lingkungan `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Variabel lingkungan dengan nama kunci tersebut lebih diutamakan daripada yang di
 
 | Variabel | Layanan |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (Whisper API, ringkasan, terjemahan) |
+| `OPENAI_API_KEY` | OpenAI (Whisper API, ringkasan, pertanyaan, terjemahan) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Variabel lingkungan dengan nama kunci tersebut lebih diutamakan daripada yang di
 
 ## Model
 
-Model WhisperX dan identifikasi pembicara diunduh saat pertama kali digunakan dan di-cache oleh Hugging Face di `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` di Windows). Model yang menyelaraskan kata-kata bahasa Inggris, Prancis, Jerman, Spanyol, dan Italia di-cache oleh PyTorch di `~/.cache/torch` (`%USERPROFILE%\.cache\torch` di Windows). Hapus folder-folder tersebut untuk mengosongkan ruang yang dipakainya. Aplikasi lain juga dapat menyimpan modelnya di sana, dan mengunduhnya lagi saat dibutuhkan, seperti Audiotext.
+Model WhisperX (dan MLX Whisper, di Mac) serta identifikasi pembicara diunduh saat pertama kali digunakan dan di-cache oleh Hugging Face di `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` di Windows). Model yang menyelaraskan kata-kata bahasa Inggris, Prancis, Jerman, Spanyol, dan Italia di-cache oleh PyTorch di `~/.cache/torch` (`%USERPROFILE%\.cache\torch` di Windows). Hapus folder-folder tersebut untuk mengosongkan ruang yang dipakainya. Aplikasi lain juga dapat menyimpan modelnya di sana, dan mengunduhnya lagi saat dibutuhkan, seperti Audiotext.

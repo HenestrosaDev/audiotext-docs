@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Chaque transcription est conservée dans l’historique, à gauche de la fenêtre, avec son résumé, sa traduction et les corrections que vous avez faites. Le bouton à gauche de la barre supérieure l’affiche ou le masque.
+Chaque transcription est conservée dans l’historique, à gauche de la fenêtre, avec son résumé, ses questions, ses traductions et les corrections que vous avez faites. Le bouton à gauche de la barre supérieure l’affiche ou le masque.
 
 ## Retrouvez une transcription
 
@@ -32,7 +32,7 @@ Les groupes rassemblent des transcriptions liées, comme celles d’un projet ou
 
 ## Supprimez une transcription
 
-Supprimer une transcription la retire de l’historique, avec son résumé et sa traduction. Les transcriptions des fichiers d’un dossier sont aussi supprimées. Vos fichiers audio, vidéo et enregistrés ne sont **pas** supprimés.
+Supprimer une transcription la retire de l’historique, avec son résumé, ses questions et ses traductions. Les transcriptions des fichiers d’un dossier sont aussi supprimées. Vos fichiers audio, vidéo et enregistrés ne sont **pas** supprimés.
 
 ## Transcriptions échouées et interrompues
 

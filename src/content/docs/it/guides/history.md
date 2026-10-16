@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Ogni trascrizione è conservata nella cronologia, a sinistra della finestra, insieme al riassunto, alla traduzione e alle correzioni che hai fatto. Il pulsante a sinistra della barra superiore la mostra o la nasconde.
+Ogni trascrizione è conservata nella cronologia, a sinistra della finestra, insieme al riassunto, alle domande, alle traduzioni e alle correzioni che hai fatto. Il pulsante a sinistra della barra superiore la mostra o la nasconde.
 
 ## Trova una trascrizione
 
@@ -32,7 +32,7 @@ I gruppi riuniscono trascrizioni correlate, come quelle di un progetto o di un c
 
 ## Elimina una trascrizione
 
-Eliminare una trascrizione la rimuove dalla cronologia, insieme al riassunto e alla traduzione. Vengono eliminate anche le trascrizioni dei file di una cartella. I tuoi file audio, video e salvati **non** vengono eliminati.
+Eliminare una trascrizione la rimuove dalla cronologia, insieme al riassunto, alle domande e alle traduzioni. Vengono eliminate anche le trascrizioni dei file di una cartella. I tuoi file audio, video e salvati **non** vengono eliminati.
 
 ## Trascrizioni non riuscite e interrotte
 

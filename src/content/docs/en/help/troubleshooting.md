@@ -21,7 +21,7 @@ The last two can reduce the quality. See [Engines](/en/reference/engines/#model)
 
 ## Transcribing takes too long
 
-The speed of WhisperX depends on your hardware, so don't expect instant results on modest CPUs. Try a smaller model, such as `small` or `large-v3-turbo` on a GPU, or the `int8` compute type. Alternatively, use the **Whisper API** or the **Google API**, which run on remote servers.
+The speed of WhisperX depends on your hardware, so don't expect instant results on modest CPUs. Try a smaller model, such as `small` or `large-v3-turbo` on a GPU, or the `int8` compute type. On a Mac with Apple Silicon, check that **Use CPU** is off in **Preferences** → **WhisperX**, so it transcribes on the GPU. Alternatively, use the **Whisper API** or the **Google API**, which run on remote servers.
 
 ## The Whisper API returns the error `429`
 
@@ -78,11 +78,26 @@ The files that already have a transcription are skipped. Turn on **Overwrite exi
 
 The Google API can't detect the language. Choose the **Language of the audio** in the settings.
 
-## A summary or a translation fails
+## A summary, an answer or a translation fails
 
 - **DeepL can't translate into ….**: DeepL doesn't support that language. Choose another provider, such as a language model.
-- **The reply of the model was too long.**, **The model didn't return a valid summary.** or **The model didn't return a valid translation.**: the model didn't write the summary or the translation in the expected format. Try again, or choose a larger model in **Preferences** → **AI**. The small models of Ollama fail more often.
+- **The reply of the model was too long.**, **The model didn't return a valid summary.**, **The model didn't return a valid reply.** or **The model didn't return a valid translation.**: the model didn't write the summary, the answer or the translation in the expected format. Try again, or choose a larger model in **Preferences** → **AI**. The small models of Ollama fail more often.
 - For any other error, check that the API key of the provider is set in **Preferences** → **API keys** and that your account has credits.
+
+## The low-confidence words aren't underlined
+
+Check that **Highlight low-confidence words** is on in the `⋯` menu of the transcription. If the transcription has no scores, the menu says why:
+
+- **Turn on “Word-level timings” and transcribe it again**: WhisperX scores the words when it times them.
+- **There is no alignment model for its language**: the words of that language can't be timed nor scored.
+- **Transcribe it again to score its words**: it was transcribed before the words were scored.
+- **Only WhisperX and whisper-1 score the words**: the other engines and models don't.
+
+See [Review the low-confidence words](/en/guides/transcript/#review-the-low-confidence-words).
+
+## The video with subtitles shows boxes
+
+If **Exported to …, but no font has these characters, so they're shown as boxes: …** is shown after [exporting the video with its subtitles](/en/guides/transcript/#export-the-video-with-its-subtitles), no font of your system can draw those characters. Install a font for that script (e.g. [Noto](https://fonts.google.com/noto)) and export it again.
 
 ## Updates can't be checked
 

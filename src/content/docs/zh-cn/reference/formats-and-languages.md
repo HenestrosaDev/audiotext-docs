@@ -15,18 +15,20 @@ Audiotext 使用 FFmpeg 从视频文件中提取音频，因此两者都能转�
 
 ## 输出格式
 
-| 格式 | 导出 | 文件夹（WhisperX） | 文件夹（Whisper API） |
-| --- | :---: | :---: | :---: |
-| 纯文本 (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Word 文档 (`.docx`) | ✓ | ✗ | ✗ |
-| 字幕 (`.srt`) | ✓ | ✓ | `srt` |
-| 网页字幕 (`.vtt`) | ✓ | ✓ | `vtt` |
-| 表格 (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Audacity 标签 (`.aud`) | ✗ | ✓ | ✗ |
+| 格式 | 导出 | 文件夹（WhisperX） | 文件夹（Whisper API） | 命令行 |
+| --- | :---: | :---: | :---: | :---: |
+| 纯文本 (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Word 文档 (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| 字幕 (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| 网页字幕 (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| 带样式的字幕 (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| 表格 (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Audacity 标签 (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| 带字幕的视频 (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-请参阅[导出](/zh-cn/guides/transcript/#复制与导出)和[输出卡片](/zh-cn/guides/transcription-settings/#文件夹与输出)。
+摘要可单独导出为 `.txt`、`.md` 和 `.docx`。请参阅[导出](/zh-cn/guides/transcript/#复制与导出)、[输出卡片](/zh-cn/guides/transcription-settings/#文件夹与输出)和[命令行](/zh-cn/reference/cli/#选项)。
 
 ## 音频语言
 

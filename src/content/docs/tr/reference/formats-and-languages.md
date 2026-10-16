@@ -15,18 +15,20 @@ Audiotext, video dosyalarının sesini FFmpeg ile çıkarır, bu yüzden ikisini
 
 ## Çıktı biçimleri
 
-| Biçim | Dışa aktar | Klasör (WhisperX) | Klasör (Whisper API) |
-| --- | :---: | :---: | :---: |
-| Düz metin (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Word belgesi (`.docx`) | ✓ | ✗ | ✗ |
-| Altyazılar (`.srt`) | ✓ | ✓ | `srt` |
-| Web altyazıları (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tablo (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Audacity etiketleri (`.aud`) | ✗ | ✓ | ✗ |
+| Biçim | Dışa aktar | Klasör (WhisperX) | Klasör (Whisper API) | Komut satırı |
+| --- | :---: | :---: | :---: | :---: |
+| Düz metin (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Word belgesi (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Altyazılar (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Web altyazıları (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Biçimli altyazılar (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tablo (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Audacity etiketleri (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Altyazılı video (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-[Dışa aktarma](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın) ve [Çıktı kartı](/tr/guides/transcription-settings/#klasör-ve-çıktı) bölümlerine bakın.
+Özet ayrı olarak `.txt`, `.md` ve `.docx` biçiminde dışa aktarılır. [Dışa aktarma](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın), [Çıktı kartı](/tr/guides/transcription-settings/#klasör-ve-çıktı) ve [komut satırı](/tr/reference/cli/#seçenekler) bölümlerine bakın.
 
 ## Kayıt dilleri
 

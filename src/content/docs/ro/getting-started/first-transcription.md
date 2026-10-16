@@ -41,8 +41,9 @@ Dacă o altă transcriere este în curs, butonul devine **Adaugă în coadă**, 
 Când se termină, transcrierea se deschide:
 
 - Faceți clic pe un segment pentru a reda sunetul de acolo.
-- Comutați între **Transcriere cu marcaje**, **Text simplu** și **Rezumat**.
-- Folosiți **Tradu**, **Copiază** și **Exportă** pentru a o traduce, copia sau salva ca fișier.
+- Comutați între **Subtitrări**, **Text simplu**, **Rezumat** și **Întreabă**, pentru a pune întrebări despre ea.
+- Folosiți **Tradu** pentru a o traduce, iar butoanele din antetul transcrierii pentru a căuta și înlocui în ea, a o copia sau a o salva ca fișier.
+- Verificați cuvintele subliniate, de care motorul este cel mai puțin sigur.
 
 Consultați [Transcrierea](/ro/guides/transcript/) pentru tot ce puteți face cu ea.
 
@@ -52,8 +53,10 @@ Consultați [Transcrierea](/ro/guides/transcript/) pentru tot ce puteți face cu
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Pornirea transcrierii sau pornirea și oprirea înregistrării |
 | `Ctrl+O` / `⌘O` | Alegerea unui fișier (sau a unui dosar, pentru sursa Dosar) |
-| `Ctrl+S` / `⌘S` | Exportul transcrierii afișate |
-| `Ctrl+F` / `⌘F` | Căutarea în transcriere |
+| `Ctrl+S` / `⌘S` | Exportul textului la care lucrați: transcrierea sau traducerea ei |
+| `Ctrl+F` / `⌘F` | Căutarea și înlocuirea în textul la care lucrați (sau căutarea în rezumat) |
+| `Ctrl+J` / `⌘J` | Trecerea la următorul cuvânt cu încredere scăzută |
+| `Shift+Ctrl+J` / `⇧⌘J` | Trecerea la cuvântul anterior cu încredere scăzută |
 | `Esc` | Anularea transcrierii în curs |
 | `Spațiu` | Redarea sau întreruperea sunetului |
 | `←` / `→` | Înapoi sau înainte cu 5 secunde |

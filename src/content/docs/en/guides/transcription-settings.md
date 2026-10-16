@@ -15,7 +15,7 @@ The **Transcription method**:
 
 | Engine | Where it runs | Cost | Notes |
 | --- | --- | --- | --- |
-| **WhisperX** (default) | Your computer | Free and unlimited | Private and offline. More options: speakers, word timings, live text. |
+| **WhisperX** (default) | Your computer | Free and unlimited | Private and offline. More options: speakers, word timings, live text. Runs on the GPU of Macs with Apple Silicon. |
 | **Whisper API** | OpenAI servers | Paid per minute | Requires an [OpenAI API key](/en/reference/preferences/#api-keys). For computers that can't run WhisperX smoothly. |
 | **Google API** | Google servers | Free tier, or paid | Lower quality and no timestamps. An API key is optional. |
 
@@ -44,7 +44,7 @@ They're used by WhisperX and the Whisper API, except by the `gpt-4o-transcribe-d
 
 ## Options
 
-- **Word-level timings** (WhisperX): aligns each word with the audio, to highlight it while playing. Takes a bit longer. The subtitles already use them.
+- **Word-level timings** (WhisperX): aligns each word with the audio, to highlight it while playing and to [review the words](/en/guides/transcript/#review-the-low-confidence-words) it's least sure of. Takes a bit longer. On by default.
 - **Extract speech**: reduces music and background noise before transcribing.
 - **Identify speakers** (WhisperX): labels who speaks in each part, e.g. `SPEAKER_00`. If you know how many people speak, enter it in **Number of speakers** (`0` detects it). It requires a free Hugging Face token; see [Identify the speakers](#identify-the-speakers). With the Whisper API, the `gpt-4o-transcribe-diarize` model identifies the speakers.
 

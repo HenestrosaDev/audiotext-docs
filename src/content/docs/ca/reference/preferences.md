@@ -19,9 +19,10 @@ Les **Preferències** contenen la configuració que no canvia amb cada transcrip
 
 ## IA
 
-Els proveïdors dels [resums i les traduccions](/ca/guides/summary-and-translation/):
+Els proveïdors dels [resums, les preguntes i les traduccions](/ca/guides/summary-and-translation/):
 
 - **Resum** → **Proveïdor** i **Model**.
+- **Pregunta** → **Proveïdor** i **Model**: els que responen les preguntes sobre les transcripcions. Són els dels resums fins que els canviïs.
 - **Traducció** → **Proveïdor** i **Model**. DeepL i Google Translate no tenen models per triar.
 - **Ollama** → **URL del servidor**: l'adreça d'Ollama, `http://localhost:11434` per defecte.
 
@@ -29,16 +30,16 @@ Deixa el **Model** buit per fer servir el model per defecte del proveïdor. El b
 
 ## Claus d'API
 
-Les claus de cada servei. Fes clic a **Configura…** per introduir-ne una, o a **Canvia…** per substituir-la (deixa-la buida per eliminar-la). Es desen al magatzem de credencials del sistema.
+Les claus de cada servei. Fes clic a **Configura la clau d'API…** per introduir-ne una, o a **Canvia la clau d'API…** per substituir-la (deixa-la buida per eliminar-la). Es desen al magatzem de credencials del sistema.
 
 | Clau | Es fa servir per a |
 | --- | --- |
-| Clau d'API d'OpenAI | L'API de Whisper, i resumir i traduir amb OpenAI |
-| Clau d'API d'Anthropic | Resumir i traduir amb Claude |
-| Clau d'API de DeepSeek | Resumir i traduir amb DeepSeek |
-| Clau d'API de Gemini | Resumir i traduir amb Gemini (de Google AI Studio) |
-| Clau d'API de Mistral | Resumir i traduir amb Mistral |
-| Clau d'API de xAI | Resumir i traduir amb Grok |
+| Clau d'API d'OpenAI | L'API de Whisper, i resumir, preguntar i traduir amb OpenAI |
+| Clau d'API d'Anthropic | Resumir, preguntar i traduir amb Claude |
+| Clau d'API de DeepSeek | Resumir, preguntar i traduir amb DeepSeek |
+| Clau d'API de Gemini | Resumir, preguntar i traduir amb Gemini (de Google AI Studio) |
+| Clau d'API de Mistral | Resumir, preguntar i traduir amb Mistral |
+| Clau d'API de xAI | Resumir, preguntar i traduir amb Grok |
 | Clau d'API de DeepL | Traduir amb DeepL (les claus del pla gratuït també funcionen) |
 | Clau d'API de Google | Google Speech-to-Text més enllà del nivell gratuït, i Google Translate (Cloud Translation API) |
 | Token de Hugging Face | Identificar els parlants amb WhisperX |
@@ -49,15 +50,21 @@ Cada proveïdor cobra per l'ús de la seva API, del qual Audiotext no es fa resp
 
 ## WhisperX
 
-**Tipus de càlcul**, **Mida del lot** i **Utilitza la CPU**. Consulta les [opcions avançades de WhisperX](/ca/reference/engines/#opcions-avançades).
+**Tipus de càlcul**, **Mida del lot** i **Utilitza la CPU**. Consulta les [opcions avançades de WhisperX](/ca/reference/engines/#opcions-avançades). En un Mac amb Apple Silicon, WhisperX transcriu a la seva GPU tret que **Utilitza la CPU** estigui activat. Consulta [En un Mac](/ca/reference/engines/#en-un-mac).
 
 ## Subtítols
 
-Les opcions dels fitxers `.srt` i `.vtt` que es desen en transcriure una carpeta amb WhisperX:
+Com es divideixen els subtítols: els que es mostren damunt del vídeo i al mode **Subtítols**, els fitxers de subtítols exportats i els [vídeos amb subtítols](/ca/guides/transcript/#exporta-el-vídeo-amb-els-seus-subtítols). Cada opció té un valor per als vídeos horitzontals i un altre per als verticals (més alts que amples, p. ex. per a mòbils), que són més estrets:
 
-- **Ressalta les paraules**: subratlla cada paraula mentre es diu. Desactivat per defecte.
-- **Màx. de línies**: el nombre màxim de línies de cada subtítol. `2` per defecte.
-- **Màx. de caràcters per línia**: el nombre màxim de caràcters d'una línia abans de partir-la. `42` per defecte.
+| Opció | Horitzontal | Vertical |
+| --- | :---: | :---: |
+| **Màx. de línies per subtítol** | `2` | `2` |
+| **Màx. de caràcters per línia** | `42` | `24` |
+| **Xinès, japonès i coreà**: els caràcters per línia en aquestes llengües, els caràcters de les quals són aproximadament el doble d'amples que els llatins | `16` | `10` |
+
+Les línies d'un subtítol s'equilibren, i les llengües que s'escriuen sense espais es parteixen entre caràcters.
+
+**Ressalta les paraules** subratlla cada paraula mentre es diu als fitxers `.srt` i `.vtt`. Desactivat per defecte.
 
 ## API de Whisper
 

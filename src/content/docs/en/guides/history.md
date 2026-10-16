@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Every transcription is kept in the history, on the left of the window, together with its summary, its translation and the corrections you made. The button on the left of the top bar shows or hides it.
+Every transcription is kept in the history, on the left of the window, together with its summary, its questions, its translations and the corrections you made. The button on the left of the top bar shows or hides it.
 
 ## Find a transcription
 
@@ -32,7 +32,7 @@ Groups gather related transcriptions, such as the ones of a project or a course.
 
 ## Delete a transcription
 
-Deleting a transcription removes it, its summary and its translation from the history. The transcriptions of the files of a folder are deleted too. Your audio, video and saved files are **not** deleted.
+Deleting a transcription removes it, its summary, its questions and its translations from the history. The transcriptions of the files of a folder are deleted too. Your audio, video and saved files are **not** deleted.
 
 ## Failed and interrupted transcriptions
 

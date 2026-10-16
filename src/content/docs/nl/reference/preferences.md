@@ -19,9 +19,10 @@ De **Voorkeuren** bevatten de instellingen die niet per transcriptie veranderen.
 
 ## AI
 
-De aanbieders van de [samenvattingen en vertalingen](/nl/guides/summary-and-translation/):
+De aanbieders van de [samenvattingen, vragen en vertalingen](/nl/guides/summary-and-translation/):
 
 - **Samenvatting** → **Aanbieder** en **Model**.
+- **Vragen** → **Aanbieder** en **Model**: die de vragen over de transcripties beantwoorden. Totdat je ze wijzigt, zijn het die van de samenvattingen.
 - **Vertaling** → **Aanbieder** en **Model**. DeepL en Google Translate hebben geen modellen om uit te kiezen.
 - **Ollama** → **Server-URL**: het adres van Ollama, standaard `http://localhost:11434`.
 
@@ -29,16 +30,16 @@ Laat het **Model** leeg om het standaardmodel van de aanbieder te gebruiken. De 
 
 ## API-sleutels
 
-De sleutels van elke dienst. Klik op **Instellen…** om er een in te voeren, of op **Wijzigen…** om hem te vervangen (laat hem leeg om hem te verwijderen). Ze worden bewaard in de wachtwoordopslag van je systeem.
+De sleutels van elke dienst. Klik op **API-sleutel instellen…** om er een in te voeren, of op **API-sleutel wijzigen…** om hem te vervangen (laat hem leeg om hem te verwijderen). Ze worden bewaard in de wachtwoordopslag van je systeem.
 
 | Sleutel | Gebruikt voor |
 | --- | --- |
-| OpenAI-API-sleutel | De Whisper-API, en samenvatten en vertalen met OpenAI |
-| Anthropic-API-sleutel | Samenvatten en vertalen met Claude |
-| DeepSeek-API-sleutel | Samenvatten en vertalen met DeepSeek |
-| Gemini-API-sleutel | Samenvatten en vertalen met Gemini (van Google AI Studio) |
-| Mistral-API-sleutel | Samenvatten en vertalen met Mistral |
-| xAI-API-sleutel | Samenvatten en vertalen met Grok |
+| OpenAI-API-sleutel | De Whisper-API, en samenvatten, vragen en vertalen met OpenAI |
+| Anthropic-API-sleutel | Samenvatten, vragen en vertalen met Claude |
+| DeepSeek-API-sleutel | Samenvatten, vragen en vertalen met DeepSeek |
+| Gemini-API-sleutel | Samenvatten, vragen en vertalen met Gemini (van Google AI Studio) |
+| Mistral-API-sleutel | Samenvatten, vragen en vertalen met Mistral |
+| xAI-API-sleutel | Samenvatten, vragen en vertalen met Grok |
 | DeepL-API-sleutel | Vertalen met DeepL (sleutels van het gratis abonnement werken ook) |
 | Google-API-sleutel | Google Speech-to-Text boven het gratis tegoed, en Google Translate (Cloud Translation API) |
 | Hugging Face-token | Sprekers herkennen met WhisperX |
@@ -49,15 +50,21 @@ Elke aanbieder rekent kosten voor het gebruik van zijn API, waarvoor Audiotext n
 
 ## WhisperX
 
-**Rekentype**, **Batchgrootte** en **CPU gebruiken**. Zie [Geavanceerde opties van WhisperX](/nl/reference/engines/#geavanceerde-opties).
+**Rekentype**, **Batchgrootte** en **CPU gebruiken**. Zie [Geavanceerde opties van WhisperX](/nl/reference/engines/#geavanceerde-opties). Op een Mac met Apple Silicon transcribeert WhisperX op de GPU, tenzij **CPU gebruiken** aan staat. Zie [Op een Mac](/nl/reference/engines/#op-een-mac).
 
 ## Ondertitels
 
-De opties van de `.srt`- en `.vtt`-bestanden die worden opgeslagen bij het transcriberen van een map met WhisperX:
+Hoe de ondertitels worden verdeeld: die op de video en in de modus **Ondertitels**, de geëxporteerde ondertitelbestanden en de [video's met ondertitels](/nl/guides/transcript/#de-video-met-ondertitels-exporteren). Elke optie heeft een waarde voor horizontale video's en een voor verticale (hoger dan breed, bijv. voor telefoons), die smaller zijn:
 
-- **Woorden markeren**: onderstreept elk woord terwijl het wordt uitgesproken. Standaard uit.
-- **Max. aantal regels**: het maximale aantal regels per ondertitel. Standaard `2`.
-- **Max. regelbreedte**: het maximale aantal tekens van een regel voordat die wordt afgebroken. Standaard `42`.
+| Optie | Horizontaal | Verticaal |
+| --- | :---: | :---: |
+| **Max. regels per ondertitel** | `2` | `2` |
+| **Max. tekens per regel** | `42` | `24` |
+| **Chinees, Japans en Koreaans**: de tekens per regel in deze talen, waarvan de tekens ongeveer twee keer zo breed zijn als Latijnse | `16` | `10` |
+
+De regels van een ondertitel worden gelijkmatig verdeeld, en talen zonder spaties worden tussen tekens afgebroken.
+
+**Woorden markeren** onderstreept in de `.srt`- en `.vtt`-bestanden elk woord terwijl het wordt uitgesproken. Standaard uit.
 
 ## Whisper API
 

@@ -41,8 +41,9 @@ If another transcription is in progress, the button becomes **Add to queue**, an
 When it finishes, the transcription opens:
 
 - Click a segment to play the audio from there.
-- Switch between **Transcript**, **Plain text** and **Summary**.
-- Use **Translate**, **Copy** and **Export** to translate it, copy it or save it as a file.
+- Switch between **Subtitles**, **Plain text**, **Summary** and **Ask**, to ask questions about it.
+- Use **Translate** to translate it, and the buttons of the header of the transcription to find and replace in it, copy it or save it as a file.
+- Review the underlined words, which the engine is least sure of.
 
 See [The transcript](/en/guides/transcript/) to learn everything you can do with it.
 
@@ -52,8 +53,10 @@ See [The transcript](/en/guides/transcript/) to learn everything you can do with
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Start the transcription, or start and stop recording |
 | `Ctrl+O` / `⌘O` | Choose a file (or a folder, in the folder source) |
-| `Ctrl+S` / `⌘S` | Export the transcription being shown |
-| `Ctrl+F` / `⌘F` | Search the transcription |
+| `Ctrl+S` / `⌘S` | Export the text you're working on: the transcription or its translation |
+| `Ctrl+F` / `⌘F` | Find and replace in the text you're working on (or find in the summary) |
+| `Ctrl+J` / `⌘J` | Go to the next low-confidence word |
+| `Shift+Ctrl+J` / `⇧⌘J` | Go to the previous low-confidence word |
 | `Esc` | Cancel the transcription in progress |
 | `Space` | Play or pause the audio |
 | `←` / `→` | Go back or forward 5 seconds |

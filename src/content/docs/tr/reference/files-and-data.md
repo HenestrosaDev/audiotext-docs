@@ -20,7 +20,7 @@ Ayarlar, geçmiş ve kayıtlar kullanıcı yapılandırma klasörünüzde saklan
 İçeriği:
 
 - `config.ini`: ayarlarınız. Varsayılanları geri yüklemek için silin.
-- `history.json`: özetleri, çevirileri ve düzeltmeleriyle transkripsiyonlarınız.
+- `history.json`: özetleri, soruları, çevirileri ve düzeltmeleriyle transkripsiyonlarınız.
 - `media/`: daha sonra oynatılabilmeleri için mikrofon kayıtları ve URL'lerden indirilen sesler. Transkripsiyonları geçmişten silindiğinde kaldırılırlar.
 
 Başka bir klasör kullanmak için, ör. taşınabilir bir kurulumda, `AUDIOTEXT_CONFIG_DIR` ortam değişkenini ayarlayın.
@@ -47,7 +47,7 @@ Anahtarların adlarını taşıyan ortam değişkenleri, uygulamada ayarlananlar
 
 | Değişken | Hizmet |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (Whisper API, özetler, çeviriler) |
+| `OPENAI_API_KEY` | OpenAI (Whisper API, özetler, sorular, çeviriler) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Anahtarların adlarını taşıyan ortam değişkenleri, uygulamada ayarlananlar
 
 ## Modeller
 
-WhisperX ve konuşmacı belirleme modelleri ilk kullanıldıklarında indirilir ve Hugging Face tarafından `~/.cache/huggingface` içinde önbelleğe alınır (Windows'ta `%USERPROFILE%\.cache\huggingface`). İngilizce, Fransızca, Almanca, İspanyolca ve İtalyanca kelimeleri hizalayan modeller ise PyTorch tarafından `~/.cache/torch` içinde önbelleğe alınır (Windows'ta `%USERPROFILE%\.cache\torch`). Kapladıkları alanı boşaltmak için bu klasörleri silin. Başka uygulamalar da modellerini orada tutabilir ve Audiotext gibi gerektiğinde yeniden indirir.
+WhisperX (ve Mac'lerde MLX Whisper) ile konuşmacı belirleme modelleri ilk kullanıldıklarında indirilir ve Hugging Face tarafından `~/.cache/huggingface` içinde önbelleğe alınır (Windows'ta `%USERPROFILE%\.cache\huggingface`). İngilizce, Fransızca, Almanca, İspanyolca ve İtalyanca kelimeleri hizalayan modeller ise PyTorch tarafından `~/.cache/torch` içinde önbelleğe alınır (Windows'ta `%USERPROFILE%\.cache\torch`). Kapladıkları alanı boşaltmak için bu klasörleri silin. Başka uygulamalar da modellerini orada tutabilir ve Audiotext gibi gerektiğinde yeniden indirir.

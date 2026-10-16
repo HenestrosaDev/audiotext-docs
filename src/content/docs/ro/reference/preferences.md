@@ -19,9 +19,10 @@ sidebar:
 
 ## IA
 
-Furnizorii [rezumatelor și traducerilor](/ro/guides/summary-and-translation/):
+Furnizorii [rezumatelor, întrebărilor și traducerilor](/ro/guides/summary-and-translation/):
 
 - **Rezumat** → **Furnizor** și **Model**.
+- **Întreabă** → **Furnizor** și **Model**: cei care răspund la întrebările despre transcrieri. Până îi schimbați, sunt cei ai rezumatelor.
 - **Traducere** → **Furnizor** și **Model**. DeepL și Google Translate nu au modele de ales.
 - **Ollama** → **URL-ul serverului**: adresa Ollama, implicit `http://localhost:11434`.
 
@@ -29,16 +30,16 @@ Lăsați **Modelul** gol pentru a folosi modelul implicit al furnizorului. Buton
 
 ## Chei API
 
-Cheile fiecărui serviciu. Faceți clic pe **Setează…** pentru a introduce o cheie sau pe **Schimbă…** pentru a o înlocui (lăsați câmpul gol pentru a o elimina). Sunt păstrate în depozitul de credențiale al sistemului.
+Cheile fiecărui serviciu. Faceți clic pe **Setează cheia API…** pentru a introduce o cheie sau pe **Schimbă cheia API…** pentru a o înlocui (lăsați câmpul gol pentru a o elimina). Sunt păstrate în depozitul de credențiale al sistemului.
 
 | Cheie | Folosită pentru |
 | --- | --- |
-| Cheie API OpenAI | API-ul Whisper și rezumarea și traducerea cu OpenAI |
-| Cheie API Anthropic | Rezumarea și traducerea cu Claude |
-| Cheie API DeepSeek | Rezumarea și traducerea cu DeepSeek |
-| Cheie API Gemini | Rezumarea și traducerea cu Gemini (din Google AI Studio) |
-| Cheie API Mistral | Rezumarea și traducerea cu Mistral |
-| Cheie API xAI | Rezumarea și traducerea cu Grok |
+| Cheie API OpenAI | API-ul Whisper și rezumarea, întrebările și traducerea cu OpenAI |
+| Cheie API Anthropic | Rezumarea, întrebările și traducerea cu Claude |
+| Cheie API DeepSeek | Rezumarea, întrebările și traducerea cu DeepSeek |
+| Cheie API Gemini | Rezumarea, întrebările și traducerea cu Gemini (din Google AI Studio) |
+| Cheie API Mistral | Rezumarea, întrebările și traducerea cu Mistral |
+| Cheie API xAI | Rezumarea, întrebările și traducerea cu Grok |
 | Cheie API DeepL | Traducerea cu DeepL (funcționează și cheile planului gratuit) |
 | Cheie API Google | Google Speech-to-Text peste nivelul gratuit și Google Translate (Cloud Translation API) |
 | Token Hugging Face | Identificarea vorbitorilor cu WhisperX |
@@ -49,15 +50,21 @@ Fiecare furnizor taxează utilizarea API-ului său, pentru care Audiotext nu est
 
 ## WhisperX
 
-**Tip de calcul**, **Dimensiunea lotului** și **Folosește CPU**. Consultați [opțiunile avansate WhisperX](/ro/reference/engines/#opțiuni-avansate).
+**Tip de calcul**, **Dimensiunea lotului** și **Folosește CPU**. Consultați [opțiunile avansate WhisperX](/ro/reference/engines/#opțiuni-avansate). Pe un Mac cu Apple Silicon, WhisperX transcrie pe placa lui video, dacă **Folosește CPU** nu este activat. Consultați [Pe un Mac](/ro/reference/engines/#pe-un-mac).
 
 ## Subtitrări
 
-Opțiunile fișierelor `.srt` și `.vtt` salvate la transcrierea unui dosar cu WhisperX:
+Cum se împart subtitrările: cele afișate pe videoclip și în modul **Subtitrări**, fișierele de subtitrări exportate și [videoclipurile cu subtitrări](/ro/guides/transcript/#exportați-videoclipul-cu-subtitrările). Fiecare opțiune are o valoare pentru videoclipurile orizontale și alta pentru cele verticale (mai înalte decât late, de ex. pentru telefoane), care sunt mai înguste:
 
-- **Evidențiază cuvintele**: subliniază fiecare cuvânt în momentul în care este rostit. Dezactivat implicit.
-- **Nr. max. de rânduri**: numărul maxim de rânduri ale fiecărei subtitrări. Implicit `2`.
-- **Lățime max. a rândului**: numărul maxim de caractere ale unui rând înainte de a fi rupt. Implicit `42`.
+| Opțiune | Orizontal | Vertical |
+| --- | :---: | :---: |
+| **Nr. max. de rânduri pe subtitrare** | `2` | `2` |
+| **Nr. max. de caractere pe rând** | `42` | `24` |
+| **Chineză, japoneză și coreeană**: caracterele pe rând în aceste limbi, ale căror caractere sunt cam de două ori mai late decât cele latine | `16` | `10` |
+
+Rândurile unei subtitrări sunt echilibrate, iar limbile scrise fără spații sunt rupte între caractere.
+
+**Evidențiază cuvintele** subliniază în fișierele `.srt` și `.vtt` fiecare cuvânt în momentul în care este rostit. Dezactivat implicit.
 
 ## Whisper API
 

@@ -18,10 +18,11 @@ Audiotext trascrive con uno di tre motori, scelto nella scheda **Motore** delle 
 | Identifica i parlanti | ✓ (token di Hugging Face) | `gpt-4o-transcribe-diarize` | ✗ |
 | Tempi per parola | ✓ | `whisper-1` | ✗ |
 | Testo dal vivo | ✓ | ✗ | ✗ |
+| [Parole a bassa affidabilità](/it/guides/transcript/#rivedi-le-parole-a-bassa-affidabilità) | ✓ (tempi per parola) | `whisper-1` (segmenti) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) è un'implementazione veloce di Whisper di OpenAI che funziona sul tuo computer, quindi il tuo audio non lo lascia mai. Funziona sulla CPU o, molto più velocemente, su una GPU NVIDIA con CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) è un'implementazione veloce di Whisper di OpenAI che funziona sul tuo computer, quindi il tuo audio non lo lascia mai. Funziona sulla CPU o, molto più velocemente, su una GPU NVIDIA con CUDA o sulla GPU di un Mac con Apple Silicon.
 
 ### Modello
 
@@ -47,13 +48,22 @@ I modelli più grandi sono più precisi, ma più lenti e usano più memoria. Il 
 Per provare Audiotext rapidamente, scegli `tiny` o `small`. Per la migliore qualità, usa `large-v2` o `large-v3-turbo` su una GPU.
 :::
 
+### Su un Mac
+
+Sui Mac con Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) trascrive sulla GPU, molto più velocemente che sulla CPU. Poi WhisperX allinea le parole e identifica i parlanti sulla CPU, come sempre, quindi le trascrizioni mantengono i tempi per parola, le valutazioni e i parlanti.
+
+- La versione MLX del modello viene scaricata al primo utilizzo.
+- `distil-small.en`, `distil-large-v2` e `distil-large-v3.5` non hanno una versione MLX, quindi funzionano sulla CPU.
+- Il [testo dal vivo](/it/guides/sources/#testo-dal-vivo) funziona sempre sulla CPU.
+- Per trascrivere sulla CPU, attiva **Usa la CPU** in **Preferenze** → **WhisperX**.
+
 ### Opzioni avanzate
 
 Si trovano in **Preferenze** → **WhisperX**. Cambiale solo se hai problemi o sai cosa stai facendo: una GPU senza memoria può bloccare il sistema.
 
-- **Tipo di calcolo**: la precisione dei numeri del modello. `float16` è più veloce sulle GPU (il predefinito con CUDA). `int8` usa meno memoria ed è il predefinito sulla CPU, perché molte CPU non supportano `float16` in modo efficiente. `float32` è il più preciso, per GPU con più di 8 GB di VRAM.
+- **Tipo di calcolo**: la precisione dei numeri del modello. `float16` è più veloce sulle GPU NVIDIA (il predefinito con CUDA). `int8` usa meno memoria ed è il predefinito sulla CPU, perché molte CPU non supportano `float16` in modo efficiente. `float32` è il più preciso, per GPU con più di 8 GB di VRAM.
 - **Dimensione del batch**: quante parti dell'audio vengono elaborate insieme (`8` per impostazione predefinita). Non cambia la qualità, solo la velocità. Abbassala se finisci la memoria; si consiglia fino a `16`.
-- **Usa la CPU**: esegue WhisperX sulla CPU. È sempre attiva se non è stata trovata una GPU CUDA.
+- **Usa la CPU**: esegue WhisperX sulla CPU. È sempre attiva se non è stata trovata una GPU (una GPU NVIDIA con CUDA, o la GPU di un Mac con Apple Silicon).
 
 ## API di Whisper
 
@@ -61,7 +71,7 @@ Usa la [API di trascrizione vocale di OpenAI](https://platform.openai.com/docs/g
 
 | Modello | Marcatori temporali | Parlanti | Note |
 | --- | :---: | :---: | --- |
-| `whisper-1` (predefinito) | ✓ | ✗ | Si può riprodurre segmento per segmento e sottotitolare. Traduce in inglese. |
+| `whisper-1` (predefinito) | ✓ | ✗ | Si può riprodurre segmento per segmento e sottotitolare. Traduce in inglese. Valuta ogni segmento, per rivedere quelli a bassa affidabilità. |
 | `gpt-transcribe` | ✗ | ✗ | Più preciso, ma senza marcatori temporali. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifica i parlanti. Non usa le parole chiave né la descrizione. |
 

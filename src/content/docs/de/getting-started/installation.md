@@ -25,7 +25,7 @@ Führen Sie das Installationsprogramm aus und folgen Sie den Schritten. Es brauc
 
 ### macOS
 
-Öffnen Sie die `.dmg`-Datei und ziehen Sie **Audiotext** in den Ordner **Programme**. Die App ist nicht von Apple notarisiert, daher blockiert macOS sie beim ersten Öffnen: Öffnen Sie **Systemeinstellungen** → **Datenschutz & Sicherheit** und klicken Sie neben der Meldung zu Audiotext auf **Trotzdem öffnen**. Unter macOS läuft WhisperX auf der CPU, da CUDA dort nicht verfügbar ist. Intel-Macs werden nicht unterstützt, da PyTorch sie nicht mehr unterstützt.
+Öffnen Sie die `.dmg`-Datei und ziehen Sie **Audiotext** in den Ordner **Programme**. Die App ist nicht von Apple notarisiert, daher blockiert macOS sie beim ersten Öffnen: Öffnen Sie **Systemeinstellungen** → **Datenschutz & Sicherheit** und klicken Sie neben der Meldung zu Audiotext auf **Trotzdem öffnen**. Auf Macs transkribiert WhisperX mit [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) auf der GPU von Apple Silicon, viel schneller als auf der CPU und ohne Zusatzpaket. Intel-Macs werden nicht unterstützt, da PyTorch sie nicht mehr unterstützt.
 
 ### Linux
 
@@ -49,7 +49,7 @@ Wenn Sie zum ersten Mal mit **WhisperX** (der Standard-Engine) transkribieren, w
 
 ## Voraussetzungen
 
-- **WhisperX** läuft auf Ihrem Computer. Es funktioniert auf jeder CPU, ist aber auf einer NVIDIA-GPU mit CUDA viel schneller. Unter [Engines](/de/reference/engines/) finden Sie ein Modell, das zu Ihrer Hardware passt.
+- **WhisperX** läuft auf Ihrem Computer. Es funktioniert auf jeder CPU, ist aber auf einer NVIDIA-GPU mit CUDA oder auf der GPU eines Macs mit Apple Silicon viel schneller. Unter [Engines](/de/reference/engines/) finden Sie ein Modell, das zu Ihrer Hardware passt.
 - Die **Whisper-API** und die **Google-API** laufen auf entfernten Servern. Sie brauchen also eine Internetverbindung, aber keine leistungsstarke Hardware.
 - Um vom Mikrofon zu transkribieren, muss Ihr System ein Eingabegerät erkennen.
 - Unter Linux brauchen Aufnahme und Wiedergabe [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` unter Ubuntu oder Debian).

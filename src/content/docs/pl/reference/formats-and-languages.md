@@ -15,18 +15,20 @@ Audiotext wyodrębnia dźwięk z plików wideo za pomocą FFmpeg, więc transkry
 
 ## Formaty wyjściowe
 
-| Format | Eksport | Folder (WhisperX) | Folder (API Whisper) |
-| --- | :---: | :---: | :---: |
-| Zwykły tekst (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Dokument Word (`.docx`) | ✓ | ✗ | ✗ |
-| Napisy (`.srt`) | ✓ | ✓ | `srt` |
-| Napisy internetowe (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabela (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Etykiety Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Format | Eksport | Folder (WhisperX) | Folder (API Whisper) | Wiersz poleceń |
+| --- | :---: | :---: | :---: | :---: |
+| Zwykły tekst (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Dokument Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Napisy (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Napisy internetowe (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Napisy ze stylem (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabela (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Etykiety Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Wideo z napisami (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Zobacz [Eksport](/pl/guides/transcript/#kopiowanie-i-eksport) i [kartę Wynik](/pl/guides/transcription-settings/#folder-i-wynik).
+Podsumowanie eksportuje się osobno do `.txt`, `.md` i `.docx`. Zobacz [Eksport](/pl/guides/transcript/#kopiowanie-i-eksport), [kartę Wynik](/pl/guides/transcription-settings/#folder-i-wynik) i [wiersz poleceń](/pl/reference/cli/#opcje).
 
 ## Języki nagrań
 

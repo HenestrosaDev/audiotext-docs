@@ -41,8 +41,9 @@ Si une autre transcription est en cours, le bouton devient **Ajouter à la file 
 Une fois terminée, la transcription s’ouvre :
 
 - Cliquez sur un segment pour lire l’audio à partir de là.
-- Passez de **Transcription** à **Texte brut** ou **Résumé**.
-- Utilisez **Traduire**, **Copier** et **Exporter** pour la traduire, la copier ou l’enregistrer dans un fichier.
+- Passez de **Sous-titres** à **Texte brut**, **Résumé** ou **Demander**, pour poser des questions à son sujet.
+- Utilisez **Traduire** pour la traduire, et les boutons de l’en-tête de la transcription pour y rechercher et remplacer, la copier ou l’enregistrer dans un fichier.
+- Révisez les mots soulignés, dont le moteur est le moins sûr.
 
 Consultez [La transcription](/fr/guides/transcript/) pour découvrir tout ce que vous pouvez en faire.
 
@@ -52,8 +53,10 @@ Consultez [La transcription](/fr/guides/transcript/) pour découvrir tout ce que
 | --- | --- |
 | `Ctrl+Entrée` / `⌘↩` | Lancer la transcription, ou démarrer et arrêter l’enregistrement |
 | `Ctrl+O` / `⌘O` | Choisir un fichier (ou un dossier, dans la source Dossier) |
-| `Ctrl+S` / `⌘S` | Exporter la transcription affichée |
-| `Ctrl+F` / `⌘F` | Rechercher dans la transcription |
+| `Ctrl+S` / `⌘S` | Exporter le texte sur lequel vous travaillez : la transcription ou sa traduction |
+| `Ctrl+F` / `⌘F` | Rechercher et remplacer dans le texte sur lequel vous travaillez (ou rechercher dans le résumé) |
+| `Ctrl+J` / `⌘J` | Aller au mot peu fiable suivant |
+| `Maj+Ctrl+J` / `⇧⌘J` | Aller au mot peu fiable précédent |
 | `Échap` | Annuler la transcription en cours |
 | `Espace` | Lire ou mettre en pause l’audio |
 | `←` / `→` | Reculer ou avancer de 5 secondes |

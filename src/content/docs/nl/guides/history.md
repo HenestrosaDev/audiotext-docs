@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Elke transcriptie wordt bewaard in de geschiedenis, links in het venster, samen met de samenvatting, de vertaling en de correcties die je hebt gemaakt. De knop links in de bovenbalk toont of verbergt hem.
+Elke transcriptie wordt bewaard in de geschiedenis, links in het venster, samen met de samenvatting, de vragen, de vertalingen en de correcties die je hebt gemaakt. De knop links in de bovenbalk toont of verbergt hem.
 
 ## Een transcriptie vinden
 
@@ -32,7 +32,7 @@ Groepen bundelen samenhangende transcripties, zoals die van een project of een c
 
 ## Een transcriptie verwijderen
 
-Als je een transcriptie verwijdert, worden hij, zijn samenvatting en zijn vertaling uit de geschiedenis gehaald. De transcripties van de bestanden van een map worden ook verwijderd. Je audio-, video- en opgeslagen bestanden worden **niet** verwijderd.
+Als je een transcriptie verwijdert, worden hij, zijn samenvatting, zijn vragen en zijn vertalingen uit de geschiedenis gehaald. De transcripties van de bestanden van een map worden ook verwijderd. Je audio-, video- en opgeslagen bestanden worden **niet** verwijderd.
 
 ## Mislukte en onderbroken transcripties
 

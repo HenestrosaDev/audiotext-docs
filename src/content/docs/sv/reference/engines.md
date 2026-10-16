@@ -18,10 +18,11 @@ Audiotext transkriberar med en av tre motorer, som du väljer på kortet **Motor
 | Identifierar talare | ✓ (Hugging Face-token) | `gpt-4o-transcribe-diarize` | ✗ |
 | Tider per ord | ✓ | `whisper-1` | ✗ |
 | Livetext | ✓ | ✗ | ✗ |
+| [Ord med låg säkerhet](/sv/guides/transcript/#granska-ord-med-låg-säkerhet) | ✓ (tider per ord) | `whisper-1` (segment) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) är en snabb implementering av OpenAI:s Whisper som körs på din dator, så ditt ljud lämnar den aldrig. Den körs på processorn eller, mycket snabbare, på ett NVIDIA-grafikkort med CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) är en snabb implementering av OpenAI:s Whisper som körs på din dator, så ditt ljud lämnar den aldrig. Den körs på processorn eller, mycket snabbare, på ett NVIDIA-grafikkort med CUDA eller på grafikprocessorn i en Mac med Apple Silicon.
 
 ### Modell
 
@@ -47,13 +48,22 @@ Större modeller är mer exakta, men långsammare och använder mer minne. Model
 För att snabbt prova Audiotext väljer du `tiny` eller `small`. För bästa kvalitet använder du `large-v2` eller `large-v3-turbo` på ett grafikkort.
 :::
 
+### På en Mac
+
+På Mac-datorer med Apple Silicon transkriberar [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) på grafikprocessorn, mycket snabbare än på processorn. Sedan justerar WhisperX orden och identifierar talarna på processorn, som vanligt, så transkriberingarna behåller sina tider per ord, poäng och talare.
+
+- MLX-versionen av modellen laddas ned första gången den används.
+- `distil-small.en`, `distil-large-v2` och `distil-large-v3.5` har ingen MLX-version, så de körs på processorn.
+- [Livetexten](/sv/guides/sources/#livetext) körs alltid på processorn.
+- För att transkribera på processorn slår du på **Använd CPU** under **Inställningar** → **WhisperX**.
+
 ### Avancerade alternativ
 
 De finns under **Inställningar** → **WhisperX**. Ändra dem bara om du har problem eller vet vad du gör: ett grafikkort som får slut på minne kan låsa systemet.
 
-- **Beräkningstyp**: precisionen i modellens tal. `float16` är snabbare på grafikkort (standard med CUDA). `int8` använder mindre minne och är standard på processorn, eftersom många processorer inte hanterar `float16` effektivt. `float32` är mest exakt, för grafikkort med mer än 8 GB VRAM.
+- **Beräkningstyp**: precisionen i modellens tal. `float16` är snabbare på NVIDIA-grafikkort (standard med CUDA). `int8` använder mindre minne och är standard på processorn, eftersom många processorer inte hanterar `float16` effektivt. `float32` är mest exakt, för grafikkort med mer än 8 GB VRAM.
 - **Batchstorlek**: hur många delar av ljudet som bearbetas samtidigt (`8` som standard). Den påverkar inte kvaliteten, bara hastigheten. Sänk den om minnet tar slut; högst `16` rekommenderas.
-- **Använd CPU**: kör WhisperX på processorn. Alltid aktiverat om inget CUDA-grafikkort hittades.
+- **Använd CPU**: kör WhisperX på processorn. Alltid aktiverat om ingen grafikprocessor hittades (ett NVIDIA-grafikkort med CUDA, eller grafikprocessorn i en Mac med Apple Silicon).
 
 ## Whisper-API
 
@@ -61,7 +71,7 @@ Använder [OpenAI:s API för tal till text](https://platform.openai.com/docs/gui
 
 | Modell | Tidsstämplar | Talare | Kommentarer |
 | --- | :---: | :---: | --- |
-| `whisper-1` (standard) | ✓ | ✗ | Kan spelas upp segment för segment och textas. Översätter till engelska. |
+| `whisper-1` (standard) | ✓ | ✗ | Kan spelas upp segment för segment och textas. Översätter till engelska. Poängsätter varje segment, för att granska de med låg säkerhet. |
 | `gpt-transcribe` | ✗ | ✗ | Mer exakt, men utan tidsstämplar. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifierar talarna. Använder inte nyckelorden eller beskrivningen. |
 

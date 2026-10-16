@@ -15,18 +15,20 @@ Audiotext extreu l'àudio dels fitxers de vídeo amb FFmpeg, així que transcriu
 
 ## Formats de sortida
 
-| Format | Exporta | Carpeta (WhisperX) | Carpeta (API de Whisper) |
-| --- | :---: | :---: | :---: |
-| Text pla (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Document de Word (`.docx`) | ✓ | ✗ | ✗ |
-| Subtítols (`.srt`) | ✓ | ✓ | `srt` |
-| Subtítols web (`.vtt`) | ✓ | ✓ | `vtt` |
-| Taula (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Etiquetes d'Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Format | Exporta | Carpeta (WhisperX) | Carpeta (API de Whisper) | Línia d'ordres |
+| --- | :---: | :---: | :---: | :---: |
+| Text pla (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Document de Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Subtítols (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Subtítols web (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Subtítols amb estil (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Taula (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Etiquetes d'Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Vídeo amb subtítols (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Consulta [Exporta](/ca/guides/transcript/#copia-i-exporta) i la [targeta Sortida](/ca/guides/transcription-settings/#carpeta-i-sortida).
+El resum s'exporta per separat a `.txt`, `.md` i `.docx`. Consulta [Exporta](/ca/guides/transcript/#copia-i-exporta), la [targeta Sortida](/ca/guides/transcription-settings/#carpeta-i-sortida) i la [línia d'ordres](/ca/reference/cli/#opcions).
 
 ## Idiomes de l'àudio
 
