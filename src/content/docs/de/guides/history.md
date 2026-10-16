@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Jede Transkription wird im Verlauf links im Fenster gespeichert, zusammen mit ihrer Zusammenfassung, ihrer Übersetzung und Ihren Korrekturen. Die Schaltfläche links in der oberen Leiste blendet ihn ein oder aus.
+Jede Transkription wird im Verlauf links im Fenster gespeichert, zusammen mit ihrer Zusammenfassung, ihren Fragen, ihren Übersetzungen und Ihren Korrekturen. Die Schaltfläche links in der oberen Leiste blendet ihn ein oder aus.
 
 ## Eine Transkription finden
 
@@ -32,7 +32,7 @@ Gruppen fassen zusammengehörige Transkriptionen zusammen, etwa die eines Projek
 
 ## Eine Transkription löschen
 
-Beim Löschen einer Transkription werden sie, ihre Zusammenfassung und ihre Übersetzung aus dem Verlauf entfernt. Die Transkriptionen der Dateien eines Ordners werden ebenfalls gelöscht. Ihre Audio-, Video- und gespeicherten Dateien werden **nicht** gelöscht.
+Beim Löschen einer Transkription werden sie, ihre Zusammenfassung, ihre Fragen und ihre Übersetzungen aus dem Verlauf entfernt. Die Transkriptionen der Dateien eines Ordners werden ebenfalls gelöscht. Ihre Audio-, Video- und gespeicherten Dateien werden **nicht** gelöscht.
 
 ## Fehlgeschlagene und unterbrochene Transkriptionen
 

@@ -15,13 +15,14 @@ sidebar:
 - **Format tanggal**: cara tanggal transkripsi ditampilkan, dalam bahasa antarmuka: pendek (`04/10/26`), sedang (`4 Okt 2026`, bawaan), panjang (`4 Oktober 2026`), atau ISO (`2026-10-04`). Menu menampilkan setiap format dengan contohnya.
 - **Format waktu**: **Otomatis** (jam bahasa antarmuka), 12 jam (`1.30 PM`), atau 24 jam (`13.30`).
 - **Notifikasi**: menampilkan notifikasi sistem saat transkripsi siap (untuk folder, saat semua filenya siap, dan untuk folder yang dipantau, setiap kali file baru siap). Aktif secara default. Di macOS, notifikasi berasal dari **Script Editor**, dan di Windows dari **Windows PowerShell**, sehingga diizinkan atau dibisukan untuk aplikasi tersebut di pengaturan sistem. Di Linux, notifikasi memerlukan `notify-send` (paket `libnotify-bin` atau `libnotify`).
-- **Pembaruan**: memeriksa versi baru saat aplikasi dibuka dan, jika ada, menampilkan tombol **Versi … tersedia** di bilah atas yang membuka halaman unduhannya. Versi pra-rilis tidak ditawarkan. Aktif secara default.
+- **Periksa pembaruan secara otomatis**: memeriksa versi baru saat aplikasi dibuka dan, jika ada, menampilkan tombol **Versi … tersedia** di bilah atas yang membuka halaman unduhannya. Versi pra-rilis tidak ditawarkan. Aktif secara default.
 
-## AI
+## Penyedia
 
-Penyedia [ringkasan dan terjemahan](/id/guides/summary-and-translation/):
+Penyedia [ringkasan, pertanyaan, dan terjemahan](/id/guides/summary-and-translation/):
 
 - **Ringkasan** → **Penyedia** dan **Model**.
+- **Tanya** → **Penyedia** dan **Model**: yang menjawab pertanyaan tentang transkripsi. Sampai Anda mengubahnya, keduanya sama dengan milik ringkasan.
 - **Terjemahan** → **Penyedia** dan **Model**. DeepL dan Google Translate tidak memiliki model untuk dipilih.
 - **Ollama** → **URL server**: alamat Ollama, `http://localhost:11434` secara bawaan.
 
@@ -29,39 +30,49 @@ Biarkan **Model** kosong untuk menggunakan model bawaan penyedia. Tombol di samp
 
 ## Kunci API
 
-Kunci untuk setiap layanan. Klik **Atur…** untuk memasukkan kunci, atau **Ubah…** untuk menggantinya (biarkan kosong untuk menghapusnya). Kunci disimpan di penyimpanan kredensial sistem Anda.
+Kunci untuk setiap layanan. Klik **Atur kunci API…** untuk memasukkan kunci, atau **Ubah kunci API…** untuk menggantinya (biarkan kosong untuk menghapusnya). Kunci disimpan di penyimpanan kredensial sistem Anda. Kunci-kunci ini dikelompokkan menurut kegunaannya, dan yang sudah diatur menampilkan tanda centang.
 
-| Kunci | Digunakan untuk |
-| --- | --- |
-| Kunci API OpenAI | Whisper API, serta meringkas dan menerjemahkan dengan OpenAI |
-| Kunci API Anthropic | Meringkas dan menerjemahkan dengan Claude |
-| Kunci API DeepSeek | Meringkas dan menerjemahkan dengan DeepSeek |
-| Kunci API Gemini | Meringkas dan menerjemahkan dengan Gemini (dari Google AI Studio) |
-| Kunci API Mistral | Meringkas dan menerjemahkan dengan Mistral |
-| Kunci API xAI | Meringkas dan menerjemahkan dengan Grok |
-| Kunci API DeepL | Menerjemahkan dengan DeepL (kunci paket gratis juga berfungsi) |
-| Kunci Google API | Google Speech-to-Text di luar tingkat gratis, dan Google Translate (Cloud Translation API) |
-| Token Hugging Face | Mengidentifikasi pembicara dengan WhisperX |
+| Grup | Kunci | Digunakan untuk |
+| --- | --- | --- |
+| **Penyedia LLM** | Kunci API OpenAI | Whisper API, serta meringkas, bertanya, dan menerjemahkan dengan OpenAI |
+| | Kunci API Anthropic | Meringkas, bertanya, dan menerjemahkan dengan Claude |
+| | Kunci API DeepSeek | Meringkas, bertanya, dan menerjemahkan dengan DeepSeek |
+| | Kunci API Gemini | Meringkas, bertanya, dan menerjemahkan dengan Gemini (dari Google AI Studio) |
+| | Kunci API Mistral | Meringkas, bertanya, dan menerjemahkan dengan Mistral |
+| | Kunci API xAI | Meringkas, bertanya, dan menerjemahkan dengan Grok |
+| **Terjemahan** | Kunci API DeepL | Menerjemahkan dengan DeepL (kunci paket gratis juga berfungsi) |
+| | Kunci Google API | Google Speech-to-Text di luar tingkat gratis, dan Google Translate (Cloud Translation API) |
+| **Transkripsi** | Token Hugging Face | Mengidentifikasi pembicara dengan WhisperX |
 
 :::caution
 Setiap penyedia mengenakan biaya atas penggunaan API-nya, dan Audiotext tidak bertanggung jawab atas hal itu. Jika OpenAI mengembalikan kesalahan `429` dengan kunci baru, lihat [Pemecahan masalah](/id/help/troubleshooting/#whisper-api-mengembalikan-kesalahan-429).
 :::
 
-## WhisperX
+## Transkripsi
 
-**Jenis komputasi**, **Ukuran batch**, dan **Gunakan CPU**. Lihat [opsi lanjutan WhisperX](/id/reference/engines/#opsi-lanjutan).
+Opsi mesin-mesinnya, masing-masing dalam satu bagian.
+
+### WhisperX
+
+**Jenis komputasi**, **Ukuran batch**, dan **Gunakan CPU**. Lihat [opsi lanjutan WhisperX](/id/reference/engines/#opsi-lanjutan). Di Mac dengan Apple Silicon, WhisperX mentranskripsi di GPU-nya kecuali **Gunakan CPU** aktif. Lihat [Di Mac](/id/reference/engines/#di-mac). Di GPU Mac, petunjuk **Jenis komputasi** dan **Ukuran batch** menyebutkan bahwa opsi itu tidak berlaku, dan **Gunakan CPU** menautkan ke **Model yang didukung**.
+
+### Whisper API
+
+**Temperatur** dan **Stempel waktu kata**. Lihat [opsi Whisper API](/id/reference/engines/#opsi).
 
 ## Subtitle
 
-Opsi file `.srt` dan `.vtt` yang disimpan saat mentranskripsi folder dengan WhisperX:
+Cara subtitle dibagi: yang ditampilkan di atas video dan di mode **Subtitle**, file subtitle yang diekspor, dan [video dengan subtitle](/id/guides/transcript/#ekspor-video-beserta-subtitlenya). Setiap opsi memiliki nilai untuk video horizontal dan nilai lain untuk video vertikal (lebih tinggi daripada lebarnya, mis. untuk ponsel), yang lebih sempit:
 
-- **Sorot kata**: menggarisbawahi setiap kata saat diucapkan. Nonaktif secara bawaan.
-- **Maks. jumlah baris**: jumlah baris maksimum setiap subtitle. `2` secara bawaan.
-- **Maks. lebar baris**: jumlah karakter maksimum satu baris sebelum dipotong. `42` secara bawaan.
+| Opsi | Horizontal | Vertikal |
+| --- | :---: | :---: |
+| **Maks. baris per subtitel** | `2` | `2` |
+| **Maks. karakter per baris** | `42` | `24` |
+| **Mandarin, Jepang, dan Korea**: karakter per baris dalam bahasa-bahasa ini, yang karakternya sekitar dua kali lebih lebar daripada karakter Latin | `16` | `10` |
 
-## Whisper API
+Baris-baris dalam satu subtitle diseimbangkan, dan bahasa yang ditulis tanpa spasi dipotong di antara karakter.
 
-**Temperatur** dan **Stempel waktu kata**. Lihat [opsi Whisper API](/id/reference/engines/#opsi).
+**Sorot kata** menggarisbawahi setiap kata saat diucapkan di file `.srt` dan `.vtt`. Nonaktif secara bawaan.
 
 ## Tentang
 

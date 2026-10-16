@@ -1,11 +1,11 @@
 ---
 title: कमांड लाइन इंटरफ़ेस
-description: Audiotext की कमांड लाइन से स्क्रिप्ट के ज़रिए फ़ाइलें, फ़ोल्डर और YouTube वीडियो ट्रांसक्राइब करें।
+description: Audiotext की कमांड लाइन से स्क्रिप्ट के ज़रिए फ़ाइलें, फ़ोल्डर और YouTube वीडियो ट्रांसक्राइब करें, उनका सारांश बनाएँ और अनुवाद करें।
 sidebar:
   order: 3
 ---
 
-जब आप Audiotext को [सोर्स कोड से चलाते हैं](/hi/help/contributing/#प्रोजेक्ट-सेट-करें), तो स्क्रिप्ट से ट्रांसक्राइब करने के लिए इसे कमांड लाइन से भी उपयोग किया जा सकता है। इसमें तीन कमांड हैं:
+Audiotext को कमांड लाइन से भी उपयोग किया जा सकता है, जैसे स्क्रिप्ट से ट्रांसक्राइब करने के लिए। इसमें तीन कमांड हैं:
 
 - `transcribe`: कोई फ़ाइल, किसी फ़ोल्डर की फ़ाइलें या कोई YouTube वीडियो ट्रांसक्राइब करता है।
 - `watch`: किसी फ़ोल्डर में जोड़ी गई फ़ाइलें तब तक ट्रांसक्राइब करता है जब तक `Ctrl+C` से रोका न जाए।
@@ -13,25 +13,40 @@ sidebar:
 
 जो विकल्प नहीं दिए जाते, वे ऐप में सेट मान लेते हैं। ट्रांसक्रिप्शन हमेशा हर ट्रांसक्राइब की गई फ़ाइल के पास, या `--output-dir` से दिए गए फ़ोल्डर में सहेजे जाते हैं (जहाँ ट्रांसक्राइब किए गए फ़ोल्डर के सब-फ़ोल्डर फिर से बनाए जाते हैं)।
 
+## इसे चलाएँ
+
+इंस्टॉल किया गया ऐप अपनी कोई कमांड मिलने पर कमांड लाइन चलाता है:
+
+| सिस्टम | कमांड |
+| --- | --- |
+| Linux | `audiotext` (`install.sh` इसे `~/.local/bin` में इंस्टॉल करता है) |
+| macOS | `/Applications/Audiotext.app/Contents/MacOS/Audiotext` |
+| Windows | `audiotext-cli.exe`, उस फ़ोल्डर में जहाँ Audiotext इंस्टॉल है (डिफ़ॉल्ट रूप से `%LOCALAPPDATA%\Programs\Audiotext`) |
+
+जब आप इसे [सोर्स कोड से चलाते हैं](/hi/help/contributing/#प्रोजेक्ट-सेट-करें), तो इसके बजाय `uv run src/cli.py` चलाएँ।
+
 ## उदाहरण
 
 ```bash
 # एक फ़ाइल ट्रांसक्राइब करें। टेक्स्ट प्रिंट भी होता है, इसलिए उसे रीडायरेक्ट किया जा सकता है
-uv run src/cli.py transcribe interview.mp3 --language es --output-types txt,srt
+audiotext transcribe interview.mp3 --language es --output-types txt,srt
 
 # वक्ताओं की पहचान के साथ किसी फ़ोल्डर की फ़ाइलें ट्रांसक्राइब करें
-uv run src/cli.py transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
+audiotext transcribe recordings/ --diarize --speakers 2 --output-dir transcriptions/
 
 # Whisper API से एक YouTube वीडियो ट्रांसक्राइब करें
-uv run src/cli.py transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
+audiotext transcribe "https://www.youtube.com/watch?v=…" --method whisper-api
 
 # कीवर्ड और संदर्भ के साथ Whisper API से एक मीटिंग ट्रांसक्राइब करें
-uv run src/cli.py transcribe meeting.m4a --method whisper-api \
+audiotext transcribe meeting.m4a --method whisper-api \
     --openai-model gpt-transcribe --keywords "Audiotext, WhisperX" \
     --prompt "अगली रिलीज़ के बारे में एक मीटिंग"
 
+# सबटाइटल और एक Word दस्तावेज़ सहेजें, सारांश बनाएँ और स्पेनिश में अनुवाद करें
+audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to es
+
 # Ctrl+C से रोकने तक किसी फ़ोल्डर में जोड़ी गई फ़ाइलें ट्रांसक्राइब करें
-uv run src/cli.py watch inbox/ --output-types srt
+audiotext watch inbox/ --output-types srt
 ```
 
 ## विकल्प
@@ -40,25 +55,41 @@ uv run src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `-m`, `--method` | ट्रांसक्रिप्शन विधि: `whisperx`, `whisper-api` या `google` |
 | `-l`, `--language` | ISO 639-1 कोड के रूप में ऑडियो की भाषा (जैसे `hi`), या पहचानने के लिए `auto` (Google समर्थित नहीं) |
+| `-t`, `--output-types` | `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` और `ass` में से कॉमा से अलग आउटपुट फ़ाइल प्रकार (जैसे `txt,srt,md`) |
 | `-o`, `--output-dir` | वह फ़ोल्डर जहाँ ट्रांसक्रिप्शन सहेजे जाते हैं (डिफ़ॉल्ट: हर ट्रांसक्राइब की गई फ़ाइल के पास) |
 | `--overwrite` | मौजूदा ट्रांसक्रिप्शन अधिलेखित करें |
 | `-p`, `--prompt` | ऑडियो किस बारे में है, जैसे उसका विषय या परिवेश (Google समर्थित नहीं) |
 | `-k`, `--keywords` | ऑडियो में बोले गए नाम, शब्द या संक्षिप्त रूप, कॉमा से अलग, ताकि वर्तनी सही हो (Google समर्थित नहीं) |
-| `--translate` | ऑडियो का अंग्रेज़ी में अनुवाद करें (Google समर्थित नहीं) |
+| `--translate` | ट्रांसक्राइब करते समय ऑडियो का अंग्रेज़ी में अनुवाद करें (Google समर्थित नहीं)। दूसरी भाषाओं के लिए `--translate-to` देखें |
 | `-q`, `--quiet` | केवल त्रुटियाँ प्रिंट करें |
 | `-v`, `--verbose` | त्रुटियाँ डीबग करने के लिए लॉग प्रिंट करें |
+| `--version` | Audiotext का संस्करण प्रिंट करें |
+
+जो आउटपुट प्रकार ट्रांसक्रिप्शन विधि खुद नहीं सहेजती (जैसे `md` या `docx`), वे ऐप की तरह उसके परिणाम से निर्यात किए जाते हैं। `aud` केवल WhisperX सहेजता है।
+
+**सारांश और अनुवाद विकल्प**
+
+| विकल्प | विवरण |
+| --- | --- |
+| `--summarize` | हर ट्रांसक्रिप्शन का सारांश, उसके मुख्य बिंदुओं और अध्यायों के साथ, एक `.summary.md` फ़ाइल में बनाएँ |
+| `--summary-provider` | सारांश बनाने वाले भाषा मॉडल का प्रदाता: `openai`, `anthropic`, `deepseek`, `gemini`, `mistral`, `grok` या `ollama` |
+| `--summary-model` | सारांश बनाने वाला भाषा मॉडल |
+| `--translate-to` | हर ट्रांसक्रिप्शन का किसी भाषा (ISO 639-1 कोड) में अनुवाद करें, जो उसके आउटपुट फ़ाइल प्रकारों में सहेजा जाता है (जैसे `talk.es.srt`) |
+| `--translation-provider` | अनुवादों का प्रदाता: `--summary-provider` वाले, `deepl` या `google` |
+| `--translation-model` | अनुवाद करने वाला भाषा मॉडल, भाषा मॉडल प्रदाताओं के लिए |
+
+न दिए जाने पर ऐप में सेट प्रदाता और मॉडल उपयोग होते हैं। [प्रदाता](/hi/guides/summary-and-translation/#प्रदाता) देखें।
 
 **WhisperX विकल्प**
 
 | विकल्प | विवरण |
 | --- | --- |
-| `-t`, `--output-types` | कॉमा से अलग आउटपुट फ़ाइल प्रकार (जैसे `txt,srt`) |
 | `--diarize` | वक्ताओं की पहचान करें |
 | `--speakers` | पहचान के समय वक्ताओं की संख्या (पहचानने के लिए `0`) |
 | `--model-size` | मॉडल, जैसे `small` या `large-v2` ([इंजन](/hi/reference/engines/#मॉडल) देखें) |
 | `--compute-type` | `int8`, `float16` या `float32` |
 | `--batch-size` | बैच आकार |
-| `--cpu` | CPU पर चलाएँ |
+| `--cpu` | NVIDIA GPU या Mac के GPU के बजाय CPU पर चलाएँ |
 
 **Whisper API विकल्प**
 
@@ -66,10 +97,12 @@ uv run src/cli.py watch inbox/ --output-types srt
 | --- | --- |
 | `--openai-model` | ट्रांसक्रिप्शन मॉडल: `whisper-1`, `gpt-transcribe` या `gpt-4o-transcribe-diarize` |
 
-सभी विकल्प और उनके मान देखने के लिए `uv run src/cli.py transcribe --help` चलाएँ।
+सभी विकल्प और उनके मान देखने के लिए `audiotext transcribe --help` चलाएँ।
 
 ## आउटपुट और एग्ज़िट कोड
 
-प्रगति स्टैंडर्ड एरर पर प्रिंट होती है (`--quiet` से छिपाएँ), और किसी एक फ़ाइल के ट्रांसक्रिप्शन का टेक्स्ट स्टैंडर्ड आउटपुट पर। कोई ट्रांसक्रिप्शन विफल होने पर कमांड कोड `1` के साथ समाप्त होता है।
+प्रगति स्टैंडर्ड एरर पर प्रिंट होती है (`--quiet` से छिपाएँ), और किसी एक फ़ाइल के ट्रांसक्रिप्शन का टेक्स्ट स्टैंडर्ड आउटपुट पर। कोई ट्रांसक्रिप्शन, सारांश या अनुवाद विफल होने पर कमांड कोड `1` के साथ, और `Ctrl+C` से रोके जाने पर `130` के साथ समाप्त होता है।
 
-API कुंजियाँ वे होती हैं जो ऐप में सेट हैं, या एनवायरनमेंट वेरिएबल `OPENAI_API_KEY`, `GOOGLE_API_KEY` और `HF_TOKEN` (वक्ताओं की पहचान के लिए)।
+अगर `--summarize` या `--translate-to` के प्रदाता की API कुंजी सेट नहीं है, तो कमांड ट्रांसक्राइब करने से पहले रुक जाता है। विफल सारांश या अनुवाद की सूचना ट्रांसक्रिप्शन खोए बिना दी जाती है, जो फिर भी सहेजा जाता है।
+
+API कुंजियाँ वे होती हैं जो ऐप में सेट हैं, या उनके [एनवायरनमेंट वेरिएबल](/hi/reference/files-and-data/#एनवायरनमेंट-वेरिएबल), जैसे `OPENAI_API_KEY`, `GOOGLE_API_KEY` और `HF_TOKEN` (वक्ताओं की पहचान के लिए)।

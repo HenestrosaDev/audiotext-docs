@@ -18,10 +18,11 @@ Audiotext transcribe cun de tres motores, que se escolle na tarxeta **Motor** da
 | Identifica falantes | ✓ (token de Hugging Face) | `gpt-4o-transcribe-diarize` | ✗ |
 | Tempos por palabra | ✓ | `whisper-1` | ✗ |
 | Texto en directo | ✓ | ✗ | ✗ |
+| [Palabras de baixa confianza](/gl/guides/transcript/#revisa-as-palabras-de-baixa-confianza) | ✓ (tempos por palabra) | `whisper-1` (segmentos) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) é unha implementación rápida de Whisper de OpenAI que se executa no teu ordenador, así que o teu audio nunca sae del. Funciona na CPU ou, moito máis rápido, nunha GPU NVIDIA con CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) é unha implementación rápida de Whisper de OpenAI que se executa no teu ordenador, así que o teu audio nunca sae del. Funciona na CPU ou, moito máis rápido, nunha GPU NVIDIA con CUDA ou na GPU dun Mac con Apple Silicon.
 
 ### Modelo
 
@@ -47,13 +48,23 @@ Os modelos máis grandes son máis precisos, pero máis lentos e usan máis memo
 Para probar Audiotext rapidamente, escolle `tiny` ou `small`. Para obter a mellor calidade, usa `large-v2` ou `large-v3-turbo` nunha GPU.
 :::
 
+### Nun Mac
+
+Nos Mac con Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) transcribe na GPU, moito máis rápido ca na CPU. Despois, WhisperX aliña as palabras e identifica os falantes na CPU, como sempre, así que as transcricións conservan os seus tempos por palabra, as súas puntuacións e os seus falantes.
+
+- A versión MLX do modelo descárgase a primeira vez que se usa.
+- `distil-small.en`, `distil-large-v2` e `distil-large-v3.5` non teñen versión MLX, así que se executan na CPU.
+- O [texto en directo](/gl/guides/sources/#texto-en-directo) sempre se executa na CPU.
+- **Tipo de cálculo** e **Tamaño do lote** non se aplican na GPU, xa que MLX sempre calcula en media precisión e sen lotes.
+- Para transcribir na CPU, activa **Usar a CPU** en **Preferencias** → **Transcrición**.
+
 ### Opcións avanzadas
 
-Están en **Preferencias** → **WhisperX**. Cámbiaas só se tes problemas ou sabes o que fas: unha GPU que se queda sen memoria pode bloquear o teu sistema.
+Están en **Preferencias** → **Transcrición** → **WhisperX**. Cámbiaas só se tes problemas ou sabes o que fas: unha GPU que se queda sen memoria pode bloquear o teu sistema.
 
-- **Tipo de cálculo**: a precisión dos números do modelo. `float16` é máis rápido en GPU (o valor predeterminado con CUDA). `int8` usa menos memoria e é o valor predeterminado na CPU, xa que moitas CPU non admiten `float16` de forma eficiente. `float32` é o máis preciso, para GPU con máis de 8 GB de VRAM.
+- **Tipo de cálculo**: a precisión dos números do modelo. `float16` é máis rápido en GPU NVIDIA (o valor predeterminado con CUDA). `int8` usa menos memoria e é o valor predeterminado na CPU, xa que moitas CPU non admiten `float16` de forma eficiente. `float32` é o máis preciso, para GPU con máis de 8 GB de VRAM.
 - **Tamaño do lote**: cantas partes do audio se procesan á vez (`8` de forma predeterminada). Non cambia a calidade, só a velocidade. Báixao se te quedas sen memoria; recoméndase ata `16`.
-- **Usar a CPU**: executa WhisperX na CPU. Sempre está activado se non se atopou ningunha GPU con CUDA.
+- **Usar a CPU**: executa WhisperX na CPU. Sempre está activado se non se atopou ningunha GPU (unha GPU NVIDIA con CUDA, ou a GPU dun Mac con Apple Silicon).
 
 ## API de Whisper
 
@@ -61,7 +72,7 @@ Usa a [API de voz a texto de OpenAI](https://platform.openai.com/docs/guides/spe
 
 | Modelo | Marcas de tempo | Falantes | Notas |
 | --- | :---: | :---: | --- |
-| `whisper-1` (predeterminado) | ✓ | ✗ | Pódese reproducir segmento a segmento e subtitular. Traduce ao inglés. |
+| `whisper-1` (predeterminado) | ✓ | ✗ | Pódese reproducir segmento a segmento e subtitular. Traduce ao inglés. Puntúa cada segmento, para revisar os de baixa confianza. |
 | `gpt-transcribe` | ✗ | ✗ | Máis preciso, pero sen marcas de tempo. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifica os falantes. Non usa as palabras clave nin a descrición. |
 
@@ -72,8 +83,8 @@ Os audios longos divídense en fragmentos de ata 10 minutos, cortados nun silenc
 ### Opcións
 
 - **Formato de resposta** (tarxeta Saída, para cartafoles): `text` (predeterminado), `json`, `verbose_json`, `srt` ou `vtt`. Os subtítulos e `verbose_json` precisan un modelo con marcas de tempo.
-- **Temperatura** (Preferencias → API de Whisper): entre 0 e 1. Os valores altos como 0,8 fan que o resultado sexa máis aleatorio, e os baixos como 0,2, máis preciso. Con 0 (predeterminado), o modelo súbea automaticamente cando fai falla.
-- **Marcas de tempo das palabras** (Preferencias → API de Whisper): se `whisper-1` tamén devolve as marcas de tempo de cada palabra, para resaltala ao reproducir. Tarda máis. Activado de forma predeterminada.
+- **Temperatura** (Preferencias → Transcrición): entre 0 e 1. Os valores altos como 0,8 fan que o resultado sexa máis aleatorio, e os baixos como 0,2, máis preciso. Con 0 (predeterminado), o modelo súbea automaticamente cando fai falla.
+- **Marcas de tempo das palabras** (Preferencias → Transcrición): se `whisper-1` tamén devolve as marcas de tempo de cada palabra, para resaltala ao reproducir. Tarda máis. Activado de forma predeterminada.
 
 ## API de Google
 

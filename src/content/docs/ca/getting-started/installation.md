@@ -25,7 +25,7 @@ Executa l'instal·lador i segueix-ne els passos. No necessita permisos d'adminis
 
 ### macOS
 
-Obre el fitxer `.dmg` i arrossega **Audiotext** a la carpeta **Aplicacions**. L'aplicació no està notaritzada per Apple, així que macOS la bloqueja la primera vegada que l'obres: ves a **Configuració del Sistema** → **Privacitat i seguretat** i fes clic a **Obre igualment** al costat del missatge sobre Audiotext. A macOS, WhisperX s'executa a la CPU, ja que CUDA no hi està disponible. Els Mac amb Intel no són compatibles, ja que PyTorch ja no els admet.
+Obre el fitxer `.dmg` i arrossega **Audiotext** a la carpeta **Aplicacions**. L'aplicació no està notaritzada per Apple, així que macOS la bloqueja la primera vegada que l'obres: ves a **Configuració del Sistema** → **Privacitat i seguretat** i fes clic a **Obre igualment** al costat del missatge sobre Audiotext. Als Mac, WhisperX transcriu a la GPU d'Apple Silicon amb [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), molt més ràpid que a la CPU, sense cap complement. Els Mac amb Intel no són compatibles, ja que PyTorch ja no els admet.
 
 ### Linux
 
@@ -49,7 +49,7 @@ La primera vegada que transcrius amb **WhisperX** (el motor per defecte), es des
 
 ## Requisits
 
-- **WhisperX** s'executa al teu ordinador. Funciona en qualsevol CPU, però és molt més ràpid en una GPU NVIDIA amb CUDA. Consulta [Motors](/ca/reference/engines/) per triar un model adequat al teu maquinari.
+- **WhisperX** s'executa al teu ordinador. Funciona en qualsevol CPU, però és molt més ràpid en una GPU NVIDIA amb CUDA o a la GPU d'un Mac amb Apple Silicon. Consulta [Motors](/ca/reference/engines/) per triar un model adequat al teu maquinari.
 - L'**API de Whisper** i l'**API de Google** s'executen en servidors remots, així que necessiten connexió a Internet, però no un maquinari potent.
 - Per transcriure des del micròfon, el sistema ha de detectar un dispositiu d'entrada.
 - A Linux, enregistrar i reproduir àudio requereix [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` a Ubuntu o Debian).
@@ -58,7 +58,7 @@ La primera vegada que transcrius amb **WhisperX** (el motor per defecte), es des
 
 Quan es publica una versió nova, Audiotext mostra un botó **Versió … disponible** a la barra superior. Fes-hi clic per obrir la pàgina de la versió, baixa el fitxer del teu sistema i instal·la'l com la primera vegada: executa l'instal·lador nou a Windows, arrossega l'aplicació nova a la carpeta **Aplicacions** a macOS o executa l'`install.sh` de l'arxiu nou a Linux. La versió anterior es reemplaça, i la configuració i l'historial es mantenen, ja que es desen a la teva [carpeta de configuració d'usuari](/ca/reference/files-and-data/#carpeta-de-configuració-dusuari). Si fas servir el complement de GPU, torna a triar-lo en instal·lar.
 
-Per comprovar tu mateix si hi ha una versió nova, obre **Preferències** → **Quant a** → **Cerca actualitzacions**. Perquè no es comprovi en obrir l'aplicació, desactiva **General** → **Actualitzacions**.
+Per comprovar tu mateix si hi ha una versió nova, obre **Preferències** → **Quant a** → **Cerca actualitzacions**. Perquè no es comprovi en obrir l'aplicació, desactiva **General** → **Cerca actualitzacions automàticament**.
 
 ## Desinstal·la l'aplicació
 

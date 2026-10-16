@@ -15,18 +15,20 @@ Audiotext mengekstrak audio dari file video dengan FFmpeg, sehingga keduanya dap
 
 ## Format keluaran
 
-| Format | Ekspor | Folder (WhisperX) | Folder (Whisper API) |
-| --- | :---: | :---: | :---: |
-| Teks biasa (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Dokumen Word (`.docx`) | ✓ | ✗ | ✗ |
-| Subtitle (`.srt`) | ✓ | ✓ | `srt` |
-| Subtitle web (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabel (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Label Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Format | Ekspor | Folder (WhisperX) | Folder (Whisper API) | Baris perintah |
+| --- | :---: | :---: | :---: | :---: |
+| Teks biasa (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Dokumen Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Subtitle (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Subtitle web (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Subtitle bergaya (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabel (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Label Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Video dengan subtitle (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Lihat [Ekspor](/id/guides/transcript/#salin-dan-ekspor) dan [kartu Keluaran](/id/guides/transcription-settings/#folder-dan-keluaran).
+Ringkasan diekspor tersendiri ke `.txt`, `.md`, dan `.docx`. Lihat [Ekspor](/id/guides/transcript/#salin-dan-ekspor), [kartu Keluaran](/id/guides/transcription-settings/#folder-dan-keluaran), dan [baris perintah](/id/reference/cli/#opsi).
 
 ## Bahasa audio
 

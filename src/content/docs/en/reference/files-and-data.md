@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext keeps your data on your computer. Nothing is sent anywhere unless you use a remote engine (the Whisper API or the Google API) or an AI provider other than Ollama. When it opens, it also asks GitHub whether there's a new version, which you can turn off in **Preferences** → **General** → **Updates**.
+Audiotext keeps your data on your computer. Nothing is sent anywhere unless you use a remote engine (the Whisper API or the Google API) or an AI provider other than Ollama. When it opens, it also asks GitHub whether there's a new version, which you can turn off in **Preferences** → **General** → **Check for updates automatically**.
 
 ## User configuration folder
 
@@ -20,7 +20,7 @@ The settings, the history and the recordings are stored in your user configurati
 It contains:
 
 - `config.ini`: your settings. Delete it to restore the defaults.
-- `history.json`: your transcriptions, with their summaries, translations and corrections.
+- `history.json`: your transcriptions, with their summaries, questions, translations and corrections.
 - `media/`: the recordings of the microphone and the audio downloaded from URLs, so they can be played later. They're removed when their transcription is deleted from the history.
 
 To use another folder, e.g. for a portable installation, set the `AUDIOTEXT_CONFIG_DIR` environment variable.
@@ -47,7 +47,7 @@ Environment variables with the names of the keys take precedence over the ones s
 
 | Variable | Service |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (Whisper API, summaries, translations) |
+| `OPENAI_API_KEY` | OpenAI (Whisper API, summaries, questions, translations) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Environment variables with the names of the keys take precedence over the ones s
 
 ## Models
 
-The models of WhisperX and of the speaker identification are downloaded the first time they're used and cached by Hugging Face in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` on Windows). The models that align the words of English, French, German, Spanish and Italian are cached by PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` on Windows). Delete those folders to free the space they take. Other apps may keep their models there too, and download them again when they need them, like Audiotext.
+The models of WhisperX (and of MLX Whisper, on Macs) and of the speaker identification are downloaded the first time they're used and cached by Hugging Face in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` on Windows). The models that align the words of English, French, German, Spanish and Italian are cached by PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` on Windows). Delete those folders to free the space they take. Other apps may keep their models there too, and download them again when they need them, like Audiotext.

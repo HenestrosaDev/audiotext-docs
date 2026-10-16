@@ -15,18 +15,20 @@ Audiotext haalt de audio uit videobestanden met FFmpeg, dus het transcribeert be
 
 ## Uitvoerformaten
 
-| Formaat | Exporteren | Map (WhisperX) | Map (Whisper-API) |
-| --- | :---: | :---: | :---: |
-| Platte tekst (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Word-document (`.docx`) | ✓ | ✗ | ✗ |
-| Ondertitels (`.srt`) | ✓ | ✓ | `srt` |
-| Webondertitels (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabel (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Audacity-labels (`.aud`) | ✗ | ✓ | ✗ |
+| Formaat | Exporteren | Map (WhisperX) | Map (Whisper-API) | Opdrachtregel |
+| --- | :---: | :---: | :---: | :---: |
+| Platte tekst (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Word-document (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Ondertitels (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Webondertitels (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Opgemaakte ondertitels (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabel (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Audacity-labels (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Video met ondertitels (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Zie [Exporteren](/nl/guides/transcript/#kopiëren-en-exporteren) en de [kaart Uitvoer](/nl/guides/transcription-settings/#map-en-uitvoer).
+De samenvatting wordt apart geëxporteerd naar `.txt`, `.md` en `.docx`. Zie [Exporteren](/nl/guides/transcript/#kopiëren-en-exporteren), de [kaart Uitvoer](/nl/guides/transcription-settings/#map-en-uitvoer) en de [opdrachtregel](/nl/reference/cli/#opties).
 
 ## Talen van de audio
 

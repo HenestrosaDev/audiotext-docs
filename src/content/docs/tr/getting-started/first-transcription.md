@@ -41,8 +41,9 @@ Devam eden başka bir transkripsiyon varsa düğme **Kuyruğa ekle** olur ve yen
 Bittiğinde transkripsiyon açılır:
 
 - Sesi oradan oynatmak için bir segmente tıklayın.
-- **Döküm**, **Düz metin** ve **Özet** arasında geçiş yapın.
-- Çevirmek, kopyalamak veya dosya olarak kaydetmek için **Çevir**, **Kopyala** ve **Dışa aktar**'ı kullanın.
+- Hakkında soru sormak için **Altyazılar**, **Düz metin**, **Özet** ve **Sor** arasında geçiş yapın.
+- Çevirmek için **Çevir**'i; içinde bulup değiştirmek, kopyalamak veya dosya olarak kaydetmek için transkripsiyonun başlığındaki düğmeleri kullanın.
+- Motorun en az emin olduğu, altı çizili kelimeleri inceleyin.
 
 Onunla yapabileceğiniz her şey için [Döküm](/tr/guides/transcript/) sayfasına bakın.
 
@@ -52,8 +53,10 @@ Onunla yapabileceğiniz her şey için [Döküm](/tr/guides/transcript/) sayfas�
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Transkripsiyonu başlatma veya kaydı başlatıp durdurma |
 | `Ctrl+O` / `⌘O` | Dosya seçme (klasör kaynağında klasör) |
-| `Ctrl+S` / `⌘S` | Gösterilen transkripsiyonu dışa aktarma |
-| `Ctrl+F` / `⌘F` | Transkripsiyonda arama |
+| `Ctrl+S` / `⌘S` | Üzerinde çalıştığınız metni dışa aktarma: transkripsiyon veya çevirisi |
+| `Ctrl+F` / `⌘F` | Üzerinde çalıştığınız metinde bulma ve değiştirme (veya özette arama) |
+| `Ctrl+J` / `⌘J` | Sonraki düşük güvenilirlikli kelimeye gitme |
+| `Shift+Ctrl+J` / `⇧⌘J` | Önceki düşük güvenilirlikli kelimeye gitme |
 | `Esc` | Devam eden transkripsiyonu iptal etme |
 | `Boşluk` | Sesi oynatma veya duraklatma |
 | `←` / `→` | 5 saniye geri veya ileri gitme |

@@ -15,7 +15,7 @@ O **Método de transcrição**:
 
 | Mecanismo | Onde roda | Custo | Observações |
 | --- | --- | --- | --- |
-| **WhisperX** (padrão) | Seu computador | Grátis e ilimitado | Privado e offline. Mais opções: falantes, tempos por palavra, texto ao vivo. |
+| **WhisperX** (padrão) | Seu computador | Grátis e ilimitado | Privado e offline. Mais opções: falantes, tempos por palavra, texto ao vivo. Roda na GPU dos Macs com Apple Silicon. |
 | **API do Whisper** | Servidores da OpenAI | Pago por minuto | Exige uma [chave de API da OpenAI](/pt/reference/preferences/#chaves-de-api). Para computadores que não rodam o WhisperX com fluidez. |
 | **API do Google** | Servidores do Google | Camada gratuita, ou pago | Qualidade menor e sem carimbos de tempo. A chave de API é opcional. |
 
@@ -44,8 +44,8 @@ Eles são usados pelo WhisperX e pela API do Whisper, exceto pelo modelo `gpt-4o
 
 ## Opções
 
-- **Tempos por palavra** (WhisperX): alinha cada palavra ao áudio, para destacá-la durante a reprodução. Demora um pouco mais. As legendas já os usam.
-- **Extrair a voz**: reduz a música e o ruído de fundo antes de transcrever.
+- **Tempos por palavra** (WhisperX): alinha cada palavra ao áudio, para destacá-la durante a reprodução e para [revisar as palavras](/pt/guides/transcript/#revise-as-palavras-de-baixa-confiança) de que tem menos certeza. Demora um pouco mais. Ativado por padrão. As legendas precisam dos tempos das palavras, então ela é ativada e bloqueada enquanto `.srt` ou `.vtt` estiverem escolhidos nos **Tipos de arquivo** de uma pasta; a sua escolha volta quando deixam de estar.
+- **Reduzir o ruído de fundo**: reduz o zumbido e o ruído de fundo constante, e equilibra a fala baixa, antes de transcrever. Demora mais.
 - **Identificar falantes** (WhisperX): indica quem fala em cada parte, ex.: `SPEAKER_00`. Se você souber quantas pessoas falam, informe em **Número de falantes** (`0` detecta automaticamente). Exige um token gratuito do Hugging Face; consulte [Identifique os falantes](#identifique-os-falantes). Com a API do Whisper, o modelo `gpt-4o-transcribe-diarize` identifica os falantes.
 
 ### Identifique os falantes

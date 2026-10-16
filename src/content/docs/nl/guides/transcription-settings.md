@@ -15,7 +15,7 @@ De **Transcriptiemethode**:
 
 | Engine | Draait op | Kosten | Opmerkingen |
 | --- | --- | --- | --- |
-| **WhisperX** (standaard) | Je computer | Gratis en onbeperkt | Privé en offline. Meer opties: sprekers, tijden per woord, livetekst. |
+| **WhisperX** (standaard) | Je computer | Gratis en onbeperkt | Privé en offline. Meer opties: sprekers, tijden per woord, livetekst. Draait op de GPU van Macs met Apple Silicon. |
 | **Whisper-API** | Servers van OpenAI | Betaald per minuut | Vereist een [OpenAI-API-sleutel](/nl/reference/preferences/#api-sleutels). Voor computers waarop WhisperX niet soepel draait. |
 | **Google-API** | Servers van Google | Gratis tegoed, of betaald | Lagere kwaliteit en geen tijdstempels. Een API-sleutel is optioneel. |
 
@@ -44,8 +44,8 @@ Ze worden gebruikt door WhisperX en de Whisper-API, behalve door het model `gpt-
 
 ## Opties
 
-- **Tijden per woord** (WhisperX): lijnt elk woord uit met de audio, om het tijdens het afspelen te markeren. Duurt iets langer. Ondertitels gebruiken ze al.
-- **Spraak isoleren**: vermindert muziek en achtergrondgeluid voor het transcriberen.
+- **Tijden per woord** (WhisperX): lijnt elk woord uit met de audio, om het tijdens het afspelen te markeren en om de woorden [na te kijken](/nl/guides/transcript/#woorden-met-lage-betrouwbaarheid-nakijken) waarvan het het minst zeker is. Duurt iets langer. Standaard aan. De ondertitels hebben de tijden van de woorden nodig, dus de optie wordt aangezet en vergrendeld zolang `.srt` of `.vtt` is gekozen bij de **Bestandstypen** van een map; je eigen keuze komt terug zodra ze niet meer gekozen zijn.
+- **Achtergrondruis verminderen**: vermindert brom en constante achtergrondruis, en maakt zachte spraak gelijkmatiger, voordat er wordt getranscribeerd. Duurt langer.
 - **Sprekers herkennen** (WhisperX): geeft aan wie in elk deel spreekt, bijv. `SPEAKER_00`. Als je weet hoeveel mensen er spreken, vul het in bij **Aantal sprekers** (`0` detecteert het). Vereist een gratis Hugging Face-token; zie [Sprekers herkennen](#sprekers-herkennen). Bij de Whisper-API herkent het model `gpt-4o-transcribe-diarize` de sprekers.
 
 ### Sprekers herkennen

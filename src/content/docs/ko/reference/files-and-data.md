@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext는 데이터를 내 컴퓨터에 보관합니다. 원격 엔진(Whisper API 또는 Google API)이나 Ollama 이외의 AI 제공자를 사용하지 않는 한 아무것도 전송되지 않습니다. 또한 앱을 열 때 새 버전이 있는지 GitHub에 확인하며, 이는 **환경설정** → **일반** → **업데이트**에서 끌 수 있습니다.
+Audiotext는 데이터를 내 컴퓨터에 보관합니다. 원격 엔진(Whisper API 또는 Google API)이나 Ollama 이외의 AI 제공자를 사용하지 않는 한 아무것도 전송되지 않습니다. 또한 앱을 열 때 새 버전이 있는지 GitHub에 확인하며, 이는 **환경설정** → **일반** → **자동으로 업데이트 확인**에서 끌 수 있습니다.
 
 ## 사용자 설정 폴더
 
@@ -20,7 +20,7 @@ Audiotext는 데이터를 내 컴퓨터에 보관합니다. 원격 엔진(Whispe
 들어 있는 항목:
 
 - `config.ini`: 설정. 삭제하면 기본값으로 돌아갑니다.
-- `history.json`: 받아쓰기와 그 요약, 번역, 수정 내용.
+- `history.json`: 받아쓰기와 그 요약, 질문, 번역, 수정 내용.
 - `media/`: 나중에 재생할 수 있도록 보관하는 마이크 녹음과 URL에서 다운로드한 오디오. 해당 받아쓰기를 기록에서 삭제하면 함께 삭제됩니다.
 
 휴대용 설치 등으로 다른 폴더를 쓰려면 환경 변수 `AUDIOTEXT_CONFIG_DIR`을 설정하세요.
@@ -47,7 +47,7 @@ API 키와 Hugging Face 토큰은 시스템의 자격 증명 저장소에 보관
 
 | 변수 | 서비스 |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI(Whisper API, 요약, 번역) |
+| `OPENAI_API_KEY` | OpenAI(Whisper API, 요약, 질문, 번역) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ API 키와 Hugging Face 토큰은 시스템의 자격 증명 저장소에 보관
 
 ## 모델
 
-WhisperX와 화자 식별 모델은 처음 사용할 때 다운로드되며, Hugging Face가 `~/.cache/huggingface`(Windows에서는 `%USERPROFILE%\.cache\huggingface`)에 캐시합니다. 영어, 프랑스어, 독일어, 스페인어, 이탈리아어의 단어를 정렬하는 모델은 PyTorch가 `~/.cache/torch`(Windows에서는 `%USERPROFILE%\.cache\torch`)에 캐시합니다. 차지하는 공간을 비우려면 이 폴더들을 삭제하세요. 다른 앱도 이곳에 모델을 보관할 수 있으며, Audiotext처럼 필요할 때 다시 다운로드합니다.
+WhisperX(Mac에서는 MLX Whisper도)와 화자 식별 모델은 처음 사용할 때 다운로드되며, Hugging Face가 `~/.cache/huggingface`(Windows에서는 `%USERPROFILE%\.cache\huggingface`)에 캐시합니다. 영어, 프랑스어, 독일어, 스페인어, 이탈리아어의 단어를 정렬하는 모델은 PyTorch가 `~/.cache/torch`(Windows에서는 `%USERPROFILE%\.cache\torch`)에 캐시합니다. 차지하는 공간을 비우려면 이 폴더들을 삭제하세요. 다른 앱도 이곳에 모델을 보관할 수 있으며, Audiotext처럼 필요할 때 다시 다운로드합니다.

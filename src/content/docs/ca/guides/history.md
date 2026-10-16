@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Cada transcripció es desa a l'historial, a l'esquerra de la finestra, juntament amb el resum, la traducció i les correccions que hi hagis fet. El botó de l'esquerra de la barra superior el mostra o l'amaga.
+Cada transcripció es desa a l'historial, a l'esquerra de la finestra, juntament amb el resum, les preguntes, les traduccions i les correccions que hi hagis fet. El botó de l'esquerra de la barra superior el mostra o l'amaga.
 
 ## Troba una transcripció
 
@@ -32,7 +32,7 @@ Els grups reuneixen transcripcions relacionades, com les d'un projecte o un curs
 
 ## Elimina una transcripció
 
-En eliminar una transcripció, se n'esborren de l'historial la transcripció, el resum i la traducció. També s'eliminen les transcripcions dels fitxers d'una carpeta. Els teus fitxers d'àudio, de vídeo i els fitxers desats **no** s'eliminen.
+En eliminar una transcripció, se n'esborren de l'historial la transcripció, el resum, les preguntes i les traduccions. També s'eliminen les transcripcions dels fitxers d'una carpeta. Els teus fitxers d'àudio, de vídeo i els fitxers desats **no** s'eliminen.
 
 ## Transcripcions amb errors i interrompudes
 

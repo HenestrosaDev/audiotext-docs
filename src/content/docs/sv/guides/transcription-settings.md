@@ -15,7 +15,7 @@ Innan transkriberingen visar Audiotext inställningarna, grupperade i kort. De s
 
 | Motor | Körs på | Kostnad | Kommentarer |
 | --- | --- | --- | --- |
-| **WhisperX** (standard) | Din dator | Gratis och obegränsat | Privat och offline. Fler alternativ: talare, tider per ord, livetext. |
+| **WhisperX** (standard) | Din dator | Gratis och obegränsat | Privat och offline. Fler alternativ: talare, tider per ord, livetext. Körs på grafikprocessorn i Mac-datorer med Apple Silicon. |
 | **Whisper-API** | OpenAI:s servrar | Betalas per minut | Kräver en [API-nyckel från OpenAI](/sv/reference/preferences/#api-nycklar). För datorer som inte kör WhisperX smidigt. |
 | **Google-API** | Googles servrar | Gratisnivå eller betald | Lägre kvalitet och inga tidsstämplar. En API-nyckel är valfri. |
 
@@ -44,8 +44,8 @@ De används av WhisperX och Whisper-API:t, utom av modellen `gpt-4o-transcribe-d
 
 ## Alternativ
 
-- **Tider per ord** (WhisperX): justerar varje ord mot ljudet för att markera det under uppspelning. Tar lite längre tid. Undertexterna använder dem redan.
-- **Extrahera tal**: minskar musik och bakgrundsljud före transkriberingen.
+- **Tider per ord** (WhisperX): justerar varje ord mot ljudet för att markera det under uppspelning och för att [granska orden](/sv/guides/transcript/#granska-ord-med-låg-säkerhet) som den är minst säker på. Tar lite längre tid. På som standard. Undertexterna behöver ordens tider, så alternativet slås på och låses medan `.srt` eller `.vtt` är valt under **Filtyper** för en mapp; ditt eget val kommer tillbaka när de inte längre är valda.
+- **Minska bakgrundsbrus**: minskar brum och jämnt bakgrundsbrus, och jämnar ut tyst tal, innan transkriberingen. Tar längre tid.
 - **Identifiera talare** (WhisperX): anger vem som talar i varje del, t.ex. `SPEAKER_00`. Om du vet hur många som talar anger du det i **Antal talare** (`0` identifierar det automatiskt). Kräver en gratis Hugging Face-token; se [Identifiera talarna](#identifiera-talarna). Med Whisper-API:t identifierar modellen `gpt-4o-transcribe-diarize` talarna.
 
 ### Identifiera talarna

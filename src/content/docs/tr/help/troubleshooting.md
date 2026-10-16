@@ -13,7 +13,7 @@ Bir model ilk kullanıldığında indirilir; bu, bağlantınıza ve modelin boyu
 
 Ekran kartınızın belleği bu ayarlar için yeterli değil. Sırasıyla şunları deneyin:
 
-1. **Tercihler** → **WhisperX** bölümünde **Toplu iş boyutu**'nu düşürün (ör. `4`).
+1. **Tercihler** → **Transkripsiyon** bölümünde **Toplu iş boyutu**'nu düşürün (ör. `4`).
 2. Daha küçük bir model kullanın (ör. `small` veya `base`).
 3. Daha hafif bir **Hesaplama türü** kullanın (ör. `int8`).
 
@@ -21,7 +21,7 @@ Son ikisi kaliteyi düşürebilir. Her modelin ihtiyaç duyduğu bellek için [M
 
 ## Yazıya dökmek çok uzun sürüyor
 
-WhisperX'in hızı donanımınıza bağlıdır, bu yüzden mütevazı işlemcilerde anında sonuç beklemeyin. `small` gibi daha küçük bir model, ekran kartında `large-v3-turbo` veya `int8` hesaplama türünü deneyin. Alternatif olarak uzak sunucularda çalışan **Whisper API** veya **Google API**'yi kullanın.
+WhisperX'in hızı donanımınıza bağlıdır, bu yüzden mütevazı işlemcilerde anında sonuç beklemeyin. `small` gibi daha küçük bir model, ekran kartında `large-v3-turbo` veya `int8` hesaplama türünü deneyin. Apple Silicon'lu bir Mac'te grafik işlemcide yazıya dökmesi için **Tercihler** → **Transkripsiyon** bölümünde **CPU kullan**'ın kapalı olduğunu kontrol edin. Alternatif olarak uzak sunucularda çalışan **Whisper API** veya **Google API**'yi kullanın.
 
 ## Whisper API `429` hatası döndürüyor
 
@@ -78,11 +78,26 @@ Zaten transkripsiyonu olan dosyalar atlanır. Yeniden yazıya dökmek için **Me
 
 Google API dili algılayamaz. Ayarlardan **Sesin dili**'ni seçin.
 
-## Bir özet veya çeviri başarısız oluyor
+## Bir özet, yanıt veya çeviri başarısız oluyor
 
 - **DeepL bu dile çeviremiyor: ….**: DeepL bu dili desteklemiyor. Dil modeli gibi başka bir sağlayıcı seçin.
-- **Modelin yanıtı çok uzundu.**, **Model geçerli bir özet döndürmedi.** veya **Model geçerli bir çeviri döndürmedi.**: model özeti veya çeviriyi beklenen biçimde yazmadı. Yeniden deneyin ya da **Tercihler** → **YZ** bölümünden daha büyük bir model seçin. Ollama'nın küçük modelleri daha sık başarısız olur.
+- **Modelin yanıtı çok uzundu.**, **Model geçerli bir özet döndürmedi.**, **Model geçerli bir yanıt döndürmedi.** veya **Model geçerli bir çeviri döndürmedi.**: model özeti, yanıtı veya çeviriyi beklenen biçimde yazmadı. Yeniden deneyin ya da **Tercihler** → **Sağlayıcılar** bölümünden daha büyük bir model seçin. Ollama'nın küçük modelleri daha sık başarısız olur.
 - Diğer tüm hatalarda sağlayıcının API anahtarının **Tercihler** → **API anahtarları** bölümünde ayarlı olduğunu ve hesabınızda kredi bulunduğunu kontrol edin.
+
+## Düşük güvenilirlikli kelimelerin altı çizilmiyor
+
+Transkripsiyonun `⋯` menüsünde **Düşük güvenilirlikli kelimeleri vurgula**'nın açık olduğunu kontrol edin. Transkripsiyonun puanı yoksa menü nedenini söyler:
+
+- **“Kelime düzeyinde zamanlama”yı açıp yeniden yazıya dökün**: WhisperX kelimeleri zamanlamalarını belirlerken puanlar.
+- **Bu dil için hizalama modeli yok**: bu dildeki kelimeler zamanlanamaz ve puanlanamaz.
+- **Kelimeleri puanlamak için yeniden yazıya dökün**: kelimeler puanlanmadan önce yazıya dökülmüş.
+- **Kelimeleri yalnızca WhisperX ve whisper-1 puanlar**: diğer motorlar ve modeller puanlamaz.
+
+[Düşük güvenilirlikli kelimeleri inceleyin](/tr/guides/transcript/#düşük-güvenilirlikli-kelimeleri-inceleyin) bölümüne bakın.
+
+## Altyazılı video kutular gösteriyor
+
+[Videoyu altyazılarıyla dışa aktardıktan](/tr/guides/transcript/#videoyu-altyazılarıyla-dışa-aktarın) sonra **Dışa aktarıldı: …. Ancak hiçbir yazı tipinde bu karakterler yok, bu yüzden kutu olarak gösteriliyorlar: …** görünürse, sisteminizdeki hiçbir yazı tipi bu karakterleri çizemez. O yazı sistemi için bir yazı tipi yükleyin (ör. [Noto](https://fonts.google.com/noto)) ve yeniden dışa aktarın.
 
 ## Güncellemeler denetlenemiyor
 

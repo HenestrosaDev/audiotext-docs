@@ -13,7 +13,7 @@ Při prvním použití se model stáhne, což může podle připojení a velikos
 
 Grafická karta nemá pro dané nastavení dost paměti. Zkuste v tomto pořadí:
 
-1. Snižte **Velikost dávky** (např. `4`) v **Předvolby** → **WhisperX**.
+1. Snižte **Velikost dávky** (např. `4`) v **Předvolby** → **Přepis**.
 2. Použijte menší model (např. `small` nebo `base`).
 3. Použijte lehčí **Typ výpočtu** (např. `int8`).
 
@@ -21,7 +21,7 @@ Poslední dvě možnosti mohou snížit kvalitu. Kolik paměti potřebuje každ�
 
 ## Přepis trvá příliš dlouho
 
-Rychlost WhisperX závisí na hardwaru, takže na slabších procesorech nečekejte okamžité výsledky. Zkuste menší model jako `small`, `large-v3-turbo` na grafické kartě nebo typ výpočtu `int8`. Případně použijte **Whisper API** nebo **Google API**, která běží na vzdálených serverech.
+Rychlost WhisperX závisí na hardwaru, takže na slabších procesorech nečekejte okamžité výsledky. Zkuste menší model jako `small`, `large-v3-turbo` na grafické kartě nebo typ výpočtu `int8`. Na Macu s Apple Silicon zkontrolujte, že je **Použít CPU** vypnuto v **Předvolby** → **Přepis**, aby se přepisovalo na grafickém procesoru. Případně použijte **Whisper API** nebo **Google API**, která běží na vzdálených serverech.
 
 ## Whisper API vrací chybu `429`
 
@@ -78,11 +78,26 @@ Soubory, které už přepis mají, se přeskakují. Zapněte **Přepsat existuj�
 
 Google API neumí jazyk rozpoznat. V nastavení vyberte **Jazyk zvuku**.
 
-## Shrnutí nebo překlad selže
+## Shrnutí, odpověď nebo překlad selže
 
 - **DeepL nedokáže překládat do jazyka: ….**: DeepL tento jazyk nepodporuje. Zvolte jiného poskytovatele, například jazykový model.
-- **Odpověď modelu byla příliš dlouhá.**, **Model nevrátil platné shrnutí.** nebo **Model nevrátil platný překlad.**: model nenapsal shrnutí nebo překlad v očekávaném formátu. Zkuste to znovu nebo zvolte větší model v **Předvolby** → **AI**. Malé modely Ollamy selhávají častěji.
+- **Odpověď modelu byla příliš dlouhá.**, **Model nevrátil platné shrnutí.**, **Model nevrátil platnou odpověď.** nebo **Model nevrátil platný překlad.**: model nenapsal shrnutí, odpověď nebo překlad v očekávaném formátu. Zkuste to znovu nebo zvolte větší model v **Předvolby** → **Poskytovatelé**. Malé modely Ollamy selhávají častěji.
 - U jakékoli jiné chyby zkontrolujte, že je klíč API poskytovatele nastaven v **Předvolby** → **Klíče API** a že má váš účet kredit.
+
+## Slova s nízkou jistotou se nepodtrhávají
+
+Zkontrolujte, že je v nabídce `⋯` přepisu zapnuto **Zvýraznit slova s nízkou jistotou**. Pokud přepis nemá hodnocení, nabídka uvede proč:
+
+- **Zapněte „Časování slov“ a přepište to znovu**: WhisperX hodnotí slova, když určuje jejich časování.
+- **Pro jeho jazyk není k dispozici model zarovnání**: slova tohoto jazyka nelze časovat ani hodnotit.
+- **Přepište to znovu, aby se slova ohodnotila**: přepis vznikl dříve, než se slova hodnotila.
+- **Slova hodnotí jen WhisperX a whisper-1**: ostatní nástroje a modely to nedělají.
+
+Viz [Kontrola slov s nízkou jistotou](/cs/guides/transcript/#kontrola-slov-s-nízkou-jistotou).
+
+## Video s titulky zobrazuje čtverečky
+
+Pokud se po [exportu videa s titulky](/cs/guides/transcript/#export-videa-s-titulky) zobrazí **Exportováno do …, ale žádné písmo nemá tyto znaky, takže se zobrazují jako čtverečky: …**, žádné písmo ve vašem systému tyto znaky neumí vykreslit. Nainstalujte písmo pro dané písmo (např. [Noto](https://fonts.google.com/noto)) a exportujte znovu.
 
 ## Aktualizace nelze zkontrolovat
 

@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Mỗi bản chép lời được lưu trong lịch sử, ở bên trái cửa sổ, cùng với bản tóm tắt, bản dịch và các chỉnh sửa bạn đã thực hiện. Nút bên trái thanh trên cùng hiện hoặc ẩn lịch sử.
+Mỗi bản chép lời được lưu trong lịch sử, ở bên trái cửa sổ, cùng với bản tóm tắt, các câu hỏi, các bản dịch và các chỉnh sửa bạn đã thực hiện. Nút bên trái thanh trên cùng hiện hoặc ẩn lịch sử.
 
 ## Tìm một bản chép lời
 
@@ -32,7 +32,7 @@ Nhóm gom các bản chép lời liên quan, chẳng hạn của cùng một d�
 
 ## Xóa một bản chép lời
 
-Xóa một bản chép lời sẽ xóa nó, bản tóm tắt và bản dịch khỏi lịch sử. Các bản chép lời của những tệp trong một thư mục cũng bị xóa. Các tệp âm thanh, video và tệp đã lưu của bạn **không** bị xóa.
+Xóa một bản chép lời sẽ xóa nó, bản tóm tắt, các câu hỏi và các bản dịch khỏi lịch sử. Các bản chép lời của những tệp trong một thư mục cũng bị xóa. Các tệp âm thanh, video và tệp đã lưu của bạn **không** bị xóa.
 
 ## Bản chép lời thất bại và bị gián đoạn
 

@@ -41,8 +41,9 @@ Als er al een andere transcriptie bezig is, wordt de knop **Toevoegen aan wachtr
 Als hij klaar is, wordt de transcriptie geopend:
 
 - Klik op een segment om de audio vanaf daar af te spelen.
-- Wissel tussen **Transcript**, **Platte tekst** en **Samenvatting**.
-- Gebruik **Vertalen**, **Kopiëren** en **Exporteren** om hem te vertalen, te kopiëren of als bestand op te slaan.
+- Wissel tussen **Ondertitels**, **Platte tekst**, **Samenvatting** en **Vragen**, om er vragen over te stellen.
+- Gebruik **Vertalen** om hem te vertalen, en de knoppen in de kop van de transcriptie om erin te zoeken en te vervangen, hem te kopiëren of als bestand op te slaan.
+- Kijk de onderstreepte woorden na, waarvan de engine het minst zeker is.
 
 Zie [Het transcript](/nl/guides/transcript/) voor alles wat je ermee kunt doen.
 
@@ -52,8 +53,10 @@ Zie [Het transcript](/nl/guides/transcript/) voor alles wat je ermee kunt doen.
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | De transcriptie starten, of de opname starten en stoppen |
 | `Ctrl+O` / `⌘O` | Een bestand kiezen (of een map, bij de mapbron) |
-| `Ctrl+S` / `⌘S` | De getoonde transcriptie exporteren |
-| `Ctrl+F` / `⌘F` | In de transcriptie zoeken |
+| `Ctrl+S` / `⌘S` | De tekst exporteren waaraan je werkt: de transcriptie of de vertaling ervan |
+| `Ctrl+F` / `⌘F` | Zoeken en vervangen in de tekst waaraan je werkt (of zoeken in de samenvatting) |
+| `Ctrl+J` / `⌘J` | Naar het volgende woord met lage betrouwbaarheid gaan |
+| `Shift+Ctrl+J` / `⇧⌘J` | Naar het vorige woord met lage betrouwbaarheid gaan |
 | `Esc` | De lopende transcriptie annuleren |
 | `Spatie` | De audio afspelen of pauzeren |
 | `←` / `→` | 5 seconden terug of vooruit |

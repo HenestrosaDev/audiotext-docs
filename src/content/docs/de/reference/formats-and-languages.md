@@ -15,18 +15,20 @@ Audiotext extrahiert das Audio aus Videodateien mit FFmpeg und transkribiert dah
 
 ## Ausgabeformate
 
-| Format | Export | Ordner (WhisperX) | Ordner (Whisper-API) |
-| --- | :---: | :---: | :---: |
-| Nur-Text (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Word-Dokument (`.docx`) | ✓ | ✗ | ✗ |
-| Untertitel (`.srt`) | ✓ | ✓ | `srt` |
-| Web-Untertitel (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabelle (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Audacity-Marken (`.aud`) | ✗ | ✓ | ✗ |
+| Format | Export | Ordner (WhisperX) | Ordner (Whisper-API) | Kommandozeile |
+| --- | :---: | :---: | :---: | :---: |
+| Nur-Text (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Word-Dokument (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Untertitel (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Web-Untertitel (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Formatierte Untertitel (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabelle (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Audacity-Marken (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Video mit Untertiteln (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Siehe [Exportieren](/de/guides/transcript/#kopieren-und-exportieren) und die [Karte Ausgabe](/de/guides/transcription-settings/#ordner-und-ausgabe).
+Die Zusammenfassung wird für sich als `.txt`, `.md` und `.docx` exportiert. Siehe [Exportieren](/de/guides/transcript/#kopieren-und-exportieren), die [Karte Ausgabe](/de/guides/transcription-settings/#ordner-und-ausgabe) und die [Kommandozeile](/de/reference/cli/#optionen).
 
 ## Sprachen des Audios
 

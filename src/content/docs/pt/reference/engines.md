@@ -18,10 +18,11 @@ O Audiotext transcreve com um de três mecanismos, escolhido no cartão **Mecani
 | Identifica falantes | ✓ (token do Hugging Face) | `gpt-4o-transcribe-diarize` | ✗ |
 | Tempos por palavra | ✓ | `whisper-1` | ✗ |
 | Texto ao vivo | ✓ | ✗ | ✗ |
+| [Palavras de baixa confiança](/pt/guides/transcript/#revise-as-palavras-de-baixa-confiança) | ✓ (tempos por palavra) | `whisper-1` (segmentos) | ✗ |
 
 ## WhisperX
 
-O [WhisperX](https://github.com/m-bain/whisperX) é uma implementação rápida do Whisper da OpenAI que roda no seu computador, então o seu áudio nunca sai dele. Ele roda na CPU ou, muito mais rápido, em uma GPU NVIDIA com CUDA.
+O [WhisperX](https://github.com/m-bain/whisperX) é uma implementação rápida do Whisper da OpenAI que roda no seu computador, então o seu áudio nunca sai dele. Ele roda na CPU ou, muito mais rápido, em uma GPU NVIDIA com CUDA ou na GPU de um Mac com Apple Silicon.
 
 ### Modelo
 
@@ -47,13 +48,23 @@ Os modelos maiores são mais precisos, porém mais lentos e usam mais memória. 
 Para testar o Audiotext rapidamente, escolha `tiny` ou `small`. Para a melhor qualidade, use `large-v2` ou `large-v3-turbo` em uma GPU.
 :::
 
+### Em um Mac
+
+Nos Macs com Apple Silicon, o [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) transcreve na GPU, muito mais rápido do que na CPU. Depois, o WhisperX alinha as palavras e identifica os falantes na CPU, como sempre, então as transcrições mantêm os tempos por palavra, as pontuações e os falantes.
+
+- A versão MLX do modelo é baixada na primeira vez que é usada.
+- `distil-small.en`, `distil-large-v2` e `distil-large-v3.5` não têm versão MLX, então rodam na CPU.
+- O [texto ao vivo](/pt/guides/sources/#texto-ao-vivo) sempre roda na CPU.
+- **Tipo de computação** e **Tamanho do lote** não se aplicam na GPU, já que o MLX sempre calcula em meia precisão e sem lotes.
+- Para transcrever na CPU, ative **Usar CPU** em **Preferências** → **Transcrição**.
+
 ### Opções avançadas
 
-Ficam em **Preferências** → **WhisperX**. Mude-as apenas se tiver problemas ou souber o que está fazendo: uma GPU sem memória pode travar o seu sistema.
+Ficam em **Preferências** → **Transcrição** → **WhisperX**. Mude-as apenas se tiver problemas ou souber o que está fazendo: uma GPU sem memória pode travar o seu sistema.
 
-- **Tipo de computação**: a precisão dos números do modelo. `float16` é mais rápido em GPUs (o padrão com CUDA). `int8` usa menos memória e é o padrão na CPU, já que muitas CPUs não suportam `float16` com eficiência. `float32` é o mais preciso, para GPUs com mais de 8 GB de VRAM.
+- **Tipo de computação**: a precisão dos números do modelo. `float16` é mais rápido em GPUs NVIDIA (o padrão com CUDA). `int8` usa menos memória e é o padrão na CPU, já que muitas CPUs não suportam `float16` com eficiência. `float32` é o mais preciso, para GPUs com mais de 8 GB de VRAM.
 - **Tamanho do lote**: quantas partes do áudio são processadas de uma vez (`8` por padrão). Não muda a qualidade, só a velocidade. Diminua-o se faltar memória; recomenda-se até `16`.
-- **Usar CPU**: roda o WhisperX na CPU. Fica sempre ativado se nenhuma GPU com CUDA for encontrada.
+- **Usar CPU**: roda o WhisperX na CPU. Fica sempre ativado se nenhuma GPU for encontrada (uma GPU NVIDIA com CUDA, ou a GPU de um Mac com Apple Silicon).
 
 ## API do Whisper
 
@@ -61,7 +72,7 @@ Usa a [API de fala para texto da OpenAI](https://platform.openai.com/docs/guides
 
 | Modelo | Carimbos de tempo | Falantes | Observações |
 | --- | :---: | :---: | --- |
-| `whisper-1` (padrão) | ✓ | ✗ | Pode ser reproduzido segmento por segmento e legendado. Traduz para o inglês. |
+| `whisper-1` (padrão) | ✓ | ✗ | Pode ser reproduzido segmento por segmento e legendado. Traduz para o inglês. Pontua cada segmento, para revisar os de baixa confiança. |
 | `gpt-transcribe` | ✗ | ✗ | Mais preciso, mas sem carimbos de tempo. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifica os falantes. Não usa as palavras-chave nem a descrição. |
 
@@ -72,8 +83,8 @@ Os áudios longos são divididos em trechos de até 10 minutos, cortados em um s
 ### Opções
 
 - **Formato da resposta** (cartão Saída, para pastas): `text` (padrão), `json`, `verbose_json`, `srt` ou `vtt`. As legendas e o `verbose_json` exigem um modelo com carimbos de tempo.
-- **Temperatura** (Preferências → API do Whisper): entre 0 e 1. Valores altos como 0,8 tornam o resultado mais aleatório, e valores baixos como 0,2, mais focado. Com 0 (padrão), o modelo a aumenta automaticamente quando necessário.
-- **Carimbos de tempo das palavras** (Preferências → API do Whisper): se o `whisper-1` também retorna os carimbos de tempo de cada palavra, para destacá-la durante a reprodução. Demora mais. Ativado por padrão.
+- **Temperatura** (Preferências → Transcrição): entre 0 e 1. Valores altos como 0,8 tornam o resultado mais aleatório, e valores baixos como 0,2, mais focado. Com 0 (padrão), o modelo a aumenta automaticamente quando necessário.
+- **Carimbos de tempo das palavras** (Preferências → Transcrição): se o `whisper-1` também retorna os carimbos de tempo de cada palavra, para destacá-la durante a reprodução. Demora mais. Ativado por padrão.
 
 ## API do Google
 

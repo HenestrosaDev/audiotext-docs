@@ -15,18 +15,20 @@ Audiotext estrae l'audio dei file video con FFmpeg, quindi trascrive entrambi.
 
 ## Formati di output
 
-| Formato | Esporta | Cartella (WhisperX) | Cartella (API di Whisper) |
-| --- | :---: | :---: | :---: |
-| Testo semplice (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Documento Word (`.docx`) | ✓ | ✗ | ✗ |
-| Sottotitoli (`.srt`) | ✓ | ✓ | `srt` |
-| Sottotitoli web (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabella (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Etichette di Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Formato | Esporta | Cartella (WhisperX) | Cartella (API di Whisper) | Riga di comando |
+| --- | :---: | :---: | :---: | :---: |
+| Testo semplice (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Documento Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Sottotitoli (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Sottotitoli web (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Sottotitoli con stile (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabella (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Etichette di Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Video con sottotitoli (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Consulta [Esporta](/it/guides/transcript/#copia-ed-esporta) e la [scheda Output](/it/guides/transcription-settings/#cartella-e-output).
+Il riassunto si esporta da solo in `.txt`, `.md` e `.docx`. Consulta [Esporta](/it/guides/transcript/#copia-ed-esporta), la [scheda Output](/it/guides/transcription-settings/#cartella-e-output) e la [riga di comando](/it/reference/cli/#opzioni).
 
 ## Lingue dell'audio
 

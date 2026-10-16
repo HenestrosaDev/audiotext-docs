@@ -15,18 +15,20 @@ Audiotext tách âm thanh khỏi tệp video bằng FFmpeg, nên chép lời đ�
 
 ## Định dạng đầu ra
 
-| Định dạng | Xuất | Thư mục (WhisperX) | Thư mục (Whisper API) |
-| --- | :---: | :---: | :---: |
-| Văn bản thuần (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Tài liệu Word (`.docx`) | ✓ | ✗ | ✗ |
-| Phụ đề (`.srt`) | ✓ | ✓ | `srt` |
-| Phụ đề web (`.vtt`) | ✓ | ✓ | `vtt` |
-| Bảng (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Nhãn Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Định dạng | Xuất | Thư mục (WhisperX) | Thư mục (Whisper API) | Dòng lệnh |
+| --- | :---: | :---: | :---: | :---: |
+| Văn bản thuần (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Tài liệu Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Phụ đề (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Phụ đề web (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Phụ đề có định dạng (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Bảng (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Nhãn Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Video có phụ đề (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Xem [Xuất](/vi/guides/transcript/#sao-chép-và-xuất) và [thẻ Đầu ra](/vi/guides/transcription-settings/#thư-mục-và-đầu-ra).
+Bản tóm tắt được xuất riêng sang `.txt`, `.md` và `.docx`. Xem [Xuất](/vi/guides/transcript/#sao-chép-và-xuất), [thẻ Đầu ra](/vi/guides/transcription-settings/#thư-mục-và-đầu-ra) và [dòng lệnh](/vi/reference/cli/#tùy-chọn).
 
 ## Ngôn ngữ của âm thanh
 

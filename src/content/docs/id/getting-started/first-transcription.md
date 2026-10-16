@@ -41,8 +41,9 @@ Jika ada transkripsi lain yang sedang berjalan, tombolnya berubah menjadi **Tamb
 Setelah selesai, transkripsi akan terbuka:
 
 - Klik segmen untuk memutar audio dari titik tersebut.
-- Beralih antara **Transkrip**, **Teks biasa**, dan **Ringkasan**.
-- Gunakan **Terjemahkan**, **Salin**, dan **Ekspor** untuk menerjemahkan, menyalin, atau menyimpannya sebagai file.
+- Beralih antara **Subtitle**, **Teks biasa**, **Ringkasan**, dan **Tanya**, untuk mengajukan pertanyaan tentangnya.
+- Gunakan **Terjemahkan** untuk menerjemahkannya, dan tombol di header transkripsi untuk mencari dan mengganti di dalamnya, menyalinnya, atau menyimpannya sebagai file.
+- Tinjau kata yang digarisbawahi, yang paling tidak diyakini mesin.
 
 Lihat [Transkrip](/id/guides/transcript/) untuk semua yang dapat Anda lakukan dengannya.
 
@@ -52,8 +53,10 @@ Lihat [Transkrip](/id/guides/transcript/) untuk semua yang dapat Anda lakukan de
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Memulai transkripsi, atau memulai dan menghentikan rekaman |
 | `Ctrl+O` / `⌘O` | Memilih file (atau folder, pada sumber folder) |
-| `Ctrl+S` / `⌘S` | Mengekspor transkripsi yang ditampilkan |
-| `Ctrl+F` / `⌘F` | Mencari dalam transkripsi |
+| `Ctrl+S` / `⌘S` | Mengekspor teks yang sedang Anda kerjakan: transkripsi atau terjemahannya |
+| `Ctrl+F` / `⌘F` | Mencari dan mengganti di teks yang sedang Anda kerjakan (atau mencari di ringkasan) |
+| `Ctrl+J` / `⌘J` | Menuju kata berikutnya dengan keyakinan rendah |
+| `Shift+Ctrl+J` / `⇧⌘J` | Menuju kata sebelumnya dengan keyakinan rendah |
 | `Esc` | Membatalkan transkripsi yang sedang berjalan |
 | `Spasi` | Memutar atau menjeda audio |
 | `←` / `→` | Mundur atau maju 5 detik |

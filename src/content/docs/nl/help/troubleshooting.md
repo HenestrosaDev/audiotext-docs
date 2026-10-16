@@ -13,7 +13,7 @@ Bij het eerste gebruik wordt een model gedownload, wat enkele minuten kan duren,
 
 Je GPU heeft niet genoeg geheugen voor de instellingen. Probeer in deze volgorde:
 
-1. Verlaag de **Batchgrootte** (bijv. `4`) bij **Voorkeuren** → **WhisperX**.
+1. Verlaag de **Batchgrootte** (bijv. `4`) bij **Voorkeuren** → **Transcriptie**.
 2. Gebruik een kleiner model (bijv. `small` of `base`).
 3. Gebruik een lichter **Rekentype** (bijv. `int8`).
 
@@ -21,7 +21,7 @@ De laatste twee kunnen de kwaliteit verlagen. Zie [Engines](/nl/reference/engine
 
 ## Transcriberen duurt te lang
 
-De snelheid van WhisperX hangt af van je hardware, dus verwacht geen directe resultaten op bescheiden CPU's. Probeer een kleiner model, zoals `small`, of `large-v3-turbo` op een GPU, of het rekentype `int8`. Je kunt ook de **Whisper-API** of de **Google-API** gebruiken, die op externe servers draaien.
+De snelheid van WhisperX hangt af van je hardware, dus verwacht geen directe resultaten op bescheiden CPU's. Probeer een kleiner model, zoals `small`, of `large-v3-turbo` op een GPU, of het rekentype `int8`. Controleer op een Mac met Apple Silicon of **CPU gebruiken** uit staat bij **Voorkeuren** → **Transcriptie**, zodat er op de GPU wordt getranscribeerd. Je kunt ook de **Whisper-API** of de **Google-API** gebruiken, die op externe servers draaien.
 
 ## De Whisper-API geeft de fout `429`
 
@@ -78,11 +78,26 @@ Bestanden die al een transcriptie hebben, worden overgeslagen. Zet **Bestaande b
 
 De Google-API kan de taal niet detecteren. Kies de **Taal van de audio** in de instellingen.
 
-## Een samenvatting of vertaling mislukt
+## Een samenvatting, antwoord of vertaling mislukt
 
 - **DeepL kan niet naar het … vertalen.**: DeepL ondersteunt die taal niet. Kies een andere aanbieder, zoals een taalmodel.
-- **Het antwoord van het model was te lang.**, **Het model gaf geen geldige samenvatting terug.** of **Het model gaf geen geldige vertaling terug.**: het model schreef de samenvatting of de vertaling niet in de verwachte vorm. Probeer het opnieuw, of kies een groter model via **Voorkeuren** → **AI**. De kleine modellen van Ollama mislukken vaker.
+- **Het antwoord van het model was te lang.**, **Het model gaf geen geldige samenvatting terug.**, **Het model gaf geen geldig antwoord terug.** of **Het model gaf geen geldige vertaling terug.**: het model schreef de samenvatting, het antwoord of de vertaling niet in de verwachte vorm. Probeer het opnieuw, of kies een groter model via **Voorkeuren** → **Aanbieders**. De kleine modellen van Ollama mislukken vaker.
 - Controleer bij elke andere fout of de API-sleutel van de aanbieder is ingesteld via **Voorkeuren** → **API-sleutels** en of je account tegoed heeft.
+
+## Woorden met lage betrouwbaarheid worden niet onderstreept
+
+Controleer of **Woorden met lage betrouwbaarheid markeren** aan staat in het menu `⋯` van de transcriptie. Als de transcriptie geen scores heeft, zegt het menu waarom:
+
+- **Zet „Tijden per woord” aan en transcribeer opnieuw**: WhisperX beoordeelt de woorden wanneer het de tijden ervan bepaalt.
+- **Er is geen uitlijningsmodel voor deze taal**: de woorden van die taal kunnen niet worden getimed of beoordeeld.
+- **Transcribeer opnieuw om de woorden te beoordelen**: hij is getranscribeerd voordat woorden werden beoordeeld.
+- **Alleen WhisperX en whisper-1 beoordelen de woorden**: de andere engines en modellen doen dat niet.
+
+Zie [Woorden met lage betrouwbaarheid nakijken](/nl/guides/transcript/#woorden-met-lage-betrouwbaarheid-nakijken).
+
+## De video met ondertitels toont vakjes
+
+Als na het [exporteren van de video met de ondertitels](/nl/guides/transcript/#de-video-met-ondertitels-exporteren) **Geëxporteerd naar …, maar geen lettertype bevat deze tekens, dus worden ze als vakjes weergegeven: …** wordt getoond, kan geen enkel lettertype van je systeem die tekens tekenen. Installeer een lettertype voor dat schrift (bijv. [Noto](https://fonts.google.com/noto)) en exporteer opnieuw.
 
 ## Er kan niet op updates worden gecontroleerd
 

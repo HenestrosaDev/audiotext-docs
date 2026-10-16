@@ -15,18 +15,20 @@ Audiotext extrae o audio dos ficheiros de vídeo con FFmpeg, así que transcribe
 
 ## Formatos de saída
 
-| Formato | Exportar | Cartafol (WhisperX) | Cartafol (API de Whisper) |
-| --- | :---: | :---: | :---: |
-| Texto plano (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Documento de Word (`.docx`) | ✓ | ✗ | ✗ |
-| Subtítulos (`.srt`) | ✓ | ✓ | `srt` |
-| Subtítulos web (`.vtt`) | ✓ | ✓ | `vtt` |
-| Táboa (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Etiquetas de Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Formato | Exportar | Cartafol (WhisperX) | Cartafol (API de Whisper) | Liña de comandos |
+| --- | :---: | :---: | :---: | :---: |
+| Texto simple (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Documento de Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Subtítulos (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Subtítulos web (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Subtítulos con estilo (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Táboa (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Etiquetas de Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Vídeo con subtítulos (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Consulta [Exportar](/gl/guides/transcript/#copia-e-exporta) e a [tarxeta Saída](/gl/guides/transcription-settings/#cartafol-e-saída).
+O resumo expórtase por separado a `.txt`, `.md` e `.docx`. Consulta [Exportar](/gl/guides/transcript/#copia-e-exporta), a [tarxeta Saída](/gl/guides/transcription-settings/#cartafol-e-saída) e a [liña de comandos](/gl/reference/cli/#opcións).
 
 ## Idiomas do audio
 

@@ -13,7 +13,7 @@ La primera vez que se usa un modelo, se descarga, lo que puede tardar varios min
 
 Tu GPU no tiene memoria suficiente para los ajustes. Prueba, en este orden:
 
-1. Baja el **Tamaño de lote** (p. ej. `4`) en **Preferencias** → **WhisperX**.
+1. Baja el **Tamaño de lote** (p. ej. `4`) en **Preferencias** → **Transcripción**.
 2. Usa un modelo más pequeño (p. ej. `small` o `base`).
 3. Usa un **Tipo de cómputo** más ligero (p. ej. `int8`).
 
@@ -21,7 +21,7 @@ Los dos últimos pueden reducir la calidad. Consulta [Motores](/es/reference/eng
 
 ## Transcribir tarda demasiado
 
-La velocidad de WhisperX depende de tu hardware, así que no esperes resultados instantáneos en CPU modestas. Prueba un modelo más pequeño, como `small`, o `large-v3-turbo` en una GPU, o el tipo de cómputo `int8`. También puedes usar la **API de Whisper** o la **API de Google**, que se ejecutan en servidores remotos.
+La velocidad de WhisperX depende de tu hardware, así que no esperes resultados instantáneos en CPU modestas. Prueba un modelo más pequeño, como `small`, o `large-v3-turbo` en una GPU, o el tipo de cómputo `int8`. En un Mac con Apple Silicon, comprueba que **Usar CPU** está desactivado en **Preferencias** → **Transcripción**, para que transcriba en la GPU. También puedes usar la **API de Whisper** o la **API de Google**, que se ejecutan en servidores remotos.
 
 ## La API de Whisper devuelve el error `429`
 
@@ -78,11 +78,26 @@ Los archivos que ya tienen una transcripción se omiten. Activa **Sobrescribir a
 
 La API de Google no puede detectar el idioma. Elige el **Idioma del audio** en los ajustes.
 
-## Falla un resumen o una traducción
+## Falla un resumen, una respuesta o una traducción
 
 - **DeepL no puede traducir al ….**: DeepL no admite ese idioma. Elige otro proveedor, como un modelo de lenguaje.
-- **La respuesta del modelo era demasiado larga.**, **El modelo no ha devuelto un resumen válido.** o **El modelo no ha devuelto una traducción válida.**: el modelo no escribió el resumen o la traducción con el formato esperado. Vuelve a intentarlo o elige un modelo más grande en **Preferencias** → **IA**. Los modelos pequeños de Ollama fallan más a menudo.
+- **La respuesta del modelo era demasiado larga.**, **El modelo no ha devuelto un resumen válido.**, **El modelo no ha devuelto una respuesta válida.** o **El modelo no ha devuelto una traducción válida.**: el modelo no escribió el resumen, la respuesta o la traducción con el formato esperado. Vuelve a intentarlo o elige un modelo más grande en **Preferencias** → **Proveedores**. Los modelos pequeños de Ollama fallan más a menudo.
 - Para cualquier otro error, comprueba que la clave de API del proveedor está configurada en **Preferencias** → **Claves de API** y que tu cuenta tiene saldo.
+
+## No se subrayan las palabras de baja confianza
+
+Comprueba que **Resaltar palabras de baja confianza** está activado en el menú `⋯` de la transcripción. Si la transcripción no tiene puntuaciones, el menú dice por qué:
+
+- **Activa «Tiempos por palabra» y vuelve a transcribirlo**: WhisperX puntúa las palabras cuando calcula sus tiempos.
+- **No hay modelo de alineación para su idioma**: las palabras de ese idioma no se pueden temporizar ni puntuar.
+- **Vuelve a transcribirlo para puntuar sus palabras**: se transcribió antes de que se puntuaran las palabras.
+- **Solo WhisperX y whisper-1 puntúan las palabras**: los demás motores y modelos no lo hacen.
+
+Consulta [Revisa las palabras de baja confianza](/es/guides/transcript/#revisa-las-palabras-de-baja-confianza).
+
+## El vídeo con subtítulos muestra recuadros
+
+Si se muestra **Exportado a …, pero ninguna fuente tiene estos caracteres, así que se muestran como recuadros: …** después de [exportar el vídeo con sus subtítulos](/es/guides/transcript/#exporta-el-vídeo-con-sus-subtítulos), ninguna fuente de tu sistema puede dibujar esos caracteres. Instala una fuente para esa escritura (p. ej. [Noto](https://fonts.google.com/noto)) y vuelve a exportarlo.
 
 ## No se pueden buscar actualizaciones
 

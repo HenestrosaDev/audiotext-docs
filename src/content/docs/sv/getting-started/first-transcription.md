@@ -41,8 +41,9 @@ Om en annan transkribering pågår blir knappen **Lägg till i kön**, och den n
 När den är klar öppnas transkriberingen:
 
 - Klicka på ett segment för att spela upp ljudet därifrån.
-- Växla mellan **Transkript**, **Oformaterad text** och **Sammanfattning**.
-- Använd **Översätt**, **Kopiera** och **Exportera** för att översätta, kopiera eller spara den som en fil.
+- Växla mellan **Undertexter**, **Oformaterad text**, **Sammanfattning** och **Fråga**, för att ställa frågor om den.
+- Använd **Översätt** för att översätta den, och knapparna i transkriberingens rubrik för att söka och ersätta i den, kopiera den eller spara den som en fil.
+- Granska de understrukna orden, som motorn är minst säker på.
 
 Se [Transkriptet](/sv/guides/transcript/) för allt du kan göra med den.
 
@@ -52,8 +53,10 @@ Se [Transkriptet](/sv/guides/transcript/) för allt du kan göra med den.
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Starta transkriberingen, eller starta och stoppa inspelningen |
 | `Ctrl+O` / `⌘O` | Välja en fil (eller en mapp, för mappkällan) |
-| `Ctrl+S` / `⌘S` | Exportera transkriberingen som visas |
-| `Ctrl+F` / `⌘F` | Söka i transkriberingen |
+| `Ctrl+S` / `⌘S` | Exportera texten du arbetar med: transkriberingen eller dess översättning |
+| `Ctrl+F` / `⌘F` | Söka och ersätta i texten du arbetar med (eller söka i sammanfattningen) |
+| `Ctrl+J` / `⌘J` | Gå till nästa ord med låg säkerhet |
+| `Skift+Ctrl+J` / `⇧⌘J` | Gå till föregående ord med låg säkerhet |
 | `Esc` | Avbryta den pågående transkriberingen |
 | `Blanksteg` | Spela upp eller pausa ljudet |
 | `←` / `→` | Gå 5 sekunder bakåt eller framåt |

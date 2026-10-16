@@ -18,10 +18,11 @@ Audiotext transcrie cu unul dintre cele trei motoare, ales pe cardul **Motor** d
 | Identifică vorbitorii | ✓ (token Hugging Face) | `gpt-4o-transcribe-diarize` | ✗ |
 | Temporizare pe cuvânt | ✓ | `whisper-1` | ✗ |
 | Text live | ✓ | ✗ | ✗ |
+| [Cuvinte cu încredere scăzută](/ro/guides/transcript/#verificați-cuvintele-cu-încredere-scăzută) | ✓ (temporizare pe cuvânt) | `whisper-1` (segmente) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) este o implementare rapidă a Whisper de la OpenAI care rulează pe computerul dumneavoastră, deci sunetul nu îl părăsește niciodată. Rulează pe procesor sau, mult mai rapid, pe o placă video NVIDIA cu CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) este o implementare rapidă a Whisper de la OpenAI care rulează pe computerul dumneavoastră, deci sunetul nu îl părăsește niciodată. Rulează pe procesor sau, mult mai rapid, pe o placă video NVIDIA cu CUDA ori pe placa video a unui Mac cu Apple Silicon.
 
 ### Model
 
@@ -47,13 +48,23 @@ Modelele mai mari sunt mai precise, dar mai lente și folosesc mai multă memori
 Pentru a încerca rapid Audiotext, alegeți `tiny` sau `small`. Pentru cea mai bună calitate, folosiți `large-v2` sau `large-v3-turbo` pe o placă video.
 :::
 
+### Pe un Mac
+
+Pe Mac-urile cu Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) transcrie pe placa video, mult mai rapid decât pe procesor. Apoi WhisperX aliniază cuvintele și identifică vorbitorii pe procesor, ca întotdeauna, deci transcrierile își păstrează temporizarea pe cuvânt, scorurile și vorbitorii.
+
+- Versiunea MLX a modelului se descarcă la prima utilizare.
+- `distil-small.en`, `distil-large-v2` și `distil-large-v3.5` nu au versiune MLX, deci rulează pe procesor.
+- [Textul live](/ro/guides/sources/#text-live) rulează mereu pe procesor.
+- **Tip de calcul** și **Dimensiunea lotului** nu se aplică pe placa grafică, deoarece MLX calculează mereu în semiprecizie și fără loturi.
+- Pentru a transcrie pe procesor, activați **Folosește CPU** în **Preferințe** → **Transcriere**.
+
 ### Opțiuni avansate
 
-Se află în **Preferințe** → **WhisperX**. Schimbați-le doar dacă aveți probleme sau știți ce faceți: o placă video fără memorie liberă poate bloca sistemul.
+Se află în **Preferințe** → **Transcriere** → **WhisperX**. Schimbați-le doar dacă aveți probleme sau știți ce faceți: o placă video fără memorie liberă poate bloca sistemul.
 
-- **Tip de calcul**: precizia numerelor modelului. `float16` este mai rapid pe plăcile video (implicit cu CUDA). `int8` folosește mai puțină memorie și este implicit pe procesor, deoarece multe procesoare nu acceptă eficient `float16`. `float32` este cel mai precis, pentru plăci cu peste 8 GB VRAM.
+- **Tip de calcul**: precizia numerelor modelului. `float16` este mai rapid pe plăcile video NVIDIA (implicit cu CUDA). `int8` folosește mai puțină memorie și este implicit pe procesor, deoarece multe procesoare nu acceptă eficient `float16`. `float32` este cel mai precis, pentru plăci cu peste 8 GB VRAM.
 - **Dimensiunea lotului**: câte părți ale sunetului sunt procesate simultan (implicit `8`). Nu schimbă calitatea, doar viteza. Reduceți-o dacă rămâneți fără memorie; se recomandă cel mult `16`.
-- **Folosește CPU**: rulează WhisperX pe procesor. Este mereu activat dacă nu s-a găsit o placă CUDA.
+- **Folosește CPU**: rulează WhisperX pe procesor. Este mereu activat dacă nu s-a găsit nicio placă video (o placă NVIDIA cu CUDA sau placa video a unui Mac cu Apple Silicon).
 
 ## API Whisper
 
@@ -61,7 +72,7 @@ Folosește [API-ul OpenAI de transformare a vorbirii în text](https://platform.
 
 | Model | Marcaje de timp | Vorbitori | Observații |
 | --- | :---: | :---: | --- |
-| `whisper-1` (implicit) | ✓ | ✗ | Poate fi redat segment cu segment și subtitrat. Traduce în engleză. |
+| `whisper-1` (implicit) | ✓ | ✗ | Poate fi redat segment cu segment și subtitrat. Traduce în engleză. Evaluează fiecare segment, pentru a le verifica pe cele cu încredere scăzută. |
 | `gpt-transcribe` | ✗ | ✗ | Mai precis, dar fără marcaje de timp. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifică vorbitorii. Nu folosește cuvintele cheie și nici descrierea. |
 
@@ -72,8 +83,8 @@ Traducerile în engleză sunt făcute mereu de `whisper-1`, singurul model care 
 ### Opțiuni
 
 - **Formatul răspunsului** (cardul Ieșire, pentru dosare): `text` (implicit), `json`, `verbose_json`, `srt` sau `vtt`. Subtitrările și `verbose_json` necesită un model cu marcaje de timp.
-- **Temperatură** (Preferințe → Whisper API): între 0 și 1. Valorile mari, precum 0,8, fac rezultatul mai aleatoriu, iar cele mici, precum 0,2, mai concentrat. Cu 0 (implicit), modelul o crește automat când e nevoie.
-- **Marcaje de timp ale cuvintelor** (Preferințe → Whisper API): dacă `whisper-1` returnează și marcajele de timp ale fiecărui cuvânt, pentru a-l evidenția la redare. Durează mai mult. Activat implicit.
+- **Temperatură** (Preferințe → Transcriere): între 0 și 1. Valorile mari, precum 0,8, fac rezultatul mai aleatoriu, iar cele mici, precum 0,2, mai concentrat. Cu 0 (implicit), modelul o crește automat când e nevoie.
+- **Marcaje de timp ale cuvintelor** (Preferințe → Transcriere): dacă `whisper-1` returnează și marcajele de timp ale fiecărui cuvânt, pentru a-l evidenția la redare. Durează mai mult. Activat implicit.
 
 ## API Google
 

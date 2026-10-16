@@ -15,18 +15,20 @@ O Audiotext extrai o áudio dos arquivos de vídeo com o FFmpeg, então transcre
 
 ## Formatos de saída
 
-| Formato | Exportar | Pasta (WhisperX) | Pasta (API do Whisper) |
-| --- | :---: | :---: | :---: |
-| Texto simples (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Documento do Word (`.docx`) | ✓ | ✗ | ✗ |
-| Legendas (`.srt`) | ✓ | ✓ | `srt` |
-| Legendas web (`.vtt`) | ✓ | ✓ | `vtt` |
-| Tabela (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Rótulos do Audacity (`.aud`) | ✗ | ✓ | ✗ |
+| Formato | Exportar | Pasta (WhisperX) | Pasta (API do Whisper) | Linha de comando |
+| --- | :---: | :---: | :---: | :---: |
+| Texto simples (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Documento do Word (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| Legendas (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| Legendas web (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| Legendas com estilo (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| Tabela (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Rótulos do Audacity (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| Vídeo com legendas (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-Consulte [Exportar](/pt/guides/transcript/#copie-e-exporte) e o [cartão Saída](/pt/guides/transcription-settings/#pasta-e-saída).
+O resumo é exportado sozinho para `.txt`, `.md` e `.docx`. Consulte [Exportar](/pt/guides/transcript/#copie-e-exporte), o [cartão Saída](/pt/guides/transcription-settings/#pasta-e-saída) e a [linha de comando](/pt/reference/cli/#opções).
 
 ## Idiomas do áudio
 

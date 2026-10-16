@@ -25,7 +25,7 @@ Yükleyiciyi çalıştırın ve adımlarını izleyin. Yönetici izni gerektirme
 
 ### macOS
 
-`.dmg` dosyasını açın ve **Audiotext**'i **Uygulamalar** klasörüne sürükleyin. Uygulama Apple tarafından onaylanmadığı için macOS ilk açılışta onu engeller: **Sistem Ayarları** → **Gizlilik ve Güvenlik** bölümüne gidin ve Audiotext ile ilgili mesajın yanındaki **Yine de Aç**'a tıklayın. macOS'ta CUDA bulunmadığından WhisperX işlemcide çalışır. PyTorch artık desteklemediği için Intel işlemcili Mac'ler desteklenmez.
+`.dmg` dosyasını açın ve **Audiotext**'i **Uygulamalar** klasörüne sürükleyin. Uygulama Apple tarafından onaylanmadığı için macOS ilk açılışta onu engeller: **Sistem Ayarları** → **Gizlilik ve Güvenlik** bölümüne gidin ve Audiotext ile ilgili mesajın yanındaki **Yine de Aç**'a tıklayın. Mac'lerde WhisperX, [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) ile Apple Silicon'un grafik işlemcisinde, işlemciden çok daha hızlı ve hiçbir eklenti olmadan yazıya döker. PyTorch artık desteklemediği için Intel işlemcili Mac'ler desteklenmez.
 
 ### Linux
 
@@ -49,7 +49,7 @@ GPU eklentisi Windows'ta yaklaşık 2 GB, Linux'ta 4 GB'lık bir indirmedir, bu 
 
 ## Gereksinimler
 
-- **WhisperX** bilgisayarınızda çalışır. Her işlemcide çalışır, ancak CUDA destekli bir NVIDIA ekran kartında çok daha hızlıdır. Donanımınıza uygun modeli seçmek için [Motorlar](/tr/reference/engines/) sayfasına bakın.
+- **WhisperX** bilgisayarınızda çalışır. Her işlemcide çalışır, ancak CUDA destekli bir NVIDIA ekran kartında veya Apple Silicon'lu bir Mac'in grafik işlemcisinde çok daha hızlıdır. Donanımınıza uygun modeli seçmek için [Motorlar](/tr/reference/engines/) sayfasına bakın.
 - **Whisper API** ve **Google API** uzak sunucularda çalışır; internet bağlantısı gerektirir ama güçlü donanım gerektirmez.
 - Mikrofondan yazıya dökmek için sisteminizin bir giriş aygıtı algılaması gerekir.
 - Linux'ta kayıt ve oynatma için [PortAudio](https://www.portaudio.com/) gerekir (Ubuntu veya Debian'da `sudo apt install libportaudio2`).
@@ -58,7 +58,7 @@ GPU eklentisi Windows'ta yaklaşık 2 GB, Linux'ta 4 GB'lık bir indirmedir, bu 
 
 Yeni bir sürüm yayımlandığında Audiotext üst çubukta **Sürüm … kullanılabilir** düğmesini gösterir. Sürümün sayfasını açmak için düğmeye tıklayın, sisteminize uygun dosyayı indirin ve ilk seferdeki gibi kurun: Windows'ta yeni yükleyiciyi çalıştırın, macOS'ta yeni uygulamayı **Uygulamalar** klasörüne sürükleyin veya Linux'ta yeni arşivin `install.sh` dosyasını çalıştırın. Önceki sürüm değiştirilir; ayarlarınız ve geçmişiniz ise [kullanıcı yapılandırma klasörünüzde](/tr/reference/files-and-data/#kullanıcı-yapılandırma-klasörü) saklandığı için korunur. GPU eklentisini kullanıyorsanız kurulum sırasında onu yeniden seçin.
 
-Yeni bir sürümü kendiniz denetlemek için **Tercihler** → **Hakkında** → **Güncellemeleri denetle**'yi açın. Uygulama açılırken denetlemeyi durdurmak için **Genel** → **Güncellemeler**'i kapatın.
+Yeni bir sürümü kendiniz denetlemek için **Tercihler** → **Hakkında** → **Güncellemeleri denetle**'yi açın. Uygulama açılırken denetlemeyi durdurmak için **Genel** → **Güncellemeleri otomatik denetle**'i kapatın.
 
 ## Uygulamayı kaldırın
 

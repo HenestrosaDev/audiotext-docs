@@ -15,13 +15,14 @@ sidebar:
 - **日期格式**：转写日期的显示方式，使用界面语言：短（`2026/10/4`）、中（`2026年10月4日`，默认）、长或 ISO（`2026-10-04`）。菜单会用示例显示每种格式（看起来相同的格式只显示一次）。
 - **时间格式**：**自动**（界面语言的时钟）、12 小时制（`下午1:30`）或 24 小时制（`13:30`）。
 - **通知**：转写完成时显示系统通知（对于文件夹，在其所有文件都完成时；对于监视的文件夹，每完成一个新文件时）。默认开启。在 macOS 上通知来自**脚本编辑器**，在 Windows 上来自 **Windows PowerShell**，因此需在系统设置中为这些应用允许或关闭通知。在 Linux 上需要 `notify-send`（`libnotify-bin` 或 `libnotify` 软件包）。
-- **更新**：打开应用时检查是否有新版本，如果有，会在顶部栏显示**版本 … 可用**按钮，点击即可打开其下载页面。不会提供预发布版本。默认开启。
+- **自动检查更新**：打开应用时检查是否有新版本，如果有，会在顶部栏显示**版本 … 可用**按钮，点击即可打开其下载页面。不会提供预发布版本。默认开启。
 
-## AI
+## 提供商
 
-[摘要和翻译](/zh-cn/guides/summary-and-translation/)的提供商：
+[摘要、提问和翻译](/zh-cn/guides/summary-and-translation/)的提供商：
 
 - **摘要** → **提供商**和**模型**。
+- **提问** → **提供商**和**模型**：用于回答有关转写的问题。在你更改之前，与摘要的相同。
 - **翻译** → **提供商**和**模型**。DeepL 和 Google Translate 没有可选的模型。
 - **Ollama** → **服务器 URL**：Ollama 的地址，默认为 `http://localhost:11434`。
 
@@ -29,39 +30,49 @@ sidebar:
 
 ## API 密钥
 
-各项服务的密钥。点击**设置…**输入密钥，或点击**更改…**替换（留空即可删除）。密钥保存在系统的凭据存储中。
+各项服务的密钥。点击**设置 API 密钥…**输入密钥，或点击**更改 API 密钥…**替换（留空即可删除）。密钥保存在系统的凭据存储中。密钥按用途分组，已设置的密钥会显示一个对勾。
 
-| 密钥 | 用途 |
-| --- | --- |
-| OpenAI API 密钥 | Whisper API，以及使用 OpenAI 生成摘要和翻译 |
-| Anthropic API 密钥 | 使用 Claude 生成摘要和翻译 |
-| DeepSeek API 密钥 | 使用 DeepSeek 生成摘要和翻译 |
-| Gemini API 密钥 | 使用 Gemini（来自 Google AI Studio）生成摘要和翻译 |
-| Mistral API 密钥 | 使用 Mistral 生成摘要和翻译 |
-| xAI API 密钥 | 使用 Grok 生成摘要和翻译 |
-| DeepL API 密钥 | 使用 DeepL 翻译（免费套餐的密钥也可以） |
-| Google API 密钥 | 超出免费额度的 Google Speech-to-Text，以及 Google Translate（Cloud Translation API） |
-| Hugging Face 令牌 | 使用 WhisperX 识别说话人 |
+| 分组 | 密钥 | 用途 |
+| --- | --- | --- |
+| **LLM 提供商** | OpenAI API 密钥 | Whisper API，以及使用 OpenAI 生成摘要、提问和翻译 |
+| | Anthropic API 密钥 | 使用 Claude 生成摘要、提问和翻译 |
+| | DeepSeek API 密钥 | 使用 DeepSeek 生成摘要、提问和翻译 |
+| | Gemini API 密钥 | 使用 Gemini（来自 Google AI Studio）生成摘要、提问和翻译 |
+| | Mistral API 密钥 | 使用 Mistral 生成摘要、提问和翻译 |
+| | xAI API 密钥 | 使用 Grok 生成摘要、提问和翻译 |
+| **翻译** | DeepL API 密钥 | 使用 DeepL 翻译（免费套餐的密钥也可以） |
+| | Google API 密钥 | 超出免费额度的 Google Speech-to-Text，以及 Google Translate（Cloud Translation API） |
+| **转写** | Hugging Face 令牌 | 使用 WhisperX 识别说话人 |
 
 :::caution
 各提供商会对其 API 的使用收费，Audiotext 对此不承担责任。如果 OpenAI 对新密钥返回 `429` 错误，请参阅[故障排除](/zh-cn/help/troubleshooting/#whisper-api-返回-429-错误)。
 :::
 
-## WhisperX
+## 转写
 
-**计算类型**、**批处理大小**和**使用 CPU**。请参阅 [WhisperX 高级选项](/zh-cn/reference/engines/#高级选项)。
+各引擎的选项，每个引擎一个部分。
+
+### WhisperX
+
+**计算类型**、**批处理大小**和**使用 CPU**。请参阅 [WhisperX 高级选项](/zh-cn/reference/engines/#高级选项)。在搭载 Apple 芯片的 Mac 上，除非开启了**使用 CPU**，否则 WhisperX 会在其 GPU 上转写。请参阅[在 Mac 上](/zh-cn/reference/engines/#在-mac-上)。在 Mac 的 GPU 上，**计算类型**和**批处理大小**的提示会说明它们不适用，**使用 CPU**则链接到**支持的模型**。
+
+### Whisper API
+
+**温度**和**单词时间戳**。请参阅 [Whisper API 选项](/zh-cn/reference/engines/#选项)。
 
 ## 字幕
 
-使用 WhisperX 转写文件夹时所保存的 `.srt` 和 `.vtt` 文件的选项：
+字幕的拆分方式：适用于视频上和**字幕**模式中显示的字幕、导出的字幕文件以及[带字幕的视频](/zh-cn/guides/transcript/#导出带字幕的视频)。每个选项都有一个用于横屏视频的值，以及一个用于更窄的竖屏视频（高大于宽，例如手机视频）的值：
 
-- **高亮单词**：在说出每个字词时为其加下划线。默认关闭。
-- **最大行数**：每条字幕的最大行数。默认 `2`。
-- **最大行宽**：换行前每行的最大字符数。默认 `42`。
+| 选项 | 横屏 | 竖屏 |
+| --- | :---: | :---: |
+| **每条字幕最大行数** | `2` | `2` |
+| **每行最大字符数** | `42` | `24` |
+| **中文、日语和韩语**：这些语言每行的字符数，因为它们的字符宽度约为拉丁字符的两倍 | `16` | `10` |
 
-## Whisper API
+一条字幕的各行长度会尽量均衡，不使用空格书写的语言会在字符之间换行。
 
-**温度**和**单词时间戳**。请参阅 [Whisper API 选项](/zh-cn/reference/engines/#选项)。
+**高亮单词**会在 `.srt` 和 `.vtt` 文件中，在说出每个字词时为其加下划线。默认关闭。
 
 ## 关于
 

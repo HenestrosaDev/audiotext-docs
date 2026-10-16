@@ -15,7 +15,7 @@ Die **Transkriptionsmethode**:
 
 | Engine | Läuft auf | Kosten | Hinweise |
 | --- | --- | --- | --- |
-| **WhisperX** (Standard) | Ihrem Computer | Kostenlos und unbegrenzt | Privat und offline. Mehr Optionen: Sprecher, Zeiten pro Wort, Live-Text. |
+| **WhisperX** (Standard) | Ihrem Computer | Kostenlos und unbegrenzt | Privat und offline. Mehr Optionen: Sprecher, Zeiten pro Wort, Live-Text. Läuft auf der GPU von Macs mit Apple Silicon. |
 | **Whisper-API** | Servern von OpenAI | Kostenpflichtig pro Minute | Erfordert einen [OpenAI-API-Schlüssel](/de/reference/preferences/#api-schlüssel). Für Computer, auf denen WhisperX nicht flüssig läuft. |
 | **Google-API** | Servern von Google | Kostenloses Kontingent oder kostenpflichtig | Geringere Qualität und keine Zeitstempel. Ein API-Schlüssel ist optional. |
 
@@ -44,8 +44,8 @@ Sie werden von WhisperX und der Whisper-API verwendet, außer vom Modell `gpt-4o
 
 ## Optionen
 
-- **Zeiten pro Wort** (WhisperX): richtet jedes Wort am Audio aus, um es beim Abspielen hervorzuheben. Dauert etwas länger. Untertitel nutzen sie bereits.
-- **Sprache extrahieren**: reduziert Musik und Hintergrundgeräusche vor dem Transkribieren.
+- **Zeiten pro Wort** (WhisperX): richtet jedes Wort am Audio aus, um es beim Abspielen hervorzuheben und um die Wörter zu [prüfen](/de/guides/transcript/#wörter-mit-geringer-konfidenz-prüfen), bei denen es am wenigsten sicher ist. Dauert etwas länger. Standardmäßig aktiv. Die Untertitel brauchen die Zeiten der Wörter, daher wird die Option eingeschaltet und gesperrt, solange `.srt` oder `.vtt` in den **Dateitypen** eines Ordners gewählt ist; Ihre eigene Wahl kehrt zurück, sobald sie nicht mehr gewählt sind.
+- **Hintergrundgeräusche reduzieren**: reduziert Brummen und gleichmäßige Hintergrundgeräusche und gleicht leise Sprache an, bevor transkribiert wird. Dauert länger.
 - **Sprecher erkennen** (WhisperX): kennzeichnet, wer in welchem Teil spricht, z. B. `SPEAKER_00`. Wenn Sie wissen, wie viele Personen sprechen, geben Sie es unter **Anzahl der Sprecher** an (`0` erkennt sie automatisch). Erfordert ein kostenloses Hugging-Face-Token; siehe [Sprecher erkennen](#sprecher-erkennen). Bei der Whisper-API erkennt das Modell `gpt-4o-transcribe-diarize` die Sprecher.
 
 ### Sprecher erkennen

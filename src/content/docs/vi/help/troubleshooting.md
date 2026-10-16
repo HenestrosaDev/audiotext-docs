@@ -13,7 +13,7 @@ Lần đầu dùng một mô hình, mô hình đó sẽ được tải xuống, 
 
 GPU của bạn không đủ bộ nhớ cho cài đặt hiện tại. Hãy thử lần lượt:
 
-1. Giảm **Kích thước lô** (ví dụ `4`) trong **Tùy chọn ưu tiên** → **WhisperX**.
+1. Giảm **Kích thước lô** (ví dụ `4`) trong **Tùy chọn ưu tiên** → **Chép lời**.
 2. Dùng mô hình nhỏ hơn (ví dụ `small` hoặc `base`).
 3. Dùng **Kiểu tính toán** nhẹ hơn (ví dụ `int8`).
 
@@ -21,7 +21,7 @@ Hai cách cuối có thể làm giảm chất lượng. Xem [Công cụ](/vi/ref
 
 ## Chép lời mất quá nhiều thời gian
 
-Tốc độ của WhisperX phụ thuộc vào phần cứng, nên đừng mong kết quả tức thì trên CPU phổ thông. Hãy thử mô hình nhỏ hơn như `small`, `large-v3-turbo` trên GPU, hoặc kiểu tính toán `int8`. Bạn cũng có thể dùng **Whisper API** hoặc **Google API**, vốn chạy trên máy chủ từ xa.
+Tốc độ của WhisperX phụ thuộc vào phần cứng, nên đừng mong kết quả tức thì trên CPU phổ thông. Hãy thử mô hình nhỏ hơn như `small`, `large-v3-turbo` trên GPU, hoặc kiểu tính toán `int8`. Trên máy Mac dùng Apple Silicon, hãy kiểm tra **Dùng CPU** đã tắt trong **Tùy chọn ưu tiên** → **Chép lời**, để chép lời trên GPU. Bạn cũng có thể dùng **Whisper API** hoặc **Google API**, vốn chạy trên máy chủ từ xa.
 
 ## Whisper API trả về lỗi `429`
 
@@ -78,11 +78,26 @@ Các tệp đã có bản chép lời sẽ bị bỏ qua. Bật **Ghi đè tệp
 
 Google API không thể phát hiện ngôn ngữ. Hãy chọn **Ngôn ngữ của âm thanh** trong cài đặt.
 
-## Tóm tắt hoặc bản dịch thất bại
+## Tóm tắt, câu trả lời hoặc bản dịch thất bại
 
 - **DeepL không thể dịch sang ….**: DeepL không hỗ trợ ngôn ngữ đó. Hãy chọn nhà cung cấp khác, như một mô hình ngôn ngữ.
-- **Phản hồi của mô hình quá dài.**, **Mô hình không trả về bản tóm tắt hợp lệ.** hoặc **Mô hình không trả về bản dịch hợp lệ.**: mô hình không viết tóm tắt hoặc bản dịch theo định dạng mong đợi. Hãy thử lại, hoặc chọn mô hình lớn hơn trong **Tùy chọn ưu tiên** → **AI**. Các mô hình nhỏ của Ollama thất bại thường xuyên hơn.
+- **Phản hồi của mô hình quá dài.**, **Mô hình không trả về bản tóm tắt hợp lệ.**, **Mô hình không trả về phản hồi hợp lệ.** hoặc **Mô hình không trả về bản dịch hợp lệ.**: mô hình không viết tóm tắt, câu trả lời hoặc bản dịch theo định dạng mong đợi. Hãy thử lại, hoặc chọn mô hình lớn hơn trong **Tùy chọn ưu tiên** → **Nhà cung cấp**. Các mô hình nhỏ của Ollama thất bại thường xuyên hơn.
 - Với mọi lỗi khác, hãy kiểm tra khóa API của nhà cung cấp đã được đặt trong **Tùy chọn ưu tiên** → **Khóa API** và tài khoản của bạn còn tín dụng.
+
+## Các từ có độ tin cậy thấp không được gạch chân
+
+Hãy kiểm tra **Đánh dấu các từ có độ tin cậy thấp** đã bật trong menu `⋯` của bản chép lời. Nếu bản chép lời không có điểm, menu cho biết lý do:
+
+- **Bật “Thời gian theo từng từ” và phiên âm lại**: WhisperX chấm điểm các từ khi xác định thời gian của chúng.
+- **Không có mô hình căn chỉnh cho ngôn ngữ này**: các từ của ngôn ngữ đó không thể được căn thời gian hay chấm điểm.
+- **Phiên âm lại để chấm điểm các từ**: nó được chép lời trước khi các từ được chấm điểm.
+- **Chỉ WhisperX và whisper-1 chấm điểm các từ**: các công cụ và mô hình khác không làm vậy.
+
+Xem [Rà soát các từ có độ tin cậy thấp](/vi/guides/transcript/#rà-soát-các-từ-có-độ-tin-cậy-thấp).
+
+## Video có phụ đề hiển thị ô vuông
+
+Nếu **Đã xuất sang …, nhưng không có phông chữ nào có các ký tự này nên chúng hiển thị dưới dạng ô vuông: …** xuất hiện sau khi [xuất video kèm phụ đề](/vi/guides/transcript/#xuất-video-kèm-phụ-đề), không có phông chữ nào trong hệ thống có thể vẽ các ký tự đó. Hãy cài một phông chữ cho hệ chữ đó (ví dụ [Noto](https://fonts.google.com/noto)) và xuất lại.
 
 ## Không thể kiểm tra cập nhật
 

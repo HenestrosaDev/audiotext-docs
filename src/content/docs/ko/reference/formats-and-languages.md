@@ -15,18 +15,20 @@ Audiotext는 FFmpeg로 동영상 파일에서 오디오를 추출하므로 둘 �
 
 ## 출력 형식
 
-| 형식 | 내보내기 | 폴더(WhisperX) | 폴더(Whisper API) |
-| --- | :---: | :---: | :---: |
-| 일반 텍스트 (`.txt`) | ✓ | ✓ | `text` |
-| Markdown (`.md`) | ✓ | ✗ | ✗ |
-| Word 문서 (`.docx`) | ✓ | ✗ | ✗ |
-| 자막 (`.srt`) | ✓ | ✓ | `srt` |
-| 웹 자막 (`.vtt`) | ✓ | ✓ | `vtt` |
-| 표 (`.tsv`) | ✓ | ✓ | ✗ |
-| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` |
-| Audacity 라벨 (`.aud`) | ✗ | ✓ | ✗ |
+| 형식 | 내보내기 | 폴더(WhisperX) | 폴더(Whisper API) | 명령줄 |
+| --- | :---: | :---: | :---: | :---: |
+| 일반 텍스트 (`.txt`) | ✓ | ✓ | `text` | ✓ |
+| Markdown (`.md`) | ✓ | ✗ | ✗ | ✓ |
+| Word 문서 (`.docx`) | ✓ | ✗ | ✗ | ✓ |
+| 자막 (`.srt`) | ✓ | ✓ | `srt` | ✓ |
+| 웹 자막 (`.vtt`) | ✓ | ✓ | `vtt` | ✓ |
+| 스타일 자막 (`.ass`) | ✓ | ✗ | ✗ | ✓ |
+| 표 (`.tsv`) | ✓ | ✓ | ✗ | ✓ |
+| JSON (`.json`) | ✓ | ✓ | `json`, `verbose_json` | ✓ |
+| Audacity 라벨 (`.aud`) | ✗ | ✓ | ✗ | WhisperX |
+| 자막이 있는 동영상 (`.mp4`) | ✓ | ✗ | ✗ | ✗ |
 
-[내보내기](/ko/guides/transcript/#복사와-내보내기)와 [출력 카드](/ko/guides/transcription-settings/#폴더와-출력)를 참고하세요.
+요약은 따로 `.txt`, `.md`, `.docx`로 내보낼 수 있습니다. [내보내기](/ko/guides/transcript/#복사와-내보내기), [출력 카드](/ko/guides/transcription-settings/#폴더와-출력), [명령줄](/ko/reference/cli/#옵션)을 참고하세요.
 
 ## 오디오 언어
 

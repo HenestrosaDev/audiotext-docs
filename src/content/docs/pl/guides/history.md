@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Każda transkrypcja jest przechowywana w historii, po lewej stronie okna, razem z podsumowaniem, tłumaczeniem i twoimi poprawkami. Przycisk po lewej stronie górnego paska pokazuje ją lub ukrywa.
+Każda transkrypcja jest przechowywana w historii, po lewej stronie okna, razem z podsumowaniem, pytaniami, tłumaczeniami i twoimi poprawkami. Przycisk po lewej stronie górnego paska pokazuje ją lub ukrywa.
 
 ## Znajdź transkrypcję
 
@@ -32,7 +32,7 @@ Grupy łączą powiązane transkrypcje, np. z jednego projektu lub kursu. Utwór
 
 ## Usuń transkrypcję
 
-Usunięcie transkrypcji usuwa z historii ją, jej podsumowanie i tłumaczenie. Usuwane są też transkrypcje plików z folderu. Twoje pliki audio, wideo i zapisane pliki **nie** są usuwane.
+Usunięcie transkrypcji usuwa z historii ją, jej podsumowanie, pytania i tłumaczenia. Usuwane są też transkrypcje plików z folderu. Twoje pliki audio, wideo i zapisane pliki **nie** są usuwane.
 
 ## Nieudane i przerwane transkrypcje
 

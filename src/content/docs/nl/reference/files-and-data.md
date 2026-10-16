@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext bewaart je gegevens op je computer. Er wordt niets verstuurd, tenzij je een externe engine gebruikt (de Whisper-API of de Google-API) of een andere AI-aanbieder dan Ollama. Bij het openen vraagt het ook aan GitHub of er een nieuwe versie is, wat je kunt uitzetten via **Voorkeuren** → **Algemeen** → **Updates**.
+Audiotext bewaart je gegevens op je computer. Er wordt niets verstuurd, tenzij je een externe engine gebruikt (de Whisper-API of de Google-API) of een andere AI-aanbieder dan Ollama. Bij het openen vraagt het ook aan GitHub of er een nieuwe versie is, wat je kunt uitzetten via **Voorkeuren** → **Algemeen** → **Automatisch controleren op updates**.
 
 ## Configuratiemap van de gebruiker
 
@@ -20,7 +20,7 @@ De instellingen, de geschiedenis en de opnamen worden opgeslagen in je configura
 Deze bevat:
 
 - `config.ini`: je instellingen. Verwijder het bestand om de standaardwaarden te herstellen.
-- `history.json`: je transcripties, met hun samenvattingen, vertalingen en correcties.
+- `history.json`: je transcripties, met hun samenvattingen, vragen, vertalingen en correcties.
 - `media/`: de microfoonopnamen en de audio die van URL's is gedownload, zodat die later kan worden afgespeeld. Ze worden verwijderd als de bijbehorende transcriptie uit de geschiedenis wordt verwijderd.
 
 Stel de omgevingsvariabele `AUDIOTEXT_CONFIG_DIR` in om een andere map te gebruiken, bijv. voor een draagbare installatie.
@@ -47,7 +47,7 @@ Omgevingsvariabelen met de namen van de sleutels hebben voorrang op de sleutels 
 
 | Variabele | Dienst |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (Whisper-API, samenvattingen, vertalingen) |
+| `OPENAI_API_KEY` | OpenAI (Whisper-API, samenvattingen, vragen, vertalingen) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Omgevingsvariabelen met de namen van de sleutels hebben voorrang op de sleutels 
 
 ## Modellen
 
-De modellen van WhisperX en van de sprekerherkenning worden gedownload wanneer ze voor het eerst worden gebruikt en door Hugging Face opgeslagen in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` op Windows). De modellen die de woorden van het Engels, Frans, Duits, Spaans en Italiaans uitlijnen, worden door PyTorch opgeslagen in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` op Windows). Verwijder die mappen om de ruimte die ze innemen vrij te maken. Ook andere apps kunnen daar hun modellen bewaren, en downloaden ze opnieuw wanneer ze nodig zijn, net als Audiotext.
+De modellen van WhisperX (en van MLX Whisper, op Macs) en van de sprekerherkenning worden gedownload wanneer ze voor het eerst worden gebruikt en door Hugging Face opgeslagen in `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` op Windows). De modellen die de woorden van het Engels, Frans, Duits, Spaans en Italiaans uitlijnen, worden door PyTorch opgeslagen in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` op Windows). Verwijder die mappen om de ruimte die ze innemen vrij te maken. Ook andere apps kunnen daar hun modellen bewaren, en downloaden ze opnieuw wanneer ze nodig zijn, net als Audiotext.

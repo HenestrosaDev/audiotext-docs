@@ -41,8 +41,9 @@ Si hay otra transcripción en curso, el botón pasa a ser **Añadir a la cola**,
 Cuando termina, se abre la transcripción:
 
 - Haz clic en un segmento para reproducir el audio desde ahí.
-- Cambia entre **Transcripción**, **Texto plano** y **Resumen**.
-- Usa **Traducir**, **Copiar** y **Exportar** para traducirla, copiarla o guardarla como archivo.
+- Cambia entre **Subtítulos**, **Texto plano**, **Resumen** y **Preguntar**, para hacer preguntas sobre ella.
+- Usa **Traducir** para traducirla, y los botones de la cabecera de la transcripción para buscar y reemplazar en ella, copiarla o guardarla como archivo.
+- Revisa las palabras subrayadas, de las que el motor está menos seguro.
 
 Consulta [La transcripción](/es/guides/transcript/) para saber todo lo que puedes hacer con ella.
 
@@ -52,8 +53,10 @@ Consulta [La transcripción](/es/guides/transcript/) para saber todo lo que pued
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Empezar la transcripción, o empezar y detener la grabación |
 | `Ctrl+O` / `⌘O` | Elegir un archivo (o una carpeta, en el origen de carpeta) |
-| `Ctrl+S` / `⌘S` | Exportar la transcripción que se muestra |
-| `Ctrl+F` / `⌘F` | Buscar en la transcripción |
+| `Ctrl+S` / `⌘S` | Exportar el texto con el que trabajas: la transcripción o su traducción |
+| `Ctrl+F` / `⌘F` | Buscar y reemplazar en el texto con el que trabajas (o buscar en el resumen) |
+| `Ctrl+J` / `⌘J` | Ir a la siguiente palabra de baja confianza |
+| `Mayús+Ctrl+J` / `⇧⌘J` | Ir a la anterior palabra de baja confianza |
 | `Esc` | Cancelar la transcripción en curso |
 | `Espacio` | Reproducir o pausar el audio |
 | `←` / `→` | Retroceder o avanzar 5 segundos |

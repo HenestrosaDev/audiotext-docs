@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext bewahrt Ihre Daten auf Ihrem Computer auf. Es wird nichts gesendet, außer Sie verwenden eine entfernte Engine (die Whisper-API oder die Google-API) oder einen anderen KI-Anbieter als Ollama. Beim Öffnen fragt es außerdem bei GitHub nach, ob es eine neue Version gibt, was Sie unter **Einstellungen** → **Allgemein** → **Updates** deaktivieren können.
+Audiotext bewahrt Ihre Daten auf Ihrem Computer auf. Es wird nichts gesendet, außer Sie verwenden eine entfernte Engine (die Whisper-API oder die Google-API) oder einen anderen KI-Anbieter als Ollama. Beim Öffnen fragt es außerdem bei GitHub nach, ob es eine neue Version gibt, was Sie unter **Einstellungen** → **Allgemein** → **Automatisch nach Updates suchen** deaktivieren können.
 
 ## Benutzerkonfigurationsordner
 
@@ -20,7 +20,7 @@ Einstellungen, Verlauf und Aufnahmen werden in Ihrem Benutzerkonfigurationsordne
 Er enthält:
 
 - `config.ini`: Ihre Einstellungen. Löschen Sie die Datei, um die Standardwerte wiederherzustellen.
-- `history.json`: Ihre Transkriptionen mit Zusammenfassungen, Übersetzungen und Korrekturen.
+- `history.json`: Ihre Transkriptionen mit Zusammenfassungen, Fragen, Übersetzungen und Korrekturen.
 - `media/`: die Mikrofonaufnahmen und das von URLs heruntergeladene Audio, damit sie später abgespielt werden können. Sie werden entfernt, wenn die zugehörige Transkription aus dem Verlauf gelöscht wird.
 
 Um einen anderen Ordner zu verwenden, z. B. für eine portable Installation, setzen Sie die Umgebungsvariable `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Umgebungsvariablen mit den Namen der Schlüssel haben Vorrang vor den in der App
 
 | Variable | Dienst |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (Whisper-API, Zusammenfassungen, Übersetzungen) |
+| `OPENAI_API_KEY` | OpenAI (Whisper-API, Zusammenfassungen, Fragen, Übersetzungen) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Umgebungsvariablen mit den Namen der Schlüssel haben Vorrang vor den in der App
 
 ## Modelle
 
-Die Modelle von WhisperX und der Sprechererkennung werden bei der ersten Verwendung heruntergeladen und von Hugging Face in `~/.cache/huggingface` zwischengespeichert (`%USERPROFILE%\.cache\huggingface` unter Windows). Die Modelle, die die Wörter auf Englisch, Französisch, Deutsch, Spanisch und Italienisch ausrichten, speichert PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` unter Windows). Löschen Sie diese Ordner, um den belegten Platz freizugeben. Auch andere Apps können dort ihre Modelle ablegen und laden sie, wie Audiotext, bei Bedarf erneut herunter.
+Die Modelle von WhisperX (und von MLX Whisper auf Macs) und der Sprechererkennung werden bei der ersten Verwendung heruntergeladen und von Hugging Face in `~/.cache/huggingface` zwischengespeichert (`%USERPROFILE%\.cache\huggingface` unter Windows). Die Modelle, die die Wörter auf Englisch, Französisch, Deutsch, Spanisch und Italienisch ausrichten, speichert PyTorch in `~/.cache/torch` (`%USERPROFILE%\.cache\torch` unter Windows). Löschen Sie diese Ordner, um den belegten Platz freizugeben. Auch andere Apps können dort ihre Modelle ablegen und laden sie, wie Audiotext, bei Bedarf erneut herunter.

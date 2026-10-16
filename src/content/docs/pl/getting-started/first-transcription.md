@@ -41,8 +41,9 @@ Jeśli trwa inna transkrypcja, przycisk zmienia się na **Dodaj do kolejki**, a 
 Po zakończeniu otwiera się transkrypcja:
 
 - Kliknij segment, aby odtworzyć nagranie od tego miejsca.
-- Przełączaj między widokami **Transkrypcja**, **Zwykły tekst** i **Podsumowanie**.
-- Użyj przycisków **Przetłumacz**, **Kopiuj** i **Eksportuj**, aby ją przetłumaczyć, skopiować lub zapisać jako plik.
+- Przełączaj między widokami **Napisy**, **Zwykły tekst**, **Podsumowanie** i **Zapytaj**, aby zadawać pytania o nią.
+- Użyj przycisku **Przetłumacz**, aby ją przetłumaczyć, a przycisków w nagłówku transkrypcji, aby znaleźć i zamienić w niej tekst, skopiować ją lub zapisać jako plik.
+- Sprawdź podkreślone słowa, których silnik jest najmniej pewny.
 
 Zobacz [Transkrypcja](/pl/guides/transcript/), aby poznać wszystko, co możesz z nią zrobić.
 
@@ -52,8 +53,10 @@ Zobacz [Transkrypcja](/pl/guides/transcript/), aby poznać wszystko, co możesz 
 | --- | --- |
 | `Ctrl+Enter` / `⌘↩` | Rozpoczęcie transkrypcji albo rozpoczęcie i zatrzymanie nagrywania |
 | `Ctrl+O` / `⌘O` | Wybór pliku (lub folderu w źródle Folder) |
-| `Ctrl+S` / `⌘S` | Eksport wyświetlanej transkrypcji |
-| `Ctrl+F` / `⌘F` | Wyszukiwanie w transkrypcji |
+| `Ctrl+S` / `⌘S` | Eksport tekstu, nad którym pracujesz: transkrypcji lub jej tłumaczenia |
+| `Ctrl+F` / `⌘F` | Znajdowanie i zamiana w tekście, nad którym pracujesz (lub wyszukiwanie w podsumowaniu) |
+| `Ctrl+J` / `⌘J` | Przejście do następnego słowa o niskiej pewności |
+| `Shift+Ctrl+J` / `⇧⌘J` | Przejście do poprzedniego słowa o niskiej pewności |
 | `Esc` | Anulowanie bieżącej transkrypcji |
 | `Spacja` | Odtwarzanie lub wstrzymanie nagrania |
 | `←` / `→` | Cofnięcie lub przewinięcie o 5 sekund |

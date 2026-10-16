@@ -18,10 +18,11 @@ Audiotext transkrybuje za pomocą jednego z trzech silników, wybieranego na kar
 | Rozpoznaje mówców | ✓ (token Hugging Face) | `gpt-4o-transcribe-diarize` | ✗ |
 | Czasy słów | ✓ | `whisper-1` | ✗ |
 | Tekst na żywo | ✓ | ✗ | ✗ |
+| [Słowa o niskiej pewności](/pl/guides/transcript/#sprawdzanie-słów-o-niskiej-pewności) | ✓ (czasy słów) | `whisper-1` (segmenty) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) to szybka implementacja Whisper od OpenAI, która działa na twoim komputerze, więc nagrania nigdy go nie opuszczają. Działa na procesorze lub, znacznie szybciej, na karcie graficznej NVIDIA z CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) to szybka implementacja Whisper od OpenAI, która działa na twoim komputerze, więc nagrania nigdy go nie opuszczają. Działa na procesorze lub, znacznie szybciej, na karcie graficznej NVIDIA z CUDA albo na karcie graficznej Maca z Apple Silicon.
 
 ### Model
 
@@ -47,13 +48,23 @@ Większe modele są dokładniejsze, ale wolniejsze i zużywają więcej pamięci
 Aby szybko wypróbować Audiotext, wybierz `tiny` lub `small`. Dla najlepszej jakości użyj `large-v2` lub `large-v3-turbo` na karcie graficznej.
 :::
 
+### Na Macu
+
+Na Macach z Apple Silicon [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) transkrybuje na karcie graficznej, znacznie szybciej niż na procesorze. Następnie WhisperX jak zawsze wyrównuje słowa i rozpoznaje mówców na procesorze, więc transkrypcje zachowują czasy słów, oceny i mówców.
+
+- Wersja MLX modelu jest pobierana przy pierwszym użyciu.
+- `distil-small.en`, `distil-large-v2` i `distil-large-v3.5` nie mają wersji MLX, więc działają na procesorze.
+- [Tekst na żywo](/pl/guides/sources/#tekst-na-żywo) zawsze działa na procesorze.
+- **Typ obliczeń** i **Rozmiar partii** nie mają zastosowania na karcie graficznej, bo MLX zawsze liczy z połową precyzji i bez partii.
+- Aby transkrybować na procesorze, włącz **Używaj CPU** w **Preferencje** → **Transkrypcja**.
+
 ### Opcje zaawansowane
 
-Znajdują się w **Preferencje** → **WhisperX**. Zmieniaj je tylko w razie problemów lub jeśli wiesz, co robisz: karta graficzna bez wolnej pamięci może zawiesić system.
+Znajdują się w **Preferencje** → **Transkrypcja** → **WhisperX**. Zmieniaj je tylko w razie problemów lub jeśli wiesz, co robisz: karta graficzna bez wolnej pamięci może zawiesić system.
 
-- **Typ obliczeń**: precyzja liczb modelu. `float16` jest szybszy na kartach graficznych (domyślny z CUDA). `int8` zużywa mniej pamięci i jest domyślny na procesorze, ponieważ wiele procesorów nie obsługuje wydajnie `float16`. `float32` jest najdokładniejszy, dla kart z ponad 8 GB VRAM.
+- **Typ obliczeń**: precyzja liczb modelu. `float16` jest szybszy na kartach graficznych NVIDIA (domyślny z CUDA). `int8` zużywa mniej pamięci i jest domyślny na procesorze, ponieważ wiele procesorów nie obsługuje wydajnie `float16`. `float32` jest najdokładniejszy, dla kart z ponad 8 GB VRAM.
 - **Rozmiar partii**: ile części nagrania jest przetwarzanych jednocześnie (domyślnie `8`). Nie wpływa na jakość, tylko na szybkość. Zmniejsz go, jeśli brakuje pamięci; zalecane jest maksymalnie `16`.
-- **Używaj CPU**: uruchamia WhisperX na procesorze. Zawsze włączone, jeśli nie znaleziono karty z CUDA.
+- **Używaj CPU**: uruchamia WhisperX na procesorze. Zawsze włączone, jeśli nie znaleziono karty graficznej (karty NVIDIA z CUDA ani karty graficznej Maca z Apple Silicon).
 
 ## API Whisper
 
@@ -61,7 +72,7 @@ Korzysta z [API OpenAI do zamiany mowy na tekst](https://platform.openai.com/doc
 
 | Model | Znaczniki czasu | Mówcy | Uwagi |
 | --- | :---: | :---: | --- |
-| `whisper-1` (domyślny) | ✓ | ✗ | Można go odtwarzać segment po segmencie i tworzyć napisy. Tłumaczy na angielski. |
+| `whisper-1` (domyślny) | ✓ | ✗ | Można go odtwarzać segment po segmencie i tworzyć napisy. Tłumaczy na angielski. Ocenia każdy segment, aby sprawdzić te o niskiej pewności. |
 | `gpt-transcribe` | ✗ | ✗ | Dokładniejszy, ale bez znaczników czasu. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Rozpoznaje mówców. Nie używa słów kluczowych ani opisu. |
 
@@ -72,8 +83,8 @@ Długie nagrania są dzielone na fragmenty do 10 minut, cięte w miejscu ciszy, 
 ### Opcje
 
 - **Format odpowiedzi** (karta Wynik, dla folderów): `text` (domyślny), `json`, `verbose_json`, `srt` lub `vtt`. Napisy i `verbose_json` wymagają modelu ze znacznikami czasu.
-- **Temperatura** (Preferencje → Whisper API): od 0 do 1. Wysokie wartości, np. 0,8, czynią wynik bardziej losowym, a niskie, np. 0,2, bardziej skupionym. Przy 0 (domyślnie) model w razie potrzeby sam ją zwiększa.
-- **Znaczniki czasu słów** (Preferencje → Whisper API): czy `whisper-1` zwraca też znaczniki czasu każdego słowa, aby wyróżniać je podczas odtwarzania. Trwa dłużej. Domyślnie włączone.
+- **Temperatura** (Preferencje → Transkrypcja): od 0 do 1. Wysokie wartości, np. 0,8, czynią wynik bardziej losowym, a niskie, np. 0,2, bardziej skupionym. Przy 0 (domyślnie) model w razie potrzeby sam ją zwiększa.
+- **Znaczniki czasu słów** (Preferencje → Transkrypcja): czy `whisper-1` zwraca też znaczniki czasu każdego słowa, aby wyróżniać je podczas odtwarzania. Trwa dłużej. Domyślnie włączone.
 
 ## API Google
 

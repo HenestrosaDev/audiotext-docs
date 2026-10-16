@@ -18,10 +18,11 @@ Audiotext transcribes with one of three engines, chosen in the **Engine** card o
 | Identifies speakers | ✓ (Hugging Face token) | `gpt-4o-transcribe-diarize` | ✗ |
 | Word-level timings | ✓ | `whisper-1` | ✗ |
 | Live text | ✓ | ✗ | ✗ |
+| [Low-confidence words](/en/guides/transcript/#review-the-low-confidence-words) | ✓ (word-level timings) | `whisper-1` (segments) | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) is a fast implementation of OpenAI's Whisper that runs on your computer, so your audio never leaves it. It runs on the CPU or, much faster, on an NVIDIA GPU with CUDA.
+[WhisperX](https://github.com/m-bain/whisperX) is a fast implementation of OpenAI's Whisper that runs on your computer, so your audio never leaves it. It runs on the CPU or, much faster, on an NVIDIA GPU with CUDA or on the GPU of a Mac with Apple Silicon.
 
 ### Model
 
@@ -47,13 +48,23 @@ Larger models are more accurate, but slower and use more memory. The model is do
 To try Audiotext quickly, choose `tiny` or `small`. For the best quality, use `large-v2` or `large-v3-turbo` on a GPU.
 :::
 
+### On a Mac
+
+On Macs with Apple Silicon, [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) transcribes on the GPU, much faster than on the CPU. WhisperX then aligns the words and identifies the speakers on the CPU, as always, so the transcriptions keep their word timings, scores and speakers.
+
+- The MLX version of the model is downloaded the first time it's used.
+- `distil-small.en`, `distil-large-v2` and `distil-large-v3.5` have no MLX version, so they run on the CPU.
+- The [live text](/en/guides/sources/#live-text) always runs on the CPU.
+- **Compute type** and **Batch size** don't apply on the GPU, since MLX always calculates in half precision and without batches.
+- To transcribe on the CPU, turn on **Use CPU** in **Preferences** → **Transcription**.
+
 ### Advanced options
 
-They're in **Preferences** → **WhisperX**. Change them only if you have problems or know what you're doing: a GPU that runs out of memory can freeze your system.
+They're in **Preferences** → **Transcription** → **WhisperX**. Change them only if you have problems or know what you're doing: a GPU that runs out of memory can freeze your system.
 
-- **Compute type**: the precision of the numbers of the model. `float16` is faster on GPUs (the default with CUDA). `int8` uses less memory and is the default on the CPU, since many CPUs don't support `float16` efficiently. `float32` is the most precise, for GPUs with more than 8 GB of VRAM.
+- **Compute type**: the precision of the numbers of the model. `float16` is faster on NVIDIA GPUs (the default with CUDA). `int8` uses less memory and is the default on the CPU, since many CPUs don't support `float16` efficiently. `float32` is the most precise, for GPUs with more than 8 GB of VRAM.
 - **Batch size**: how many parts of the audio are processed at once (`8` by default). It doesn't change the quality, only the speed. Lower it if you run out of memory; up to `16` is recommended.
-- **Use CPU**: runs WhisperX on the CPU. It's always on if no CUDA GPU was found.
+- **Use CPU**: runs WhisperX on the CPU. It's always on if no GPU was found (an NVIDIA GPU with CUDA, or the GPU of a Mac with Apple Silicon).
 
 ## Whisper API
 
@@ -61,7 +72,7 @@ Uses the [speech-to-text API of OpenAI](https://platform.openai.com/docs/guides/
 
 | Model | Timestamps | Speakers | Notes |
 | --- | :---: | :---: | --- |
-| `whisper-1` (default) | ✓ | ✗ | Can be played segment by segment and subtitled. Translates into English. |
+| `whisper-1` (default) | ✓ | ✗ | Can be played segment by segment and subtitled. Translates into English. Scores each segment, to review the low-confidence ones. |
 | `gpt-transcribe` | ✗ | ✗ | More accurate, but without timestamps. |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | Identifies the speakers. Doesn't use the keywords nor the description. |
 
@@ -72,8 +83,8 @@ Long audios are split into chunks of up to 10 minutes, cut at a silence so no wo
 ### Options
 
 - **Response format** (Output card, for folders): `text` (default), `json`, `verbose_json`, `srt` or `vtt`. The subtitles and `verbose_json` need a model with timestamps.
-- **Temperature** (Preferences → Whisper API): between 0 and 1. Higher values like 0.8 make the output more random, and lower values like 0.2 more focused. With 0 (default), the model raises it automatically when needed.
-- **Timestamps of the words** (Preferences → Whisper API): whether `whisper-1` also returns the timestamps of each word, to highlight it while playing. It takes longer. On by default.
+- **Temperature** (Preferences → Transcription): between 0 and 1. Higher values like 0.8 make the output more random, and lower values like 0.2 more focused. With 0 (default), the model raises it automatically when needed.
+- **Timestamps of the words** (Preferences → Transcription): whether `whisper-1` also returns the timestamps of each word, to highlight it while playing. It takes longer. On by default.
 
 ## Google API
 

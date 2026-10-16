@@ -18,10 +18,11 @@ Audiotext 使用三种引擎之一进行转写，可在[转写设置](/zh-cn/gui
 | 识别说话人 | ✓（Hugging Face 令牌） | `gpt-4o-transcribe-diarize` | ✗ |
 | 逐词时间 | ✓ | `whisper-1` | ✗ |
 | 实时文本 | ✓ | ✗ | ✗ |
+| [低置信度的词](/zh-cn/guides/transcript/#检查低置信度的词) | ✓（逐词时间） | `whisper-1`（片段） | ✗ |
 
 ## WhisperX
 
-[WhisperX](https://github.com/m-bain/whisperX) 是 OpenAI Whisper 的快速实现，在你的电脑上运行，因此音频永远不会离开你的电脑。它可以在 CPU 上运行，在支持 CUDA 的 NVIDIA GPU 上则快得多。
+[WhisperX](https://github.com/m-bain/whisperX) 是 OpenAI Whisper 的快速实现，在你的电脑上运行，因此音频永远不会离开你的电脑。它可以在 CPU 上运行，在支持 CUDA 的 NVIDIA GPU 或搭载 Apple 芯片的 Mac 的 GPU 上则快得多。
 
 ### 模型
 
@@ -47,13 +48,23 @@ Audiotext 使用三种引擎之一进行转写，可在[转写设置](/zh-cn/gui
 想快速试用 Audiotext，请选择 `tiny` 或 `small`。想获得最佳质量，请在 GPU 上使用 `large-v2` 或 `large-v3-turbo`。
 :::
 
+### 在 Mac 上
+
+在搭载 Apple 芯片的 Mac 上，[MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) 会在 GPU 上转写，比在 CPU 上快得多。之后 WhisperX 照常在 CPU 上对齐字词并识别说话人，因此转写仍保留逐词时间、评分和说话人。
+
+- 模型的 MLX 版本会在首次使用时下载。
+- `distil-small.en`、`distil-large-v2` 和 `distil-large-v3.5` 没有 MLX 版本，因此在 CPU 上运行。
+- [实时文本](/zh-cn/guides/sources/#实时文本)始终在 CPU 上运行。
+- 由于 MLX 始终以半精度且不分批进行计算，**计算类型**和**批处理大小**在 GPU 上不适用。
+- 要在 CPU 上转写，请在**偏好设置** → **转写** 中开启**使用 CPU**。
+
 ### 高级选项
 
-位于**偏好设置** → **WhisperX**。只有在遇到问题或清楚自己在做什么时才修改：GPU 显存耗尽可能会让系统卡死。
+位于**偏好设置** → **转写** → **WhisperX**。只有在遇到问题或清楚自己在做什么时才修改：GPU 显存耗尽可能会让系统卡死。
 
-- **计算类型**：模型数值的精度。`float16` 在 GPU 上更快（使用 CUDA 时的默认值）。`int8` 占用内存更少，是 CPU 上的默认值，因为许多 CPU 无法高效支持 `float16`。`float32` 精度最高，适合显存超过 8 GB 的 GPU。
+- **计算类型**：模型数值的精度。`float16` 在 NVIDIA GPU 上更快（使用 CUDA 时的默认值）。`int8` 占用内存更少，是 CPU 上的默认值，因为许多 CPU 无法高效支持 `float16`。`float32` 精度最高，适合显存超过 8 GB 的 GPU。
 - **批处理大小**：同时处理的音频片段数（默认 `8`）。它只影响速度，不影响质量。内存不足时请调低；建议最大为 `16`。
-- **使用 CPU**：在 CPU 上运行 WhisperX。如果没有找到 CUDA GPU，则始终开启。
+- **使用 CPU**：在 CPU 上运行 WhisperX。如果没有找到 GPU（支持 CUDA 的 NVIDIA GPU，或搭载 Apple 芯片的 Mac 的 GPU），则始终开启。
 
 ## Whisper API
 
@@ -61,7 +72,7 @@ Audiotext 使用三种引擎之一进行转写，可在[转写设置](/zh-cn/gui
 
 | 模型 | 时间戳 | 说话人 | 说明 |
 | --- | :---: | :---: | --- |
-| `whisper-1`（默认） | ✓ | ✗ | 可逐片段播放并制作字幕。可翻译成英语。 |
+| `whisper-1`（默认） | ✓ | ✗ | 可逐片段播放并制作字幕。可翻译成英语。为每个片段评分，以便检查低置信度的片段。 |
 | `gpt-transcribe` | ✗ | ✗ | 更准确，但没有时间戳。 |
 | `gpt-4o-transcribe-diarize` | ✓ | ✓ | 识别说话人。不使用关键词和描述。 |
 
@@ -72,8 +83,8 @@ Audiotext 使用三种引擎之一进行转写，可在[转写设置](/zh-cn/gui
 ### 选项
 
 - **响应格式**（输出卡片，用于文件夹）：`text`（默认）、`json`、`verbose_json`、`srt` 或 `vtt`。字幕和 `verbose_json` 需要能返回时间戳的模型。
-- **温度**（偏好设置 → Whisper API）：介于 0 和 1 之间。较高的值（如 0.8）会让结果更随机，较低的值（如 0.2）更集中。为 0（默认）时，模型会在需要时自动调高。
-- **单词时间戳**（偏好设置 → Whisper API）：`whisper-1` 是否也返回每个单词的时间戳，以便播放时高亮。耗时更长。默认开启。
+- **温度**（偏好设置 → 转写）：介于 0 和 1 之间。较高的值（如 0.8）会让结果更随机，较低的值（如 0.2）更集中。为 0（默认）时，模型会在需要时自动调高。
+- **单词时间戳**（偏好设置 → 转写）：`whisper-1` 是否也返回每个单词的时间戳，以便播放时高亮。耗时更长。默认开启。
 
 ## Google API
 

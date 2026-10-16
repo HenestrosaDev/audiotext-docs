@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Audiotext lưu dữ liệu của bạn trên máy tính của bạn. Không có gì được gửi đi trừ khi bạn dùng công cụ từ xa (Whisper API hoặc Google API) hoặc nhà cung cấp AI khác ngoài Ollama. Khi mở, ứng dụng cũng hỏi GitHub xem có phiên bản mới không; bạn có thể tắt việc này trong **Tùy chọn ưu tiên** → **Chung** → **Cập nhật**.
+Audiotext lưu dữ liệu của bạn trên máy tính của bạn. Không có gì được gửi đi trừ khi bạn dùng công cụ từ xa (Whisper API hoặc Google API) hoặc nhà cung cấp AI khác ngoài Ollama. Khi mở, ứng dụng cũng hỏi GitHub xem có phiên bản mới không; bạn có thể tắt việc này trong **Tùy chọn ưu tiên** → **Chung** → **Tự động kiểm tra cập nhật**.
 
 ## Thư mục cấu hình người dùng
 
@@ -20,7 +20,7 @@ Cài đặt, lịch sử và bản ghi âm được lưu trong thư mục cấu 
 Thư mục này chứa:
 
 - `config.ini`: cài đặt của bạn. Xóa tệp này để khôi phục giá trị mặc định.
-- `history.json`: các bản chép lời của bạn, cùng bản tóm tắt, bản dịch và các chỉnh sửa.
+- `history.json`: các bản chép lời của bạn, cùng bản tóm tắt, câu hỏi, bản dịch và các chỉnh sửa.
 - `media/`: các bản ghi âm từ micrô và âm thanh tải từ URL, để có thể phát lại sau. Chúng bị xóa khi bản chép lời tương ứng bị xóa khỏi lịch sử.
 
 Để dùng thư mục khác, ví dụ cho bản cài đặt di động, hãy đặt biến môi trường `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ Biến môi trường mang tên các khóa được ưu tiên hơn khóa đặt 
 
 | Biến | Dịch vụ |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (Whisper API, tóm tắt, bản dịch) |
+| `OPENAI_API_KEY` | OpenAI (Whisper API, tóm tắt, câu hỏi, bản dịch) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ Biến môi trường mang tên các khóa được ưu tiên hơn khóa đặt 
 
 ## Mô hình
 
-Các mô hình của WhisperX và của tính năng nhận diện người nói được tải xuống lần đầu khi dùng và được Hugging Face lưu đệm trong `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` trên Windows). Các mô hình căn chỉnh từ của tiếng Anh, tiếng Pháp, tiếng Đức, tiếng Tây Ban Nha và tiếng Ý được PyTorch lưu đệm trong `~/.cache/torch` (`%USERPROFILE%\.cache\torch` trên Windows). Xóa các thư mục đó để giải phóng dung lượng chúng chiếm. Các ứng dụng khác cũng có thể giữ mô hình của mình ở đó, và tải lại khi cần, giống như Audiotext.
+Các mô hình của WhisperX (và của MLX Whisper, trên máy Mac) và của tính năng nhận diện người nói được tải xuống lần đầu khi dùng và được Hugging Face lưu đệm trong `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` trên Windows). Các mô hình căn chỉnh từ của tiếng Anh, tiếng Pháp, tiếng Đức, tiếng Tây Ban Nha và tiếng Ý được PyTorch lưu đệm trong `~/.cache/torch` (`%USERPROFILE%\.cache\torch` trên Windows). Xóa các thư mục đó để giải phóng dung lượng chúng chiếm. Các ứng dụng khác cũng có thể giữ mô hình của mình ở đó, và tải lại khi cần, giống như Audiotext.

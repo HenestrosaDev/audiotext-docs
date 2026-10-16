@@ -1,11 +1,11 @@
 ---
-title: Ringkasan dan terjemahan
-description: Ringkas dan terjemahkan transkripsi dengan OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL, atau Google Translate.
+title: Ringkasan, pertanyaan, dan terjemahan
+description: Ringkas, ajukan pertanyaan tentang, dan terjemahkan transkripsi dengan OpenAI, Claude, Gemini, DeepSeek, Mistral, Grok, Ollama, DeepL, atau Google Translate.
 sidebar:
   order: 4
 ---
 
-Setelah transkripsi siap, Audiotext dapat meringkas dan menerjemahkannya dengan model bahasa atau layanan terjemahan. Keduanya disimpan di riwayat, jadi hanya dibuat sekali.
+Setelah transkripsi siap, Audiotext dapat meringkasnya, menjawab pertanyaan tentangnya, dan menerjemahkannya dengan model bahasa atau layanan terjemahan. Semuanya disimpan di riwayat, jadi hanya dibuat sekali.
 
 ## Ringkasan
 
@@ -15,20 +15,46 @@ Buka mode **Ringkasan** pada transkripsi dan klik **Buat ringkasan**. Model baha
 - **Poin penting**-nya.
 - **Bab**-nya, jika memiliki stempel waktu. Klik bab untuk memutar audio dari awal bab tersebut.
 
-**Buat ulang** menulisnya kembali (mis. setelah memilih model lain). **Salin** menyalinnya, dan [ekspor](/id/guides/transcript/#salin-dan-ekspor) Markdown dan Word menyertakannya.
+Di bawah judulnya, panel menampilkan model yang membuatnya dan kapan. Tombol di header-nya:
+
+- **Cari** (`Ctrl+F`, `⌘F` di macOS): mencari teks di ringkasan.
+- **Salin**: menyalinnya.
+- **Ekspor**: menyimpannya tersendiri sebagai teks biasa, Markdown, atau dokumen Word, dengan nama seperti `video.summary.md` agar tidak menggantikan transkripsi. [Ekspor](/id/guides/transcript/#salin-dan-ekspor) Markdown dan Word dari transkripsi juga menyertakannya.
+- **Buat ulang ringkasan**: menulisnya kembali (mis. setelah memilih model lain), setelah meminta konfirmasi, karena ringkasan saat ini akan diganti.
 
 Jika kunci API penyedia belum diatur, mode **Ringkasan** menawarkan untuk mengaturnya. Transkripsi yang sangat panjang (sekitar tiga jam ucapan atau lebih) hanya diringkas dari bagian awalnya.
 
 ![Ringkasan sebuah transkripsi, dengan poin-poin utama dan babnya](/screenshots/summary.png)
 
+## Tanya tentang transkripsi
+
+Buka mode **Tanya**, ketik pertanyaan di **Ajukan pertanyaan tentang transkripsi…** (mis. apa yang diputuskan, atau siapa yang mengatakan sesuatu) lalu tekan `Enter` atau klik **Tanya**.
+
+- Model bahasa menjawab berdasarkan transkripsi, serta pertanyaan dan jawaban sebelumnya, sehingga pertanyaan dapat merujuk padanya (mis. “Mengapa?”).
+- Jika transkripsi memiliki stempel waktu, setiap jawaban menautkan ke bagian transkripsi tempat hal itu diucapkan. Klik salah satunya untuk memutar audio dari sana.
+- Pertanyaan dan jawabannya disimpan di riwayat bersama transkripsi. Tempat sampah di header menghapus percakapan, setelah meminta konfirmasi.
+
+Pertanyaan dijawab oleh penyedia yang dipilih untuknya di **Preferensi** → **Penyedia** → **Tanya**, yaitu penyedia ringkasan sampai Anda mengubahnya. Seperti ringkasan, transkripsi yang sangat panjang hanya dibaca bagian awalnya.
+
 ## Terjemahan
 
-Klik **Terjemahkan**, pilih bahasa di **Terjemahkan ke** dan **Penyedia**, lalu konfirmasi. Terjemahan ditampilkan di panel di sebelah kanan teks asli.
+Klik **Terjemahkan**, pilih bahasa di **Terjemahkan ke:** dan penyedia di **Terjemahkan dengan:**, lalu konfirmasi. Dialog menjelaskan apa yang dilakukan penyedia yang dipilih, dan menawarkan untuk mengatur kunci API-nya jika belum ada. Terjemahan ditampilkan di panel di sebelah kanan teks asli.
 
-- Jika transkripsi memiliki stempel waktu, setiap segmen diterjemahkan tersendiri, sehingga terjemahan dimulai dengan stempel waktu yang sama: segmen yang diputar disorot, dan mengklik segmen akan memutarnya.
-- Jika Anda telah mengedit teks biasa, yang diterjemahkan adalah teks yang sudah diedit, tanpa stempel waktu.
-- Seret pegangan di antara kedua teks untuk mengubah ukurannya, atau klik dua kali untuk mengembalikan ukurannya.
-- Tombol **Terjemahkan** juga memungkinkan Anda **Sembunyikan terjemahan**, **Terjemahkan ke bahasa lain…**, atau **Hapus terjemahan**.
+- Jika transkripsi memiliki stempel waktu, transkripsi diterjemahkan kalimat demi kalimat, dengan teks yang diucapkan sebelum dan sesudah setiap bagian sebagai konteks, sehingga terjemahan dimulai dengan stempel waktu setiap kalimat: kalimat yang diputar disorot, dan mengklik kalimat akan memutarnya.
+- Jika transkripsi tidak punya stempel waktu, seluruh teksnya diterjemahkan sekaligus.
+- Kedua teks bergulir bersama, sehingga menampilkan bagian audio yang sama. Tombol bulat di pegangan di antara keduanya mengaktifkan dan menonaktifkannya. Seret pegangan untuk mengubah ukurannya, atau klik dua kali untuk mengembalikan ukurannya.
+
+Tombol di header terjemahan mencari dan mengganti di dalamnya, menyalinnya, mengekspornya, **Terjemahkan ulang** (dengan penyedia dan model yang sama), dan **Sembunyikan terjemahan**. Tombol **Terjemahkan** juga memungkinkan Anda menampilkannya lagi, **Terjemahkan ke bahasa lain…**, atau **Hapus terjemahan**.
+
+### Beberapa bahasa
+
+Transkripsi dapat diterjemahkan ke beberapa bahasa, bahkan secara bersamaan, dan setiap terjemahan disimpan. Judul panel memilih terjemahan yang ditampilkan, menunjukkan seberapa banyak masing-masing sudah diterjemahkan, dan diakhiri dengan opsi untuk menerjemahkan ke bahasa lain. Menerjemahkan ke bahasa yang sudah memiliki terjemahan akan menggantikannya, setelah meminta konfirmasi, karena koreksinya akan hilang. Menu judul menampilkan berapa subtitle dari setiap terjemahan yang belum selesai yang sudah diterjemahkan (mis. `Inggris · 148/150`).
+
+### Kemajuan terjemahan
+
+Kemajuan dihitung dalam subtitle: sebuah subtitle sudah diterjemahkan jika memiliki teks. Di atas terjemahan, sebuah baris menampilkan berapa yang sudah diterjemahkan (mis. `Diterjemahkan: 148/150 · 98%`). Persentasenya dibulatkan ke bawah, jadi `100%` hanya muncul jika semuanya sudah diterjemahkan.
+
+Selama masih ada yang tersisa, panah di sebelahnya menuju subtitle **Belum diterjemahkan** sebelumnya dan berikutnya, menyorot masing-masing, dan menampilkan posisi Anda (mis. `1 dari 2`). Arahkan kursor ke salah satunya untuk menampilkan tombol **Terjemahkan teks…** di sebelah kanannya, yang membuka dialog untuk menerjemahkannya.
 
 ### Koreksi dan atur ulang waktu terjemahan
 
@@ -41,12 +67,12 @@ Terjemahan sering kali memerlukan waktu yang berbeda dari aslinya, mis. subtitle
 
 ### Terjemahkan sendiri
 
-Untuk menulis terjemahan sendiri, pilih **Sendiri, dari awal** sebagai **Penyedia**. Tidak memerlukan kunci API. Terjemahan dimulai dengan stempel waktu transkripsi dan segmen kosong, yang ditampilkan sebagai **Belum diterjemahkan**, dan panel menampilkan berapa yang tersisa. Klik kanan salah satunya dan pilih **Terjemahkan teks…**: dialog menampilkan teks asli yang diucapkan pada saat itu.
+Untuk menulis terjemahan sendiri, pilih **Manual** di **Terjemahkan dengan:**. Tidak memerlukan kunci API. Terjemahan dimulai dengan segmen kosong untuk setiap subtitle transkripsi, yang ditampilkan sebagai **Belum diterjemahkan**, dan panel menampilkan berapa yang tersisa. Klik kanan salah satunya dan pilih **Terjemahkan teks…**: dialog menampilkan teks asli yang diucapkan pada saat itu. Mengarahkan kursor ke salah satunya menampilkan tombol **Terjemahkan teks…** di sebelah kanannya, yang membuka dialog yang sama.
 
 ### Subtitle dan ekspor
 
 - Pada transkripsi video, centang **Tampilkan sebagai subtitle video** di menu **Terjemahkan** untuk menampilkan terjemahan sebagai subtitle. Menu video juga dapat menggantinya. Lihat [Tonton video dengan subtitle](/id/guides/transcript/#tonton-video-dengan-subtitle).
-- Untuk menyimpan terjemahan sebagai file, pilih **Terjemahan** di menu **Ekspor**, atau klik tombol ekspor terjemahan. Terjemahan diekspor dalam [format](/id/guides/transcript/#salin-dan-ekspor) yang sama dengan transkripsi, dengan bahasanya di nama file (mis. `video.es.srt`), sehingga pemutar video memuatnya bersama video. Segmen yang belum diterjemahkan tidak disertakan dalam subtitle.
+- Untuk menyimpan terjemahan sebagai file, klik tombol ekspor di panelnya. Terjemahan diekspor dalam [format](/id/guides/transcript/#salin-dan-ekspor) yang sama dengan transkripsi, dengan bahasanya di nama file (mis. `video.es.srt`), sehingga pemutar video memuatnya bersama video. Segmen yang belum diterjemahkan tidak disertakan dalam subtitle. Menu yang sama membuat [salinan video beserta subtitlenya](/id/guides/transcript/#ekspor-video-beserta-subtitlenya).
 
 :::tip
 Untuk mendapatkan transkripsi langsung dalam bahasa lain tanpa penyedia, Anda juga dapat menerjemahkan saat mentranskripsi. Lihat [Bahasa](/id/guides/transcription-settings/#bahasa).
@@ -54,7 +80,7 @@ Untuk mendapatkan transkripsi langsung dalam bahasa lain tanpa penyedia, Anda ju
 
 ## Penyedia
 
-Penyedia dipilih di **Preferensi** → **AI**, terpisah untuk ringkasan dan terjemahan.
+Penyedia dipilih di **Preferensi** → **Penyedia**, terpisah untuk ringkasan, pertanyaan, dan terjemahan.
 
 | Penyedia | Model bawaan | Kunci API |
 | --- | --- | --- |
@@ -75,7 +101,7 @@ Terjemahan juga dapat dibuat oleh:
 
 ### Ollama
 
-[Ollama](https://ollama.com) menjalankan model di komputer Anda, tanpa kunci API dan tanpa mengirim teks ke mana pun. Instal, unduh model (mis. `ollama pull llama3.2`), lalu pilih **Ollama** sebagai penyedia. Jika tidak berjalan di alamat bawaan, ubah **URL server** di **Preferensi** → **AI** (`http://localhost:11434` secara bawaan).
+[Ollama](https://ollama.com) menjalankan model di komputer Anda, tanpa kunci API dan tanpa mengirim teks ke mana pun. Instal, unduh model (mis. `ollama pull llama3.2`), lalu pilih **Ollama** sebagai penyedia. Jika tidak berjalan di alamat bawaan, ubah **URL server** di **Preferensi** → **Penyedia** (`http://localhost:11434` secara bawaan).
 
 :::note
 Setiap penyedia mengenakan biaya atas penggunaan API-nya, dan Audiotext tidak bertanggung jawab atas hal itu. Kunci API disimpan di penyimpanan kredensial sistem Anda. Lihat [File dan data](/id/reference/files-and-data/).

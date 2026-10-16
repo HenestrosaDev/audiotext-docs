@@ -25,7 +25,7 @@ Audiotext 是一款适用于 **Windows**、**macOS** 和 **Linux** 的桌面应�
 
 ### macOS
 
-打开 `.dmg` 文件，将 **Audiotext** 拖到**应用程序**文件夹。该应用未经 Apple 公证，因此首次打开时 macOS 会阻止它：前往**系统设置** → **隐私与安全性**，点击 Audiotext 相关提示旁的**仍要打开**。在 macOS 上没有 CUDA，因此 WhisperX 在 CPU 上运行。 由于 PyTorch 已不再支持 Intel 芯片的 Mac，因此不支持此类电脑。
+打开 `.dmg` 文件，将 **Audiotext** 拖到**应用程序**文件夹。该应用未经 Apple 公证，因此首次打开时 macOS 会阻止它：前往**系统设置** → **隐私与安全性**，点击 Audiotext 相关提示旁的**仍要打开**。在 Mac 上，WhisperX 会通过 [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper) 在 Apple 芯片的 GPU 上转写，比在 CPU 上快得多，且无需任何附加组件。 由于 PyTorch 已不再支持 Intel 芯片的 Mac，因此不支持此类电脑。
 
 ### Linux
 
@@ -49,7 +49,7 @@ GPU 附加组件在 Windows 上约 2 GB，在 Linux 上约 4 GB，因此只有�
 
 ## 系统要求
 
-- **WhisperX** 在你的电脑上运行。它可以在任何 CPU 上运行，但在支持 CUDA 的 NVIDIA GPU 上要快得多。请参阅[引擎](/zh-cn/reference/engines/)，选择适合你硬件的模型。
+- **WhisperX** 在你的电脑上运行。它可以在任何 CPU 上运行，但在支持 CUDA 的 NVIDIA GPU 或搭载 Apple 芯片的 Mac 的 GPU 上要快得多。请参阅[引擎](/zh-cn/reference/engines/)，选择适合你硬件的模型。
 - **Whisper API** 和 **Google API** 在远程服务器上运行，因此需要联网，但不需要高性能硬件。
 - 要从麦克风转写，系统必须能识别输入设备。
 - 在 Linux 上，录音和播放需要 [PortAudio](https://www.portaudio.com/)（在 Ubuntu 或 Debian 上运行 `sudo apt install libportaudio2`）。
@@ -58,7 +58,7 @@ GPU 附加组件在 Windows 上约 2 GB，在 Linux 上约 4 GB，因此只有�
 
 新版本发布后，Audiotext 会在顶部栏显示**版本 … 可用**按钮。点击它打开发布页面，下载适用于你系统的文件，然后像第一次一样安装：在 Windows 上运行新的安装程序，在 macOS 上将新应用拖到**应用程序**文件夹，在 Linux 上运行新压缩包中的 `install.sh`。旧版本会被替换，而你的设置和历史记录会保留，因为它们保存在你的[用户配置文件夹](/zh-cn/reference/files-and-data/#用户配置文件夹)中。如果你使用 GPU 附加组件，请在安装时再次选择它。
 
-要自行检查新版本，请打开**偏好设置** → **关于** → **检查更新**。要在打开应用时不再检查，请关闭**常规** → **更新**。
+要自行检查新版本，请打开**偏好设置** → **关于** → **检查更新**。要在打开应用时不再检查，请关闭**常规** → **自动检查更新**。
 
 ## 卸载应用
 

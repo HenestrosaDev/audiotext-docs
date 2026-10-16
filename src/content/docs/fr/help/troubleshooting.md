@@ -13,7 +13,7 @@ Lors de sa première utilisation, un modèle est téléchargé, ce qui peut pren
 
 Votre GPU n’a pas assez de mémoire pour les réglages. Essayez, dans cet ordre :
 
-1. Réduisez la **Taille de lot** (p. ex. `4`) dans **Préférences** → **WhisperX**.
+1. Réduisez la **Taille de lot** (p. ex. `4`) dans **Préférences** → **Transcription**.
 2. Utilisez un modèle plus petit (p. ex. `small` ou `base`).
 3. Utilisez un **Type de calcul** plus léger (p. ex. `int8`).
 
@@ -21,7 +21,7 @@ Les deux derniers peuvent réduire la qualité. Consultez [Moteurs](/fr/referenc
 
 ## La transcription prend trop de temps
 
-La vitesse de WhisperX dépend de votre matériel : n’attendez pas de résultats instantanés sur des CPU modestes. Essayez un modèle plus petit, comme `small`, ou `large-v3-turbo` sur un GPU, ou le type de calcul `int8`. Vous pouvez aussi utiliser l’**API Whisper** ou l’**API Google**, qui s’exécutent sur des serveurs distants.
+La vitesse de WhisperX dépend de votre matériel : n’attendez pas de résultats instantanés sur des CPU modestes. Essayez un modèle plus petit, comme `small`, ou `large-v3-turbo` sur un GPU, ou le type de calcul `int8`. Sur un Mac avec Apple Silicon, vérifiez que **Utiliser le CPU** est désactivé dans **Préférences** → **Transcription**, pour qu’il transcrive sur le GPU. Vous pouvez aussi utiliser l’**API Whisper** ou l’**API Google**, qui s’exécutent sur des serveurs distants.
 
 ## L’API Whisper renvoie l’erreur `429`
 
@@ -78,11 +78,26 @@ Les fichiers qui ont déjà une transcription sont ignorés. Activez **Écraser 
 
 L’API Google ne peut pas détecter la langue. Choisissez la **Langue de l’audio** dans les paramètres.
 
-## Un résumé ou une traduction échoue
+## Un résumé, une réponse ou une traduction échoue
 
 - **DeepL ne peut pas traduire vers : ….** : DeepL ne prend pas en charge cette langue. Choisissez un autre fournisseur, comme un modèle de langage.
-- **La réponse du modèle était trop longue.**, **Le modèle n’a pas renvoyé de résumé valide.** ou **Le modèle n’a pas renvoyé de traduction valide.** : le modèle n’a pas écrit le résumé ou la traduction au format attendu. Réessayez, ou choisissez un modèle plus grand dans **Préférences** → **IA**. Les petits modèles d’Ollama échouent plus souvent.
+- **La réponse du modèle était trop longue.**, **Le modèle n’a pas renvoyé de résumé valide.**, **Le modèle n’a pas renvoyé de réponse valide.** ou **Le modèle n’a pas renvoyé de traduction valide.** : le modèle n’a pas écrit le résumé, la réponse ou la traduction au format attendu. Réessayez, ou choisissez un modèle plus grand dans **Préférences** → **Fournisseurs**. Les petits modèles d’Ollama échouent plus souvent.
 - Pour toute autre erreur, vérifiez que la clé API du fournisseur est définie dans **Préférences** → **Clés API** et que votre compte dispose de crédits.
+
+## Les mots peu fiables ne sont pas soulignés
+
+Vérifiez que **Surligner les mots peu fiables** est activé dans le menu `⋯` de la transcription. Si la transcription n’a pas de notes, le menu indique pourquoi :
+
+- **Activez « Minutage par mot » et retranscrivez-le** : WhisperX note les mots lorsqu’il les minute.
+- **Aucun modèle d’alignement pour sa langue** : les mots de cette langue ne peuvent être ni minutés ni notés.
+- **Retranscrivez-le pour noter ses mots** : elle a été transcrite avant que les mots ne soient notés.
+- **Seuls WhisperX et whisper-1 notent les mots** : les autres moteurs et modèles ne le font pas.
+
+Consultez [Révisez les mots peu fiables](/fr/guides/transcript/#révisez-les-mots-peu-fiables).
+
+## La vidéo avec sous-titres affiche des carrés
+
+Si **Exporté vers …, mais aucune police ne contient ces caractères, ils sont donc affichés sous forme de carrés : …** s’affiche après avoir [exporté la vidéo avec ses sous-titres](/fr/guides/transcript/#exportez-la-vidéo-avec-ses-sous-titres), aucune police de votre système ne peut dessiner ces caractères. Installez une police pour cette écriture (p. ex. [Noto](https://fonts.google.com/noto)) et exportez-la à nouveau.
 
 ## Les mises à jour ne peuvent pas être recherchées
 

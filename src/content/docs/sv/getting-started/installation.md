@@ -25,7 +25,7 @@ Kör installationsprogrammet och följ stegen. Det kräver inga administratörsb
 
 ### macOS
 
-Öppna `.dmg`-filen och dra **Audiotext** till mappen **Program**. Appen är inte notariserad av Apple, så macOS blockerar den första gången du öppnar den: gå till **Systeminställningar** → **Integritet och säkerhet** och klicka på **Öppna ändå** bredvid meddelandet om Audiotext. På macOS körs WhisperX på processorn, eftersom CUDA inte finns där. Mac-datorer med Intel stöds inte, eftersom PyTorch inte längre stöder dem.
+Öppna `.dmg`-filen och dra **Audiotext** till mappen **Program**. Appen är inte notariserad av Apple, så macOS blockerar den första gången du öppnar den: gå till **Systeminställningar** → **Integritet och säkerhet** och klicka på **Öppna ändå** bredvid meddelandet om Audiotext. På Mac-datorer transkriberar WhisperX på Apple Silicons grafikprocessor med [MLX Whisper](https://github.com/ml-explore/mlx-examples/tree/main/whisper), mycket snabbare än på processorn, utan något tillägg. Mac-datorer med Intel stöds inte, eftersom PyTorch inte längre stöder dem.
 
 ### Linux
 
@@ -49,7 +49,7 @@ Första gången du transkriberar med **WhisperX** (standardmotorn) laddas dess m
 
 ## Krav
 
-- **WhisperX** körs på din dator. Det fungerar på alla processorer, men är mycket snabbare på ett NVIDIA-grafikkort med CUDA. Se [Motorer](/sv/reference/engines/) för att välja en modell som passar din hårdvara.
+- **WhisperX** körs på din dator. Det fungerar på alla processorer, men är mycket snabbare på ett NVIDIA-grafikkort med CUDA eller på grafikprocessorn i en Mac med Apple Silicon. Se [Motorer](/sv/reference/engines/) för att välja en modell som passar din hårdvara.
 - **Whisper-API:t** och **Google-API:t** körs på fjärrservrar, så de kräver en internetanslutning men ingen kraftfull hårdvara.
 - För att transkribera från mikrofonen måste systemet hitta en inmatningsenhet.
 - På Linux kräver inspelning och uppspelning [PortAudio](https://www.portaudio.com/) (`sudo apt install libportaudio2` på Ubuntu eller Debian).
@@ -58,7 +58,7 @@ Första gången du transkriberar med **WhisperX** (standardmotorn) laddas dess m
 
 När en ny version släpps visar Audiotext knappen **Version … är tillgänglig** i det övre fältet. Klicka på den för att öppna versionens sida, ladda ned filen för ditt system och installera den som första gången: kör det nya installationsprogrammet i Windows, dra den nya appen till mappen **Program** i macOS eller kör `install.sh` i det nya arkivet i Linux. Den tidigare versionen ersätts, och dina inställningar och din historik behålls, eftersom de lagras i din [användarens konfigurationsmapp](/sv/reference/files-and-data/#användarens-konfigurationsmapp). Om du använder GPU-tillägget väljer du det igen vid installationen.
 
-Om du vill söka efter en ny version själv öppnar du **Inställningar** → **Om** → **Sök efter uppdateringar**. Om du inte vill att appen söker när den öppnas stänger du av **Allmänt** → **Uppdateringar**.
+Om du vill söka efter en ny version själv öppnar du **Inställningar** → **Om** → **Sök efter uppdateringar**. Om du inte vill att appen söker när den öppnas stänger du av **Allmänt** → **Sök efter uppdateringar automatiskt**.
 
 ## Avinstallera appen
 

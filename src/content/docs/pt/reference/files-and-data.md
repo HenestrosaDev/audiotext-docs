@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-O Audiotext mantém os seus dados no seu computador. Nada é enviado para lugar nenhum, a menos que você use um mecanismo remoto (a API do Whisper ou a API do Google) ou um provedor de IA diferente do Ollama. Ao abrir, ele também pergunta ao GitHub se há uma nova versão, o que você pode desativar em **Preferências** → **Geral** → **Atualizações**.
+O Audiotext mantém os seus dados no seu computador. Nada é enviado para lugar nenhum, a menos que você use um mecanismo remoto (a API do Whisper ou a API do Google) ou um provedor de IA diferente do Ollama. Ao abrir, ele também pergunta ao GitHub se há uma nova versão, o que você pode desativar em **Preferências** → **Geral** → **Verificar atualizações automaticamente**.
 
 ## Pasta de configuração do usuário
 
@@ -20,7 +20,7 @@ As configurações, o histórico e as gravações ficam na sua pasta de configur
 Ela contém:
 
 - `config.ini`: as suas configurações. Exclua-o para restaurar os padrões.
-- `history.json`: as suas transcrições, com os resumos, as traduções e as correções.
+- `history.json`: as suas transcrições, com os resumos, as perguntas, as traduções e as correções.
 - `media/`: as gravações do microfone e o áudio baixado de URLs, para poderem ser reproduzidos depois. Eles são removidos quando a transcrição correspondente é excluída do histórico.
 
 Para usar outra pasta, ex.: em uma instalação portátil, defina a variável de ambiente `AUDIOTEXT_CONFIG_DIR`.
@@ -47,7 +47,7 @@ As variáveis de ambiente com os nomes das chaves têm prioridade sobre as defin
 
 | Variável | Serviço |
 | --- | --- |
-| `OPENAI_API_KEY` | OpenAI (API do Whisper, resumos, traduções) |
+| `OPENAI_API_KEY` | OpenAI (API do Whisper, resumos, perguntas, traduções) |
 | `ANTHROPIC_API_KEY` | Claude |
 | `DEEPSEEK_API_KEY` | DeepSeek |
 | `GEMINI_API_KEY` | Gemini |
@@ -60,4 +60,4 @@ As variáveis de ambiente com os nomes das chaves têm prioridade sobre as defin
 
 ## Modelos
 
-Os modelos do WhisperX e da identificação de falantes são baixados na primeira vez que são usados e armazenados em cache pelo Hugging Face em `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` no Windows). Os modelos que alinham as palavras do inglês, francês, alemão, espanhol e italiano são armazenados pelo PyTorch em `~/.cache/torch` (`%USERPROFILE%\.cache\torch` no Windows). Exclua essas pastas para liberar o espaço que ocupam. Outros aplicativos também podem guardar os seus modelos lá, e baixá-los de novo quando precisarem, como o Audiotext.
+Os modelos do WhisperX (e do MLX Whisper, nos Macs) e da identificação de falantes são baixados na primeira vez que são usados e armazenados em cache pelo Hugging Face em `~/.cache/huggingface` (`%USERPROFILE%\.cache\huggingface` no Windows). Os modelos que alinham as palavras do inglês, francês, alemão, espanhol e italiano são armazenados pelo PyTorch em `~/.cache/torch` (`%USERPROFILE%\.cache\torch` no Windows). Exclua essas pastas para liberar o espaço que ocupam. Outros aplicativos também podem guardar os seus modelos lá, e baixá-los de novo quando precisarem, como o Audiotext.

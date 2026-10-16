@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-Každý přepis se uchovává v historii vlevo v okně spolu se shrnutím, překladem a vašimi opravami. Tlačítko vlevo v horní liště ji zobrazuje nebo skrývá.
+Každý přepis se uchovává v historii vlevo v okně spolu se shrnutím, otázkami, překlady a vašimi opravami. Tlačítko vlevo v horní liště ji zobrazuje nebo skrývá.
 
 ## Vyhledání přepisu
 
@@ -32,7 +32,7 @@ Skupiny sdružují související přepisy, například z jednoho projektu nebo k
 
 ## Smazání přepisu
 
-Smazáním přepisu se z historie odstraní přepis, jeho shrnutí i překlad. Smažou se také přepisy souborů složky. Vaše zvukové, video a uložené soubory se **nesmažou**.
+Smazáním přepisu se z historie odstraní přepis, jeho shrnutí, otázky i překlady. Smažou se také přepisy souborů složky. Vaše zvukové, video a uložené soubory se **nesmažou**.
 
 ## Neúspěšné a přerušené přepisy
 

@@ -15,7 +15,7 @@ Przed transkrypcją Audiotext pokazuje jej ustawienia pogrupowane w karty. Są z
 
 | Silnik | Gdzie działa | Koszt | Uwagi |
 | --- | --- | --- | --- |
-| **WhisperX** (domyślny) | Twój komputer | Za darmo i bez limitów | Prywatnie i offline. Więcej opcji: mówcy, czasy słów, tekst na żywo. |
+| **WhisperX** (domyślny) | Twój komputer | Za darmo i bez limitów | Prywatnie i offline. Więcej opcji: mówcy, czasy słów, tekst na żywo. Działa na karcie graficznej Maców z Apple Silicon. |
 | **API Whisper** | Serwery OpenAI | Płatny za minutę | Wymaga [klucza API OpenAI](/pl/reference/preferences/#klucze-api). Dla komputerów, na których WhisperX nie działa płynnie. |
 | **API Google** | Serwery Google | Darmowy limit lub płatny | Niższa jakość i brak znaczników czasu. Klucz API jest opcjonalny. |
 
@@ -44,8 +44,8 @@ Używają ich WhisperX i API Whisper, z wyjątkiem modelu `gpt-4o-transcribe-dia
 
 ## Opcje
 
-- **Czasy poszczególnych słów** (WhisperX): wyrównuje każde słowo z nagraniem, aby wyróżniać je podczas odtwarzania. Trwa nieco dłużej. Napisy już z nich korzystają.
-- **Wyodrębnij mowę**: przed transkrypcją redukuje muzykę i szum tła.
+- **Czasy poszczególnych słów** (WhisperX): wyrównuje każde słowo z nagraniem, aby wyróżniać je podczas odtwarzania i [sprawdzać słowa](/pl/guides/transcript/#sprawdzanie-słów-o-niskiej-pewności), których jest najmniej pewny. Trwa nieco dłużej. Domyślnie włączone. Napisy potrzebują czasów słów, więc opcja jest włączona i zablokowana, dopóki w polu **Typy plików** folderu wybrano `.srt` lub `.vtt`; twój wybór wraca, gdy przestaną być wybrane.
+- **Redukuj szum tła**: przed transkrypcją redukuje buczenie i stały szum tła oraz wyrównuje cichą mowę. Trwa dłużej.
 - **Rozpoznawaj mówców** (WhisperX): oznacza, kto mówi w każdej części, np. `SPEAKER_00`. Jeśli wiesz, ile osób mówi, wpisz to w polu **Liczba mówców** (`0` wykrywa automatycznie). Wymaga darmowego tokenu Hugging Face; zobacz [Rozpoznawanie mówców](#rozpoznawanie-mówców). W API Whisper mówców rozpoznaje model `gpt-4o-transcribe-diarize`.
 
 ### Rozpoznawanie mówców
