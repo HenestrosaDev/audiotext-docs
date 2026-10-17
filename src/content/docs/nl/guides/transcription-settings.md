@@ -67,8 +67,12 @@ Alleen getoond voor de microfoon. Zie [Livetekst](/nl/guides/sources/#livetekst)
 Alleen getoond voor mappen:
 
 - **Map bewaken**: zie [Een map bewaken](/nl/guides/sources/#een-map-bewaken).
+- **Bestanden transcriberen die al in de map staan** (alleen tijdens het bewaken): transcribeert eerst de bestanden die al in de map staan en nog geen transcriptie hebben. Standaard uit.
+- **Submappen opnemen**: transcribeert ook de bestanden van de submappen.
+- **Bestanden overslaan die overeenkomen met**: namen of paden van de bestanden die worden overgeslagen, gescheiden door komma's (bijv. `*.wav, drafts/*`). Verborgen bestanden worden altijd overgeslagen.
 - **Bestandstypen**: bij WhisperX een of meer van `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` en `.aud`. Bij de Whisper-API het formaat van de bestanden (`text`, `json`, `verbose_json`, `srt` of `vtt`); ondertitels vereisen een model met tijdstempels. De Google-API levert platte tekst (`.txt`).
 - **Locatie**: de bestanden worden naast elk bronbestand opgeslagen. Klik op **Wijzigen…** om ze in een andere map op te slaan (de submappen worden nagemaakt), of op **Naast de bron** om terug te gaan.
-- **Bestaande bestanden overschrijven**: transcribeert bestanden die al een transcriptie hebben opnieuw en vervangt die.
+
+Bestanden die al een transcriptie hebben, worden overgeslagen. Gebruik de opties van de [bestanden van de map](/nl/guides/sources/#de-bestanden-van-een-map) om ze opnieuw te transcriberen.
 
 De opties voor ondertitels (regelbreedte, aantal regels, gemarkeerde woorden) staan in de [Voorkeuren](/nl/reference/preferences/#ondertitels).

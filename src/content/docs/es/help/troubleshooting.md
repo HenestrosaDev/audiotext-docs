@@ -72,7 +72,7 @@ Si en cambio se muestra **El vídeo de YouTube no tiene pista de audio.**, el v�
 
 ## Una carpeta no transcribe ningún archivo
 
-Los archivos que ya tienen una transcripción se omiten. Activa **Sobrescribir archivos existentes** para volver a transcribirlos. La carpeta también debe contener [archivos compatibles](/es/reference/formats-and-languages/).
+Los archivos que ya tienen una transcripción se omiten, igual que los archivos ocultos y los que coinciden con **Omitir los archivos que coincidan con**. Para volver a transcribirlos, usa **Volver a transcribir todo…** en el menú `⋯` de la carpeta, o selecciónalos en su [lista de archivos](/es/guides/sources/#los-archivos-de-una-carpeta). Los archivos de las subcarpetas solo se transcriben con **Incluir subcarpetas**, y la carpeta debe contener [archivos compatibles](/es/reference/formats-and-languages/).
 
 ## La API de Google pide el idioma
 

@@ -52,7 +52,7 @@ Um zu transkribieren, was Ihr Computer abspielt (einen Videoanruf, ein Webinar, 
 
 ## Ordner
 
-Transkribiert alle Audio- und Videodateien eines Ordners **und seiner Unterordner**. Klicken Sie auf **Ordner auswählen…** oder ziehen Sie den Ordner ins Fenster. Audiotext zeigt an, wie viele Dateien es gefunden hat.
+Transkribiert alle Audio- und Videodateien eines Ordners und, wenn **Unterordner einbeziehen** in der Karte **Ordner** aktiviert ist, seiner Unterordner. Klicken Sie auf **Ordner auswählen…** oder ziehen Sie den Ordner ins Fenster. Audiotext zeigt an, wie viele Dateien es gefunden hat. Um Dateien auszulassen, geben Sie ihre Namen oder Pfade, durch Kommas getrennt, in **Dateien überspringen, die passen auf** ein (z. B. `*.wav, drafts/*`). Versteckte Dateien werden immer übersprungen.
 
 Die Transkription jeder Datei wird neben ihr gespeichert (oder in einem anderen Ordner, den Sie auf der Karte **Ausgabe** wählen), mit demselben Namen und der Endung jedes ausgewählten **Dateityps**. Zum Beispiel mit `.txt` und `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Dateien, die bereits eine Transkription haben, werden **übersprungen**, außer Sie aktivieren **Vorhandene Dateien überschreiben**. Wenn Sie dem Ordner also eine Datei hinzufügen und ihn erneut transkribieren, wird nur die neue Datei transkribiert.
+Wenn zwei Dateien denselben Namen und eine andere Endung haben (z. B. `talk.mp3` und `talk.mp4`), behalten ihre Transkriptionen die Endung im Namen (`talk.mp3.txt` und `talk.mp4.txt`), damit sie sich nicht gegenseitig ersetzen.
 
-Kann eine Datei nicht transkribiert werden, werden die übrigen trotzdem transkribiert, und die Ordneransicht zeigt, welche fehlgeschlagen sind und warum. **Erneut transkribieren** wiederholt den Ordner, und die Ordnerschaltfläche öffnet den Ordner mit den gespeicherten Dateien.
+Dateien, die bereits eine Transkription haben, werden **übersprungen**: Eine Datei wird nur übersprungen, wenn sie alle ausgewählten Dateitypen hat. Wenn Sie einen Dateityp hinzufügen, wird sie also erneut transkribiert. Wenn eine Datei nicht transkribiert werden kann, werden die übrigen trotzdem transkribiert.
+
+### Die Dateien eines Ordners
+
+Die Seite eines Ordners im Verlauf listet seine Dateien auf, jeweils mit Status, Dauer, Größe und einer Vorschau des Textes. Sie können sie durchsuchen, nach Status filtern (**Alle**, **Fertig**, **Fehlgeschlagen** oder **Ausstehend**) und nach Name, Status, Dauer oder Größe sortieren. Verschobene oder gelöschte Dateien werden als **Datei nicht gefunden** markiert.
+
+- Klicken Sie auf eine Datei, um ihre Transkription zu öffnen, oder klicken Sie auf ihre Schaltfläche `⋯` (oder klicken Sie sie mit der rechten Maustaste an), um ihren Text zu kopieren, sie direkt im Export, in der Zusammenfassung oder in der Übersetzung zu öffnen, sie im Dateimanager anzuzeigen oder **Diese Datei erneut transkribieren** zu wählen.
+- Wählen Sie mehrere Dateien mit `Strg`/`⌘` oder `Umschalt` aus, oder alle angezeigten Dateien mit `Strg+A` / `⌘A`, um sie mit **Erneut transkribieren** neu zu transkribieren, mit **Exportieren…** gemeinsam in eine einzige TXT-, Markdown- oder Word-Datei zu exportieren oder mit **Aus dem Verlauf entfernen…** zu entfernen. `Eingabe` öffnet die ausgewählte Datei, und `Esc` hebt die Auswahl auf.
+- **Fehlgeschlagene wiederholen** transkribiert die fehlgeschlagenen Dateien erneut. **Ordner erneut durchsuchen** transkribiert nur die Dateien ohne Transkription, etwa die neuen, und zeigt, wie viele übersprungen wurden, weil sie bereits eine hatten.
+- Im Menü `⋯` des Ordners können Sie mit **Alle erneut transkribieren…** alle Dateien neu transkribieren und ihre Transkriptionen ersetzen, sie mit **Alle exportieren…** in eine einzige Datei exportieren, fehlende Dateien aus der Liste entfernen und den Quellordner oder den Ordner der gespeicherten Dateien öffnen.
+- Wenn Sie die Einstellungen des Ordners ändern, werden die Dateien angezeigt, die mit anderen Einstellungen (Engine, Modell, Sprache…) transkribiert wurden, mit einer Schaltfläche **Erneut transkribieren**.
+
+Die Kopfzeile zeigt, wo die Dateien gespeichert werden, und verlinkt den Quellordner. **Einstellungen bearbeiten** ändert die Einstellungen des Ordners, und **Speichern und erneut durchsuchen** transkribiert damit die Dateien, denen eine Transkription fehlt.
 
 ### Einen Ordner überwachen
 
 Aktivieren Sie auf der Karte **Ordner** die Option **Ordner überwachen**, um die Dateien, die dem Ordner (oder seinen Unterordnern) hinzugefügt werden, laufend zu transkribieren, bis Sie auf **Überwachung beenden** klicken. Das ist praktisch für Aufnahmen eines Diktiergeräts oder eines Meeting-Tools, die in einen Ordner kopiert werden.
 
-- Dateien, die der Ordner bereits enthält, werden übersprungen. Um sie zu transkribieren, transkribieren Sie den Ordner ohne Überwachung.
+- Die Dateien, die der Ordner bereits enthält, werden übersprungen, außer Sie aktivieren **Bereits im Ordner vorhandene Dateien transkribieren**: Dann werden zuerst die ohne Transkription transkribiert.
 - Eine Datei wird transkribiert, sobald sie vollständig kopiert ist (wenn sich ihre Größe nicht mehr ändert), sodass große Dateien nicht halb transkribiert werden.
-- Fehler beenden die Überwachung nicht.
+- Die Ordner, die beim Schließen von Audiotext überwacht wurden, werden beim Öffnen wieder überwacht, ab den Dateien, die sie schon gesehen hatten. Beendete Ordner können mit **Überwachung fortsetzen** wieder überwacht werden.
+- Wenn der Ordner nicht verfügbar ist (z. B. auf einem nicht angeschlossenen Laufwerk), wartet Audiotext auf ihn, statt fehlzuschlagen.
+- Um etwas anderes zu transkribieren oder aufzunehmen, wird der Ordner pausiert (die neue Transkription zeigt **Wird gestartet…**, bis es so weit ist) und danach wieder überwacht.
+- Fehler beenden die Überwachung nicht, und gemeinsam transkribierte Dateien werden in einer einzigen Benachrichtigung gemeldet.
 
 ## Die Warteschlange
 

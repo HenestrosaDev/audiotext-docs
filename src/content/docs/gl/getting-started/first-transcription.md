@@ -57,6 +57,8 @@ Consulta [A transcrición](/gl/guides/transcript/) para saber todo o que podes f
 | `Ctrl+F` / `⌘F` | Buscar e substituír no texto co que traballas (ou buscar no resumo) |
 | `Ctrl+J` / `⌘J` | Ir á seguinte palabra de baixa confianza |
 | `Maiús+Ctrl+J` / `⇧⌘J` | Ir á anterior palabra de baixa confianza |
-| `Esc` | Cancelar a transcrición en curso |
+| `Esc` | Cancelar a transcrición en curso (ou quitar a selección de ficheiros dun cartafol) |
+| `Ctrl+A` / `⌘A` | Seleccionar todos os ficheiros mostrados dun cartafol |
+| `Enter` | Abrir o ficheiro seleccionado dun cartafol |
 | `Espazo` | Reproducir ou pausar o audio |
 | `←` / `→` | Retroceder ou avanzar 5 segundos |

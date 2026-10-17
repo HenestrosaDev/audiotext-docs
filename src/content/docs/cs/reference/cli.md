@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Přepis souborů přidávaných do složky, dokud se nezastaví klávesami Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# Totéž, ale nejprve přepíše soubory, které složka už obsahuje
+audiotext watch inbox/ --existing
 ```
 
 ## Možnosti
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Jazyk zvuku jako kód ISO 639-1 (např. `cs`), nebo `auto` pro rozpoznání (Google nepodporuje) |
 | `-t`, `--output-types` | Typy výstupních souborů oddělené čárkami, z `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` a `ass` (např. `txt,srt,md`) |
 | `-o`, `--output-dir` | Složka, kam se ukládají přepisy (výchozí: vedle každého přepsaného souboru) |
-| `--overwrite` | Přepsat existující přepisy |
+| `--overwrite` | Znovu přepsat soubory, které už mají přepis, a nahradit ho |
+| `--existing` | (jen `watch`) Nejprve přepsat soubory, které složka už obsahuje a které ještě nemají přepis |
 | `-p`, `--prompt` | O čem nahrávka je, například téma nebo prostředí (Google nepodporuje) |
 | `-k`, `--keywords` | Jména, termíny nebo zkratky z nahrávky oddělené čárkami, aby se správně napsaly (Google nepodporuje) |
 | `--translate` | Přeložit zvuk při přepisu do angličtiny (Google nepodporuje). Pro jiné jazyky viz `--translate-to` |

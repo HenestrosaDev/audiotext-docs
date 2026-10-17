@@ -67,8 +67,12 @@ Visas bara för mikrofonen. Se [Livetext](/sv/guides/sources/#livetext).
 Visas bara för mappar:
 
 - **Bevaka mappen**: se [Bevaka en mapp](/sv/guides/sources/#bevaka-en-mapp).
+- **Transkribera filerna som redan finns i mappen** (bara vid bevakning): transkriberar först de filer som redan finns i mappen och som inte har någon transkribering än. Av som standard.
+- **Inkludera undermappar**: transkriberar även filerna i undermapparna.
+- **Hoppa över filer som matchar**: namn eller sökvägar för filerna som ska hoppas över, separerade med kommatecken (t.ex. `*.wav, drafts/*`). Dolda filer hoppas alltid över.
 - **Filtyper**: med WhisperX en eller flera av `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` och `.aud`. Med Whisper-API:t filernas format (`text`, `json`, `verbose_json`, `srt` eller `vtt`); undertexter kräver en modell med tidsstämplar. Google-API:t returnerar oformaterad text (`.txt`).
 - **Plats**: filerna sparas bredvid varje källfil. Klicka på **Ändra…** för att spara dem i en annan mapp (dess undermappar återskapas), eller på **Bredvid källan** för att gå tillbaka.
-- **Skriv över befintliga filer**: transkriberar om filer som redan har en transkribering och ersätter den.
+
+Filer som redan har en transkribering hoppas över. Använd alternativen för [filerna i mappen](/sv/guides/sources/#filerna-i-en-mapp) för att transkribera dem igen.
 
 Undertextalternativen (radbredd, antal rader, markerade ord) finns i [Inställningar](/sv/reference/preferences/#undertexter).

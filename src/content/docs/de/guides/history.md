@@ -32,7 +32,9 @@ Gruppen fassen zusammengehörige Transkriptionen zusammen, etwa die eines Projek
 
 ## Eine Transkription löschen
 
-Beim Löschen einer Transkription werden sie, ihre Zusammenfassung, ihre Fragen und ihre Übersetzungen aus dem Verlauf entfernt. Die Transkriptionen der Dateien eines Ordners werden ebenfalls gelöscht. Ihre Audio-, Video- und gespeicherten Dateien werden **nicht** gelöscht.
+Beim Löschen einer Transkription werden sie, ihre Zusammenfassung, ihre Fragen und ihre Übersetzungen aus dem Verlauf entfernt. Ihre Audio-, Video- und gespeicherten Dateien werden **nicht** gelöscht.
+
+Beim Entfernen eines Ordners werden auch seine Dateien aus dem Verlauf entfernt, und Audiotext fragt, ob **auch die für sie gespeicherten Dateien gelöscht** werden sollen (standardmäßig nicht). Ihre Audio- und Videodateien werden nie gelöscht.
 
 ## Fehlgeschlagene und unterbrochene Transkriptionen
 

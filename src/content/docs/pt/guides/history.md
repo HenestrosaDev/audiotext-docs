@@ -32,7 +32,9 @@ Os grupos reúnem transcrições relacionadas, como as de um projeto ou de um cu
 
 ## Exclua uma transcrição
 
-Excluir uma transcrição a remove do histórico, junto com o resumo, as perguntas e as traduções. As transcrições dos arquivos de uma pasta também são excluídas. Os seus arquivos de áudio, vídeo e os arquivos salvos **não** são excluídos.
+Excluir uma transcrição a remove do histórico, junto com o resumo, as perguntas e as traduções dela. Seus arquivos de áudio, vídeo e os arquivos salvos **não** são excluídos.
+
+Remover uma pasta também remove os arquivos dela do histórico, e pergunta se **também quer excluir os arquivos salvos para eles** (desativado por padrão). Seus arquivos de áudio e vídeo nunca são excluídos.
 
 ## Transcrições com falha e interrompidas
 

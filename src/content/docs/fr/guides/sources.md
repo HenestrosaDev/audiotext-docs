@@ -52,7 +52,7 @@ Pour transcrire ce que votre ordinateur lit (un appel vidéo, un webinaire, une 
 
 ## Dossier
 
-Transcrit tous les fichiers audio et vidéo d’un dossier **et de ses sous-dossiers**. Cliquez sur **Choisir un dossier…** ou déposez le dossier dans la fenêtre. Audiotext vous indique combien de fichiers il a trouvés.
+Transcrit tous les fichiers audio et vidéo d’un dossier et, si **Inclure les sous-dossiers** est activé dans la carte **Dossier**, de ses sous-dossiers. Cliquez sur **Choisir un dossier…** ou déposez le dossier sur la fenêtre. Audiotext vous indique combien de fichiers il a trouvés. Pour exclure certains fichiers, saisissez leurs noms ou chemins, séparés par des virgules, dans **Ignorer les fichiers correspondant à** (par ex. `*.wav, drafts/*`). Les fichiers cachés sont toujours ignorés.
 
 La transcription de chaque fichier est enregistrée à côté de celui-ci (ou dans un autre dossier choisi dans la carte **Sortie**), avec le même nom et l’extension de chaque **type de fichier** sélectionné. Par exemple, avec `.txt` et `.vtt` :
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Les fichiers qui ont déjà une transcription sont **ignorés**, sauf si vous activez **Écraser les fichiers existants**. Ainsi, si vous ajoutez un fichier au dossier et le transcrivez à nouveau, seul le nouveau fichier est transcrit.
+Si deux fichiers ont le même nom et une autre extension (par ex. `talk.mp3` et `talk.mp4`), leurs transcriptions gardent l’extension dans leur nom (`talk.mp3.txt` et `talk.mp4.txt`), pour qu’elles ne se remplacent pas.
 
-Si un fichier ne peut pas être transcrit, les autres le sont quand même, et la vue du dossier indique lesquels ont échoué et pourquoi. **Transcrire à nouveau** relance le dossier, et le bouton de dossier ouvre le dossier des fichiers enregistrés.
+Les fichiers qui ont déjà une transcription sont **ignorés** : un fichier n’est ignoré que s’il a tous les types de fichier sélectionnés, donc ajouter un type de fichier le transcrit à nouveau. Si un fichier ne peut pas être transcrit, les autres continuent de l’être.
+
+### Les fichiers d’un dossier
+
+La page d’un dossier dans l’historique liste ses fichiers, avec le statut, la durée et la taille de chacun et un aperçu de son texte. Recherchez-les, filtrez-les par statut (**Tous**, **Terminés**, **Échoués** ou **En attente**) et triez-les par nom, statut, durée ou taille. Les fichiers déplacés ou supprimés sont marqués **Fichier introuvable**.
+
+- Cliquez sur un fichier pour ouvrir sa transcription, ou cliquez sur son bouton `⋯` (ou faites un clic droit dessus) pour copier son texte, l’ouvrir directement dans son export, son résumé ou sa traduction, l’afficher dans le gestionnaire de fichiers ou choisir **Retranscrire ce fichier**.
+- Sélectionnez plusieurs fichiers avec `Ctrl`/`⌘` ou `Maj`, ou tous les fichiers affichés avec `Ctrl+A` / `⌘A`, et choisissez **Retranscrire**, **Exporter…** (pour les exporter ensemble dans un seul fichier TXT, Markdown ou Word) ou **Retirer de l’historique…**. `Entrée` ouvre le fichier sélectionné, et `Échap` efface la sélection.
+- **Réessayer les échecs** transcrit à nouveau les fichiers en échec. **Analyser à nouveau le dossier** ne transcrit que les fichiers sans transcription, comme les nouveaux, et indique combien ont été ignorés parce qu’ils en avaient déjà une.
+- Le menu `⋯` du dossier propose **Tout retranscrire…** (transcrit à nouveau tous ses fichiers, en remplaçant leurs transcriptions), **Tout exporter…** (dans un seul fichier), une option pour retirer de la liste les fichiers manquants, et les options pour ouvrir le dossier source ou le dossier des fichiers enregistrés.
+- Lorsque vous modifiez les paramètres du dossier, les fichiers transcrits avec d’autres paramètres (moteur, modèle, langue…) sont indiqués, avec un bouton **Les retranscrire**.
+
+L’en-tête indique où les fichiers sont enregistrés et renvoie au dossier source. **Modifier les paramètres** modifie les paramètres du dossier, et **Enregistrer et analyser à nouveau** transcrit avec eux les fichiers auxquels il manque une transcription.
 
 ### Surveillez un dossier
 
 Activez **Surveiller le dossier** dans la carte **Dossier** pour continuer à transcrire les fichiers ajoutés au dossier (ou à ses sous-dossiers) jusqu’à ce que vous cliquiez sur **Arrêter la surveillance**. C’est pratique pour les enregistrements d’un dictaphone ou d’un outil de réunion copiés dans un dossier.
 
-- Les fichiers que le dossier contient déjà sont ignorés. Pour les transcrire, transcrivez le dossier sans le surveiller.
+- Les fichiers que le dossier contient déjà sont ignorés, sauf si vous activez **Transcrire les fichiers déjà présents dans le dossier** : ceux sans transcription sont alors transcrits en premier.
 - Un fichier est transcrit une fois entièrement copié (lorsque sa taille cesse de changer) : les gros fichiers ne sont donc pas transcrits à moitié.
-- Les erreurs n’arrêtent pas la surveillance.
+- Les dossiers surveillés à la fermeture d’Audiotext sont de nouveau surveillés à son ouverture, en reprenant à partir des fichiers déjà vus. Les dossiers arrêtés peuvent être surveillés de nouveau avec **Reprendre la surveillance**.
+- Si le dossier n’est pas disponible (par ex. sur un disque non connecté), Audiotext l’attend au lieu d’échouer.
+- Pour transcrire autre chose ou enregistrer, le dossier est mis en pause (la nouvelle transcription indique **Démarrage…** jusqu’à ce qu’il le soit), puis il est de nouveau surveillé.
+- Les erreurs n’arrêtent pas la surveillance, et les fichiers transcrits ensemble sont signalés dans une seule notification.
 
 ## La file d’attente
 

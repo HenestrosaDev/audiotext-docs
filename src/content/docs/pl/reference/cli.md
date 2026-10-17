@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Transkrypcja plików dodawanych do folderu aż do zatrzymania klawiszami Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# To samo, ale najpierw transkrybując pliki, które już są w folderze
+audiotext watch inbox/ --existing
 ```
 
 ## Opcje
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Język nagrania jako kod ISO 639-1 (np. `pl`) lub `auto`, aby go wykryć (nieobsługiwane przez Google) |
 | `-t`, `--output-types` | Typy plików wyjściowych oddzielone przecinkami, spośród `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` i `ass` (np. `txt,srt,md`) |
 | `-o`, `--output-dir` | Folder, w którym zapisywane są transkrypcje (domyślnie obok każdego transkrybowanego pliku) |
-| `--overwrite` | Zastępowanie istniejących transkrypcji |
+| `--overwrite` | Ponownie transkrybować pliki, które mają już transkrypcję, zastępując ją |
+| `--existing` | (tylko `watch`) Najpierw transkrybować pliki, które już są w folderze i nie mają jeszcze transkrypcji |
 | `-p`, `--prompt` | O czym jest nagranie, np. temat lub okoliczności (nieobsługiwane przez Google) |
 | `-k`, `--keywords` | Nazwy, terminy lub skróty z nagrania, oddzielone przecinkami, aby były poprawnie zapisane (nieobsługiwane przez Google) |
 | `--translate` | Tłumaczenie nagrania na angielski podczas transkrypcji (nieobsługiwane przez Google). Dla innych języków zobacz `--translate-to` |

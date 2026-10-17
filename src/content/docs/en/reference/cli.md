@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Transcribe the files added to a folder until stopped with Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# The same, transcribing first the files it already contains
+audiotext watch inbox/ --existing
 ```
 
 ## Options
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Language of the audio as an ISO 639-1 code (e.g. `es`), or `auto` to detect it (not supported by Google) |
 | `-t`, `--output-types` | Comma-separated output file types, from `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` and `ass` (e.g. `txt,srt,md`) |
 | `-o`, `--output-dir` | Folder where the transcriptions are saved (default: next to each transcribed file) |
-| `--overwrite` | Overwrite existing transcriptions |
+| `--overwrite` | Transcribe again the files that already have a transcription, replacing it |
+| `--existing` | (`watch` only) First transcribe the files that the folder already contains and that don't have a transcription yet |
 | `-p`, `--prompt` | What the audio is about, such as its topic or setting (not supported by Google) |
 | `-k`, `--keywords` | Comma-separated names, terms or acronyms said in the audio, so they're spelled right (not supported by Google) |
 | `--translate` | Translate the audio into English while transcribing it (not supported by Google). See `--translate-to` for other languages |

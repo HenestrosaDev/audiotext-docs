@@ -58,7 +58,7 @@ uv run pytest               # testleri çalıştırır
 
 ## Arayüzü çevirin
 
-Arayüz [gettext](https://www.gnu.org/software/gettext/) ile çevrilir. Metinler `res/locales/audiotext.pot` içinde, her dilin çevirileri ise `res/locales/<dil>/LC_MESSAGES/audiotext.po` içindedir.
+Arayüz [gettext](https://www.gnu.org/software/gettext/) ile çevrilir. Metinler `res/locales/audiotext.pot` içinde, her dilin çevirileri ise `res/locales/<dil>/LC_MESSAGES/audiotext.po` içindedir. Bir sayıya bağlı metinlerin (ör. `{count} file` / `{count} files`), kataloğun `Plural-Forms` başlığında belirtildiği gibi dilin her çoğul biçimi için bir çevirisi vardır (`msgstr[0]`, `msgstr[1]`…). Aynı metin, her yerde farklı çevrilebilmesi için bir kez bağlamla (`msgctxt`) olmak üzere iki kez görünebilir: ör. `Done` bir transkripsiyonun durumudur, `files` bağlamıyla ise bir klasörün dosyalarına ait bir filtredir.
 
 Koddaki metinler değiştiğinde veya bir `.po` dosyasını düzenledikten sonra (ör. [Poedit](https://poedit.net/) ile) bu betiği çalıştırın. Betik metinleri çıkarır, katalogları günceller, derler ve hâlâ çevrilmesi ya da gözden geçirilmesi gereken metinleri (`fuzzy` olarak işaretli) listeler; uygulama bu metinleri o zamana kadar İngilizce gösterir. Bir katalog güncel olmadığı sürece testler başarısız olur.
 

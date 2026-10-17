@@ -72,7 +72,7 @@ Se aparecer **O vídeo do YouTube não tem faixa de áudio.**, o vídeo não tem
 
 ## Uma pasta não transcreve nenhum arquivo
 
-Os arquivos que já têm uma transcrição são ignorados. Ative **Substituir arquivos existentes** para transcrevê-los de novo. A pasta também precisa conter [arquivos compatíveis](/pt/reference/formats-and-languages/).
+Os arquivos que já têm uma transcrição são ignorados, assim como os arquivos ocultos e os que correspondem a **Ignorar arquivos que correspondam a**. Para transcrevê-los de novo, use **Transcrever tudo novamente…** no menu `⋯` da pasta, ou selecione-os na [lista de arquivos](/pt/guides/sources/#os-arquivos-de-uma-pasta) dela. Os arquivos das subpastas só são transcritos com **Incluir subpastas**, e a pasta deve conter [arquivos compatíveis](/pt/reference/formats-and-languages/).
 
 ## A API do Google pede o idioma
 

@@ -58,7 +58,7 @@ uv run pytest               # テストを実行する
 
 ## インターフェースを翻訳する
 
-インターフェースは [gettext](https://www.gnu.org/software/gettext/) で翻訳されています。テキストは `res/locales/audiotext.pot` に、各言語の翻訳は `res/locales/<言語>/LC_MESSAGES/audiotext.po` にあります。
+インターフェースは [gettext](https://www.gnu.org/software/gettext/) で翻訳されています。テキストは `res/locales/audiotext.pot` に、各言語の翻訳は `res/locales/<言語>/LC_MESSAGES/audiotext.po` にあります。 数によって変わるテキスト（例: `{count} file` / `{count} files`）には、カタログの `Plural-Forms` ヘッダーで定められた、その言語の複数形ごとの翻訳（`msgstr[0]`、`msgstr[1]`…）があります。 同じテキストが、コンテキスト（`msgctxt`）付きでもう一度現れることがあり、場所ごとに別の訳を付けられます。たとえば `Done` は文字起こしの状態で、`files` コンテキスト付きのものはフォルダーのファイルの絞り込みです。
 
 コードのテキストが変わったとき、または `.po` ファイルを編集した後（[Poedit](https://poedit.net/) など）は、このスクリプトを実行します。テキストの抽出、カタログの更新とコンパイルを行い、まだ翻訳または確認が必要なテキスト（`fuzzy` の印付き）を一覧表示します。それまでアプリはそれらを英語で表示します。古いカタログがある間はテストが失敗します。
 

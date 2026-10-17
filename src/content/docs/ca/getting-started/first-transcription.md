@@ -57,6 +57,8 @@ Consulta [La transcripció](/ca/guides/transcript/) per saber tot el que hi pots
 | `Ctrl+F` / `⌘F` | Cercar i substituir al text amb què treballes (o cercar al resum) |
 | `Ctrl+J` / `⌘J` | Anar a la paraula de baixa confiança següent |
 | `Maj+Ctrl+J` / `⇧⌘J` | Anar a la paraula de baixa confiança anterior |
-| `Esc` | Cancel·lar la transcripció en curs |
+| `Esc` | Cancel·lar la transcripció en curs (o esborrar la selecció de fitxers d'una carpeta) |
+| `Ctrl+A` / `⌘A` | Seleccionar tots els fitxers que es mostren d'una carpeta |
+| `Enter` | Obrir el fitxer seleccionat d'una carpeta |
 | `Espai` | Reproduir o posar en pausa l'àudio |
 | `←` / `→` | Retrocedir o avançar 5 segons |

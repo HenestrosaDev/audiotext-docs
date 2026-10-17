@@ -58,7 +58,7 @@ uv run pytest               # executa as probas
 
 ## Traduce a interface
 
-A interface tradúcese con [gettext](https://www.gnu.org/software/gettext/). Os textos están en `res/locales/audiotext.pot`, e as traducións de cada idioma en `res/locales/<idioma>/LC_MESSAGES/audiotext.po`.
+A interface tradúcese con [gettext](https://www.gnu.org/software/gettext/). Os textos están en `res/locales/audiotext.pot`, e as traducións de cada idioma en `res/locales/<idioma>/LC_MESSAGES/audiotext.po`. Os textos que dependen dun número (p. ex. `{count} file` / `{count} files`) teñen unha tradución para cada forma de plural do idioma (`msgstr[0]`, `msgstr[1]`…), segundo a cabeceira `Plural-Forms` do seu catálogo. Un mesmo texto pode aparecer dúas veces, unha cun contexto (`msgctxt`), para que se traduza distinto en cada sitio: p. ex. `Done` é o estado dunha transcrición, e co contexto `files`, un filtro dos ficheiros dun cartafol.
 
 Cando cambien os textos do código, ou despois de editar un ficheiro `.po` (p. ex. con [Poedit](https://poedit.net/)), executa este script. Extrae os textos, actualiza os catálogos, compílaos e lista os textos que faltan por traducir ou revisar (marcados como `fuzzy`), que a aplicación mostra en inglés ata entón. As probas fallan mentres haxa un catálogo desactualizado.
 

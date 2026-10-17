@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Chép lời các tệp được thêm vào thư mục cho đến khi dừng bằng Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# Tương tự, nhưng chép lời trước các tệp đã có sẵn trong thư mục
+audiotext watch inbox/ --existing
 ```
 
 ## Tùy chọn
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Ngôn ngữ của âm thanh dưới dạng mã ISO 639-1 (ví dụ `vi`), hoặc `auto` để tự phát hiện (Google không hỗ trợ) |
 | `-t`, `--output-types` | Các loại tệp đầu ra, phân tách bằng dấu phẩy, trong số `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` và `ass` (ví dụ `txt,srt,md`) |
 | `-o`, `--output-dir` | Thư mục lưu bản chép lời (mặc định: cạnh mỗi tệp được chép lời) |
-| `--overwrite` | Ghi đè các bản chép lời hiện có |
+| `--overwrite` | Chép lời lại các tệp đã có bản chép lời và thay thế nó |
+| `--existing` | (chỉ `watch`) Chép lời trước các tệp đã có sẵn trong thư mục và chưa có bản chép lời |
 | `-p`, `--prompt` | Âm thanh nói về điều gì, chẳng hạn chủ đề hoặc bối cảnh (Google không hỗ trợ) |
 | `-k`, `--keywords` | Tên riêng, thuật ngữ hoặc từ viết tắt trong âm thanh, phân tách bằng dấu phẩy, để viết đúng (Google không hỗ trợ) |
 | `--translate` | Dịch âm thanh sang tiếng Anh trong khi chép lời (Google không hỗ trợ). Với các ngôn ngữ khác, xem `--translate-to` |

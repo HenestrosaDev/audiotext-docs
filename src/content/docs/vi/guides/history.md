@@ -32,7 +32,9 @@ Nhóm gom các bản chép lời liên quan, chẳng hạn của cùng một d�
 
 ## Xóa một bản chép lời
 
-Xóa một bản chép lời sẽ xóa nó, bản tóm tắt, các câu hỏi và các bản dịch khỏi lịch sử. Các bản chép lời của những tệp trong một thư mục cũng bị xóa. Các tệp âm thanh, video và tệp đã lưu của bạn **không** bị xóa.
+Xóa một bản chép lời sẽ xóa nó, bản tóm tắt, các câu hỏi và các bản dịch của nó khỏi lịch sử. Các tệp âm thanh, video và tệp đã lưu của bạn **không** bị xóa.
+
+Xóa một thư mục cũng xóa các tệp của nó khỏi lịch sử, và hỏi bạn có muốn **xóa cả các tệp đã lưu cho chúng** hay không (tắt theo mặc định). Các tệp âm thanh và video của bạn không bao giờ bị xóa.
 
 ## Bản chép lời thất bại và bị gián đoạn
 

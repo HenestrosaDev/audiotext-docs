@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Bir klasöre eklenen dosyaları Ctrl+C ile durdurulana kadar yazıya dök
 audiotext watch inbox/ --output-types srt
+
+# Aynısı, ama önce klasörde zaten bulunan dosyaları yazıya döker
+audiotext watch inbox/ --existing
 ```
 
 ## Seçenekler
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | ISO 639-1 kodu olarak sesin dili (ör. `tr`) veya algılamak için `auto` (Google desteklemez) |
 | `-t`, `--output-types` | `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` ve `ass` arasından virgülle ayrılmış çıktı dosyası türleri (ör. `txt,srt,md`) |
 | `-o`, `--output-dir` | Transkripsiyonların kaydedildiği klasör (varsayılan: yazıya dökülen her dosyanın yanı) |
-| `--overwrite` | Mevcut transkripsiyonların üzerine yaz |
+| `--overwrite` | Zaten transkripsiyonu olan dosyaları yeniden yazıya döker ve transkripsiyonu değiştirir |
+| `--existing` | (yalnızca `watch`) Önce klasörde zaten bulunan ve henüz transkripsiyonu olmayan dosyaları yazıya döker |
 | `-p`, `--prompt` | Kaydın konusu veya ortamı gibi neyle ilgili olduğu (Google desteklemez) |
 | `-k`, `--keywords` | Kayıtta geçen adlar, terimler veya kısaltmalar, doğru yazılmaları için virgülle ayrılmış (Google desteklemez) |
 | `--translate` | Sesi yazıya dökerken İngilizceye çevir (Google desteklemez). Diğer diller için `--translate-to` seçeneğine bakın |

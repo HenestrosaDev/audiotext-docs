@@ -32,7 +32,9 @@ Groups gather related transcriptions, such as the ones of a project or a course.
 
 ## Delete a transcription
 
-Deleting a transcription removes it, its summary, its questions and its translations from the history. The transcriptions of the files of a folder are deleted too. Your audio, video and saved files are **not** deleted.
+Deleting a transcription removes it, its summary, its questions and its translations from the history. Your audio, video and saved files are **not** deleted.
+
+Removing a folder also removes its files from the history, and asks whether to **also delete the files saved for them** (off by default). Your audio and video files are never deleted.
 
 ## Failed and interrupted transcriptions
 

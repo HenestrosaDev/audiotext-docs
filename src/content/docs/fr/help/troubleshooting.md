@@ -72,7 +72,7 @@ Si **La vidéo YouTube n’a pas de piste audio.** s’affiche à la place, la v
 
 ## Un dossier ne transcrit aucun fichier
 
-Les fichiers qui ont déjà une transcription sont ignorés. Activez **Écraser les fichiers existants** pour les transcrire à nouveau. Le dossier doit aussi contenir des [fichiers pris en charge](/fr/reference/formats-and-languages/).
+Les fichiers qui ont déjà une transcription sont ignorés, tout comme les fichiers cachés et ceux qui correspondent à **Ignorer les fichiers correspondant à**. Pour les transcrire à nouveau, utilisez **Tout retranscrire…** dans le menu `⋯` du dossier, ou sélectionnez-les dans sa [liste de fichiers](/fr/guides/sources/#les-fichiers-dun-dossier). Les fichiers des sous-dossiers ne sont transcrits qu’avec **Inclure les sous-dossiers**, et le dossier doit contenir des [fichiers pris en charge](/fr/reference/formats-and-languages/).
 
 ## L’API Google demande la langue
 

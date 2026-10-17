@@ -72,7 +72,7 @@ Pokud se místo toho zobrazí **Video na YouTube nemá zvukovou stopu.**, video 
 
 ## Složka nepřepíše žádný soubor
 
-Soubory, které už přepis mají, se přeskakují. Zapněte **Přepsat existující soubory**, chcete-li je přepsat znovu. Složka také musí obsahovat [podporované soubory](/cs/reference/formats-and-languages/).
+Soubory, které už mají přepis, se přeskočí, stejně jako skryté soubory a soubory odpovídající poli **Přeskočit soubory odpovídající**. Chcete-li je přepsat znovu, použijte **Přepsat vše znovu…** v nabídce `⋯` složky, nebo je vyberte v jejím [seznamu souborů](/cs/guides/sources/#soubory-složky). Soubory podsložek se přepíší jen se zapnutým **Zahrnout podsložky** a složka musí obsahovat [podporované soubory](/cs/reference/formats-and-languages/).
 
 ## Google API žádá o jazyk
 

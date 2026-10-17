@@ -57,6 +57,8 @@ Lihat [Transkrip](/id/guides/transcript/) untuk semua yang dapat Anda lakukan de
 | `Ctrl+F` / `⌘F` | Mencari dan mengganti di teks yang sedang Anda kerjakan (atau mencari di ringkasan) |
 | `Ctrl+J` / `⌘J` | Menuju kata berikutnya dengan keyakinan rendah |
 | `Shift+Ctrl+J` / `⇧⌘J` | Menuju kata sebelumnya dengan keyakinan rendah |
-| `Esc` | Membatalkan transkripsi yang sedang berjalan |
+| `Esc` | Membatalkan transkripsi yang sedang berjalan (atau menghapus pilihan file dalam folder) |
+| `Ctrl+A` / `⌘A` | Memilih semua file folder yang ditampilkan |
+| `Enter` | Membuka file folder yang dipilih |
 | `Spasi` | Memutar atau menjeda audio |
 | `←` / `→` | Mundur atau maju 5 detik |

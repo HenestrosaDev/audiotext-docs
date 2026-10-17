@@ -58,7 +58,7 @@ uv run pytest               # menjalankan pengujian
 
 ## Terjemahkan antarmuka
 
-Antarmuka diterjemahkan dengan [gettext](https://www.gnu.org/software/gettext/). Teksnya ada di `res/locales/audiotext.pot`, dan terjemahan setiap bahasa ada di `res/locales/<bahasa>/LC_MESSAGES/audiotext.po`.
+Antarmuka diterjemahkan dengan [gettext](https://www.gnu.org/software/gettext/). Teksnya ada di `res/locales/audiotext.pot`, dan terjemahan setiap bahasa ada di `res/locales/<bahasa>/LC_MESSAGES/audiotext.po`. Teks yang bergantung pada angka (mis. `{count} file` / `{count} files`) memiliki terjemahan untuk setiap bentuk jamak bahasa tersebut (`msgstr[0]`, `msgstr[1]`…), sesuai header `Plural-Forms` katalognya. Teks yang sama dapat muncul dua kali, sekali dengan konteks (`msgctxt`), agar diterjemahkan berbeda di setiap tempat: mis. `Done` adalah status transkripsi, dan dengan konteks `files`, filter file dalam folder.
 
 Saat teks dalam kode berubah, atau setelah mengedit file `.po` (mis. dengan [Poedit](https://poedit.net/)), jalankan skrip ini. Skrip ini mengekstrak teks, memperbarui katalog, mengompilasinya, dan menampilkan daftar teks yang masih perlu diterjemahkan atau ditinjau (ditandai `fuzzy`), yang ditampilkan aplikasi dalam bahasa Inggris hingga saat itu. Pengujian gagal selama masih ada katalog yang belum diperbarui.
 

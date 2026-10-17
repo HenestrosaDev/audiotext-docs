@@ -67,8 +67,12 @@ Só aparece para o microfone. Consulte [Texto ao vivo](/pt/guides/sources/#texto
 Só aparecem para pastas:
 
 - **Monitorar a pasta**: consulte [Monitore uma pasta](/pt/guides/sources/#monitore-uma-pasta).
+- **Transcrever os arquivos que já estão na pasta** (só ao monitorar): transcreve primeiro os arquivos que a pasta já contém e que ainda não têm transcrição. Desativado por padrão.
+- **Incluir subpastas**: também transcreve os arquivos das subpastas.
+- **Ignorar arquivos que correspondam a**: nomes ou caminhos dos arquivos a ignorar, separados por vírgulas (ex.: `*.wav, drafts/*`). Os arquivos ocultos são sempre ignorados.
 - **Tipos de arquivo**: com o WhisperX, um ou mais entre `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` e `.aud`. Com a API do Whisper, o formato dos arquivos (`text`, `json`, `verbose_json`, `srt` ou `vtt`); as legendas exigem um modelo com carimbos de tempo. A API do Google retorna texto simples (`.txt`).
 - **Local**: os arquivos são salvos ao lado de cada arquivo de origem. Clique em **Alterar…** para salvá-los em outra pasta (as subpastas são recriadas), ou em **Ao lado da origem** para voltar.
-- **Substituir arquivos existentes**: transcreve de novo os arquivos que já têm uma transcrição, substituindo-a.
+
+Os arquivos que já têm uma transcrição são ignorados. Para transcrevê-los de novo, use as opções dos [arquivos da pasta](/pt/guides/sources/#os-arquivos-de-uma-pasta).
 
 As opções das legendas (largura da linha, número de linhas, palavras destacadas) ficam nas [Preferências](/pt/reference/preferences/#legendas).

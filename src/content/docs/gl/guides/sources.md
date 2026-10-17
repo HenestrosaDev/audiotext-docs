@@ -52,7 +52,7 @@ Para transcribir o que reproduce o teu ordenador (unha videochamada, un webinar,
 
 ## Cartafol
 
-Transcribe todos os ficheiros de audio e vídeo dun cartafol **e dos seus subcartafoles**. Fai clic en **Escoller un cartafol…** ou solta o cartafol na xanela. Audiotext indícache cantos ficheiros atopou.
+Transcribe todos os ficheiros de audio e vídeo dun cartafol e, se **Incluír subcartafoles** está activado na tarxeta **Cartafol**, dos seus subcartafoles. Fai clic en **Escoller un cartafol…** ou solta o cartafol na xanela. Audiotext indícache cantos ficheiros atopou. Para deixar fóra algúns ficheiros, escribe os seus nomes ou rutas, separados por comas, en **Omitir os ficheiros que coincidan con** (p. ex. `*.wav, drafts/*`). Os ficheiros ocultos sempre se omiten.
 
 A transcrición de cada ficheiro gárdase xunto a el (ou noutro cartafol que escollas na tarxeta **Saída**), co mesmo nome e a extensión de cada **tipo de ficheiro** que seleccionases. Por exemplo, con `.txt` e `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Os ficheiros que xa teñen unha transcrición **omítense**, agás que actives **Sobrescribir os ficheiros existentes**. Así, se engades un ficheiro ao cartafol e o volves transcribir, só se transcribe o ficheiro novo.
+Se dous ficheiros teñen o mesmo nome e outra extensión (p. ex. `talk.mp3` e `talk.mp4`), as súas transcricións manteñen a extensión no nome (`talk.mp3.txt` e `talk.mp4.txt`), para que non se substitúan entre si.
 
-Se un ficheiro non se pode transcribir, o resto séguese transcribindo, e a vista do cartafol mostra cales fallaron e por que. **Volver transcribir** repite o cartafol, e o botón de cartafol abre o cartafol dos ficheiros gardados.
+Os ficheiros que xa teñen unha transcrición **omítense**: un ficheiro só se omite se ten todos os tipos de ficheiro que seleccionaches, así que engadir un tipo de ficheiro transcríbeo de novo. Se un ficheiro non se pode transcribir, o resto séguese transcribindo.
+
+### Os ficheiros dun cartafol
+
+A páxina dun cartafol no historial mostra os seus ficheiros, co estado, a duración e o tamaño de cada un e unha vista previa do seu texto. Búscaos, fíltraos por estado (**Todos**, **Completados**, **Con erros** ou **Pendentes**) e ordénaos por nome, estado, duración ou tamaño. Os ficheiros que se moveron ou eliminaron márcanse como **Non se atopa o ficheiro**.
+
+- Fai clic nun ficheiro para abrir a súa transcrición, ou fai clic no seu botón `⋯` (ou clic dereito sobre el) para copiar o seu texto, abrilo directamente na súa exportación, resumo ou tradución, mostralo no xestor de ficheiros ou escoller **Volver transcribir este ficheiro**.
+- Selecciona varios ficheiros con `Ctrl`/`⌘` ou `Maiús`, ou todos os ficheiros mostrados con `Ctrl+A` / `⌘A`, e escolle **Volver transcribir**, **Exportar…** (para exportalos xuntos nun só ficheiro TXT, Markdown ou Word) ou **Quitar do historial…**. `Enter` abre o ficheiro seleccionado, e `Esc` quita a selección.
+- **Reintentar os fallidos** volve transcribir os ficheiros que fallaron. **Volver analizar o cartafol** transcribe só os ficheiros sen transcrición, como os novos, e indica cantos se omitiron porque xa tiñan unha.
+- O menú `⋯` do cartafol ten **Volver transcribir todo…** (volve transcribir todos os seus ficheiros, substituíndo as súas transcricións), **Exportar todo…** (nun só ficheiro), unha opción para quitar da lista os ficheiros que faltan, e as opcións para abrir o cartafol de orixe ou o dos ficheiros gardados.
+- Cando cambias os axustes do cartafol, indícanse os ficheiros transcritos con outros axustes (motor, modelo, idioma…), co botón **Volver transcribilos**.
+
+A cabeceira mostra onde se gardan os ficheiros e ten unha ligazón ao cartafol de orixe. **Editar a configuración** cambia os axustes do cartafol, e **Gardar e volver analizar** transcribe con eles os ficheiros aos que lles falta unha transcrición.
 
 ### Vixía un cartafol
 
 Activa **Vixiar o cartafol** na tarxeta **Cartafol** para seguir transcribindo os ficheiros que se engadan ao cartafol (ou aos seus subcartafoles) ata que fagas clic en **Deixar de vixiar**. É útil para as gravacións dunha gravadora de voz ou dunha ferramenta de reunións que se copian a un cartafol.
 
-- Os ficheiros que xa contén o cartafol omítense. Para transcribilos, transcribe o cartafol sen vixialo.
+- Os ficheiros que xa contén o cartafol omítense, agás que actives **Transcribir os ficheiros que xa hai no cartafol**: entón primeiro transcríbense os que non teñen transcrición.
 - Un ficheiro transcríbese cando se copiou por completo (cando o seu tamaño deixa de cambiar), así que os ficheiros grandes non se transcriben a medias.
-- Os erros non deteñen a vixilancia.
+- Os cartafoles que se estaban vixiando ao pechar Audiotext vólvense vixiar ao abrilo, continuando desde os ficheiros que xa viran. Os cartafoles detidos pódense volver vixiar con **Retomar a vixilancia**.
+- Se o cartafol non está dispoñible (p. ex. está nunha unidade que non está conectada), Audiotext espérao en lugar de fallar.
+- Para transcribir outra cousa ou gravar, o cartafol ponse en pausa (a nova transcrición indica **Iniciando…** ata que o está) e despois vólvese vixiar.
+- Os erros non deteñen a vixilancia, e os ficheiros transcritos á vez avísanse nunha soa notificación.
 
 ## A cola
 

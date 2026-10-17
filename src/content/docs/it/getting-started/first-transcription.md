@@ -57,6 +57,8 @@ Consulta [La trascrizione](/it/guides/transcript/) per scoprire tutto quello che
 | `Ctrl+F` / `⌘F` | Trovare e sostituire nel testo su cui stai lavorando (o cercare nel riassunto) |
 | `Ctrl+J` / `⌘J` | Andare alla parola a bassa affidabilità successiva |
 | `Maiusc+Ctrl+J` / `⇧⌘J` | Andare alla parola a bassa affidabilità precedente |
-| `Esc` | Annullare la trascrizione in corso |
+| `Esc` | Annullare la trascrizione in corso (o annullare la selezione dei file di una cartella) |
+| `Ctrl+A` / `⌘A` | Selezionare tutti i file mostrati di una cartella |
+| `Invio` | Aprire il file selezionato di una cartella |
 | `Spazio` | Riprodurre o mettere in pausa l'audio |
 | `←` / `→` | Tornare indietro o andare avanti di 5 secondi |

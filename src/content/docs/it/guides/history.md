@@ -32,7 +32,9 @@ I gruppi riuniscono trascrizioni correlate, come quelle di un progetto o di un c
 
 ## Elimina una trascrizione
 
-Eliminare una trascrizione la rimuove dalla cronologia, insieme al riassunto, alle domande e alle traduzioni. Vengono eliminate anche le trascrizioni dei file di una cartella. I tuoi file audio, video e salvati **non** vengono eliminati.
+Eliminare una trascrizione la rimuove dalla cronologia, insieme al suo riassunto, alle sue domande e alle sue traduzioni. I tuoi file audio, video e i file salvati **non** vengono eliminati.
+
+Rimuovere una cartella rimuove dalla cronologia anche i suoi file, e chiede se **eliminare anche i file salvati per essi** (disattivato per impostazione predefinita). I tuoi file audio e video non vengono mai eliminati.
 
 ## Trascrizioni non riuscite e interrotte
 

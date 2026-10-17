@@ -52,7 +52,7 @@ Aby przetranskrybować to, co odtwarza komputer (rozmowę wideo, webinar, film, 
 
 ## Folder
 
-Transkrybuje wszystkie pliki audio i wideo z folderu **i jego podfolderów**. Kliknij **Wybierz folder…** lub upuść folder w oknie. Audiotext pokaże, ile plików znalazł.
+Transkrybuje wszystkie pliki audio i wideo z folderu oraz, jeśli na karcie **Folder** jest włączone **Uwzględnij podfoldery**, z jego podfolderów. Kliknij **Wybierz folder…** lub upuść folder na okno. Audiotext poda, ile plików znalazł. Aby pominąć niektóre pliki, wpisz ich nazwy lub ścieżki, oddzielone przecinkami, w polu **Pomiń pliki pasujące do** (np. `*.wav, drafts/*`). Ukryte pliki są zawsze pomijane.
 
 Transkrypcja każdego pliku jest zapisywana obok niego (lub w innym folderze wybranym na karcie **Wynik**), z tą samą nazwą i rozszerzeniem każdego wybranego **typu pliku**. Na przykład z `.txt` i `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Pliki, które mają już transkrypcję, są **pomijane**, chyba że włączysz **Zastępuj istniejące pliki**. Jeśli więc dodasz plik do folderu i ponownie go transkrybujesz, transkrybowany będzie tylko nowy plik.
+Jeśli dwa pliki mają tę samą nazwę i inne rozszerzenie (np. `talk.mp3` i `talk.mp4`), ich transkrypcje zachowują rozszerzenie w nazwie (`talk.mp3.txt` i `talk.mp4.txt`), aby się nawzajem nie zastępowały.
 
-Jeśli którego pliku nie da się transkrybować, pozostałe i tak są transkrybowane, a widok folderu pokazuje, które się nie udały i dlaczego. **Transkrybuj ponownie** powtarza folder, a przycisk folderu otwiera folder z zapisanymi plikami.
+Pliki, które mają już transkrypcję, są **pomijane**: plik jest pomijany tylko wtedy, gdy ma wszystkie wybrane typy plików, więc dodanie typu pliku transkrybuje go ponownie. Jeśli którego pliku nie da się transkrybować, pozostałe i tak są transkrybowane.
+
+### Pliki folderu
+
+Strona folderu w historii wyświetla jego pliki, ze stanem, długością i rozmiarem każdego z nich oraz podglądem tekstu. Możesz je przeszukiwać, filtrować według stanu (**Wszystkie**, **Gotowe**, **Nieudane** lub **Oczekujące**) i sortować według nazwy, stanu, długości lub rozmiaru. Pliki, które zostały przeniesione lub usunięte, są oznaczane jako **Nie znaleziono pliku**.
+
+- Kliknij plik, aby otworzyć jego transkrypcję, albo kliknij jego przycisk `⋯` (lub kliknij go prawym przyciskiem), aby skopiować tekst, otworzyć go od razu w eksporcie, podsumowaniu lub tłumaczeniu, pokazać go w menedżerze plików lub wybrać **Transkrybuj ten plik ponownie**.
+- Zaznacz kilka plików za pomocą `Ctrl`/`⌘` lub `Shift`, albo wszystkie wyświetlane pliki za pomocą `Ctrl+A` / `⌘A`, aby wybrać **Transkrybuj ponownie**, **Eksportuj…** (razem do jednego pliku TXT, Markdown lub Word) lub **Usuń z historii…**. `Enter` otwiera zaznaczony plik, a `Esc` czyści zaznaczenie.
+- **Ponów nieudane** ponownie transkrybuje pliki, które się nie udały. **Przeskanuj folder ponownie** transkrybuje tylko pliki bez transkrypcji, np. nowe, i podaje, ile pominięto, bo już ją miały.
+- Menu `⋯` folderu pozwala wybrać **Transkrybuj wszystko ponownie…** (wszystkie jego pliki, z zastąpieniem ich transkrypcji), **Eksportuj wszystko…** (do jednego pliku), usunąć brakujące pliki z listy oraz otworzyć folder źródłowy lub folder zapisanych plików.
+- Gdy zmienisz ustawienia folderu, pojawią się pliki transkrybowane z innymi ustawieniami (silnik, model, język…), z przyciskiem **Transkrybuj je ponownie**.
+
+Nagłówek pokazuje, gdzie są zapisywane pliki, i zawiera link do folderu źródłowego. **Edytuj ustawienia** zmienia ustawienia folderu, a **Zapisz i przeskanuj ponownie** transkrybuje z nimi pliki, którym brakuje transkrypcji.
 
 ### Obserwuj folder
 
 Włącz **Obserwuj folder** na karcie **Folder**, aby transkrybować pliki dodawane do folderu (lub jego podfolderów), dopóki nie klikniesz **Zatrzymaj obserwowanie**. Przydaje się to przy nagraniach z dyktafonu lub narzędzia do spotkań kopiowanych do folderu.
 
-- Pliki, które już są w folderze, są pomijane. Aby je transkrybować, transkrybuj folder bez obserwowania.
+- Pliki, które już są w folderze, są pomijane, chyba że włączysz **Transkrybuj pliki, które już są w folderze**: wtedy najpierw transkrybowane są te bez transkrypcji.
 - Plik jest transkrybowany po całkowitym skopiowaniu (gdy jego rozmiar przestaje się zmieniać), więc duże pliki nie są transkrybowane w połowie.
-- Błędy nie zatrzymują obserwowania.
+- Foldery obserwowane w chwili zamknięcia Audiotext są ponownie obserwowane po jego otwarciu, od plików, które już widziały. Zatrzymane foldery można znowu obserwować za pomocą **Wznów obserwowanie**.
+- Jeśli folder jest niedostępny (np. znajduje się na niepodłączonym dysku), Audiotext czeka na niego zamiast zgłaszać błąd.
+- Aby transkrybować coś innego lub nagrywać, folder jest wstrzymywany (nowa transkrypcja pokazuje **Uruchamianie…**, dopóki to nie nastąpi), a potem znowu obserwowany.
+- Błędy nie zatrzymują obserwowania, a pliki transkrybowane razem są zgłaszane w jednym powiadomieniu.
 
 ## Kolejka
 

@@ -72,7 +72,7 @@ Se no seu lugar se mostra **O vídeo de YouTube non ten pista de audio.**, o ví
 
 ## Un cartafol non transcribe ningún ficheiro
 
-Os ficheiros que xa teñen unha transcrición omítense. Activa **Sobrescribir os ficheiros existentes** para volver transcribilos. O cartafol tamén debe conter [ficheiros compatibles](/gl/reference/formats-and-languages/).
+Os ficheiros que xa teñen unha transcrición omítense, igual que os ficheiros ocultos e os que coinciden con **Omitir os ficheiros que coincidan con**. Para transcribilos de novo, usa **Volver transcribir todo…** no menú `⋯` do cartafol, ou selecciónaos na súa [lista de ficheiros](/gl/guides/sources/#os-ficheiros-dun-cartafol). Os ficheiros dos subcartafoles só se transcriben con **Incluír subcartafoles**, e o cartafol debe conter [ficheiros compatibles](/gl/reference/formats-and-languages/).
 
 ## A API de Google pide o idioma
 

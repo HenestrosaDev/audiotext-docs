@@ -57,6 +57,8 @@ Se [Transkriptet](/sv/guides/transcript/) för allt du kan göra med den.
 | `Ctrl+F` / `⌘F` | Söka och ersätta i texten du arbetar med (eller söka i sammanfattningen) |
 | `Ctrl+J` / `⌘J` | Gå till nästa ord med låg säkerhet |
 | `Skift+Ctrl+J` / `⇧⌘J` | Gå till föregående ord med låg säkerhet |
-| `Esc` | Avbryta den pågående transkriberingen |
+| `Esc` | Avbryta den pågående transkriberingen (eller rensa markeringen av filer i en mapp) |
+| `Ctrl+A` / `⌘A` | Markera alla filer som visas i en mapp |
+| `Enter` | Öppna den markerade filen i en mapp |
 | `Blanksteg` | Spela upp eller pausa ljudet |
 | `←` / `→` | Gå 5 sekunder bakåt eller framåt |

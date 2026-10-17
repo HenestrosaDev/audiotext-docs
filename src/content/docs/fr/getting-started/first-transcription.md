@@ -57,6 +57,8 @@ Consultez [La transcription](/fr/guides/transcript/) pour découvrir tout ce que
 | `Ctrl+F` / `⌘F` | Rechercher et remplacer dans le texte sur lequel vous travaillez (ou rechercher dans le résumé) |
 | `Ctrl+J` / `⌘J` | Aller au mot peu fiable suivant |
 | `Maj+Ctrl+J` / `⇧⌘J` | Aller au mot peu fiable précédent |
-| `Échap` | Annuler la transcription en cours |
+| `Échap` | Annuler la transcription en cours (ou effacer la sélection des fichiers d’un dossier) |
+| `Ctrl+A` / `⌘A` | Sélectionner tous les fichiers affichés d’un dossier |
+| `Entrée` | Ouvrir le fichier sélectionné d’un dossier |
 | `Espace` | Lire ou mettre en pause l’audio |
 | `←` / `→` | Reculer ou avancer de 5 secondes |

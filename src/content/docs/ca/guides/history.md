@@ -32,7 +32,9 @@ Els grups reuneixen transcripcions relacionades, com les d'un projecte o un curs
 
 ## Elimina una transcripció
 
-En eliminar una transcripció, se n'esborren de l'historial la transcripció, el resum, les preguntes i les traduccions. També s'eliminen les transcripcions dels fitxers d'una carpeta. Els teus fitxers d'àudio, de vídeo i els fitxers desats **no** s'eliminen.
+En eliminar una transcripció, s'esborren de l'historial ella, el seu resum, les seves preguntes i les seves traduccions. Els teus fitxers d'àudio, vídeo i els fitxers desats **no** s'eliminen.
+
+Treure una carpeta també en treu els fitxers de l'historial, i pregunta si **també vols eliminar els fitxers desats per a ells** (desactivat per defecte). Els teus fitxers d'àudio i vídeo no s'eliminen mai.
 
 ## Transcripcions amb errors i interrompudes
 

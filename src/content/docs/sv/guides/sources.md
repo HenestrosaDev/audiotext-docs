@@ -52,7 +52,7 @@ För att transkribera det som datorn spelar upp (ett videosamtal, ett webbinariu
 
 ## Mapp
 
-Transkriberar alla ljud- och videofiler i en mapp **och dess undermappar**. Klicka på **Välj en mapp…** eller släpp mappen i fönstret. Audiotext visar hur många filer den hittade.
+Transkriberar alla ljud- och videofiler i en mapp och, om **Inkludera undermappar** är aktiverat på kortet **Mapp**, i dess undermappar. Klicka på **Välj en mapp…** eller släpp mappen i fönstret. Audiotext talar om hur många filer det hittade. För att hoppa över vissa filer skriver du deras namn eller sökvägar, separerade med kommatecken, i **Hoppa över filer som matchar** (t.ex. `*.wav, drafts/*`). Dolda filer hoppas alltid över.
 
 Transkriberingen av varje fil sparas bredvid den (eller i en annan mapp som du väljer på kortet **Utdata**), med samma namn och filändelsen för varje vald **filtyp**. Till exempel med `.txt` och `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Filer som redan har en transkribering **hoppas över**, om du inte aktiverar **Skriv över befintliga filer**. Om du lägger till en fil i mappen och transkriberar den igen transkriberas alltså bara den nya filen.
+Om två filer har samma namn och olika filändelse (t.ex. `talk.mp3` och `talk.mp4`) behåller deras transkriberingar filändelsen i namnet (`talk.mp3.txt` och `talk.mp4.txt`), så att de inte ersätter varandra.
 
-Om en fil inte kan transkriberas transkriberas resten ändå, och mappvyn visar vilka som misslyckades och varför. **Transkribera igen** upprepar mappen, och mappknappen öppnar mappen med de sparade filerna.
+Filer som redan har en transkribering **hoppas över**: en fil hoppas bara över om den har alla filtyper du valt, så om du lägger till en filtyp transkriberas den igen. Om en fil inte kan transkriberas transkriberas resten ändå.
+
+### Filerna i en mapp
+
+Sidan för en mapp i historiken listar dess filer, med status, längd och storlek för varje fil och en förhandsvisning av texten. Sök bland dem, filtrera dem efter status (**Alla**, **Klara**, **Misslyckade** eller **Väntande**) och sortera dem efter namn, status, längd eller storlek. Filer som har flyttats eller tagits bort markeras som **Filen hittades inte**.
+
+- Klicka på en fil för att öppna dess transkribering, eller klicka på dess `⋯`-knapp (eller högerklicka på den) för att kopiera texten, öppna den direkt i exporten, sammanfattningen eller översättningen, visa den i filhanteraren eller välja **Transkribera den här filen igen**.
+- Markera flera filer med `Ctrl`/`⌘` eller `Skift`, eller alla filer som visas med `Ctrl+A` / `⌘A`, och välj **Transkribera igen**, **Exportera…** (för att exportera dem tillsammans till en enda TXT-, Markdown- eller Word-fil) eller **Ta bort från historiken…**. `Enter` öppnar den markerade filen, och `Esc` rensar markeringen.
+- **Försök igen med misslyckade** transkriberar de misslyckade filerna igen. **Sök igenom mappen igen** transkriberar bara filerna utan transkribering, som de nya, och talar om hur många som hoppades över eftersom de redan hade en.
+- Mappens `⋯`-meny har **Transkribera alla igen…** (transkriberar alla dess filer igen och ersätter deras transkriberingar), **Exportera alla…** (till en enda fil), ett alternativ för att ta bort saknade filer från listan och alternativ för att öppna källmappen eller mappen med sparade filer.
+- När du ändrar mappens inställningar visas de filer som transkriberades med andra inställningar (motor, modell, språk…), med knappen **Transkribera dem igen**.
+
+Sidhuvudet visar var filerna sparas och länkar till källmappen. **Redigera inställningar** ändrar mappens inställningar, och **Spara och sök igenom igen** transkriberar med dem de filer som saknar en transkribering.
 
 ### Bevaka en mapp
 
 Aktivera **Bevaka mappen** på kortet **Mapp** för att fortsätta transkribera filer som läggs till i mappen (eller dess undermappar) tills du klickar på **Sluta bevaka**. Det är praktiskt för inspelningar från en diktafon eller ett mötesverktyg som kopieras till en mapp.
 
-- Filer som redan finns i mappen hoppas över. För att transkribera dem transkriberar du mappen utan att bevaka den.
+- Filer som redan finns i mappen hoppas över, om du inte aktiverar **Transkribera filerna som redan finns i mappen**: då transkriberas först de som saknar transkribering.
 - En fil transkriberas när den har kopierats helt (när storleken slutar ändras), så stora filer transkriberas inte till hälften.
-- Fel stoppar inte bevakningen.
+- De mappar som bevakades när Audiotext stängdes bevakas igen när det öppnas, från de filer de redan hade sett. Stoppade mappar kan bevakas igen med **Återuppta bevakning**.
+- Om mappen inte är tillgänglig (t.ex. om den ligger på en enhet som inte är ansluten) väntar Audiotext på den i stället för att misslyckas.
+- För att transkribera något annat eller spela in pausas mappen (den nya transkriberingen visar **Startar…** tills den är det) och bevakas sedan igen.
+- Fel stoppar inte bevakningen, och filer som transkriberats tillsammans meddelas i en enda avisering.
 
 ## Kön
 

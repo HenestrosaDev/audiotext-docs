@@ -52,7 +52,7 @@ Para transcribir lo que reproduce tu ordenador (una videollamada, un webinar, un
 
 ## Carpeta
 
-Transcribe todos los archivos de audio y vídeo de una carpeta **y de sus subcarpetas**. Haz clic en **Elegir una carpeta…** o suelta la carpeta en la ventana. Audiotext te indica cuántos archivos ha encontrado.
+Transcribe todos los archivos de audio y vídeo de una carpeta y, si **Incluir subcarpetas** está activado en la tarjeta **Carpeta**, de sus subcarpetas. Haz clic en **Elegir una carpeta…** o suelta la carpeta en la ventana. Audiotext te indica cuántos archivos ha encontrado. Para dejar fuera algunos archivos, escribe sus nombres o rutas, separados por comas, en **Omitir los archivos que coincidan con** (p. ej. `*.wav, drafts/*`). Los archivos ocultos siempre se omiten.
 
 La transcripción de cada archivo se guarda junto a él (o en otra carpeta que elijas en la tarjeta **Salida**), con el mismo nombre y la extensión de cada **tipo de archivo** que hayas seleccionado. Por ejemplo, con `.txt` y `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Los archivos que ya tienen una transcripción **se omiten**, salvo que actives **Sobrescribir archivos existentes**. Así, si añades un archivo a la carpeta y la vuelves a transcribir, solo se transcribe el archivo nuevo.
+Si dos archivos tienen el mismo nombre y otra extensión (p. ej. `talk.mp3` y `talk.mp4`), sus transcripciones mantienen la extensión en el nombre (`talk.mp3.txt` y `talk.mp4.txt`), para que no se reemplacen entre sí.
 
-Si un archivo no se puede transcribir, el resto se sigue transcribiendo, y la vista de la carpeta muestra cuáles han fallado y por qué. **Volver a transcribir** repite la carpeta, y el botón de carpeta abre la carpeta de los archivos guardados.
+Los archivos que ya tienen una transcripción **se omiten**: un archivo solo se omite si tiene todos los tipos de archivo que has seleccionado, así que añadir un tipo de archivo lo vuelve a transcribir. Si un archivo no se puede transcribir, el resto se sigue transcribiendo.
+
+### Los archivos de una carpeta
+
+La página de una carpeta en el historial muestra sus archivos, con el estado, la duración y el tamaño de cada uno y una vista previa de su texto. Búscalos, fíltralos por estado (**Todos**, **Completados**, **Con errores** o **Pendientes**) y ordénalos por nombre, estado, duración o tamaño. Los archivos que se han movido o eliminado se marcan como **No se encuentra el archivo**.
+
+- Haz clic en un archivo para abrir su transcripción, o haz clic en su botón `⋯` (o clic derecho sobre él) para copiar su texto, abrirlo directamente en su exportación, resumen o traducción, mostrarlo en el gestor de archivos o elegir **Volver a transcribir este archivo**.
+- Selecciona varios archivos con `Ctrl`/`⌘` o `Mayús`, o todos los archivos mostrados con `Ctrl+A` / `⌘A`, y elige **Volver a transcribir**, **Exportar…** (para exportarlos juntos en un solo archivo TXT, Markdown o Word) o **Quitar del historial…**. `Enter` abre el archivo seleccionado, y `Esc` quita la selección.
+- **Reintentar fallidos** vuelve a transcribir los archivos que han fallado. **Volver a analizar la carpeta** transcribe solo los archivos sin transcripción, como los nuevos, e indica cuántos se han omitido porque ya tenían una.
+- El menú `⋯` de la carpeta tiene **Volver a transcribir todo…** (vuelve a transcribir todos sus archivos, reemplazando sus transcripciones), **Exportar todo…** (en un solo archivo), una opción para quitar de la lista los archivos que faltan, y las opciones para abrir la carpeta de origen o la de los archivos guardados.
+- Cuando cambias los ajustes de la carpeta, se indican los archivos transcritos con otros ajustes (motor, modelo, idioma…), con el botón **Volver a transcribirlos**.
+
+La cabecera muestra dónde se guardan los archivos y enlaza a la carpeta de origen. **Editar ajustes** cambia los ajustes de la carpeta, y **Guardar y volver a analizar** transcribe con ellos los archivos a los que les falta una transcripción.
 
 ### Vigila una carpeta
 
 Activa **Vigilar la carpeta** en la tarjeta **Carpeta** para seguir transcribiendo los archivos que se añadan a la carpeta (o a sus subcarpetas) hasta que hagas clic en **Dejar de vigilar**. Es útil para las grabaciones de una grabadora de voz o de una herramienta de reuniones que se copian a una carpeta.
 
-- Los archivos que ya contiene la carpeta se omiten. Para transcribirlos, transcribe la carpeta sin vigilarla.
+- Los archivos que ya contiene la carpeta se omiten, salvo que actives **Transcribir los archivos que ya hay en la carpeta**: entonces primero se transcriben los que no tienen transcripción.
 - Un archivo se transcribe cuando se ha copiado por completo (cuando su tamaño deja de cambiar), así que los archivos grandes no se transcriben a medias.
-- Los errores no detienen la vigilancia.
+- Las carpetas que se estaban vigilando al cerrar Audiotext se vuelven a vigilar al abrirlo, continuando desde los archivos que ya habían visto. Las carpetas detenidas se pueden volver a vigilar con **Reanudar vigilancia**.
+- Si la carpeta no está disponible (p. ej. está en una unidad que no está conectada), Audiotext la espera en lugar de fallar.
+- Para transcribir otra cosa o grabar, la carpeta se pausa (la nueva transcripción indica **Iniciando…** hasta que lo está) y después se vuelve a vigilar.
+- Los errores no detienen la vigilancia, y los archivos transcritos a la vez se avisan en una sola notificación.
 
 ## La cola
 

@@ -32,7 +32,9 @@ Los grupos reúnen transcripciones relacionadas, como las de un proyecto o un cu
 
 ## Elimina una transcripción
 
-Al eliminar una transcripción, se borran del historial ella, su resumen, sus preguntas y sus traducciones. También se eliminan las transcripciones de los archivos de una carpeta. Tus archivos de audio, vídeo y los archivos guardados **no** se eliminan.
+Al eliminar una transcripción, se borran del historial ella, su resumen, sus preguntas y sus traducciones. Tus archivos de audio, vídeo y los archivos guardados **no** se eliminan.
+
+Al quitar una carpeta también se quitan sus archivos del historial, y se pregunta si **eliminar también los archivos guardados para ellos** (desactivado por defecto). Tus archivos de audio y vídeo nunca se eliminan.
 
 ## Transcripciones con errores e interrumpidas
 

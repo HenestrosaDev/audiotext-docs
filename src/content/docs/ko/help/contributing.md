@@ -58,7 +58,7 @@ uv run pytest               # 테스트를 실행합니다
 
 ## 인터페이스 번역
 
-인터페이스는 [gettext](https://www.gnu.org/software/gettext/)로 번역됩니다. 텍스트는 `res/locales/audiotext.pot`에, 언어별 번역은 `res/locales/<언어>/LC_MESSAGES/audiotext.po`에 있습니다.
+인터페이스는 [gettext](https://www.gnu.org/software/gettext/)로 번역됩니다. 텍스트는 `res/locales/audiotext.pot`에, 언어별 번역은 `res/locales/<언어>/LC_MESSAGES/audiotext.po`에 있습니다. 숫자에 따라 달라지는 텍스트(예: `{count} file` / `{count} files`)에는 카탈로그의 `Plural-Forms` 헤더에 정해진 대로 해당 언어의 복수형마다 번역(`msgstr[0]`, `msgstr[1]`…)이 있습니다. 같은 텍스트가 컨텍스트(`msgctxt`)와 함께 한 번 더 나타날 수 있으며, 위치마다 다르게 번역할 수 있습니다. 예를 들어 `Done`은 받아쓰기의 상태이고, `files` 컨텍스트가 있는 것은 폴더 파일의 필터입니다.
 
 코드의 텍스트가 바뀌었거나 `.po` 파일을 편집한 뒤에는(예: [Poedit](https://poedit.net/)) 이 스크립트를 실행하세요. 텍스트를 추출하고 카탈로그를 업데이트해 컴파일한 다음, 아직 번역하거나 검토해야 할 텍스트(`fuzzy` 표시)를 보여 줍니다. 그때까지 앱은 해당 텍스트를 영어로 표시합니다. 오래된 카탈로그가 있으면 테스트가 실패합니다.
 

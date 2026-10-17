@@ -72,7 +72,7 @@ Jika yang ditampilkan adalah **Video YouTube tidak memiliki trek audio.**, video
 
 ## Folder tidak mentranskripsi file apa pun
 
-File yang sudah memiliki transkripsi akan dilewati. Aktifkan **Timpa file yang ada** untuk mentranskripsinya lagi. Folder juga harus berisi [file yang didukung](/id/reference/formats-and-languages/).
+File yang sudah memiliki transkripsi akan dilewati, begitu juga file tersembunyi dan file yang cocok dengan **Lewati file yang cocok dengan**. Untuk mentranskripsinya lagi, gunakan **Transkripsi ulang semua…** di menu `⋯` folder, atau pilih file-file itu di [daftar file](/id/guides/sources/#file-dalam-folder)-nya. File dalam subfolder hanya ditranskripsi dengan **Sertakan subfolder**, dan folder harus berisi [file yang didukung](/id/reference/formats-and-languages/).
 
 ## Google API meminta bahasa
 

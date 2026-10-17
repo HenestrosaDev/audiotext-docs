@@ -57,6 +57,8 @@ Zie [Het transcript](/nl/guides/transcript/) voor alles wat je ermee kunt doen.
 | `Ctrl+F` / `⌘F` | Zoeken en vervangen in de tekst waaraan je werkt (of zoeken in de samenvatting) |
 | `Ctrl+J` / `⌘J` | Naar het volgende woord met lage betrouwbaarheid gaan |
 | `Shift+Ctrl+J` / `⇧⌘J` | Naar het vorige woord met lage betrouwbaarheid gaan |
-| `Esc` | De lopende transcriptie annuleren |
+| `Esc` | De lopende transcriptie annuleren (of de selectie van bestanden van een map wissen) |
+| `Ctrl+A` / `⌘A` | Alle getoonde bestanden van een map selecteren |
+| `Enter` | Het geselecteerde bestand van een map openen |
 | `Spatie` | De audio afspelen of pauzeren |
 | `←` / `→` | 5 seconden terug of vooruit |

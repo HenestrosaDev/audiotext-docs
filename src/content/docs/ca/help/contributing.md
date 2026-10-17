@@ -58,7 +58,7 @@ uv run pytest               # executa les proves
 
 ## Tradueix la interfície
 
-La interfície es tradueix amb [gettext](https://www.gnu.org/software/gettext/). Els textos són a `res/locales/audiotext.pot`, i les traduccions de cada idioma a `res/locales/<idioma>/LC_MESSAGES/audiotext.po`.
+La interfície es tradueix amb [gettext](https://www.gnu.org/software/gettext/). Els textos són a `res/locales/audiotext.pot`, i les traduccions de cada idioma a `res/locales/<idioma>/LC_MESSAGES/audiotext.po`. Els textos que depenen d'un número (p. ex. `{count} file` / `{count} files`) tenen una traducció per a cada forma de plural de l'idioma (`msgstr[0]`, `msgstr[1]`…), segons la capçalera `Plural-Forms` del seu catàleg. Un mateix text pot aparèixer dues vegades, una amb un context (`msgctxt`), perquè es tradueixi diferent a cada lloc: p. ex. `Done` és l'estat d'una transcripció, i amb el context `files`, un filtre dels fitxers d'una carpeta.
 
 Quan canviïn els textos del codi, o després d'editar un fitxer `.po` (p. ex. amb [Poedit](https://poedit.net/)), executa aquest script. Extreu els textos, actualitza els catàlegs, els compila i llista els textos que falten per traduir o revisar (marcats com a `fuzzy`), que l'aplicació mostra en anglès fins aleshores. Les proves fallen mentre hi hagi un catàleg desactualitzat.
 

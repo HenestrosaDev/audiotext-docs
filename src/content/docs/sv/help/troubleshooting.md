@@ -72,7 +72,7 @@ Om **YouTube-videon har inget ljudspår.** visas i stället har videon inget lju
 
 ## En mapp transkriberar inga filer
 
-Filer som redan har en transkribering hoppas över. Aktivera **Skriv över befintliga filer** för att transkribera dem igen. Mappen måste också innehålla [filer som stöds](/sv/reference/formats-and-languages/).
+Filer som redan har en transkribering hoppas över, liksom dolda filer och filer som matchar **Hoppa över filer som matchar**. Använd **Transkribera alla igen…** i mappens `⋯`-meny för att transkribera dem igen, eller markera dem i dess [fillista](/sv/guides/sources/#filerna-i-en-mapp). Filerna i undermapparna transkriberas bara med **Inkludera undermappar**, och mappen måste innehålla [filer som stöds](/sv/reference/formats-and-languages/).
 
 ## Google-API:t frågar efter språket
 

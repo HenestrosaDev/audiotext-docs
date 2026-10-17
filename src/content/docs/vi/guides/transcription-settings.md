@@ -67,8 +67,12 @@ Chỉ hiển thị cho micrô. Xem [Văn bản trực tiếp](/vi/guides/sources
 Chỉ hiển thị cho thư mục:
 
 - **Theo dõi thư mục**: xem [Theo dõi một thư mục](/vi/guides/sources/#theo-dõi-một-thư-mục).
+- **Chép lời các tệp đã có trong thư mục** (chỉ khi theo dõi): chép lời trước các tệp đã có sẵn trong thư mục và chưa có bản chép lời. Tắt theo mặc định.
+- **Bao gồm thư mục con**: chép lời cả các tệp trong thư mục con.
+- **Bỏ qua các tệp khớp với**: tên hoặc đường dẫn của các tệp cần bỏ qua, phân tách bằng dấu phẩy (ví dụ `*.wav, drafts/*`). Các tệp ẩn luôn bị bỏ qua.
 - **Loại tệp**: với WhisperX, một hoặc nhiều trong số `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` và `.aud`. Với Whisper API, định dạng của tệp (`text`, `json`, `verbose_json`, `srt` hoặc `vtt`); phụ đề cần mô hình có dấu thời gian. Google API trả về văn bản thuần (`.txt`).
 - **Vị trí**: tệp được lưu cạnh từng tệp nguồn. Nhấp **Thay đổi…** để lưu vào thư mục khác (các thư mục con sẽ được tạo lại), hoặc **Cạnh nguồn** để quay lại.
-- **Ghi đè tệp hiện có**: chép lời lại các tệp đã có bản chép lời và thay thế bản cũ.
+
+Các tệp đã có bản chép lời sẽ bị bỏ qua. Để chép lời lại, hãy dùng các tùy chọn của [các tệp trong thư mục](/vi/guides/sources/#các-tệp-của-một-thư-mục).
 
 Các tùy chọn phụ đề (độ rộng dòng, số dòng, đánh dấu từ) nằm trong [Tùy chọn ưu tiên](/vi/reference/preferences/#phụ-đề).

@@ -57,6 +57,8 @@ Consultați [Transcrierea](/ro/guides/transcript/) pentru tot ce puteți face cu
 | `Ctrl+F` / `⌘F` | Căutarea și înlocuirea în textul la care lucrați (sau căutarea în rezumat) |
 | `Ctrl+J` / `⌘J` | Trecerea la următorul cuvânt cu încredere scăzută |
 | `Shift+Ctrl+J` / `⇧⌘J` | Trecerea la cuvântul anterior cu încredere scăzută |
-| `Esc` | Anularea transcrierii în curs |
+| `Esc` | Anulați transcrierea în curs (sau anulați selecția fișierelor unui dosar) |
+| `Ctrl+A` / `⌘A` | Selectați toate fișierele afișate ale unui dosar |
+| `Enter` | Deschideți fișierul selectat al unui dosar |
 | `Spațiu` | Redarea sau întreruperea sunetului |
 | `←` / `→` | Înapoi sau înainte cu 5 secunde |

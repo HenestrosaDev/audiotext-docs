@@ -67,8 +67,12 @@ Widoczny tylko dla mikrofonu. Zobacz [Tekst na żywo](/pl/guides/sources/#tekst-
 Widoczne tylko dla folderów:
 
 - **Obserwuj folder**: zobacz [Obserwuj folder](/pl/guides/sources/#obserwuj-folder).
+- **Transkrybuj pliki, które już są w folderze** (tylko podczas obserwowania): najpierw transkrybuje pliki, które już są w folderze i nie mają jeszcze transkrypcji. Domyślnie wyłączone.
+- **Uwzględnij podfoldery**: transkrybuje też pliki z podfolderów.
+- **Pomiń pliki pasujące do**: nazwy lub ścieżki plików do pominięcia, oddzielone przecinkami (np. `*.wav, drafts/*`). Ukryte pliki są zawsze pomijane.
 - **Typy plików**: w WhisperX jeden lub więcej spośród `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` i `.aud`. W API Whisper format plików (`text`, `json`, `verbose_json`, `srt` lub `vtt`); napisy wymagają modelu ze znacznikami czasu. API Google zwraca zwykły tekst (`.txt`).
 - **Lokalizacja**: pliki są zapisywane obok każdego pliku źródłowego. Kliknij **Zmień…**, aby zapisać je w innym folderze (jego podfoldery zostaną odtworzone), lub **Obok źródła**, aby wrócić.
-- **Zastępuj istniejące pliki**: ponownie transkrybuje pliki, które mają już transkrypcję, i ją zastępuje.
+
+Pliki, które mają już transkrypcję, są pomijane. Aby transkrybować je ponownie, użyj opcji [plików folderu](/pl/guides/sources/#pliki-folderu).
 
 Opcje napisów (szerokość wiersza, liczba wierszy, wyróżnione słowa) znajdują się w [Preferencjach](/pl/reference/preferences/#napisy).
