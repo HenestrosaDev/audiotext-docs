@@ -58,7 +58,7 @@ uv run pytest               # spouští testy
 
 ## Překlad rozhraní
 
-Rozhraní se překládá pomocí [gettext](https://www.gnu.org/software/gettext/). Texty jsou v `res/locales/audiotext.pot` a překlady jednotlivých jazyků v `res/locales/<jazyk>/LC_MESSAGES/audiotext.po`.
+Rozhraní se překládá pomocí [gettext](https://www.gnu.org/software/gettext/). Texty jsou v `res/locales/audiotext.pot` a překlady jednotlivých jazyků v `res/locales/<jazyk>/LC_MESSAGES/audiotext.po`. Texty, které závisí na čísle (např. `{count} file` / `{count} files`), mají překlad pro každý tvar množného čísla jazyka (`msgstr[0]`, `msgstr[1]`…) podle hlavičky `Plural-Forms` jeho katalogu. Stejný text se může objevit dvakrát, jednou s kontextem (`msgctxt`), aby se na každém místě přeložil jinak: např. `Done` je stav přepisu a s kontextem `files` filtr souborů složky.
 
 Když se texty v kódu změní nebo po úpravě souboru `.po` (např. v [Poedit](https://poedit.net/)), spusťte tento skript. Extrahuje texty, aktualizuje katalogy, zkompiluje je a vypíše texty, které je ještě třeba přeložit nebo zkontrolovat (označené jako `fuzzy`); aplikace je do té doby zobrazuje anglicky. Testy selžou, dokud je některý katalog zastaralý.
 

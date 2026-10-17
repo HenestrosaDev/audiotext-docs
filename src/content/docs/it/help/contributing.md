@@ -58,7 +58,7 @@ uv run pytest               # esegue i test
 
 ## Traduci l'interfaccia
 
-L'interfaccia è tradotta con [gettext](https://www.gnu.org/software/gettext/). I testi si trovano in `res/locales/audiotext.pot`, e le traduzioni di ogni lingua in `res/locales/<lingua>/LC_MESSAGES/audiotext.po`.
+L'interfaccia è tradotta con [gettext](https://www.gnu.org/software/gettext/). I testi si trovano in `res/locales/audiotext.pot`, e le traduzioni di ogni lingua in `res/locales/<lingua>/LC_MESSAGES/audiotext.po`. I testi che dipendono da un numero (ad es. `{count} file` / `{count} files`) hanno una traduzione per ogni forma plurale della lingua (`msgstr[0]`, `msgstr[1]`…), secondo l'intestazione `Plural-Forms` del suo catalogo. Lo stesso testo può comparire due volte, una con un contesto (`msgctxt`), così da essere tradotto diversamente in ogni punto: ad es. `Done` è lo stato di una trascrizione e, con il contesto `files`, un filtro dei file di una cartella.
 
 Quando cambiano i testi del codice, o dopo aver modificato un file `.po` (es. con [Poedit](https://poedit.net/)), esegui questo script. Estrae i testi, aggiorna i cataloghi, li compila ed elenca i testi ancora da tradurre o da rivedere (contrassegnati come `fuzzy`), che l'app mostra in inglese fino ad allora. I test falliscono finché un catalogo non è aggiornato.
 

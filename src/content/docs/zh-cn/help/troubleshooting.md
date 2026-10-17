@@ -72,7 +72,7 @@ RateLimitError("Error code: 429 - {'error': {'message': 'You exceeded your curre
 
 ## 文件夹中没有任何文件被转写
 
-已有转写的文件会被跳过。打开**覆盖现有文件**即可重新转写。文件夹中还必须包含[支持的文件](/zh-cn/reference/formats-and-languages/)。
+已有转写的文件会被跳过，隐藏文件和与**跳过匹配以下内容的文件**匹配的文件也会被跳过。要重新转写它们，请使用文件夹 `⋯` 菜单中的**全部重新转写…**，或在其[文件列表](/zh-cn/guides/sources/#文件夹中的文件)中选择它们。子文件夹中的文件只有在打开**包含子文件夹**时才会转写，并且文件夹中必须包含[支持的文件](/zh-cn/reference/formats-and-languages/)。
 
 ## Google API 要求选择语言
 

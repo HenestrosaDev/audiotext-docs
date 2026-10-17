@@ -57,6 +57,8 @@ Consulta [La transcripción](/es/guides/transcript/) para saber todo lo que pued
 | `Ctrl+F` / `⌘F` | Buscar y reemplazar en el texto con el que trabajas (o buscar en el resumen) |
 | `Ctrl+J` / `⌘J` | Ir a la siguiente palabra de baja confianza |
 | `Mayús+Ctrl+J` / `⇧⌘J` | Ir a la anterior palabra de baja confianza |
-| `Esc` | Cancelar la transcripción en curso |
+| `Esc` | Cancelar la transcripción en curso (o quitar la selección de archivos de una carpeta) |
+| `Ctrl+A` / `⌘A` | Seleccionar todos los archivos mostrados de una carpeta |
+| `Enter` | Abrir el archivo seleccionado de una carpeta |
 | `Espacio` | Reproducir o pausar el audio |
 | `←` / `→` | Retroceder o avanzar 5 segundos |

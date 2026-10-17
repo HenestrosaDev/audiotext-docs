@@ -67,8 +67,12 @@ Yalnızca mikrofon için gösterilir. [Canlı metin](/tr/guides/sources/#canlı-
 Yalnızca klasörler için gösterilir:
 
 - **Klasörü izle**: [Bir klasörü izleyin](/tr/guides/sources/#bir-klasörü-izleyin) bölümüne bakın.
+- **Klasörde zaten bulunan dosyaları yazıya dök** (yalnızca izlerken): önce klasörde zaten bulunan ve henüz transkripsiyonu olmayan dosyaları yazıya döker. Varsayılan olarak kapalıdır.
+- **Alt klasörleri dahil et**: alt klasörlerdeki dosyaları da yazıya döker.
+- **Şununla eşleşen dosyaları atla**: atlanacak dosyaların virgülle ayrılmış adları veya yolları (ör. `*.wav, drafts/*`). Gizli dosyalar her zaman atlanır.
 - **Dosya türleri**: WhisperX ile `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` ve `.aud` türlerinden bir veya daha fazlası. Whisper API ile dosyaların biçimi (`text`, `json`, `verbose_json`, `srt` veya `vtt`); altyazılar zaman damgalı bir model gerektirir. Google API düz metin (`.txt`) döndürür.
 - **Konum**: dosyalar her kaynak dosyanın yanına kaydedilir. Başka bir klasöre kaydetmek için **Değiştir…**'e (alt klasörleri yeniden oluşturulur), geri dönmek için **Kaynağın yanına**'ya tıklayın.
-- **Mevcut dosyaların üzerine yaz**: zaten transkripsiyonu olan dosyaları yeniden yazıya döker ve mevcut transkripsiyonu değiştirir.
+
+Zaten transkripsiyonu olan dosyalar atlanır. Onları yeniden yazıya dökmek için [klasörün dosyalarındaki](/tr/guides/sources/#bir-klasörün-dosyaları) seçenekleri kullanın.
 
 Altyazı seçenekleri (satır genişliği, satır sayısı, vurgulanan kelimeler) [Tercihler](/tr/reference/preferences/#altyazılar)'de bulunur.

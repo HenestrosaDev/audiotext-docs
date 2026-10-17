@@ -52,7 +52,7 @@ Untuk mentranskripsikan apa yang diputar komputer Anda (panggilan video, webinar
 
 ## Folder
 
-Mentranskripsi semua file audio dan video dalam folder **beserta subfoldernya**. Klik **Pilih folder…** atau lepaskan folder ke jendela. Audiotext memberi tahu berapa banyak file yang ditemukan.
+Mentranskripsi semua file audio dan video dalam sebuah folder dan, jika **Sertakan subfolder** aktif di kartu **Folder**, dalam subfoldernya. Klik **Pilih folder…** atau letakkan folder di jendela. Audiotext memberi tahu berapa file yang ditemukannya. Untuk melewati beberapa file, tulis nama atau jalurnya, dipisahkan koma, di **Lewati file yang cocok dengan** (mis. `*.wav, drafts/*`). File tersembunyi selalu dilewati.
 
 Transkripsi setiap file disimpan di sampingnya (atau di folder lain yang Anda pilih di kartu **Keluaran**), dengan nama yang sama dan ekstensi dari setiap **jenis file** yang Anda pilih. Misalnya, dengan `.txt` dan `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-File yang sudah memiliki transkripsi akan **dilewati**, kecuali Anda mengaktifkan **Timpa file yang ada**. Jadi, jika Anda menambahkan file ke folder lalu mentranskripsinya lagi, hanya file baru yang ditranskripsi.
+Jika dua file memiliki nama yang sama dan ekstensi berbeda (mis. `talk.mp3` dan `talk.mp4`), transkripsinya menyimpan ekstensi di namanya (`talk.mp3.txt` dan `talk.mp4.txt`), agar tidak saling menggantikan.
 
-Jika sebuah file tidak dapat ditranskripsi, file lainnya tetap ditranskripsi, dan tampilan folder menunjukkan file mana yang gagal dan alasannya. **Transkripsi lagi** mengulang folder, dan tombol folder membuka folder berisi file yang disimpan.
+File yang sudah memiliki transkripsi akan **dilewati**: sebuah file hanya dilewati jika memiliki semua jenis file yang Anda pilih, jadi menambahkan jenis file akan mentranskripsinya lagi. Jika sebuah file tidak dapat ditranskripsi, file lainnya tetap ditranskripsi.
+
+### File dalam folder
+
+Halaman sebuah folder di riwayat menampilkan file-filenya, dengan status, durasi, dan ukuran masing-masing serta pratinjau teksnya. Cari, filter menurut status (**Semua**, **Selesai**, **Gagal**, atau **Tertunda**), dan urutkan menurut nama, status, durasi, atau ukuran. File yang dipindahkan atau dihapus ditandai sebagai **File tidak ditemukan**.
+
+- Klik sebuah file untuk membuka transkripsinya, atau klik tombol `⋯`-nya (atau klik kanan file itu) untuk menyalin teksnya, membukanya langsung di ekspor, ringkasan, atau terjemahannya, menampilkannya di pengelola file, atau memilih **Transkripsi ulang file ini**.
+- Pilih beberapa file dengan `Ctrl`/`⌘` atau `Shift`, atau semua file yang ditampilkan dengan `Ctrl+A` / `⌘A`, lalu pilih **Transkripsi ulang**, **Ekspor…** (untuk mengekspornya bersama ke satu file TXT, Markdown, atau Word), atau **Hapus dari riwayat…**. `Enter` membuka file yang dipilih, dan `Esc` menghapus pilihan.
+- **Coba lagi yang gagal** mentranskripsi lagi file yang gagal. **Pindai ulang folder** hanya mentranskripsi file yang belum memiliki transkripsi, seperti file baru, dan memberi tahu berapa yang dilewati karena sudah memilikinya.
+- Menu `⋯` folder berisi **Transkripsi ulang semua…** (mentranskripsi lagi semua filenya, menggantikan transkripsinya), **Ekspor semua…** (ke satu file), opsi untuk menghapus file yang hilang dari daftar, serta opsi untuk membuka folder sumber atau folder file yang disimpan.
+- Saat Anda mengubah pengaturan folder, file yang ditranskripsi dengan pengaturan lain (mesin, model, bahasa…) ditampilkan, dengan tombol **Transkripsi ulang**.
+
+Header menunjukkan tempat file disimpan dan menautkan ke folder sumber. **Edit pengaturan** mengubah pengaturan folder, dan **Simpan dan pindai ulang** mentranskripsi dengan pengaturan itu file yang belum memiliki transkripsi.
 
 ### Pantau folder
 
 Aktifkan **Pantau folder** di kartu **Folder** untuk terus mentranskripsi file yang ditambahkan ke folder (atau subfoldernya) sampai Anda mengklik **Berhenti memantau**. Ini berguna untuk rekaman dari perekam suara atau alat rapat yang disalin ke sebuah folder.
 
-- File yang sudah ada di folder akan dilewati. Untuk mentranskripsinya, transkripsikan folder tanpa memantaunya.
+- File yang sudah ada di folder akan dilewati, kecuali Anda mengaktifkan **Transkripsi file yang sudah ada di folder**: maka file yang belum memiliki transkripsi ditranskripsi lebih dulu.
 - File ditranskripsi setelah selesai disalin sepenuhnya (saat ukurannya berhenti berubah), sehingga file besar tidak ditranskripsi setengah jalan.
-- Kesalahan tidak menghentikan pemantauan.
+- Folder yang sedang dipantau saat Audiotext ditutup akan dipantau lagi saat dibuka, melanjutkan dari file yang sudah dilihatnya. Folder yang dihentikan dapat dipantau lagi dengan **Lanjutkan pemantauan**.
+- Jika folder tidak tersedia (mis. berada di drive yang tidak terhubung), Audiotext menunggunya alih-alih gagal.
+- Untuk mentranskripsi hal lain atau merekam, folder dijeda (transkripsi baru menampilkan **Memulai…** sampai jeda terjadi), lalu dipantau lagi setelahnya.
+- Kesalahan tidak menghentikan pemantauan, dan file yang ditranskripsi bersamaan diberitahukan dalam satu notifikasi.
 
 ## Antrean
 

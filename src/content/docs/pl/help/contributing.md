@@ -58,7 +58,7 @@ uv run pytest               # uruchamia testy
 
 ## Przetłumacz interfejs
 
-Interfejs jest tłumaczony za pomocą [gettext](https://www.gnu.org/software/gettext/). Teksty znajdują się w `res/locales/audiotext.pot`, a tłumaczenia każdego języka w `res/locales/<język>/LC_MESSAGES/audiotext.po`.
+Interfejs jest tłumaczony za pomocą [gettext](https://www.gnu.org/software/gettext/). Teksty znajdują się w `res/locales/audiotext.pot`, a tłumaczenia każdego języka w `res/locales/<język>/LC_MESSAGES/audiotext.po`. Teksty zależne od liczby (np. `{count} file` / `{count} files`) mają tłumaczenie dla każdej formy liczby mnogiej języka (`msgstr[0]`, `msgstr[1]`…), zgodnie z nagłówkiem `Plural-Forms` jego katalogu. Ten sam tekst może wystąpić dwa razy, raz z kontekstem (`msgctxt`), aby w każdym miejscu był przetłumaczony inaczej: np. `Done` to stan transkrypcji, a z kontekstem `files` filtr plików folderu.
 
 Gdy teksty w kodzie się zmienią lub po edycji pliku `.po` (np. w [Poedit](https://poedit.net/)), uruchom ten skrypt. Wyodrębnia teksty, aktualizuje katalogi, kompiluje je i wypisuje teksty, które trzeba jeszcze przetłumaczyć lub sprawdzić (oznaczone jako `fuzzy`) – do tego czasu aplikacja pokazuje je po angielsku. Testy kończą się niepowodzeniem, dopóki któryś katalog jest nieaktualny.
 

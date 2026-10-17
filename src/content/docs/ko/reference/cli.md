@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Ctrl+C로 멈출 때까지 폴더에 추가되는 파일을 받아씁니다
 audiotext watch inbox/ --output-types srt
+
+# 같은 작업을 폴더에 이미 있는 파일부터 받아쓰며 실행
+audiotext watch inbox/ --existing
 ```
 
 ## 옵션
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | ISO 639-1 코드로 된 오디오 언어(예: `ko`), 또는 감지하려면 `auto`(Google은 지원 안 함) |
 | `-t`, `--output-types` | 쉼표로 구분한 출력 파일 형식. `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx`, `ass` 중에서 고릅니다(예: `txt,srt,md`) |
 | `-o`, `--output-dir` | 받아쓰기를 저장할 폴더(기본값: 받아쓴 각 파일 옆) |
-| `--overwrite` | 기존 받아쓰기 덮어쓰기 |
+| `--overwrite` | 이미 받아쓰기가 있는 파일을 다시 받아쓰고 교체 |
+| `--existing` | (`watch` 전용) 폴더에 이미 있고 아직 받아쓰기가 없는 파일을 먼저 받아쓰기 |
 | `-p`, `--prompt` | 오디오의 주제나 상황 등 내용(Google은 지원 안 함) |
 | `-k`, `--keywords` | 철자가 올바르게 적히도록 오디오에 나오는 이름, 용어, 약어를 쉼표로 구분(Google은 지원 안 함) |
 | `--translate` | 받아쓰는 동안 오디오를 영어로 번역(Google은 지원 안 함). 다른 언어는 `--translate-to` 참고 |

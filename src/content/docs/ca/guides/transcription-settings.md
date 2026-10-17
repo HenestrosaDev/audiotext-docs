@@ -67,8 +67,12 @@ Només es mostra per al micròfon. Consulta [Text en directe](/ca/guides/sources
 Només es mostren per a carpetes:
 
 - **Vigila la carpeta**: consulta [Vigila una carpeta](/ca/guides/sources/#vigila-una-carpeta).
+- **Transcriu els fitxers que ja hi ha a la carpeta** (només mentre es vigila): primer transcriu els fitxers que ja conté la carpeta i que encara no tenen transcripció. Desactivat per defecte.
+- **Inclou les subcarpetes**: també transcriu els fitxers de les subcarpetes.
+- **Omet els fitxers que coincideixin amb**: noms o camins dels fitxers que s'han d'ometre, separats per comes (p. ex. `*.wav, drafts/*`). Els fitxers ocults sempre s'ometen.
 - **Tipus de fitxer**: amb WhisperX, un o més de `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` i `.aud`. Amb l'API de Whisper, el format dels fitxers (`text`, `json`, `verbose_json`, `srt` o `vtt`); els subtítols necessiten un model amb marques de temps. L'API de Google retorna text pla (`.txt`).
 - **Ubicació**: els fitxers es desen al costat de cada fitxer d'origen. Fes clic a **Canvia…** per desar-los en una altra carpeta (se'n recreen les subcarpetes), o a **Al costat de l'origen** per tornar-hi.
-- **Sobreescriu els fitxers existents**: torna a transcriure els fitxers que ja tenen una transcripció i la substitueix.
+
+Els fitxers que ja tenen una transcripció s'ometen. Per tornar-los a transcriure, fes servir les opcions dels [fitxers de la carpeta](/ca/guides/sources/#els-fitxers-duna-carpeta).
 
 Les opcions dels subtítols (amplada de línia, nombre de línies, paraules ressaltades) són a les [Preferències](/ca/reference/preferences/#subtítols).

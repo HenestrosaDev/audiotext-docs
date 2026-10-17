@@ -72,7 +72,7 @@ Bunun yerine **YouTube videosunda ses parçası yok.** gösteriliyorsa videoda m
 
 ## Bir klasör hiçbir dosyayı yazıya dökmüyor
 
-Zaten transkripsiyonu olan dosyalar atlanır. Yeniden yazıya dökmek için **Mevcut dosyaların üzerine yaz**'ı açın. Klasör ayrıca [desteklenen dosyalar](/tr/reference/formats-and-languages/) içermelidir.
+Zaten transkripsiyonu olan dosyalar atlanır; gizli dosyalar ve **Şununla eşleşen dosyaları atla** ile eşleşenler de atlanır. Onları yeniden yazıya dökmek için klasörün `⋯` menüsündeki **Tümünü yeniden yazıya dök…** seçeneğini kullanın veya klasörün [dosya listesinde](/tr/guides/sources/#bir-klasörün-dosyaları) seçin. Alt klasörlerdeki dosyalar yalnızca **Alt klasörleri dahil et** açıkken yazıya dökülür ve klasör [desteklenen dosyalar](/tr/reference/formats-and-languages/) içermelidir.
 
 ## Google API dili soruyor
 

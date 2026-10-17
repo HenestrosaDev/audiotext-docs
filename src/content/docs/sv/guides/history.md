@@ -32,7 +32,9 @@ Grupper samlar relaterade transkriberingar, som de för ett projekt eller en kur
 
 ## Ta bort en transkribering
 
-När du tar bort en transkribering tas den, dess sammanfattning, dess frågor och dess översättningar bort ur historiken. Transkriberingarna av filerna i en mapp tas också bort. Dina ljud-, video- och sparade filer tas **inte** bort.
+När du tar bort en transkribering tas den, dess sammanfattning, dess frågor och dess översättningar bort från historiken. Dina ljud-, video- och sparade filer tas **inte** bort.
+
+När du tar bort en mapp tas även dess filer bort från historiken, och du får frågan om **även filerna som sparats för dem ska tas bort** (av som standard). Dina ljud- och videofiler tas aldrig bort.
 
 ## Misslyckade och ofullständiga transkriberingar
 

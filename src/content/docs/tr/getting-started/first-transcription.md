@@ -57,6 +57,8 @@ Onunla yapabileceğiniz her şey için [Döküm](/tr/guides/transcript/) sayfas�
 | `Ctrl+F` / `⌘F` | Üzerinde çalıştığınız metinde bulma ve değiştirme (veya özette arama) |
 | `Ctrl+J` / `⌘J` | Sonraki düşük güvenilirlikli kelimeye gitme |
 | `Shift+Ctrl+J` / `⇧⌘J` | Önceki düşük güvenilirlikli kelimeye gitme |
-| `Esc` | Devam eden transkripsiyonu iptal etme |
+| `Esc` | Devam eden transkripsiyonu iptal etme (veya bir klasörün dosya seçimini temizleme) |
+| `Ctrl+A` / `⌘A` | Bir klasörün gösterilen tüm dosyalarını seçme |
+| `Enter` | Bir klasörün seçili dosyasını açma |
 | `Boşluk` | Sesi oynatma veya duraklatma |
 | `←` / `→` | 5 saniye geri veya ileri gitme |

@@ -58,7 +58,7 @@ uv run pytest               # lance les tests
 
 ## Traduisez l’interface
 
-L’interface est traduite avec [gettext](https://www.gnu.org/software/gettext/). Les textes se trouvent dans `res/locales/audiotext.pot`, et les traductions de chaque langue dans `res/locales/<langue>/LC_MESSAGES/audiotext.po`.
+L’interface est traduite avec [gettext](https://www.gnu.org/software/gettext/). Les textes se trouvent dans `res/locales/audiotext.pot`, et les traductions de chaque langue dans `res/locales/<langue>/LC_MESSAGES/audiotext.po`. Les textes qui dépendent d’un nombre (par ex. `{count} file` / `{count} files`) ont une traduction pour chaque forme plurielle de la langue (`msgstr[0]`, `msgstr[1]`…), selon l’en-tête `Plural-Forms` de son catalogue. Un même texte peut apparaître deux fois, dont une avec un contexte (`msgctxt`), pour être traduit différemment à chaque endroit : par ex. `Done` est le statut d’une transcription et, avec le contexte `files`, un filtre des fichiers d’un dossier.
 
 Lorsque les textes du code changent, ou après avoir modifié un fichier `.po` (p. ex. avec [Poedit](https://poedit.net/)), exécutez ce script. Il extrait les textes, met à jour les catalogues, les compile et liste les textes à traduire ou à relire (marqués `fuzzy`), que l’application affiche en anglais d’ici là. Les tests échouent tant qu’un catalogue n’est pas à jour.
 

@@ -32,7 +32,9 @@ Les groupes rassemblent des transcriptions liées, comme celles d’un projet ou
 
 ## Supprimez une transcription
 
-Supprimer une transcription la retire de l’historique, avec son résumé, ses questions et ses traductions. Les transcriptions des fichiers d’un dossier sont aussi supprimées. Vos fichiers audio, vidéo et enregistrés ne sont **pas** supprimés.
+Supprimer une transcription la retire de l’historique, avec son résumé, ses questions et ses traductions. Vos fichiers audio, vidéo et enregistrés ne sont **pas** supprimés.
+
+Retirer un dossier retire aussi ses fichiers de l’historique, et demande s’il faut **aussi supprimer les fichiers enregistrés pour eux** (désactivé par défaut). Vos fichiers audio et vidéo ne sont jamais supprimés.
 
 ## Transcriptions échouées et interrompues
 

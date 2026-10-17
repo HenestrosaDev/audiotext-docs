@@ -57,6 +57,8 @@ Vše, co s ním můžete dělat, najdete v části [Přepis](/cs/guides/transcri
 | `Ctrl+F` / `⌘F` | Najít a nahradit v textu, se kterým pracujete (nebo hledat ve shrnutí) |
 | `Ctrl+J` / `⌘J` | Přejít na další slovo s nízkou jistotou |
 | `Shift+Ctrl+J` / `⇧⌘J` | Přejít na předchozí slovo s nízkou jistotou |
-| `Esc` | Zrušit probíhající přepis |
+| `Esc` | Zrušit probíhající přepis (nebo zrušit výběr souborů složky) |
+| `Ctrl+A` / `⌘A` | Vybrat všechny zobrazené soubory složky |
+| `Enter` | Otevřít vybraný soubor složky |
 | `Mezerník` | Přehrát nebo pozastavit zvuk |
 | `←` / `→` | Posunout se o 5 sekund zpět nebo vpřed |

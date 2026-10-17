@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Transkripsi file yang ditambahkan ke folder sampai dihentikan dengan Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# Sama seperti di atas, tetapi mentranskripsi lebih dulu file yang sudah ada di folder
+audiotext watch inbox/ --existing
 ```
 
 ## Opsi
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Bahasa audio sebagai kode ISO 639-1 (mis. `id`), atau `auto` untuk mendeteksinya (tidak didukung Google) |
 | `-t`, `--output-types` | Jenis file keluaran yang dipisahkan koma, dari `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx`, dan `ass` (mis. `txt,srt,md`) |
 | `-o`, `--output-dir` | Folder tempat transkripsi disimpan (bawaan: di samping setiap file yang ditranskripsi) |
-| `--overwrite` | Menimpa transkripsi yang ada |
+| `--overwrite` | Mentranskripsi lagi file yang sudah memiliki transkripsi, menggantikannya |
+| `--existing` | (hanya `watch`) Mentranskripsi lebih dulu file yang sudah ada di folder dan belum memiliki transkripsi |
 | `-p`, `--prompt` | Tentang apa audio itu, seperti topik atau latarnya (tidak didukung Google) |
 | `-k`, `--keywords` | Nama, istilah, atau akronim yang diucapkan dalam audio, dipisahkan koma, agar ejaannya benar (tidak didukung Google) |
 | `--translate` | Menerjemahkan audio ke bahasa Inggris saat mentranskripsi (tidak didukung Google). Untuk bahasa lain, lihat `--translate-to` |

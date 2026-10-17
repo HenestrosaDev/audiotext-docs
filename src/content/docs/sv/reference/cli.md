@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Transkribera filer som läggs till i en mapp tills det stoppas med Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# Samma sak, men transkribera först filerna som redan finns i mappen
+audiotext watch inbox/ --existing
 ```
 
 ## Alternativ
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Ljudets språk som ISO 639-1-kod (t.ex. `sv`), eller `auto` för att identifiera det (stöds inte av Google) |
 | `-t`, `--output-types` | Utdatafiltyper separerade med kommatecken, bland `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` och `ass` (t.ex. `txt,srt,md`) |
 | `-o`, `--output-dir` | Mapp där transkriberingarna sparas (standard: bredvid varje transkriberad fil) |
-| `--overwrite` | Skriva över befintliga transkriberingar |
+| `--overwrite` | Transkribera igen de filer som redan har en transkribering och ersätt den |
+| `--existing` | (bara `watch`) Transkribera först de filer som redan finns i mappen och som inte har någon transkribering än |
 | `-p`, `--prompt` | Vad ljudet handlar om, som ämne eller miljö (stöds inte av Google) |
 | `-k`, `--keywords` | Namn, termer eller förkortningar som sägs i ljudet, separerade med kommatecken, så att de stavas rätt (stöds inte av Google) |
 | `--translate` | Översätta ljudet till engelska under transkriberingen (stöds inte av Google). Se `--translate-to` för andra språk |

@@ -58,7 +58,7 @@ uv run pytest               # kör testerna
 
 ## Översätt gränssnittet
 
-Gränssnittet översätts med [gettext](https://www.gnu.org/software/gettext/). Texterna finns i `res/locales/audiotext.pot`, och översättningarna för varje språk i `res/locales/<språk>/LC_MESSAGES/audiotext.po`.
+Gränssnittet översätts med [gettext](https://www.gnu.org/software/gettext/). Texterna finns i `res/locales/audiotext.pot`, och översättningarna för varje språk i `res/locales/<språk>/LC_MESSAGES/audiotext.po`. Texter som beror på ett tal (t.ex. `{count} file` / `{count} files`) har en översättning för varje pluralform i språket (`msgstr[0]`, `msgstr[1]`…), enligt rubriken `Plural-Forms` i dess katalog. Samma text kan förekomma två gånger, en gång med en kontext (`msgctxt`), så att den översätts olika på varje ställe: t.ex. är `Done` statusen för en transkribering och, med kontexten `files`, ett filter för filerna i en mapp.
 
 När texterna i koden ändras, eller efter att du har redigerat en `.po`-fil (t.ex. med [Poedit](https://poedit.net/)), kör du det här skriptet. Det extraherar texterna, uppdaterar katalogerna, kompilerar dem och listar texterna som återstår att översätta eller granska (markerade som `fuzzy`), som appen visar på engelska tills dess. Testerna misslyckas så länge en katalog är inaktuell.
 

@@ -52,7 +52,7 @@ Chcete-li přepsat to, co počítač přehrává (videohovor, webinář, video, 
 
 ## Složka
 
-Přepíše všechny zvukové a video soubory ve složce **a jejích podsložkách**. Klikněte na **Vybrat složku…** nebo složku přetáhněte do okna. Audiotext ukáže, kolik souborů našel.
+Přepíše všechny zvukové a video soubory složky a, pokud je na kartě **Složka** zapnuto **Zahrnout podsložky**, i jejích podsložek. Klikněte na **Vybrat složku…** nebo složku přetáhněte do okna. Audiotext vám řekne, kolik souborů našel. Chcete-li některé soubory vynechat, napište jejich názvy nebo cesty oddělené čárkami do pole **Přeskočit soubory odpovídající** (např. `*.wav, drafts/*`). Skryté soubory se vynechávají vždy.
 
 Přepis každého souboru se uloží vedle něj (nebo do jiné složky, kterou vyberete na kartě **Výstup**), se stejným názvem a příponou každého vybraného **typu souboru**. Například s `.txt` a `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Soubory, které už přepis mají, se **přeskočí**, pokud nezapnete **Přepsat existující soubory**. Když tedy do složky přidáte soubor a přepíšete ji znovu, přepíše se jen nový soubor.
+Pokud mají dva soubory stejný název a jinou příponu (např. `talk.mp3` a `talk.mp4`), jejich přepisy si ponechají příponu v názvu (`talk.mp3.txt` a `talk.mp4.txt`), aby se navzájem nepřepsaly.
 
-Pokud některý soubor přepsat nelze, ostatní se přepíšou i tak a zobrazení složky ukáže, které selhaly a proč. **Přepsat znovu** zopakuje složku a tlačítko složky otevře složku s uloženými soubory.
+Soubory, které už mají přepis, se **přeskočí**: soubor se přeskočí, jen pokud má všechny typy souborů, které jste vybrali, takže přidáním typu souboru se přepíše znovu. Pokud soubor nelze přepsat, ostatní se přepisují dál.
+
+### Soubory složky
+
+Stránka složky v historii uvádí její soubory se stavem, délkou a velikostí každého z nich a s náhledem jeho textu. Můžete je hledat, filtrovat podle stavu (**Vše**, **Hotové**, **Selhalé** nebo **Čekající**) a řadit podle názvu, stavu, délky nebo velikosti. Soubory, které byly přesunuty nebo smazány, se označí jako **Soubor nebyl nalezen**.
+
+- Kliknutím na soubor otevřete jeho přepis. Kliknutím na jeho tlačítko `⋯` (nebo pravým tlačítkem) můžete zkopírovat jeho text, otevřít ho rovnou v exportu, shrnutí nebo překladu, zobrazit ho ve správci souborů nebo zvolit **Přepsat tento soubor znovu**.
+- Vyberte více souborů pomocí `Ctrl`/`⌘` nebo `Shift`, nebo všechny zobrazené soubory pomocí `Ctrl+A` / `⌘A`, a zvolte **Přepsat znovu**, **Exportovat…** (společně do jednoho souboru TXT, Markdown nebo Word) nebo **Odebrat z historie…**. `Enter` otevře vybraný soubor a `Esc` zruší výběr.
+- **Zkusit neúspěšné znovu** znovu přepíše soubory, které selhaly. **Znovu prohledat složku** přepíše jen soubory bez přepisu, například nové, a řekne, kolik jich bylo přeskočeno, protože už přepis měly.
+- Nabídka `⋯` složky nabízí **Přepsat vše znovu…** (přepíše znovu všechny její soubory a nahradí jejich přepisy), **Exportovat vše…** (do jednoho souboru), odebrání chybějících souborů ze seznamu a otevření zdrojové složky nebo složky uložených souborů.
+- Když změníte nastavení složky, zobrazí se soubory přepsané s jiným nastavením (modul, model, jazyk…) s tlačítkem **Přepsat je znovu**.
+
+Záhlaví ukazuje, kam se soubory ukládají, a odkazuje na zdrojovou složku. **Upravit nastavení** mění nastavení složky a **Uložit a znovu prohledat** s ním přepíše soubory, kterým chybí přepis.
 
 ### Sledování složky
 
 Zapněte **Sledovat složku** na kartě **Složka**, aby se soubory přidávané do složky (nebo jejích podsložek) přepisovaly, dokud nekliknete na **Zastavit sledování**. Hodí se to pro nahrávky z diktafonu nebo nástroje pro schůzky, které se kopírují do složky.
 
-- Soubory, které už ve složce jsou, se přeskočí. Chcete-li je přepsat, přepište složku bez sledování.
+- Soubory, které složka už obsahuje, se přeskočí, pokud nezapnete **Přepsat soubory, které už ve složce jsou**: pak se nejprve přepíší ty, které ještě nemají přepis.
 - Soubor se přepíše, až je zcela zkopírovaný (když se jeho velikost přestane měnit), takže velké soubory se nepřepisují napůl.
-- Chyby sledování nezastaví.
+- Složky, které se sledovaly při zavření Audiotextu, se po jeho otevření sledují znovu a pokračuje se od souborů, které už viděly. Zastavené složky lze znovu sledovat pomocí **Pokračovat ve sledování**.
+- Pokud složka není dostupná (např. je na disku, který není připojený), Audiotext na ni počká, místo aby selhal.
+- Kvůli přepisu něčeho jiného nebo nahrávání se složka pozastaví (nový přepis ukazuje **Spouštění…**, dokud se to nestane) a poté se znovu sleduje.
+- Chyby sledování nezastaví a soubory přepsané společně se oznámí jedním oznámením.
 
 ## Fronta
 

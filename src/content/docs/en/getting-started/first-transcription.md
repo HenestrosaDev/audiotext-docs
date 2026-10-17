@@ -57,6 +57,8 @@ See [The transcript](/en/guides/transcript/) to learn everything you can do with
 | `Ctrl+F` / `⌘F` | Find and replace in the text you're working on (or find in the summary) |
 | `Ctrl+J` / `⌘J` | Go to the next low-confidence word |
 | `Shift+Ctrl+J` / `⇧⌘J` | Go to the previous low-confidence word |
-| `Esc` | Cancel the transcription in progress |
+| `Esc` | Cancel the transcription in progress (or clear the selected files of a folder) |
+| `Ctrl+A` / `⌘A` | Select all the files shown of a folder |
+| `Enter` | Open the selected file of a folder |
 | `Space` | Play or pause the audio |
 | `←` / `→` | Go back or forward 5 seconds |

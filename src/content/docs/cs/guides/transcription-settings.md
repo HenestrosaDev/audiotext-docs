@@ -67,8 +67,12 @@ Zobrazuje se jen pro mikrofon. Viz [Živý text](/cs/guides/sources/#živý-text
 Zobrazují se jen pro složky:
 
 - **Sledovat složku**: viz [Sledování složky](/cs/guides/sources/#sledování-složky).
+- **Přepsat soubory, které už ve složce jsou** (jen při sledování): nejprve přepíše soubory, které složka už obsahuje a které ještě nemají přepis. Ve výchozím stavu vypnuto.
+- **Zahrnout podsložky**: přepíše i soubory podsložek.
+- **Přeskočit soubory odpovídající**: názvy nebo cesty souborů, které se mají vynechat, oddělené čárkami (např. `*.wav, drafts/*`). Skryté soubory se vynechávají vždy.
 - **Typy souborů**: u WhisperX jeden nebo více z `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` a `.aud`. U Whisper API formát souborů (`text`, `json`, `verbose_json`, `srt` nebo `vtt`); titulky vyžadují model s časovými značkami. Google API vrací prostý text (`.txt`).
 - **Umístění**: soubory se ukládají vedle každého zdrojového souboru. Kliknutím na **Změnit…** je uložíte do jiné složky (její podsložky se znovu vytvoří), kliknutím na **Vedle zdroje** se vrátíte.
-- **Přepsat existující soubory**: znovu přepíše soubory, které už přepis mají, a nahradí ho.
+
+Soubory, které už mají přepis, se přeskočí. Chcete-li je přepsat znovu, použijte možnosti [souborů složky](/cs/guides/sources/#soubory-složky).
 
 Možnosti titulků (šířka řádku, počet řádků, zvýrazněná slova) najdete v [Předvolbách](/cs/reference/preferences/#titulky).

@@ -32,7 +32,9 @@ Groepen bundelen samenhangende transcripties, zoals die van een project of een c
 
 ## Een transcriptie verwijderen
 
-Als je een transcriptie verwijdert, worden hij, zijn samenvatting, zijn vragen en zijn vertalingen uit de geschiedenis gehaald. De transcripties van de bestanden van een map worden ook verwijderd. Je audio-, video- en opgeslagen bestanden worden **niet** verwijderd.
+Als je een transcriptie verwijdert, worden zij, haar samenvatting, haar vragen en haar vertalingen uit de geschiedenis verwijderd. Je audio-, video- en opgeslagen bestanden worden **niet** verwijderd.
+
+Als je een map verwijdert, worden ook de bestanden ervan uit de geschiedenis verwijderd, en wordt gevraagd of **de daarvoor opgeslagen bestanden ook verwijderd** moeten worden (standaard uit). Je audio- en videobestanden worden nooit verwijderd.
 
 ## Mislukte en onderbroken transcripties
 

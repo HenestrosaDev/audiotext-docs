@@ -67,8 +67,12 @@ Só se mostra para o micrófono. Consulta [Texto en directo](/gl/guides/sources/
 Só se mostran para cartafoles:
 
 - **Vixiar o cartafol**: consulta [Vixía un cartafol](/gl/guides/sources/#vixía-un-cartafol).
+- **Transcribir os ficheiros que xa hai no cartafol** (só ao vixiar): primeiro transcribe os ficheiros que xa contén o cartafol e que aínda non teñen transcrición. Desactivado por defecto.
+- **Incluír subcartafoles**: tamén transcribe os ficheiros dos subcartafoles.
+- **Omitir os ficheiros que coincidan con**: nomes ou rutas dos ficheiros que se omiten, separados por comas (p. ex. `*.wav, drafts/*`). Os ficheiros ocultos sempre se omiten.
 - **Tipos de ficheiro**: con WhisperX, un ou varios de `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` e `.aud`. Coa API de Whisper, o formato dos ficheiros (`text`, `json`, `verbose_json`, `srt` ou `vtt`); os subtítulos precisan un modelo con marcas de tempo. A API de Google devolve texto plano (`.txt`).
 - **Localización**: os ficheiros gárdanse xunto a cada ficheiro de orixe. Fai clic en **Cambiar…** para gardalos noutro cartafol (recréanse os seus subcartafoles), ou en **Xunto á orixe** para volver.
-- **Sobrescribir os ficheiros existentes**: volve transcribir os ficheiros que xa teñen unha transcrición e substitúea.
+
+Os ficheiros que xa teñen unha transcrición omítense. Para transcribilos de novo, usa as opcións dos [ficheiros do cartafol](/gl/guides/sources/#os-ficheiros-dun-cartafol).
 
 As opcións dos subtítulos (largura de liña, número de liñas, palabras resaltadas) están nas [Preferencias](/gl/reference/preferences/#subtítulos).

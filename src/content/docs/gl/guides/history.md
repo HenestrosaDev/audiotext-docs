@@ -32,7 +32,9 @@ Os grupos reúnen transcricións relacionadas, como as dun proxecto ou un curso.
 
 ## Elimina unha transcrición
 
-Ao eliminar unha transcrición, bórranse do historial ela, o seu resumo, as súas preguntas e as súas traducións. Tamén se eliminan as transcricións dos ficheiros dun cartafol. Os teus ficheiros de audio, vídeo e os ficheiros gardados **non** se eliminan.
+Ao eliminar unha transcrición, bórranse do historial ela, o seu resumo, as súas preguntas e as súas traducións. Os teus ficheiros de audio, vídeo e os ficheiros gardados **non** se eliminan.
+
+Ao quitar un cartafol tamén se quitan os seus ficheiros do historial, e pregúntase se **eliminar tamén os ficheiros gardados para eles** (desactivado por defecto). Os teus ficheiros de audio e vídeo nunca se eliminan.
 
 ## Transcricións con erros e interrompidas
 

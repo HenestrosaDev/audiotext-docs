@@ -67,8 +67,12 @@ Afișat doar pentru microfon. Consultați [Text live](/ro/guides/sources/#text-l
 Afișate doar pentru dosare:
 
 - **Monitorizează dosarul**: consultați [Monitorizați un dosar](/ro/guides/sources/#monitorizați-un-dosar).
+- **Transcrie fișierele aflate deja în dosar** (doar în timpul monitorizării): transcrie mai întâi fișierele pe care dosarul le conține deja și care nu au încă o transcriere. Dezactivat implicit.
+- **Include subdosarele**: transcrie și fișierele din subdosare.
+- **Omite fișierele care corespund cu**: numele sau căile fișierelor de omis, separate prin virgule (de ex. `*.wav, drafts/*`). Fișierele ascunse sunt omise întotdeauna.
 - **Tipuri de fișiere**: la WhisperX, unul sau mai multe dintre `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` și `.aud`. La API-ul Whisper, formatul fișierelor (`text`, `json`, `verbose_json`, `srt` sau `vtt`); subtitrările necesită un model cu marcaje de timp. API-ul Google returnează text simplu (`.txt`).
 - **Locație**: fișierele sunt salvate lângă fiecare fișier sursă. Faceți clic pe **Schimbă…** pentru a le salva în alt dosar (subdosarele lui sunt recreate) sau pe **Lângă sursă** pentru a reveni.
-- **Suprascrie fișierele existente**: transcrie din nou fișierele care au deja o transcriere și o înlocuiește.
+
+Fișierele care au deja o transcriere sunt omise. Pentru a le transcrie din nou, folosiți opțiunile [fișierelor dosarului](/ro/guides/sources/#fișierele-unui-dosar).
 
 Opțiunile subtitrărilor (lățimea rândului, numărul de rânduri, cuvintele evidențiate) sunt în [Preferințe](/ro/reference/preferences/#subtitrări).

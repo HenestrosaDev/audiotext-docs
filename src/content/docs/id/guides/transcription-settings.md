@@ -67,8 +67,12 @@ Hanya ditampilkan untuk mikrofon. Lihat [Teks langsung](/id/guides/sources/#teks
 Hanya ditampilkan untuk folder:
 
 - **Pantau folder**: lihat [Pantau folder](/id/guides/sources/#pantau-folder).
+- **Transkripsi file yang sudah ada di folder** (hanya saat memantau): mentranskripsi lebih dulu file yang sudah ada di folder dan belum memiliki transkripsi. Nonaktif secara default.
+- **Sertakan subfolder**: juga mentranskripsi file dalam subfolder.
+- **Lewati file yang cocok dengan**: nama atau jalur file yang dilewati, dipisahkan koma (mis. `*.wav, drafts/*`). File tersembunyi selalu dilewati.
 - **Jenis file**: dengan WhisperX, satu atau beberapa dari `.txt`, `.srt`, `.vtt`, `.json`, `.tsv`, dan `.aud`. Dengan Whisper API, format file (`text`, `json`, `verbose_json`, `srt`, atau `vtt`); subtitle memerlukan model dengan stempel waktu. Google API mengembalikan teks biasa (`.txt`).
 - **Lokasi**: file disimpan di samping setiap file sumber. Klik **Ubah…** untuk menyimpannya di folder lain (subfoldernya dibuat ulang), atau **Di samping sumber** untuk kembali.
-- **Timpa file yang ada**: mentranskripsi ulang file yang sudah memiliki transkripsi dan menggantinya.
+
+File yang sudah memiliki transkripsi akan dilewati. Untuk mentranskripsinya lagi, gunakan opsi [file dalam folder](/id/guides/sources/#file-dalam-folder).
 
 Opsi subtitle (lebar baris, jumlah baris, kata yang disorot) ada di [Preferensi](/id/reference/preferences/#subtitle).

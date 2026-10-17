@@ -32,7 +32,9 @@ Grupy łączą powiązane transkrypcje, np. z jednego projektu lub kursu. Utwór
 
 ## Usuń transkrypcję
 
-Usunięcie transkrypcji usuwa z historii ją, jej podsumowanie, pytania i tłumaczenia. Usuwane są też transkrypcje plików z folderu. Twoje pliki audio, wideo i zapisane pliki **nie** są usuwane.
+Usunięcie transkrypcji usuwa z historii ją, jej podsumowanie, jej pytania i jej tłumaczenia. Twoje pliki audio, wideo i zapisane pliki **nie** są usuwane.
+
+Usunięcie folderu usuwa z historii także jego pliki i pyta, czy **usunąć też pliki dla nich zapisane** (domyślnie wyłączone). Twoje pliki audio i wideo nigdy nie są usuwane.
 
 ## Nieudane i przerwane transkrypcje
 

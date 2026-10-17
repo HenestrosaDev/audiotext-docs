@@ -72,7 +72,7 @@ Wordt in plaats daarvan **De YouTube-video heeft geen audiospoor.** getoond, dan
 
 ## Een map transcribeert geen enkel bestand
 
-Bestanden die al een transcriptie hebben, worden overgeslagen. Zet **Bestaande bestanden overschrijven** aan om ze opnieuw te transcriberen. De map moet ook [ondersteunde bestanden](/nl/reference/formats-and-languages/) bevatten.
+Bestanden die al een transcriptie hebben, worden overgeslagen, net als verborgen bestanden en bestanden die overeenkomen met **Bestanden overslaan die overeenkomen met**. Gebruik **Alles opnieuw transcriberen…** in het menu `⋯` van de map om ze opnieuw te transcriberen, of selecteer ze in de [lijst met bestanden](/nl/guides/sources/#de-bestanden-van-een-map). De bestanden van de submappen worden alleen getranscribeerd met **Submappen opnemen**, en de map moet [ondersteunde bestanden](/nl/reference/formats-and-languages/) bevatten.
 
 ## De Google-API vraagt om de taal
 

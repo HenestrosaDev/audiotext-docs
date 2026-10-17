@@ -67,8 +67,12 @@ Solo se muestra para el micrófono. Consulta [Texto en directo](/es/guides/sourc
 Solo se muestran para carpetas:
 
 - **Vigilar la carpeta**: consulta [Vigila una carpeta](/es/guides/sources/#vigila-una-carpeta).
+- **Transcribir los archivos que ya hay en la carpeta** (solo al vigilar): primero transcribe los archivos que ya contiene la carpeta y que aún no tienen transcripción. Desactivado por defecto.
+- **Incluir subcarpetas**: también transcribe los archivos de las subcarpetas.
+- **Omitir los archivos que coincidan con**: nombres o rutas de los archivos que se omiten, separados por comas (p. ej. `*.wav, drafts/*`). Los archivos ocultos siempre se omiten.
 - **Tipos de archivo**: con WhisperX, uno o varios de `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` y `.aud`. Con la API de Whisper, el formato de los archivos (`text`, `json`, `verbose_json`, `srt` o `vtt`); los subtítulos necesitan un modelo con marcas de tiempo. La API de Google devuelve texto plano (`.txt`).
 - **Ubicación**: los archivos se guardan junto a cada archivo de origen. Haz clic en **Cambiar…** para guardarlos en otra carpeta (se recrean sus subcarpetas), o en **Junto al origen** para volver.
-- **Sobrescribir archivos existentes**: vuelve a transcribir los archivos que ya tienen una transcripción, reemplazándola.
+
+Los archivos que ya tienen una transcripción se omiten. Para volver a transcribirlos, usa las opciones de los [archivos de la carpeta](/es/guides/sources/#los-archivos-de-una-carpeta).
 
 Las opciones de los subtítulos (ancho de línea, número de líneas, palabras resaltadas) están en las [Preferencias](/es/reference/preferences/#subtítulos).

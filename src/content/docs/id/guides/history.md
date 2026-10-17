@@ -32,7 +32,9 @@ Grup mengumpulkan transkripsi yang saling terkait, seperti transkripsi dari sebu
 
 ## Hapus transkripsi
 
-Menghapus transkripsi akan menghapusnya, beserta ringkasan, pertanyaan, dan terjemahannya, dari riwayat. Transkripsi file dalam sebuah folder juga dihapus. File audio, video, dan file yang Anda simpan **tidak** dihapus.
+Menghapus transkripsi akan menghapusnya, beserta ringkasan, pertanyaan, dan terjemahannya, dari riwayat. File audio, video, dan file yang disimpan **tidak** dihapus.
+
+Menghapus folder juga menghapus file-filenya dari riwayat, dan menanyakan apakah **file yang disimpan untuknya juga dihapus** (nonaktif secara default). File audio dan video Anda tidak pernah dihapus.
 
 ## Transkripsi yang gagal dan terputus
 

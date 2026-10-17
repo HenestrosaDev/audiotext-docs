@@ -32,7 +32,9 @@ Grupurile adună transcrieri înrudite, cum ar fi cele ale unui proiect sau curs
 
 ## Ștergeți o transcriere
 
-Ștergerea unei transcrieri o elimină din istoric, împreună cu rezumatul, întrebările și traducerile. Sunt șterse și transcrierile fișierelor unui dosar. Fișierele dumneavoastră audio, video și cele salvate **nu** sunt șterse.
+Ștergerea unei transcrieri o elimină din istoric, împreună cu rezumatul, întrebările și traducerile ei. Fișierele dumneavoastră audio, video și cele salvate **nu** sunt șterse.
+
+Eliminarea unui dosar elimină din istoric și fișierele lui, și vă întreabă dacă doriți **să ștergeți și fișierele salvate pentru ele** (dezactivat implicit). Fișierele dumneavoastră audio și video nu sunt șterse niciodată.
 
 ## Transcrieri eșuate și întrerupte
 

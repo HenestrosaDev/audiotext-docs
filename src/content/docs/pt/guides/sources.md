@@ -52,7 +52,7 @@ Para transcrever o que o seu computador reproduz (uma videochamada, um webinar, 
 
 ## Pasta
 
-Transcreve todos os arquivos de áudio e vídeo de uma pasta **e das suas subpastas**. Clique em **Escolher uma pasta…** ou solte a pasta na janela. O Audiotext informa quantos arquivos encontrou.
+Transcreve todos os arquivos de áudio e vídeo de uma pasta e, se **Incluir subpastas** estiver ativado no cartão **Pasta**, das suas subpastas. Clique em **Escolher uma pasta…** ou solte a pasta na janela. O Audiotext informa quantos arquivos encontrou. Para deixar alguns arquivos de fora, escreva os nomes ou caminhos deles, separados por vírgulas, em **Ignorar arquivos que correspondam a** (ex.: `*.wav, drafts/*`). Os arquivos ocultos são sempre ignorados.
 
 A transcrição de cada arquivo é salva ao lado dele (ou em outra pasta que você escolher no cartão **Saída**), com o mesmo nome e a extensão de cada **tipo de arquivo** selecionado. Por exemplo, com `.txt` e `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Os arquivos que já têm uma transcrição **são ignorados**, a menos que você ative **Substituir arquivos existentes**. Assim, se você adicionar um arquivo à pasta e transcrevê-la de novo, apenas o arquivo novo é transcrito.
+Se dois arquivos tiverem o mesmo nome e outra extensão (ex.: `talk.mp3` e `talk.mp4`), as transcrições deles mantêm a extensão no nome (`talk.mp3.txt` e `talk.mp4.txt`), para que uma não substitua a outra.
 
-Se um arquivo não puder ser transcrito, os demais continuam sendo transcritos, e a visualização da pasta mostra quais falharam e por quê. **Transcrever de novo** repete a pasta, e o botão de pasta abre a pasta dos arquivos salvos.
+Os arquivos que já têm uma transcrição **são ignorados**: um arquivo só é ignorado se tiver todos os tipos de arquivo que você selecionou, então adicionar um tipo de arquivo o transcreve de novo. Se um arquivo não puder ser transcrito, os demais continuam sendo transcritos.
+
+### Os arquivos de uma pasta
+
+A página de uma pasta no histórico lista os arquivos dela, com o status, a duração e o tamanho de cada um e uma prévia do texto. Pesquise-os, filtre-os por status (**Todos**, **Concluídos**, **Com erro** ou **Pendentes**) e ordene-os por nome, status, duração ou tamanho. Os arquivos que foram movidos ou excluídos são marcados como **Arquivo não encontrado**.
+
+- Clique em um arquivo para abrir a transcrição dele, ou clique no botão `⋯` dele (ou clique com o botão direito) para copiar o texto, abri-lo direto na exportação, no resumo ou na tradução, mostrá-lo no gerenciador de arquivos ou escolher **Transcrever este arquivo novamente**.
+- Selecione vários arquivos com `Ctrl`/`⌘` ou `Shift`, ou todos os arquivos mostrados com `Ctrl+A` / `⌘A`, e escolha **Transcrever novamente**, **Exportar…** (para exportá-los juntos em um único arquivo TXT, Markdown ou Word) ou **Remover do histórico…**. `Enter` abre o arquivo selecionado, e `Esc` limpa a seleção.
+- **Tentar novamente os que falharam** transcreve de novo os arquivos que falharam. **Verificar a pasta novamente** transcreve apenas os arquivos sem transcrição, como os novos, e informa quantos foram ignorados porque já tinham uma.
+- O menu `⋯` da pasta tem **Transcrever tudo novamente…** (transcreve de novo todos os arquivos dela, substituindo as transcrições), **Exportar tudo…** (em um único arquivo), uma opção para tirar da lista os arquivos ausentes, e as opções para abrir a pasta de origem ou a pasta dos arquivos salvos.
+- Quando você altera as configurações da pasta, os arquivos transcritos com outras configurações (mecanismo, modelo, idioma…) são indicados, com o botão **Transcrevê-los novamente**.
+
+O cabeçalho mostra onde os arquivos são salvos e tem um link para a pasta de origem. **Editar configurações** altera as configurações da pasta, e **Salvar e verificar novamente** transcreve com elas os arquivos que ainda não têm transcrição.
 
 ### Monitore uma pasta
 
 Ative **Monitorar a pasta** no cartão **Pasta** para continuar transcrevendo os arquivos adicionados à pasta (ou às suas subpastas) até você clicar em **Parar de monitorar**. É útil para as gravações de um gravador de voz ou de uma ferramenta de reuniões que são copiadas para uma pasta.
 
-- Os arquivos que a pasta já contém são ignorados. Para transcrevê-los, transcreva a pasta sem monitorá-la.
+- Os arquivos que a pasta já contém são ignorados, a menos que você ative **Transcrever os arquivos que já estão na pasta**: então os que não têm transcrição são transcritos primeiro.
 - Um arquivo é transcrito quando termina de ser copiado (quando o tamanho dele para de mudar), então arquivos grandes não são transcritos pela metade.
-- Os erros não interrompem o monitoramento.
+- As pastas que estavam sendo monitoradas quando o Audiotext foi fechado voltam a ser monitoradas quando ele abre, continuando a partir dos arquivos que já tinham visto. As pastas paradas podem voltar a ser monitoradas com **Retomar monitoramento**.
+- Se a pasta não estiver disponível (ex.: está em uma unidade que não está conectada), o Audiotext espera por ela em vez de falhar.
+- Para transcrever outra coisa ou gravar, a pasta é pausada (a nova transcrição mostra **Iniciando…** até que esteja) e depois volta a ser monitorada.
+- Os erros não interrompem o monitoramento, e os arquivos transcritos juntos são avisados em uma única notificação.
 
 ## A fila
 
