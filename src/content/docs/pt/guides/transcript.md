@@ -106,7 +106,7 @@ As legendas e a tabela exigem carimbos de tempo. As [traduções](/pt/guides/sum
 
 Para compartilhar um vídeo onde não é possível carregar arquivos de legendas (ex.: uma rede social), escolha **Vídeo com legendas (.mp4)…** no menu de exportar da transcrição, ou de uma tradução. O Audiotext faz uma cópia do vídeo com as legendas desenhadas nele, como aparecem no aplicativo: com o tamanho, a posição e o estilo delas (consulte [Assista a vídeos com legendas](#assista-a-vídeos-com-legendas)).
 
-Ela é feita em segundo plano, e o status mostra o progresso. Para cancelar, escolha **Parar de adicionar as legendas ao vídeo** no mesmo menu. A cópia é um arquivo MP4 (vídeo H.264 e áudio AAC), e o vídeo original não muda.
+Ela é feita em segundo plano, e o status mostra o progresso. Para cancelar, escolha **Parar de adicionar legendas ao vídeo** no mesmo menu. A cópia é um arquivo MP4 (vídeo H.264 e áudio AAC), e o vídeo original não muda.
 
 Se nenhuma fonte do seu sistema tiver alguns caracteres das legendas, eles são desenhados como quadrados, e o Audiotext os lista ao terminar. Consulte [Solução de problemas](/pt/help/troubleshooting/#o-vídeo-com-legendas-mostra-quadrados).
 

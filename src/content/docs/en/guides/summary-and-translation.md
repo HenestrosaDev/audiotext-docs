@@ -20,7 +20,7 @@ Below its title, the panel says which model generated it and when. The buttons o
 - **Find** (`Ctrl+F`, `⌘F` on macOS): finds a text in the summary.
 - **Copy**: copies it.
 - **Export**: saves it by itself as plain text, Markdown or a Word document, named like `video.summary.md` so it doesn't replace the transcription. The Markdown and Word [exports](/en/guides/transcript/#copy-and-export) of the transcription include it too.
-- **Regenerate the summary**: writes it again (e.g. after choosing another model), after asking you, since the current one is replaced.
+- **Regenerate summary**: writes it again (e.g. after choosing another model), after asking you, since the current one is replaced.
 
 If the API key of the provider isn't set, the **Summary** mode offers to set it. Very long transcriptions (about three hours of speech or more) are summarized from their beginning only.
 
@@ -44,7 +44,7 @@ Click **Translate**, choose the language in **Translate into:** and the provider
 - If the transcription has no timestamps, its whole text is translated at once.
 - Both texts scroll together, so they show the same part of the audio. The round button on the handle between them turns it on and off. Drag the handle to resize them, or double-click it to reset their sizes.
 
-The buttons of the header of the translation find and replace in it, copy it, export it, **Translate again** (with the same provider and model) and **Hide the translation**. The **Translate** button also lets you show it again, **Translate into another language…** or **Delete the translation**.
+The buttons of the header of the translation find and replace in it, copy it, export it, **Translate again** (with the same provider and model) and **Hide translation**. The **Translate** button also lets you show it again, **Translate into another language…** or **Delete translation**.
 
 ### Several languages
 

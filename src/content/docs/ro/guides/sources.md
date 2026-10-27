@@ -9,7 +9,7 @@ Audiotext transcrie din patru tipuri de surse, pe care le alegeți în bara de s
 
 ## Fișier
 
-Transcrie un fișier audio sau video. Faceți clic pe **Alege un fișier…** sau trageți fișierul în fereastră. Fereastra de selecție afișează implicit **Toate fișierele acceptate**; puteți afișa doar **Fișiere audio** sau **Fișiere video**. Formatele acceptate sunt în [Formate și limbi](/ro/reference/formats-and-languages/).
+Transcrie un fișier audio sau video. Faceți clic pe **Alege fișier…** sau trageți fișierul în fereastră. Fereastra de selecție afișează implicit **Toate fișierele acceptate**; puteți afișa doar **Fișiere audio** sau **Fișiere video**. Formatele acceptate sunt în [Formate și limbi](/ro/reference/formats-and-languages/).
 
 Se poate adăuga un singur fișier odată. Pentru a transcrie mai multe fișiere, folosiți sursa [Dosar](#dosar).
 
@@ -52,7 +52,7 @@ Pentru a transcrie ce redă computerul (un apel video, un webinar, un videoclip 
 
 ## Dosar
 
-Transcrie toate fișierele audio și video dintr-un dosar și, dacă **Include subdosarele** este activat pe cardul **Dosar**, din subdosarele lui. Faceți clic pe **Alege un dosar…** sau plasați dosarul în fereastră. Audiotext vă spune câte fișiere a găsit. Pentru a omite unele fișiere, scrieți numele sau căile lor, separate prin virgule, în **Omite fișierele care corespund cu** (de ex. `*.wav, drafts/*`). Fișierele ascunse sunt omise întotdeauna.
+Transcrie toate fișierele audio și video dintr-un dosar și, dacă **Include subdosarele** este activat pe cardul **Dosar**, din subdosarele lui. Faceți clic pe **Alege dosar…** sau plasați dosarul în fereastră. Audiotext vă spune câte fișiere a găsit. Pentru a omite unele fișiere, scrieți numele sau căile lor, separate prin virgule, în **Omite fișierele care corespund cu** (de ex. `*.wav, drafts/*`). Fișierele ascunse sunt omise întotdeauna.
 
 Transcrierea fiecărui fișier este salvată lângă acesta (sau în alt dosar ales pe cardul **Ieșire**), cu același nume și extensia fiecărui **tip de fișier** selectat. De exemplu, cu `.txt` și `.vtt`:
 

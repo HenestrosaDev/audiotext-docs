@@ -20,7 +20,7 @@ Sota el títol, el plafó diu quin model l'ha generat i quan. Els botons de la c
 - **Cerca** (`Ctrl+F`, `⌘F` a macOS): cerca un text al resum.
 - **Copia**: el copia.
 - **Exporta**: el desa per separat com a text pla, Markdown o document de Word, amb un nom com `video.summary.md` perquè no substitueixi la transcripció. Les [exportacions](/ca/guides/transcript/#copia-i-exporta) a Markdown i Word de la transcripció també l'inclouen.
-- **Torna a generar el resum**: el torna a escriure (p. ex. després de triar un altre model), després de preguntar-t'ho, ja que se substitueix l'actual.
+- **Regenera resum**: el torna a escriure (p. ex. després de triar un altre model), després de preguntar-t'ho, ja que se substitueix l'actual.
 
 Si la clau d'API del proveïdor no està configurada, el mode **Resum** ofereix configurar-la. Les transcripcions molt llargues (unes tres hores de parla o més) només es resumeixen des del principi.
 
@@ -44,7 +44,7 @@ Fes clic a **Tradueix**, tria l'idioma a **Tradueix a:** i el proveïdor a **Tra
 - Si la transcripció no té marques de temps, es tradueix tot el text d'una vegada.
 - Els dos textos es desplacen junts, així que mostren la mateixa part de l'àudio. El botó rodó del separador entre ells ho activa i ho desactiva. Arrossega el separador per canviar-ne la mida, o fes-hi doble clic per restablir-la.
 
-Els botons de la capçalera de la traducció hi cerquen i substitueixen, la copien, l'exporten, la **Tornen a traduir** (amb el mateix proveïdor i model) i l'amaguen (**Amaga la traducció**). El botó **Tradueix** també et permet tornar-la a mostrar, **Traduir a un altre idioma…** o **Eliminar la traducció**.
+Els botons de la capçalera de la traducció hi cerquen i substitueixen, la copien, l'exporten, la **Tornen a traduir** (amb el mateix proveïdor i model) i l'amaguen (**Amaga traducció**). El botó **Tradueix** també et permet tornar-la a mostrar, **Traduir a un altre idioma…** o **Eliminar la traducció**.
 
 ### Diversos idiomes
 

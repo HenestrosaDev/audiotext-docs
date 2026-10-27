@@ -106,7 +106,7 @@ Els subtítols i la taula necessiten marques de temps. Les [traduccions](/ca/gui
 
 Per compartir un vídeo on no es poden carregar fitxers de subtítols (p. ex. una xarxa social), tria **Vídeo amb subtítols (.mp4)…** al menú d'exportar de la transcripció, o d'una traducció. Audiotext fa una còpia del vídeo amb els subtítols dibuixats a sobre, tal com es mostren a l'aplicació: amb la seva mida, posició i estil (consulta [Mira vídeos amb subtítols](#mira-vídeos-amb-subtítols)).
 
-Es fa en segon pla, i l'estat en mostra el progrés. Per cancel·lar-ho, tria **Deixa d'afegir els subtítols al vídeo** al mateix menú. La còpia és un fitxer MP4 (vídeo H.264 i àudio AAC), i el vídeo original no canvia.
+Es fa en segon pla, i l'estat en mostra el progrés. Per cancel·lar-ho, tria **Deixa d'afegir subtítols al vídeo** al mateix menú. La còpia és un fitxer MP4 (vídeo H.264 i àudio AAC), i el vídeo original no canvia.
 
 Si cap tipus de lletra del sistema no té alguns caràcters dels subtítols, es dibuixen com a quadres, i Audiotext els enumera en acabar. Consulta [Resolució de problemes](/ca/help/troubleshooting/#el-vídeo-amb-subtítols-mostra-quadres).
 

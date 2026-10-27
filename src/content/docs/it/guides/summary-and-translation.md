@@ -44,7 +44,7 @@ Fai clic su **Traduci**, scegli la lingua in **Traduci in:** e il fornitore in *
 - Se la trascrizione non ha marcatori temporali, tutto il testo viene tradotto in una volta.
 - I due testi scorrono insieme, quindi mostrano la stessa parte dell'audio. Il pulsante rotondo sul separatore tra di essi lo attiva e disattiva. Trascina il separatore per ridimensionarli, o fai doppio clic su di esso per ripristinarne le dimensioni.
 
-I pulsanti dell'intestazione della traduzione trovano e sostituiscono nel testo, lo copiano, lo esportano, **Traduci di nuovo** (con lo stesso fornitore e modello) e **Nascondi la traduzione**. Il pulsante **Traduci** permette anche di mostrarla di nuovo, **Traduci in un'altra lingua…** o **Elimina la traduzione**.
+I pulsanti dell'intestazione della traduzione trovano e sostituiscono nel testo, lo copiano, lo esportano, **Traduci di nuovo** (con lo stesso fornitore e modello) e **Nascondi traduzione**. Il pulsante **Traduci** permette anche di mostrarla di nuovo, **Traduci in un'altra lingua…** o **Elimina traduzione**.
 
 ### Più lingue
 

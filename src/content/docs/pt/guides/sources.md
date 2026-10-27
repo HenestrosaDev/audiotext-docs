@@ -9,7 +9,7 @@ O Audiotext transcreve a partir de quatro tipos de origem, que você escolhe na 
 
 ## Arquivo
 
-Transcreve um arquivo de áudio ou vídeo. Clique em **Escolher um arquivo…** ou solte o arquivo na janela. O explorador de arquivos mostra **Todos os arquivos compatíveis** por padrão; você pode mostrar apenas **Arquivos de áudio** ou **Arquivos de vídeo**. Consulte [Formatos e idiomas](/pt/reference/formats-and-languages/) para ver os formatos compatíveis.
+Transcreve um arquivo de áudio ou vídeo. Clique em **Escolher arquivo…** ou solte o arquivo na janela. O explorador de arquivos mostra **Todos os arquivos compatíveis** por padrão; você pode mostrar apenas **Arquivos de áudio** ou **Arquivos de vídeo**. Consulte [Formatos e idiomas](/pt/reference/formats-and-languages/) para ver os formatos compatíveis.
 
 Só é possível adicionar um arquivo por vez. Para transcrever vários arquivos, use a origem [Pasta](#pasta).
 
@@ -34,7 +34,7 @@ Grava a sua voz ou uma reunião e a transcreve. A gravação é mantida no seu h
 
 ### Texto ao vivo
 
-Com o **WhisperX**, ative **Mostrar o texto durante a gravação** no cartão **Texto ao vivo** para ver um rascunho do texto enquanto você fala. O rascunho é escrito por um **Modelo ao vivo** rápido (`small` por padrão). Quando você para, toda a gravação é transcrita de novo com o modelo do mecanismo, que é mais preciso, e o rascunho é substituído.
+Com o **WhisperX**, ative **Mostrar texto durante a gravação** no cartão **Texto ao vivo** para ver um rascunho do texto enquanto você fala. O rascunho é escrito por um **Modelo ao vivo** rápido (`small` por padrão). Quando você para, toda a gravação é transcrita de novo com o modelo do mecanismo, que é mais preciso, e o rascunho é substituído.
 
 ![O texto em direto durante a gravação com o microfone](/screenshots/live-text.png)
 
@@ -52,7 +52,7 @@ Para transcrever o que o seu computador reproduz (uma videochamada, um webinar, 
 
 ## Pasta
 
-Transcreve todos os arquivos de áudio e vídeo de uma pasta e, se **Incluir subpastas** estiver ativado no cartão **Pasta**, das suas subpastas. Clique em **Escolher uma pasta…** ou solte a pasta na janela. O Audiotext informa quantos arquivos encontrou. Para deixar alguns arquivos de fora, escreva os nomes ou caminhos deles, separados por vírgulas, em **Ignorar arquivos que correspondam a** (ex.: `*.wav, drafts/*`). Os arquivos ocultos são sempre ignorados.
+Transcreve todos os arquivos de áudio e vídeo de uma pasta e, se **Incluir subpastas** estiver ativado no cartão **Pasta**, das suas subpastas. Clique em **Escolher pasta…** ou solte a pasta na janela. O Audiotext informa quantos arquivos encontrou. Para deixar alguns arquivos de fora, escreva os nomes ou caminhos deles, separados por vírgulas, em **Ignorar arquivos que correspondam a** (ex.: `*.wav, drafts/*`). Os arquivos ocultos são sempre ignorados.
 
 A transcrição de cada arquivo é salva ao lado dele (ou em outra pasta que você escolher no cartão **Saída**), com o mesmo nome e a extensão de cada **tipo de arquivo** selecionado. Por exemplo, com `.txt` e `.vtt`:
 
@@ -85,7 +85,7 @@ O cabeçalho mostra onde os arquivos são salvos e tem um link para a pasta de o
 
 ### Monitore uma pasta
 
-Ative **Monitorar a pasta** no cartão **Pasta** para continuar transcrevendo os arquivos adicionados à pasta (ou às suas subpastas) até você clicar em **Parar de monitorar**. É útil para as gravações de um gravador de voz ou de uma ferramenta de reuniões que são copiadas para uma pasta.
+Ative **Monitorar pasta** no cartão **Pasta** para continuar transcrevendo os arquivos adicionados à pasta (ou às suas subpastas) até você clicar em **Parar de monitorar**. É útil para as gravações de um gravador de voz ou de uma ferramenta de reuniões que são copiadas para uma pasta.
 
 - Os arquivos que a pasta já contém são ignorados, a menos que você ative **Transcrever os arquivos que já estão na pasta**: então os que não têm transcrição são transcritos primeiro.
 - Um arquivo é transcrito quando termina de ser copiado (quando o tamanho dele para de mudar), então arquivos grandes não são transcritos pela metade.

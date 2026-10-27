@@ -21,7 +21,7 @@ Right-click a transcription to:
 - **Add note…** or **Edit note…**: a note about it, shown in its header.
 - **Delete note…**: deletes its note, after asking you.
 - **Edit tag…**: a short label shown instead of the kind of source.
-- **Pin to the top** or **Unpin** it.
+- **Pin to top** or **Unpin** it.
 - **Move to group**: put it in a group, or create a **New group…**.
 - **Show in Finder** (or Explorer, or the file manager): open the folder of its source file.
 - **Delete…** it.

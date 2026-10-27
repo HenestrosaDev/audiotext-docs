@@ -106,7 +106,7 @@ Os subtítulos e a táboa precisan marcas de tempo. As [traducións](/gl/guides/
 
 Para compartir un vídeo onde non se poden cargar ficheiros de subtítulos (p. ex. unha rede social), escolle **Vídeo con subtítulos (.mp4)…** no menú de exportar da transcrición, ou dunha tradución. Audiotext fai unha copia do vídeo cos subtítulos debuxados enriba, tal como se mostran na aplicación: co seu tamaño, a súa posición e o seu estilo (consulta [Mira vídeos con subtítulos](#mira-vídeos-con-subtítulos)).
 
-Faise en segundo plano, e o estado mostra o seu progreso. Para cancelalo, escolle **Deixar de engadir os subtítulos ao vídeo** no mesmo menú. A copia é un ficheiro MP4 (vídeo H.264 e audio AAC), e o vídeo orixinal non cambia.
+Faise en segundo plano, e o estado mostra o seu progreso. Para cancelalo, escolle **Deixar de engadir subtítulos ao vídeo** no mesmo menú. A copia é un ficheiro MP4 (vídeo H.264 e audio AAC), e o vídeo orixinal non cambia.
 
 Se ningunha fonte do teu sistema ten algúns caracteres dos subtítulos, debúxanse como cadros, e Audiotext enuméraos ao rematar. Consulta [Solución de problemas](/gl/help/troubleshooting/#o-vídeo-con-subtítulos-mostra-cadros).
 

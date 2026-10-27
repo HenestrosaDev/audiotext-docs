@@ -66,7 +66,7 @@ Visas bara för mikrofonen. Se [Livetext](/sv/guides/sources/#livetext).
 
 Visas bara för mappar:
 
-- **Bevaka mappen**: se [Bevaka en mapp](/sv/guides/sources/#bevaka-en-mapp).
+- **Bevaka mapp**: se [Bevaka en mapp](/sv/guides/sources/#bevaka-en-mapp).
 - **Transkribera filerna som redan finns i mappen** (bara vid bevakning): transkriberar först de filer som redan finns i mappen och som inte har någon transkribering än. Av som standard.
 - **Inkludera undermappar**: transkriberar även filerna i undermapparna.
 - **Hoppa över filer som matchar**: namn eller sökvägar för filerna som ska hoppas över, separerade med kommatecken (t.ex. `*.wav, drafts/*`). Dolda filer hoppas alltid över.

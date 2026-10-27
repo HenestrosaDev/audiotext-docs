@@ -31,7 +31,7 @@ Se il file di origine è stato spostato o eliminato, l'audio non è disponibile,
 
 ### Guarda i video con i sottotitoli
 
-Le trascrizioni dei video mostrano il video sopra il testo. Il suo menu permette di **Mostra i sottotitoli sul video** e di sceglierne la **Dimensione** (piccola, media o grande), la **Posizione** (in basso o in alto) e lo **Stile** (sfondo scuro o contorno). Se la trascrizione ha delle [traduzioni](/it/guides/summary-and-translation/#traduzione), il menu permette anche di scegliere se i sottotitoli mostrano la **Trascrizione** o la **Traduzione in…** una lingua. Anche il pulsante **Sottotitoli** della barra del lettore li mostra o li nasconde, e la freccia accanto apre lo stesso menu.
+Le trascrizioni dei video mostrano il video sopra il testo. Il suo menu permette di **Mostra sottotitoli sul video** e di sceglierne la **Dimensione** (piccola, media o grande), la **Posizione** (in basso o in alto) e lo **Stile** (sfondo scuro o contorno). Se la trascrizione ha delle [traduzioni](/it/guides/summary-and-translation/#traduzione), il menu permette anche di scegliere se i sottotitoli mostrano la **Trascrizione** o la **Traduzione in…** una lingua. Anche il pulsante **Sottotitoli** della barra del lettore li mostra o li nasconde, e la freccia accanto apre lo stesso menu.
 
 ## Trova e sostituisci
 
@@ -106,7 +106,7 @@ I sottotitoli e la tabella richiedono i marcatori temporali. Le [traduzioni](/it
 
 Per condividere un video dove non si possono caricare file di sottotitoli (es. un social network), scegli **Video con sottotitoli (.mp4)…** nel menu di esportazione della trascrizione, o di una traduzione. Audiotext crea una copia del video con i sottotitoli disegnati sopra, come vengono mostrati nell'app: con la loro dimensione, posizione e stile (consulta [Guarda i video con i sottotitoli](#guarda-i-video-con-i-sottotitoli)).
 
-Viene creata in background, e lo stato ne mostra l'avanzamento. Per annullarla, scegli **Interrompi l'aggiunta dei sottotitoli al video** nello stesso menu. La copia è un file MP4 (video H.264 e audio AAC), e il video originale non cambia.
+Viene creata in background, e lo stato ne mostra l'avanzamento. Per annullarla, scegli **Interrompi aggiunta dei sottotitoli al video** nello stesso menu. La copia è un file MP4 (video H.264 e audio AAC), e il video originale non cambia.
 
 Se nessun font del tuo sistema contiene alcuni caratteri dei sottotitoli, vengono disegnati come riquadri, e Audiotext li elenca alla fine. Consulta [Risoluzione dei problemi](/it/help/troubleshooting/#il-video-con-sottotitoli-mostra-riquadri).
 

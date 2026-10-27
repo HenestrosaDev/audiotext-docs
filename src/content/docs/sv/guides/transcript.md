@@ -106,7 +106,7 @@ Undertexterna och tabellen kräver tidsstämplar. [Översättningarna](/sv/guide
 
 För att dela en video där undertextfiler inte kan läsas in (t.ex. ett socialt nätverk) väljer du **Video med undertexter (.mp4)…** i exportmenyn för transkriberingen eller för en översättning. Audiotext gör en kopia av videon med undertexterna inritade, så som de visas i appen: med deras storlek, position och stil (se [Se videor med undertexter](#se-videor-med-undertexter)).
 
-Kopian görs i bakgrunden, och statusen visar förloppet. För att avbryta väljer du **Sluta lägga till undertexterna i videon** i samma meny. Kopian är en MP4-fil (H.264-video och AAC-ljud), och originalvideon ändras inte.
+Kopian görs i bakgrunden, och statusen visar förloppet. För att avbryta väljer du **Sluta lägga till undertexter i videon** i samma meny. Kopian är en MP4-fil (H.264-video och AAC-ljud), och originalvideon ändras inte.
 
 Om inget typsnitt i ditt system har vissa tecken i undertexterna ritas de som rutor, och Audiotext listar dem när det är klart. Se [Felsökning](/sv/help/troubleshooting/#videon-med-undertexter-visar-rutor).
 

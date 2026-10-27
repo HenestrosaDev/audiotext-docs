@@ -106,7 +106,7 @@ Untertitel und Tabelle erfordern Zeitstempel. Die [Übersetzungen](/de/guides/su
 
 Um ein Video dort zu teilen, wo sich keine Untertiteldateien laden lassen (z. B. in einem sozialen Netzwerk), wählen Sie **Video mit Untertiteln (.mp4)…** im Exportmenü der Transkription oder einer Übersetzung. Audiotext erstellt eine Kopie des Videos mit eingebrannten Untertiteln, so wie sie in der App angezeigt werden: mit ihrer Größe, Position und ihrem Stil (siehe [Videos mit Untertiteln ansehen](#videos-mit-untertiteln-ansehen)).
 
-Die Kopie wird im Hintergrund erstellt, und der Status zeigt den Fortschritt. Zum Abbrechen wählen Sie im selben Menü **Hinzufügen der Untertitel zum Video abbrechen**. Die Kopie ist eine MP4-Datei (H.264-Video und AAC-Audio), das Originalvideo bleibt unverändert.
+Die Kopie wird im Hintergrund erstellt, und der Status zeigt den Fortschritt. Zum Abbrechen wählen Sie im selben Menü **Hinzufügen von Untertiteln zum Video abbrechen**. Die Kopie ist eine MP4-Datei (H.264-Video und AAC-Audio), das Originalvideo bleibt unverändert.
 
 Enthält keine Schriftart Ihres Systems bestimmte Zeichen der Untertitel, werden sie als Kästchen gezeichnet, und Audiotext listet sie am Ende auf. Siehe [Fehlerbehebung](/de/help/troubleshooting/#das-video-mit-untertiteln-zeigt-kästchen).
 

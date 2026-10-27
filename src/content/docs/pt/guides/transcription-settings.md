@@ -66,7 +66,7 @@ Só aparece para o microfone. Consulte [Texto ao vivo](/pt/guides/sources/#texto
 
 Só aparecem para pastas:
 
-- **Monitorar a pasta**: consulte [Monitore uma pasta](/pt/guides/sources/#monitore-uma-pasta).
+- **Monitorar pasta**: consulte [Monitore uma pasta](/pt/guides/sources/#monitore-uma-pasta).
 - **Transcrever os arquivos que já estão na pasta** (só ao monitorar): transcreve primeiro os arquivos que a pasta já contém e que ainda não têm transcrição. Desativado por padrão.
 - **Incluir subpastas**: também transcreve os arquivos das subpastas.
 - **Ignorar arquivos que correspondam a**: nomes ou caminhos dos arquivos a ignorar, separados por vírgulas (ex.: `*.wav, drafts/*`). Os arquivos ocultos são sempre ignorados.

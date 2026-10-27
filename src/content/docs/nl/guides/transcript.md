@@ -106,7 +106,7 @@ Ondertitels en de tabel vereisen tijdstempels. De [vertalingen](/nl/guides/summa
 
 Om een video te delen waar geen ondertitelbestanden kunnen worden geladen (bijv. een sociaal netwerk), kies je **Video met ondertitels (.mp4)…** in het exportmenu van de transcriptie of van een vertaling. Audiotext maakt een kopie van de video met de ondertitels erin getekend, zoals ze in de app worden getoond: met hun grootte, positie en stijl (zie [Video's met ondertitels bekijken](#videos-met-ondertitels-bekijken)).
 
-De kopie wordt op de achtergrond gemaakt, en de status toont de voortgang. Om te annuleren kies je **Stoppen met het toevoegen van de ondertitels aan de video** in hetzelfde menu. De kopie is een MP4-bestand (H.264-video en AAC-audio), en de oorspronkelijke video verandert niet.
+De kopie wordt op de achtergrond gemaakt, en de status toont de voortgang. Om te annuleren kies je **Stoppen met ondertitels toevoegen aan video** in hetzelfde menu. De kopie is een MP4-bestand (H.264-video en AAC-audio), en de oorspronkelijke video verandert niet.
 
 Als geen enkel lettertype van je systeem bepaalde tekens van de ondertitels bevat, worden ze als vakjes getekend, en Audiotext somt ze aan het einde op. Zie [Probleemoplossing](/nl/help/troubleshooting/#de-video-met-ondertitels-toont-vakjes).
 

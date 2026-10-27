@@ -20,7 +20,7 @@ Under rubriken visar panelen vilken modell som skapade den och när. Knapparna i
 - **Sök** (`Ctrl+F`, `⌘F` på macOS): söker efter en text i sammanfattningen.
 - **Kopiera**: kopierar den.
 - **Exportera**: sparar den för sig som oformaterad text, Markdown eller Word-dokument, med ett namn som `video.summary.md` så att den inte ersätter transkriberingen. Transkriberingens [exporter](/sv/guides/transcript/#kopiera-och-exportera) till Markdown och Word innehåller den också.
-- **Generera sammanfattningen igen**: skriver den på nytt (t.ex. efter att du valt en annan modell), efter en bekräftelse, eftersom den nuvarande ersätts.
+- **Generera sammanfattning igen**: skriver den på nytt (t.ex. efter att du valt en annan modell), efter en bekräftelse, eftersom den nuvarande ersätts.
 
 Om leverantörens API-nyckel inte är angiven erbjuder läget **Sammanfattning** att ange den. Mycket långa transkriberingar (ungefär tre timmars tal eller mer) sammanfattas bara från början.
 
@@ -44,7 +44,7 @@ Klicka på **Översätt**, välj språk under **Översätt till:** och leverant�
 - Om transkriberingen saknar tidsstämplar översätts hela texten på en gång.
 - Båda texterna rullar tillsammans, så att de visar samma del av ljudet. Den runda knappen på handtaget mellan dem slår på och av det. Dra i handtaget för att ändra deras storlek, eller dubbelklicka på det för att återställa storlekarna.
 
-Med knapparna i översättningens rubrik söker och ersätter du i den, kopierar och exporterar den, väljer **Översätt igen** (med samma leverantör och modell) och **Dölj översättningen**. Med knappen **Översätt** kan du också visa den igen, **Översätt till ett annat språk…** eller **Ta bort översättningen**.
+Med knapparna i översättningens rubrik söker och ersätter du i den, kopierar och exporterar den, väljer **Översätt igen** (med samma leverantör och modell) och **Dölj översättning**. Med knappen **Översätt** kan du också visa den igen, **Översätt till ett annat språk…** eller **Ta bort översättning**.
 
 ### Flera språk
 

@@ -20,7 +20,7 @@ Bajo su título, el panel dice qué modelo lo generó y cuándo. Los botones de 
 - **Buscar** (`Ctrl+F`, `⌘F` en macOS): busca un texto en el resumen.
 - **Copiar**: lo copia.
 - **Exportar**: lo guarda por separado como texto plano, Markdown o documento de Word, con un nombre como `video.summary.md` para que no reemplace la transcripción. Las [exportaciones](/es/guides/transcript/#copia-y-exporta) a Markdown y Word de la transcripción también lo incluyen.
-- **Volver a generar el resumen**: lo vuelve a escribir (p. ej. después de elegir otro modelo), después de preguntarte, ya que se reemplaza el actual.
+- **Regenerar resumen**: lo vuelve a escribir (p. ej. después de elegir otro modelo), después de preguntarte, ya que se reemplaza el actual.
 
 Si la clave de API del proveedor no está configurada, el modo **Resumen** ofrece configurarla. Las transcripciones muy largas (unas tres horas de habla o más) solo se resumen desde su principio.
 
@@ -44,7 +44,7 @@ Haz clic en **Traducir**, elige el idioma en **Traducir al:** y el proveedor en 
 - Si la transcripción no tiene marcas de tiempo, se traduce todo su texto de una vez.
 - Los dos textos se desplazan juntos, así que muestran la misma parte del audio. El botón redondo del separador entre ellos lo activa y desactiva. Arrastra el separador para cambiar su tamaño, o haz doble clic en él para restablecerlo.
 
-Los botones de la cabecera de la traducción buscan y reemplazan en ella, la copian, la exportan, la **Vuelven a traducir** (con el mismo proveedor y el mismo modelo) y la ocultan (**Ocultar la traducción**). El botón **Traducir** también te permite volver a mostrarla, **Traducir a otro idioma…** o **Eliminar la traducción**.
+Los botones de la cabecera de la traducción buscan y reemplazan en ella, la copian, la exportan, la **Vuelven a traducir** (con el mismo proveedor y el mismo modelo) y la ocultan (**Ocultar traducción**). El botón **Traducir** también te permite volver a mostrarla, **Traducir a otro idioma…** o **Eliminar traducción**.
 
 ### Varios idiomas
 

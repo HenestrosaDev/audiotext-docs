@@ -20,7 +20,7 @@ Baixo o seu título, o panel di que modelo o xerou e cando. Os botóns da súa c
 - **Buscar** (`Ctrl+F`, `⌘F` en macOS): busca un texto no resumo.
 - **Copiar**: cópiao.
 - **Exportar**: gárdao por separado como texto simple, Markdown ou documento de Word, cun nome como `video.summary.md` para que non substitúa a transcrición. As [exportacións](/gl/guides/transcript/#copia-e-exporta) a Markdown e Word da transcrición tamén o inclúen.
-- **Xerar de novo o resumo**: vólveo escribir (p. ex. despois de escoller outro modelo), despois de preguntarche, xa que se substitúe o actual.
+- **Rexenerar resumo**: vólveo escribir (p. ex. despois de escoller outro modelo), despois de preguntarche, xa que se substitúe o actual.
 
 Se a clave de API do provedor non está configurada, o modo **Resumo** ofrece configurala. As transcricións moi longas (unhas tres horas de fala ou máis) só se resumen desde o seu comezo.
 
@@ -44,7 +44,7 @@ Fai clic en **Traducir**, escolle o idioma en **Traducir ao:** e o provedor en *
 - Se a transcrición non ten marcas de tempo, tradúcese todo o seu texto dunha vez.
 - Os dous textos desprázanse xuntos, así que mostran a mesma parte do audio. O botón redondo do separador entre eles actívao e desactívao. Arrastra o separador para cambiar o seu tamaño, ou fai dobre clic nel para restablecelo.
 
-Os botóns da cabeceira da tradución buscan e substitúen nela, cópiana, expórtana, **Tradúcena de novo** (co mesmo provedor e o mesmo modelo) e ocúltana (**Ocultar a tradución**). O botón **Traducir** tamén che permite mostrala de novo, **Traducir a outro idioma…** ou **Eliminar a tradución**.
+Os botóns da cabeceira da tradución buscan e substitúen nela, cópiana, expórtana, **Tradúcena de novo** (co mesmo provedor e o mesmo modelo) e ocúltana (**Ocultar tradución**). O botón **Traducir** tamén che permite mostrala de novo, **Traducir a outro idioma…** ou **Eliminar tradución**.
 
 ### Varios idiomas
 

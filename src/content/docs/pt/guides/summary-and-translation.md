@@ -20,7 +20,7 @@ Abaixo do título, o painel diz qual modelo o gerou e quando. Os botões do cabe
 - **Pesquisar** (`Ctrl+F`, `⌘F` no macOS): encontra um texto no resumo.
 - **Copiar**: copia o resumo.
 - **Exportar**: salva o resumo sozinho como texto simples, Markdown ou documento do Word, com um nome como `video.summary.md` para não substituir a transcrição. As [exportações](/pt/guides/transcript/#copie-e-exporte) para Markdown e Word da transcrição também o incluem.
-- **Gerar o resumo novamente**: escreve-o de novo (ex.: depois de escolher outro modelo), depois de perguntar, já que o atual é substituído.
+- **Regenerar resumo**: escreve-o de novo (ex.: depois de escolher outro modelo), depois de perguntar, já que o atual é substituído.
 
 Se a chave de API do provedor não estiver definida, o modo **Resumo** oferece defini-la. Transcrições muito longas (cerca de três horas de fala ou mais) são resumidas apenas a partir do início.
 
@@ -44,7 +44,7 @@ Clique em **Traduzir**, escolha o idioma em **Traduzir para:** e o provedor em *
 - Se a transcrição não tem carimbos de tempo, todo o texto é traduzido de uma vez.
 - Os dois textos rolam juntos, então mostram a mesma parte do áudio. O botão redondo no divisor entre eles ativa e desativa isso. Arraste o divisor para redimensioná-los, ou clique duas vezes nele para restaurar os tamanhos.
 
-Os botões do cabeçalho da tradução localizam e substituem nela, copiam, exportam, **Traduzir novamente** (com o mesmo provedor e modelo) e **Ocultar a tradução**. O botão **Traduzir** também permite mostrá-la de novo, **Traduzir para outro idioma…** ou **Excluir a tradução**.
+Os botões do cabeçalho da tradução localizam e substituem nela, copiam, exportam, **Traduzir novamente** (com o mesmo provedor e modelo) e **Ocultar tradução**. O botão **Traduzir** também permite mostrá-la de novo, **Traduzir para outro idioma…** ou **Excluir tradução**.
 
 ### Vários idiomas
 
