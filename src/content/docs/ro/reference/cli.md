@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Transcrie fișierele adăugate într-un dosar până la oprirea cu Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# La fel, dar transcriind mai întâi fișierele pe care le conține deja
+audiotext watch inbox/ --existing
 ```
 
 ## Opțiuni
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Limba audio ca cod ISO 639-1 (de ex. `ro`) sau `auto` pentru detectare (nu este acceptat de Google) |
 | `-t`, `--output-types` | Tipuri de fișiere de ieșire separate prin virgulă, dintre `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` și `ass` (de ex. `txt,srt,md`) |
 | `-o`, `--output-dir` | Dosarul în care se salvează transcrierile (implicit: lângă fiecare fișier transcris) |
-| `--overwrite` | Suprascrierea transcrierilor existente |
+| `--overwrite` | Transcrie din nou fișierele care au deja o transcriere, înlocuind-o |
+| `--existing` | (doar `watch`) Transcrie mai întâi fișierele pe care dosarul le conține deja și care nu au încă o transcriere |
 | `-p`, `--prompt` | Despre ce este înregistrarea, de ex. subiectul sau cadrul (nu este acceptat de Google) |
 | `-k`, `--keywords` | Nume, termeni sau acronime rostite, separate prin virgulă, ca să fie scrise corect (nu este acceptat de Google) |
 | `--translate` | Traducerea sunetului în engleză în timpul transcrierii (nu este acceptat de Google). Pentru alte limbi consultați `--translate-to` |

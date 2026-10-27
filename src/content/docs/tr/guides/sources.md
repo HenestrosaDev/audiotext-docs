@@ -52,7 +52,7 @@ Bilgisayarınızın çaldığı şeyi (bir görüntülü görüşme, bir web sem
 
 ## Klasör
 
-Bir klasördeki **ve alt klasörlerindeki** tüm ses ve video dosyalarını yazıya döker. **Klasör seç…**'e tıklayın veya klasörü pencereye bırakın. Audiotext kaç dosya bulduğunu söyler.
+Bir klasördeki tüm ses ve video dosyalarını, **Klasör** kartında **Alt klasörleri dahil et** açıksa alt klasörlerindekileri de yazıya döker. **Klasör seç…** düğmesine tıklayın veya klasörü pencereye bırakın. Audiotext kaç dosya bulduğunu söyler. Bazı dosyaları dışarıda bırakmak için adlarını veya yollarını virgülle ayırarak **Şununla eşleşen dosyaları atla** alanına yazın (ör. `*.wav, drafts/*`). Gizli dosyalar her zaman atlanır.
 
 Her dosyanın transkripsiyonu dosyanın yanına (veya **Çıktı** kartında seçtiğiniz başka bir klasöre), aynı adla ve seçtiğiniz her **dosya türünün** uzantısıyla kaydedilir. Örneğin `.txt` ve `.vtt` ile:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Zaten transkripsiyonu olan dosyalar, **Mevcut dosyaların üzerine yaz**'ı açmadıkça **atlanır**. Yani klasöre bir dosya ekleyip klasörü yeniden yazıya dökerseniz yalnızca yeni dosya yazıya dökülür.
+İki dosyanın adı aynı ve uzantısı farklıysa (ör. `talk.mp3` ve `talk.mp4`), birbirlerinin yerine geçmemeleri için transkripsiyonlarının adında uzantı korunur (`talk.mp3.txt` ve `talk.mp4.txt`).
 
-Bir dosya yazıya dökülemezse diğerleri yine de yazıya dökülür ve klasör görünümü hangilerinin başarısız olduğunu ve nedenini gösterir. **Yeniden yazıya dök** klasörü tekrarlar, klasör düğmesi de kaydedilen dosyaların klasörünü açar.
+Zaten transkripsiyonu olan dosyalar **atlanır**: bir dosya yalnızca seçtiğiniz tüm dosya türlerine sahipse atlanır, bu yüzden bir dosya türü eklemek onu yeniden yazıya döker. Bir dosya yazıya dökülemezse diğerleri yine de yazıya dökülür.
+
+### Bir klasörün dosyaları
+
+Geçmişteki bir klasörün sayfası, dosyalarını her birinin durumu, süresi, boyutu ve metninin önizlemesiyle listeler. Onları arayabilir, duruma göre filtreleyebilir (**Tümü**, **Tamamlanan**, **Başarısız** veya **Bekleyen**) ve ada, duruma, süreye veya boyuta göre sıralayabilirsiniz. Taşınan veya silinen dosyalar **Dosya bulunamadı** olarak işaretlenir.
+
+- Bir dosyanın transkripsiyonunu açmak için ona tıklayın; metnini kopyalamak, doğrudan dışa aktarmasında, özetinde veya çevirisinde açmak, dosya yöneticisinde göstermek ya da **Bu dosyayı yeniden yazıya dök** seçeneğini seçmek için `⋯` düğmesine tıklayın (veya dosyaya sağ tıklayın).
+- `Ctrl`/`⌘` veya `Shift` ile birkaç dosya, `Ctrl+A` / `⌘A` ile gösterilen tüm dosyaları seçin ve **Yeniden yazıya dök**, **Dışa aktar…** (tek bir TXT, Markdown veya Word dosyasına birlikte dışa aktarmak için) ya da **Geçmişten kaldır…** seçeneğini seçin. `Enter` seçili dosyayı açar, `Esc` seçimi temizler.
+- **Başarısız olanları yeniden dene** başarısız olan dosyaları yeniden yazıya döker. **Klasörü yeniden tara** yalnızca transkripsiyonu olmayan dosyaları (ör. yenileri) yazıya döker ve zaten transkripsiyonu olduğu için kaç dosyanın atlandığını söyler.
+- Klasörün `⋯` menüsünde **Tümünü yeniden yazıya dök…** (tüm dosyalarını yeniden yazıya döker ve transkripsiyonlarını değiştirir), **Tümünü dışa aktar…** (tek bir dosyaya), eksik dosyaları listeden kaldırma seçeneği ve kaynak klasörü veya kaydedilen dosyaların klasörünü açma seçenekleri bulunur.
+- Klasörün ayarlarını değiştirdiğinizde, başka ayarlarla (motor, model, dil…) yazıya dökülen dosyalar **Bunları yeniden yazıya dök** düğmesiyle birlikte gösterilir.
+
+Başlık, dosyaların nereye kaydedildiğini gösterir ve kaynak klasöre bağlantı verir. **Ayarları düzenle** klasörün ayarlarını değiştirir, **Kaydet ve yeniden tara** ise transkripsiyonu eksik olan dosyaları bu ayarlarla yazıya döker.
 
 ### Bir klasörü izleyin
 
 **Klasör** kartında **Klasörü izle**'yi açarak klasöre (veya alt klasörlerine) eklenen dosyaları **İzlemeyi durdur**'a tıklayana kadar yazıya dökmeye devam edin. Bir ses kayıt cihazının veya toplantı aracının bir klasöre kopyalanan kayıtları için kullanışlıdır.
 
-- Klasörde zaten bulunan dosyalar atlanır. Onları yazıya dökmek için klasörü izlemeden yazıya dökün.
+- Klasörde zaten bulunan dosyalar atlanır; **Klasörde zaten bulunan dosyaları yazıya dök** seçeneğini açarsanız önce transkripsiyonu olmayanlar yazıya dökülür.
 - Bir dosya tamamen kopyalandığında (boyutu değişmeyi bıraktığında) yazıya dökülür, böylece büyük dosyalar yarım yazıya dökülmez.
-- Hatalar izlemeyi durdurmaz.
+- Audiotext kapatıldığında izlenen klasörler, uygulama açıldığında zaten gördükleri dosyalardan devam ederek yeniden izlenir. Durdurulan klasörler **İzlemeye devam et** ile yeniden izlenebilir.
+- Klasör kullanılamıyorsa (ör. bağlı olmayan bir sürücüdeyse) Audiotext başarısız olmak yerine onu bekler.
+- Başka bir şeyi yazıya dökmek veya kayıt yapmak için klasör duraklatılır (o zamana kadar yeni transkripsiyon **Başlatılıyor…** gösterir) ve ardından yeniden izlenir.
+- Hatalar izlemeyi durdurmaz ve birlikte yazıya dökülen dosyalar tek bir bildirimle bildirilir.
 
 ## Kuyruk
 

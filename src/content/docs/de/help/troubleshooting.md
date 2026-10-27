@@ -72,7 +72,7 @@ Wird stattdessen **Das YouTube-Video hat keine Tonspur.** angezeigt, hat das Vid
 
 ## Ein Ordner transkribiert keine Datei
 
-Dateien, die bereits eine Transkription haben, werden übersprungen. Aktivieren Sie **Vorhandene Dateien überschreiben**, um sie erneut zu transkribieren. Der Ordner muss außerdem [unterstützte Dateien](/de/reference/formats-and-languages/) enthalten.
+Dateien, die bereits eine Transkription haben, werden übersprungen, ebenso versteckte Dateien und solche, die auf **Dateien überspringen, die passen auf** passen. Um sie erneut zu transkribieren, nutzen Sie **Alle erneut transkribieren…** im Menü `⋯` des Ordners, oder wählen Sie sie in seiner [Dateiliste](/de/guides/sources/#die-dateien-eines-ordners) aus. Die Dateien der Unterordner werden nur mit **Unterordner einbeziehen** transkribiert, und der Ordner muss [unterstützte Dateien](/de/reference/formats-and-languages/) enthalten.
 
 ## Die Google-API verlangt die Sprache
 

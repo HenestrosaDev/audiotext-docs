@@ -72,7 +72,7 @@ Si en canvi es mostra **El vídeo de YouTube no té pista d'àudio.**, el vídeo
 
 ## Una carpeta no transcriu cap fitxer
 
-Els fitxers que ja tenen una transcripció s'ometen. Activa **Sobreescriu els fitxers existents** per tornar-los a transcriure. La carpeta també ha de contenir [fitxers compatibles](/ca/reference/formats-and-languages/).
+Els fitxers que ja tenen una transcripció s'ometen, i també els fitxers ocults i els que coincideixen amb **Omet els fitxers que coincideixin amb**. Per tornar-los a transcriure, fes servir **Torna a transcriure-ho tot…** al menú `⋯` de la carpeta, o selecciona'ls a la seva [llista de fitxers](/ca/guides/sources/#els-fitxers-duna-carpeta). Els fitxers de les subcarpetes només es transcriuen amb **Inclou les subcarpetes**, i la carpeta ha de contenir [fitxers compatibles](/ca/reference/formats-and-languages/).
 
 ## L'API de Google demana l'idioma
 

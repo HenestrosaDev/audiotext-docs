@@ -72,7 +72,7 @@ If **The YouTube video doesn't have an audio track.** is shown instead, the vide
 
 ## A folder doesn't transcribe any file
 
-The files that already have a transcription are skipped. Turn on **Overwrite existing files** to transcribe them again. The folder must also contain [supported files](/en/reference/formats-and-languages/).
+The files that already have a transcription are skipped, and so are hidden files and the ones that match **Skip files matching**. To transcribe them again, use **Re-transcribe all…** in the `⋯` menu of the folder, or select them in its [list of files](/en/guides/sources/#the-files-of-a-folder). The files of the subfolders are only transcribed with **Include subfolders**, and the folder must contain [supported files](/en/reference/formats-and-languages/).
 
 ## The Google API asks for the language
 

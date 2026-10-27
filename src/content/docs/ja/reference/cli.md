@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Ctrl+C で止めるまで、フォルダーに追加されたファイルを文字起こしする
 audiotext watch inbox/ --output-types srt
+
+# 同じ処理を、フォルダーにすでにあるファイルから文字起こしして実行
+audiotext watch inbox/ --existing
 ```
 
 ## オプション
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | 音声の言語（ISO 639-1 コード、例: `ja`）、または検出する場合は `auto`（Google は非対応） |
 | `-t`, `--output-types` | 出力ファイルの種類のカンマ区切りリスト。`aud`、`json`、`srt`、`txt`、`tsv`、`vtt`、`md`、`docx`、`ass` から選びます（例: `txt,srt,md`） |
 | `-o`, `--output-dir` | 文字起こしの保存先フォルダー（既定: 文字起こしした各ファイルの隣） |
-| `--overwrite` | 既存の文字起こしを上書きする |
+| `--overwrite` | すでに文字起こしがあるファイルをもう一度文字起こしして置き換える |
+| `--existing` | （`watch` のみ）フォルダーにすでにあり、まだ文字起こしのないファイルを最初に文字起こしする |
 | `-p`, `--prompt` | 音声の内容（テーマや場面など）（Google は非対応） |
 | `-k`, `--keywords` | 正しく表記させたい名前・用語・略語のカンマ区切りリスト（Google は非対応） |
 | `--translate` | 文字起こししながら音声を英語に翻訳する（Google は非対応）。ほかの言語は `--translate-to` を参照 |

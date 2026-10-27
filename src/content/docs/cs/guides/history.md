@@ -32,7 +32,9 @@ Skupiny sdružují související přepisy, například z jednoho projektu nebo k
 
 ## Smazání přepisu
 
-Smazáním přepisu se z historie odstraní přepis, jeho shrnutí, otázky i překlady. Smažou se také přepisy souborů složky. Vaše zvukové, video a uložené soubory se **nesmažou**.
+Smazáním přepisu se z historie odstraní on, jeho shrnutí, jeho otázky a jeho překlady. Vaše zvukové, video a uložené soubory se **nesmažou**.
+
+Odebráním složky se z historie odeberou i její soubory a zobrazí se dotaz, zda **smazat i soubory pro ně uložené** (ve výchozím stavu vypnuto). Vaše zvukové a video soubory se nesmažou nikdy.
 
 ## Neúspěšné a přerušené přepisy
 

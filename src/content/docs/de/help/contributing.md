@@ -58,7 +58,7 @@ uv run pytest               # führt die Tests aus
 
 ## Oberfläche übersetzen
 
-Die Oberfläche wird mit [gettext](https://www.gnu.org/software/gettext/) übersetzt. Die Texte stehen in `res/locales/audiotext.pot`, die Übersetzungen jeder Sprache in `res/locales/<Sprache>/LC_MESSAGES/audiotext.po`.
+Die Oberfläche wird mit [gettext](https://www.gnu.org/software/gettext/) übersetzt. Die Texte stehen in `res/locales/audiotext.pot`, die Übersetzungen jeder Sprache in `res/locales/<Sprache>/LC_MESSAGES/audiotext.po`. Texte, die von einer Zahl abhängen (z. B. `{count} file` / `{count} files`), haben eine Übersetzung für jede Pluralform der Sprache (`msgstr[0]`, `msgstr[1]`…), wie im Header `Plural-Forms` ihres Katalogs festgelegt. Derselbe Text kann zweimal vorkommen, einmal mit einem Kontext (`msgctxt`), damit er an jeder Stelle anders übersetzt wird: z. B. ist `Done` der Status einer Transkription und mit dem Kontext `files` ein Filter der Dateien eines Ordners.
 
 Wenn sich die Texte im Code ändern oder nachdem Sie eine `.po`-Datei bearbeitet haben (z. B. mit [Poedit](https://poedit.net/)), führen Sie dieses Skript aus. Es extrahiert die Texte, aktualisiert die Kataloge, kompiliert sie und listet die Texte auf, die noch übersetzt oder geprüft werden müssen (als `fuzzy` markiert) – die App zeigt sie bis dahin auf Englisch. Die Tests schlagen fehl, solange ein Katalog nicht aktuell ist.
 

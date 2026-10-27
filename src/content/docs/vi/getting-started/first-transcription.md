@@ -57,6 +57,8 @@ Xem [Bản ghi lời](/vi/guides/transcript/) để biết mọi điều bạn c
 | `Ctrl+F` / `⌘F` | Tìm và thay thế trong văn bản bạn đang làm việc (hoặc tìm trong bản tóm tắt) |
 | `Ctrl+J` / `⌘J` | Chuyển đến từ có độ tin cậy thấp tiếp theo |
 | `Shift+Ctrl+J` / `⇧⌘J` | Chuyển đến từ có độ tin cậy thấp trước đó |
-| `Esc` | Hủy bản chép lời đang chạy |
+| `Esc` | Hủy bản chép lời đang thực hiện (hoặc bỏ chọn các tệp của một thư mục) |
+| `Ctrl+A` / `⌘A` | Chọn tất cả các tệp đang hiển thị của một thư mục |
+| `Enter` | Mở tệp đã chọn của một thư mục |
 | `Phím cách` | Phát hoặc tạm dừng âm thanh |
 | `←` / `→` | Lùi hoặc tiến 5 giây |

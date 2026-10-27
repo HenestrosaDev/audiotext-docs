@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # 转写添加到文件夹中的文件，直到按 Ctrl+C 停止
 audiotext watch inbox/ --output-types srt
+
+# 同上，但先转写文件夹中已有的文件
+audiotext watch inbox/ --existing
 ```
 
 ## 选项
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | 音频语言的 ISO 639-1 代码（例如 `zh`），或使用 `auto` 自动检测（Google 不支持） |
 | `-t`, `--output-types` | 用逗号分隔的输出文件类型，可选 `aud`、`json`、`srt`、`txt`、`tsv`、`vtt`、`md`、`docx` 和 `ass`（例如 `txt,srt,md`） |
 | `-o`, `--output-dir` | 保存转写的文件夹（默认：每个被转写文件的旁边） |
-| `--overwrite` | 覆盖现有转写 |
+| `--overwrite` | 重新转写已有转写的文件并替换其转写 |
+| `--existing` | （仅 `watch`）先转写文件夹中已有且还没有转写的文件 |
 | `-p`, `--prompt` | 音频的内容，例如主题或场景（Google 不支持） |
 | `-k`, `--keywords` | 音频中出现的人名、术语或缩写，用逗号分隔，使其拼写正确（Google 不支持） |
 | `--translate` | 在转写时将音频翻译成英语（Google 不支持）。其他语言请参阅 `--translate-to` |

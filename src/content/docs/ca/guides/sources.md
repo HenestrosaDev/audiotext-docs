@@ -52,7 +52,7 @@ Per transcriure el que reprodueix l'ordinador (una videotrucada, un webinar, un 
 
 ## Carpeta
 
-Transcriu tots els fitxers d'àudio i vídeo d'una carpeta **i de les seves subcarpetes**. Fes clic a **Tria una carpeta…** o deixa anar la carpeta a la finestra. Audiotext t'indica quants fitxers ha trobat.
+Transcriu tots els fitxers d'àudio i vídeo d'una carpeta i, si **Inclou les subcarpetes** està activat a la targeta **Carpeta**, de les seves subcarpetes. Fes clic a **Tria una carpeta…** o deixa anar la carpeta a la finestra. Audiotext t'indica quants fitxers ha trobat. Per deixar fora alguns fitxers, escriu-ne els noms o els camins, separats per comes, a **Omet els fitxers que coincideixin amb** (p. ex. `*.wav, drafts/*`). Els fitxers ocults sempre s'ometen.
 
 La transcripció de cada fitxer es desa al costat seu (o en una altra carpeta que triïs a la targeta **Sortida**), amb el mateix nom i l'extensió de cada **tipus de fitxer** que hagis seleccionat. Per exemple, amb `.txt` i `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Els fitxers que ja tenen una transcripció **s'ometen**, tret que activis **Sobreescriu els fitxers existents**. Així, si afegeixes un fitxer a la carpeta i la tornes a transcriure, només es transcriu el fitxer nou.
+Si dos fitxers tenen el mateix nom i una extensió diferent (p. ex. `talk.mp3` i `talk.mp4`), les seves transcripcions mantenen l'extensió al nom (`talk.mp3.txt` i `talk.mp4.txt`), perquè no se substitueixin entre elles.
 
-Si un fitxer no es pot transcriure, la resta es continuen transcrivint, i la vista de la carpeta mostra quins han fallat i per què. **Torna a transcriure** repeteix la carpeta, i el botó de carpeta obre la carpeta dels fitxers desats.
+Els fitxers que ja tenen una transcripció **s'ometen**: un fitxer només s'omet si té tots els tipus de fitxer que has seleccionat, així que afegir-hi un tipus de fitxer el torna a transcriure. Si un fitxer no es pot transcriure, la resta es continuen transcrivint.
+
+### Els fitxers d'una carpeta
+
+La pàgina d'una carpeta a l'historial n'enumera els fitxers, amb l'estat, la durada i la mida de cadascun i una previsualització del seu text. Cerca'ls, filtra'ls per estat (**Tots**, **Completats**, **Amb errors** o **Pendents**) i ordena'ls per nom, estat, durada o mida. Els fitxers que s'han mogut o eliminat es marquen com a **No s'ha trobat el fitxer**.
+
+- Fes clic a un fitxer per obrir-ne la transcripció, o fes clic al seu botó `⋯` (o fes-hi clic amb el botó dret) per copiar-ne el text, obrir-lo directament a la seva exportació, resum o traducció, mostrar-lo al gestor de fitxers o triar **Torna a transcriure aquest fitxer**.
+- Selecciona diversos fitxers amb `Ctrl`/`⌘` o `Maj`, o tots els fitxers que es mostren amb `Ctrl+A` / `⌘A`, i tria **Torna a transcriure**, **Exporta…** (per exportar-los junts en un sol fitxer TXT, Markdown o Word) o **Treu de l'historial…**. `Enter` obre el fitxer seleccionat, i `Esc` esborra la selecció.
+- **Reintenta els fallits** torna a transcriure els fitxers que han fallat. **Torna a analitzar la carpeta** transcriu només els fitxers sense transcripció, com els nous, i indica quants s'han omès perquè ja en tenien una.
+- El menú `⋯` de la carpeta té **Torna a transcriure-ho tot…** (torna a transcriure tots els seus fitxers, substituint-ne les transcripcions), **Exporta-ho tot…** (en un sol fitxer), una opció per treure de la llista els fitxers que falten, i les opcions per obrir la carpeta d'origen o la carpeta dels fitxers desats.
+- Quan canvies els ajustos de la carpeta, s'indiquen els fitxers transcrits amb altres ajustos (motor, model, idioma…), amb el botó **Torna a transcriure'ls**.
+
+La capçalera mostra on es desen els fitxers i enllaça amb la carpeta d'origen. **Edita la configuració** canvia els ajustos de la carpeta, i **Desa i torna a analitzar** transcriu amb ells els fitxers als quals els falta una transcripció.
 
 ### Vigila una carpeta
 
 Activa **Vigila la carpeta** a la targeta **Carpeta** per continuar transcrivint els fitxers que s'afegeixin a la carpeta (o a les seves subcarpetes) fins que facis clic a **Deixa de vigilar**. És útil per als enregistraments d'una gravadora de veu o d'una eina de reunions que es copien a una carpeta.
 
-- Els fitxers que ja conté la carpeta s'ometen. Per transcriure'ls, transcriu la carpeta sense vigilar-la.
+- Els fitxers que ja conté la carpeta s'ometen, llevat que activis **Transcriu els fitxers que ja hi ha a la carpeta**: aleshores primer es transcriuen els que no tenen transcripció.
 - Un fitxer es transcriu quan s'ha copiat del tot (quan la seva mida deixa de canviar), així que els fitxers grans no es transcriuen a mitges.
-- Els errors no aturen la vigilància.
+- Les carpetes que es vigilaven quan es va tancar Audiotext es tornen a vigilar quan s'obre, continuant des dels fitxers que ja havien vist. Les carpetes aturades es poden tornar a vigilar amb **Reprèn la vigilància**.
+- Si la carpeta no està disponible (p. ex. és en una unitat que no està connectada), Audiotext l'espera en lloc de fallar.
+- Per transcriure una altra cosa o enregistrar, la carpeta es posa en pausa (la nova transcripció diu **S'està iniciant…** fins que ho està) i després es torna a vigilar.
+- Els errors no aturen la vigilància, i els fitxers transcrits alhora es notifiquen en una sola notificació.
 
 ## La cua
 

@@ -57,6 +57,8 @@ Zobacz [Transkrypcja](/pl/guides/transcript/), aby poznać wszystko, co możesz 
 | `Ctrl+F` / `⌘F` | Znajdowanie i zamiana w tekście, nad którym pracujesz (lub wyszukiwanie w podsumowaniu) |
 | `Ctrl+J` / `⌘J` | Przejście do następnego słowa o niskiej pewności |
 | `Shift+Ctrl+J` / `⇧⌘J` | Przejście do poprzedniego słowa o niskiej pewności |
-| `Esc` | Anulowanie bieżącej transkrypcji |
+| `Esc` | Anulować trwającą transkrypcję (lub wyczyścić zaznaczenie plików folderu) |
+| `Ctrl+A` / `⌘A` | Zaznaczyć wszystkie wyświetlane pliki folderu |
+| `Enter` | Otworzyć zaznaczony plik folderu |
 | `Spacja` | Odtwarzanie lub wstrzymanie nagrania |
 | `←` / `→` | Cofnięcie lub przewinięcie o 5 sekund |

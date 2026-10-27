@@ -58,7 +58,7 @@ uv run pytest               # 运行测试
 
 ## 翻译界面
 
-界面使用 [gettext](https://www.gnu.org/software/gettext/) 翻译。文本位于 `res/locales/audiotext.pot`，各语言的翻译位于 `res/locales/<语言>/LC_MESSAGES/audiotext.po`。
+界面使用 [gettext](https://www.gnu.org/software/gettext/) 翻译。文本位于 `res/locales/audiotext.pot`，各语言的翻译位于 `res/locales/<语言>/LC_MESSAGES/audiotext.po`。 依赖数字的文本（例如 `{count} file` / `{count} files`）会按照其目录的 `Plural-Forms` 标头，为该语言的每种复数形式提供一个翻译（`msgstr[0]`、`msgstr[1]`…）。 同一文本可能出现两次，其中一次带有上下文（`msgctxt`），以便在不同位置使用不同的翻译：例如 `Done` 是转写的状态，而带 `files` 上下文的是文件夹中文件的筛选条件。
 
 当代码中的文本发生变化，或编辑 `.po` 文件（例如使用 [Poedit](https://poedit.net/)）之后，请运行此脚本。它会提取文本、更新并编译各语言目录，并列出仍需翻译或审校的文本（标记为 `fuzzy`），在此之前应用会以英语显示这些文本。只要有目录未更新，测试就会失败。
 

@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Transcriu els fitxers que s'afegeixen a una carpeta fins que s'atura amb Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# El mateix, transcrivint primer els fitxers que ja conté
+audiotext watch inbox/ --existing
 ```
 
 ## Opcions
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Idioma de l'àudio com a codi ISO 639-1 (p. ex. `ca`), o `auto` per detectar-lo (no compatible amb Google) |
 | `-t`, `--output-types` | Tipus de fitxer de sortida separats per comes, d'entre `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` i `ass` (p. ex. `txt,srt,md`) |
 | `-o`, `--output-dir` | Carpeta on es desen les transcripcions (per defecte: al costat de cada fitxer transcrit) |
-| `--overwrite` | Sobreescriure les transcripcions existents |
+| `--overwrite` | Tornar a transcriure els fitxers que ja tenen una transcripció, substituint-la |
+| `--existing` | (només `watch`) Transcriure primer els fitxers que ja conté la carpeta i que encara no tenen transcripció |
 | `-p`, `--prompt` | De què tracta l'àudio, com ara el tema o el context (no compatible amb Google) |
 | `-k`, `--keywords` | Noms, termes o sigles que es diuen a l'àudio, separats per comes, perquè s'escriguin bé (no compatible amb Google) |
 | `--translate` | Traduir l'àudio a l'anglès mentre es transcriu (no compatible amb Google). Consulta `--translate-to` per a altres idiomes |

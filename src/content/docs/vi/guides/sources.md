@@ -52,7 +52,7 @@ Hệ thống phải nhận diện được thiết bị đầu vào và cho phé
 
 ## Thư mục
 
-Chép lời tất cả tệp âm thanh và video trong một thư mục **và các thư mục con**. Nhấp **Chọn thư mục…** hoặc thả thư mục vào cửa sổ. Audiotext cho biết đã tìm thấy bao nhiêu tệp.
+Chép lời tất cả các tệp âm thanh và video trong một thư mục, và nếu **Bao gồm thư mục con** được bật trong thẻ **Thư mục**, cả các thư mục con của nó. Nhấp vào **Chọn thư mục…** hoặc thả thư mục vào cửa sổ. Audiotext cho bạn biết đã tìm thấy bao nhiêu tệp. Để bỏ qua một số tệp, hãy nhập tên hoặc đường dẫn của chúng, phân tách bằng dấu phẩy, vào **Bỏ qua các tệp khớp với** (ví dụ `*.wav, drafts/*`). Các tệp ẩn luôn bị bỏ qua.
 
 Bản chép lời của mỗi tệp được lưu cạnh tệp đó (hoặc trong thư mục khác bạn chọn ở thẻ **Đầu ra**), với cùng tên và phần mở rộng của mỗi **loại tệp** bạn đã chọn. Ví dụ, với `.txt` và `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Các tệp đã có bản chép lời sẽ **bị bỏ qua**, trừ khi bạn bật **Ghi đè tệp hiện có**. Vì vậy, nếu bạn thêm một tệp vào thư mục rồi chép lời lại, chỉ tệp mới được chép lời.
+Nếu hai tệp có cùng tên và khác phần mở rộng (ví dụ `talk.mp3` và `talk.mp4`), bản chép lời của chúng giữ phần mở rộng trong tên (`talk.mp3.txt` và `talk.mp4.txt`), để không thay thế lẫn nhau.
 
-Nếu một tệp không thể chép lời, các tệp còn lại vẫn được chép lời, và chế độ xem thư mục cho biết tệp nào thất bại và lý do. **Chép lời lại** lặp lại thư mục, còn nút thư mục mở thư mục chứa các tệp đã lưu.
+Các tệp đã có bản chép lời sẽ **bị bỏ qua**: một tệp chỉ bị bỏ qua nếu có đủ tất cả các loại tệp bạn đã chọn, nên việc thêm một loại tệp sẽ chép lời lại tệp đó. Nếu một tệp không thể chép lời, các tệp còn lại vẫn được chép lời.
+
+### Các tệp của một thư mục
+
+Trang của một thư mục trong lịch sử liệt kê các tệp của nó, kèm trạng thái, thời lượng, kích thước của từng tệp và bản xem trước văn bản. Bạn có thể tìm kiếm, lọc theo trạng thái (**Tất cả**, **Hoàn tất**, **Thất bại** hoặc **Đang chờ**) và sắp xếp theo tên, trạng thái, thời lượng hoặc kích thước. Các tệp đã bị di chuyển hoặc xóa được đánh dấu là **Không tìm thấy tệp**.
+
+- Nhấp vào một tệp để mở bản chép lời của nó, hoặc nhấp vào nút `⋯` của tệp (hoặc nhấp chuột phải vào tệp) để sao chép văn bản, mở thẳng phần xuất, tóm tắt hoặc bản dịch của tệp, hiển thị tệp trong trình quản lý tệp hoặc chọn **Chép lời lại tệp này**.
+- Chọn nhiều tệp bằng `Ctrl`/`⌘` hoặc `Shift`, hoặc tất cả các tệp đang hiển thị bằng `Ctrl+A` / `⌘A`, rồi chọn **Chép lời lại**, **Xuất…** (để xuất chúng cùng nhau vào một tệp TXT, Markdown hoặc Word duy nhất) hoặc **Gỡ khỏi lịch sử…**. `Enter` mở tệp đã chọn, và `Esc` bỏ chọn.
+- **Thử lại các tệp lỗi** chép lời lại các tệp bị lỗi. **Quét lại thư mục** chỉ chép lời các tệp chưa có bản chép lời, như các tệp mới, và cho biết bao nhiêu tệp đã bị bỏ qua vì đã có bản chép lời.
+- Menu `⋯` của thư mục có **Chép lời lại tất cả…** (chép lời lại tất cả các tệp, thay thế bản chép lời của chúng), **Xuất tất cả…** (vào một tệp duy nhất), tùy chọn xóa các tệp bị thiếu khỏi danh sách, và các tùy chọn mở thư mục nguồn hoặc thư mục chứa các tệp đã lưu.
+- Khi bạn thay đổi cài đặt của thư mục, các tệp được chép lời bằng cài đặt khác (công cụ, mô hình, ngôn ngữ…) sẽ được liệt kê, kèm nút **Chép lời lại**.
+
+Phần đầu trang cho biết nơi lưu các tệp và liên kết đến thư mục nguồn. **Sửa cài đặt** thay đổi cài đặt của thư mục, và **Lưu và quét lại** dùng các cài đặt đó để chép lời những tệp chưa có bản chép lời.
 
 ### Theo dõi một thư mục
 
 Bật **Theo dõi thư mục** trong thẻ **Thư mục** để tiếp tục chép lời các tệp được thêm vào thư mục (hoặc thư mục con) cho đến khi bạn nhấp **Dừng theo dõi**. Tính năng này hữu ích cho các bản ghi từ máy ghi âm hoặc công cụ họp được sao chép vào một thư mục.
 
-- Các tệp đã có sẵn trong thư mục sẽ bị bỏ qua. Để chép lời chúng, hãy chép lời thư mục mà không theo dõi.
+- Các tệp đã có sẵn trong thư mục sẽ bị bỏ qua, trừ khi bạn bật **Chép lời các tệp đã có trong thư mục**: khi đó các tệp chưa có bản chép lời sẽ được chép lời trước.
 - Một tệp được chép lời khi đã sao chép xong hoàn toàn (khi kích thước ngừng thay đổi), nên tệp lớn không bị chép lời dở dang.
-- Lỗi không làm dừng việc theo dõi.
+- Các thư mục đang được theo dõi khi đóng Audiotext sẽ được theo dõi lại khi mở, tiếp tục từ các tệp chúng đã thấy. Các thư mục đã dừng có thể được theo dõi lại bằng **Tiếp tục theo dõi**.
+- Nếu thư mục không khả dụng (ví dụ nằm trên một ổ đĩa chưa được kết nối), Audiotext sẽ chờ thay vì báo lỗi.
+- Để chép lời nội dung khác hoặc ghi âm, thư mục sẽ được tạm dừng (bản chép lời mới hiển thị **Đang bắt đầu…** cho đến khi tạm dừng xong), rồi được theo dõi lại sau đó.
+- Lỗi không làm dừng việc theo dõi, và các tệp được chép lời cùng lúc sẽ được thông báo trong một thông báo duy nhất.
 
 ## Hàng đợi
 

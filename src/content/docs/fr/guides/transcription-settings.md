@@ -67,8 +67,12 @@ Affiché uniquement pour le microphone. Consultez [Texte en direct](/fr/guides/s
 Affichés uniquement pour les dossiers :
 
 - **Surveiller le dossier** : consultez [Surveillez un dossier](/fr/guides/sources/#surveillez-un-dossier).
+- **Transcrire les fichiers déjà présents dans le dossier** (uniquement pendant la surveillance) : transcrit d’abord les fichiers que le dossier contient déjà et qui n’ont pas encore de transcription. Désactivé par défaut.
+- **Inclure les sous-dossiers** : transcrit aussi les fichiers des sous-dossiers.
+- **Ignorer les fichiers correspondant à** : noms ou chemins des fichiers à ignorer, séparés par des virgules (par ex. `*.wav, drafts/*`). Les fichiers cachés sont toujours ignorés.
 - **Types de fichiers** : avec WhisperX, un ou plusieurs parmi `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` et `.aud`. Avec l’API Whisper, le format des fichiers (`text`, `json`, `verbose_json`, `srt` ou `vtt`) ; les sous-titres nécessitent un modèle avec horodatage. L’API Google renvoie du texte brut (`.txt`).
 - **Emplacement** : les fichiers sont enregistrés à côté de chaque fichier source. Cliquez sur **Modifier…** pour les enregistrer dans un autre dossier (ses sous-dossiers sont recréés), ou sur **À côté de la source** pour revenir.
-- **Écraser les fichiers existants** : transcrit à nouveau les fichiers qui ont déjà une transcription, en la remplaçant.
+
+Les fichiers qui ont déjà une transcription sont ignorés. Pour les transcrire à nouveau, utilisez les options des [fichiers du dossier](/fr/guides/sources/#les-fichiers-dun-dossier).
 
 Les options des sous-titres (largeur de ligne, nombre de lignes, mots surlignés) se trouvent dans les [Préférences](/fr/reference/preferences/#sous-titres).

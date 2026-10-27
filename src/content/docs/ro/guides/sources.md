@@ -52,7 +52,7 @@ Pentru a transcrie ce redă computerul (un apel video, un webinar, un videoclip 
 
 ## Dosar
 
-Transcrie toate fișierele audio și video dintr-un dosar **și din subdosarele lui**. Faceți clic pe **Alege un dosar…** sau trageți dosarul în fereastră. Audiotext arată câte fișiere a găsit.
+Transcrie toate fișierele audio și video dintr-un dosar și, dacă **Include subdosarele** este activat pe cardul **Dosar**, din subdosarele lui. Faceți clic pe **Alege un dosar…** sau plasați dosarul în fereastră. Audiotext vă spune câte fișiere a găsit. Pentru a omite unele fișiere, scrieți numele sau căile lor, separate prin virgule, în **Omite fișierele care corespund cu** (de ex. `*.wav, drafts/*`). Fișierele ascunse sunt omise întotdeauna.
 
 Transcrierea fiecărui fișier este salvată lângă acesta (sau în alt dosar ales pe cardul **Ieșire**), cu același nume și extensia fiecărui **tip de fișier** selectat. De exemplu, cu `.txt` și `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Fișierele care au deja o transcriere sunt **omise**, cu excepția cazului în care activați **Suprascrie fișierele existente**. Astfel, dacă adăugați un fișier în dosar și îl transcrieți din nou, se transcrie doar fișierul nou.
+Dacă două fișiere au același nume și altă extensie (de ex. `talk.mp3` și `talk.mp4`), transcrierile lor păstrează extensia în nume (`talk.mp3.txt` și `talk.mp4.txt`), ca să nu se înlocuiască una pe alta.
 
-Dacă un fișier nu poate fi transcris, celelalte sunt transcrise oricum, iar vizualizarea dosarului arată care au eșuat și de ce. **Transcrie din nou** repetă dosarul, iar butonul dosarului deschide dosarul cu fișierele salvate.
+Fișierele care au deja o transcriere sunt **omise**: un fișier este omis doar dacă are toate tipurile de fișiere pe care le-ați selectat, așa că adăugarea unui tip de fișier îl transcrie din nou. Dacă un fișier nu poate fi transcris, celelalte sunt transcrise oricum.
+
+### Fișierele unui dosar
+
+Pagina unui dosar din istoric îi listează fișierele, cu starea, durata și dimensiunea fiecăruia și o previzualizare a textului. Le puteți căuta, filtra după stare (**Toate**, **Finalizate**, **Eșuate** sau **În așteptare**) și sorta după nume, stare, durată sau dimensiune. Fișierele mutate sau șterse sunt marcate cu **Fișierul nu a fost găsit**.
+
+- Faceți clic pe un fișier pentru a-i deschide transcrierea, sau faceți clic pe butonul lui `⋯` (ori clic dreapta pe el) pentru a-i copia textul, a-l deschide direct în export, rezumat sau traducere, a-l afișa în managerul de fișiere sau a alege **Transcrie din nou acest fișier**.
+- Selectați mai multe fișiere cu `Ctrl`/`⌘` sau `Shift`, ori toate fișierele afișate cu `Ctrl+A` / `⌘A`, și alegeți **Transcrie din nou**, **Exportă…** (pentru a le exporta împreună într-un singur fișier TXT, Markdown sau Word) sau **Elimină din istoric…**. `Enter` deschide fișierul selectat, iar `Esc` anulează selecția.
+- **Reîncearcă cele eșuate** transcrie din nou fișierele eșuate. **Scanează din nou dosarul** transcrie doar fișierele fără transcriere, cum ar fi cele noi, și spune câte au fost omise pentru că aveau deja una.
+- Meniul `⋯` al dosarului are **Transcrie din nou tot…** (transcrie din nou toate fișierele lui, înlocuindu-le transcrierile), **Exportă tot…** (într-un singur fișier), o opțiune pentru a scoate din listă fișierele lipsă, și opțiunile pentru a deschide dosarul sursă sau dosarul fișierelor salvate.
+- Când schimbați setările dosarului, sunt indicate fișierele transcrise cu alte setări (motor, model, limbă…), cu butonul **Transcrie-le din nou**.
+
+Antetul arată unde sunt salvate fișierele și are un link către dosarul sursă. **Editează setările** schimbă setările dosarului, iar **Salvează și scanează din nou** transcrie cu ele fișierele cărora le lipsește o transcriere.
 
 ### Monitorizați un dosar
 
 Activați **Monitorizează dosarul** pe cardul **Dosar** pentru a transcrie în continuare fișierele adăugate în dosar (sau în subdosarele lui) până când faceți clic pe **Oprește monitorizarea**. Este util pentru înregistrările unui reportofon sau ale unui instrument de ședințe copiate într-un dosar.
 
-- Fișierele pe care dosarul le conține deja sunt omise. Pentru a le transcrie, transcrieți dosarul fără monitorizare.
+- Fișierele pe care dosarul le conține deja sunt omise, cu excepția cazului în care activați **Transcrie fișierele aflate deja în dosar**: atunci cele fără transcriere sunt transcrise mai întâi.
 - Un fișier este transcris după ce a fost copiat complet (când dimensiunea lui nu se mai schimbă), deci fișierele mari nu sunt transcrise pe jumătate.
-- Erorile nu opresc monitorizarea.
+- Dosarele monitorizate când Audiotext a fost închis sunt monitorizate din nou când se deschide, continuând de la fișierele pe care le văzuseră deja. Dosarele oprite pot fi monitorizate din nou cu **Reia monitorizarea**.
+- Dacă dosarul nu este disponibil (de ex. se află pe o unitate care nu este conectată), Audiotext îl așteaptă în loc să eșueze.
+- Pentru a transcrie altceva sau a înregistra, dosarul este pus pe pauză (noua transcriere afișează **Se pornește…** până atunci) și apoi monitorizat din nou.
+- Erorile nu opresc monitorizarea, iar fișierele transcrise împreună sunt anunțate într-o singură notificare.
 
 ## Coada
 

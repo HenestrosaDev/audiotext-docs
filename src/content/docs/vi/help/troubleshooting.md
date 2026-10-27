@@ -72,7 +72,7 @@ Nếu thay vào đó hiển thị **Video YouTube không có rãnh âm thanh.**,
 
 ## Thư mục không chép lời được tệp nào
 
-Các tệp đã có bản chép lời sẽ bị bỏ qua. Bật **Ghi đè tệp hiện có** để chép lời lại. Thư mục cũng phải chứa [tệp được hỗ trợ](/vi/reference/formats-and-languages/).
+Các tệp đã có bản chép lời sẽ bị bỏ qua, cũng như các tệp ẩn và các tệp khớp với **Bỏ qua các tệp khớp với**. Để chép lời lại, hãy dùng **Chép lời lại tất cả…** trong menu `⋯` của thư mục, hoặc chọn chúng trong [danh sách tệp](/vi/guides/sources/#các-tệp-của-một-thư-mục) của thư mục. Các tệp trong thư mục con chỉ được chép lời khi bật **Bao gồm thư mục con**, và thư mục phải chứa [các tệp được hỗ trợ](/vi/reference/formats-and-languages/).
 
 ## Google API yêu cầu chọn ngôn ngữ
 

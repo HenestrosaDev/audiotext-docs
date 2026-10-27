@@ -72,7 +72,7 @@ Dacă în schimb apare **Videoclipul YouTube nu are pistă audio.**, videoclipul
 
 ## Un dosar nu transcrie niciun fișier
 
-Fișierele care au deja o transcriere sunt omise. Activați **Suprascrie fișierele existente** pentru a le transcrie din nou. Dosarul trebuie să conțină și [fișiere acceptate](/ro/reference/formats-and-languages/).
+Fișierele care au deja o transcriere sunt omise, la fel ca fișierele ascunse și cele care se potrivesc cu **Omite fișierele care corespund cu**. Pentru a le transcrie din nou, folosiți **Transcrie din nou tot…** din meniul `⋯` al dosarului, sau selectați-le în [lista de fișiere](/ro/guides/sources/#fișierele-unui-dosar) a acestuia. Fișierele din subdosare sunt transcrise doar cu **Include subdosarele**, iar dosarul trebuie să conțină [fișiere acceptate](/ro/reference/formats-and-languages/).
 
 ## API-ul Google cere limba
 

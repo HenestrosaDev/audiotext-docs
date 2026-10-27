@@ -67,8 +67,12 @@ Mostrato solo per il microfono. Consulta [Testo dal vivo](/it/guides/sources/#te
 Mostrati solo per le cartelle:
 
 - **Monitora la cartella**: consulta [Monitora una cartella](/it/guides/sources/#monitora-una-cartella).
+- **Trascrivi i file già presenti nella cartella** (solo durante il monitoraggio): trascrive prima i file che la cartella contiene già e che non hanno ancora una trascrizione. Disattivato per impostazione predefinita.
+- **Includi sottocartelle**: trascrive anche i file delle sottocartelle.
+- **Salta i file corrispondenti a**: nomi o percorsi dei file da saltare, separati da virgole (ad es. `*.wav, drafts/*`). I file nascosti vengono sempre saltati.
 - **Tipi di file**: con WhisperX, uno o più tra `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` e `.aud`. Con la API di Whisper, il formato dei file (`text`, `json`, `verbose_json`, `srt` o `vtt`); i sottotitoli richiedono un modello con marcatori temporali. La API di Google restituisce testo semplice (`.txt`).
 - **Posizione**: i file vengono salvati accanto a ogni file di origine. Fai clic su **Cambia…** per salvarli in un'altra cartella (le sue sottocartelle vengono ricreate), o su **Accanto all'origine** per tornare indietro.
-- **Sovrascrivi i file esistenti**: trascrive di nuovo i file che hanno già una trascrizione, sostituendola.
+
+I file che hanno già una trascrizione vengono saltati. Per trascriverli di nuovo, usa le opzioni dei [file della cartella](/it/guides/sources/#i-file-di-una-cartella).
 
 Le opzioni dei sottotitoli (larghezza della riga, numero di righe, parole evidenziate) si trovano nelle [Preferenze](/it/reference/preferences/#sottotitoli).

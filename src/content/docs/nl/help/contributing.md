@@ -58,7 +58,7 @@ uv run pytest               # voert de tests uit
 
 ## De interface vertalen
 
-De interface wordt vertaald met [gettext](https://www.gnu.org/software/gettext/). De teksten staan in `res/locales/audiotext.pot`, en de vertalingen van elke taal in `res/locales/<taal>/LC_MESSAGES/audiotext.po`.
+De interface wordt vertaald met [gettext](https://www.gnu.org/software/gettext/). De teksten staan in `res/locales/audiotext.pot`, en de vertalingen van elke taal in `res/locales/<taal>/LC_MESSAGES/audiotext.po`. Teksten die van een getal afhangen (bijv. `{count} file` / `{count} files`) hebben een vertaling voor elke meervoudsvorm van de taal (`msgstr[0]`, `msgstr[1]`…), zoals vastgelegd in de header `Plural-Forms` van de catalogus. Dezelfde tekst kan twee keer voorkomen, één keer met een context (`msgctxt`), zodat hij op elke plek anders wordt vertaald: bijv. `Done` is de status van een transcriptie, en met de context `files` een filter van de bestanden van een map.
 
 Als de teksten in de code veranderen, of nadat je een `.po`-bestand hebt bewerkt (bijv. met [Poedit](https://poedit.net/)), voer je dit script uit. Het extraheert de teksten, werkt de catalogi bij, compileert ze en toont de teksten die nog vertaald of nagekeken moeten worden (gemarkeerd als `fuzzy`), die de app tot die tijd in het Engels toont. De tests mislukken zolang een catalogus niet bijgewerkt is.
 

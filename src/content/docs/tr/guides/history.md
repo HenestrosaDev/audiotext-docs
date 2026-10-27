@@ -32,7 +32,9 @@ Gruplar, bir projeye veya kursa ait olanlar gibi ilişkili transkripsiyonları b
 
 ## Bir transkripsiyonu silin
 
-Bir transkripsiyonu silmek onu, özetini, sorularını ve çevirilerini geçmişten kaldırır. Bir klasördeki dosyaların transkripsiyonları da silinir. Ses, video ve kaydedilmiş dosyalarınız **silinmez**.
+Bir transkripsiyonu silmek onu, özetini, sorularını ve çevirilerini geçmişten kaldırır. Ses, video ve kaydedilen dosyalarınız **silinmez**.
+
+Bir klasörü kaldırmak dosyalarını da geçmişten kaldırır ve **onlar için kaydedilen dosyaların da silinip silinmeyeceğini** sorar (varsayılan olarak kapalı). Ses ve video dosyalarınız asla silinmez.
 
 ## Başarısız ve yarıda kalan transkripsiyonlar
 

@@ -72,7 +72,7 @@ Se invece viene mostrato **Il video di YouTube non ha una traccia audio.**, il v
 
 ## Una cartella non trascrive nessun file
 
-I file che hanno già una trascrizione vengono saltati. Attiva **Sovrascrivi i file esistenti** per trascriverli di nuovo. La cartella deve anche contenere [file supportati](/it/reference/formats-and-languages/).
+I file che hanno già una trascrizione vengono saltati, così come i file nascosti e quelli che corrispondono a **Salta i file corrispondenti a**. Per trascriverli di nuovo, usa **Trascrivi tutto di nuovo…** nel menu `⋯` della cartella, o selezionali nel suo [elenco di file](/it/guides/sources/#i-file-di-una-cartella). I file delle sottocartelle vengono trascritti solo con **Includi sottocartelle**, e la cartella deve contenere [file supportati](/it/reference/formats-and-languages/).
 
 ## La API di Google chiede la lingua
 

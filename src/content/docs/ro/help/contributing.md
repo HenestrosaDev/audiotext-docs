@@ -58,7 +58,7 @@ uv run pytest               # rulează testele
 
 ## Traduceți interfața
 
-Interfața este tradusă cu [gettext](https://www.gnu.org/software/gettext/). Textele se află în `res/locales/audiotext.pot`, iar traducerile fiecărei limbi în `res/locales/<limbă>/LC_MESSAGES/audiotext.po`.
+Interfața este tradusă cu [gettext](https://www.gnu.org/software/gettext/). Textele se află în `res/locales/audiotext.pot`, iar traducerile fiecărei limbi în `res/locales/<limbă>/LC_MESSAGES/audiotext.po`. Textele care depind de un număr (de ex. `{count} file` / `{count} files`) au o traducere pentru fiecare formă de plural a limbii (`msgstr[0]`, `msgstr[1]`…), conform antetului `Plural-Forms` al catalogului ei. Același text poate apărea de două ori, o dată cu un context (`msgctxt`), ca să fie tradus diferit în fiecare loc: de ex. `Done` este starea unei transcrieri, iar cu contextul `files`, un filtru al fișierelor unui dosar.
 
 Când textele din cod se schimbă sau după ce editați un fișier `.po` (de ex. cu [Poedit](https://poedit.net/)), rulați acest script. Extrage textele, actualizează cataloagele, le compilează și listează textele care mai trebuie traduse sau revizuite (marcate ca `fuzzy`), pe care aplicația le afișează în engleză până atunci. Testele eșuează cât timp un catalog nu este actualizat.
 

@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Transcribe os ficheiros que se engaden a un cartafol ata detelo con Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# O mesmo, transcribindo primeiro os ficheiros que xa contén
+audiotext watch inbox/ --existing
 ```
 
 ## Opcións
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Idioma do audio como código ISO 639-1 (p. ex. `gl`), ou `auto` para detectalo (non compatible con Google) |
 | `-t`, `--output-types` | Tipos de ficheiro de saída separados por comas, entre `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` e `ass` (p. ex. `txt,srt,md`) |
 | `-o`, `--output-dir` | Cartafol onde se gardan as transcricións (de forma predeterminada: xunto a cada ficheiro transcrito) |
-| `--overwrite` | Sobrescribir as transcricións existentes |
+| `--overwrite` | Volver transcribir os ficheiros que xa teñen unha transcrición, substituíndoa |
+| `--existing` | (só `watch`) Transcribir primeiro os ficheiros que xa contén o cartafol e que aínda non teñen transcrición |
 | `-p`, `--prompt` | De que trata o audio, como o seu tema ou o seu contexto (non compatible con Google) |
 | `-k`, `--keywords` | Nomes, termos ou siglas que se din no audio, separados por comas, para que se escriban ben (non compatible con Google) |
 | `--translate` | Traducir o audio ao inglés mentres se transcribe (non compatible con Google). Consulta `--translate-to` para outros idiomas |

@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # Trascrive i file aggiunti a una cartella finché non viene fermato con Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# Lo stesso, trascrivendo prima i file che contiene già
+audiotext watch inbox/ --existing
 ```
 
 ## Opzioni
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Lingua dell'audio come codice ISO 639-1 (es. `it`), o `auto` per rilevarla (non supportato da Google) |
 | `-t`, `--output-types` | Tipi di file di output separati da virgole, tra `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` e `ass` (es. `txt,srt,md`) |
 | `-o`, `--output-dir` | Cartella in cui vengono salvate le trascrizioni (predefinito: accanto a ogni file trascritto) |
-| `--overwrite` | Sovrascrivere le trascrizioni esistenti |
+| `--overwrite` | Trascrivere di nuovo i file che hanno già una trascrizione, sostituendola |
+| `--existing` | (solo `watch`) Trascrivere prima i file che la cartella contiene già e che non hanno ancora una trascrizione |
 | `-p`, `--prompt` | Di cosa parla l'audio, come l'argomento o il contesto (non supportato da Google) |
 | `-k`, `--keywords` | Nomi, termini o sigle pronunciati nell'audio, separati da virgole, perché siano scritti correttamente (non supportato da Google) |
 | `--translate` | Tradurre l'audio in inglese durante la trascrizione (non supportato da Google). Consulta `--translate-to` per altre lingue |

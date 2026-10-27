@@ -58,7 +58,7 @@ uv run pytest               # chạy kiểm thử
 
 ## Dịch giao diện
 
-Giao diện được dịch bằng [gettext](https://www.gnu.org/software/gettext/). Các chuỗi văn bản nằm trong `res/locales/audiotext.pot`, và bản dịch của từng ngôn ngữ nằm trong `res/locales/<ngôn-ngữ>/LC_MESSAGES/audiotext.po`.
+Giao diện được dịch bằng [gettext](https://www.gnu.org/software/gettext/). Các chuỗi văn bản nằm trong `res/locales/audiotext.pot`, và bản dịch của từng ngôn ngữ nằm trong `res/locales/<ngôn-ngữ>/LC_MESSAGES/audiotext.po`. Các văn bản phụ thuộc vào một con số (ví dụ `{count} file` / `{count} files`) có một bản dịch cho mỗi dạng số nhiều của ngôn ngữ (`msgstr[0]`, `msgstr[1]`…), theo tiêu đề `Plural-Forms` trong danh mục của ngôn ngữ đó. Cùng một văn bản có thể xuất hiện hai lần, một lần kèm ngữ cảnh (`msgctxt`), để được dịch khác nhau ở mỗi chỗ: ví dụ `Done` là trạng thái của một bản chép lời, còn với ngữ cảnh `files` là bộ lọc các tệp của một thư mục.
 
 Khi văn bản trong mã thay đổi, hoặc sau khi sửa tệp `.po` (ví dụ bằng [Poedit](https://poedit.net/)), hãy chạy script này. Script trích xuất văn bản, cập nhật các danh mục, biên dịch chúng và liệt kê những văn bản còn cần dịch hoặc xem lại (được đánh dấu `fuzzy`), mà ứng dụng sẽ hiển thị bằng tiếng Anh cho đến lúc đó. Các bài kiểm thử sẽ thất bại khi còn danh mục chưa được cập nhật.
 

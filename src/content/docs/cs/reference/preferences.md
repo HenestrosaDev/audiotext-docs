@@ -14,7 +14,7 @@ sidebar:
 - **Jazyk rozhraní**: jazyk Audiotextu nebo **Jazyk systému**. Viz [dostupné jazyky](/cs/reference/formats-and-languages/#jazyky-rozhraní).
 - **Formát data**: jak se zobrazují data přepisů v jazyce rozhraní: krátký (`04.10.26`), střední (`4. 10. 2026`, výchozí), dlouhý (`4. října 2026`) nebo ISO (`2026-10-04`). Nabídka ukazuje každý formát na příkladu.
 - **Formát času**: **Automaticky** (hodiny jazyka rozhraní), 12hodinový (`1:30 odp.`) nebo 24hodinový (`13:30`).
-- **Oznámení**: zobrazí systémové oznámení, když je přepis hotový (u složky, když jsou hotové všechny její soubory, a u sledované složky pokaždé, když je hotový nový soubor). Ve výchozím stavu zapnuto. V macOS přicházejí od aplikace **Script Editor** a ve Windows od **Windows PowerShell**, takže se pro tyto aplikace povolují nebo ztišují v nastavení systému. V Linuxu vyžadují `notify-send` (balíček `libnotify-bin` nebo `libnotify`).
+- **Oznámení**: zobrazí systémové oznámení, když je přepis hotový (u složky, když jsou hotové všechny její soubory, a u sledované složky pokaždé, když jsou hotové nové soubory, v jednom oznámení). Ve výchozím stavu zapnuto. V macOS přicházejí od aplikace **Script Editor** a ve Windows od **Windows PowerShell**, takže se pro tyto aplikace povolují nebo ztišují v nastavení systému. V Linuxu vyžadují `notify-send` (balíček `libnotify-bin` nebo `libnotify`).
 - **Automaticky kontrolovat aktualizace**: při otevření aplikace zkontroluje, zda je k dispozici nová verze, a pokud ano, zobrazí na horní liště tlačítko **Je k dispozici verze …**, které otevře stránku ke stažení. Předběžné verze se nenabízejí. Ve výchozím nastavení zapnuto.
 
 ## Poskytovatelé

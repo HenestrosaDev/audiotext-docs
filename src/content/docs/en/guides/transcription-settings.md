@@ -67,8 +67,12 @@ Only shown for the microphone. See [Live text](/en/guides/sources/#live-text).
 Only shown for folders:
 
 - **Watch the folder**: see [Watch a folder](/en/guides/sources/#watch-a-folder).
+- **Transcribe the files already in the folder** (only while watching): first transcribes the files the folder already contains that don't have a transcription yet. Off by default.
+- **Include subfolders**: also transcribes the files of the subfolders.
+- **Skip files matching**: names or paths of the files to skip, separated by commas (e.g. `*.wav, drafts/*`). Hidden files are always skipped.
 - **File types**: with WhisperX, one or more of `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` and `.aud`. With the Whisper API, the format of the files (`text`, `json`, `verbose_json`, `srt` or `vtt`); the subtitles need a model with timestamps. The Google API returns plain text (`.txt`).
 - **Location**: the files are saved next to each source file. Click **Change…** to save them in another folder (its subfolders are recreated), or **Next to the source** to go back.
-- **Overwrite existing files**: transcribes again the files that already have a transcription, replacing it.
+
+Files that already have a transcription are skipped. To transcribe them again, use the options of the [files of the folder](/en/guides/sources/#the-files-of-a-folder).
 
 The subtitle options (line width, line count, highlighted words) are in the [Preferences](/en/reference/preferences/#subtitles).

@@ -52,7 +52,7 @@ Om te transcriberen wat je computer afspeelt (een videogesprek, een webinar, een
 
 ## Map
 
-Transcribeert alle audio- en videobestanden van een map **en de submappen ervan**. Klik op **Map kiezen…** of sleep de map naar het venster. Audiotext laat zien hoeveel bestanden het heeft gevonden.
+Transcribeert alle audio- en videobestanden van een map en, als **Submappen opnemen** aan staat op de kaart **Map**, van de submappen. Klik op **Map kiezen…** of zet de map neer in het venster. Audiotext laat zien hoeveel bestanden het heeft gevonden. Om bestanden over te slaan, typ je hun namen of paden, gescheiden door komma's, in **Bestanden overslaan die overeenkomen met** (bijv. `*.wav, drafts/*`). Verborgen bestanden worden altijd overgeslagen.
 
 De transcriptie van elk bestand wordt ernaast opgeslagen (of in een andere map die je kiest op de kaart **Uitvoer**), met dezelfde naam en de extensie van elk gekozen **bestandstype**. Bijvoorbeeld met `.txt` en `.vtt`:
 
@@ -67,17 +67,32 @@ files-to-transcribe
     └── mulholland-dr.vtt
 ```
 
-Bestanden die al een transcriptie hebben, worden **overgeslagen**, tenzij je **Bestaande bestanden overschrijven** aanzet. Als je dus een bestand aan de map toevoegt en hem opnieuw transcribeert, wordt alleen het nieuwe bestand getranscribeerd.
+Als twee bestanden dezelfde naam en een andere extensie hebben (bijv. `talk.mp3` en `talk.mp4`), houden hun transcripties de extensie in de naam (`talk.mp3.txt` en `talk.mp4.txt`), zodat ze elkaar niet vervangen.
 
-Als een bestand niet getranscribeerd kan worden, worden de andere toch getranscribeerd, en de mapweergave toont welke zijn mislukt en waarom. **Opnieuw transcriberen** herhaalt de map, en de mapknop opent de map met de opgeslagen bestanden.
+Bestanden die al een transcriptie hebben, worden **overgeslagen**: een bestand wordt alleen overgeslagen als het alle gekozen bestandstypen heeft, dus als je een bestandstype toevoegt, wordt het opnieuw getranscribeerd. Als een bestand niet getranscribeerd kan worden, worden de andere toch getranscribeerd.
+
+### De bestanden van een map
+
+De pagina van een map in de geschiedenis toont de bestanden, elk met de status, duur, grootte en een voorbeeld van de tekst. Doorzoek ze, filter ze op status (**Alle**, **Klaar**, **Mislukt** of **In afwachting**) en sorteer ze op naam, status, duur of grootte. Bestanden die zijn verplaatst of verwijderd, worden gemarkeerd als **Bestand niet gevonden**.
+
+- Klik op een bestand om de transcriptie te openen, of klik op de knop `⋯` ervan (of klik er met de rechtermuisknop op) om de tekst te kopiëren, het direct te openen in de export, samenvatting of vertaling, het te tonen in de bestandsbeheerder of **Dit bestand opnieuw transcriberen** te kiezen.
+- Selecteer meerdere bestanden met `Ctrl`/`⌘` of `Shift`, of alle getoonde bestanden met `Ctrl+A` / `⌘A`, en kies **Opnieuw transcriberen**, **Exporteren…** (om ze samen naar één TXT-, Markdown- of Word-bestand te exporteren) of **Uit de geschiedenis verwijderen…**. `Enter` opent het geselecteerde bestand, en `Esc` wist de selectie.
+- **Mislukte opnieuw proberen** transcribeert de mislukte bestanden opnieuw. **Map opnieuw scannen** transcribeert alleen de bestanden zonder transcriptie, zoals de nieuwe, en laat zien hoeveel er zijn overgeslagen omdat ze er al een hadden.
+- Met het menu `⋯` van de map kun je **Alles opnieuw transcriberen…** (alle bestanden, met vervanging van hun transcripties), **Alles exporteren…** (naar één bestand), ontbrekende bestanden uit de lijst halen, en de bronmap of de map met opgeslagen bestanden openen.
+- Als je de instellingen van de map wijzigt, worden de bestanden getoond die met andere instellingen (engine, model, taal…) zijn getranscribeerd, met een knop **Opnieuw transcriberen**.
+
+De kop laat zien waar de bestanden worden opgeslagen en linkt naar de bronmap. **Instellingen bewerken** wijzigt de instellingen van de map, en **Opslaan en opnieuw scannen** transcribeert daarmee de bestanden die nog geen transcriptie hebben.
 
 ### Een map bewaken
 
 Zet **Map bewaken** aan op de kaart **Map** om de bestanden die aan de map (of de submappen) worden toegevoegd te blijven transcriberen, totdat je op **Stoppen met bewaken** klikt. Handig voor opnamen van een dictafoon of een vergadertool die naar een map worden gekopieerd.
 
-- Bestanden die al in de map staan, worden overgeslagen. Transcribeer de map zonder te bewaken om ze te transcriberen.
+- De bestanden die al in de map staan, worden overgeslagen, tenzij je **Bestanden transcriberen die al in de map staan** aanzet: dan worden eerst de bestanden zonder transcriptie getranscribeerd.
 - Een bestand wordt getranscribeerd zodra het volledig is gekopieerd (als de grootte niet meer verandert), dus grote bestanden worden niet half getranscribeerd.
-- Fouten stoppen het bewaken niet.
+- De mappen die werden bewaakt toen Audiotext werd gesloten, worden weer bewaakt als het opent, vanaf de bestanden die ze al hadden gezien. Gestopte mappen kun je weer bewaken met **Bewaken hervatten**.
+- Als de map niet beschikbaar is (bijv. op een schijf die niet is aangesloten), wacht Audiotext erop in plaats van te mislukken.
+- Om iets anders te transcriberen of op te nemen, wordt de map gepauzeerd (de nieuwe transcriptie toont **Starten…** tot dat zo is) en daarna weer bewaakt.
+- Fouten stoppen het bewaken niet, en de bestanden die samen zijn getranscribeerd, worden in één melding gemeld.
 
 ## De wachtrij
 

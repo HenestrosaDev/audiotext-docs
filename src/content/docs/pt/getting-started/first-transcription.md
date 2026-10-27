@@ -57,6 +57,8 @@ Consulte [A transcrição](/pt/guides/transcript/) para saber tudo o que você p
 | `Ctrl+F` / `⌘F` | Localizar e substituir no texto em que você está trabalhando (ou pesquisar no resumo) |
 | `Ctrl+J` / `⌘J` | Ir para a próxima palavra de baixa confiança |
 | `Shift+Ctrl+J` / `⇧⌘J` | Ir para a palavra de baixa confiança anterior |
-| `Esc` | Cancelar a transcrição em andamento |
+| `Esc` | Cancelar a transcrição em andamento (ou limpar a seleção de arquivos de uma pasta) |
+| `Ctrl+A` / `⌘A` | Selecionar todos os arquivos mostrados de uma pasta |
+| `Enter` | Abrir o arquivo selecionado de uma pasta |
 | `Espaço` | Reproduzir ou pausar o áudio |
 | `←` / `→` | Voltar ou avançar 5 segundos |

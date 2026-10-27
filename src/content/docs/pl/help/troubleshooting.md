@@ -72,7 +72,7 @@ Jeśli zamiast tego pojawia się **Film na YouTube nie ma ścieżki dźwiękowej
 
 ## Folder nie transkrybuje żadnego pliku
 
-Pliki, które mają już transkrypcję, są pomijane. Włącz **Zastępuj istniejące pliki**, aby transkrybować je ponownie. Folder musi też zawierać [obsługiwane pliki](/pl/reference/formats-and-languages/).
+Pliki, które mają już transkrypcję, są pomijane, podobnie jak pliki ukryte i pasujące do **Pomiń pliki pasujące do**. Aby transkrybować je ponownie, użyj **Transkrybuj wszystko ponownie…** w menu `⋯` folderu albo zaznacz je na jego [liście plików](/pl/guides/sources/#pliki-folderu). Pliki z podfolderów są transkrybowane tylko z włączonym **Uwzględnij podfoldery**, a folder musi zawierać [obsługiwane pliki](/pl/reference/formats-and-languages/).
 
 ## API Google prosi o język
 

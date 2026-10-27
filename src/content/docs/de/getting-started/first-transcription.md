@@ -57,6 +57,8 @@ Unter [Das Transkript](/de/guides/transcript/) erfahren Sie alles, was Sie damit
 | `Strg+F` / `⌘F` | Im Text suchen und ersetzen, an dem Sie arbeiten (oder in der Zusammenfassung suchen) |
 | `Strg+J` / `⌘J` | Zum nächsten Wort mit geringer Konfidenz springen |
 | `Umschalt+Strg+J` / `⇧⌘J` | Zum vorherigen Wort mit geringer Konfidenz springen |
-| `Esc` | Laufende Transkription abbrechen |
+| `Esc` | Laufende Transkription abbrechen (oder die Auswahl der Dateien eines Ordners aufheben) |
+| `Strg+A` / `⌘A` | Alle angezeigten Dateien eines Ordners auswählen |
+| `Eingabe` | Ausgewählte Datei eines Ordners öffnen |
 | `Leertaste` | Audio abspielen oder pausieren |
 | `←` / `→` | 5 Sekunden zurück oder vor |

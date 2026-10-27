@@ -67,8 +67,12 @@ Wird nur für das Mikrofon angezeigt. Siehe [Live-Text](/de/guides/sources/#live
 Werden nur für Ordner angezeigt:
 
 - **Ordner überwachen**: siehe [Einen Ordner überwachen](/de/guides/sources/#einen-ordner-überwachen).
+- **Bereits im Ordner vorhandene Dateien transkribieren** (nur beim Überwachen): transkribiert zuerst die Dateien, die der Ordner bereits enthält und die noch keine Transkription haben. Standardmäßig deaktiviert.
+- **Unterordner einbeziehen**: transkribiert auch die Dateien der Unterordner.
+- **Dateien überspringen, die passen auf**: Namen oder Pfade der zu überspringenden Dateien, durch Kommas getrennt (z. B. `*.wav, drafts/*`). Versteckte Dateien werden immer übersprungen.
 - **Dateitypen**: bei WhisperX einer oder mehrere von `.txt`, `.srt`, `.vtt`, `.json`, `.tsv` und `.aud`. Bei der Whisper-API das Format der Dateien (`text`, `json`, `verbose_json`, `srt` oder `vtt`); Untertitel erfordern ein Modell mit Zeitstempeln. Die Google-API liefert Nur-Text (`.txt`).
 - **Speicherort**: Die Dateien werden neben jeder Quelldatei gespeichert. Klicken Sie auf **Ändern…**, um sie in einem anderen Ordner zu speichern (seine Unterordner werden nachgebildet), oder auf **Neben der Quelle**, um zurückzuwechseln.
-- **Vorhandene Dateien überschreiben**: transkribiert Dateien, die bereits eine Transkription haben, erneut und ersetzt sie.
+
+Dateien, die bereits eine Transkription haben, werden übersprungen. Um sie erneut zu transkribieren, nutzen Sie die Optionen der [Dateien des Ordners](/de/guides/sources/#die-dateien-eines-ordners).
 
 Die Untertiteloptionen (Zeilenbreite, Zeilenanzahl, hervorgehobene Wörter) finden Sie in den [Einstellungen](/de/reference/preferences/#untertitel).

@@ -58,7 +58,7 @@ uv run pytest               # runs the tests
 
 ## Translate the interface
 
-The interface is translated with [gettext](https://www.gnu.org/software/gettext/). The texts are in `res/locales/audiotext.pot`, and the translations of each language in `res/locales/<language>/LC_MESSAGES/audiotext.po`.
+The interface is translated with [gettext](https://www.gnu.org/software/gettext/). The texts are in `res/locales/audiotext.pot`, and the translations of each language in `res/locales/<language>/LC_MESSAGES/audiotext.po`. The texts that depend on a number (e.g. `{count} file` / `{count} files`) have a translation for each plural form of the language (`msgstr[0]`, `msgstr[1]`…), as set by the `Plural-Forms` header of its catalog. The same text can appear twice, once with a context (`msgctxt`), so it's translated differently in each place: e.g. `Done` is the status of a transcription, and with the `files` context, a filter of the files of a folder.
 
 After the texts of the code change, or after editing a `.po` file (e.g. with [Poedit](https://poedit.net/)), run this script. It extracts the texts, updates the catalogs, compiles them and lists the texts that are still to translate or review (marked as `fuzzy`), which the app shows in English until then. The tests fail while a catalog is out of date.
 

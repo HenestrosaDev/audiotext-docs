@@ -47,6 +47,9 @@ audiotext transcribe talk.mp4 --output-types srt,docx --summarize --translate-to
 
 # De bestanden transcriberen die aan een map worden toegevoegd, tot Ctrl+C
 audiotext watch inbox/ --output-types srt
+
+# Hetzelfde, maar eerst de bestanden transcriberen die er al in staan
+audiotext watch inbox/ --existing
 ```
 
 ## Opties
@@ -57,7 +60,8 @@ audiotext watch inbox/ --output-types srt
 | `-l`, `--language` | Taal van de audio als ISO 639-1-code (bijv. `nl`), of `auto` om hem te detecteren (niet met Google) |
 | `-t`, `--output-types` | Uitvoerbestandstypen gescheiden door komma's, uit `aud`, `json`, `srt`, `txt`, `tsv`, `vtt`, `md`, `docx` en `ass` (bijv. `txt,srt,md`) |
 | `-o`, `--output-dir` | Map waarin de transcripties worden opgeslagen (standaard: naast elk getranscribeerd bestand) |
-| `--overwrite` | Bestaande transcripties overschrijven |
+| `--overwrite` | Bestanden die al een transcriptie hebben opnieuw transcriberen en die vervangen |
+| `--existing` | (alleen `watch`) Eerst de bestanden transcriberen die al in de map staan en nog geen transcriptie hebben |
 | `-p`, `--prompt` | Waar de audio over gaat, zoals het onderwerp of de setting (niet met Google) |
 | `-k`, `--keywords` | Namen, termen of afkortingen uit de audio, gescheiden door komma's, zodat ze goed gespeld worden (niet met Google) |
 | `--translate` | De audio tijdens het transcriberen naar het Engels vertalen (niet met Google). Zie `--translate-to` voor andere talen |
