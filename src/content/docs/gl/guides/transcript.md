@@ -51,9 +51,13 @@ Para corrixir a transcrición sen perder as súas marcas de tempo (que usan os s
 - **Reproducir desde aquí**: reprodúceo.
 - **Copiar**: copia o seu texto.
 - **Editar texto…**: cambia o seu texto.
+- **Editar tempos…**: cambia cando empeza e remata, ao milisegundo. Escribe os tempos como `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Engadir subtítulo despois…**: engade un subtítulo que falta, que por defecto ocupa o oco ata o seguinte. Se se identificaron os falantes, escolle quen o di (por defecto, o falante do subtítulo anterior) ou escribe un novo. Engádese cando escribes o seu texto.
+- **Cambiar falante…**: se se identificaron os falantes, escolle quen o di, ou un falante novo. A diferenza de **Renomear falantes…**, só cambia este subtítulo.
 - **Renomear falantes…**: dálle un nome a cada falante (`SPEAKER_00` → `Ana`). Darlles o mesmo nome a dous falantes fusiónaos. Tamén está no menú `⋯`.
+- **Eliminar subtítulo**: elimínao. Se ten texto, pídeche confirmación.
 
-As palabras que non cambian manteñen os seus tempos, así que se seguen resaltando ao reproducir.
+As palabras que non cambian manteñen os seus tempos, así que se seguen resaltando ao reproducir. Un subtítulo cuxos tempos cambias, ou que engades, non ten tempos por palabra, así que as súas palabras non se resaltan nin se subliñan como de baixa confianza.
 
 ## Revisa as palabras de baixa confianza
 

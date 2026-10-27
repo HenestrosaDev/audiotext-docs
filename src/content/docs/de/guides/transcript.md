@@ -51,9 +51,13 @@ Um die Transkription zu korrigieren und dabei ihre Zeitstempel zu behalten (die 
 - **Ab hier abspielen**: spielt ihn ab.
 - **Kopieren**: kopiert seinen Text.
 - **Text bearbeiten…**: ändert seinen Text.
+- **Zeiten bearbeiten…**: ändert, wann er beginnt und endet, auf die Millisekunde genau. Geben Sie die Zeiten als `00:01:05,900`, `01:05,9` oder `65.9` ein.
+- **Untertitel danach hinzufügen…**: fügt einen fehlenden Untertitel hinzu, der standardmäßig die Lücke bis zum nächsten füllt. Wurden die Sprecher erkannt, wählen Sie, wer ihn sagt (standardmäßig der Sprecher des vorherigen Untertitels), oder geben Sie einen neuen ein. Er wird hinzugefügt, sobald Sie seinen Text schreiben.
+- **Sprecher ändern…**: wählt, wenn die Sprecher erkannt wurden, wer ihn sagt, oder einen neuen Sprecher. Anders als **Sprecher umbenennen…** ändert es nur diesen Untertitel.
 - **Sprecher umbenennen…**: gibt jedem Sprecher einen Namen (`SPEAKER_00` → `Anna`). Zwei Sprecher mit demselben Namen werden zusammengeführt. Auch im Menü `⋯`.
+- **Untertitel löschen**: löscht ihn. Hat er Text, wird vorher nachgefragt.
 
-Unveränderte Wörter behalten ihre Zeiten und werden daher beim Abspielen weiterhin hervorgehoben.
+Unveränderte Wörter behalten ihre Zeiten und werden daher beim Abspielen weiterhin hervorgehoben. Ein Untertitel, dessen Zeiten Sie ändern oder den Sie hinzufügen, hat keine Wortzeiten, daher werden seine Wörter weder hervorgehoben noch als unsicher unterstrichen.
 
 ## Wörter mit geringer Konfidenz prüfen
 

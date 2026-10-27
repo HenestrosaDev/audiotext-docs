@@ -51,9 +51,13 @@ Para corrigir a transcrição sem perder os carimbos de tempo (usados pelas lege
 - **Reproduzir daqui**: reproduz a legenda.
 - **Copiar**: copia o texto dela.
 - **Editar texto…**: muda o texto dela.
+- **Editar tempos…**: muda quando ela começa e termina, ao milissegundo. Digite os tempos como `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Adicionar legenda depois…**: adiciona uma legenda que está faltando, que por padrão preenche o intervalo até a seguinte. Se os falantes foram identificados, escolha quem a diz (por padrão, o falante da legenda anterior) ou digite um novo. Ela é adicionada quando você escreve o texto dela.
+- **Alterar falante…**: se os falantes foram identificados, escolhe quem a diz, ou um falante novo. Ao contrário de **Renomear falantes…**, só muda esta legenda.
 - **Renomear falantes…**: dá um nome a cada falante (`SPEAKER_00` → `Ana`). Dar o mesmo nome a dois falantes os mescla. Também está no menu `⋯`.
+- **Eliminar legenda**: elimina a legenda. Se ela tiver texto, pede confirmação.
 
-As palavras que não mudam mantêm os seus tempos, então continuam sendo destacadas durante a reprodução.
+As palavras que não mudam mantêm os seus tempos, então continuam sendo destacadas durante a reprodução. Uma legenda cujos tempos você muda, ou que você adiciona, não tem tempos por palavra, então as palavras dela não são destacadas nem sublinhadas como de baixa confiança.
 
 ## Revise as palavras de baixa confiança
 

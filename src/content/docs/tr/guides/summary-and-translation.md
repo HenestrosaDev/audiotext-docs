@@ -58,21 +58,23 @@ Bir transkripsiyon birden fazla dile, hatta aynı anda çevrilebilir ve her çev
 
 ### Çeviriyi düzeltin ve zamanlamasını değiştirin
 
-Bir çeviri çoğu zaman orijinalden farklı bir zamanlamaya ihtiyaç duyar, ör. okunması daha uzun süren altyazılar. Çevirinin bir segmentine sağ tıklayarak:
+Bir çeviri çoğu zaman orijinalden farklı bir zamanlamaya ihtiyaç duyar, ör. okunması daha uzun süren altyazılar. Çevirinin bir altyazısına sağ tıklayarak:
 
 - **Metni düzenle…**: metnini değiştirin.
 - **Zamanlamayı düzenle…**: ne zaman başlayıp bittiğini milisaniye hassasiyetinde değiştirin. Zamanları `00:01:05,900`, `01:05,9` veya `65.9` biçiminde yazın.
-- **Sonrasına segment ekle…**: varsayılan olarak bir sonrakine kadarki boşluğu dolduran bir segment ekleyin.
-- **Segmenti sil**.
+- **Sonrasına altyazı ekle…**: varsayılan olarak bir sonrakine kadarki boşluğu dolduran bir altyazı ekleyin.
+- **Altyazıyı sil**.
+
+Transkripsiyonun zamanlamasını da değiştirebilir ve ona altyazı ekleyebilirsiniz: bkz. [Transkripsiyonu düzeltin](/tr/guides/transcript/#transkripsiyonu-düzeltin).
 
 ### Kendiniz çevirin
 
-Çeviriyi kendiniz yazmak için **Şununla çevir:** alanında **Elle** seçeneğini seçin. API anahtarı gerekmez. Çeviri, transkripsiyonun her altyazısı için **Henüz çevrilmedi** olarak gösterilen boş bir segmentle başlar; panel kaç tane kaldığını gösterir. Birine sağ tıklayıp **Metni çevir…** seçeneğini seçin: iletişim kutusu o sırada söylenen orijinal metni gösterir. Birinin üzerine geldiğinizde sağında, aynı iletişim kutusunu açan bir **Metni çevir…** düğmesi görünür.
+Çeviriyi kendiniz yazmak için **Şununla çevir:** alanında **Elle** seçeneğini seçin. API anahtarı gerekmez. Çeviri, transkripsiyonun her altyazısı için **Henüz çevrilmedi** olarak gösterilen boş bir altyazıyla başlar; panel kaç tane kaldığını gösterir. Birine sağ tıklayıp **Metni çevir…** seçeneğini seçin: iletişim kutusu o sırada söylenen orijinal metni gösterir. Birinin üzerine geldiğinizde sağında, aynı iletişim kutusunu açan bir **Metni çevir…** düğmesi görünür.
 
 ### Altyazılar ve dışa aktarma
 
 - Video transkripsiyonlarında, çeviriyi altyazı olarak göstermek için **Çevir** menüsünde **Videonun altyazısı olarak göster** seçeneğini işaretleyin. Videonun menüsü de bunları değiştirir. Bkz. [Videoları altyazılarıyla izleyin](/tr/guides/transcript/#videoları-altyazılarıyla-izleyin).
-- Çeviriyi dosya olarak kaydetmek için panelinin dışa aktarma düğmesine tıklayın. Transkripsiyonla aynı [biçimlerde](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın), dosya adında diliyle (ör. `video.es.srt`) dışa aktarılır, böylece video oynatıcılar onu videoyla birlikte yükler. Henüz çevrilmemiş segmentler altyazılara dahil edilmez. Aynı menü [videonun altyazılı bir kopyasını](/tr/guides/transcript/#videoyu-altyazılarıyla-dışa-aktarın) oluşturur.
+- Çeviriyi dosya olarak kaydetmek için panelinin dışa aktarma düğmesine tıklayın. Transkripsiyonla aynı [biçimlerde](/tr/guides/transcript/#kopyalayın-ve-dışa-aktarın), dosya adında diliyle (ör. `video.es.srt`) dışa aktarılır, böylece video oynatıcılar onu videoyla birlikte yükler. Henüz çevrilmemiş altyazılar dışa aktarılmaz. Aynı menü [videonun altyazılı bir kopyasını](/tr/guides/transcript/#videoyu-altyazılarıyla-dışa-aktarın) oluşturur.
 
 :::tip
 Transkripsiyonu bir sağlayıcı olmadan doğrudan başka bir dilde almak için yazıya dökme sırasında da çeviri yapabilirsiniz. [Dil](/tr/guides/transcription-settings/#dil) bölümüne bakın.

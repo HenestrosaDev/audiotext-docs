@@ -51,9 +51,13 @@ Chcete-li přepis opravit a zachovat časové značky (které používají titul
 - **Přehrát odsud**: přehraje ho.
 - **Kopírovat**: zkopíruje jeho text.
 - **Upravit text…**: změní jeho text.
+- **Upravit časování…**: změní, kdy začíná a končí, s přesností na milisekundu. Časy zadejte jako `00:01:05,900`, `01:05,9` nebo `65.9`.
+- **Přidat titulek za…**: přidá chybějící titulek, který ve výchozím nastavení vyplní mezeru do dalšího. Pokud byli rozpoznáni mluvčí, vyberte, kdo ho říká (ve výchozím nastavení mluvčí předchozího titulku), nebo napište nového. Přidá se, jakmile napíšete jeho text.
+- **Změnit mluvčího…**: pokud byli rozpoznáni mluvčí, vybere, kdo ho říká, nebo nového mluvčího. Na rozdíl od **Přejmenovat mluvčí…** změní jen tento titulek.
 - **Přejmenovat mluvčí…**: dá každému mluvčímu jméno (`SPEAKER_00` → `Anna`). Dva mluvčí se stejným jménem se sloučí. Je i v nabídce `⋯`.
+- **Smazat titulek**: smaže ho. Pokud obsahuje text, nejdřív se zeptá.
 
-Slova, která se nezmění, si zachovají časování, takže se při přehrávání dál zvýrazňují.
+Slova, která se nezmění, si zachovají časování, takže se při přehrávání dál zvýrazňují. Titulek, kterému změníte časování nebo který přidáte, nemá časování slov, takže se jeho slova nezvýrazňují ani nepodtrhávají jako nejistá.
 
 ## Kontrola slov s nízkou jistotou
 

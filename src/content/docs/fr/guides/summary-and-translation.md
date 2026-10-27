@@ -58,21 +58,23 @@ Tant qu’il en reste, les flèches à côté vont aux sous-titres précédent e
 
 ### Corrigez et recalez la traduction
 
-Une traduction a souvent besoin d’un autre minutage que l’original, par ex. des sous-titres plus longs à lire. Faites un clic droit sur un segment de la traduction pour :
+Une traduction a souvent besoin d’un autre minutage que l’original, par ex. des sous-titres plus longs à lire. Faites un clic droit sur un sous-titre de la traduction pour :
 
 - **Modifier le texte…** : changer son texte.
 - **Modifier le minutage…** : changer quand il commence et finit, à la milliseconde. Saisissez les temps sous la forme `00:01:05,900`, `01:05,9` ou `65.9`.
-- **Ajouter un segment après…** : ajouter un segment qui, par défaut, remplit l’espace jusqu’au suivant.
-- **Supprimer le segment**.
+- **Ajouter un sous-titre après…** : ajouter un sous-titre qui, par défaut, remplit l’espace jusqu’au suivant.
+- **Supprimer le sous-titre**.
+
+Vous pouvez aussi modifier le minutage de la transcription et y ajouter des sous-titres : voir [Corrigez la transcription](/fr/guides/transcript/#corrigez-la-transcription).
 
 ### Traduisez-la vous-même
 
-Pour écrire la traduction vous-même, choisissez **Manuelle** dans **Traduire avec :**. Aucune clé API n’est nécessaire. La traduction commence avec un segment vide pour chaque sous-titre de la transcription, affiché comme **Pas encore traduit**, et le panneau indique combien il en reste. Faites un clic droit sur l’un d’eux et choisissez **Traduire le texte…** : la boîte de dialogue montre le texte original dit pendant ce temps. Survoler un segment affiche un bouton **Traduire le texte…** à sa droite, qui ouvre la même boîte de dialogue.
+Pour écrire la traduction vous-même, choisissez **Manuelle** dans **Traduire avec :**. Aucune clé API n’est nécessaire. La traduction commence avec un sous-titre vide pour chacun de ceux de la transcription, affiché comme **Pas encore traduit**, et le panneau indique combien il en reste. Faites un clic droit sur l’un d’eux et choisissez **Traduire le texte…** : la boîte de dialogue montre le texte original dit pendant ce temps. Survoler un sous-titre affiche un bouton **Traduire le texte…** à sa droite, qui ouvre la même boîte de dialogue.
 
 ### Sous-titres et export
 
-- Pour les transcriptions de vidéos, cochez **L’afficher comme sous-titres de la vidéo** dans le menu **Traduire** pour afficher la traduction en sous-titres. Le menu de la vidéo permet aussi de les changer. Voir [Regardez les vidéos avec sous-titres](/fr/guides/transcript/#regardez-les-vidéos-avec-sous-titres).
-- Pour enregistrer la traduction dans un fichier, cliquez sur le bouton d’export de son panneau. Elle est exportée dans les mêmes [formats](/fr/guides/transcript/#copiez-et-exportez) que la transcription, avec sa langue dans le nom du fichier (par ex. `video.es.srt`), si bien que les lecteurs vidéo la chargent avec la vidéo. Les segments pas encore traduits sont omis des sous-titres. Le même menu crée une [copie de la vidéo avec ses sous-titres](/fr/guides/transcript/#exportez-la-vidéo-avec-ses-sous-titres).
+- Pour les transcriptions de vidéos, cochez **Afficher comme sous-titres de la vidéo** dans le menu **Traduire** pour afficher la traduction en sous-titres. Le menu de la vidéo permet aussi de les changer. Voir [Regardez les vidéos avec sous-titres](/fr/guides/transcript/#regardez-les-vidéos-avec-sous-titres).
+- Pour enregistrer la traduction dans un fichier, cliquez sur le bouton d’export de son panneau. Elle est exportée dans les mêmes [formats](/fr/guides/transcript/#copiez-et-exportez) que la transcription, avec sa langue dans le nom du fichier (par ex. `video.es.srt`), si bien que les lecteurs vidéo la chargent avec la vidéo. Les sous-titres pas encore traduits ne sont pas exportés. Le même menu crée une [copie de la vidéo avec ses sous-titres](/fr/guides/transcript/#exportez-la-vidéo-avec-ses-sous-titres).
 
 :::tip
 Pour obtenir directement la transcription dans une autre langue, sans fournisseur, vous pouvez aussi traduire pendant la transcription. Consultez [Langue](/fr/guides/transcription-settings/#langue).

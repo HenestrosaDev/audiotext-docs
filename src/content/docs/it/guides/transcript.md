@@ -51,9 +51,13 @@ Per correggere la trascrizione mantenendo i marcatori temporali (usati dai sotto
 - **Riproduci da qui**: lo riproduce.
 - **Copia**: ne copia il testo.
 - **Modifica testo…**: ne cambia il testo.
+- **Modifica tempi…**: cambia quando inizia e finisce, al millisecondo. Scrivi i tempi come `00:01:05,900`, `01:05,9` o `65.9`.
+- **Aggiungi sottotitolo dopo…**: aggiunge un sottotitolo mancante che, per impostazione predefinita, riempie lo spazio fino al successivo. Se i parlanti sono stati identificati, scegli chi lo dice (per impostazione predefinita, il parlante del sottotitolo precedente) o scrivine uno nuovo. Viene aggiunto quando ne scrivi il testo.
+- **Cambia parlante…**: se i parlanti sono stati identificati, sceglie chi lo dice, o un nuovo parlante. A differenza di **Rinomina parlanti…**, cambia solo questo sottotitolo.
 - **Rinomina parlanti…**: dà un nome a ogni parlante (`SPEAKER_00` → `Anna`). Dare lo stesso nome a due parlanti li unisce. È anche nel menu `⋯`.
+- **Elimina sottotitolo**: lo elimina. Se ha del testo, chiede conferma.
 
-Le parole che non cambiano mantengono i loro tempi, quindi continuano a essere evidenziate durante la riproduzione.
+Le parole che non cambiano mantengono i loro tempi, quindi continuano a essere evidenziate durante la riproduzione. Un sottotitolo di cui cambi i tempi, o che aggiungi, non ha i tempi delle parole, quindi le sue parole non vengono evidenziate né sottolineate come poco affidabili.
 
 ## Rivedi le parole a bassa affidabilità
 

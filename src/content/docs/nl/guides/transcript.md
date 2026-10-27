@@ -51,9 +51,13 @@ Om de transcriptie te corrigeren en de tijdstempels (die de ondertitels en het a
 - **Vanaf hier afspelen**: speelt hem af.
 - **Kopiëren**: kopieert de tekst.
 - **Tekst bewerken…**: wijzigt de tekst.
+- **Timing bewerken…**: wijzigt wanneer hij begint en eindigt, tot op de milliseconde. Typ de tijden als `00:01:05,900`, `01:05,9` of `65.9`.
+- **Ondertitel erna toevoegen…**: voegt een ontbrekende ondertitel toe, die standaard de ruimte tot de volgende vult. Als de sprekers zijn herkend, kies je wie hem zegt (standaard de spreker van de vorige ondertitel) of typ je een nieuwe. Hij wordt toegevoegd zodra je de tekst schrijft.
+- **Spreker wijzigen…**: kiest, als de sprekers zijn herkend, wie hem zegt, of een nieuwe spreker. Anders dan **Sprekers hernoemen…** wijzigt dit alleen deze ondertitel.
 - **Sprekers hernoemen…**: geeft elke spreker een naam (`SPEAKER_00` → `Anna`). Als je twee sprekers dezelfde naam geeft, worden ze samengevoegd. Staat ook in het menu `⋯`.
+- **Ondertitel verwijderen**: verwijdert hem. Als hij tekst bevat, wordt eerst om bevestiging gevraagd.
 
-Woorden die niet veranderen, behouden hun tijden, dus ze worden tijdens het afspelen nog steeds gemarkeerd.
+Woorden die niet veranderen, behouden hun tijden, dus ze worden tijdens het afspelen nog steeds gemarkeerd. Een ondertitel waarvan je de timing wijzigt, of die je toevoegt, heeft geen woordtijden, dus de woorden worden niet gemarkeerd of onderstreept als onzeker.
 
 ## Woorden met lage betrouwbaarheid nakijken
 

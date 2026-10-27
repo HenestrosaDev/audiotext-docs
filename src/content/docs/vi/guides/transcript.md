@@ -51,9 +51,13 @@ Nhấn `Ctrl+F` (`⌘F` trên macOS), hoặc nhấp vào kính lúp ở phần �
 - **Phát từ đây**: phát phụ đề đó.
 - **Sao chép**: sao chép văn bản của nó.
 - **Chỉnh sửa văn bản…**: đổi nội dung.
+- **Chỉnh sửa thời gian…**: đổi thời điểm bắt đầu và kết thúc, chính xác đến mili giây. Nhập thời gian dạng `00:01:05,900`, `01:05,9` hoặc `65.9`.
+- **Thêm phụ đề phía sau…**: thêm một phụ đề bị thiếu, theo mặc định lấp khoảng trống đến phụ đề tiếp theo. Nếu người nói đã được nhận diện, hãy chọn ai nói câu đó (mặc định là người nói của phụ đề trước) hoặc nhập người nói mới. Phụ đề được thêm khi bạn viết nội dung của nó.
+- **Đổi người nói…**: nếu người nói đã được nhận diện, chọn ai nói câu đó, hoặc một người nói mới. Khác với **Đổi tên người nói…**, mục này chỉ đổi phụ đề này.
 - **Đổi tên người nói…**: đặt tên cho từng người nói (`SPEAKER_00` → `Lan`). Đặt cùng một tên cho hai người nói sẽ gộp họ lại. Mục này cũng có trong menu `⋯`.
+- **Xóa phụ đề**: xóa phụ đề đó. Nếu có nội dung, ứng dụng sẽ hỏi xác nhận trước.
 
-Các từ không thay đổi giữ nguyên thời gian, nên vẫn được đánh dấu khi phát.
+Các từ không thay đổi giữ nguyên thời gian, nên vẫn được đánh dấu khi phát. Phụ đề mà bạn đổi thời gian hoặc thêm vào sẽ không có thời gian của từng từ, nên các từ của nó không được đánh dấu cũng như không bị gạch chân là có độ tin cậy thấp.
 
 ## Rà soát các từ có độ tin cậy thấp
 

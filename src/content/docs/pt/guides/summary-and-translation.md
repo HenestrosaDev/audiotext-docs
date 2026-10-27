@@ -58,21 +58,23 @@ Enquanto faltarem algumas, as setas ao lado dela vão para as legendas anterior 
 
 ### Corrija e ajuste os tempos da tradução
 
-Uma tradução costuma precisar de outros tempos que o original, por exemplo legendas que levam mais tempo para ler. Clique com o botão direito em um segmento da tradução para:
+Uma tradução costuma precisar de outros tempos que o original, por exemplo legendas que levam mais tempo para ler. Clique com o botão direito em uma legenda da tradução para:
 
 - **Editar texto…**: mudar o texto dele.
-- **Editar os tempos…**: mudar quando ele começa e termina, com precisão de milissegundos. Digite os tempos como `00:01:05,900`, `01:05,9` ou `65.9`.
-- **Adicionar um segmento depois…**: adicionar um segmento, que por padrão preenche o intervalo até o seguinte.
-- **Eliminar o segmento**.
+- **Editar tempos…**: mudar quando ele começa e termina, com precisão de milissegundos. Digite os tempos como `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Adicionar legenda depois…**: adicionar uma legenda, que por padrão preenche o intervalo até a seguinte.
+- **Eliminar legenda**.
+
+Você também pode mudar os tempos da transcrição e adicionar legendas a ela: veja [Corrija a transcrição](/pt/guides/transcript/#corrija-a-transcrição).
 
 ### Traduza você mesmo
 
-Para escrever a tradução você mesmo, escolha **Manual** em **Traduzir com:**. Não precisa de chave de API. A tradução começa com um segmento vazio para cada legenda da transcrição, exibido como **Ainda não traduzido**, e o painel mostra quantos faltam. Clique com o botão direito em um deles e escolha **Traduzir texto…**: a caixa de diálogo mostra o texto original dito nesse intervalo. Ao passar o mouse sobre um deles, aparece um botão **Traduzir texto…** à direita, que abre a mesma caixa de diálogo.
+Para escrever a tradução você mesmo, escolha **Manual** em **Traduzir com:**. Não precisa de chave de API. A tradução começa com uma legenda vazia para cada uma da transcrição, exibida como **Ainda não traduzido**, e o painel mostra quantas faltam. Clique com o botão direito em uma delas e escolha **Traduzir texto…**: a caixa de diálogo mostra o texto original dito nesse intervalo. Ao passar o mouse sobre uma delas, aparece um botão **Traduzir texto…** à direita, que abre a mesma caixa de diálogo.
 
 ### Legendas e exportação
 
-- Nas transcrições de vídeos, marque **Mostrá-la como legendas do vídeo** no menu **Traduzir** para mostrar a tradução como legendas. O menu do vídeo também as troca. Veja [Assista a vídeos com legendas](/pt/guides/transcript/#assista-a-vídeos-com-legendas).
-- Para salvar a tradução em um arquivo, clique no botão de exportar do painel dela. Ela é exportada nos mesmos [formatos](/pt/guides/transcript/#copie-e-exporte) da transcrição, com o idioma no nome do arquivo (ex.: `video.es.srt`), então os players de vídeo a carregam junto com o vídeo. Os segmentos ainda não traduzidos ficam de fora das legendas. O mesmo menu faz uma [cópia do vídeo com as legendas](/pt/guides/transcript/#exporte-o-vídeo-com-as-legendas).
+- Nas transcrições de vídeos, marque **Mostrar como legendas do vídeo** no menu **Traduzir** para mostrar a tradução como legendas. O menu do vídeo também as troca. Veja [Assista a vídeos com legendas](/pt/guides/transcript/#assista-a-vídeos-com-legendas).
+- Para salvar a tradução em um arquivo, clique no botão de exportar do painel dela. Ela é exportada nos mesmos [formatos](/pt/guides/transcript/#copie-e-exporte) da transcrição, com o idioma no nome do arquivo (ex.: `video.es.srt`), então os players de vídeo a carregam junto com o vídeo. As legendas ainda não traduzidas não são exportadas. O mesmo menu faz uma [cópia do vídeo com as legendas](/pt/guides/transcript/#exporte-o-vídeo-com-as-legendas).
 
 :::tip
 Para obter a transcrição diretamente em outro idioma, sem provedor, você também pode traduzir durante a transcrição. Consulte [Idioma](/pt/guides/transcription-settings/#idioma).

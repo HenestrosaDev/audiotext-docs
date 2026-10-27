@@ -51,9 +51,13 @@ För att korrigera transkriberingen och behålla tidsstämplarna (som undertexte
 - **Spela upp härifrån**: spelar upp den.
 - **Kopiera**: kopierar dess text.
 - **Redigera text…**: ändrar dess text.
+- **Redigera tider…**: ändrar när den börjar och slutar, på millisekunden. Skriv tiderna som `00:01:05,900`, `01:05,9` eller `65.9`.
+- **Lägg till undertext efter…**: lägger till en saknad undertext, som som standard fyller luckan fram till nästa. Om talarna har identifierats väljer du vem som säger den (som standard talaren i föregående undertext) eller skriver en ny. Den läggs till när du skriver dess text.
+- **Byt talare…**: väljer, om talarna har identifierats, vem som säger den, eller en ny talare. Till skillnad från **Byt namn på talare…** ändrar den bara den här undertexten.
 - **Byt namn på talare…**: ger varje talare ett namn (`SPEAKER_00` → `Anna`). Om två talare får samma namn slås de ihop. Finns även i menyn `⋯`.
+- **Radera undertext**: raderar den. Om den har text får du bekräfta först.
 
-Ord som inte ändras behåller sina tider, så de markeras fortfarande under uppspelning.
+Ord som inte ändras behåller sina tider, så de markeras fortfarande under uppspelning. En undertext vars tider du ändrar, eller som du lägger till, har inga ordtider, så dess ord markeras inte och stryks inte under som osäkra.
 
 ## Granska ord med låg säkerhet
 

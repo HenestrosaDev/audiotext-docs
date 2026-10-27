@@ -51,9 +51,13 @@ Pentru a corecta transcrierea păstrând marcajele de timp (folosite de subtitr�
 - **Redă de aici**: o redă.
 - **Copiază**: îi copiază textul.
 - **Editează textul…**: îi schimbă textul.
+- **Editează temporizarea…**: schimbă când începe și se termină, la milisecundă. Scrieți timpii ca `00:01:05,900`, `01:05,9` sau `65.9`.
+- **Adaugă subtitrare după…**: adaugă o subtitrare lipsă, care implicit umple pauza până la următoarea. Dacă vorbitorii au fost identificați, alegeți cine o spune (implicit, vorbitorul subtitrării anterioare) sau scrieți unul nou. Se adaugă după ce îi scrieți textul.
+- **Schimbă vorbitorul…**: dacă vorbitorii au fost identificați, alege cine o spune, sau un vorbitor nou. Spre deosebire de **Redenumește vorbitorii…**, schimbă doar această subtitrare.
 - **Redenumește vorbitorii…**: dă un nume fiecărui vorbitor (`SPEAKER_00` → `Ana`). Dacă doi vorbitori primesc același nume, sunt uniți. Este și în meniul `⋯`.
+- **Șterge subtitrarea**: o șterge. Dacă are text, cere mai întâi confirmarea.
 
-Cuvintele care nu se schimbă își păstrează temporizarea, deci sunt în continuare evidențiate la redare.
+Cuvintele care nu se schimbă își păstrează temporizarea, deci sunt în continuare evidențiate la redare. O subtitrare căreia îi schimbați temporizarea, sau pe care o adăugați, nu are temporizarea cuvintelor, deci cuvintele ei nu sunt evidențiate și nici subliniate ca nesigure.
 
 ## Verificați cuvintele cu încredere scăzută
 

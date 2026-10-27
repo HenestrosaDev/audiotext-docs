@@ -51,9 +51,13 @@ Para corregir la transcripción sin perder sus marcas de tiempo (que usan los su
 - **Reproducir desde aquí**: lo reproduce.
 - **Copiar**: copia su texto.
 - **Editar texto…**: cambia su texto.
+- **Editar tiempos…**: cambia cuándo empieza y termina, al milisegundo. Escribe los tiempos como `00:01:05,900`, `01:05,9` o `65.9`.
+- **Añadir subtítulo después…**: añade un subtítulo que falta, que por defecto ocupa el hueco hasta el siguiente. Si se identificaron los hablantes, elige quién lo dice (por defecto, el hablante del subtítulo anterior) o escribe uno nuevo. Se añade cuando escribes su texto.
+- **Cambiar hablante…**: si se identificaron los hablantes, elige quién lo dice, o un hablante nuevo. A diferencia de **Renombrar hablantes…**, solo cambia este subtítulo.
 - **Renombrar hablantes…**: da un nombre a cada hablante (`SPEAKER_00` → `Ana`). Dar el mismo nombre a dos hablantes los fusiona. También está en el menú `⋯`.
+- **Eliminar subtítulo**: lo elimina. Si tiene texto, te pide confirmación.
 
-Las palabras que no cambian mantienen sus tiempos, así que se siguen resaltando al reproducir.
+Las palabras que no cambian mantienen sus tiempos, así que se siguen resaltando al reproducir. Un subtítulo cuyos tiempos cambias, o que añades, no tiene tiempos por palabra, así que sus palabras no se resaltan ni se subrayan como de baja confianza.
 
 ## Revisa las palabras de baja confianza
 

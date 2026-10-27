@@ -58,21 +58,23 @@ While some are left, the arrows next to it go to the previous and next subtitles
 
 ### Correct and retime the translation
 
-A translation often needs another timing than the original, e.g. subtitles that take longer to read. Right-click a segment of the translation to:
+A translation often needs another timing than the original, e.g. subtitles that take longer to read. Right-click a subtitle of the translation to:
 
 - **Edit text…**: change its text.
-- **Edit the timing…**: change when it starts and ends, to the millisecond. Type the times as `00:01:05,900`, `01:05,9` or `65.9`.
-- **Add a segment after…**: add a segment, which by default fills the gap until the next one.
-- **Delete the segment**.
+- **Edit timing…**: change when it starts and ends, to the millisecond. Type the times as `00:01:05,900`, `01:05,9` or `65.9`.
+- **Add subtitle after…**: add a subtitle, which by default fills the gap until the next one.
+- **Delete subtitle**.
+
+You can also retime the transcription and add subtitles to it: see [Correct the transcription](/en/guides/transcript/#correct-the-transcription).
 
 ### Translate it yourself
 
-To write the translation yourself, choose **Manual** in **Translate with:**. It needs no API key. The translation starts with an empty segment for each subtitle of the transcription, shown as **Not translated yet**, and the panel shows how many are left. Right-click one and choose **Translate text…**: the dialog shows the original text said meanwhile. Hovering over one shows a **Translate text…** button on its right, which opens the same dialog.
+To write the translation yourself, choose **Manual** in **Translate with:**. It needs no API key. The translation starts with an empty subtitle for each one of the transcription, shown as **Not translated yet**, and the panel shows how many are left. Right-click one and choose **Translate text…**: the dialog shows the original text said meanwhile. Hovering over one shows a **Translate text…** button on its right, which opens the same dialog.
 
 ### Subtitles and export
 
-- In the transcriptions of videos, check **Show it as the subtitles of the video** in the **Translate** menu to show the translation as the subtitles. The menu of the video switches them too. See [Watch videos with subtitles](/en/guides/transcript/#watch-videos-with-subtitles).
-- To save the translation as a file, click the export button of its panel. It's exported in the same [formats](/en/guides/transcript/#copy-and-export) as the transcription, with its language in the name of the file (e.g. `video.es.srt`), so the video players load it with the video. The segments not translated yet are left out of the subtitles. The same menu makes a [copy of the video with its subtitles](/en/guides/transcript/#export-the-video-with-its-subtitles).
+- In the transcriptions of videos, check **Show as video subtitles** in the **Translate** menu to show the translation as the subtitles. The menu of the video switches them too. See [Watch videos with subtitles](/en/guides/transcript/#watch-videos-with-subtitles).
+- To save the translation as a file, click the export button of its panel. It's exported in the same [formats](/en/guides/transcript/#copy-and-export) as the transcription, with its language in the name of the file (e.g. `video.es.srt`), so the video players load it with the video. The subtitles not translated yet are left out. The same menu makes a [copy of the video with its subtitles](/en/guides/transcript/#export-the-video-with-its-subtitles).
 
 :::tip
 To get the transcription directly in another language, without a provider, you can also translate while transcribing. See [Language](/en/guides/transcription-settings/#language).

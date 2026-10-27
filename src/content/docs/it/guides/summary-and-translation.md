@@ -58,21 +58,23 @@ Finché ne mancano, le frecce accanto vanno ai sottotitoli precedente e successi
 
 ### Correggi e cambia i tempi della traduzione
 
-Una traduzione richiede spesso tempi diversi dall'originale, ad es. sottotitoli che richiedono più tempo per essere letti. Fai clic con il tasto destro su un segmento della traduzione per:
+Una traduzione richiede spesso tempi diversi dall'originale, ad es. sottotitoli che richiedono più tempo per essere letti. Fai clic con il tasto destro su un sottotitolo della traduzione per:
 
 - **Modifica testo…**: cambiarne il testo.
-- **Modifica i tempi…**: cambiare quando inizia e finisce, al millisecondo. Scrivi i tempi come `00:01:05,900`, `01:05,9` o `65.9`.
-- **Aggiungi un segmento dopo…**: aggiungere un segmento che, per impostazione predefinita, riempie lo spazio fino al successivo.
-- **Elimina il segmento**.
+- **Modifica tempi…**: cambiare quando inizia e finisce, al millisecondo. Scrivi i tempi come `00:01:05,900`, `01:05,9` o `65.9`.
+- **Aggiungi sottotitolo dopo…**: aggiungere un sottotitolo che, per impostazione predefinita, riempie lo spazio fino al successivo.
+- **Elimina sottotitolo**.
+
+Puoi anche cambiare i tempi della trascrizione e aggiungervi sottotitoli: vedi [Correggi la trascrizione](/it/guides/transcript/#correggi-la-trascrizione).
 
 ### Traducila tu stesso
 
-Per scrivere la traduzione tu stesso, scegli **Manuale** in **Traduci con:**. Non serve una chiave API. La traduzione inizia con un segmento vuoto per ogni sottotitolo della trascrizione, mostrato come **Non ancora tradotto**, e il pannello mostra quanti ne mancano. Fai clic con il tasto destro su uno e scegli **Traduci testo…**: la finestra mostra il testo originale detto in quel momento. Passando il mouse su uno compare un pulsante **Traduci testo…** alla sua destra, che apre la stessa finestra.
+Per scrivere la traduzione tu stesso, scegli **Manuale** in **Traduci con:**. Non serve una chiave API. La traduzione inizia con un sottotitolo vuoto per ognuno della trascrizione, mostrato come **Non ancora tradotto**, e il pannello mostra quanti ne mancano. Fai clic con il tasto destro su uno e scegli **Traduci testo…**: la finestra mostra il testo originale detto in quel momento. Passando il mouse su uno compare un pulsante **Traduci testo…** alla sua destra, che apre la stessa finestra.
 
 ### Sottotitoli ed esportazione
 
-- Nelle trascrizioni dei video, seleziona **Mostrala come sottotitoli del video** nel menu **Traduci** per mostrare la traduzione come sottotitoli. Anche il menu del video li cambia. Vedi [Guarda i video con i sottotitoli](/it/guides/transcript/#guarda-i-video-con-i-sottotitoli).
-- Per salvare la traduzione in un file, fai clic sul pulsante di esportazione del suo pannello. Viene esportata negli stessi [formati](/it/guides/transcript/#copia-ed-esporta) della trascrizione, con la sua lingua nel nome del file (ad es. `video.es.srt`), così i lettori video la caricano insieme al video. I segmenti non ancora tradotti vengono esclusi dai sottotitoli. Lo stesso menu crea una [copia del video con i sottotitoli](/it/guides/transcript/#esporta-il-video-con-i-sottotitoli).
+- Nelle trascrizioni dei video, seleziona **Mostra come sottotitoli del video** nel menu **Traduci** per mostrare la traduzione come sottotitoli. Anche il menu del video li cambia. Vedi [Guarda i video con i sottotitoli](/it/guides/transcript/#guarda-i-video-con-i-sottotitoli).
+- Per salvare la traduzione in un file, fai clic sul pulsante di esportazione del suo pannello. Viene esportata negli stessi [formati](/it/guides/transcript/#copia-ed-esporta) della trascrizione, con la sua lingua nel nome del file (ad es. `video.es.srt`), così i lettori video la caricano insieme al video. I sottotitoli non ancora tradotti non vengono esportati. Lo stesso menu crea una [copia del video con i sottotitoli](/it/guides/transcript/#esporta-il-video-con-i-sottotitoli).
 
 :::tip
 Per ottenere la trascrizione direttamente in un'altra lingua, senza fornitore, puoi anche tradurre durante la trascrizione. Consulta [Lingua](/it/guides/transcription-settings/#lingua).

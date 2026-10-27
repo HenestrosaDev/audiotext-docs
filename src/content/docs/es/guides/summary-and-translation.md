@@ -58,21 +58,23 @@ Mientras queden algunos, las flechas junto a ella van a los subtítulos anterior
 
 ### Corrige y ajusta los tiempos de la traducción
 
-Una traducción suele necesitar otros tiempos que el original, p. ej. subtítulos que se tardan más en leer. Haz clic derecho en un segmento de la traducción para:
+Una traducción suele necesitar otros tiempos que el original, p. ej. subtítulos que se tardan más en leer. Haz clic derecho en un subtítulo de la traducción para:
 
 - **Editar texto…**: cambiar su texto.
-- **Editar los tiempos…**: cambiar cuándo empieza y termina, al milisegundo. Escribe los tiempos como `00:01:05,900`, `01:05,9` o `65.9`.
-- **Añadir un segmento después…**: añadir un segmento, que por defecto ocupa el hueco hasta el siguiente.
-- **Eliminar el segmento**.
+- **Editar tiempos…**: cambiar cuándo empieza y termina, al milisegundo. Escribe los tiempos como `00:01:05,900`, `01:05,9` o `65.9`.
+- **Añadir subtítulo después…**: añadir un subtítulo, que por defecto ocupa el hueco hasta el siguiente.
+- **Eliminar subtítulo**.
+
+También puedes cambiar los tiempos de la transcripción y añadirle subtítulos: consulta [Corrige la transcripción](/es/guides/transcript/#corrige-la-transcripción).
 
 ### Tradúcela tú mismo
 
-Para escribir la traducción tú mismo, elige **Manual** en **Traducir con:**. No necesita clave de API. La traducción empieza con un segmento vacío por cada subtítulo de la transcripción, que se muestra como **Sin traducir todavía**, y el panel muestra cuántos quedan. Haz clic derecho en uno y elige **Traducir texto…**: el diálogo muestra el texto original que se dice mientras tanto. Al pasar el ratón por encima de uno aparece un botón **Traducir texto…** a su derecha, que abre el mismo diálogo.
+Para escribir la traducción tú mismo, elige **Manual** en **Traducir con:**. No necesita clave de API. La traducción empieza con un subtítulo vacío por cada uno de la transcripción, que se muestra como **Sin traducir todavía**, y el panel muestra cuántos quedan. Haz clic derecho en uno y elige **Traducir texto…**: el diálogo muestra el texto original que se dice mientras tanto. Al pasar el ratón por encima de uno aparece un botón **Traducir texto…** a su derecha, que abre el mismo diálogo.
 
 ### Subtítulos y exportación
 
-- En las transcripciones de vídeos, marca **Mostrarla como subtítulos del vídeo** en el menú **Traducir** para mostrar la traducción como subtítulos. El menú del vídeo también los cambia. Consulta [Mira vídeos con subtítulos](/es/guides/transcript/#mira-vídeos-con-subtítulos).
-- Para guardar la traducción como archivo, haz clic en el botón de exportar de su panel. Se exporta en los mismos [formatos](/es/guides/transcript/#copia-y-exporta) que la transcripción, con su idioma en el nombre del archivo (p. ej. `video.es.srt`), así que los reproductores de vídeo la cargan con el vídeo. Los segmentos sin traducir todavía no se incluyen en los subtítulos. El mismo menú hace una [copia del vídeo con sus subtítulos](/es/guides/transcript/#exporta-el-vídeo-con-sus-subtítulos).
+- En las transcripciones de vídeos, marca **Mostrar como subtítulos del vídeo** en el menú **Traducir** para mostrar la traducción como subtítulos. El menú del vídeo también los cambia. Consulta [Mira vídeos con subtítulos](/es/guides/transcript/#mira-vídeos-con-subtítulos).
+- Para guardar la traducción como archivo, haz clic en el botón de exportar de su panel. Se exporta en los mismos [formatos](/es/guides/transcript/#copia-y-exporta) que la transcripción, con su idioma en el nombre del archivo (p. ej. `video.es.srt`), así que los reproductores de vídeo la cargan con el vídeo. Los subtítulos sin traducir todavía no se exportan. El mismo menú hace una [copia del vídeo con sus subtítulos](/es/guides/transcript/#exporta-el-vídeo-con-sus-subtítulos).
 
 :::tip
 Para obtener la transcripción directamente en otro idioma, sin proveedor, también puedes traducir mientras transcribes. Consulta [Idioma](/es/guides/transcription-settings/#idioma).

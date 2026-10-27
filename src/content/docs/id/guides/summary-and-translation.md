@@ -58,21 +58,23 @@ Selama masih ada yang tersisa, panah di sebelahnya menuju subtitle **Belum diter
 
 ### Koreksi dan atur ulang waktu terjemahan
 
-Terjemahan sering kali memerlukan waktu yang berbeda dari aslinya, mis. subtitle yang lebih lama dibaca. Klik kanan segmen terjemahan untuk:
+Terjemahan sering kali memerlukan waktu yang berbeda dari aslinya, mis. subtitle yang lebih lama dibaca. Klik kanan subtitle terjemahan untuk:
 
 - **Edit teks…**: mengubah teksnya.
 - **Edit waktu…**: mengubah kapan segmen dimulai dan berakhir, hingga milidetik. Ketik waktunya sebagai `00:01:05,900`, `01:05,9`, atau `65.9`.
-- **Tambahkan segmen sesudahnya…**: menambahkan segmen, yang secara bawaan mengisi jeda hingga segmen berikutnya.
-- **Hapus segmen**.
+- **Tambah subtitle setelahnya…**: menambahkan subtitle, yang secara bawaan mengisi jeda hingga subtitle berikutnya.
+- **Hapus subtitle**.
+
+Anda juga dapat mengubah waktu transkripsi dan menambahkan subtitle ke dalamnya: lihat [Koreksi transkripsi](/id/guides/transcript/#koreksi-transkripsi).
 
 ### Terjemahkan sendiri
 
-Untuk menulis terjemahan sendiri, pilih **Manual** di **Terjemahkan dengan:**. Tidak memerlukan kunci API. Terjemahan dimulai dengan segmen kosong untuk setiap subtitle transkripsi, yang ditampilkan sebagai **Belum diterjemahkan**, dan panel menampilkan berapa yang tersisa. Klik kanan salah satunya dan pilih **Terjemahkan teks…**: dialog menampilkan teks asli yang diucapkan pada saat itu. Mengarahkan kursor ke salah satunya menampilkan tombol **Terjemahkan teks…** di sebelah kanannya, yang membuka dialog yang sama.
+Untuk menulis terjemahan sendiri, pilih **Manual** di **Terjemahkan dengan:**. Tidak memerlukan kunci API. Terjemahan dimulai dengan subtitle kosong untuk setiap subtitle transkripsi, yang ditampilkan sebagai **Belum diterjemahkan**, dan panel menampilkan berapa yang tersisa. Klik kanan salah satunya dan pilih **Terjemahkan teks…**: dialog menampilkan teks asli yang diucapkan pada saat itu. Mengarahkan kursor ke salah satunya menampilkan tombol **Terjemahkan teks…** di sebelah kanannya, yang membuka dialog yang sama.
 
 ### Subtitle dan ekspor
 
 - Pada transkripsi video, centang **Tampilkan sebagai subtitle video** di menu **Terjemahkan** untuk menampilkan terjemahan sebagai subtitle. Menu video juga dapat menggantinya. Lihat [Tonton video dengan subtitle](/id/guides/transcript/#tonton-video-dengan-subtitle).
-- Untuk menyimpan terjemahan sebagai file, klik tombol ekspor di panelnya. Terjemahan diekspor dalam [format](/id/guides/transcript/#salin-dan-ekspor) yang sama dengan transkripsi, dengan bahasanya di nama file (mis. `video.es.srt`), sehingga pemutar video memuatnya bersama video. Segmen yang belum diterjemahkan tidak disertakan dalam subtitle. Menu yang sama membuat [salinan video beserta subtitlenya](/id/guides/transcript/#ekspor-video-beserta-subtitlenya).
+- Untuk menyimpan terjemahan sebagai file, klik tombol ekspor di panelnya. Terjemahan diekspor dalam [format](/id/guides/transcript/#salin-dan-ekspor) yang sama dengan transkripsi, dengan bahasanya di nama file (mis. `video.es.srt`), sehingga pemutar video memuatnya bersama video. Subtitle yang belum diterjemahkan tidak diekspor. Menu yang sama membuat [salinan video beserta subtitlenya](/id/guides/transcript/#ekspor-video-beserta-subtitlenya).
 
 :::tip
 Untuk mendapatkan transkripsi langsung dalam bahasa lain tanpa penyedia, Anda juga dapat menerjemahkan saat mentranskripsi. Lihat [Bahasa](/id/guides/transcription-settings/#bahasa).

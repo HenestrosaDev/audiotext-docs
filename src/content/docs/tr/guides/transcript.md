@@ -51,9 +51,13 @@ Zaman damgalarını (altyazıların ve oynatmanın kullandığı) koruyarak tran
 - **Buradan oynat**: onu oynatır.
 - **Kopyala**: metnini kopyalar.
 - **Metni düzenle…**: metnini değiştirir.
+- **Zamanlamayı düzenle…**: başlangıç ve bitişini milisaniye hassasiyetinde değiştirir. Zamanları `00:01:05,900`, `01:05,9` veya `65.9` biçiminde yazın.
+- **Sonrasına altyazı ekle…**: eksik bir altyazı ekler; bu altyazı varsayılan olarak bir sonrakine kadarki boşluğu doldurur. Konuşmacılar belirlendiyse kimin söylediğini seçin (varsayılan olarak önceki altyazının konuşmacısı) veya yeni bir konuşmacı yazın. Altyazı, metnini yazdığınızda eklenir.
+- **Konuşmacıyı değiştir…**: konuşmacılar belirlendiyse onu kimin söylediğini veya yeni bir konuşmacıyı seçer. **Konuşmacıları yeniden adlandır…** seçeneğinin aksine yalnızca bu altyazıyı değiştirir.
 - **Konuşmacıları yeniden adlandır…**: her konuşmacıya bir ad verir (`SPEAKER_00` → `Ayşe`). İki konuşmacıya aynı adı vermek onları birleştirir. `⋯` menüsünde de bulunur.
+- **Altyazıyı sil**: onu siler. Metni varsa önce onay ister.
 
-Değişmeyen kelimeler zamanlamalarını korur, bu yüzden oynatma sırasında vurgulanmaya devam ederler.
+Değişmeyen kelimeler zamanlamalarını korur, bu yüzden oynatma sırasında vurgulanmaya devam ederler. Zamanlamasını değiştirdiğiniz veya eklediğiniz bir altyazının kelime zamanlamaları yoktur; bu yüzden kelimeleri vurgulanmaz ve düşük güvenli olarak altı çizilmez.
 
 ## Düşük güvenilirlikli kelimeleri inceleyin
 

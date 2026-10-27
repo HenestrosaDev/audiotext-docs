@@ -51,9 +51,13 @@ To correct the transcription while keeping its timestamps (which the subtitles a
 - **Play from here**: plays it.
 - **Copy**: copies its text.
 - **Edit text…**: changes its text.
+- **Edit timing…**: changes when it starts and ends, to the millisecond. Type the times as `00:01:05,900`, `01:05,9` or `65.9`.
+- **Add subtitle after…**: adds a missing subtitle, which by default fills the gap until the next one. If the speakers were identified, choose who says it (by default, the speaker of the subtitle before) or type a new one. It's added once you write its text.
+- **Change speaker…**: if the speakers were identified, chooses who says it, or a new speaker. Unlike **Rename speakers…**, it only changes this subtitle.
 - **Rename speakers…**: gives a name to each speaker (`SPEAKER_00` → `Ana`). Giving two speakers the same name merges them. It's also in the `⋯` menu.
+- **Delete subtitle**: deletes it, asking you first if it has text.
 
-The words that don't change keep their timings, so they're still highlighted while playing.
+The words that don't change keep their timings, so they're still highlighted while playing. A subtitle whose timing you change, or that you add, has no word timings, so its words aren't highlighted nor underlined as low-confidence.
 
 ## Review the low-confidence words
 

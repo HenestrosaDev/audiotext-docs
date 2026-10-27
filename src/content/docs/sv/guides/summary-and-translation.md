@@ -58,21 +58,23 @@ Så länge några är kvar går pilarna bredvid till föregående och nästa und
 
 ### Korrigera och tajma om översättningen
 
-En översättning behöver ofta andra tider än originalet, t.ex. undertexter som tar längre tid att läsa. Högerklicka på ett segment i översättningen för att:
+En översättning behöver ofta andra tider än originalet, t.ex. undertexter som tar längre tid att läsa. Högerklicka på en undertext i översättningen för att:
 
 - **Redigera text…**: ändra dess text.
-- **Redigera tiderna…**: ändra när det börjar och slutar, på millisekunden. Skriv tiderna som `00:01:05,900`, `01:05,9` eller `65.9`.
-- **Lägg till ett segment efter…**: lägga till ett segment, som som standard fyller luckan fram till nästa.
-- **Radera segmentet**.
+- **Redigera tider…**: ändra när det börjar och slutar, på millisekunden. Skriv tiderna som `00:01:05,900`, `01:05,9` eller `65.9`.
+- **Lägg till undertext efter…**: lägga till en undertext, som som standard fyller luckan fram till nästa.
+- **Radera undertext**.
+
+Du kan också ändra tiderna i transkriberingen och lägga till undertexter i den: se [Korrigera transkriberingen](/sv/guides/transcript/#korrigera-transkriberingen).
 
 ### Översätt själv
 
-För att skriva översättningen själv väljer du **Manuellt** under **Översätt med:**. Ingen API-nyckel behövs. Översättningen börjar med ett tomt segment för varje undertext i transkriberingen, som visas som **Inte översatt ännu**, och panelen visar hur många som är kvar. Högerklicka på ett och välj **Översätt text…**: dialogrutan visar originaltexten som sägs under tiden. När du håller muspekaren över ett visas knappen **Översätt text…** till höger, som öppnar samma dialogruta.
+För att skriva översättningen själv väljer du **Manuellt** under **Översätt med:**. Ingen API-nyckel behövs. Översättningen börjar med en tom undertext för varje undertext i transkriberingen, som visas som **Inte översatt ännu**, och panelen visar hur många som är kvar. Högerklicka på en och välj **Översätt text…**: dialogrutan visar originaltexten som sägs under tiden. När du håller muspekaren över en visas knappen **Översätt text…** till höger, som öppnar samma dialogruta.
 
 ### Undertexter och export
 
-- I transkriberingar av videor markerar du **Visa den som videons undertexter** i menyn **Översätt** för att visa översättningen som undertexter. Videons meny växlar dem också. Se [Se videor med undertexter](/sv/guides/transcript/#se-videor-med-undertexter).
-- För att spara översättningen som en fil klickar du på exportknappen i dess panel. Den exporteras i samma [format](/sv/guides/transcript/#kopiera-och-exportera) som transkriberingen, med språket i filnamnet (t.ex. `video.es.srt`), så att videospelare läser in den med videon. Segment som inte är översatta ännu utelämnas ur undertexterna. Samma meny gör en [kopia av videon med undertexterna](/sv/guides/transcript/#exportera-videon-med-undertexterna).
+- I transkriberingar av videor markerar du **Visa som videoundertexter** i menyn **Översätt** för att visa översättningen som undertexter. Videons meny växlar dem också. Se [Se videor med undertexter](/sv/guides/transcript/#se-videor-med-undertexter).
+- För att spara översättningen som en fil klickar du på exportknappen i dess panel. Den exporteras i samma [format](/sv/guides/transcript/#kopiera-och-exportera) som transkriberingen, med språket i filnamnet (t.ex. `video.es.srt`), så att videospelare läser in den med videon. Undertexter som inte är översatta ännu exporteras inte. Samma meny gör en [kopia av videon med undertexterna](/sv/guides/transcript/#exportera-videon-med-undertexterna).
 
 :::tip
 För att få transkriberingen direkt på ett annat språk, utan leverantör, kan du också översätta under transkriberingen. Se [Språk](/sv/guides/transcription-settings/#språk).

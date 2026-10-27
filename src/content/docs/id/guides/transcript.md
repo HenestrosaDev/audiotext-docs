@@ -51,9 +51,13 @@ Untuk mengoreksi transkripsi sambil mempertahankan stempel waktunya (yang diguna
 - **Putar dari sini**: memutarnya.
 - **Salin**: menyalin teksnya.
 - **Edit teks…**: mengubah teksnya.
+- **Edit waktu…**: mengubah kapan subtitle dimulai dan berakhir, hingga milidetik. Ketik waktunya sebagai `00:01:05,900`, `01:05,9`, atau `65.9`.
+- **Tambah subtitle setelahnya…**: menambahkan subtitle yang terlewat, yang secara bawaan mengisi jeda hingga subtitle berikutnya. Jika pembicara sudah dikenali, pilih siapa yang mengatakannya (secara bawaan, pembicara subtitle sebelumnya) atau ketik pembicara baru. Subtitle ditambahkan setelah Anda menulis teksnya.
+- **Ganti pembicara…**: jika pembicara sudah dikenali, memilih siapa yang mengatakannya, atau pembicara baru. Berbeda dengan **Ganti nama pembicara…**, opsi ini hanya mengubah subtitle ini.
 - **Ganti nama pembicara…**: memberi nama kepada setiap pembicara (`SPEAKER_00` → `Ana`). Memberi dua pembicara nama yang sama akan menggabungkan keduanya. Opsi ini juga ada di menu `⋯`.
+- **Hapus subtitle**: menghapusnya. Jika berisi teks, akan meminta konfirmasi dulu.
 
-Kata yang tidak berubah tetap mempertahankan waktunya, sehingga tetap disorot saat diputar.
+Kata yang tidak berubah tetap mempertahankan waktunya, sehingga tetap disorot saat diputar. Subtitle yang waktunya Anda ubah, atau yang Anda tambahkan, tidak memiliki waktu per kata, sehingga katanya tidak disorot maupun digarisbawahi sebagai kurang yakin.
 
 ## Tinjau kata dengan keyakinan rendah
 
