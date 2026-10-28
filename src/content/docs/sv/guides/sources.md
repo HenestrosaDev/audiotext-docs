@@ -9,7 +9,7 @@ Audiotext transkriberar från fyra typer av källor, som du väljer i det övre 
 
 ## Fil
 
-Transkriberar en ljud- eller videofil. Klicka på **Välj en fil…** eller släpp filen i fönstret. Filväljaren visar **Alla filer som stöds** som standard; du kan visa bara **Ljudfiler** eller **Videofiler**. Se [Format och språk](/sv/reference/formats-and-languages/) för formaten som stöds.
+Transkriberar en ljud- eller videofil. Klicka på **Välj fil…** eller släpp filen i fönstret. Filväljaren visar **Alla filer som stöds** som standard; du kan visa bara **Ljudfiler** eller **Videofiler**. Se [Format och språk](/sv/reference/formats-and-languages/) för formaten som stöds.
 
 Det går bara att lägga till en fil i taget. För att transkribera flera filer använder du källan [Mapp](#mapp).
 
@@ -34,7 +34,7 @@ Spelar in din röst eller ett möte och transkriberar det. Inspelningen sparas i
 
 ### Livetext
 
-Med **WhisperX** aktiverar du **Visa texten under inspelning** på kortet **Livetext** för att se ett utkast av texten medan du pratar. Utkastet skrivs av en snabb **Livemodell** (`small` som standard). När du stoppar transkriberas hela inspelningen igen med motorns modell, som är mer exakt, och utkastet ersätts.
+Med **WhisperX** aktiverar du **Visa text under inspelning** på kortet **Livetext** för att se ett utkast av texten medan du pratar. Utkastet skrivs av en snabb **Livemodell** (`small` som standard). När du stoppar transkriberas hela inspelningen igen med motorns modell, som är mer exakt, och utkastet ersätts.
 
 ![Livetexten under inspelning från mikrofonen](/screenshots/live-text.png)
 
@@ -52,7 +52,7 @@ För att transkribera det som datorn spelar upp (ett videosamtal, ett webbinariu
 
 ## Mapp
 
-Transkriberar alla ljud- och videofiler i en mapp och, om **Inkludera undermappar** är aktiverat på kortet **Mapp**, i dess undermappar. Klicka på **Välj en mapp…** eller släpp mappen i fönstret. Audiotext talar om hur många filer det hittade. För att hoppa över vissa filer skriver du deras namn eller sökvägar, separerade med kommatecken, i **Hoppa över filer som matchar** (t.ex. `*.wav, drafts/*`). Dolda filer hoppas alltid över.
+Transkriberar alla ljud- och videofiler i en mapp och, om **Inkludera undermappar** är aktiverat på kortet **Mapp**, i dess undermappar. Klicka på **Välj mapp…** eller släpp mappen i fönstret. Audiotext talar om hur många filer det hittade. För att hoppa över vissa filer skriver du deras namn eller sökvägar, separerade med kommatecken, i **Hoppa över filer som matchar** (t.ex. `*.wav, drafts/*`). Dolda filer hoppas alltid över.
 
 Transkriberingen av varje fil sparas bredvid den (eller i en annan mapp som du väljer på kortet **Utdata**), med samma namn och filändelsen för varje vald **filtyp**. Till exempel med `.txt` och `.vtt`:
 
@@ -85,7 +85,7 @@ Sidhuvudet visar var filerna sparas och länkar till källmappen. **Redigera ins
 
 ### Bevaka en mapp
 
-Aktivera **Bevaka mappen** på kortet **Mapp** för att fortsätta transkribera filer som läggs till i mappen (eller dess undermappar) tills du klickar på **Sluta bevaka**. Det är praktiskt för inspelningar från en diktafon eller ett mötesverktyg som kopieras till en mapp.
+Aktivera **Bevaka mapp** på kortet **Mapp** för att fortsätta transkribera filer som läggs till i mappen (eller dess undermappar) tills du klickar på **Sluta bevaka**. Det är praktiskt för inspelningar från en diktafon eller ett mötesverktyg som kopieras till en mapp.
 
 - Filer som redan finns i mappen hoppas över, om du inte aktiverar **Transkribera filerna som redan finns i mappen**: då transkriberas först de som saknar transkribering.
 - En fil transkriberas när den har kopierats helt (när storleken slutar ändras), så stora filer transkriberas inte till hälften.

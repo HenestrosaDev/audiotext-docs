@@ -31,7 +31,7 @@ Se il file di origine è stato spostato o eliminato, l'audio non è disponibile,
 
 ### Guarda i video con i sottotitoli
 
-Le trascrizioni dei video mostrano il video sopra il testo. Il suo menu permette di **Mostra i sottotitoli sul video** e di sceglierne la **Dimensione** (piccola, media o grande), la **Posizione** (in basso o in alto) e lo **Stile** (sfondo scuro o contorno). Se la trascrizione ha delle [traduzioni](/it/guides/summary-and-translation/#traduzione), il menu permette anche di scegliere se i sottotitoli mostrano la **Trascrizione** o la **Traduzione in…** una lingua. Anche il pulsante **Sottotitoli** della barra del lettore li mostra o li nasconde, e la freccia accanto apre lo stesso menu.
+Le trascrizioni dei video mostrano il video sopra il testo. Il suo menu permette di **Mostra sottotitoli sul video** e di sceglierne la **Dimensione** (piccola, media o grande), la **Posizione** (in basso o in alto) e lo **Stile** (sfondo scuro o contorno). Se la trascrizione ha delle [traduzioni](/it/guides/summary-and-translation/#traduzione), il menu permette anche di scegliere se i sottotitoli mostrano la **Trascrizione** o la **Traduzione in…** una lingua. Anche il pulsante **Sottotitoli** della barra del lettore li mostra o li nasconde, e la freccia accanto apre lo stesso menu.
 
 ## Trova e sostituisci
 
@@ -51,9 +51,13 @@ Per correggere la trascrizione mantenendo i marcatori temporali (usati dai sotto
 - **Riproduci da qui**: lo riproduce.
 - **Copia**: ne copia il testo.
 - **Modifica testo…**: ne cambia il testo.
+- **Modifica tempi…**: cambia quando inizia e finisce, al millisecondo. Scrivi i tempi come `00:01:05,900`, `01:05,9` o `65.9`.
+- **Aggiungi sottotitolo dopo…**: aggiunge un sottotitolo mancante che, per impostazione predefinita, riempie lo spazio fino al successivo. Se i parlanti sono stati identificati, scegli chi lo dice (per impostazione predefinita, il parlante del sottotitolo precedente) o scrivine uno nuovo. Viene aggiunto quando ne scrivi il testo.
+- **Cambia parlante…**: se i parlanti sono stati identificati, sceglie chi lo dice, o un nuovo parlante. A differenza di **Rinomina parlanti…**, cambia solo questo sottotitolo.
 - **Rinomina parlanti…**: dà un nome a ogni parlante (`SPEAKER_00` → `Anna`). Dare lo stesso nome a due parlanti li unisce. È anche nel menu `⋯`.
+- **Elimina sottotitolo**: lo elimina. Se ha del testo, chiede conferma.
 
-Le parole che non cambiano mantengono i loro tempi, quindi continuano a essere evidenziate durante la riproduzione.
+Le parole che non cambiano mantengono i loro tempi, quindi continuano a essere evidenziate durante la riproduzione. Un sottotitolo di cui cambi i tempi, o che aggiungi, non ha i tempi delle parole, quindi le sue parole non vengono evidenziate né sottolineate come poco affidabili.
 
 ## Rivedi le parole a bassa affidabilità
 
@@ -106,7 +110,7 @@ I sottotitoli e la tabella richiedono i marcatori temporali. Le [traduzioni](/it
 
 Per condividere un video dove non si possono caricare file di sottotitoli (es. un social network), scegli **Video con sottotitoli (.mp4)…** nel menu di esportazione della trascrizione, o di una traduzione. Audiotext crea una copia del video con i sottotitoli disegnati sopra, come vengono mostrati nell'app: con la loro dimensione, posizione e stile (consulta [Guarda i video con i sottotitoli](#guarda-i-video-con-i-sottotitoli)).
 
-Viene creata in background, e lo stato ne mostra l'avanzamento. Per annullarla, scegli **Interrompi l'aggiunta dei sottotitoli al video** nello stesso menu. La copia è un file MP4 (video H.264 e audio AAC), e il video originale non cambia.
+Viene creata in background, e lo stato ne mostra l'avanzamento. Per annullarla, scegli **Interrompi aggiunta dei sottotitoli al video** nello stesso menu. La copia è un file MP4 (video H.264 e audio AAC), e il video originale non cambia.
 
 Se nessun font del tuo sistema contiene alcuni caratteri dei sottotitoli, vengono disegnati come riquadri, e Audiotext li elenca alla fine. Consulta [Risoluzione dei problemi](/it/help/troubleshooting/#il-video-con-sottotitoli-mostra-riquadri).
 

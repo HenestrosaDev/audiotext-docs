@@ -51,9 +51,13 @@ Para corrigir a transcrição sem perder os carimbos de tempo (usados pelas lege
 - **Reproduzir daqui**: reproduz a legenda.
 - **Copiar**: copia o texto dela.
 - **Editar texto…**: muda o texto dela.
+- **Editar tempos…**: muda quando ela começa e termina, ao milissegundo. Digite os tempos como `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Adicionar legenda depois…**: adiciona uma legenda que está faltando, que por padrão preenche o intervalo até a seguinte. Se os falantes foram identificados, escolha quem a diz (por padrão, o falante da legenda anterior) ou digite um novo. Ela é adicionada quando você escreve o texto dela.
+- **Alterar falante…**: se os falantes foram identificados, escolhe quem a diz, ou um falante novo. Ao contrário de **Renomear falantes…**, só muda esta legenda.
 - **Renomear falantes…**: dá um nome a cada falante (`SPEAKER_00` → `Ana`). Dar o mesmo nome a dois falantes os mescla. Também está no menu `⋯`.
+- **Eliminar legenda**: elimina a legenda. Se ela tiver texto, pede confirmação.
 
-As palavras que não mudam mantêm os seus tempos, então continuam sendo destacadas durante a reprodução.
+As palavras que não mudam mantêm os seus tempos, então continuam sendo destacadas durante a reprodução. Uma legenda cujos tempos você muda, ou que você adiciona, não tem tempos por palavra, então as palavras dela não são destacadas nem sublinhadas como de baixa confiança.
 
 ## Revise as palavras de baixa confiança
 
@@ -106,7 +110,7 @@ As legendas e a tabela exigem carimbos de tempo. As [traduções](/pt/guides/sum
 
 Para compartilhar um vídeo onde não é possível carregar arquivos de legendas (ex.: uma rede social), escolha **Vídeo com legendas (.mp4)…** no menu de exportar da transcrição, ou de uma tradução. O Audiotext faz uma cópia do vídeo com as legendas desenhadas nele, como aparecem no aplicativo: com o tamanho, a posição e o estilo delas (consulte [Assista a vídeos com legendas](#assista-a-vídeos-com-legendas)).
 
-Ela é feita em segundo plano, e o status mostra o progresso. Para cancelar, escolha **Parar de adicionar as legendas ao vídeo** no mesmo menu. A cópia é um arquivo MP4 (vídeo H.264 e áudio AAC), e o vídeo original não muda.
+Ela é feita em segundo plano, e o status mostra o progresso. Para cancelar, escolha **Parar de adicionar legendas ao vídeo** no mesmo menu. A cópia é um arquivo MP4 (vídeo H.264 e áudio AAC), e o vídeo original não muda.
 
 Se nenhuma fonte do seu sistema tiver alguns caracteres das legendas, eles são desenhados como quadrados, e o Audiotext os lista ao terminar. Consulte [Solução de problemas](/pt/help/troubleshooting/#o-vídeo-com-legendas-mostra-quadrados).
 

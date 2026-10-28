@@ -51,9 +51,13 @@ Aby poprawić transkrypcję, zachowując znaczniki czasu (używane przez napisy 
 - **Odtwórz od tego miejsca**: odtwarza go.
 - **Kopiuj**: kopiuje jego tekst.
 - **Edytuj tekst…**: zmienia jego tekst.
+- **Edytuj czasy…**: zmienia, kiedy się zaczyna i kończy, z dokładnością do milisekundy. Wpisz czasy jako `00:01:05,900`, `01:05,9` lub `65.9`.
+- **Dodaj napis po…**: dodaje brakujący napis, który domyślnie wypełnia przerwę do następnego. Jeśli mówcy zostali rozpoznani, wybierz, kto go mówi (domyślnie mówca poprzedniego napisu), lub wpisz nowego. Zostaje dodany, gdy wpiszesz jego tekst.
+- **Zmień mówcę…**: jeśli mówcy zostali rozpoznani, wybiera, kto go mówi, lub nowego mówcę. W przeciwieństwie do **Zmień nazwy mówców…** zmienia tylko ten napis.
 - **Zmień nazwy mówców…**: nadaje nazwę każdemu mówcy (`SPEAKER_00` → `Anna`). Nadanie dwóm mówcom tej samej nazwy łączy ich. Jest też w menu `⋯`.
+- **Usuń napis**: usuwa go. Jeśli zawiera tekst, najpierw prosi o potwierdzenie.
 
-Słowa, które się nie zmieniają, zachowują swoje czasy, więc nadal są wyróżniane podczas odtwarzania.
+Słowa, które się nie zmieniają, zachowują swoje czasy, więc nadal są wyróżniane podczas odtwarzania. Napis, którego czasy zmienisz lub który dodasz, nie ma czasów słów, więc jego słowa nie są wyróżniane ani podkreślane jako niepewne.
 
 ## Sprawdzanie słów o niskiej pewności
 

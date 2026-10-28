@@ -51,9 +51,13 @@ Pour corriger la transcription en conservant ses horodatages (utilisés par les 
 - **Lire à partir d’ici** : le lit.
 - **Copier** : copie son texte.
 - **Modifier le texte…** : change son texte.
+- **Modifier le minutage…** : change quand il commence et se termine, à la milliseconde. Saisissez les temps sous la forme `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Ajouter un sous-titre après…** : ajoute un sous-titre manquant, qui par défaut remplit l’espace jusqu’au suivant. Si les locuteurs ont été identifiés, choisissez qui le dit (par défaut, le locuteur du sous-titre précédent) ou saisissez-en un nouveau. Il est ajouté une fois son texte écrit.
+- **Changer le locuteur…** : si les locuteurs ont été identifiés, choisit qui le dit, ou un nouveau locuteur. Contrairement à **Renommer les locuteurs…**, ne change que ce sous-titre.
 - **Renommer les locuteurs…** : donne un nom à chaque locuteur (`SPEAKER_00` → `Anne`). Donner le même nom à deux locuteurs les fusionne. Également dans le menu `⋯`.
+- **Supprimer le sous-titre** : le supprime. S’il contient du texte, une confirmation est demandée.
 
-Les mots qui ne changent pas conservent leur minutage, ils sont donc toujours surlignés pendant la lecture.
+Les mots qui ne changent pas conservent leur minutage, ils sont donc toujours surlignés pendant la lecture. Un sous-titre dont vous changez le minutage, ou que vous ajoutez, n’a pas de minutage par mot : ses mots ne sont donc ni surlignés ni soulignés comme peu fiables.
 
 ## Révisez les mots peu fiables
 

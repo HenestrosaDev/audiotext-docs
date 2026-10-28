@@ -9,7 +9,7 @@ Audiotext transcribes from four kinds of sources, which you choose in the top ba
 
 ## File
 
-Transcribes an audio or video file. Click **Choose a file…**, or drop the file on the window. The file explorer shows **All supported files** by default; you can show only **Audio files** or **Video files**. See [Formats and languages](/en/reference/formats-and-languages/) for the supported formats.
+Transcribes an audio or video file. Click **Choose file…**, or drop the file on the window. The file explorer shows **All supported files** by default; you can show only **Audio files** or **Video files**. See [Formats and languages](/en/reference/formats-and-languages/) for the supported formats.
 
 Only one file can be added at a time. To transcribe several files, use the [Folder](#folder) source.
 
@@ -34,7 +34,7 @@ Records your voice or a meeting and transcribes it. The recording is kept in you
 
 ### Live text
 
-With **WhisperX**, turn on **Show the text while recording** in the **Live text** card to see a draft of the text as you speak. The draft is written by a fast **Live model** (`small` by default). When you stop, the whole recording is transcribed again with the model of the engine, which is more accurate, and the draft is replaced.
+With **WhisperX**, turn on **Show text while recording** in the **Live text** card to see a draft of the text as you speak. The draft is written by a fast **Live model** (`small` by default). When you stop, the whole recording is transcribed again with the model of the engine, which is more accurate, and the draft is replaced.
 
 ![The live text while recording from the microphone](/screenshots/live-text.png)
 
@@ -52,7 +52,7 @@ To transcribe what your computer plays (a video call, a webinar, a video that ca
 
 ## Folder
 
-Transcribes all the audio and video files of a folder and, if **Include subfolders** is on in the **Folder** card, of its subfolders. Click **Choose a folder…** or drop the folder on the window. Audiotext tells you how many files it found. To leave some files out, write their names or paths, separated by commas, in **Skip files matching** (e.g. `*.wav, drafts/*`). Hidden files are always skipped.
+Transcribes all the audio and video files of a folder and, if **Include subfolders** is on in the **Folder** card, of its subfolders. Click **Choose folder…** or drop the folder on the window. Audiotext tells you how many files it found. To leave some files out, write their names or paths, separated by commas, in **Skip files matching** (e.g. `*.wav, drafts/*`). Hidden files are always skipped.
 
 The transcription of each file is saved next to it (or in another folder you choose in the **Output** card), with the same name and the extension of each **file type** you selected. For example, with `.txt` and `.vtt`:
 
@@ -85,7 +85,7 @@ The header shows where the files are saved and links to the source folder. **Edi
 
 ### Watch a folder
 
-Turn on **Watch the folder** in the **Folder** card to keep transcribing the files added to the folder (or to its subfolders) until you click **Stop watching**. It's useful for the recordings of a voice recorder or a meeting tool that are copied to a folder.
+Turn on **Watch folder** in the **Folder** card to keep transcribing the files added to the folder (or to its subfolders) until you click **Stop watching**. It's useful for the recordings of a voice recorder or a meeting tool that are copied to a folder.
 
 - The files that the folder already contains are skipped, unless you turn on **Transcribe the files already in the folder**: then the ones without a transcription are transcribed first.
 - A file is transcribed once it has been completely copied (when its size stops changing), so large files aren't transcribed halfway.

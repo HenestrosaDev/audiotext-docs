@@ -58,21 +58,23 @@ Dopóki jakieś zostały, strzałki obok przechodzą do poprzedniego i następne
 
 ### Poprawianie i zmiana czasów tłumaczenia
 
-Tłumaczenie często wymaga innych czasów niż oryginał, np. napisy, których czytanie trwa dłużej. Kliknij prawym przyciskiem segment tłumaczenia, aby:
+Tłumaczenie często wymaga innych czasów niż oryginał, np. napisy, których czytanie trwa dłużej. Kliknij prawym przyciskiem napis tłumaczenia, aby:
 
 - **Edytuj tekst…**: zmienić jego tekst.
 - **Edytuj czasy…**: zmienić, kiedy się zaczyna i kończy, z dokładnością do milisekundy. Wpisz czasy jako `00:01:05,900`, `01:05,9` lub `65.9`.
-- **Dodaj segment po…**: dodać segment, który domyślnie wypełnia przerwę do następnego.
-- **Usuń segment**.
+- **Dodaj napis po…**: dodać napis, który domyślnie wypełnia przerwę do następnego.
+- **Usuń napis**.
+
+Możesz też zmieniać czasy transkrypcji i dodawać do niej napisy: zobacz [Poprawianie transkrypcji](/pl/guides/transcript/#poprawianie-transkrypcji).
 
 ### Tłumaczenie samodzielne
 
-Aby samodzielnie napisać tłumaczenie, wybierz **Ręcznie** w polu **Tłumacz za pomocą:**. Nie wymaga to klucza API. Tłumaczenie zaczyna się od pustego segmentu dla każdego napisu transkrypcji, oznaczonego jako **Jeszcze nieprzetłumaczone**, a panel pokazuje, ile ich zostało. Kliknij jeden z nich prawym przyciskiem i wybierz **Przetłumacz tekst…**: okno pokazuje oryginalny tekst wypowiedziany w tym czasie. Po najechaniu kursorem na jeden z nich po prawej pojawia się przycisk **Przetłumacz tekst…**, który otwiera to samo okno.
+Aby samodzielnie napisać tłumaczenie, wybierz **Ręcznie** w polu **Tłumacz za pomocą:**. Nie wymaga to klucza API. Tłumaczenie zaczyna się od pustego napisu dla każdego napisu transkrypcji, oznaczonego jako **Jeszcze nieprzetłumaczone**, a panel pokazuje, ile ich zostało. Kliknij jeden z nich prawym przyciskiem i wybierz **Przetłumacz tekst…**: okno pokazuje oryginalny tekst wypowiedziany w tym czasie. Po najechaniu kursorem na jeden z nich po prawej pojawia się przycisk **Przetłumacz tekst…**, który otwiera to samo okno.
 
 ### Napisy i eksport
 
 - W transkrypcjach filmów zaznacz **Pokaż jako napisy wideo** w menu **Przetłumacz**, aby pokazać tłumaczenie jako napisy. Przełącza je też menu filmu. Zobacz [Oglądaj filmy z napisami](/pl/guides/transcript/#oglądaj-filmy-z-napisami).
-- Aby zapisać tłumaczenie do pliku, kliknij przycisk eksportu w jego panelu. Jest eksportowane w tych samych [formatach](/pl/guides/transcript/#kopiowanie-i-eksport) co transkrypcja, z językiem w nazwie pliku (np. `video.es.srt`), więc odtwarzacze wideo wczytują je razem z filmem. Segmenty jeszcze nieprzetłumaczone są pomijane w napisach. To samo menu tworzy [kopię filmu z napisami](/pl/guides/transcript/#eksport-filmu-z-napisami).
+- Aby zapisać tłumaczenie do pliku, kliknij przycisk eksportu w jego panelu. Jest eksportowane w tych samych [formatach](/pl/guides/transcript/#kopiowanie-i-eksport) co transkrypcja, z językiem w nazwie pliku (np. `video.es.srt`), więc odtwarzacze wideo wczytują je razem z filmem. Napisy jeszcze nieprzetłumaczone nie są eksportowane. To samo menu tworzy [kopię filmu z napisami](/pl/guides/transcript/#eksport-filmu-z-napisami).
 
 :::tip
 Aby otrzymać transkrypcję od razu w innym języku, bez dostawcy, możesz też tłumaczyć podczas transkrypcji. Zobacz [Język](/pl/guides/transcription-settings/#język).

@@ -9,7 +9,7 @@ Audiotext transcribe desde cuatro tipos de origen, que eliges en la barra superi
 
 ## Archivo
 
-Transcribe un archivo de audio o vídeo. Haz clic en **Elegir un archivo…** o suelta el archivo en la ventana. El explorador de archivos muestra **Todos los archivos compatibles** por defecto; puedes mostrar solo **Archivos de audio** o **Archivos de vídeo**. Consulta [Formatos e idiomas](/es/reference/formats-and-languages/) para ver los formatos compatibles.
+Transcribe un archivo de audio o vídeo. Haz clic en **Elegir archivo…** o suelta el archivo en la ventana. El explorador de archivos muestra **Todos los archivos compatibles** por defecto; puedes mostrar solo **Archivos de audio** o **Archivos de vídeo**. Consulta [Formatos e idiomas](/es/reference/formats-and-languages/) para ver los formatos compatibles.
 
 Solo se puede añadir un archivo a la vez. Para transcribir varios archivos, usa el origen [Carpeta](#carpeta).
 
@@ -34,7 +34,7 @@ Graba tu voz o una reunión y la transcribe. La grabación se guarda en tu histo
 
 ### Texto en directo
 
-Con **WhisperX**, activa **Mostrar el texto mientras se graba** en la tarjeta **Texto en directo** para ver un borrador del texto mientras hablas. El borrador lo escribe un **Modelo en directo** rápido (`small` por defecto). Al detenerla, toda la grabación se vuelve a transcribir con el modelo del motor, que es más preciso, y el borrador se reemplaza.
+Con **WhisperX**, activa **Mostrar texto mientras se graba** en la tarjeta **Texto en directo** para ver un borrador del texto mientras hablas. El borrador lo escribe un **Modelo en directo** rápido (`small` por defecto). Al detenerla, toda la grabación se vuelve a transcribir con el modelo del motor, que es más preciso, y el borrador se reemplaza.
 
 ![El texto en directo mientras se graba con el micrófono](/screenshots/live-text.png)
 
@@ -52,7 +52,7 @@ Para transcribir lo que reproduce tu ordenador (una videollamada, un webinar, un
 
 ## Carpeta
 
-Transcribe todos los archivos de audio y vídeo de una carpeta y, si **Incluir subcarpetas** está activado en la tarjeta **Carpeta**, de sus subcarpetas. Haz clic en **Elegir una carpeta…** o suelta la carpeta en la ventana. Audiotext te indica cuántos archivos ha encontrado. Para dejar fuera algunos archivos, escribe sus nombres o rutas, separados por comas, en **Omitir los archivos que coincidan con** (p. ej. `*.wav, drafts/*`). Los archivos ocultos siempre se omiten.
+Transcribe todos los archivos de audio y vídeo de una carpeta y, si **Incluir subcarpetas** está activado en la tarjeta **Carpeta**, de sus subcarpetas. Haz clic en **Elegir carpeta…** o suelta la carpeta en la ventana. Audiotext te indica cuántos archivos ha encontrado. Para dejar fuera algunos archivos, escribe sus nombres o rutas, separados por comas, en **Omitir los archivos que coincidan con** (p. ej. `*.wav, drafts/*`). Los archivos ocultos siempre se omiten.
 
 La transcripción de cada archivo se guarda junto a él (o en otra carpeta que elijas en la tarjeta **Salida**), con el mismo nombre y la extensión de cada **tipo de archivo** que hayas seleccionado. Por ejemplo, con `.txt` y `.vtt`:
 
@@ -85,7 +85,7 @@ La cabecera muestra dónde se guardan los archivos y enlaza a la carpeta de orig
 
 ### Vigila una carpeta
 
-Activa **Vigilar la carpeta** en la tarjeta **Carpeta** para seguir transcribiendo los archivos que se añadan a la carpeta (o a sus subcarpetas) hasta que hagas clic en **Dejar de vigilar**. Es útil para las grabaciones de una grabadora de voz o de una herramienta de reuniones que se copian a una carpeta.
+Activa **Vigilar carpeta** en la tarjeta **Carpeta** para seguir transcribiendo los archivos que se añadan a la carpeta (o a sus subcarpetas) hasta que hagas clic en **Dejar de vigilar**. Es útil para las grabaciones de una grabadora de voz o de una herramienta de reuniones que se copian a una carpeta.
 
 - Los archivos que ya contiene la carpeta se omiten, salvo que actives **Transcribir los archivos que ya hay en la carpeta**: entonces primero se transcriben los que no tienen transcripción.
 - Un archivo se transcribe cuando se ha copiado por completo (cuando su tamaño deja de cambiar), así que los archivos grandes no se transcriben a medias.

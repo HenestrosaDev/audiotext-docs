@@ -9,7 +9,7 @@ Audiotext transcribe desde catro tipos de orixe, que escolles na barra superior,
 
 ## Ficheiro
 
-Transcribe un ficheiro de audio ou vídeo. Fai clic en **Escoller un ficheiro…** ou solta o ficheiro na xanela. O explorador de ficheiros mostra **Todos os ficheiros compatibles** de forma predeterminada; podes mostrar só **Ficheiros de audio** ou **Ficheiros de vídeo**. Consulta [Formatos e idiomas](/gl/reference/formats-and-languages/) para ver os formatos compatibles.
+Transcribe un ficheiro de audio ou vídeo. Fai clic en **Escoller ficheiro…** ou solta o ficheiro na xanela. O explorador de ficheiros mostra **Todos os ficheiros compatibles** de forma predeterminada; podes mostrar só **Ficheiros de audio** ou **Ficheiros de vídeo**. Consulta [Formatos e idiomas](/gl/reference/formats-and-languages/) para ver os formatos compatibles.
 
 Só se pode engadir un ficheiro de cada vez. Para transcribir varios ficheiros, usa a orixe [Cartafol](#cartafol).
 
@@ -34,7 +34,7 @@ Grava a túa voz ou unha reunión e transcríbea. A gravación gárdase no teu h
 
 ### Texto en directo
 
-Con **WhisperX**, activa **Mostrar o texto mentres se grava** na tarxeta **Texto en directo** para ver un borrador do texto mentres falas. O borrador escríbeo un **Modelo en directo** rápido (`small` de forma predeterminada). Ao detela, toda a gravación vólvese transcribir co modelo do motor, que é máis preciso, e o borrador substitúese.
+Con **WhisperX**, activa **Mostrar texto mentres se grava** na tarxeta **Texto en directo** para ver un borrador do texto mentres falas. O borrador escríbeo un **Modelo en directo** rápido (`small` de forma predeterminada). Ao detela, toda a gravación vólvese transcribir co modelo do motor, que é máis preciso, e o borrador substitúese.
 
 ![O texto en directo mentres se grava co micrófono](/screenshots/live-text.png)
 
@@ -52,7 +52,7 @@ Para transcribir o que reproduce o teu ordenador (unha videochamada, un webinar,
 
 ## Cartafol
 
-Transcribe todos os ficheiros de audio e vídeo dun cartafol e, se **Incluír subcartafoles** está activado na tarxeta **Cartafol**, dos seus subcartafoles. Fai clic en **Escoller un cartafol…** ou solta o cartafol na xanela. Audiotext indícache cantos ficheiros atopou. Para deixar fóra algúns ficheiros, escribe os seus nomes ou rutas, separados por comas, en **Omitir os ficheiros que coincidan con** (p. ex. `*.wav, drafts/*`). Os ficheiros ocultos sempre se omiten.
+Transcribe todos os ficheiros de audio e vídeo dun cartafol e, se **Incluír subcartafoles** está activado na tarxeta **Cartafol**, dos seus subcartafoles. Fai clic en **Escoller cartafol…** ou solta o cartafol na xanela. Audiotext indícache cantos ficheiros atopou. Para deixar fóra algúns ficheiros, escribe os seus nomes ou rutas, separados por comas, en **Omitir os ficheiros que coincidan con** (p. ex. `*.wav, drafts/*`). Os ficheiros ocultos sempre se omiten.
 
 A transcrición de cada ficheiro gárdase xunto a el (ou noutro cartafol que escollas na tarxeta **Saída**), co mesmo nome e a extensión de cada **tipo de ficheiro** que seleccionases. Por exemplo, con `.txt` e `.vtt`:
 
@@ -85,7 +85,7 @@ A cabeceira mostra onde se gardan os ficheiros e ten unha ligazón ao cartafol d
 
 ### Vixía un cartafol
 
-Activa **Vixiar o cartafol** na tarxeta **Cartafol** para seguir transcribindo os ficheiros que se engadan ao cartafol (ou aos seus subcartafoles) ata que fagas clic en **Deixar de vixiar**. É útil para as gravacións dunha gravadora de voz ou dunha ferramenta de reunións que se copian a un cartafol.
+Activa **Vixiar cartafol** na tarxeta **Cartafol** para seguir transcribindo os ficheiros que se engadan ao cartafol (ou aos seus subcartafoles) ata que fagas clic en **Deixar de vixiar**. É útil para as gravacións dunha gravadora de voz ou dunha ferramenta de reunións que se copian a un cartafol.
 
 - Os ficheiros que xa contén o cartafol omítense, agás que actives **Transcribir os ficheiros que xa hai no cartafol**: entón primeiro transcríbense os que non teñen transcrición.
 - Un ficheiro transcríbese cando se copiou por completo (cando o seu tamaño deixa de cambiar), así que os ficheiros grandes non se transcriben a medias.

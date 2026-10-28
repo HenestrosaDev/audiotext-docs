@@ -66,7 +66,7 @@ Mostrato solo per il microfono. Consulta [Testo dal vivo](/it/guides/sources/#te
 
 Mostrati solo per le cartelle:
 
-- **Monitora la cartella**: consulta [Monitora una cartella](/it/guides/sources/#monitora-una-cartella).
+- **Monitora cartella**: consulta [Monitora una cartella](/it/guides/sources/#monitora-una-cartella).
 - **Trascrivi i file già presenti nella cartella** (solo durante il monitoraggio): trascrive prima i file che la cartella contiene già e che non hanno ancora una trascrizione. Disattivato per impostazione predefinita.
 - **Includi sottocartelle**: trascrive anche i file delle sottocartelle.
 - **Salta i file corrispondenti a**: nomi o percorsi dei file da saltare, separati da virgole (ad es. `*.wav, drafts/*`). I file nascosti vengono sempre saltati.

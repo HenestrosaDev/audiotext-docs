@@ -66,7 +66,7 @@ Only shown for the microphone. See [Live text](/en/guides/sources/#live-text).
 
 Only shown for folders:
 
-- **Watch the folder**: see [Watch a folder](/en/guides/sources/#watch-a-folder).
+- **Watch folder**: see [Watch a folder](/en/guides/sources/#watch-a-folder).
 - **Transcribe the files already in the folder** (only while watching): first transcribes the files the folder already contains that don't have a transcription yet. Off by default.
 - **Include subfolders**: also transcribes the files of the subfolders.
 - **Skip files matching**: names or paths of the files to skip, separated by commas (e.g. `*.wav, drafts/*`). Hidden files are always skipped.

@@ -9,7 +9,7 @@ Audiotext transcriu des de quatre tipus d'origen, que tries a la barra superior,
 
 ## Fitxer
 
-Transcriu un fitxer d'àudio o vídeo. Fes clic a **Tria un fitxer…** o deixa anar el fitxer a la finestra. L'explorador de fitxers mostra **Tots els fitxers compatibles** per defecte; pots mostrar només **Fitxers d'àudio** o **Fitxers de vídeo**. Consulta [Formats i idiomes](/ca/reference/formats-and-languages/) per veure els formats compatibles.
+Transcriu un fitxer d'àudio o vídeo. Fes clic a **Tria fitxer…** o deixa anar el fitxer a la finestra. L'explorador de fitxers mostra **Tots els fitxers compatibles** per defecte; pots mostrar només **Fitxers d'àudio** o **Fitxers de vídeo**. Consulta [Formats i idiomes](/ca/reference/formats-and-languages/) per veure els formats compatibles.
 
 Només es pot afegir un fitxer alhora. Per transcriure'n diversos, fes servir l'origen [Carpeta](#carpeta).
 
@@ -52,7 +52,7 @@ Per transcriure el que reprodueix l'ordinador (una videotrucada, un webinar, un 
 
 ## Carpeta
 
-Transcriu tots els fitxers d'àudio i vídeo d'una carpeta i, si **Inclou les subcarpetes** està activat a la targeta **Carpeta**, de les seves subcarpetes. Fes clic a **Tria una carpeta…** o deixa anar la carpeta a la finestra. Audiotext t'indica quants fitxers ha trobat. Per deixar fora alguns fitxers, escriu-ne els noms o els camins, separats per comes, a **Omet els fitxers que coincideixin amb** (p. ex. `*.wav, drafts/*`). Els fitxers ocults sempre s'ometen.
+Transcriu tots els fitxers d'àudio i vídeo d'una carpeta i, si **Inclou les subcarpetes** està activat a la targeta **Carpeta**, de les seves subcarpetes. Fes clic a **Tria carpeta…** o deixa anar la carpeta a la finestra. Audiotext t'indica quants fitxers ha trobat. Per deixar fora alguns fitxers, escriu-ne els noms o els camins, separats per comes, a **Omet els fitxers que coincideixin amb** (p. ex. `*.wav, drafts/*`). Els fitxers ocults sempre s'ometen.
 
 La transcripció de cada fitxer es desa al costat seu (o en una altra carpeta que triïs a la targeta **Sortida**), amb el mateix nom i l'extensió de cada **tipus de fitxer** que hagis seleccionat. Per exemple, amb `.txt` i `.vtt`:
 
@@ -85,7 +85,7 @@ La capçalera mostra on es desen els fitxers i enllaça amb la carpeta d'origen.
 
 ### Vigila una carpeta
 
-Activa **Vigila la carpeta** a la targeta **Carpeta** per continuar transcrivint els fitxers que s'afegeixin a la carpeta (o a les seves subcarpetes) fins que facis clic a **Deixa de vigilar**. És útil per als enregistraments d'una gravadora de veu o d'una eina de reunions que es copien a una carpeta.
+Activa **Vigila carpeta** a la targeta **Carpeta** per continuar transcrivint els fitxers que s'afegeixin a la carpeta (o a les seves subcarpetes) fins que facis clic a **Deixa de vigilar**. És útil per als enregistraments d'una gravadora de veu o d'una eina de reunions que es copien a una carpeta.
 
 - Els fitxers que ja conté la carpeta s'ometen, llevat que activis **Transcriu els fitxers que ja hi ha a la carpeta**: aleshores primer es transcriuen els que no tenen transcripció.
 - Un fitxer es transcriu quan s'ha copiat del tot (quan la seva mida deixa de canviar), així que els fitxers grans no es transcriuen a mitges.

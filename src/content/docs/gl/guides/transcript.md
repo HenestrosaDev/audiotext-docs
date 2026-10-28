@@ -51,9 +51,13 @@ Para corrixir a transcrición sen perder as súas marcas de tempo (que usan os s
 - **Reproducir desde aquí**: reprodúceo.
 - **Copiar**: copia o seu texto.
 - **Editar texto…**: cambia o seu texto.
+- **Editar tempos…**: cambia cando empeza e remata, ao milisegundo. Escribe os tempos como `00:01:05,900`, `01:05,9` ou `65.9`.
+- **Engadir subtítulo despois…**: engade un subtítulo que falta, que por defecto ocupa o oco ata o seguinte. Se se identificaron os falantes, escolle quen o di (por defecto, o falante do subtítulo anterior) ou escribe un novo. Engádese cando escribes o seu texto.
+- **Cambiar falante…**: se se identificaron os falantes, escolle quen o di, ou un falante novo. A diferenza de **Renomear falantes…**, só cambia este subtítulo.
 - **Renomear falantes…**: dálle un nome a cada falante (`SPEAKER_00` → `Ana`). Darlles o mesmo nome a dous falantes fusiónaos. Tamén está no menú `⋯`.
+- **Eliminar subtítulo**: elimínao. Se ten texto, pídeche confirmación.
 
-As palabras que non cambian manteñen os seus tempos, así que se seguen resaltando ao reproducir.
+As palabras que non cambian manteñen os seus tempos, así que se seguen resaltando ao reproducir. Un subtítulo cuxos tempos cambias, ou que engades, non ten tempos por palabra, así que as súas palabras non se resaltan nin se subliñan como de baixa confianza.
 
 ## Revisa as palabras de baixa confianza
 
@@ -106,7 +110,7 @@ Os subtítulos e a táboa precisan marcas de tempo. As [traducións](/gl/guides/
 
 Para compartir un vídeo onde non se poden cargar ficheiros de subtítulos (p. ex. unha rede social), escolle **Vídeo con subtítulos (.mp4)…** no menú de exportar da transcrición, ou dunha tradución. Audiotext fai unha copia do vídeo cos subtítulos debuxados enriba, tal como se mostran na aplicación: co seu tamaño, a súa posición e o seu estilo (consulta [Mira vídeos con subtítulos](#mira-vídeos-con-subtítulos)).
 
-Faise en segundo plano, e o estado mostra o seu progreso. Para cancelalo, escolle **Deixar de engadir os subtítulos ao vídeo** no mesmo menú. A copia é un ficheiro MP4 (vídeo H.264 e audio AAC), e o vídeo orixinal non cambia.
+Faise en segundo plano, e o estado mostra o seu progreso. Para cancelalo, escolle **Deixar de engadir subtítulos ao vídeo** no mesmo menú. A copia é un ficheiro MP4 (vídeo H.264 e audio AAC), e o vídeo orixinal non cambia.
 
 Se ningunha fonte do teu sistema ten algúns caracteres dos subtítulos, debúxanse como cadros, e Audiotext enuméraos ao rematar. Consulta [Solución de problemas](/gl/help/troubleshooting/#o-vídeo-con-subtítulos-mostra-cadros).
 

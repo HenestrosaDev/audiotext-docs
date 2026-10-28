@@ -31,7 +31,7 @@ If the source file was moved or deleted, the audio isn't available, but the text
 
 ### Watch videos with subtitles
 
-The transcriptions of videos show the video above the text. Its menu lets you **Show subtitles on the video**, and choose their **Size** (small, medium or large), **Position** (bottom or top) and **Style** (dark background or outline). If the transcription has [translations](/en/guides/summary-and-translation/#translation), the menu also chooses whether the subtitles show the **Transcription** or the **Translation into…** a language. The **Subtitles** button of the player bar also shows or hides them, and the arrow next to it opens the same menu.
+The transcriptions of videos show the video above the text. Its menu lets you **Show subtitles on video**, and choose their **Size** (small, medium or large), **Position** (bottom or top) and **Style** (dark background or outline). If the transcription has [translations](/en/guides/summary-and-translation/#translation), the menu also chooses whether the subtitles show the **Transcription** or the **Translation into…** a language. The **Subtitles** button of the player bar also shows or hides them, and the arrow next to it opens the same menu.
 
 ## Find and replace
 
@@ -42,7 +42,7 @@ Press `Ctrl+F` (`⌘F` on macOS), or click the magnifying glass of the header, t
 - The window isn't modal, so you can read and play the text while it's open. **Stay on top** keeps it above the main window.
 - `Esc` closes it.
 
-In the **Plain text** mode, the window only finds (**Find in the transcription**), since a match there can't be traced back to a subtitle. Switch back to **Subtitles** to replace.
+In the **Plain text** mode, the window only finds (**Find in transcription**), since a match there can't be traced back to a subtitle. Switch back to **Subtitles** to replace.
 
 ## Correct the transcription
 
@@ -51,9 +51,13 @@ To correct the transcription while keeping its timestamps (which the subtitles a
 - **Play from here**: plays it.
 - **Copy**: copies its text.
 - **Edit text…**: changes its text.
+- **Edit timing…**: changes when it starts and ends, to the millisecond. Type the times as `00:01:05,900`, `01:05,9` or `65.9`.
+- **Add subtitle after…**: adds a missing subtitle, which by default fills the gap until the next one. If the speakers were identified, choose who says it (by default, the speaker of the subtitle before) or type a new one. It's added once you write its text.
+- **Change speaker…**: if the speakers were identified, chooses who says it, or a new speaker. Unlike **Rename speakers…**, it only changes this subtitle.
 - **Rename speakers…**: gives a name to each speaker (`SPEAKER_00` → `Ana`). Giving two speakers the same name merges them. It's also in the `⋯` menu.
+- **Delete subtitle**: deletes it, asking you first if it has text.
 
-The words that don't change keep their timings, so they're still highlighted while playing.
+The words that don't change keep their timings, so they're still highlighted while playing. A subtitle whose timing you change, or that you add, has no word timings, so its words aren't highlighted nor underlined as low-confidence.
 
 ## Review the low-confidence words
 
@@ -106,7 +110,7 @@ The subtitles and the table need timestamps. The [translations](/en/guides/summa
 
 To share a video where subtitle files can't be loaded (e.g. a social network), choose **Video with subtitles (.mp4)…** in the export menu of the transcription, or of a translation. Audiotext makes a copy of the video with the subtitles drawn on it, as they're shown in the app: with their size, position and style (see [Watch videos with subtitles](#watch-videos-with-subtitles)).
 
-It's made in the background, and the status shows its progress. To cancel it, choose **Stop adding the subtitles to the video** in the same menu. The copy is an MP4 file (H.264 video and AAC audio), and the original video isn't changed.
+It's made in the background, and the status shows its progress. To cancel it, choose **Stop adding subtitles to video** in the same menu. The copy is an MP4 file (H.264 video and AAC audio), and the original video isn't changed.
 
 If no font of your system has some characters of the subtitles, they're drawn as boxes, and Audiotext lists them when it finishes. See [Troubleshooting](/en/help/troubleshooting/#the-video-with-subtitles-shows-boxes).
 

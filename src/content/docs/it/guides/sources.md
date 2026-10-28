@@ -9,7 +9,7 @@ Audiotext trascrive da quattro tipi di origine, che scegli nella barra superiore
 
 ## File
 
-Trascrive un file audio o video. Fai clic su **Scegli un file…** o trascina il file nella finestra. L'esplora file mostra **Tutti i file supportati** per impostazione predefinita; puoi mostrare solo i **File audio** o i **File video**. Consulta [Formati e lingue](/it/reference/formats-and-languages/) per i formati supportati.
+Trascrive un file audio o video. Fai clic su **Scegli file…** o trascina il file nella finestra. L'esplora file mostra **Tutti i file supportati** per impostazione predefinita; puoi mostrare solo i **File audio** o i **File video**. Consulta [Formati e lingue](/it/reference/formats-and-languages/) per i formati supportati.
 
 Si può aggiungere un solo file alla volta. Per trascrivere più file, usa l'origine [Cartella](#cartella).
 
@@ -34,7 +34,7 @@ Registra la tua voce o una riunione e la trascrive. La registrazione resta nella
 
 ### Testo dal vivo
 
-Con **WhisperX**, attiva **Mostra il testo durante la registrazione** nella scheda **Testo dal vivo** per vedere una bozza del testo mentre parli. La bozza è scritta da un **Modello dal vivo** veloce (`small` per impostazione predefinita). Quando ti fermi, l'intera registrazione viene trascritta di nuovo con il modello del motore, più preciso, e la bozza viene sostituita.
+Con **WhisperX**, attiva **Mostra testo durante la registrazione** nella scheda **Testo dal vivo** per vedere una bozza del testo mentre parli. La bozza è scritta da un **Modello dal vivo** veloce (`small` per impostazione predefinita). Quando ti fermi, l'intera registrazione viene trascritta di nuovo con il modello del motore, più preciso, e la bozza viene sostituita.
 
 ![Il testo in tempo reale durante la registrazione dal microfono](/screenshots/live-text.png)
 
@@ -52,7 +52,7 @@ Per trascrivere ciò che il computer riproduce (una videochiamata, un webinar, u
 
 ## Cartella
 
-Trascrive tutti i file audio e video di una cartella e, se **Includi sottocartelle** è attivo nella scheda **Cartella**, delle sue sottocartelle. Fai clic su **Scegli una cartella…** o trascina la cartella nella finestra. Audiotext ti dice quanti file ha trovato. Per escludere alcuni file, scrivi i loro nomi o percorsi, separati da virgole, in **Salta i file corrispondenti a** (ad es. `*.wav, drafts/*`). I file nascosti vengono sempre saltati.
+Trascrive tutti i file audio e video di una cartella e, se **Includi sottocartelle** è attivo nella scheda **Cartella**, delle sue sottocartelle. Fai clic su **Scegli cartella…** o trascina la cartella nella finestra. Audiotext ti dice quanti file ha trovato. Per escludere alcuni file, scrivi i loro nomi o percorsi, separati da virgole, in **Salta i file corrispondenti a** (ad es. `*.wav, drafts/*`). I file nascosti vengono sempre saltati.
 
 La trascrizione di ogni file viene salvata accanto a esso (o in un'altra cartella che scegli nella scheda **Output**), con lo stesso nome e l'estensione di ogni **tipo di file** selezionato. Ad esempio, con `.txt` e `.vtt`:
 
@@ -85,7 +85,7 @@ L'intestazione mostra dove vengono salvati i file e rimanda alla cartella di ori
 
 ### Monitora una cartella
 
-Attiva **Monitora la cartella** nella scheda **Cartella** per continuare a trascrivere i file aggiunti alla cartella (o alle sue sottocartelle) finché non fai clic su **Interrompi monitoraggio**. È utile per le registrazioni di un registratore vocale o di uno strumento per riunioni che vengono copiate in una cartella.
+Attiva **Monitora cartella** nella scheda **Cartella** per continuare a trascrivere i file aggiunti alla cartella (o alle sue sottocartelle) finché non fai clic su **Interrompi monitoraggio**. È utile per le registrazioni di un registratore vocale o di uno strumento per riunioni che vengono copiate in una cartella.
 
 - I file che la cartella contiene già vengono saltati, a meno che tu non attivi **Trascrivi i file già presenti nella cartella**: in tal caso quelli senza trascrizione vengono trascritti per primi.
 - Un file viene trascritto quando è stato copiato completamente (quando la sua dimensione smette di cambiare), quindi i file grandi non vengono trascritti a metà.

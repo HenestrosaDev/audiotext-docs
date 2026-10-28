@@ -58,21 +58,23 @@ Solange noch welche fehlen, springen die Pfeile daneben zum vorherigen und näch
 
 ### Die Übersetzung korrigieren und neu timen
 
-Eine Übersetzung braucht oft ein anderes Timing als das Original, z. B. Untertitel, deren Lesen länger dauert. Klicken Sie mit der rechten Maustaste auf ein Segment der Übersetzung, um:
+Eine Übersetzung braucht oft ein anderes Timing als das Original, z. B. Untertitel, deren Lesen länger dauert. Klicken Sie mit der rechten Maustaste auf einen Untertitel der Übersetzung, um:
 
 - **Text bearbeiten…**: seinen Text zu ändern.
 - **Zeiten bearbeiten…**: millisekundengenau zu ändern, wann es beginnt und endet. Geben Sie die Zeiten als `00:01:05,900`, `01:05,9` oder `65.9` ein.
-- **Segment danach hinzufügen…**: ein Segment hinzuzufügen, das standardmäßig die Lücke bis zum nächsten füllt.
-- **Segment löschen**.
+- **Untertitel danach hinzufügen…**: einen Untertitel hinzuzufügen, der standardmäßig die Lücke bis zum nächsten füllt.
+- **Untertitel löschen**.
+
+Auch die Transkription können Sie neu timen und um Untertitel ergänzen: siehe [Die Transkription korrigieren](/de/guides/transcript/#die-transkription-korrigieren).
 
 ### Selbst übersetzen
 
-Um die Übersetzung selbst zu schreiben, wählen Sie **Manuell** unter **Übersetzen mit:**. Dafür ist kein API-Schlüssel nötig. Die Übersetzung beginnt mit einem leeren Segment für jeden Untertitel der Transkription, angezeigt als **Noch nicht übersetzt**, und der Bereich zeigt, wie viele noch übrig sind. Klicken Sie mit der rechten Maustaste auf eines und wählen Sie **Text übersetzen…**: Der Dialog zeigt den Originaltext, der in dieser Zeit gesagt wird. Wenn Sie mit der Maus über eines fahren, erscheint rechts davon die Schaltfläche **Text übersetzen…**, die denselben Dialog öffnet.
+Um die Übersetzung selbst zu schreiben, wählen Sie **Manuell** unter **Übersetzen mit:**. Dafür ist kein API-Schlüssel nötig. Die Übersetzung beginnt mit einem leeren Untertitel für jeden der Transkription, angezeigt als **Noch nicht übersetzt**, und der Bereich zeigt, wie viele noch übrig sind. Klicken Sie mit der rechten Maustaste auf einen und wählen Sie **Text übersetzen…**: Der Dialog zeigt den Originaltext, der in dieser Zeit gesagt wird. Wenn Sie mit der Maus über einen fahren, erscheint rechts davon die Schaltfläche **Text übersetzen…**, die denselben Dialog öffnet.
 
 ### Untertitel und Export
 
-- Aktivieren Sie bei Transkriptionen von Videos **Als Untertitel des Videos anzeigen** im Menü **Übersetzen**, um die Übersetzung als Untertitel zu zeigen. Auch das Menü des Videos schaltet sie um. Siehe [Videos mit Untertiteln ansehen](/de/guides/transcript/#videos-mit-untertiteln-ansehen).
-- Um die Übersetzung als Datei zu speichern, klicken Sie auf die Export-Schaltfläche ihres Bereichs. Sie wird in denselben [Formaten](/de/guides/transcript/#kopieren-und-exportieren) wie die Transkription exportiert, mit ihrer Sprache im Dateinamen (z. B. `video.es.srt`), sodass Videoplayer sie zusammen mit dem Video laden. Noch nicht übersetzte Segmente werden in den Untertiteln ausgelassen. Dasselbe Menü erstellt eine [Kopie des Videos mit seinen Untertiteln](/de/guides/transcript/#das-video-mit-seinen-untertiteln-exportieren).
+- Aktivieren Sie bei Transkriptionen von Videos **Als Videountertitel anzeigen** im Menü **Übersetzen**, um die Übersetzung als Untertitel zu zeigen. Auch das Menü des Videos schaltet sie um. Siehe [Videos mit Untertiteln ansehen](/de/guides/transcript/#videos-mit-untertiteln-ansehen).
+- Um die Übersetzung als Datei zu speichern, klicken Sie auf die Export-Schaltfläche ihres Bereichs. Sie wird in denselben [Formaten](/de/guides/transcript/#kopieren-und-exportieren) wie die Transkription exportiert, mit ihrer Sprache im Dateinamen (z. B. `video.es.srt`), sodass Videoplayer sie zusammen mit dem Video laden. Noch nicht übersetzte Untertitel werden nicht exportiert. Dasselbe Menü erstellt eine [Kopie des Videos mit seinen Untertiteln](/de/guides/transcript/#das-video-mit-seinen-untertiteln-exportieren).
 
 :::tip
 Um die Transkription ohne Anbieter direkt in einer anderen Sprache zu erhalten, können Sie auch beim Transkribieren übersetzen. Siehe [Sprache](/de/guides/transcription-settings/#sprache).

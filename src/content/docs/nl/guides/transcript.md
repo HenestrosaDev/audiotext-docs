@@ -51,9 +51,13 @@ Om de transcriptie te corrigeren en de tijdstempels (die de ondertitels en het a
 - **Vanaf hier afspelen**: speelt hem af.
 - **Kopiëren**: kopieert de tekst.
 - **Tekst bewerken…**: wijzigt de tekst.
+- **Timing bewerken…**: wijzigt wanneer hij begint en eindigt, tot op de milliseconde. Typ de tijden als `00:01:05,900`, `01:05,9` of `65.9`.
+- **Ondertitel erna toevoegen…**: voegt een ontbrekende ondertitel toe, die standaard de ruimte tot de volgende vult. Als de sprekers zijn herkend, kies je wie hem zegt (standaard de spreker van de vorige ondertitel) of typ je een nieuwe. Hij wordt toegevoegd zodra je de tekst schrijft.
+- **Spreker wijzigen…**: kiest, als de sprekers zijn herkend, wie hem zegt, of een nieuwe spreker. Anders dan **Sprekers hernoemen…** wijzigt dit alleen deze ondertitel.
 - **Sprekers hernoemen…**: geeft elke spreker een naam (`SPEAKER_00` → `Anna`). Als je twee sprekers dezelfde naam geeft, worden ze samengevoegd. Staat ook in het menu `⋯`.
+- **Ondertitel verwijderen**: verwijdert hem. Als hij tekst bevat, wordt eerst om bevestiging gevraagd.
 
-Woorden die niet veranderen, behouden hun tijden, dus ze worden tijdens het afspelen nog steeds gemarkeerd.
+Woorden die niet veranderen, behouden hun tijden, dus ze worden tijdens het afspelen nog steeds gemarkeerd. Een ondertitel waarvan je de timing wijzigt, of die je toevoegt, heeft geen woordtijden, dus de woorden worden niet gemarkeerd of onderstreept als onzeker.
 
 ## Woorden met lage betrouwbaarheid nakijken
 
@@ -106,7 +110,7 @@ Ondertitels en de tabel vereisen tijdstempels. De [vertalingen](/nl/guides/summa
 
 Om een video te delen waar geen ondertitelbestanden kunnen worden geladen (bijv. een sociaal netwerk), kies je **Video met ondertitels (.mp4)…** in het exportmenu van de transcriptie of van een vertaling. Audiotext maakt een kopie van de video met de ondertitels erin getekend, zoals ze in de app worden getoond: met hun grootte, positie en stijl (zie [Video's met ondertitels bekijken](#videos-met-ondertitels-bekijken)).
 
-De kopie wordt op de achtergrond gemaakt, en de status toont de voortgang. Om te annuleren kies je **Stoppen met het toevoegen van de ondertitels aan de video** in hetzelfde menu. De kopie is een MP4-bestand (H.264-video en AAC-audio), en de oorspronkelijke video verandert niet.
+De kopie wordt op de achtergrond gemaakt, en de status toont de voortgang. Om te annuleren kies je **Stoppen met ondertitels toevoegen aan video** in hetzelfde menu. De kopie is een MP4-bestand (H.264-video en AAC-audio), en de oorspronkelijke video verandert niet.
 
 Als geen enkel lettertype van je systeem bepaalde tekens van de ondertitels bevat, worden ze als vakjes getekend, en Audiotext somt ze aan het einde op. Zie [Probleemoplossing](/nl/help/troubleshooting/#de-video-met-ondertitels-toont-vakjes).
 

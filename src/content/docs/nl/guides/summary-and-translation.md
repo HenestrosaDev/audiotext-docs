@@ -58,21 +58,23 @@ Zolang er nog over zijn, gaan de pijlen ernaast naar de vorige en volgende onder
 
 ### De vertaling corrigeren en opnieuw timen
 
-Een vertaling heeft vaak een andere timing nodig dan het origineel, bijv. ondertitels die langer duren om te lezen. Klik met de rechtermuisknop op een segment van de vertaling om:
+Een vertaling heeft vaak een andere timing nodig dan het origineel, bijv. ondertitels die langer duren om te lezen. Klik met de rechtermuisknop op een ondertitel van de vertaling om:
 
 - **Tekst bewerken…**: de tekst te wijzigen.
 - **Timing bewerken…**: tot op de milliseconde te wijzigen wanneer het begint en eindigt. Typ de tijden als `00:01:05,900`, `01:05,9` of `65.9`.
-- **Segment erna toevoegen…**: een segment toe te voegen, dat standaard de ruimte tot het volgende vult.
-- **Segment verwijderen**.
+- **Ondertitel erna toevoegen…**: een ondertitel toe te voegen, die standaard de ruimte tot de volgende vult.
+- **Ondertitel verwijderen**.
+
+Je kunt ook de timing van de transcriptie wijzigen en er ondertitels aan toevoegen: zie [De transcriptie corrigeren](/nl/guides/transcript/#de-transcriptie-corrigeren).
 
 ### Zelf vertalen
 
-Om de vertaling zelf te schrijven, kies je **Handmatig** bij **Vertalen met:**. Daarvoor is geen API-sleutel nodig. De vertaling begint met een leeg segment voor elke ondertitel van de transcriptie, getoond als **Nog niet vertaald**, en het paneel toont hoeveel er nog over zijn. Klik met de rechtermuisknop op een ervan en kies **Tekst vertalen…**: het dialoogvenster toont de oorspronkelijke tekst die in die tijd wordt gezegd. Als je de muis over een ervan beweegt, verschijnt rechts een knop **Tekst vertalen…**, die hetzelfde dialoogvenster opent.
+Om de vertaling zelf te schrijven, kies je **Handmatig** bij **Vertalen met:**. Daarvoor is geen API-sleutel nodig. De vertaling begint met een lege ondertitel voor elke ondertitel van de transcriptie, getoond als **Nog niet vertaald**, en het paneel toont hoeveel er nog over zijn. Klik met de rechtermuisknop op een ervan en kies **Tekst vertalen…**: het dialoogvenster toont de oorspronkelijke tekst die in die tijd wordt gezegd. Als je de muis over een ervan beweegt, verschijnt rechts een knop **Tekst vertalen…**, die hetzelfde dialoogvenster opent.
 
 ### Ondertitels en export
 
-- Vink bij transcripties van video's **Als ondertitels van de video tonen** aan in het menu **Vertalen** om de vertaling als ondertitels te tonen. Ook het menu van de video schakelt ze om. Zie [Video's met ondertitels bekijken](/nl/guides/transcript/#videos-met-ondertitels-bekijken).
-- Om de vertaling als bestand op te slaan, klik je op de exportknop van het paneel. Ze wordt geëxporteerd in dezelfde [formaten](/nl/guides/transcript/#kopiëren-en-exporteren) als de transcriptie, met de taal in de bestandsnaam (bijv. `video.es.srt`), zodat videospelers ze met de video laden. Segmenten die nog niet vertaald zijn, worden uit de ondertitels weggelaten. Hetzelfde menu maakt een [kopie van de video met de ondertitels](/nl/guides/transcript/#de-video-met-ondertitels-exporteren).
+- Vink bij transcripties van video's **Als video-ondertitels tonen** aan in het menu **Vertalen** om de vertaling als ondertitels te tonen. Ook het menu van de video schakelt ze om. Zie [Video's met ondertitels bekijken](/nl/guides/transcript/#videos-met-ondertitels-bekijken).
+- Om de vertaling als bestand op te slaan, klik je op de exportknop van het paneel. Ze wordt geëxporteerd in dezelfde [formaten](/nl/guides/transcript/#kopiëren-en-exporteren) als de transcriptie, met de taal in de bestandsnaam (bijv. `video.es.srt`), zodat videospelers ze met de video laden. Ondertitels die nog niet vertaald zijn, worden niet geëxporteerd. Hetzelfde menu maakt een [kopie van de video met de ondertitels](/nl/guides/transcript/#de-video-met-ondertitels-exporteren).
 
 :::tip
 Om de transcriptie direct in een andere taal te krijgen, zonder aanbieder, kun je ook tijdens het transcriberen vertalen. Zie [Taal](/nl/guides/transcription-settings/#taal).

@@ -66,7 +66,7 @@ Solo se muestra para el micrófono. Consulta [Texto en directo](/es/guides/sourc
 
 Solo se muestran para carpetas:
 
-- **Vigilar la carpeta**: consulta [Vigila una carpeta](/es/guides/sources/#vigila-una-carpeta).
+- **Vigilar carpeta**: consulta [Vigila una carpeta](/es/guides/sources/#vigila-una-carpeta).
 - **Transcribir los archivos que ya hay en la carpeta** (solo al vigilar): primero transcribe los archivos que ya contiene la carpeta y que aún no tienen transcripción. Desactivado por defecto.
 - **Incluir subcarpetas**: también transcribe los archivos de las subcarpetas.
 - **Omitir los archivos que coincidan con**: nombres o rutas de los archivos que se omiten, separados por comas (p. ej. `*.wav, drafts/*`). Los archivos ocultos siempre se omiten.

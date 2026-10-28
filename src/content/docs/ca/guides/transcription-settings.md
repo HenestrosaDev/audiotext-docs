@@ -66,7 +66,7 @@ Només es mostra per al micròfon. Consulta [Text en directe](/ca/guides/sources
 
 Només es mostren per a carpetes:
 
-- **Vigila la carpeta**: consulta [Vigila una carpeta](/ca/guides/sources/#vigila-una-carpeta).
+- **Vigila carpeta**: consulta [Vigila una carpeta](/ca/guides/sources/#vigila-una-carpeta).
 - **Transcriu els fitxers que ja hi ha a la carpeta** (només mentre es vigila): primer transcriu els fitxers que ja conté la carpeta i que encara no tenen transcripció. Desactivat per defecte.
 - **Inclou les subcarpetes**: també transcriu els fitxers de les subcarpetes.
 - **Omet els fitxers que coincideixin amb**: noms o camins dels fitxers que s'han d'ometre, separats per comes (p. ex. `*.wav, drafts/*`). Els fitxers ocults sempre s'ometen.

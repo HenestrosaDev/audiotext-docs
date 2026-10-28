@@ -66,7 +66,7 @@ Só se mostra para o micrófono. Consulta [Texto en directo](/gl/guides/sources/
 
 Só se mostran para cartafoles:
 
-- **Vixiar o cartafol**: consulta [Vixía un cartafol](/gl/guides/sources/#vixía-un-cartafol).
+- **Vixiar cartafol**: consulta [Vixía un cartafol](/gl/guides/sources/#vixía-un-cartafol).
 - **Transcribir os ficheiros que xa hai no cartafol** (só ao vixiar): primeiro transcribe os ficheiros que xa contén o cartafol e que aínda non teñen transcrición. Desactivado por defecto.
 - **Incluír subcartafoles**: tamén transcribe os ficheiros dos subcartafoles.
 - **Omitir os ficheiros que coincidan con**: nomes ou rutas dos ficheiros que se omiten, separados por comas (p. ex. `*.wav, drafts/*`). Os ficheiros ocultos sempre se omiten.

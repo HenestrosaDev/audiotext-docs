@@ -20,7 +20,7 @@ Sota el títol, el plafó diu quin model l'ha generat i quan. Els botons de la c
 - **Cerca** (`Ctrl+F`, `⌘F` a macOS): cerca un text al resum.
 - **Copia**: el copia.
 - **Exporta**: el desa per separat com a text pla, Markdown o document de Word, amb un nom com `video.summary.md` perquè no substitueixi la transcripció. Les [exportacions](/ca/guides/transcript/#copia-i-exporta) a Markdown i Word de la transcripció també l'inclouen.
-- **Torna a generar el resum**: el torna a escriure (p. ex. després de triar un altre model), després de preguntar-t'ho, ja que se substitueix l'actual.
+- **Regenera resum**: el torna a escriure (p. ex. després de triar un altre model), després de preguntar-t'ho, ja que se substitueix l'actual.
 
 Si la clau d'API del proveïdor no està configurada, el mode **Resum** ofereix configurar-la. Les transcripcions molt llargues (unes tres hores de parla o més) només es resumeixen des del principi.
 
@@ -44,7 +44,7 @@ Fes clic a **Tradueix**, tria l'idioma a **Tradueix a:** i el proveïdor a **Tra
 - Si la transcripció no té marques de temps, es tradueix tot el text d'una vegada.
 - Els dos textos es desplacen junts, així que mostren la mateixa part de l'àudio. El botó rodó del separador entre ells ho activa i ho desactiva. Arrossega el separador per canviar-ne la mida, o fes-hi doble clic per restablir-la.
 
-Els botons de la capçalera de la traducció hi cerquen i substitueixen, la copien, l'exporten, la **Tornen a traduir** (amb el mateix proveïdor i model) i l'amaguen (**Amaga la traducció**). El botó **Tradueix** també et permet tornar-la a mostrar, **Traduir a un altre idioma…** o **Eliminar la traducció**.
+Els botons de la capçalera de la traducció hi cerquen i substitueixen, la copien, l'exporten, la **Tornen a traduir** (amb el mateix proveïdor i model) i l'amaguen (**Amaga traducció**). El botó **Tradueix** també et permet tornar-la a mostrar, **Traduir a un altre idioma…** o **Eliminar la traducció**.
 
 ### Diversos idiomes
 
@@ -58,21 +58,23 @@ Mentre en quedin, les fletxes del costat van als subtítols anterior i següent 
 
 ### Corregeix i ajusta els temps de la traducció
 
-Sovint una traducció necessita uns temps diferents dels de l'original, p. ex. subtítols que costen més de llegir. Fes clic amb el botó dret en un segment de la traducció per:
+Sovint una traducció necessita uns temps diferents dels de l'original, p. ex. subtítols que costen més de llegir. Fes clic amb el botó dret en un subtítol de la traducció per:
 
 - **Edita text…**: canviar-ne el text.
-- **Edita els temps…**: canviar quan comença i acaba, amb precisió de mil·lisegons. Escriu els temps com a `00:01:05,900`, `01:05,9` o `65.9`.
-- **Afegeix un segment després…**: afegir un segment, que per defecte omple l'espai fins al següent.
-- **Elimina el segment**.
+- **Edita temps…**: canviar quan comença i acaba, amb precisió de mil·lisegons. Escriu els temps com a `00:01:05,900`, `01:05,9` o `65.9`.
+- **Afegeix subtítol després…**: afegir un subtítol, que per defecte omple l'espai fins al següent.
+- **Elimina subtítol**.
+
+També pots canviar els temps de la transcripció i afegir-hi subtítols: consulta [Corregeix la transcripció](/ca/guides/transcript/#corregeix-la-transcripció).
 
 ### Tradueix-la tu mateix
 
-Per escriure la traducció tu mateix, tria **Manual** a **Tradueix amb:**. No necessita cap clau d'API. La traducció comença amb un segment buit per cada subtítol de la transcripció, que es mostra com a **Encara no traduït**, i el plafó mostra quants en queden. Fes clic amb el botó dret en un i tria **Tradueix text…**: el diàleg mostra el text original que es diu en aquell moment. En passar el ratolí per sobre d'un apareix un botó **Tradueix text…** a la seva dreta, que obre el mateix diàleg.
+Per escriure la traducció tu mateix, tria **Manual** a **Tradueix amb:**. No necessita cap clau d'API. La traducció comença amb un subtítol buit per cada un de la transcripció, que es mostra com a **Encara no traduït**, i el plafó mostra quants en queden. Fes clic amb el botó dret en un i tria **Tradueix text…**: el diàleg mostra el text original que es diu en aquell moment. En passar el ratolí per sobre d'un apareix un botó **Tradueix text…** a la seva dreta, que obre el mateix diàleg.
 
 ### Subtítols i exportació
 
-- A les transcripcions de vídeos, marca **Mostra-la com a subtítols del vídeo** al menú **Tradueix** per mostrar la traducció com a subtítols. El menú del vídeo també els canvia. Consulta [Mira vídeos amb subtítols](/ca/guides/transcript/#mira-vídeos-amb-subtítols).
-- Per desar la traducció com a fitxer, fes clic al botó d'exportar del seu plafó. S'exporta en els mateixos [formats](/ca/guides/transcript/#copia-i-exporta) que la transcripció, amb l'idioma al nom del fitxer (p. ex. `video.es.srt`), així els reproductors de vídeo la carreguen amb el vídeo. Els segments que encara no s'han traduït no s'inclouen als subtítols. El mateix menú fa una [còpia del vídeo amb els seus subtítols](/ca/guides/transcript/#exporta-el-vídeo-amb-els-seus-subtítols).
+- A les transcripcions de vídeos, marca **Mostra com a subtítols del vídeo** al menú **Tradueix** per mostrar la traducció com a subtítols. El menú del vídeo també els canvia. Consulta [Mira vídeos amb subtítols](/ca/guides/transcript/#mira-vídeos-amb-subtítols).
+- Per desar la traducció com a fitxer, fes clic al botó d'exportar del seu plafó. S'exporta en els mateixos [formats](/ca/guides/transcript/#copia-i-exporta) que la transcripció, amb l'idioma al nom del fitxer (p. ex. `video.es.srt`), així els reproductors de vídeo la carreguen amb el vídeo. Els subtítols que encara no s'han traduït no s'exporten. El mateix menú fa una [còpia del vídeo amb els seus subtítols](/ca/guides/transcript/#exporta-el-vídeo-amb-els-seus-subtítols).
 
 :::tip
 Per obtenir la transcripció directament en un altre idioma, sense proveïdor, també pots traduir mentre transcrius. Consulta [Idioma](/ca/guides/transcription-settings/#idioma).

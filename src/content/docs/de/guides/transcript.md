@@ -51,9 +51,13 @@ Um die Transkription zu korrigieren und dabei ihre Zeitstempel zu behalten (die 
 - **Ab hier abspielen**: spielt ihn ab.
 - **Kopieren**: kopiert seinen Text.
 - **Text bearbeiten…**: ändert seinen Text.
+- **Zeiten bearbeiten…**: ändert, wann er beginnt und endet, auf die Millisekunde genau. Geben Sie die Zeiten als `00:01:05,900`, `01:05,9` oder `65.9` ein.
+- **Untertitel danach hinzufügen…**: fügt einen fehlenden Untertitel hinzu, der standardmäßig die Lücke bis zum nächsten füllt. Wurden die Sprecher erkannt, wählen Sie, wer ihn sagt (standardmäßig der Sprecher des vorherigen Untertitels), oder geben Sie einen neuen ein. Er wird hinzugefügt, sobald Sie seinen Text schreiben.
+- **Sprecher ändern…**: wählt, wenn die Sprecher erkannt wurden, wer ihn sagt, oder einen neuen Sprecher. Anders als **Sprecher umbenennen…** ändert es nur diesen Untertitel.
 - **Sprecher umbenennen…**: gibt jedem Sprecher einen Namen (`SPEAKER_00` → `Anna`). Zwei Sprecher mit demselben Namen werden zusammengeführt. Auch im Menü `⋯`.
+- **Untertitel löschen**: löscht ihn. Hat er Text, wird vorher nachgefragt.
 
-Unveränderte Wörter behalten ihre Zeiten und werden daher beim Abspielen weiterhin hervorgehoben.
+Unveränderte Wörter behalten ihre Zeiten und werden daher beim Abspielen weiterhin hervorgehoben. Ein Untertitel, dessen Zeiten Sie ändern oder den Sie hinzufügen, hat keine Wortzeiten, daher werden seine Wörter weder hervorgehoben noch als unsicher unterstrichen.
 
 ## Wörter mit geringer Konfidenz prüfen
 
@@ -106,7 +110,7 @@ Untertitel und Tabelle erfordern Zeitstempel. Die [Übersetzungen](/de/guides/su
 
 Um ein Video dort zu teilen, wo sich keine Untertiteldateien laden lassen (z. B. in einem sozialen Netzwerk), wählen Sie **Video mit Untertiteln (.mp4)…** im Exportmenü der Transkription oder einer Übersetzung. Audiotext erstellt eine Kopie des Videos mit eingebrannten Untertiteln, so wie sie in der App angezeigt werden: mit ihrer Größe, Position und ihrem Stil (siehe [Videos mit Untertiteln ansehen](#videos-mit-untertiteln-ansehen)).
 
-Die Kopie wird im Hintergrund erstellt, und der Status zeigt den Fortschritt. Zum Abbrechen wählen Sie im selben Menü **Hinzufügen der Untertitel zum Video abbrechen**. Die Kopie ist eine MP4-Datei (H.264-Video und AAC-Audio), das Originalvideo bleibt unverändert.
+Die Kopie wird im Hintergrund erstellt, und der Status zeigt den Fortschritt. Zum Abbrechen wählen Sie im selben Menü **Hinzufügen von Untertiteln zum Video abbrechen**. Die Kopie ist eine MP4-Datei (H.264-Video und AAC-Audio), das Originalvideo bleibt unverändert.
 
 Enthält keine Schriftart Ihres Systems bestimmte Zeichen der Untertitel, werden sie als Kästchen gezeichnet, und Audiotext listet sie am Ende auf. Siehe [Fehlerbehebung](/de/help/troubleshooting/#das-video-mit-untertiteln-zeigt-kästchen).
 

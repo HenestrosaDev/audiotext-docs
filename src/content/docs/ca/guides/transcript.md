@@ -51,9 +51,13 @@ Per corregir la transcripció sense perdre les marques de temps (que fan servir 
 - **Reprodueix des d'aquí**: el reprodueix.
 - **Copia**: en copia el text.
 - **Edita text…**: en canvia el text.
+- **Edita temps…**: en canvia l'inici i el final, al mil·lisegon. Escriu els temps com a `00:01:05,900`, `01:05,9` o `65.9`.
+- **Afegeix subtítol després…**: afegeix un subtítol que falta, que per defecte omple l'espai fins al següent. Si s'han identificat els parlants, tria qui el diu (per defecte, el parlant del subtítol anterior) o escriu-ne un de nou. S'afegeix quan n'escrius el text.
+- **Canvia parlant…**: si s'han identificat els parlants, tria qui el diu, o un parlant nou. A diferència de **Canvia el nom dels parlants…**, només canvia aquest subtítol.
 - **Canvia el nom dels parlants…**: dona un nom a cada parlant (`SPEAKER_00` → `Anna`). Donar el mateix nom a dos parlants els fusiona. També és al menú `⋯`.
+- **Elimina subtítol**: l'elimina. Si té text, et demana confirmació.
 
-Les paraules que no canvien mantenen els seus temps, així que es continuen ressaltant en reproduir.
+Les paraules que no canvien mantenen els seus temps, així que es continuen ressaltant en reproduir. Un subtítol del qual canvies els temps, o que afegeixes, no té temps per paraula, així que les seves paraules no es ressalten ni se subratllen com a poc fiables.
 
 ## Revisa les paraules de baixa confiança
 
@@ -106,7 +110,7 @@ Els subtítols i la taula necessiten marques de temps. Les [traduccions](/ca/gui
 
 Per compartir un vídeo on no es poden carregar fitxers de subtítols (p. ex. una xarxa social), tria **Vídeo amb subtítols (.mp4)…** al menú d'exportar de la transcripció, o d'una traducció. Audiotext fa una còpia del vídeo amb els subtítols dibuixats a sobre, tal com es mostren a l'aplicació: amb la seva mida, posició i estil (consulta [Mira vídeos amb subtítols](#mira-vídeos-amb-subtítols)).
 
-Es fa en segon pla, i l'estat en mostra el progrés. Per cancel·lar-ho, tria **Deixa d'afegir els subtítols al vídeo** al mateix menú. La còpia és un fitxer MP4 (vídeo H.264 i àudio AAC), i el vídeo original no canvia.
+Es fa en segon pla, i l'estat en mostra el progrés. Per cancel·lar-ho, tria **Deixa d'afegir subtítols al vídeo** al mateix menú. La còpia és un fitxer MP4 (vídeo H.264 i àudio AAC), i el vídeo original no canvia.
 
 Si cap tipus de lletra del sistema no té alguns caràcters dels subtítols, es dibuixen com a quadres, i Audiotext els enumera en acabar. Consulta [Resolució de problemes](/ca/help/troubleshooting/#el-vídeo-amb-subtítols-mostra-quadres).
 
